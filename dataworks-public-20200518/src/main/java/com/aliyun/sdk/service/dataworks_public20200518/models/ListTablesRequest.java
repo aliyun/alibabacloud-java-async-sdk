@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablesRequest} extends {@link RequestModel}
  *
  * <p>ListTablesRequest</p>
@@ -96,7 +97,7 @@ public class ListTablesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +106,13 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps
+         * emr
+         * mysql
+         * holo</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);

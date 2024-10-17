@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableLineageRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableLineageRequest</p>
@@ -166,7 +167,7 @@ public class GetMetaTableLineageRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -175,7 +176,10 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The ID of the E-MapReduce (EMR) cluster. Configure this parameter only if you want to query the lineage of an EMR table.
+         * <p>The ID of the E-MapReduce (EMR) cluster. Configure this parameter only if you want to query the lineage of an EMR table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -184,7 +188,10 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * <p>The type of the data source. Valid values: odps and emr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -193,7 +200,10 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -202,7 +212,11 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * Specifies the ancestor or descendant lineage that you want to query for a field. Valid values: up and down. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.
+         * <p>Specifies the ancestor or descendant lineage that you want to query for a field. Valid values: up and down. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>up</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -211,7 +225,10 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The logic of paging. Configure this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the previous request.
+         * <p>The logic of paging. Configure this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the previous request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name1</p>
          */
         public Builder nextPrimaryKey(String nextPrimaryKey) {
             this.putQueryParameter("NextPrimaryKey", nextPrimaryKey);
@@ -220,7 +237,10 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +249,10 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The unique identifier of the table.
+         * <p>The unique identifier of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -238,7 +261,10 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

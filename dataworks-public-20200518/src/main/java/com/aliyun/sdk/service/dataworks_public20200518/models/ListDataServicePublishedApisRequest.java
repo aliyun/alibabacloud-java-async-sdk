@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServicePublishedApisRequest} extends {@link RequestModel}
  *
  * <p>ListDataServicePublishedApisRequest</p>
@@ -153,7 +154,7 @@ public class ListDataServicePublishedApisRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -162,7 +163,7 @@ public class ListDataServicePublishedApisRequest extends Request {
         }
 
         /**
-         * The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.
+         * <p>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</p>
          */
         public Builder apiNameKeyword(String apiNameKeyword) {
             this.putBodyParameter("ApiNameKeyword", apiNameKeyword);
@@ -171,7 +172,10 @@ public class ListDataServicePublishedApisRequest extends Request {
         }
 
         /**
-         * The keyword in API paths. The keyword is used to search for the APIs whose paths contain the keyword.
+         * <p>The keyword in API paths. The keyword is used to search for the APIs whose paths contain the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/</p>
          */
         public Builder apiPathKeyword(String apiPathKeyword) {
             this.putBodyParameter("ApiPathKeyword", apiPathKeyword);
@@ -180,7 +184,10 @@ public class ListDataServicePublishedApisRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the creator of the APIs. The ID is used to search for the APIs created by the creator.
+         * <p>The ID of the Alibaba Cloud account used by the creator of the APIs. The ID is used to search for the APIs created by the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder creatorId(String creatorId) {
             this.putBodyParameter("CreatorId", creatorId);
@@ -189,7 +196,10 @@ public class ListDataServicePublishedApisRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -198,7 +208,10 @@ public class ListDataServicePublishedApisRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -207,7 +220,11 @@ public class ListDataServicePublishedApisRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -216,7 +233,10 @@ public class ListDataServicePublishedApisRequest extends Request {
         }
 
         /**
-         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
+         * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

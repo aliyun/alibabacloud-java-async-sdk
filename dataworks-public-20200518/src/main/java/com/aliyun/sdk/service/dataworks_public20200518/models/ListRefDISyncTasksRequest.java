@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRefDISyncTasksRequest} extends {@link RequestModel}
  *
  * <p>ListRefDISyncTasksRequest</p>
@@ -142,7 +143,7 @@ public class ListRefDISyncTasksRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -151,7 +152,11 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The name of the data source. You can call the [ListDataSources](~~211431~~) operation to query the name of the data source.
+         * <p>The name of the data source. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the name of the data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_datasource</p>
          */
         public Builder datasourceName(String datasourceName) {
             this.putQueryParameter("DatasourceName", datasourceName);
@@ -160,7 +165,10 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: 1 to 100.
+         * <p>The page number. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -169,7 +177,10 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,7 +189,11 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -187,11 +202,15 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The condition used to filter synchronization tasks. Valid values:
-         * <p>
+         * <p>The condition used to filter synchronization tasks. Valid values:</p>
+         * <ul>
+         * <li>from: queries the synchronization tasks that use the data source as the source.</li>
+         * <li>to: queries the synchronization tasks that use the data source as the destination.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   from: queries the synchronization tasks that use the data source as the source.
-         * *   to: queries the synchronization tasks that use the data source as the destination.
+         * <strong>example:</strong>
+         * <p>from</p>
          */
         public Builder refType(String refType) {
             this.putQueryParameter("RefType", refType);
@@ -200,13 +219,16 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The type of the synchronization task that you want to query. Valid values:
-         * <p>
+         * <p>The type of the synchronization task that you want to query. Valid values:</p>
+         * <ul>
+         * <li>DI_OFFLINE: batch synchronization task</li>
+         * <li>DI_REALTIME: real-time synchronization task</li>
+         * </ul>
+         * <p>You can call the ListRefDISyncTasks operation to query only one type of the task.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   DI_OFFLINE: batch synchronization task
-         * *   DI_REALTIME: real-time synchronization task
-         * 
-         * You can call the ListRefDISyncTasks operation to query only one type of the task.
+         * <strong>example:</strong>
+         * <p>DI_OFFLINE</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

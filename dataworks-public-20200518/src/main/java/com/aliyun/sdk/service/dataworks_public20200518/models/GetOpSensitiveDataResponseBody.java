@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpSensitiveDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpSensitiveDataResponseBody</p>
@@ -49,15 +50,15 @@ public class GetOpSensitiveDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the access records of the sensitive data. The information includes totalCount and opRiskDatas. opRiskDatas includes the following parameters:
-         * <p>
-         * 
-         * *   sensType: the type of the sensitive data.
-         * *   sensLevel: the sensitivity level of the sensitive data. A larger value indicates a higher sensitivity level.
-         * *   opType: the type of the operation.
-         * *   sql: the SQL statement that is executed.
-         * *   opAccount: the account that is used to perform the operation.
-         * *   opTime: the time when the operation was performed.
+         * <p>The information about the access records of the sensitive data. The information includes totalCount and opRiskDatas. opRiskDatas includes the following parameters:</p>
+         * <ul>
+         * <li>sensType: the type of the sensitive data.</li>
+         * <li>sensLevel: the sensitivity level of the sensitive data. A larger value indicates a higher sensitivity level.</li>
+         * <li>opType: the type of the operation.</li>
+         * <li>sql: the SQL statement that is executed.</li>
+         * <li>opAccount: the account that is used to perform the operation.</li>
+         * <li>opTime: the time when the operation was performed.</li>
+         * </ul>
          */
         public Builder opSensitiveData(String opSensitiveData) {
             this.opSensitiveData = opSensitiveData;
@@ -65,7 +66,10 @@ public class GetOpSensitiveDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

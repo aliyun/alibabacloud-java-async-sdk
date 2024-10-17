@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartMigrationResponseBody} extends {@link TeaModel}
  *
  * <p>StartMigrationResponseBody</p>
@@ -97,11 +98,14 @@ public class StartMigrationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the migration task is started. Valid values:
-         * <p>
+         * <p>Indicates whether the migration task is started. Valid values:</p>
+         * <ul>
+         * <li>true: The migration task is started.</li>
+         * <li>false: The migration task fails to be started.</li>
+         * </ul>
          * 
-         * *   true: The migration task is started.
-         * *   false: The migration task fails to be started.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -109,7 +113,10 @@ public class StartMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110001123445</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -117,7 +124,10 @@ public class StartMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test error msg</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -125,7 +135,10 @@ public class StartMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -133,7 +146,10 @@ public class StartMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FSDFSDF-WERWER-XVCX-DSFSDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +157,10 @@ public class StartMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

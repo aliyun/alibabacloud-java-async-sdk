@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServiceGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListDataServiceGroupsRequest</p>
@@ -127,7 +128,7 @@ public class ListDataServiceGroupsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +137,10 @@ public class ListDataServiceGroupsRequest extends Request {
         }
 
         /**
-         * The keyword of a business process name. The keyword is used to search for business processes whose names contain this keyword.
+         * <p>The keyword of a business process name. The keyword is used to search for business processes whose names contain this keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test business process</p>
          */
         public Builder groupNameKeyword(String groupNameKeyword) {
             this.putBodyParameter("GroupNameKeyword", groupNameKeyword);
@@ -145,7 +149,10 @@ public class ListDataServiceGroupsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -154,7 +161,10 @@ public class ListDataServiceGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -163,7 +173,11 @@ public class ListDataServiceGroupsRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -172,7 +186,10 @@ public class ListDataServiceGroupsRequest extends Request {
         }
 
         /**
-         * The tenant ID. This parameter is deprecated.
+         * <p>The tenant ID. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

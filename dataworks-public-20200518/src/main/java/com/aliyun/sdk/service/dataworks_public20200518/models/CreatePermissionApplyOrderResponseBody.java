@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePermissionApplyOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePermissionApplyOrderResponseBody</p>
@@ -49,7 +50,7 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request order ID.
+         * <p>The request order ID.</p>
          */
         public Builder flowId(java.util.List < String > flowId) {
             this.flowId = flowId;
@@ -57,7 +58,10 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

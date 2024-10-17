@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgWhiteListQueryListRequest} extends {@link RequestModel}
  *
  * <p>DsgWhiteListQueryListRequest</p>
@@ -121,7 +122,10 @@ public class DsgWhiteListQueryListRequest extends Request {
         }
 
         /**
-         * The keyword of the sensitive field type.
+         * <p>The keyword of the sensitive field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -130,7 +134,11 @@ public class DsgWhiteListQueryListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +147,11 @@ public class DsgWhiteListQueryListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +160,11 @@ public class DsgWhiteListQueryListRequest extends Request {
         }
 
         /**
-         * The ID of the level-2 data masking scenario. You can call the [DsgSceneQuerySceneListByName](~~2786322~~) operation to query the list of IDs.
+         * <p>The ID of the level-2 data masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the list of IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);

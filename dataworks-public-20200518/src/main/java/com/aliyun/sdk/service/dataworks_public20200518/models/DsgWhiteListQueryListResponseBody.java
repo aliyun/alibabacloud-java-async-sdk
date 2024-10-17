@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgWhiteListQueryListResponseBody} extends {@link TeaModel}
  *
  * <p>DsgWhiteListQueryListResponseBody</p>
@@ -97,7 +98,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1029030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageData(PageData pageData) {
             this.pageData = pageData;
@@ -129,7 +139,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DsgWhiteListQueryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgWhiteListQueryListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -277,7 +299,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             private java.util.List < String > userGroups; 
 
             /**
-             * The expiration time of the data masking whitelist cannot be earlier than the time when the data masking whitelist takes effect. Unit: days.
+             * <p>The expiration time of the data masking whitelist cannot be earlier than the time when the data masking whitelist takes effect. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-10 15:46:20</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -285,7 +310,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the whitelist was created.
+             * <p>The time when the whitelist was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-09 15:46:20</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -293,7 +321,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the whitelist was modified.
+             * <p>The time when the whitelist was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-09 15:46:20</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -301,7 +332,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data masking whitelist.
+             * <p>The ID of the data masking whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -309,7 +343,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data masking rule.
+             * <p>The ID of the data masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -317,7 +354,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the level-2 data masking scenario.
+             * <p>The ID of the level-2 data masking scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder sceneId(Long sceneId) {
                 this.sceneId = sceneId;
@@ -325,7 +365,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data masking whitelist takes effect cannot be earlier than the current time. Unit: days.
+             * <p>The time when the data masking whitelist takes effect cannot be earlier than the current time. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-09 15:46:20</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -333,7 +376,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitive field type.
+             * <p>The sensitive field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -341,7 +387,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * A collection of user group names.
+             * <p>A collection of user group names.</p>
              */
             public Builder userGroups(java.util.List < String > userGroups) {
                 this.userGroups = userGroups;
@@ -355,6 +401,12 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DsgWhiteListQueryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgWhiteListQueryListResponseBody</p>
+     */
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;
@@ -418,7 +470,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * A collection of whitelists.
+             * <p>A collection of whitelists.</p>
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -426,7 +478,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -434,7 +489,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -442,7 +500,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of data masking whitelists.
+             * <p>The total number of data masking whitelists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

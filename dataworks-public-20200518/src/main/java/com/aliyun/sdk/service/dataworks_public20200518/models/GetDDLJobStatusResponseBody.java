@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDDLJobStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetDDLJobStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the task.
+         * <p>The details of the task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDDLJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDDLJobStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -133,7 +143,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The content of the task.
+             * <p>The content of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -141,7 +154,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ongoing task. If no value is returned for this parameter, all subtasks are complete.
+             * <p>The ID of the ongoing task. If no value is returned for this parameter, all subtasks are complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc1</p>
              */
             public Builder nextTaskId(String nextTaskId) {
                 this.nextTaskId = nextTaskId;
@@ -149,7 +165,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -157,7 +176,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

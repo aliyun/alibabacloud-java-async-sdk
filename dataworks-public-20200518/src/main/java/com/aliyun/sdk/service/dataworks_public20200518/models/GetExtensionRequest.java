@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExtensionRequest} extends {@link RequestModel}
  *
  * <p>GetExtensionRequest</p>
@@ -77,7 +78,11 @@ public class GetExtensionRequest extends Request {
         }
 
         /**
-         * The unique code of the extension.
+         * <p>The unique code of the extension.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce4*********086da5</p>
          */
         public Builder extensionCode(String extensionCode) {
             this.putQueryParameter("ExtensionCode", extensionCode);

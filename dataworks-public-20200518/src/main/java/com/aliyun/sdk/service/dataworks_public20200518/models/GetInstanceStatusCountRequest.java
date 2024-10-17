@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceStatusCountRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceStatusCountRequest</p>
@@ -98,7 +99,7 @@ public class GetInstanceStatusCountRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class GetInstanceStatusCountRequest extends Request {
         }
 
         /**
-         * The data timestamp of instances.
+         * <p>The data timestamp of instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
          */
         public Builder bizDate(String bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -116,7 +121,11 @@ public class GetInstanceStatusCountRequest extends Request {
         }
 
         /**
-         * The runtime environment. Valid values: PROD and DEV.
+         * <p>The runtime environment. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -125,7 +134,11 @@ public class GetInstanceStatusCountRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

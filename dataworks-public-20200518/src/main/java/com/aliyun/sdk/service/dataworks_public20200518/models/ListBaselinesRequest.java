@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBaselinesRequest} extends {@link RequestModel}
  *
  * <p>ListBaselinesRequest</p>
@@ -177,7 +178,10 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * The type of the baseline. Valid values: DAILY and HOURLY. You can specify multiple types. Separate multiple types with commas (,).
+         * <p>The type of the baseline. Valid values: DAILY and HOURLY. You can specify multiple types. Separate multiple types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY</p>
          */
         public Builder baselineTypes(String baselineTypes) {
             this.putBodyParameter("BaselineTypes", baselineTypes);
@@ -186,7 +190,10 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the baseline. Valid values: true and false.
+         * <p>Specifies whether to enable the baseline. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("Enable", enable);
@@ -195,7 +202,10 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * The owner.
+         * <p>The owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3726346****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -204,7 +214,11 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1. Maximum value: 30.
+         * <p>The page number. Pages start from page 1. Default value: 1. Maximum value: 30.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -213,7 +227,11 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -222,7 +240,10 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * The priority of the baseline. Valid values: {1,3,5,7,8}.
+         * <p>The priority of the baseline. Valid values: {1,3,5,7,8}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
@@ -231,7 +252,11 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -240,7 +265,10 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * The keyword in the baseline name, which is used to search for the baseline.
+         * <p>The keyword in the baseline name, which is used to search for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineName</p>
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);

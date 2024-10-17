@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableModelInfoResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateTableModelInfoResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateTableModelInfoResponseBody extends TeaModel {
         private Boolean updateResult; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class UpdateTableModelInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder updateResult(Boolean updateResult) {
             this.updateResult = updateResult;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectIdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectIdsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListProjectIdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the DataWorks workspaces. The IDs of the workspaces on which the desired Alibaba Cloud account has permissions were returned.
+         * <p>The IDs of the DataWorks workspaces. The IDs of the workspaces on which the desired Alibaba Cloud account has permissions were returned.</p>
          */
         public Builder projectIds(java.util.List < Long > projectIds) {
             this.projectIds = projectIds;
@@ -57,7 +58,10 @@ public class ListProjectIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b57ff7216278945532771749d****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

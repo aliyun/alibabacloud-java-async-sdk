@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableLevelRequest} extends {@link RequestModel}
  *
  * <p>UpdateTableLevelRequest</p>
@@ -126,7 +127,7 @@ public class UpdateTableLevelRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -135,7 +136,10 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The description of the table level.
+         * <p>The description of the table level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -144,7 +148,11 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the table level. You can call the ListTableLevel operation to query the ID.
+         * <p>The ID of the table level. You can call the ListTableLevel operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -153,7 +161,10 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
+         * <p>The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -162,7 +173,10 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The name of the table level.
+         * <p>The name of the table level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -171,7 +185,11 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The ID of the DataWorks workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

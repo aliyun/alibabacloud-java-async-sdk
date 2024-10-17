@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeployDISyncTaskRequest} extends {@link RequestModel}
  *
  * <p>DeployDISyncTaskRequest</p>
@@ -98,7 +99,7 @@ public class DeployDISyncTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,11 +108,15 @@ public class DeployDISyncTaskRequest extends Request {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -120,11 +125,15 @@ public class DeployDISyncTaskRequest extends Request {
         }
 
         /**
-         * The type of the object that you want to deploy. Valid values:
-         * <p>
+         * <p>The type of the object that you want to deploy. Valid values:</p>
+         * <ul>
+         * <li>DI_REALTIME: real-time synchronization node</li>
+         * <li>DI_SOLUTION: data synchronization solution</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   DI_REALTIME: real-time synchronization node
-         * *   DI_SOLUTION: data synchronization solution
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -133,11 +142,15 @@ public class DeployDISyncTaskRequest extends Request {
         }
 
         /**
-         * *   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to deploy.
-         * <p>
-         * *   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to deploy.
+         * <ul>
+         * <li>If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to deploy.</li>
+         * <li>If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to deploy.</li>
+         * </ul>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID of the real-time synchronization node or data synchronization solution.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListFiles](~~173942~~) operation to query the ID of the real-time synchronization node or data synchronization solution.
+         * <strong>example:</strong>
+         * <p>DI_REALTIME</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

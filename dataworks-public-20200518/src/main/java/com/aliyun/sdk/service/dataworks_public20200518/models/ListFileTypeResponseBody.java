@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileTypeResponseBody} extends {@link TeaModel}
  *
  * <p>ListFileTypeResponseBody</p>
@@ -49,7 +50,7 @@ public class ListFileTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about node types.
+         * <p>The information about node types.</p>
          */
         public Builder nodeTypeInfoList(NodeTypeInfoList nodeTypeInfoList) {
             this.nodeTypeInfoList = nodeTypeInfoList;
@@ -57,7 +58,10 @@ public class ListFileTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListFileTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFileTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileTypeResponseBody</p>
+     */
     public static class NodeTypeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeType")
         private Integer nodeType;
@@ -109,7 +119,10 @@ public class ListFileTypeResponseBody extends TeaModel {
             private String nodeTypeName; 
 
             /**
-             * The code of the node type. The codes and names of node types have the following mappings: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
+             * <p>The code of the node type. The codes and names of node types have the following mappings: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -117,7 +130,10 @@ public class ListFileTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node type. The codes and names of node types have the following mappings: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
+             * <p>The name of the node type. The codes and names of node types have the following mappings: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS SQL</p>
              */
             public Builder nodeTypeName(String nodeTypeName) {
                 this.nodeTypeName = nodeTypeName;
@@ -131,6 +147,12 @@ public class ListFileTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFileTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileTypeResponseBody</p>
+     */
     public static class NodeTypeInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeTypeInfo")
         private java.util.List < NodeTypeInfo> nodeTypeInfo;
@@ -194,7 +216,7 @@ public class ListFileTypeResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The information about the node type.
+             * <p>The information about the node type.</p>
              */
             public Builder nodeTypeInfo(java.util.List < NodeTypeInfo> nodeTypeInfo) {
                 this.nodeTypeInfo = nodeTypeInfo;
@@ -202,7 +224,10 @@ public class ListFileTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -210,7 +235,10 @@ public class ListFileTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -218,7 +246,10 @@ public class ListFileTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

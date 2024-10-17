@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServiceApiRequest} extends {@link RequestModel}
  *
  * <p>GetDataServiceApiRequest</p>
@@ -97,7 +98,7 @@ public class GetDataServiceApiRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -106,7 +107,11 @@ public class GetDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the DataService Studio API.
+         * <p>The ID of the DataService Studio API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -115,7 +120,11 @@ public class GetDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -124,7 +133,10 @@ public class GetDataServiceApiRequest extends Request {
         }
 
         /**
-         * The tenant ID.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

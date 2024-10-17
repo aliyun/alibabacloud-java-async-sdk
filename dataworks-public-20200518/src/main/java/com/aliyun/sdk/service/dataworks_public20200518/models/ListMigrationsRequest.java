@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMigrationsRequest} extends {@link RequestModel}
  *
  * <p>ListMigrationsRequest</p>
@@ -127,7 +128,7 @@ public class ListMigrationsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +137,11 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * The migration task type. Valid values: IMPORT and EXPORT.
+         * <p>The migration task type. Valid values: IMPORT and EXPORT.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMPORT</p>
          */
         public Builder migrationType(String migrationType) {
             this.putBodyParameter("MigrationType", migrationType);
@@ -145,7 +150,10 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * The owner ID.
+         * <p>The owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>193379****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -154,7 +162,10 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -163,7 +174,10 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -172,7 +186,11 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

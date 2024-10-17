@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSensitiveDataRequest} extends {@link RequestModel}
  *
  * <p>GetSensitiveDataRequest</p>
@@ -98,7 +99,7 @@ public class GetSensitiveDataRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,16 +108,19 @@ public class GetSensitiveDataRequest extends Request {
         }
 
         /**
-         * The parameters that you can configure to query the access records. Valid values:
-         * <p>
+         * <p>The parameters that you can configure to query the access records. Valid values:</p>
+         * <ul>
+         * <li>dbType</li>
+         * <li>instanceName</li>
+         * <li>databaseName</li>
+         * <li>projectName</li>
+         * <li>clusterName</li>
+         * </ul>
+         * <p>The sample value shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC. You must configure the parameters based on the compute engine that you use in your business.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   dbType
-         * *   instanceName
-         * *   databaseName
-         * *   projectName
-         * *   clusterName
-         * 
-         * The sample value shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC. You must configure the parameters based on the compute engine that you use in your business.
+         * <strong>example:</strong>
+         * <p>[ {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;}, {&quot;dbType&quot;:&quot;ODPS.ODPS&quot;,&quot;projectName&quot;:&quot;adbc&quot;} ]</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -125,7 +129,11 @@ public class GetSensitiveDataRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -134,7 +142,11 @@ public class GetSensitiveDataRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 1000.
+         * <p>The number of entries per page. Maximum value: 1000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

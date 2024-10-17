@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesByBaselineResponseBody} extends {@link TeaModel}
  *
  * <p>ListNodesByBaselineResponseBody</p>
@@ -97,7 +98,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The nodes in the baseline.
+         * <p>The nodes in the baseline.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to troubleshoot issues.
+         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNodesByBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesByBaselineResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
@@ -213,7 +235,10 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -221,7 +246,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -229,7 +254,10 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the node owner.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527952****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -237,7 +265,10 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the node belongs.
+             * <p>The ID of the workspace to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

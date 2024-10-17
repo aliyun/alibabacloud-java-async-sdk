@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApprovePermissionApplyOrderRequest} extends {@link RequestModel}
  *
  * <p>ApprovePermissionApplyOrderRequest</p>
@@ -98,7 +99,7 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,20 +108,25 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The action for the permission request order. Valid values:
-         * <p>
-         * 
-         * *   1: approve
-         * *   2: reject
-         * 
+         * <p>The action for the permission request order. Valid values:</p>
+         * <ul>
+         * <li>1: approve</li>
+         * <li>2: reject</li>
+         * </ul>
          * <!---->
          * 
-         * *   0
-         * *   1
-         * *   2\.
-         * *   3\.
-         * *   4
-         * *   5
+         * <ul>
+         * <li>0</li>
+         * <li>1</li>
+         * <li>2.</li>
+         * <li>3.</li>
+         * <li>4</li>
+         * <li>5</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder approveAction(Integer approveAction) {
             this.putQueryParameter("ApproveAction", approveAction);
@@ -129,7 +135,11 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The comment on the order.
+         * <p>The comment on the order.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agree</p>
          */
         public Builder approveComment(String approveComment) {
             this.putQueryParameter("ApproveComment", approveComment);
@@ -138,7 +148,11 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.
+         * <p>The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48f36729-05f9-4a40-9286-933fd940f30a</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

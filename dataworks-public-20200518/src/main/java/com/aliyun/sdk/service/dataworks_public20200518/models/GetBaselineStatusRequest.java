@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBaselineStatusRequest} extends {@link RequestModel}
  *
  * <p>GetBaselineStatusRequest</p>
@@ -98,7 +99,7 @@ public class GetBaselineStatusRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class GetBaselineStatusRequest extends Request {
         }
 
         /**
-         * The ID of the baseline.
+         * <p>The ID of the baseline.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -116,7 +121,11 @@ public class GetBaselineStatusRequest extends Request {
         }
 
         /**
-         * The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
+         * <p>The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-07T00:00:00+0800</p>
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -125,7 +134,11 @@ public class GetBaselineStatusRequest extends Request {
         }
 
         /**
-         * The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.
+         * <p>The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder inGroupId(Integer inGroupId) {
             this.putBodyParameter("InGroupId", inGroupId);

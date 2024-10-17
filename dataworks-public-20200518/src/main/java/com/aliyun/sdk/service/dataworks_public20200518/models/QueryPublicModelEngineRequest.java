@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPublicModelEngineRequest} extends {@link RequestModel}
  *
  * <p>QueryPublicModelEngineRequest</p>
@@ -92,7 +93,11 @@ public class QueryPublicModelEngineRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -101,7 +106,11 @@ public class QueryPublicModelEngineRequest extends Request {
         }
 
         /**
-         * The FML statement that is used to query information about objects that are created in Data Modeling. For more information, see [Use FML statements to configure and manage data tables](~~298128~~). Only SHOW statements are supported.
+         * <p>The FML statement that is used to query information about objects that are created in Data Modeling. For more information, see <a href="https://help.aliyun.com/document_detail/298128.html">Use FML statements to configure and manage data tables</a>. Only SHOW statements are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>show dim tables</p>
          */
         public Builder text(String text) {
             this.putBodyParameter("Text", text);

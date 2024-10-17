@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCalcEnginesRequest} extends {@link RequestModel}
  *
  * <p>ListCalcEnginesRequest</p>
@@ -139,7 +140,7 @@ public class ListCalcEnginesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -148,18 +149,22 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The type of the compute engine. The value of this parameter is not case-sensitive. Valid values:
-         * <p>
+         * <p>The type of the compute engine. The value of this parameter is not case-sensitive. Valid values:</p>
+         * <ul>
+         * <li><strong>ODPS</strong></li>
+         * <li><strong>EMR</strong></li>
+         * <li><strong>BLINK</strong></li>
+         * <li><strong>HOLO</strong></li>
+         * <li><strong>MaxGraph</strong></li>
+         * <li><strong>HYBRIDDB_FOR_POSTGRESQL</strong></li>
+         * <li><strong>ADB_MYSQL</strong></li>
+         * <li><strong>HADOOP_CDH</strong></li>
+         * <li><strong>CLICKHOUSE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ODPS**
-         * *   **EMR**
-         * *   **BLINK**
-         * *   **HOLO**
-         * *   **MaxGraph**
-         * *   **HYBRIDDB_FOR_POSTGRESQL**
-         * *   **ADB_MYSQL**
-         * *   **HADOOP_CDH**
-         * *   **CLICKHOUSE**
+         * <strong>example:</strong>
+         * <p>ODPS</p>
          */
         public Builder calcEngineType(String calcEngineType) {
             this.putQueryParameter("CalcEngineType", calcEngineType);
@@ -168,11 +173,14 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The environment in which the compute engine is used. Valid values:
-         * <p>
+         * <p>The environment in which the compute engine is used. Valid values:</p>
+         * <ul>
+         * <li><strong>DEV</strong></li>
+         * <li><strong>PRD</strong></li>
+         * </ul>
          * 
-         * *   **DEV**
-         * *   **PRD**
+         * <strong>example:</strong>
+         * <p>PRD</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -181,7 +189,10 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The name of the compute engine, which must be exactly matched.
+         * <p>The name of the compute engine, which must be exactly matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -190,7 +201,10 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -199,7 +213,10 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -208,7 +225,11 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace with which the compute engine is associated.
+         * <p>The ID of the DataWorks workspace with which the compute engine is associated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

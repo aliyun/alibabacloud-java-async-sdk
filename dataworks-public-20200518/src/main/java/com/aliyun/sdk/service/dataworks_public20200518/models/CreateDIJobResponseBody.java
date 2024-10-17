@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDIJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDIJobResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDIJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The synchronization task ID.
+         * <p>The synchronization task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11792</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.DIJobId = DIJobId;
@@ -57,7 +61,10 @@ public class CreateDIJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the request ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F6AB6B3-41FB-5EBB-AFB2-0C98D49DA2BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCalcEnginesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCalcEnginesResponseBody</p>
@@ -73,7 +74,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The query results for compute engines that are returned on multiple pages.
+         * <p>The query results for compute engines that are returned on multiple pages.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +82,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +93,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +104,14 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -114,6 +124,12 @@ public class ListCalcEnginesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCalcEnginesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCalcEnginesResponseBody</p>
+     */
     public static class CalcEngines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindingProjectId")
         private Integer bindingProjectId;
@@ -285,7 +301,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The ID of the workspace with which the compute engine is associated.
+             * <p>The ID of the workspace with which the compute engine is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder bindingProjectId(Integer bindingProjectId) {
                 this.bindingProjectId = bindingProjectId;
@@ -293,7 +312,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace with which the compute engine is associated.
+             * <p>The name of the workspace with which the compute engine is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder bindingProjectName(String bindingProjectName) {
                 this.bindingProjectName = bindingProjectName;
@@ -301,7 +323,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the compute engine.
+             * <p>The type of the compute engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS</p>
              */
             public Builder calcEngineType(String calcEngineType) {
                 this.calcEngineType = calcEngineType;
@@ -309,7 +334,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the DataWorks workspace with which the compute engine is associated resides.
+             * <p>The region where the DataWorks workspace with which the compute engine is associated resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder dwRegion(String dwRegion) {
                 this.dwRegion = dwRegion;
@@ -317,7 +345,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The compute engine ID.
+             * <p>The compute engine ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35</p>
              */
             public Builder engineId(Integer engineId) {
                 this.engineId = engineId;
@@ -325,118 +356,122 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the compute engine.
-             * <p>
+             * <p>The details of the compute engine.</p>
+             * <ul>
+             * <li><p>ODPS</p>
+             * <pre><code>{
+             *   &quot;pubEndpoint&quot;: &quot;service.cn.maxcompute.aliyun.com/api&quot;,
+             *   &quot;endpoint&quot;: &quot;service.cn.maxcompute.aliyun-inc.com/api&quot;,
+             *   &quot;initProperties&quot;: &quot; 
+             *   {\&quot;odpsTypeMode\&quot;:\&quot;STANDARD\&quot;,\&quot;openPai\&quot;:false,\&quot;openPaiGpu\&quot;:false}&quot;,
+             *   &quot;resourceGroupType&quot;: &quot;ODPS&quot;,
+             *   &quot;resourceGroupId&quot;: &quot;361826516****&quot;,
+             *   &quot;vpcEndpoint&quot;: &quot;service.cn.maxcompute.aliyun-inc.com/api&quot;,
+             *   &quot;projectName&quot;: &quot;onefall_test_zjk&quot;,
+             *   &quot;taskSameAsOwner&quot;: &quot;true&quot;
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>EMR</p>
+             * <pre><code>{
+             *   &quot;emrClusterId&quot;: &quot;C-xxx&quot;,
+             *   &quot;specs&quot;: &quot;{\&quot;emrClusterId\&quot;:\&quot;C-xxx\&quot;,\&quot;emrAccessMode\&quot;:\&quot;simple\&quot;,\&quot;emrResourceQueueName\&quot;:\&quot;default\&quot;,\&quot;emrProjectId\&quot;:\&quot;FP-xxx\&quot;}&quot;,
+             *   &quot;endpoint&quot;: &quot;emr.aliyuncs.com&quot;,
+             *   &quot;emrResourceQueueName&quot;: &quot;default&quot;,
+             *   &quot;emrAccessMode&quot;: &quot;simple&quot;,
+             *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
+             *   &quot;projectName&quot;: &quot;xx-xxxx&quot;,
+             *   &quot;emrProjectId&quot;: &quot;FP-xxxx&quot;,
+             *   &quot;taskSameAsOwner&quot;: &quot;false&quot;
+             * }   
+             * </code></pre>
+             * </li>
+             * <li><p>BLINK</p>
+             * <pre><code>{
+             *   &quot;bayesProjectId&quot;: &quot;xxxx&quot;,
+             *   &quot;bayesProjectName&quot;: &quot;xc_blxxixxxnk_1&quot;,
+             *   &quot;cluster&quot;: &quot;xxxssxsx&quot;,
+             *   &quot;endpoint&quot;: &quot;https://stream.console.aliyun.com&quot;,
+             *   &quot;engineType&quot;: &quot;BLINK&quot;,
+             *   &quot;name&quot;: &quot;xsxsxxxxx&quot;,
+             *   &quot;projectName&quot;: &quot;xc_blxxxsxink_1&quot;,
+             *   &quot;queue&quot;: &quot;root.xc_blxsxxxxxxink_1&quot;,
+             *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
+             *   &quot;specs&quot;: &quot;{\&quot;cluster\&quot;:\&quot;xxxxxx\&quot;,\&quot;bayesProjectName\&quot;:\&quot;xc_blxxixxxnk_1\&quot;,\&quot;bayesProjectId\&quot;:\&quot;ssxxxsa\&quot;,\&quot;name\&quot;:\&quot;sxsxsxxx\&quot;,\&quot;queue\&quot;:\&quot;root.sxxsxxsx\&quot;}&quot;,
+             *   &quot;taskSameAsOwner&quot;: false
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>HOLO</p>
+             * <pre><code>{
+             *   &quot;endpoint&quot;: &quot;hgprecn-cn-xsxssxsx-cn-shanghai-internal.hologres.aliyuncs.com:80&quot;,
+             *   &quot;engineType&quot;: &quot;ODPS&quot;,
+             *   &quot;odpsEndpoint&quot;: &quot;hgprecn-cn-xsxssxxs-cn-shanghai-internal.hologres.aliyuncs.com:80&quot;,
+             *   &quot;odpsProjectName&quot;: &quot;xsxssxsxsx&quot;,
+             *   &quot;projectName&quot;: &quot;xsxssxsxsx&quot;,
+             *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
+             *   &quot;specs&quot;: &quot;{\&quot;pubEndpoint\&quot;:\&quot;hgprecn-cn-xsxssxsxs-cn-shanghai.hologres.aliyuncs.com:80\&quot;,\&quot;commonBuyInstanceId\&quot;:\&quot;hgprecn-cn-xsxsxsxs\&quot;,\&quot;project\&quot;:\&quot;holo_upxsxgrade1\&quot;,\&quot;common_buy_instance_id\&quot;:\&quot;hgprecn-cn-xsxsxs\&quot;,\&quot;endpoint\&quot;:\&quot;hgprecn-cn-xsxxsxs-cn-shanghai-internal.hologres.aliyuncs.com:80\&quot;,\&quot;port\&quot;:\&quot;80\&quot;,\&quot;host\&quot;:\&quot;hgprecn-cn-xsxsxsxs-cn-shanghai-internal.hologres.aliyuncs.com\&quot;,\&quot;vpcEndpoint\&quot;:\&quot;hgprecn-cn-xsxsxsxs-cn-shanghai-vpc.hologres.aliyuncs.com:80\&quot;,\&quot;authType\&quot;:2,\&quot;region\&quot;:\&quot;cn-shanghai\&quot;}&quot;,
+             *   &quot;taskSameAsOwner&quot;: false
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>MaxGraph</p>
+             * <pre><code>{
+             *   &quot;endpoint&quot;: &quot;http://pre-graphcompute.aliyuncs.com&quot;,
+             *   &quot;engineType&quot;: &quot;ODPS&quot;,
+             *   &quot;odpsEndpoint&quot;: &quot;http://pre-graphcompute.aliyuncs.com&quot;,
+             *   &quot;odpsProjectName&quot;: &quot;xsxsxsxs&quot;,
+             *   &quot;projectName&quot;: &quot;xsxsxsxs&quot;,
+             *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
+             *   &quot;taskSameAsOwner&quot;: false
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>HYBRIDDB_FOR_POSTGRESQL</p>
+             * <pre><code>{
+             *   &quot;endpoint&quot;: &quot;hybriddb_for_postgresql_mo12121ck_endpoint&quot;,
+             *   &quot;engineType&quot;: &quot;ODPS&quot;,
+             *   &quot;odpsEndpoint&quot;: &quot;hybriddb_for_postgresql_m121212ock_endpoint&quot;,
+             *   &quot;odpsProjectName&quot;: &quot;sxasaxsaxaxas&quot;,
+             *   &quot;projectName&quot;: &quot;sxasaxsaxaxas&quot;,
+             *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
+             *   &quot;specs&quot;: &quot;{\&quot;connectionString\&quot;:\&quot;gp-xsxsxsxxs.gpdb.rds.aliyuncs.com\&quot;,\&quot;database\&quot;:\&quot;xsxsxxsxs\&quot;,\&quot;password\&quot;:\&quot;xxxxxxx\&quot;,\&quot;instanceId\&quot;:\&quot;gp-cdcdacdacda\&quot;,\&quot;port\&quot;:\&quot;3432\&quot;,\&quot;ownerId\&quot;:\&quot;12121212\&quot;,\&quot;username\&quot;:\&quot;sdasaddsa\&quot;}&quot;,
+             *   &quot;taskSameAsOwner&quot;: false
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>ADB_MYSQL</p>
+             * <pre><code>{
+             *   &quot;endpoint&quot;: &quot;adb_mysql_mock_endpoint&quot;,
+             *   &quot;engineType&quot;: &quot;ODPS&quot;,
+             *   &quot;odpsEndpoint&quot;: &quot;adb_mysql_mock_endpoint&quot;,
+             *   &quot;odpsProjectName&quot;: &quot;am-xsaxaxa&quot;,
+             *   &quot;projectName&quot;: &quot;am-xsxsaxa&quot;,
+             *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
+             *   &quot;specs&quot;: &quot;{\&quot;connectionString\&quot;:\&quot;am-xsaxsa.ads.aliyuncs.com:3306\&quot;,\&quot;database\&quot;:\&quot;xsaxsaxa\&quot;,\&quot;password\&quot;:\&quot;xsaxsaxassxsa\&quot;,\&quot;instanceId\&quot;:\&quot;am-xsaxsasx\&quot;,\&quot;username\&quot;:\&quot;xsaxsadsd\&quot;}&quot;,
+             *   &quot;taskSameAsOwner&quot;: false
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>HADOOP_CDH</p>
+             * <pre><code>{
+             *   &quot;bindingBaseId&quot;: &quot;xsaxsaxs&quot;,
+             *   &quot;endpoint&quot;: &quot;xsaaaaa&quot;,
+             *   &quot;engineType&quot;: &quot;ODPS&quot;,
+             *   &quot;odpsEndpoint&quot;: &quot;axsxaxssxs&quot;,
+             *   &quot;odpsProjectName&quot;: &quot;ssxxax&quot;,
+             *   &quot;projectName&quot;: &quot;xsaxsaxsa&quot;,
+             *   &quot;resourceGroupId&quot;: 45208xxxxxx,
+             *   &quot;resourceGroupType&quot;: &quot;GATEWAY&quot;,
+             *   &quot;specs&quot;: &quot;{\&quot;cluster\&quot;:{\&quot;hive\&quot;:{\&quot;hiveServer2Url\&quot;:\&quot;jdbc:hive2://xxxxxxer-1-cn-shanghai-pre-kerberos-1:10000\&quot;,\&quot;hiveMetastore\&quot;:\&quot;thrift://xxxxxxxr-1-cn-shanghai-pre-kerberos-1:9083\&quot;,\&quot;version\&quot;:\&quot;2.1.1\&quot;},\&quot;configFiles\&quot;:{\&quot;coreSite\&quot;:\&quot;4534574xxxxxx\&quot;,\&quot;hdfsSite\&quot;:\&quot;453457919xxxxxxx\&quot;,\&quot;mapredSite\&quot;:\&quot;45345750xxxxxx\&quot;,\&quot;yarnSite\&quot;:\&quot;4534575xxxxx\&quot;,\&quot;krb5Conf\&quot;:\&quot;4534576xxxxx1\&quot;,\&quot;hiveSite\&quot;:\&quot;453457xxxxx20\&quot;},\&quot;spark\&quot;:{\&quot;version\&quot;:\&quot;2.4.0\&quot;},\&quot;cdh\&quot;:{\&quot;version\&quot;:\&quot;6.3.2\&quot;},\&quot;hdfs\&quot;:{\&quot;version\&quot;:\&quot;3.0.0\&quot;},\&quot;impala\&quot;:{\&quot;impalaUrl\&quot;:\&quot;jdbc:impala://cdh-xsxssxxsx-1-cn-shanghai-pre-kerberos-1:21050\&quot;,\&quot;version\&quot;:\&quot;3.2.0\&quot;},\&quot;yarn\&quot;:{\&quot;YarnUrl\&quot;:\&quot;http://cdh-xsxsxsxsxs-1-cn-shanghai-pre-kerberos-1:8032\&quot;,\&quot;webUrl\&quot;:\&quot;http://cdh-xsxsxssxxssx-1-cn-shanghai-pre-kerberos-1:8088\&quot;,\&quot;version\&quot;:\&quot;3.0.0\&quot;},\&quot;presto\&quot;:{\&quot;prestoUrl\&quot;:\&quot;jdbc:presto://cdh-xssxsxxsxsxs-1-cn-shanghai-pre-kerberos-1:8080/hive/default\&quot;,\&quot;version\&quot;:\&quot;0.244.1\&quot;}},\&quot;instanceId\&quot;:161sdads733,\&quot;authDetail\&quot;:{\&quot;principal\&quot;:\&quot;hive@HADOOP.COM\&quot;,\&quot;keytabFileId\&quot;:\&quot;45345815xsxsxs3\&quot;,\&quot;type\&quot;:\&quot;kerberos\&quot;,\&quot;username\&quot;:\&quot;xsxsxsxsa@HADOOP.COM\&quot;},\&quot;resGroupStatus\&quot;:\&quot;\&quot;,\&quot;hadoopAuthType\&quot;:\&quot;kerberos\&quot;,\&quot;clusterIdentifier\&quot;:\&quot;xssxsxsxsx\&quot;,\&quot;clusterId\&quot;:xsxsx,\&quot;resGroupId\&quot;:4520870619xsxssxxs,\&quot;accessMode\&quot;:\&quot;security\&quot;,\&quot;authType\&quot;:2}&quot;,
+             *   &quot;taskSameAsOwner&quot;: false
+             * }
+             * </code></pre>
+             * </li>
+             * </ul>
              * 
-             * *   ODPS
-             * 
-             *         {
-             *           "pubEndpoint": "service.cn.maxcompute.aliyun.com/api",
-             *           "endpoint": "service.cn.maxcompute.aliyun-inc.com/api",
-             *           "initProperties": " 
-             *           {\"odpsTypeMode\":\"STANDARD\",\"openPai\":false,\"openPaiGpu\":false}",
-             *           "resourceGroupType": "ODPS",
-             *           "resourceGroupId": "361826516****",
-             *           "vpcEndpoint": "service.cn.maxcompute.aliyun-inc.com/api",
-             *           "projectName": "onefall_test_zjk",
-             *           "taskSameAsOwner": "true"
-             *         }
-             * 
-             * *   EMR
-             * 
-             *         {
-             *           "emrClusterId": "C-xxx",
-             *           "specs": "{\"emrClusterId\":\"C-xxx\",\"emrAccessMode\":\"simple\",\"emrResourceQueueName\":\"default\",\"emrProjectId\":\"FP-xxx\"}",
-             *           "endpoint": "emr.aliyuncs.com",
-             *           "emrResourceQueueName": "default",
-             *           "emrAccessMode": "simple",
-             *           "resourceGroupType": "DW",
-             *           "projectName": "xx-xxxx",
-             *           "emrProjectId": "FP-xxxx",
-             *           "taskSameAsOwner": "false"
-             *         }   
-             * 
-             * *   BLINK
-             * 
-             *         {
-             *           "bayesProjectId": "xxxx",
-             *           "bayesProjectName": "xc_blxxixxxnk_1",
-             *           "cluster": "xxxssxsx",
-             *           "endpoint": "https://stream.console.aliyun.com",
-             *           "engineType": "BLINK",
-             *           "name": "xsxsxxxxx",
-             *           "projectName": "xc_blxxxsxink_1",
-             *           "queue": "root.xc_blxsxxxxxxink_1",
-             *           "resourceGroupType": "DW",
-             *           "specs": "{\"cluster\":\"xxxxxx\",\"bayesProjectName\":\"xc_blxxixxxnk_1\",\"bayesProjectId\":\"ssxxxsa\",\"name\":\"sxsxsxxx\",\"queue\":\"root.sxxsxxsx\"}",
-             *           "taskSameAsOwner": false
-             *         }
-             * 
-             * *   HOLO
-             * 
-             *         {
-             *           "endpoint": "hgprecn-cn-xsxssxsx-cn-shanghai-internal.hologres.aliyuncs.com:80",
-             *           "engineType": "ODPS",
-             *           "odpsEndpoint": "hgprecn-cn-xsxssxxs-cn-shanghai-internal.hologres.aliyuncs.com:80",
-             *           "odpsProjectName": "xsxssxsxsx",
-             *           "projectName": "xsxssxsxsx",
-             *           "resourceGroupType": "DW",
-             *           "specs": "{\"pubEndpoint\":\"hgprecn-cn-xsxssxsxs-cn-shanghai.hologres.aliyuncs.com:80\",\"commonBuyInstanceId\":\"hgprecn-cn-xsxsxsxs\",\"project\":\"holo_upxsxgrade1\",\"common_buy_instance_id\":\"hgprecn-cn-xsxsxs\",\"endpoint\":\"hgprecn-cn-xsxxsxs-cn-shanghai-internal.hologres.aliyuncs.com:80\",\"port\":\"80\",\"host\":\"hgprecn-cn-xsxsxsxs-cn-shanghai-internal.hologres.aliyuncs.com\",\"vpcEndpoint\":\"hgprecn-cn-xsxsxsxs-cn-shanghai-vpc.hologres.aliyuncs.com:80\",\"authType\":2,\"region\":\"cn-shanghai\"}",
-             *           "taskSameAsOwner": false
-             *         }
-             * 
-             * *   MaxGraph
-             * 
-             *         {
-             *           "endpoint": "http://pre-graphcompute.aliyuncs.com",
-             *           "engineType": "ODPS",
-             *           "odpsEndpoint": "http://pre-graphcompute.aliyuncs.com",
-             *           "odpsProjectName": "xsxsxsxs",
-             *           "projectName": "xsxsxsxs",
-             *           "resourceGroupType": "DW",
-             *           "taskSameAsOwner": false
-             *         }
-             * 
-             * *   HYBRIDDB_FOR_POSTGRESQL
-             * 
-             *         {
-             *           "endpoint": "hybriddb_for_postgresql_mo12121ck_endpoint",
-             *           "engineType": "ODPS",
-             *           "odpsEndpoint": "hybriddb_for_postgresql_m121212ock_endpoint",
-             *           "odpsProjectName": "sxasaxsaxaxas",
-             *           "projectName": "sxasaxsaxaxas",
-             *           "resourceGroupType": "DW",
-             *           "specs": "{\"connectionString\":\"gp-xsxsxsxxs.gpdb.rds.aliyuncs.com\",\"database\":\"xsxsxxsxs\",\"password\":\"xxxxxxx\",\"instanceId\":\"gp-cdcdacdacda\",\"port\":\"3432\",\"ownerId\":\"12121212\",\"username\":\"sdasaddsa\"}",
-             *           "taskSameAsOwner": false
-             *         }
-             * 
-             * *   ADB_MYSQL
-             * 
-             *         {
-             *           "endpoint": "adb_mysql_mock_endpoint",
-             *           "engineType": "ODPS",
-             *           "odpsEndpoint": "adb_mysql_mock_endpoint",
-             *           "odpsProjectName": "am-xsaxaxa",
-             *           "projectName": "am-xsxsaxa",
-             *           "resourceGroupType": "DW",
-             *           "specs": "{\"connectionString\":\"am-xsaxsa.ads.aliyuncs.com:3306\",\"database\":\"xsaxsaxa\",\"password\":\"xsaxsaxassxsa\",\"instanceId\":\"am-xsaxsasx\",\"username\":\"xsaxsadsd\"}",
-             *           "taskSameAsOwner": false
-             *         }
-             * 
-             * *   HADOOP_CDH
-             * 
-             *         {
-             *           "bindingBaseId": "xsaxsaxs",
-             *           "endpoint": "xsaaaaa",
-             *           "engineType": "ODPS",
-             *           "odpsEndpoint": "axsxaxssxs",
-             *           "odpsProjectName": "ssxxax",
-             *           "projectName": "xsaxsaxsa",
-             *           "resourceGroupId": 45208xxxxxx,
-             *           "resourceGroupType": "GATEWAY",
-             *           "specs": "{\"cluster\":{\"hive\":{\"hiveServer2Url\":\"jdbc:hive2://xxxxxxer-1-cn-shanghai-pre-kerberos-1:10000\",\"hiveMetastore\":\"thrift://xxxxxxxr-1-cn-shanghai-pre-kerberos-1:9083\",\"version\":\"2.1.1\"},\"configFiles\":{\"coreSite\":\"4534574xxxxxx\",\"hdfsSite\":\"453457919xxxxxxx\",\"mapredSite\":\"45345750xxxxxx\",\"yarnSite\":\"4534575xxxxx\",\"krb5Conf\":\"4534576xxxxx1\",\"hiveSite\":\"453457xxxxx20\"},\"spark\":{\"version\":\"2.4.0\"},\"cdh\":{\"version\":\"6.3.2\"},\"hdfs\":{\"version\":\"3.0.0\"},\"impala\":{\"impalaUrl\":\"jdbc:impala://cdh-xsxssxxsx-1-cn-shanghai-pre-kerberos-1:21050\",\"version\":\"3.2.0\"},\"yarn\":{\"YarnUrl\":\"http://cdh-xsxsxsxsxs-1-cn-shanghai-pre-kerberos-1:8032\",\"webUrl\":\"http://cdh-xsxsxssxxssx-1-cn-shanghai-pre-kerberos-1:8088\",\"version\":\"3.0.0\"},\"presto\":{\"prestoUrl\":\"jdbc:presto://cdh-xssxsxxsxsxs-1-cn-shanghai-pre-kerberos-1:8080/hive/default\",\"version\":\"0.244.1\"}},\"instanceId\":161sdads733,\"authDetail\":{\"principal\":\"hive@HADOOP.COM\",\"keytabFileId\":\"45345815xsxsxs3\",\"type\":\"kerberos\",\"username\":\"xsxsxsxsa@HADOOP.COM\"},\"resGroupStatus\":\"\",\"hadoopAuthType\":\"kerberos\",\"clusterIdentifier\":\"xssxsxsxsx\",\"clusterId\":xsxsx,\"resGroupId\":4520870619xsxssxxs,\"accessMode\":\"security\",\"authType\":2}",
-             *           "taskSameAsOwner": false
-             *         }
+             * <strong>example:</strong>
+             * <p>{&quot;pubEndpoint&quot;:&quot;<a href="http://service.cn.maxcompute.aliyun.com/api%22,%22endpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22resourceGroupType%22:%22ODPS%22,%22resourceGroupId%22:%22361826516****%22,%22vpcEndpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22projectName%22:%22onefall_test_zjk%22,%22taskSameAsOwner%22:%22true%22%7D">http://service.cn.maxcompute.aliyun.com/api&quot;,&quot;endpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;resourceGroupType&quot;:&quot;ODPS&quot;,&quot;resourceGroupId&quot;:&quot;361826516****&quot;,&quot;vpcEndpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;projectName&quot;:&quot;onefall_test_zjk&quot;,&quot;taskSameAsOwner&quot;:&quot;true&quot;}</a></p>
              */
             public Builder engineInfo(java.util.Map < String, ? > engineInfo) {
                 this.engineInfo = engineInfo;
@@ -444,11 +479,14 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The environment in which the compute engine is used. Valid values:
-             * <p>
+             * <p>The environment in which the compute engine is used. Valid values:</p>
+             * <ul>
+             * <li><strong>DEV</strong></li>
+             * <li><strong>PRD</strong></li>
+             * </ul>
              * 
-             * *   **DEV**
-             * *   **PRD**
+             * <strong>example:</strong>
+             * <p>PRD</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -456,7 +494,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the compute engine was created.
+             * <p>The time when the compute engine was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Oct 10, 2019 3:42:44 PM</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -464,7 +505,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the compute engine is the default engine of the current type.
+             * <p>Indicates whether the compute engine is the default engine of the current type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -472,7 +516,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the compute engine.
+             * <p>The display name of the compute engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -480,7 +527,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the compute engine resides.
+             * <p>The region where the compute engine resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -488,13 +538,16 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The identity that is used to access the compute engine. Valid values:
-             * <p>
+             * <p>The identity that is used to access the compute engine. Valid values:</p>
+             * <ul>
+             * <li><strong>USER</strong>: the current user</li>
+             * <li><strong>PROJECT</strong>: the workspace executor</li>
+             * <li><strong>SUBACCOUNT</strong>: a RAM user</li>
+             * <li><strong>STS_ROLE</strong>: the Security Token Service (STS) role</li>
+             * </ul>
              * 
-             * *   **USER**: the current user
-             * *   **PROJECT**: the workspace executor
-             * *   **SUBACCOUNT**: a RAM user
-             * *   **STS_ROLE**: the Security Token Service (STS) role
+             * <strong>example:</strong>
+             * <p>PROJECT</p>
              */
             public Builder taskAuthType(String taskAuthType) {
                 this.taskAuthType = taskAuthType;
@@ -502,7 +555,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -516,6 +572,12 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCalcEnginesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCalcEnginesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CalcEngines")
         private java.util.List < CalcEngines> calcEngines;
@@ -579,7 +641,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The compute engines.
+             * <p>The compute engines.</p>
              */
             public Builder calcEngines(java.util.List < CalcEngines> calcEngines) {
                 this.calcEngines = calcEngines;
@@ -587,7 +649,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -595,7 +660,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -603,7 +671,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of compute engine instances.
+             * <p>The total number of compute engine instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

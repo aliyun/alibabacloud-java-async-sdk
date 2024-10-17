@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFolderResponseBody} extends {@link TeaModel}
  *
  * <p>GetFolderResponseBody</p>
@@ -97,7 +98,7 @@ public class GetFolderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the folder.
+         * <p>The details of the folder.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetFolderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFolderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFolderResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
@@ -189,7 +211,10 @@ public class GetFolderResponseBody extends TeaModel {
             private String folderPath; 
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2735****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -197,7 +222,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the folder.
+             * <p>The path of the folder.</p>
              */
             public Builder folderPath(String folderPath) {
                 this.folderPath = folderPath;

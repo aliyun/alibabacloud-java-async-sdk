@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataDesensPlanTemplateValue} extends {@link TeaModel}
  *
  * <p>DataDesensPlanTemplateValue</p>
@@ -61,7 +62,10 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         private java.util.List < ? > extParamTemplate; 
 
         /**
-         * The name of the data masking method.
+         * <p>The name of the data masking method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -69,11 +73,14 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         }
 
         /**
-         * Indicates whether a watermark is added. Valid values:
-         * <p>
+         * <p>Indicates whether a watermark is added. Valid values:</p>
+         * <ul>
+         * <li>true: allow</li>
+         * <li>false: disallow</li>
+         * </ul>
          * 
-         * *   true: allow
-         * *   false: disallow
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportWaterMark(Boolean supportWaterMark) {
             this.supportWaterMark = supportWaterMark;
@@ -81,7 +88,7 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         }
 
         /**
-         * The data masking parameters and their descriptions.
+         * <p>The data masking parameters and their descriptions.</p>
          */
         public Builder extParamTemplate(java.util.List < ? > extParamTemplate) {
             this.extParamTemplate = extParamTemplate;

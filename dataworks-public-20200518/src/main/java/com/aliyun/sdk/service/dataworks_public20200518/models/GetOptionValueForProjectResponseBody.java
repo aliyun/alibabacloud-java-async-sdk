@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOptionValueForProjectResponseBody} extends {@link TeaModel}
  *
  * <p>GetOptionValueForProjectResponseBody</p>
@@ -49,7 +50,10 @@ public class GetOptionValueForProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned In the example, cuNumber is a custom key.
+         * <p>The data returned In the example, cuNumber is a custom key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cuNumber&quot;:&quot;0&quot;}</p>
          */
         public Builder optionValue(String optionValue) {
             this.optionValue = optionValue;
@@ -57,7 +61,10 @@ public class GetOptionValueForProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

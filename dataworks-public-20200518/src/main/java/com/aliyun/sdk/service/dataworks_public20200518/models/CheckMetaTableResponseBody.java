@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckMetaTableResponseBody} extends {@link TeaModel}
  *
  * <p>CheckMetaTableResponseBody</p>
@@ -49,7 +50,10 @@ public class CheckMetaTableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the metatable exists.
+         * <p>Indicates whether the metatable exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class CheckMetaTableResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQualityRelativeNodeRequest} extends {@link RequestModel}
  *
  * <p>CreateQualityRelativeNodeRequest</p>
@@ -182,7 +183,11 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The type of the compute engine or data source.
+         * <p>The type of the compute engine or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -191,7 +196,11 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The partition filter expression.
+         * <p>The partition filter expression.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=$[yyyymmdd]</p>
          */
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
@@ -200,7 +209,11 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The node ID. You can call the [ListNodes](~~173979~~) operation to query the ID.
+         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12321</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -209,7 +222,11 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -218,7 +235,11 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The name of the compute engine or data source.
+         * <p>The name of the compute engine or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -227,7 +248,11 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dual</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
@@ -236,7 +261,11 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the node belongs.
+         * <p>The ID of the workspace to which the node belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder targetNodeProjectId(Long targetNodeProjectId) {
             this.putBodyParameter("TargetNodeProjectId", targetNodeProjectId);
@@ -245,7 +274,11 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The name of the workspace to which the node to be associated with the partition filter expression belongs.
+         * <p>The name of the workspace to which the node to be associated with the partition filter expression belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder targetNodeProjectName(String targetNodeProjectName) {
             this.putBodyParameter("TargetNodeProjectName", targetNodeProjectName);

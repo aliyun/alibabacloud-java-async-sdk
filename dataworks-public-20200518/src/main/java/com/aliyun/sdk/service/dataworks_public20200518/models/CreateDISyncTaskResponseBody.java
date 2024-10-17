@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDISyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDISyncTaskResponseBody</p>
@@ -61,7 +62,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information that indicates whether the data synchronization task is created.
+         * <p>The information that indicates whether the data synchronization task is created.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -90,6 +97,12 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDISyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
@@ -141,7 +154,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the data synchronization task that is created.
+             * <p>The ID of the data synchronization task that is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000001</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -149,7 +165,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the "Invalid path: Workflow/xxxx/Data Integration" format is returned.
+             * <p>The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the &quot;Invalid path: Workflow/xxxx/Data Integration&quot; format is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Invalid path: Business Flow/xxxx/Data Integration</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -157,11 +176,14 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The creation status of the data synchronization task. Valid values:
-             * <p>
+             * <p>The creation status of the data synchronization task. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>fail</li>
+             * </ul>
              * 
-             * *   success
-             * *   fail
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

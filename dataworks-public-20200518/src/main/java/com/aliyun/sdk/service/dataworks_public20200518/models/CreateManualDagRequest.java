@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateManualDagRequest} extends {@link RequestModel}
  *
  * <p>CreateManualDagRequest</p>
@@ -169,7 +170,7 @@ public class CreateManualDagRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -178,7 +179,11 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * The data timestamp. The value of the data timestamp must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Configure this parameter in the YYYY-MM-DD 00:00:00 format.
+         * <p>The data timestamp. The value of the data timestamp must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Configure this parameter in the YYYY-MM-DD 00:00:00 format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-11 00:00:00</p>
          */
         public Builder bizDate(String bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -187,7 +192,10 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * The parameters of the manually triggered workflow, which are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a node, the value of the scheduling parameter is replaced with the value of the workflow parameter.
+         * <p>The parameters of the manually triggered workflow, which are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a node, the value of the scheduling parameter is replaced with the value of the workflow parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;kaaaa&quot;: &quot;vaaaaa&quot;, &quot;kbbbb&quot;: &quot;vbbbbb&quot;}</p>
          */
         public Builder dagParameters(String dagParameters) {
             this.putBodyParameter("DagParameters", dagParameters);
@@ -196,7 +204,10 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * The IDs of the nodes that do not need to be run.
+         * <p>The IDs of the nodes that do not need to be run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123,456</p>
          */
         public Builder excludeNodeIds(String excludeNodeIds) {
             this.putBodyParameter("ExcludeNodeIds", excludeNodeIds);
@@ -205,7 +216,11 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * The name of the manually triggered workflow.
+         * <p>The name of the manually triggered workflow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_workflow</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -214,7 +229,10 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * The IDs of the nodes that you want to run.
+         * <p>The IDs of the nodes that you want to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74324,74325</p>
          */
         public Builder includeNodeIds(String includeNodeIds) {
             this.putBodyParameter("IncludeNodeIds", includeNodeIds);
@@ -223,7 +241,10 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * The parameters transmitted between nodes in the manually triggered workflow. The parameters are in the following JSON format: `{ "<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page", "<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page" }`
+         * <p>The parameters transmitted between nodes in the manually triggered workflow. The parameters are in the following JSON format: <code>{ &quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page&quot;, &quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page&quot; }</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;20000123121&quot;: &quot;key1=val2 key2=val2&quot;, &quot;20000123124&quot;: &quot;kkkk=vvvvv aaaa=bbbb&quot;}</p>
          */
         public Builder nodeParameters(String nodeParameters) {
             this.putBodyParameter("NodeParameters", nodeParameters);
@@ -232,7 +253,8 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * The environment type of Operation Center. Valid values: PROD and DEV.
+         * <p>The environment type of Operation Center. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -241,7 +263,11 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * The name of the workspace to which the manually triggered workflow belongs.
+         * <p>The name of the workspace to which the manually triggered workflow belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_workspace</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

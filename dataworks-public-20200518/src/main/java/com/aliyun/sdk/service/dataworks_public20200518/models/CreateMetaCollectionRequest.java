@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMetaCollectionRequest} extends {@link RequestModel}
  *
  * <p>CreateMetaCollectionRequest</p>
@@ -120,7 +121,11 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The type of the collection.
+         * <p>The type of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALBUM</p>
          */
         public Builder collectionType(String collectionType) {
             this.putQueryParameter("CollectionType", collectionType);
@@ -129,7 +134,10 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The comment of the collection. The comment must be 1 to 64 characters in length.
+         * <p>The comment of the collection. The comment must be 1 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -138,7 +146,11 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The name of the collection. The name must be 1 to 32 characters in length.
+         * <p>The name of the collection. The name must be 1 to 32 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collection_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -147,7 +159,10 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The unique identifier of the parent collection.
+         * <p>The unique identifier of the parent collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.333508</p>
          */
         public Builder parentQualifiedName(String parentQualifiedName) {
             this.putQueryParameter("ParentQualifiedName", parentQualifiedName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLineageResponseBody} extends {@link TeaModel}
  *
  * <p>ListLineageResponseBody</p>
@@ -97,7 +98,7 @@ public class ListLineageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The structure returned.
+         * <p>The structure returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1010040007</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qualifiedName should be in format as entity-table.entity-guid</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64B-587A-8CED-969E1973887FXXX-TT</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,12 +150,12 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true</p>
+         * <p>false</p>
          * 
-         * true
-         * 
-         * false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,6 +168,12 @@ public class ListLineageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLineageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLineageResponseBody</p>
+     */
     public static class RelationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
@@ -218,10 +237,12 @@ public class ListLineageResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The data channel. Valid values:
-             * <p>
+             * <p>The data channel. Valid values:</p>
+             * <pre><code>FIRST_PARTY: DataWorks platformTHIRD_PARTY: user registration
+             * </code></pre>
              * 
-             *     FIRST_PARTY: DataWorks platformTHIRD_PARTY: user registration
+             * <strong>example:</strong>
+             * <p>THIRD_PARTY</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -229,7 +250,10 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder datasource(String datasource) {
                 this.datasource = datasource;
@@ -237,7 +261,10 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The unique relationship ID.
+             * <p>The unique relationship ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaabbccddguid</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -245,7 +272,10 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The task type, which is used to describe the relationship between entities, such as SQL-based calculation, mapping based on report fields, or API operation definition.
+             * <p>The task type, which is used to describe the relationship between entities, such as SQL-based calculation, mapping based on report fields, or API operation definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -259,6 +289,12 @@ public class ListLineageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLineageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLineageResponseBody</p>
+     */
     public static class DataEntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
@@ -310,7 +346,10 @@ public class ListLineageResponseBody extends TeaModel {
             private java.util.List < RelationList> relationList; 
 
             /**
-             * The time when the lineage was generated.
+             * <p>The time when the lineage was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1686215809269</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -318,7 +357,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the entity.
+             * <p>The information about the entity.</p>
              */
             public Builder entity(Entity entity) {
                 this.entity = entity;
@@ -326,7 +365,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The array of the relationship structure.
+             * <p>The array of the relationship structure.</p>
              */
             public Builder relationList(java.util.List < RelationList> relationList) {
                 this.relationList = relationList;
@@ -340,6 +379,12 @@ public class ListLineageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLineageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLineageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataEntityList")
         private java.util.List < DataEntityList> dataEntityList;
@@ -379,7 +424,7 @@ public class ListLineageResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * The array of the entity structure.
+             * <p>The array of the entity structure.</p>
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -387,7 +432,10 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * A pagination token. It can be used in the next request to retrieve a new page of results.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nextTokenFromRequest-xxxsd-ff</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

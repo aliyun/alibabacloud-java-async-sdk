@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQualityRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateQualityRuleResponseBody</p>
@@ -97,7 +98,10 @@ public class CreateQualityRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the monitoring rule that you created.
+         * <p>The ID of the monitoring rule that you created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -105,7 +109,10 @@ public class CreateQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>401</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +120,10 @@ public class CreateQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You have no permission.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +131,10 @@ public class CreateQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +142,10 @@ public class CreateQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecb967ec-c137-48****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +153,10 @@ public class CreateQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

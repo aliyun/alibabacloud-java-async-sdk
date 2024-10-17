@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQualityRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateQualityRuleRequest</p>
@@ -383,11 +384,14 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:
-         * <p>
+         * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
+         * <ul>
+         * <li>1: The monitoring rule is a strong rule.</li>
+         * <li>0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</li>
+         * </ul>
          * 
-         * *   1: The monitoring rule is a strong rule.
-         * *   0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder blockType(Integer blockType) {
             this.putBodyParameter("BlockType", blockType);
@@ -396,7 +400,11 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The checker ID. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the checker.
+         * <p>The checker ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the ID of the checker.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder checker(Integer checker) {
             this.putBodyParameter("Checker", checker);
@@ -405,7 +413,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The description of the monitoring rule.
+         * <p>The description of the monitoring rule.</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -414,7 +422,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
+         * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder criticalThreshold(String criticalThreshold) {
             this.putBodyParameter("CriticalThreshold", criticalThreshold);
@@ -423,7 +434,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the partition filter expression. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the partition filter expression.
+         * <p>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the ID of the partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -432,7 +446,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The expected value of the monitoring rule.
+         * <p>The expected value of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder expectValue(String expectValue) {
             this.putBodyParameter("ExpectValue", expectValue);
@@ -441,7 +458,11 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The monitoring rule ID. You can call the [ListQualityRules](~~173995~~) operation to query the ID of the monitoring rule.
+         * <p>The monitoring rule ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID of the monitoring rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -450,7 +471,11 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
+         * <p>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_count</p>
          */
         public Builder methodName(String methodName) {
             this.putBodyParameter("MethodName", methodName);
@@ -459,11 +484,14 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the monitoring rule in the production environment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the monitoring rule in the production environment. Valid values:</p>
+         * <ul>
+         * <li>true: The monitoring rule is triggered when the associated auto triggered node that generates the output data starts to run.</li>
+         * <li>false: The monitoring rule is not triggered when the associated auto triggered node that generates the output data starts to run.</li>
+         * </ul>
          * 
-         * *   true: The monitoring rule is triggered when the associated auto triggered node that generates the output data starts to run.
-         * *   false: The monitoring rule is not triggered when the associated auto triggered node that generates the output data starts to run.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder openSwitch(Boolean openSwitch) {
             this.putBodyParameter("OpenSwitch", openSwitch);
@@ -472,7 +500,11 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The comparison operator, such as >, >=, =, ≠, <, or <=.
+         * <p>The comparison operator, such as &gt;, &gt;=, =, ≠, &lt;, or &lt;=.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         public Builder operator(String operator) {
             this.putBodyParameter("Operator", operator);
@@ -481,11 +513,14 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether the threshold is a dynamic threshold. Valid values:
-         * <p>
+         * <p>Specifies whether the threshold is a dynamic threshold. Valid values:</p>
+         * <ul>
+         * <li>0: The threshold is not a dynamic threshold.</li>
+         * <li>2: The threshold is a dynamic threshold.</li>
+         * </ul>
          * 
-         * *   0: The threshold is not a dynamic threshold.
-         * *   2: The threshold is a dynamic threshold.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder predictType(Integer predictType) {
             this.putBodyParameter("PredictType", predictType);
@@ -494,7 +529,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -503,7 +541,11 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the compute engine or data source. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the name of the compute engine or data source.
+         * <p>The name of the compute engine or data source. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the name of the compute engine or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -512,7 +554,11 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the field.
+         * <p>The name of the field.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder property(String property) {
             this.putBodyParameter("Property", property);
@@ -521,7 +567,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The data type of the field.
+         * <p>The data type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bigint</p>
          */
         public Builder propertyType(String propertyType) {
             this.putBodyParameter("PropertyType", propertyType);
@@ -530,7 +579,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the monitoring rule.
+         * <p>The name of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -539,12 +591,15 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The type of the monitoring rule. Valid values:
-         * <p>
+         * <p>The type of the monitoring rule. Valid values:</p>
+         * <ul>
+         * <li>0: The monitoring rule is created by the system.</li>
+         * <li>1: The monitoring rule is created by a user.</li>
+         * <li>2: The monitoring rule is a workspace-level rule.</li>
+         * </ul>
          * 
-         * *   0: The monitoring rule is created by the system.
-         * *   1: The monitoring rule is created by a user.
-         * *   2: The monitoring rule is a workspace-level rule.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putBodyParameter("RuleType", ruleType);
@@ -553,7 +608,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The variable settings inserted before the custom rule. Format: x=a,y=b.
+         * <p>The variable settings inserted before the custom rule. Format: x=a,y=b.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x=a,y=b</p>
          */
         public Builder taskSetting(String taskSetting) {
             this.putBodyParameter("TaskSetting", taskSetting);
@@ -562,7 +620,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the monitoring template. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring template.
+         * <p>The ID of the monitoring template. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the ID of the monitoring template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder templateId(Integer templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -571,12 +632,15 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The trend of the monitoring result. Valid values:
-         * <p>
+         * <p>The trend of the monitoring result. Valid values:</p>
+         * <ul>
+         * <li>up: increasing</li>
+         * <li>down: decreasing</li>
+         * <li>abs: absolute value</li>
+         * </ul>
          * 
-         * *   up: increasing
-         * *   down: decreasing
-         * *   abs: absolute value
+         * <strong>example:</strong>
+         * <p>up</p>
          */
         public Builder trend(String trend) {
             this.putBodyParameter("Trend", trend);
@@ -585,7 +649,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.
+         * <p>The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder warningThreshold(String warningThreshold) {
             this.putBodyParameter("WarningThreshold", warningThreshold);
@@ -594,7 +661,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The filter condition or custom SQL statement that is used for monitoring.
+         * <p>The filter condition or custom SQL statement that is used for monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=$[yyyymmdd]</p>
          */
         public Builder whereCondition(String whereCondition) {
             this.putBodyParameter("WhereCondition", whereCondition);

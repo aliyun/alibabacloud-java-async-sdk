@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveProjectMemberFromRoleResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveProjectMemberFromRoleResponseBody</p>
@@ -37,7 +38,10 @@ public class RemoveProjectMemberFromRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

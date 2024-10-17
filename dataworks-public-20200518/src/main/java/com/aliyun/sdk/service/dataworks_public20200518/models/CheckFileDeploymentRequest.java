@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckFileDeploymentRequest} extends {@link RequestModel}
  *
  * <p>CheckFileDeploymentRequest</p>
@@ -97,7 +98,7 @@ public class CheckFileDeploymentRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -106,7 +107,10 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://result.aliyun.com/?checkerInstanceId=">https://result.aliyun.com/?checkerInstanceId=</a></p>
          */
         public Builder checkDetailUrl(String checkDetailUrl) {
             this.putBodyParameter("CheckDetailUrl", checkDetailUrl);
@@ -115,7 +119,11 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the file checker belongs. You can obtain the ID from the CheckerInstanceId parameter in the check event logs returned by DataWorks.
+         * <p>The ID of the instance to which the file checker belongs. You can obtain the ID from the CheckerInstanceId parameter in the check event logs returned by DataWorks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66_123455623_2</p>
          */
         public Builder checkerInstanceId(String checkerInstanceId) {
             this.putBodyParameter("CheckerInstanceId", checkerInstanceId);
@@ -124,12 +132,16 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * The check status of the file that you want to deploy. Valid values:
-         * <p>
+         * <p>The check status of the file that you want to deploy. Valid values:</p>
+         * <ul>
+         * <li>OK: The file passes the check.</li>
+         * <li>WARN: The file passes the check, but an alert is reported.</li>
+         * <li>FAIL: The file fails the check.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   OK: The file passes the check.
-         * *   WARN: The file passes the check, but an alert is reported.
-         * *   FAIL: The file fails the check.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

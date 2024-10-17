@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesByOutputResponseBody} extends {@link TeaModel}
  *
  * <p>ListNodesByOutputResponseBody</p>
@@ -97,7 +98,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The nodes returned.
+         * <p>The nodes returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SDFSDFSDF-asdfDFSDF-SDFSDf-SDfSFD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListNodesByOutputResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNodesByOutputResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesByOutputResponseBody</p>
+     */
     public static class NodeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
@@ -393,7 +415,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             private String schedulerType; 
 
             /**
-             * The baseline ID.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1235667</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -401,7 +426,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_first</p>
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -409,7 +437,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The CRON expression.
+             * <p>The CRON expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -417,7 +448,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the node.
+             * <p>The description of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -425,7 +459,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The table and partition filter expression in Data Quality that are associated with the node.
+             * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;projectName&quot;:&quot;ztjy_dim&quot;,&quot;tableName&quot;:&quot;dim_user_agent_manage_area_a&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyy-mm-dd-1]&quot;}]</p>
              */
             public Builder dqcDescription(String dqcDescription) {
                 this.dqcDescription = dqcDescription;
@@ -433,7 +470,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node is associated with a monitoring rule in Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with a monitoring rule in Data Quality. The value 1 indicates that the node is not associated with a monitoring rule in Data Quality.
+             * <p>Indicates whether the node is associated with a monitoring rule in Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with a monitoring rule in Data Quality. The value 1 indicates that the node is not associated with a monitoring rule in Data Quality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dqcType(Integer dqcType) {
                 this.dqcType = dqcType;
@@ -441,10 +481,11 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. Valid values:
-             * <p>
+             * <p>The node type. Valid values:</p>
+             * <p>6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
              * 
-             * 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -452,7 +493,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125677</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -460,7 +504,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liux_test_n****</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -468,7 +515,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The owner ID.
+             * <p>The owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19337906836551</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -476,7 +526,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling parameters of the node.
+             * <p>The scheduling parameters of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a=b</p>
              */
             public Builder paramValues(String paramValues) {
                 this.paramValues = paramValues;
@@ -484,7 +537,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the node. Valid values: 1, 3, 5, 7, and 8. A greater value indicates a higher priority. Default value: 1.
+             * <p>The priority of the node. Valid values: 1, 3, 5, 7, and 8. A greater value indicates a higher priority. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -492,7 +548,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. This parameter is deprecated. For more information about node types, see valid values of the FileType parameter.
+             * <p>The node type. This parameter is deprecated. For more information about node types, see valid values of the FileType parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder programType(String programType) {
                 this.programType = programType;
@@ -500,7 +559,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33671</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -508,7 +570,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workflow to which the node belongs.
+             * <p>The ID of the workflow to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1235655464</p>
              */
             public Builder relatedFlowId(Long relatedFlowId) {
                 this.relatedFlowId = relatedFlowId;
@@ -516,7 +581,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the node is rerun after the node fails to run.
+             * <p>The interval at which the node is rerun after the node fails to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder repeatInterval(Integer repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -524,7 +592,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node can be rerun.
+             * <p>Indicates whether the node can be rerun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder repeatability(Boolean repeatability) {
                 this.repeatability = repeatability;
@@ -532,7 +603,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
              */
             public Builder resGroupName(String resGroupName) {
                 this.resGroupName = resGroupName;
@@ -540,13 +611,16 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling type of the node. Valid values:
-             * <p>
+             * <p>The scheduling type of the node. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The node is an auto triggered node. The scheduling system regularly runs the node.</li>
+             * <li>MANUAL: The node is a manually triggered node. The scheduling system does not regularly run the node.</li>
+             * <li>PAUSE: The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</li>
+             * <li>SKIP: The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
+             * </ul>
              * 
-             * *   NORMAL: The node is an auto triggered node. The scheduling system regularly runs the node.
-             * *   MANUAL: The node is a manually triggered node. The scheduling system does not regularly run the node.
-             * *   PAUSE: The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.
-             * *   SKIP: The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -560,6 +634,12 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesByOutputResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesByOutputResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeList")
         private java.util.List < NodeList> nodeList;
@@ -599,7 +679,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             private String output; 
 
             /**
-             * The information about the nodes returned.
+             * <p>The information about the nodes returned.</p>
              */
             public Builder nodeList(java.util.List < NodeList> nodeList) {
                 this.nodeList = nodeList;
@@ -607,7 +687,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The output name of the current node.
+             * <p>The output name of the current node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_0709_1.630003556_out</p>
              */
             public Builder output(String output) {
                 this.output = output;

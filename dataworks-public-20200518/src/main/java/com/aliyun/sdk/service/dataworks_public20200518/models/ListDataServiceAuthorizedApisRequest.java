@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServiceAuthorizedApisRequest} extends {@link RequestModel}
  *
  * <p>ListDataServiceAuthorizedApisRequest</p>
@@ -125,7 +126,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -134,7 +135,10 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.
+         * <p>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My API Name</p>
          */
         public Builder apiNameKeyword(String apiNameKeyword) {
             this.putBodyParameter("ApiNameKeyword", apiNameKeyword);
@@ -143,7 +147,10 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +159,10 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +171,11 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -170,7 +184,10 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * The tenant ID. This parameter is deprecated.
+         * <p>The tenant ID. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

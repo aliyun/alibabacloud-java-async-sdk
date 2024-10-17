@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMetaCollectionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMetaCollectionResponseBody</p>
@@ -97,7 +98,10 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoPermission</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,10 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The unique identifier of the collection.
+         * <p>The unique identifier of the collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.11111</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;
@@ -129,7 +142,10 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +153,14 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

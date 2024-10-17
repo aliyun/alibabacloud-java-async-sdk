@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScanSensitiveDataResponseBody} extends {@link TeaModel}
  *
  * <p>ScanSensitiveDataResponseBody</p>
@@ -49,7 +50,10 @@ public class ScanSensitiveDataResponseBody extends TeaModel {
         private java.util.Map < String, ? > sensitives; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,11 @@ public class ScanSensitiveDataResponseBody extends TeaModel {
         }
 
         /**
-         * The check result. sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:
-         * <p>
-         * 
-         * *   hitCount: the number of times that the sensitive data hits the rule.
-         * *   ruleName: the name of the rule.
+         * <p>The check result. sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:</p>
+         * <ul>
+         * <li>hitCount: the number of times that the sensitive data hits the rule.</li>
+         * <li>ruleName: the name of the rule.</li>
+         * </ul>
          */
         public Builder sensitives(java.util.Map < String, ? > sensitives) {
             this.sensitives = sensitives;

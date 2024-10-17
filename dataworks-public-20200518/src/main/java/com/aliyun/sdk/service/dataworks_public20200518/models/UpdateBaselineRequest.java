@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBaselineRequest} extends {@link RequestModel}
  *
  * <p>UpdateBaselineRequest</p>
@@ -246,7 +247,10 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the alerting feature. Valid values: true and false.
+         * <p>Specifies whether to enable the alerting feature. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder alertEnabled(Boolean alertEnabled) {
             this.putBodyParameter("AlertEnabled", alertEnabled);
@@ -255,7 +259,10 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The alert margin threshold of the baseline. Unit: minutes.
+         * <p>The alert margin threshold of the baseline. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder alertMarginThreshold(Integer alertMarginThreshold) {
             this.putBodyParameter("AlertMarginThreshold", alertMarginThreshold);
@@ -264,7 +271,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The alert settings of the baseline.
+         * <p>The alert settings of the baseline.</p>
          */
         public Builder alertSettings(java.util.List < AlertSettings> alertSettings) {
             String alertSettingsShrink = shrink(alertSettings, "AlertSettings", "json");
@@ -274,7 +281,11 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The baseline ID. You can call the [ListBaselines](~~2261507~~) operation to query the ID.
+         * <p>The baseline ID. You can call the <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000010800007</p>
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -283,7 +294,10 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The name of the baseline.
+         * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BaselineName</p>
          */
         public Builder baselineName(String baselineName) {
             this.putBodyParameter("BaselineName", baselineName);
@@ -292,7 +306,10 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The type of the baseline. Valid values: DAILY and HOURLY.
+         * <p>The type of the baseline. Valid values: DAILY and HOURLY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY</p>
          */
         public Builder baselineType(String baselineType) {
             this.putBodyParameter("BaselineType", baselineType);
@@ -301,7 +318,10 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the baseline. Valid values: true and false.
+         * <p>Specifies whether to enable the baseline. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -310,7 +330,10 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The ancestor nodes of nodes in the baseline. Separate the ancestor nodes with commas (,). If a large number of ancestor nodes exist, we recommend that you create a zero load node and configure the zero load node as the descendant node of nodes in the baseline to facilitate node management.
+         * <p>The ancestor nodes of nodes in the baseline. Separate the ancestor nodes with commas (,). If a large number of ancestor nodes exist, we recommend that you create a zero load node and configure the zero load node as the descendant node of nodes in the baseline to facilitate node management.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder nodeIds(String nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);
@@ -319,7 +342,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The settings of the committed completion time of the baseline.
+         * <p>The settings of the committed completion time of the baseline.</p>
          */
         public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
             String overtimeSettingsShrink = shrink(overtimeSettings, "OvertimeSettings", "json");
@@ -329,7 +352,10 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the baseline owner.
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3726346****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -338,7 +364,10 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The priority of the baseline. Valid values: {1,3,5,7,8}.
+         * <p>The priority of the baseline. Valid values: {1,3,5,7,8}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -347,7 +376,11 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The workspace ID. You can call the [ListBaselines](~~2261507~~) operation to query the ID.
+         * <p>The workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2043</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -356,7 +389,10 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * The ID of the node that you want to disassociate from the baseline. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
+         * <p>The ID of the node that you want to disassociate from the baseline. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123,456</p>
          */
         public Builder removeNodeIds(String removeNodeIds) {
             this.putBodyParameter("RemoveNodeIds", removeNodeIds);
@@ -371,6 +407,12 @@ public class UpdateBaselineRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateBaselineRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBaselineRequest</p>
+     */
     public static class DingRobots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AtAll")
         private Boolean atAll;
@@ -410,7 +452,10 @@ public class UpdateBaselineRequest extends Request {
             private String webUrl; 
 
             /**
-             * Specifies whether to remind all members by using the at sign (@). Valid values: true and false.
+             * <p>Specifies whether to remind all members by using the at sign (@). Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder atAll(Boolean atAll) {
                 this.atAll = atAll;
@@ -418,7 +463,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;
@@ -432,6 +480,12 @@ public class UpdateBaselineRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateBaselineRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBaselineRequest</p>
+     */
     public static class AlertSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertInterval")
         @com.aliyun.core.annotation.Validation(maximum = 1440, minimum = 5)
@@ -593,7 +647,10 @@ public class UpdateBaselineRequest extends Request {
             private java.util.List < String > webhooks; 
 
             /**
-             * The interval at which an event alert notification is sent. Unit: seconds. Minimum value: 900.
+             * <p>The interval at which an event alert notification is sent. Unit: seconds. Minimum value: 900.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder alertInterval(Integer alertInterval) {
                 this.alertInterval = alertInterval;
@@ -601,7 +658,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The maximum number of times an event alert notification is sent. Maximum value: 24.
+             * <p>The maximum number of times an event alert notification is sent. Maximum value: 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alertMaximum(Integer alertMaximum) {
                 this.alertMaximum = alertMaximum;
@@ -609,7 +669,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The alert notification methods. Valid values: MAIL, SMS, PHONE, DINGROBOTS, and Webhooks. The value MAIL indicates that alert notifications are sent by email. The value SMS indicates that alert notifications are sent by text message. The value PHONE indicates that alert notifications are sent by phone call. You can use this notification method only in DataWorks Professional Edition or a more advanced edition. The value DINGROBOTS indicates that alert notifications are sent by using a DingTalk chatbot. You can use this notification method only if the RobotUrls parameter is configured. The value Webhooks indicates that alert notifications are sent by WeCom or Lark. You can use this notification method only if the Webhooks parameter is configured.
+             * <p>The alert notification methods. Valid values: MAIL, SMS, PHONE, DINGROBOTS, and Webhooks. The value MAIL indicates that alert notifications are sent by email. The value SMS indicates that alert notifications are sent by text message. The value PHONE indicates that alert notifications are sent by phone call. You can use this notification method only in DataWorks Professional Edition or a more advanced edition. The value DINGROBOTS indicates that alert notifications are sent by using a DingTalk chatbot. You can use this notification method only if the RobotUrls parameter is configured. The value Webhooks indicates that alert notifications are sent by WeCom or Lark. You can use this notification method only if the Webhooks parameter is configured.</p>
              */
             public Builder alertMethods(java.util.List < String > alertMethods) {
                 this.alertMethods = alertMethods;
@@ -617,7 +677,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The details of the alert recipient. If you set AlertRecipientType to OWNER, leave this parameter empty. If you set AlertRecipientType to SHIFT_SCHEDULE, set this parameter to the name of the shift schedule. If you set AlertRecipientType to OTHER, set this parameter to the employee IDs of specified personnel.
+             * <p>The details of the alert recipient. If you set AlertRecipientType to OWNER, leave this parameter empty. If you set AlertRecipientType to SHIFT_SCHEDULE, set this parameter to the name of the shift schedule. If you set AlertRecipientType to OTHER, set this parameter to the employee IDs of specified personnel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder alertRecipient(String alertRecipient) {
                 this.alertRecipient = alertRecipient;
@@ -625,7 +688,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The type of the alert recipient. Valid values: OWNER, OTHER, and SHIFT_SCHEDULE. The value OWNER indicates the node owner. The value OTHER indicates specified personnel. The value SHIFT_SCHEDULE indicates personnel in a shift schedule.
+             * <p>The type of the alert recipient. Valid values: OWNER, OTHER, and SHIFT_SCHEDULE. The value OWNER indicates the node owner. The value OTHER indicates specified personnel. The value SHIFT_SCHEDULE indicates personnel in a shift schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OWNER</p>
              */
             public Builder alertRecipientType(String alertRecipientType) {
                 this.alertRecipientType = alertRecipientType;
@@ -633,7 +699,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The type of the alert. Valid values: BASELINE and TOPIC. The value BASELINE indicates a baseline alert. The value TOPIC indicates an event alert.
+             * <p>The type of the alert. Valid values: BASELINE and TOPIC. The value BASELINE indicates a baseline alert. The value TOPIC indicates an event alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASELINE</p>
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -641,7 +710,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the baseline alerting feature. This feature is specific to baselines. Valid values: true and false.
+             * <p>Specifies whether to enable the baseline alerting feature. This feature is specific to baselines. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder baselineAlertEnabled(Boolean baselineAlertEnabled) {
                 this.baselineAlertEnabled = baselineAlertEnabled;
@@ -649,7 +721,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The DingTalk chatbots.
+             * <p>The DingTalk chatbots.</p>
              */
             public Builder dingRobots(java.util.List < DingRobots> dingRobots) {
                 this.dingRobots = dingRobots;
@@ -657,7 +729,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The end time of silence.
+             * <p>The end time of silence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder silenceEndTime(String silenceEndTime) {
                 this.silenceEndTime = silenceEndTime;
@@ -665,7 +740,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The start time of silence.
+             * <p>The start time of silence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder silenceStartTime(String silenceStartTime) {
                 this.silenceStartTime = silenceStartTime;
@@ -673,7 +751,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The types of event alerts, which are event-specific configurations.
+             * <p>The types of event alerts, which are event-specific configurations.</p>
              */
             public Builder topicTypes(java.util.List < String > topicTypes) {
                 this.topicTypes = topicTypes;
@@ -681,7 +759,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The webhook URLs.
+             * <p>The webhook URLs.</p>
              */
             public Builder webhooks(java.util.List < String > webhooks) {
                 this.webhooks = webhooks;
@@ -695,6 +773,12 @@ public class UpdateBaselineRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateBaselineRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBaselineRequest</p>
+     */
     public static class OvertimeSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cycle")
         private Integer cycle;
@@ -734,7 +818,10 @@ public class UpdateBaselineRequest extends Request {
             private String time; 
 
             /**
-             * The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that does not exceed 24.
+             * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that does not exceed 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cycle(Integer cycle) {
                 this.cycle = cycle;
@@ -742,7 +829,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * The committed completion time in the hh:mm format. Valid values of hh: \[0,47]. Valid values of mm: \[0,59].
+             * <p>The committed completion time in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder time(String time) {
                 this.time = time;

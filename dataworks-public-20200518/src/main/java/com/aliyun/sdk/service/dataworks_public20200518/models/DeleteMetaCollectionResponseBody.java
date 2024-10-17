@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetaCollectionResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMetaCollectionResponseBody</p>
@@ -97,7 +98,10 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>999999</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified product does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,10 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,12 +142,12 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation. Valid values:
-         * <p>
+         * <p>The result of the operation. Valid values:</p>
+         * <p>true: succeeded</p>
+         * <p>false: failed</p>
          * 
-         * true: succeeded
-         * 
-         * false: failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -142,12 +155,12 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true</p>
+         * <p>false</p>
          * 
-         * true
-         * 
-         * false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

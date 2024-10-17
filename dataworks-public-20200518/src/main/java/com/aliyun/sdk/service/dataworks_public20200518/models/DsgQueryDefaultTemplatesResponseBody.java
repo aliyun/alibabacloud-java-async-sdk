@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgQueryDefaultTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DsgQueryDefaultTemplatesResponseBody</p>
@@ -97,7 +98,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1029030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DsgQueryDefaultTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgQueryDefaultTemplatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
@@ -193,7 +215,10 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
             private java.util.Map < String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate; 
 
             /**
-             * The sensitive field type.
+             * <p>The sensitive field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -201,7 +226,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The supported data masking methods and parameter descriptions.
+             * <p>The supported data masking methods and parameter descriptions.</p>
              */
             public Builder desensPlanTemplate(java.util.Map < String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate) {
                 this.desensPlanTemplate = desensPlanTemplate;

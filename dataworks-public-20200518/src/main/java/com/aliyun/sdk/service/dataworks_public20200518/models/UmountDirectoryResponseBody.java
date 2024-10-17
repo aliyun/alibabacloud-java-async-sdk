@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UmountDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>UmountDirectoryResponseBody</p>
@@ -97,11 +98,14 @@ public class UmountDirectoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of directories that are removed. Valid values:
-         * <p>
+         * <p>The number of directories that are removed. Valid values:</p>
+         * <ul>
+         * <li>0: No directories are removed. The left-side navigation pane may not contain the specified directory.</li>
+         * <li>1: One directory is removed.</li>
+         * </ul>
          * 
-         * *   0: No directories are removed. The left-side navigation pane may not contain the specified directory.
-         * *   1: One directory is removed.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -109,7 +113,10 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code. The value 200 indicates that the task is successful.
+         * <p>The error code. The value 200 indicates that the task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -117,7 +124,10 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You have no permission.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -125,7 +135,10 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. The value 200 indicates that the request was successful.
+         * <p>The HTTP status code. The value 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -133,7 +146,10 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to troubleshoot issues.
+         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5aa2716455247597991794e65bd</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,11 +157,14 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

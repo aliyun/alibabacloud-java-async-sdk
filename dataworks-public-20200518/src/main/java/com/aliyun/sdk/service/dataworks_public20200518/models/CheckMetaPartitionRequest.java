@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckMetaPartitionRequest} extends {@link RequestModel}
  *
  * <p>CheckMetaPartitionRequest</p>
@@ -138,7 +139,7 @@ public class CheckMetaPartitionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -147,7 +148,10 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -156,7 +160,10 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The type of the data source. Set the value to odps.
+         * <p>The type of the data source. Set the value to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -165,7 +172,10 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase.
+         * <p>The name of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -174,7 +184,11 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The name of the partition in the MaxCompute metatable.
+         * <p>The name of the partition in the MaxCompute metatable.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=202005</p>
          */
         public Builder partition(String partition) {
             this.putQueryParameter("Partition", partition);
@@ -183,7 +197,10 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The GUID of the MaxCompute metatable.
+         * <p>The GUID of the MaxCompute metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -192,7 +209,10 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The name of the metatable.
+         * <p>The name of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProgramTypeCountRequest} extends {@link RequestModel}
  *
  * <p>ListProgramTypeCountRequest</p>
@@ -83,7 +84,7 @@ public class ListProgramTypeCountRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class ListProgramTypeCountRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV.
+         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -101,7 +106,11 @@ public class ListProgramTypeCountRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

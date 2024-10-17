@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMeasureDataRequest} extends {@link RequestModel}
  *
  * <p>ListMeasureDataRequest</p>
@@ -113,7 +114,7 @@ public class ListMeasureDataRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,10 +123,14 @@ public class ListMeasureDataRequest extends Request {
         }
 
         /**
-         * The measurement component.
-         * <p>
+         * <p>The measurement component.</p>
+         * <ul>
+         * <li>This parameter is set to Count if the DomainCode parameter is set to DideAlarmPhone or DideAlarmSms. In this case, statistics on the number of phone calls or text messages that are used to send alert notifications are collected.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   This parameter is set to Count if the DomainCode parameter is set to DideAlarmPhone or DideAlarmSms. In this case, statistics on the number of phone calls or text messages that are used to send alert notifications are collected.
+         * <strong>example:</strong>
+         * <p>Count</p>
          */
         public Builder componentCode(String componentCode) {
             this.putQueryParameter("ComponentCode", componentCode);
@@ -134,11 +139,15 @@ public class ListMeasureDataRequest extends Request {
         }
 
         /**
-         * The item to be measured. Valid values:
-         * <p>
+         * <p>The item to be measured. Valid values:</p>
+         * <ul>
+         * <li>DideAlarmPhone: phone call-based alerts</li>
+         * <li>DideAlarmSms: text message-based alerts</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   DideAlarmPhone: phone call-based alerts
-         * *   DideAlarmSms: text message-based alerts
+         * <strong>example:</strong>
+         * <p>DideAlarmPhone</p>
          */
         public Builder domainCode(String domainCode) {
             this.putQueryParameter("DomainCode", domainCode);
@@ -147,7 +156,11 @@ public class ListMeasureDataRequest extends Request {
         }
 
         /**
-         * The end timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.
+         * <p>The end timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717430400000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -156,7 +169,11 @@ public class ListMeasureDataRequest extends Request {
         }
 
         /**
-         * The start timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.
+         * <p>The start timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717344000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

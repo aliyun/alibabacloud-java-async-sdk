@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTableThemeResponseBody} extends {@link TeaModel}
  *
  * <p>ListTableThemeResponseBody</p>
@@ -97,7 +98,7 @@ public class ListTableThemeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListTableThemeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTableThemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTableThemeResponseBody</p>
+     */
     public static class ThemeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
@@ -249,7 +271,10 @@ public class ListTableThemeResponseBody extends TeaModel {
             private Long themeId; 
 
             /**
-             * The time when the table level was created.
+             * <p>The time when the table level was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123432343243</p>
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -257,7 +282,10 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the table level.
+             * <p>The creator of the table level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123455</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -265,7 +293,10 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the table folder. Valid values: 1 and 2. The value 1 indicates the first level. The value 2 indicates the second level.
+             * <p>The level of the table folder. Valid values: 1 and 2. The value 1 indicates the first level. The value 2 indicates the second level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -273,7 +304,10 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table level.
+             * <p>The name of the table level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -281,7 +315,10 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * The ancestor node ID.
+             * <p>The ancestor node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -289,7 +326,10 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * The DataWorks workspace ID.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -297,7 +337,10 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * The table theme ID.
+             * <p>The table theme ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder themeId(Long themeId) {
                 this.themeId = themeId;
@@ -311,6 +354,12 @@ public class ListTableThemeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTableThemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTableThemeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ThemeList")
         private java.util.List < ThemeList> themeList;
@@ -350,7 +399,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The list of table levels.
+             * <p>The list of table levels.</p>
              */
             public Builder themeList(java.util.List < ThemeList> themeList) {
                 this.themeList = themeList;
@@ -358,7 +407,10 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

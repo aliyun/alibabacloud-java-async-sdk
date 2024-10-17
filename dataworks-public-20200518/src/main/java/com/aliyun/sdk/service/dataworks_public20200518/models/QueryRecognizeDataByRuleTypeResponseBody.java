@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRecognizeDataByRuleTypeResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRecognizeDataByRuleTypeResponseBody</p>
@@ -97,7 +98,10 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned result in the JSON format.
+         * <p>The returned result in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;custom&quot;: false,       &quot;name&quot;: &quot;EducationDegree&quot;,       &quot;localeName&quot;: &quot;EducationDegree&quot;,       &quot;templateJsonStr&quot;: &quot;{&quot;_clazz&quot;:&quot;com.alipay.dsgclient.sdk.dsg.fastscan.engine.cond.EducationDegreeCond&quot;}&quot;,       &quot;desc&quot;: &quot;&quot;}]</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -105,7 +109,10 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9990030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +120,7 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

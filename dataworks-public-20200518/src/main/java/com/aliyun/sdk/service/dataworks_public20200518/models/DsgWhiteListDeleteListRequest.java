@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgWhiteListDeleteListRequest} extends {@link RequestModel}
  *
  * <p>DsgWhiteListDeleteListRequest</p>
@@ -77,7 +78,8 @@ public class DsgWhiteListDeleteListRequest extends Request {
         }
 
         /**
-         * The IDs of the whitelists.
+         * <p>The IDs of the whitelists.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ids(java.util.List < Integer > ids) {
             String idsShrink = shrink(ids, "Ids", "json");

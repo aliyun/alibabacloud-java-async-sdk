@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpSensitiveDataRequest} extends {@link RequestModel}
  *
  * <p>GetOpSensitiveDataRequest</p>
@@ -127,7 +128,7 @@ public class GetOpSensitiveDataRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +137,11 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * The date on which access records were generated. Specify the value in the yyyyMMdd format.
+         * <p>The date on which access records were generated. Specify the value in the yyyyMMdd format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20210116</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);
@@ -145,18 +150,20 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * The parameters that you can configure to query the access records. Valid values:
-         * <p>
+         * <p>The parameters that you can configure to query the access records. Valid values:</p>
+         * <ul>
+         * <li>dbType</li>
+         * <li>instanceName</li>
+         * <li>databaseName</li>
+         * <li>projectName</li>
+         * <li>clusterName</li>
+         * </ul>
+         * <p>The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC: [ {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;} ]</p>
+         * <p>You must configure the parameters based on the compute engine that you use in your business.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   dbType
-         * *   instanceName
-         * *   databaseName
-         * *   projectName
-         * *   clusterName
-         * 
-         * The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC: \[ {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"} ]
-         * 
-         * You must configure the parameters based on the compute engine that you use in your business.
+         * <strong>example:</strong>
+         * <p>[  {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;},  {&quot;dbType&quot;:&quot;ODPS.ODPS&quot;,&quot;projectName&quot;:&quot;adbc&quot;}  ]</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -165,11 +172,14 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * The operation that is performed on the data. Valid values:
-         * <p>
+         * <p>The operation that is performed on the data. Valid values:</p>
+         * <ul>
+         * <li>SQL_SELECT: specifies the data access operation. For example, execute a SELECT statement to query data.</li>
+         * <li>TUNNEL_DOWNLOAD: specifies the data download operation. For example, run a Tunnel command to download data.</li>
+         * </ul>
          * 
-         * *   SQL_SELECT: specifies the data access operation. For example, execute a SELECT statement to query data.
-         * *   TUNNEL_DOWNLOAD: specifies the data download operation. For example, run a Tunnel command to download data.
+         * <strong>example:</strong>
+         * <p>SQL_SELECT</p>
          */
         public Builder opType(String opType) {
             this.putQueryParameter("OpType", opType);
@@ -178,7 +188,11 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * The page number. Minimum value: 1. Maximum value: 1000.
+         * <p>The page number. Minimum value: 1. Maximum value: 1000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -187,7 +201,11 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Minimum value: 1. Maximum value: 1000.
+         * <p>The number of entries per page. Minimum value: 1. Maximum value: 1000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

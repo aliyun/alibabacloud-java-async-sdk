@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgQuerySensResultRequest} extends {@link RequestModel}
  *
  * <p>DsgQuerySensResultRequest</p>
@@ -273,7 +274,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The name of the field.
+         * <p>The name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col</p>
          */
         public Builder col(String col) {
             this.putBodyParameter("Col", col);
@@ -282,12 +286,15 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The type of the database. Valid values:
-         * <p>
+         * <p>The type of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>ODPS.ODPS</strong></li>
+         * <li><strong>HOLO.POSTGRES</strong></li>
+         * <li><strong>EMR</strong></li>
+         * </ul>
          * 
-         * *   **ODPS.ODPS**
-         * *   **HOLO.POSTGRES**
-         * *   **EMR**
+         * <strong>example:</strong>
+         * <p>ODPS.ODPS</p>
          */
         public Builder dbType(String dbType) {
             this.putBodyParameter("DbType", dbType);
@@ -296,7 +303,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The sensitivity level of the field.
+         * <p>The sensitivity level of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder level(String level) {
             this.putBodyParameter("Level", level);
@@ -305,7 +315,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The name of a data category.
+         * <p>The name of a data category.</p>
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -314,11 +324,14 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The sorting method.
-         * <p>
+         * <p>The sorting method.</p>
+         * <ul>
+         * <li>DESC</li>
+         * <li>ASC</li>
+         * </ul>
          * 
-         * *   DESC
-         * *   ASC
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -327,11 +340,14 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The field used for sorting.
-         * <p>
+         * <p>The field used for sorting.</p>
+         * <ul>
+         * <li>gmt_create</li>
+         * <li>gmt_modified</li>
+         * </ul>
          * 
-         * *   gmt_create
-         * *   gmt_modified
+         * <strong>example:</strong>
+         * <p>gmt_create</p>
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -340,7 +356,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -349,7 +368,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 20.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -358,7 +380,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace name.
+         * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -367,7 +392,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The name of the schema.
+         * <p>The name of the schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schema</p>
          */
         public Builder schemaName(String schemaName) {
             this.putBodyParameter("SchemaName", schemaName);
@@ -376,11 +404,14 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The sensitivity status of the field.
-         * <p>
+         * <p>The sensitivity status of the field.</p>
+         * <ul>
+         * <li>1: indicates sensitive.</li>
+         * <li>-1: indicates non-sensitive.</li>
+         * </ul>
          * 
-         * *   1: indicates sensitive.
-         * *   \-1: indicates non-sensitive.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sensStatus(String sensStatus) {
             this.putBodyParameter("SensStatus", sensStatus);
@@ -389,7 +420,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The sensitive field ID.
+         * <p>The sensitive field ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10241024</p>
          */
         public Builder sensitiveId(String sensitiveId) {
             this.putBodyParameter("SensitiveId", sensitiveId);
@@ -398,7 +432,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The name of the sensitive field.
+         * <p>The name of the sensitive field.</p>
          */
         public Builder sensitiveName(String sensitiveName) {
             this.putBodyParameter("SensitiveName", sensitiveName);
@@ -407,7 +441,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         public Builder table(String table) {
             this.putBodyParameter("Table", table);
@@ -416,7 +453,11 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
+         * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10241024</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

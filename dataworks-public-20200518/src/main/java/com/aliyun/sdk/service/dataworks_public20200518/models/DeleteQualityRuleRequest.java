@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQualityRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteQualityRuleRequest</p>
@@ -97,7 +98,7 @@ public class DeleteQualityRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -106,7 +107,10 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -115,7 +119,11 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the compute engine or data source.
+         * <p>The name of the compute engine or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -124,7 +132,11 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * The monitoring rule ID.
+         * <p>The monitoring rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

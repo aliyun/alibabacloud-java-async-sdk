@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableThemeLevelResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableThemeLevelResponseBody</p>
@@ -97,7 +98,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder entity(Entity entity) {
             this.entity = entity;
@@ -105,7 +106,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can troubleshoot issues based on the ID.
+         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1324afdsfde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableThemeLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableThemeLevelResponseBody</p>
+     */
     public static class Level extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -213,7 +235,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The description of the level.
+             * <p>The description of the level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -221,7 +246,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the level.
+             * <p>The ID of the level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelId(Long levelId) {
                 this.levelId = levelId;
@@ -229,7 +257,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the level.
+             * <p>The name of the level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>level1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,11 +268,14 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the level. Valid values:
-             * <p>
+             * <p>The type of the level. Valid values:</p>
+             * <ul>
+             * <li>1: indicates the logical level.</li>
+             * <li>2: indicates the physical level.</li>
+             * </ul>
              * 
-             * *   1: indicates the logical level.
-             * *   2: indicates the physical level.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -255,6 +289,12 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaTableThemeLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableThemeLevelResponseBody</p>
+     */
     public static class Theme extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Level")
         private Integer level;
@@ -318,11 +358,14 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private Long themeId; 
 
             /**
-             * The level of the theme. Valid values:
-             * <p>
+             * <p>The level of the theme. Valid values:</p>
+             * <ul>
+             * <li>1</li>
+             * <li>2</li>
+             * </ul>
              * 
-             * *   1
-             * *   2
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -330,7 +373,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the theme.
+             * <p>The name of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>theme1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -338,7 +384,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent theme.
+             * <p>The ID of the parent theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -346,7 +395,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the theme.
+             * <p>The ID of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder themeId(Long themeId) {
                 this.themeId = themeId;
@@ -360,6 +412,12 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaTableThemeLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableThemeLevelResponseBody</p>
+     */
     public static class Entity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Level")
         private java.util.List < Level> level;
@@ -399,7 +457,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private java.util.List < Theme> theme; 
 
             /**
-             * The information about the levels of the metatable.
+             * <p>The information about the levels of the metatable.</p>
              */
             public Builder level(java.util.List < Level> level) {
                 this.level = level;
@@ -407,7 +465,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the themes of the metatable.
+             * <p>The information about the themes of the metatable.</p>
              */
             public Builder theme(java.util.List < Theme> theme) {
                 this.theme = theme;

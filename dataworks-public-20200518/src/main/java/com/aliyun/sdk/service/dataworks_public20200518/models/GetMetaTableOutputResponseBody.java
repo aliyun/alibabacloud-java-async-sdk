@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableOutputResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableOutputResponseBody</p>
@@ -97,7 +98,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-0000-0000-000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableOutputResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableOutputResponseBody</p>
+     */
     public static class DataEntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -249,7 +271,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             private String waitTime; 
 
             /**
-             * The end time.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-12 0:32:12</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -257,7 +282,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -265,7 +293,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-12 0:34:13</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -273,7 +304,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the MaxCompute table.
+             * <p>The GUID of the MaxCompute table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.sample_project.sample_table</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -281,7 +315,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1048576</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -289,7 +326,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>987654321</p>
              */
             public Builder taskInstanceId(Long taskInstanceId) {
                 this.taskInstanceId = taskInstanceId;
@@ -297,7 +337,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The waiting time.
+             * <p>The waiting time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder waitTime(String waitTime) {
                 this.waitTime = waitTime;
@@ -311,6 +354,12 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaTableOutputResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableOutputResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataEntityList")
         private java.util.List < DataEntityList> dataEntityList;
@@ -374,7 +423,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The list of instances.
+             * <p>The list of instances.</p>
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -382,7 +431,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The page number. Valid values: 1 to 30. Default value: 1.
+             * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -390,7 +442,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -398,7 +453,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

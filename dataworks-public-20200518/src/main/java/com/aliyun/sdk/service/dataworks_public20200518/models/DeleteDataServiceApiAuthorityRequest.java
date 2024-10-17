@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDataServiceApiAuthorityRequest} extends {@link RequestModel}
  *
  * <p>DeleteDataServiceApiAuthorityRequest</p>
@@ -113,7 +114,7 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +123,11 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The API ID.
+         * <p>The API ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -131,7 +136,11 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the workspace from which you want to revoke the access permissions on the API.
+         * <p>The ID of the workspace from which you want to revoke the access permissions on the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         public Builder authorizedProjectId(Long authorizedProjectId) {
             this.putBodyParameter("AuthorizedProjectId", authorizedProjectId);
@@ -140,7 +149,11 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10003</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -149,7 +162,10 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The tenant ID. This parameter is deprecated.
+         * <p>The tenant ID. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10004</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

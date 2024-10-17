@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodeIOResponseBody} extends {@link TeaModel}
  *
  * <p>ListNodeIOResponseBody</p>
@@ -97,7 +98,7 @@ public class ListNodeIOResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The node information.
+         * <p>The node information.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ProjectNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The project does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListNodeIOResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNodeIOResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodeIOResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -201,7 +223,10 @@ public class ListNodeIOResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the ancestor or descendant node.
+             * <p>The name of the ancestor or descendant node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks_a.1234_out</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -209,7 +234,10 @@ public class ListNodeIOResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -217,7 +245,10 @@ public class ListNodeIOResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the input or output table.
+             * <p>The name of the input or output table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks_a.datastudio_tenant_waitres_alarm</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectRolesRequest} extends {@link RequestModel}
  *
  * <p>ListProjectRolesRequest</p>
@@ -68,7 +69,7 @@ public class ListProjectRolesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The ID of the DataWorks workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

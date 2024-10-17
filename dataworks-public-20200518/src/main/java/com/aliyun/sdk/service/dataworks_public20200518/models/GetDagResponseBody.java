@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDagResponseBody} extends {@link TeaModel}
  *
  * <p>GetDagResponseBody</p>
@@ -97,7 +98,7 @@ public class GetDagResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the DAG.
+         * <p>The details of the DAG.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetDagResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetDagResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetDagResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetDagResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7782a299-b291-4fee-8424-cf8058efa8e8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetDagResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetDagResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDagResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDagResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
@@ -321,7 +343,10 @@ public class GetDagResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The data timestamp.
+             * <p>The data timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -329,7 +354,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DAG was created.
+             * <p>The time when the DAG was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -337,7 +365,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736629400048545</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -345,7 +376,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The DAG ID.
+             * <p>The DAG ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>351249682</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -353,7 +387,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DAG finished running.
+             * <p>The time when the DAG finished running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -361,7 +398,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DAG was scheduled to run.
+             * <p>The time when the DAG was scheduled to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder gmtdate(Long gmtdate) {
                 this.gmtdate = gmtdate;
@@ -369,7 +409,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DAG was last modified.
+             * <p>The time when the DAG was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -377,7 +420,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the DAG.
+             * <p>The name of the DAG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_dag</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -385,7 +431,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the operation.
+             * <p>The sequence number of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder opSeq(Long opSeq) {
                 this.opSeq = opSeq;
@@ -393,7 +442,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112345</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -401,7 +453,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DAG started to run.
+             * <p>The time when the DAG started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -409,7 +464,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.
+             * <p>The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAILURE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -417,7 +475,10 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG. The value MANUAL indicates the DAG for a manually triggered workflow. The value SMOKE_TEST indicates the DAG for a smoke testing workflow. The value SUPPLY_DATA indicates the DAG for a data backfill instance. The value BUSINESS_PROCESS_DAG indicates the DAG for a one-time workflow.
+             * <p>The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG. The value MANUAL indicates the DAG for a manually triggered workflow. The value SMOKE_TEST indicates the DAG for a smoke testing workflow. The value SUPPLY_DATA indicates the DAG for a data backfill instance. The value BUSINESS_PROCESS_DAG indicates the DAG for a one-time workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANUAL_FLOW</p>
              */
             public Builder type(String type) {
                 this.type = type;

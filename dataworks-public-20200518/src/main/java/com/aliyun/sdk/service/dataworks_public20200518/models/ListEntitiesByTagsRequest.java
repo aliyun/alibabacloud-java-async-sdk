@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEntitiesByTagsRequest} extends {@link RequestModel}
  *
  * <p>ListEntitiesByTagsRequest</p>
@@ -112,7 +113,7 @@ public class ListEntitiesByTagsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +122,11 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * The type of the entity.
+         * <p>The type of the entity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -130,7 +135,10 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -139,7 +147,10 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Valid values: 1 to 100.
+         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +159,8 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List < UserEntityTag > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

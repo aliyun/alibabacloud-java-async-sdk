@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServiceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataServiceGroupsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The paging result for the business processes.
+         * <p>The paging result for the business processes.</p>
          */
         public Builder groupPagingResult(GroupPagingResult groupPagingResult) {
             this.groupPagingResult = groupPagingResult;
@@ -57,7 +58,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataServiceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceGroupsResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiGatewayGroupId")
         private String apiGatewayGroupId;
@@ -193,7 +203,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The ID of the API Gateway group to which the workflow is bound.
+             * <p>The ID of the API Gateway group to which the workflow is bound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100abc</p>
              */
             public Builder apiGatewayGroupId(String apiGatewayGroupId) {
                 this.apiGatewayGroupId = apiGatewayGroupId;
@@ -201,7 +214,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business process was created.
+             * <p>The time when the business process was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-24T18:37:51+0800</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -209,7 +225,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.
+             * <p>The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -217,7 +236,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the business process.
+             * <p>The description of the business process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +247,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The business process ID.
+             * <p>The business process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_123abc</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -233,7 +258,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the business process.
+             * <p>The name of the business process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -241,7 +269,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business process was modified.
+             * <p>The time when the business process was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-24T18:37:51+0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -249,7 +280,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10002</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -257,7 +291,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10003</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -271,6 +308,12 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataServiceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceGroupsResponseBody</p>
+     */
     public static class GroupPagingResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Groups")
         private java.util.List < Groups> groups;
@@ -334,7 +377,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The business processes.
+             * <p>The business processes.</p>
              */
             public Builder groups(java.util.List < Groups> groups) {
                 this.groups = groups;
@@ -342,7 +385,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
+             * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -350,7 +396,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+             * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -358,7 +407,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

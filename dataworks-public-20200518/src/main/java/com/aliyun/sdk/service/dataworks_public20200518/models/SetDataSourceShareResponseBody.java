@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDataSourceShareResponseBody} extends {@link TeaModel}
  *
  * <p>SetDataSourceShareResponseBody</p>
@@ -61,7 +62,7 @@ public class SetDataSourceShareResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the sharing operation.
+         * <p>The information about the sharing operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class SetDataSourceShareResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class SetDataSourceShareResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class SetDataSourceShareResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SetDataSourceShareResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetDataSourceShareResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -133,7 +146,10 @@ public class SetDataSourceShareResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the data source failed to be shared. If the data source is successfully shared, the value of this parameter is an empty string.
+             * <p>The reason why the data source failed to be shared. If the data source is successfully shared, the value of this parameter is an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datasource is wrong</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -141,11 +157,14 @@ public class SetDataSourceShareResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data source was shared. Valid values:
-             * <p>
+             * <p>Indicates whether the data source was shared. Valid values:</p>
+             * <ul>
+             * <li>success.</li>
+             * <li>fail. You can view the value of the Message parameter to identify the cause of the failure.</li>
+             * </ul>
              * 
-             * *   success.
-             * *   fail. You can view the value of the Message parameter to identify the cause of the failure.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

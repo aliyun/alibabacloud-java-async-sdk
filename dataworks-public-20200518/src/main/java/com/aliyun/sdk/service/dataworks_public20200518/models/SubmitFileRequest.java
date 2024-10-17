@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitFileRequest} extends {@link RequestModel}
  *
  * <p>SubmitFileRequest</p>
@@ -124,7 +125,7 @@ public class SubmitFileRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -133,7 +134,7 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * The description of the commit operation.
+         * <p>The description of the commit operation.</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -142,7 +143,11 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * The file ID. You can call the [ListFiles](~~173942~~) operation to query the file ID.
+         * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder fileId(Long fileId) {
             this.putBodyParameter("FileId", fileId);
@@ -151,7 +156,10 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -160,7 +168,10 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
+         * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -169,11 +180,14 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * Specifies whether to skip the pre-publish check after the file is committed. Valid values:
-         * <p>
+         * <p>Specifies whether to skip the pre-publish check after the file is committed. Valid values:</p>
+         * <ul>
+         * <li>false: indicates that the pre-publish check is not skipped. After the file is committed, the pre-publish check is automatically triggered. The file can be deployed only after the file passes the check.</li>
+         * <li>true: indicates that the pre-publish check is skipped. After the file is submitted, the pre-publish check process is not triggered. You can directly deploy the file.</li>
+         * </ul>
          * 
-         * *   false: indicates that the pre-publish check is not skipped. After the file is committed, the pre-publish check is automatically triggered. The file can be deployed only after the file passes the check.
-         * *   true: indicates that the pre-publish check is skipped. After the file is submitted, the pre-publish check process is not triggered. You can directly deploy the file.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder skipAllDeployFileExtensions(Boolean skipAllDeployFileExtensions) {
             this.putBodyParameter("SkipAllDeployFileExtensions", skipAllDeployFileExtensions);

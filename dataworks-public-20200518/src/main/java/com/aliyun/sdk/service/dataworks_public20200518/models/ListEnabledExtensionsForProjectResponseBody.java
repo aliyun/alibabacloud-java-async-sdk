@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnabledExtensionsForProjectResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnabledExtensionsForProjectResponseBody</p>
@@ -49,7 +50,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the extension.
+         * <p>The details of the extension.</p>
          */
         public Builder extensions(java.util.List < Extensions> extensions) {
             this.extensions = extensions;
@@ -57,7 +58,10 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F2CA7ED-27E5-59EA-A8C4-F1F7A1FF0B22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnabledExtensionsForProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnabledExtensionsForProjectResponseBody</p>
+     */
     public static class Extensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
@@ -181,7 +191,10 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The creator of the extension.
+             * <p>The creator of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3444434343555</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -189,7 +202,10 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The unique code of the extension.
+             * <p>The unique code of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a94a8e23bc0b4dfab9a5e4d2f374d645</p>
              */
             public Builder extensionCode(String extensionCode) {
                 this.extensionCode = extensionCode;
@@ -197,7 +213,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the extension.
+             * <p>The description of the extension.</p>
              */
             public Builder extensionDesc(String extensionDesc) {
                 this.extensionDesc = extensionDesc;
@@ -205,7 +221,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extension.
+             * <p>The name of the extension.</p>
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;
@@ -213,7 +229,10 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The modifier of the extension.
+             * <p>The modifier of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34452335611988</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -221,7 +240,10 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The owner ID.
+             * <p>The owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21323672*******55500</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -229,7 +251,10 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).
+             * <p>The parameter settings of the extension. For more information, see <a href="https://help.aliyun.com/document_detail/405354.html">Configure extension parameters</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>extension.fileType.23.deploy-file.enabled=true</p>
              */
             public Builder parameterSetting(String parameterSetting) {
                 this.parameterSetting = parameterSetting;
@@ -237,7 +262,10 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>529889518659842</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

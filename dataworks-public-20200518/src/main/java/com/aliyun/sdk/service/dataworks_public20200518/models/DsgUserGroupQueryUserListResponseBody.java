@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgUserGroupQueryUserListResponseBody} extends {@link TeaModel}
  *
  * <p>DsgUserGroupQueryUserListResponseBody</p>
@@ -97,7 +98,7 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1029030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DsgUserGroupQueryUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgUserGroupQueryUserListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
@@ -229,7 +251,10 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
             private String yunAccount; 
 
             /**
-             * The name of the user.
+             * <p>The name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -237,11 +262,14 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the user. Valid values:
-             * <p>
+             * <p>The type of the user. Valid values:</p>
+             * <ul>
+             * <li>1 to 5: Alibaba Cloud account</li>
+             * <li>6: RAM role</li>
+             * </ul>
              * 
-             * *   1 to 5: Alibaba Cloud account
-             * *   6: RAM role
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder accountType(Integer accountType) {
                 this.accountType = accountType;
@@ -249,7 +277,10 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID or role ID.
+             * <p>The user ID or role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder baseId(String baseId) {
                 this.baseId = baseId;
@@ -257,7 +288,10 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * The parent user ID. This parameter is required if a RAM user is used.
+             * <p>The parent user ID. This parameter is required if a RAM user is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder parentAccountId(String parentAccountId) {
                 this.parentAccountId = parentAccountId;
@@ -265,7 +299,10 @@ public class DsgUserGroupQueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account or RAM role. The return value of this parameter must be used if the user group is created by using an Alibaba Cloud account or a RAM role.
+             * <p>The name of the Alibaba Cloud account or RAM role. The return value of this parameter must be used if the user group is created by using an Alibaba Cloud account or a RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user:user1</p>
              */
             public Builder yunAccount(String yunAccount) {
                 this.yunAccount = yunAccount;

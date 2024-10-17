@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLineageRequest} extends {@link RequestModel}
  *
  * <p>ListLineageRequest</p>
@@ -125,7 +126,7 @@ public class ListLineageRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -134,10 +135,11 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * The lineage type. Valid values:\
-         * <p>
-         * up: ancestor lineage\
-         * down: descendant lineage
+         * <p>The lineage type. Valid values:<br>up: ancestor lineage<br>down: descendant lineage</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>up</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -146,7 +148,11 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity.
+         * <p>The unique identifier of the entity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.project.table</p>
          */
         public Builder entityQualifiedName(String entityQualifiedName) {
             this.putQueryParameter("EntityQualifiedName", entityQualifiedName);
@@ -155,7 +161,10 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * The keyword of the entity name.
+         * <p>The keyword of the entity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-keyword</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -164,7 +173,10 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-token-from-previous-request</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -173,7 +185,10 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

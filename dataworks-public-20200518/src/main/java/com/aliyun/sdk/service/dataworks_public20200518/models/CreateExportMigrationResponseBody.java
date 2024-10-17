@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExportMigrationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateExportMigrationResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateExportMigrationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The export task ID.
+         * <p>The export task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -69,7 +73,10 @@ public class CreateExportMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34267E2E-0335-1A60-A1F0-ADA530890CBA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +84,14 @@ public class CreateExportMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgDesensPlanAddOrUpdateResponseBody} extends {@link TeaModel}
  *
  * <p>DsgDesensPlanAddOrUpdateResponseBody</p>
@@ -97,7 +98,10 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The execution result of adding or modifying a data masking rule.
+         * <p>The execution result of adding or modifying a data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -105,7 +109,10 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1029030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +120,10 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +131,10 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +142,10 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +153,10 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true false
+         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRemindsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRemindsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListRemindsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListRemindsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRemindsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRemindsResponseBody</p>
+     */
     public static class Reminds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertMethods")
         private java.util.List < String > alertMethods;
@@ -345,7 +367,7 @@ public class ListRemindsResponseBody extends TeaModel {
             private Boolean useflag; 
 
             /**
-             * The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.
+             * <p>The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</p>
              */
             public Builder alertMethods(java.util.List < String > alertMethods) {
                 this.alertMethods = alertMethods;
@@ -353,7 +375,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the Alibaba Cloud accounts used by alert recipients.
+             * <p>The IDs of the Alibaba Cloud accounts used by alert recipients.</p>
              */
             public Builder alertTargets(java.util.List < String > alertTargets) {
                 this.alertTargets = alertTargets;
@@ -361,7 +383,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert recipient. Valid values: OWNER and OTHER. The value OWNER indicates the node owner. The value OTHER indicates a specified user.
+             * <p>The alert recipient. Valid values: OWNER and OTHER. The value OWNER indicates the node owner. The value OTHER indicates a specified user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OWNER</p>
              */
             public Builder alertUnit(String alertUnit) {
                 this.alertUnit = alertUnit;
@@ -369,7 +394,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.
+             * <p>The IDs of the baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.</p>
              */
             public Builder baselineIds(java.util.List < Long > baselineIds) {
                 this.baselineIds = baselineIds;
@@ -377,7 +402,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the workflows to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BIZPROCESS.
+             * <p>The IDs of the workflows to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BIZPROCESS.</p>
              */
             public Builder bizProcessIds(java.util.List < Long > bizProcessIds) {
                 this.bizProcessIds = bizProcessIds;
@@ -385,7 +410,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the quiet hours. The time is in the hh:mm format. Valid values of hh: \[0,23]. Valid values of mm: \[0,59].
+             * <p>The end time of the quiet hours. The time is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08:00</p>
              */
             public Builder dndEnd(String dndEnd) {
                 this.dndEnd = dndEnd;
@@ -393,7 +421,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the quiet hours. The time is in the hh:mm format. Valid values of hh: \[0,23]. Valid values of mm: \[0,59].
+             * <p>The start time of the quiet hours. The time is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder dndStart(String dndStart) {
                 this.dndStart = dndStart;
@@ -401,7 +432,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the rule creator.
+             * <p>The ID of the Alibaba Cloud account used by the rule creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952795****</p>
              */
             public Builder founder(String founder) {
                 this.founder = founder;
@@ -409,7 +443,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the nodes to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is NODE.
+             * <p>The IDs of the nodes to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is NODE.</p>
              */
             public Builder nodeIds(java.util.List < Long > nodeIds) {
                 this.nodeIds = nodeIds;
@@ -417,7 +451,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the workspaces to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is PROJECT.
+             * <p>The IDs of the workspaces to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is PROJECT.</p>
              */
             public Builder projectIds(java.util.List < Long > projectIds) {
                 this.projectIds = projectIds;
@@ -425,7 +459,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom alert rule ID.
+             * <p>The custom alert rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder remindId(Long remindId) {
                 this.remindId = remindId;
@@ -433,7 +470,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom alert rule.
+             * <p>The name of the custom alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert Rule</p>
              */
             public Builder remindName(String remindName) {
                 this.remindName = remindName;
@@ -441,7 +481,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The condition that triggers an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT.
+             * <p>The condition that triggers an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder remindType(String remindType) {
                 this.remindType = remindType;
@@ -449,7 +492,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates a node. The value BASELINE indicates a baseline. The value PROJECT indicates a workspace. The value BIZPROCESS indicates a workflow.
+             * <p>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates a node. The value BASELINE indicates a baseline. The value PROJECT indicates a workspace. The value BIZPROCESS indicates a workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NODE</p>
              */
             public Builder remindUnit(String remindUnit) {
                 this.remindUnit = remindUnit;
@@ -457,7 +503,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the custom alert rule is enabled. Valid values: true and false.
+             * <p>Indicates whether the custom alert rule is enabled. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useflag(Boolean useflag) {
                 this.useflag = useflag;
@@ -471,6 +520,12 @@ public class ListRemindsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRemindsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRemindsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -534,7 +589,10 @@ public class ListRemindsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -542,7 +600,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -550,7 +611,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of custom alert rules.
+             * <p>The list of custom alert rules.</p>
              */
             public Builder reminds(java.util.List < Reminds> reminds) {
                 this.reminds = reminds;
@@ -558,7 +619,10 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of custom alert rules returned.
+             * <p>The total number of custom alert rules returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

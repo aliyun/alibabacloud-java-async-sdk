@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceHistoryRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceHistoryRequest</p>
@@ -82,7 +83,7 @@ public class ListInstanceHistoryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +92,11 @@ public class ListInstanceHistoryRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the ListInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the ListInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -100,7 +105,10 @@ public class ListInstanceHistoryRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. By default, data of instances in the production environment is queried.
+         * <p>The environment of the workspace. Valid values: PROD and DEV. By default, data of instances in the production environment is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

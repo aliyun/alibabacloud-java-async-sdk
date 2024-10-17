@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunManualDagNodesRequest} extends {@link RequestModel}
  *
  * <p>RunManualDagNodesRequest</p>
@@ -210,7 +211,7 @@ public class RunManualDagNodesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -219,7 +220,10 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The data timestamp. The value of the data timestamp must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Configure this parameter in the YYYY-MM-DD 00:00:00 format. The StartBizDate parameter is used together with the EndBizDate parameter. You can configure only the BizDate parameter or the StartBizDate and EndBizDate parameters.
+         * <p>The data timestamp. The value of the data timestamp must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Configure this parameter in the YYYY-MM-DD 00:00:00 format. The StartBizDate parameter is used together with the EndBizDate parameter. You can configure only the BizDate parameter or the StartBizDate and EndBizDate parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-11 00:00:00</p>
          */
         public Builder bizDate(String bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -228,7 +232,10 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The parameters are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a [node](~~147245~~), the value of the scheduling parameter is replaced with the value of the workflow parameter.
+         * <p>The parameters are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a <a href="https://help.aliyun.com/document_detail/147245.html">node</a>, the value of the scheduling parameter is replaced with the value of the workflow parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;kaaaa&quot;: &quot;vaaaaa&quot;, &quot;kbbbb&quot;: &quot;vbbbbb&quot;}</p>
          */
         public Builder dagParameters(String dagParameters) {
             this.putBodyParameter("DagParameters", dagParameters);
@@ -237,7 +244,10 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The end of the time range in which data generated needs to be processed. Configure this parameter in the yyyy-MM-dd HH:mm:ss format. The StartBizDate parameter is used together with the EndBizDate parameter. You can configure only the BizDate parameter or the StartBizDate and EndBizDate parameters.
+         * <p>The end of the time range in which data generated needs to be processed. Configure this parameter in the yyyy-MM-dd HH:mm:ss format. The StartBizDate parameter is used together with the EndBizDate parameter. You can configure only the BizDate parameter or the StartBizDate and EndBizDate parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-03 00:00:00</p>
          */
         public Builder endBizDate(String endBizDate) {
             this.putBodyParameter("EndBizDate", endBizDate);
@@ -246,7 +256,10 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The IDs of the nodes that you do not need to run in the manually triggered workflow. DataWorks generates dry-run instances for all these nodes. After the dry-run instances are scheduled, the states of these instances are directly set to successful, but the scripts are not run. Separate multiple node IDs with commas (,). The ExcludeNodeIds parameter must be used together with the IncludeNodeIds parameter. This way, the settings of the ExcludeNodeIds parameter can take effect.
+         * <p>The IDs of the nodes that you do not need to run in the manually triggered workflow. DataWorks generates dry-run instances for all these nodes. After the dry-run instances are scheduled, the states of these instances are directly set to successful, but the scripts are not run. Separate multiple node IDs with commas (,). The ExcludeNodeIds parameter must be used together with the IncludeNodeIds parameter. This way, the settings of the ExcludeNodeIds parameter can take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123,456</p>
          */
         public Builder excludeNodeIds(String excludeNodeIds) {
             this.putBodyParameter("ExcludeNodeIds", excludeNodeIds);
@@ -255,7 +268,11 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The name of the manually triggered workflow.
+         * <p>The name of the manually triggered workflow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_workflow</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -264,7 +281,10 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The IDs of the nodes that you need to run in the manually triggered workflow. Separate multiple node IDs with commas (,).
+         * <p>The IDs of the nodes that you need to run in the manually triggered workflow. Separate multiple node IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74324,74325</p>
          */
         public Builder includeNodeIds(String includeNodeIds) {
             this.putBodyParameter("IncludeNodeIds", includeNodeIds);
@@ -273,7 +293,10 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The scheduling parameters of nodes in the manually triggered workflow. Configure NodeParameters in the following JSON format: {"\<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the parameter settings in the Scheduling Parameter section of the Properties tab on the DataStudio page", "\<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the parameter settings in the Scheduling Parameter section of the Properties tab on the DataStudio page"}.
+         * <p>The scheduling parameters of nodes in the manually triggered workflow. Configure NodeParameters in the following JSON format: {&quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameter settings in the Scheduling Parameter section of the Properties tab on the DataStudio page&quot;, &quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameter settings in the Scheduling Parameter section of the Properties tab on the DataStudio page&quot;}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;20000123121&quot;: &quot;key1=val2 key2=val2&quot;, &quot;20000123124&quot;: &quot;kkkk=vvvvv aaaa=bbbb&quot;}</p>
          */
         public Builder nodeParameters(String nodeParameters) {
             this.putBodyParameter("NodeParameters", nodeParameters);
@@ -282,7 +305,8 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The environment type of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
+         * <p>The environment type of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -291,7 +315,10 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the manually triggered workflow belongs.
+         * <p>The ID of the workspace to which the manually triggered workflow belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -300,7 +327,11 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The name of the workspace to which the manually triggered workflow belongs.
+         * <p>The name of the workspace to which the manually triggered workflow belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_workspace</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -309,7 +340,10 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range in which data generated needs to be processed. Configure this parameter in the yyyy-MM-dd HH:mm:ss format. The StartBizDate parameter is used together with the EndBizDate parameter. You can configure only the BizDate parameter or the StartBizDate and EndBizDate parameters.
+         * <p>The beginning of the time range in which data generated needs to be processed. Configure this parameter in the yyyy-MM-dd HH:mm:ss format. The StartBizDate parameter is used together with the EndBizDate parameter. You can configure only the BizDate parameter or the StartBizDate and EndBizDate parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-02 00:00:00</p>
          */
         public Builder startBizDate(String startBizDate) {
             this.putBodyParameter("StartBizDate", startBizDate);

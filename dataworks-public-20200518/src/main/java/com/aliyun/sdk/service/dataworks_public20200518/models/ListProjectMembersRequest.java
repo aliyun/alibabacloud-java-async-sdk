@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectMembersRequest} extends {@link RequestModel}
  *
  * <p>ListProjectMembersRequest</p>
@@ -98,7 +99,7 @@ public class ListProjectMembersRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,10 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: 1 to 30. Default value: 1.
+         * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,7 +120,10 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +132,11 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The ID of the DataWorks workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

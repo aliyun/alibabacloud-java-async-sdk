@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServiceGroupRequest} extends {@link RequestModel}
  *
  * <p>GetDataServiceGroupRequest</p>
@@ -98,7 +99,7 @@ public class GetDataServiceGroupRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class GetDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The business process ID.
+         * <p>The business process ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_123abc</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -116,7 +121,11 @@ public class GetDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -125,7 +134,10 @@ public class GetDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The tenant ID. This parameter is deprecated.
+         * <p>The tenant ID. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

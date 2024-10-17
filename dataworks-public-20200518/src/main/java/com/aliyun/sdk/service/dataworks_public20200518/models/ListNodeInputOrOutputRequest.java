@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodeInputOrOutputRequest} extends {@link RequestModel}
  *
  * <p>ListNodeInputOrOutputRequest</p>
@@ -98,7 +99,7 @@ public class ListNodeInputOrOutputRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,11 +108,15 @@ public class ListNodeInputOrOutputRequest extends Request {
         }
 
         /**
-         * The type of node that you want to query. Valid values:
-         * <p>
+         * <p>The type of node that you want to query. Valid values:</p>
+         * <ul>
+         * <li>input: ancestor node</li>
+         * <li>output: descendant node</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   input: ancestor node
-         * *   output: descendant node
+         * <strong>example:</strong>
+         * <p>output</p>
          */
         public Builder ioType(String ioType) {
             this.putBodyParameter("IoType", ioType);
@@ -120,7 +125,11 @@ public class ListNodeInputOrOutputRequest extends Request {
         }
 
         /**
-         * The node ID. You can call the [ListNodes](~~173979~~) operation to query the ID.
+         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12314567</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -129,7 +138,11 @@ public class ListNodeInputOrOutputRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: DEV and PROD.
+         * <p>The environment of the workspace. Valid values: DEV and PROD.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

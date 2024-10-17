@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaDBTableListRequest} extends {@link RequestModel}
  *
  * <p>GetMetaDBTableListRequest</p>
@@ -137,7 +138,7 @@ public class GetMetaDBTableListRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -146,7 +147,10 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The GUID of the MaxCompute project. Specify the GUID in the `odps.{projectName}` format. You must configure this parameter only if you set the DataSourceType parameter to odps.
+         * <p>The GUID of the MaxCompute project. Specify the GUID in the <code>odps.{projectName}</code> format. You must configure this parameter only if you set the DataSourceType parameter to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.testProjectName</p>
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -155,7 +159,10 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The E-MapReduce (EMR) cluster ID. You must configure this parameter only if you set the DataSourceType parameter to emr.
+         * <p>The E-MapReduce (EMR) cluster ID. You must configure this parameter only if you set the DataSourceType parameter to emr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -164,7 +171,10 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * <p>The type of the data source. Valid values: odps and emr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -173,7 +183,10 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase.
+         * <p>The name of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -182,7 +195,10 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -191,7 +207,10 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

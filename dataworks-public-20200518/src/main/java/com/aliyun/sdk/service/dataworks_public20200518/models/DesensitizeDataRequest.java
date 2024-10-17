@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DesensitizeDataRequest} extends {@link RequestModel}
  *
  * <p>DesensitizeDataRequest</p>
@@ -83,7 +84,7 @@ public class DesensitizeDataRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class DesensitizeDataRequest extends Request {
         }
 
         /**
-         * The data that you want to mask.
+         * <p>The data that you want to mask.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15365291784</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -101,7 +106,11 @@ public class DesensitizeDataRequest extends Request {
         }
 
         /**
-         * The code of the data masking scenario. You can view the code on the Data Masking Management page in Data Security Guard of the DataWorks console.
+         * <p>The code of the data masking scenario. You can view the code on the Data Masking Management page in Data Security Guard of the DataWorks console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_default_scene_code</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putBodyParameter("SceneCode", sceneCode);

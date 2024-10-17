@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBaselineRequest} extends {@link RequestModel}
  *
  * <p>CreateBaselineRequest</p>
@@ -180,7 +181,10 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * The alert margin threshold of the baseline. Unit: minutes.
+         * <p>The alert margin threshold of the baseline. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder alertMarginThreshold(Integer alertMarginThreshold) {
             this.putBodyParameter("AlertMarginThreshold", alertMarginThreshold);
@@ -189,7 +193,11 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * The name of the baseline.
+         * <p>The name of the baseline.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BaselineName</p>
          */
         public Builder baselineName(String baselineName) {
             this.putBodyParameter("BaselineName", baselineName);
@@ -198,7 +206,11 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * The type of the baseline. Valid values: DAILY and HOURLY.
+         * <p>The type of the baseline. Valid values: DAILY and HOURLY.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY</p>
          */
         public Builder baselineType(String baselineType) {
             this.putBodyParameter("BaselineType", baselineType);
@@ -207,7 +219,10 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * The ancestor nodes of nodes in the baseline.
+         * <p>The ancestor nodes of nodes in the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210001233239,210001236482</p>
          */
         public Builder nodeIds(String nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);
@@ -216,7 +231,8 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * The settings of the committed completion time of the baseline.
+         * <p>The settings of the committed completion time of the baseline.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
             this.putBodyParameter("OvertimeSettings", overtimeSettings);
@@ -225,7 +241,11 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the baseline owner.
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000000001</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -234,7 +254,11 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * The priority of the baseline. Valid values: {1,3,5,7,8}.
+         * <p>The priority of the baseline. Valid values: {1,3,5,7,8}.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,3,5,7,8</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -243,7 +267,11 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -258,6 +286,12 @@ public class CreateBaselineRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBaselineRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBaselineRequest</p>
+     */
     public static class OvertimeSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cycle")
         private Integer cycle;
@@ -297,7 +331,10 @@ public class CreateBaselineRequest extends Request {
             private String time; 
 
             /**
-             * The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that is no more than 24.
+             * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that is no more than 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cycle(Integer cycle) {
                 this.cycle = cycle;
@@ -305,7 +342,10 @@ public class CreateBaselineRequest extends Request {
             }
 
             /**
-             * The committed completion time in the hh:mm format. Valid values of hh: \[0,47]. Valid values of mm: \[0,59].
+             * <p>The committed completion time in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder time(String time) {
                 this.time = time;

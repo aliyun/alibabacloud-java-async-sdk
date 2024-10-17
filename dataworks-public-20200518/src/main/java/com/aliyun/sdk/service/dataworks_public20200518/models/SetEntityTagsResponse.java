@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetEntityTagsResponse} extends {@link TeaModel}
  *
  * <p>SetEntityTagsResponse</p>

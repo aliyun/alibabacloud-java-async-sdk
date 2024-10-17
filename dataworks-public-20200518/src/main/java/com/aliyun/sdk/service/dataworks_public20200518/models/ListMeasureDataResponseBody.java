@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMeasureDataResponseBody} extends {@link TeaModel}
  *
  * <p>ListMeasureDataResponseBody</p>
@@ -97,7 +98,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001001</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The user is not in tenant.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,7 @@ public class ListMeasureDataResponseBody extends TeaModel {
         }
 
         /**
-         * The measurement results.
+         * <p>The measurement results.</p>
          */
         public Builder measureDatas(java.util.List < MeasureDatas> measureDatas) {
             this.measureDatas = measureDatas;
@@ -129,7 +139,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class ListMeasureDataResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class ListMeasureDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMeasureDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMeasureDataResponseBody</p>
+     */
     public static class MeasureDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
@@ -229,7 +251,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
             private Long usage; 
 
             /**
-             * The measurement component.
+             * <p>The measurement component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Count</p>
              */
             public Builder componentCode(String componentCode) {
                 this.componentCode = componentCode;
@@ -237,7 +262,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
             }
 
             /**
-             * The item that is measured.
+             * <p>The item that is measured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DideAlarmPhone</p>
              */
             public Builder domainCode(String domainCode) {
                 this.domainCode = domainCode;
@@ -245,7 +273,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
             }
 
             /**
-             * The end timestamp of the measurement period, in milliseconds.
+             * <p>The end timestamp of the measurement period, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717430400000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -253,7 +284,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
             }
 
             /**
-             * The start timestamp of the measurement period, in milliseconds.
+             * <p>The start timestamp of the measurement period, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717344000000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -261,7 +295,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total quantity used within the measurement period.
+             * <p>The total quantity used within the measurement period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usage(Long usage) {
                 this.usage = usage;

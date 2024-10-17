@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgUserGroupAddOrUpdateRequest} extends {@link RequestModel}
  *
  * <p>DsgUserGroupAddOrUpdateRequest</p>
@@ -77,7 +78,8 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
         }
 
         /**
-         * The information about the user group.
+         * <p>The information about the user group.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder userGroups(java.util.List < UserGroups> userGroups) {
             String userGroupsShrink = shrink(userGroups, "UserGroups", "json");
@@ -93,6 +95,12 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DsgUserGroupAddOrUpdateRequest} extends {@link TeaModel}
+     *
+     * <p>DsgUserGroupAddOrUpdateRequest</p>
+     */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accounts")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -184,11 +192,12 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             private Integer userGroupType; 
 
             /**
-             * The users in the group.
-             * <p>
-             * 
-             * *   If a user group is created by using an Alibaba Cloud account and a RAM role, you can call the [DsgUserGroupQueryUserList](~~2786445~~) operation to query the users in the group.
-             * *   If a user group is created by using a MaxCompute role, you can call the [DsgUserGroupQueryUserList](~~2785695~~) operation to query the users in the group.
+             * <p>The users in the group.</p>
+             * <ul>
+             * <li>If a user group is created by using an Alibaba Cloud account and a RAM role, you can call the <a href="https://help.aliyun.com/document_detail/2786445.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
+             * <li>If a user group is created by using a MaxCompute role, you can call the <a href="https://help.aliyun.com/document_detail/2785695.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              */
             public Builder accounts(java.util.List < String > accounts) {
                 this.accounts = accounts;
@@ -196,11 +205,14 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * The user group ID.
-             * <p>
+             * <p>The user group ID.</p>
+             * <ul>
+             * <li>If you do not configure this parameter, the current operation is to add a user group.</li>
+             * <li>If you configure this parameter, the current operation is to modify a user group. You can call the <a href="https://help.aliyun.com/document_detail/2786441.html">DsgUserGroupQueryList</a> operation to query the user group ID.</li>
+             * </ul>
              * 
-             * *   If you do not configure this parameter, the current operation is to add a user group.
-             * *   If you configure this parameter, the current operation is to modify a user group. You can call the [DsgUserGroupQueryList](~~2786441~~) operation to query the user group ID.
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -208,7 +220,11 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * The name of the user group.
+             * <p>The name of the user group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yun_group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -216,7 +232,11 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * The owner of the user group.
+             * <p>The owner of the user group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -224,7 +244,10 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * The name of the MaxCompute project. You must configure this parameter when you create a MaxCompute user group.
+             * <p>The name of the MaxCompute project. You must configure this parameter when you create a MaxCompute user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_project</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -232,12 +255,16 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * The type of the user group. Valid values:
-             * <p>
+             * <p>The type of the user group. Valid values:</p>
+             * <ul>
+             * <li>1: Alibaba Cloud account</li>
+             * <li>2: RAM role</li>
+             * <li>3: MaxCompute role</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   1: Alibaba Cloud account
-             * *   2: RAM role
-             * *   3: MaxCompute role
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userGroupType(Integer userGroupType) {
                 this.userGroupType = userGroupType;

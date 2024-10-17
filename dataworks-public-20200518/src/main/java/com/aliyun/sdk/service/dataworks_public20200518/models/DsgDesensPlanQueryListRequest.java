@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgDesensPlanQueryListRequest} extends {@link RequestModel}
  *
  * <p>DsgDesensPlanQueryListRequest</p>
@@ -149,7 +150,10 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * The owner of the data masking rule.
+         * <p>The owner of the data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -158,7 +162,11 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +175,11 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +188,10 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * The name of the sensitive field.
+         * <p>The name of the sensitive field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -185,7 +200,11 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * The ID of the level-2 data masking scenario. You can call the [DsgSceneQuerySceneListByName](~~2786322~~) operation to query the list of IDs.
+         * <p>The ID of the level-2 data masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the list of IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder sceneId(Integer sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -194,11 +213,14 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * The status of the data masking rule. Valid values:
-         * <p>
+         * <p>The status of the data masking rule. Valid values:</p>
+         * <ul>
+         * <li>0: expired</li>
+         * <li>1: effective</li>
+         * </ul>
          * 
-         * *   0: expired
-         * *   1: effective
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

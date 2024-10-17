@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityEntityResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityEntityResponseBody</p>
@@ -97,7 +98,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the partition filter expression.
+         * <p>The information about the partition filter expression.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>401</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You have no permission.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6d739ef6-098a-47****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetQualityEntityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityEntityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityEntityResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -357,7 +379,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             private Integer task; 
 
             /**
-             * The time when the partition filter expression was created.
+             * <p>The time when the partition filter expression was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593964800000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -365,11 +390,14 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the partition filter expression. Valid values:
-             * <p>
+             * <p>The level of the partition filter expression. Valid values:</p>
+             * <ul>
+             * <li>0: The partition filter expression is at the SQL level. This indicates that the system checks data quality after each SQL statement is executed.</li>
+             * <li>1: The partition filter expression is at the node level. This indicates that the system checks data quality after all the SQL statements for a node are executed.</li>
+             * </ul>
              * 
-             * *   0: The partition filter expression is at the SQL level. This indicates that the system checks data quality after each SQL statement is executed.
-             * *   1: The partition filter expression is at the node level. This indicates that the system checks data quality after all the SQL statements for a node are executed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder entityLevel(Integer entityLevel) {
                 this.entityLevel = entityLevel;
@@ -377,7 +405,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the compute engine instance or data source.
+             * <p>The type of the compute engine instance or data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -385,7 +416,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to receive alert notifications.
+             * <p>The ID of the Alibaba Cloud account that is used to receive alert notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1822931****</p>
              */
             public Builder followers(String followers) {
                 this.followers = followers;
@@ -393,11 +427,14 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the partition filter expression is associated with a node. Valid values:
-             * <p>
+             * <p>Indicates whether the partition filter expression is associated with a node. Valid values:</p>
+             * <ul>
+             * <li>true: The partition filter expression is associated with a node.</li>
+             * <li>false: The partition filter expression is not associated with a node.</li>
+             * </ul>
              * 
-             * *   true: The partition filter expression is associated with a node.
-             * *   false: The partition filter expression is not associated with a node.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasRelativeNode(Boolean hasRelativeNode) {
                 this.hasRelativeNode = hasRelativeNode;
@@ -405,7 +442,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the partition filter expression.
+             * <p>The ID of the partition filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4003918</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -413,7 +453,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The partition filter expression.
+             * <p>The partition filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dt=$[yyyymmdd-1]</p>
              */
             public Builder matchExpression(String matchExpression) {
                 this.matchExpression = matchExpression;
@@ -421,7 +464,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the partition filter expression was modified.
+             * <p>The time when the partition filter expression was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593964800000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -429,7 +475,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to modify the partition filter expression.
+             * <p>The ID of the Alibaba Cloud account that is used to modify the partition filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1822931****</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -437,7 +486,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to configure the partition filter expression.
+             * <p>The ID of the Alibaba Cloud account that is used to configure the partition filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1822931****</p>
              */
             public Builder onDuty(String onDuty) {
                 this.onDuty = onDuty;
@@ -445,7 +497,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account that is used to configure the partition filter expression.
+             * <p>The name of the Alibaba Cloud account that is used to configure the partition filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder onDutyAccountName(String onDutyAccountName) {
                 this.onDutyAccountName = onDutyAccountName;
@@ -453,7 +508,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute engine instance or data source.
+             * <p>The name of the compute engine instance or data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -461,11 +519,14 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the node with which the partition filter expression is associated. The information includes the following items:
-             * <p>
+             * <p>The information about the node with which the partition filter expression is associated. The information includes the following items:</p>
+             * <ul>
+             * <li>ProjectName: the name of the workspace to which the node belongs.</li>
+             * <li>NodeID: the ID of the node.</li>
+             * </ul>
              * 
-             * *   ProjectName: the name of the workspace to which the node belongs.
-             * *   NodeID: the ID of the node.
+             * <strong>example:</strong>
+             * <p>[{&quot;projectName&quot;:&quot;xc_DP****&quot;,&quot;nodeId&quot;:7000026****}]</p>
              */
             public Builder relativeNode(String relativeNode) {
                 this.relativeNode = relativeNode;
@@ -473,7 +534,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates that the partition filter expression is at the SQL level.
+             * <p>Indicates that the partition filter expression is at the SQL level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sql(Integer sql) {
                 this.sql = sql;
@@ -481,7 +545,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the partitioned table.
+             * <p>The name of the partitioned table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_dqc_de****</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -489,7 +556,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The node.
+             * <p>The node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder task(Integer task) {
                 this.task = task;

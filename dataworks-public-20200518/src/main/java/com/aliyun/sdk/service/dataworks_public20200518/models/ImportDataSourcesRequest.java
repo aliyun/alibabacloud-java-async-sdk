@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportDataSourcesRequest} extends {@link RequestModel}
  *
  * <p>ImportDataSourcesRequest</p>
@@ -83,7 +84,7 @@ public class ImportDataSourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class ImportDataSourcesRequest extends Request {
         }
 
         /**
-         * The configurations of the data sources that you want to import. The Name, DataSourceType, SubType, Description, Content, and EnvType parameters are required. For more information about the parameters, see [CreateDataSource](~~211429~~).
+         * <p>The configurations of the data sources that you want to import. The Name, DataSourceType, SubType, Description, Content, and EnvType parameters are required. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/211429.html">CreateDataSource</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;SubType&quot;:&quot;&quot;,&quot;DataSourceType&quot;:&quot;mysql&quot;,&quot;EnvType&quot;:1,&quot;Name&quot;:&quot;mysql_dms2&quot;,&quot;Description&quot;:&quot;aaa&quot;,&quot;Content&quot;:&quot;{&quot;database&quot;:&quot;mysql_chengdu_old&quot;,&quot;password&quot;:&quot;<em><strong>&quot;,&quot;instanceName&quot;:&quot;rm-2vcrckb37163g7l3w&quot;,&quot;regionId&quot;:&quot;cn-chengdu&quot;,&quot;tag&quot;:&quot;rds&quot;,&quot;rdsOwnerId&quot;:&quot;333&quot;,&quot;username&quot;:&quot;mysql_chengdu2&quot;}&quot;},{&quot;SubType&quot;:&quot;&quot;,&quot;DataSourceType&quot;:&quot;mysql&quot;,&quot;EnvType&quot;:1,&quot;Name&quot;:&quot;mysql_dms2&quot;,&quot;Description&quot;:&quot;aaa&quot;,&quot;Content&quot;:&quot;{&quot;database&quot;:&quot;mysql_chengdu_old&quot;,&quot;password&quot;:&quot;</strong></em>&quot;,&quot;instanceName&quot;:&quot;rm-2vcrckb37163g7l3w&quot;,&quot;regionId&quot;:&quot;cn-chengdu&quot;,&quot;tag&quot;:&quot;rds&quot;,&quot;rdsOwnerId&quot;:&quot;143&quot;,&quot;username&quot;:&quot;mysql_chengdu2&quot;}&quot;}]</p>
          */
         public Builder dataSources(String dataSources) {
             this.putQueryParameter("DataSources", dataSources);
@@ -101,7 +106,11 @@ public class ImportDataSourcesRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

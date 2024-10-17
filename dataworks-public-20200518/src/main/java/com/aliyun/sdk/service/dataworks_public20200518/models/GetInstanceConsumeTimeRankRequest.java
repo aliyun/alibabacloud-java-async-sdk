@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceConsumeTimeRankRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceConsumeTimeRankRequest</p>
@@ -83,7 +84,7 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
         }
 
         /**
-         * The data timestamp, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
+         * <p>The data timestamp, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-21T00:00:00+0800</p>
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -101,7 +106,11 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

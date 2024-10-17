@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQualityEntityRequest} extends {@link RequestModel}
  *
  * <p>CreateQualityEntityRequest</p>
@@ -151,13 +152,15 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
-         * <p>
+         * <p>This parameter is deprecated.</p>
+         * <p>The value 0 indicates that the partition filter expression is at the SQL level, and the system checks data quality after each SQL statement is executed.</p>
+         * <ul>
+         * <li>0</li>
+         * <li>1</li>
+         * </ul>
          * 
-         * The value 0 indicates that the partition filter expression is at the SQL level, and the system checks data quality after each SQL statement is executed.
-         * 
-         * *
-         * *
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder entityLevel(Integer entityLevel) {
             this.putBodyParameter("EntityLevel", entityLevel);
@@ -166,18 +169,21 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * The type of the compute engine or data source.
-         * <p>
+         * <p>The type of the compute engine or data source.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>odps</li>
+         * <li>emr</li>
+         * <li>hadoop</li>
+         * <li>cdh</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>hybriddb_for_postgresql</li>
+         * <li>holodb</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   odps
-         * *   emr
-         * *   hadoop
-         * *   cdh
-         * *   analyticdb_for_mysql
-         * *   hybriddb_for_postgresql
-         * *   holodb
+         * <strong>example:</strong>
+         * <p>ODPS</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -186,7 +192,11 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * The partition filter expression.
+         * <p>The partition filter expression.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=$[yyyymmdd]</p>
          */
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
@@ -195,7 +205,10 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the DataWorks console to query the ID.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -204,7 +217,11 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * The name of the compute engine or data source.
+         * <p>The name of the compute engine or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -213,7 +230,11 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dual</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

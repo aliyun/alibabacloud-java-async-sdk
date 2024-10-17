@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableListByCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableListByCategoryResponseBody</p>
@@ -97,7 +98,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data returned.
+         * <p>The business data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableListByCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableListByCategoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -213,7 +235,10 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -221,7 +246,10 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -229,7 +257,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The returned result.
+             * <p>The returned result.</p>
              */
             public Builder tableGuidList(java.util.List < String > tableGuidList) {
                 this.tableGuidList = tableGuidList;
@@ -237,7 +265,10 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of metatables.
+             * <p>The total number of metatables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

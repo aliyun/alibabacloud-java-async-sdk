@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateDISyncTaskConfigForCreatingResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateDISyncTaskConfigForCreatingResponseBody</p>
@@ -61,7 +62,7 @@ public class GenerateDISyncTaskConfigForCreatingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information returned for the ID of the asynchronous thread.
+         * <p>The information returned for the ID of the asynchronous thread.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class GenerateDISyncTaskConfigForCreatingResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class GenerateDISyncTaskConfigForCreatingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class GenerateDISyncTaskConfigForCreatingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateDISyncTaskConfigForCreatingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateDISyncTaskConfigForCreatingResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -145,7 +158,10 @@ public class GenerateDISyncTaskConfigForCreatingResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, no value is returned for this parameter.
+             * <p>The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, no value is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -153,7 +169,10 @@ public class GenerateDISyncTaskConfigForCreatingResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asynchronous thread. You can call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to create a synchronization task in Data Integration.
+             * <p>The ID of the asynchronous thread. You can call the <a href="https://help.aliyun.com/document_detail/383465.html">QueryDISyncTaskConfigProcessResult</a> operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to create a synchronization task in Data Integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder processId(Long processId) {
                 this.processId = processId;
@@ -161,11 +180,14 @@ public class GenerateDISyncTaskConfigForCreatingResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ID of the asynchronous thread is generated. Valid values: Valid values:
-             * <p>
+             * <p>Indicates whether the ID of the asynchronous thread is generated. Valid values: Valid values:</p>
+             * <ul>
+             * <li>success: indicates that the ID of the asynchronous thread is generated.</li>
+             * <li>fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.</li>
+             * </ul>
              * 
-             * *   success: indicates that the ID of the asynchronous thread is generated.
-             * *   fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(String status) {
                 this.status = status;

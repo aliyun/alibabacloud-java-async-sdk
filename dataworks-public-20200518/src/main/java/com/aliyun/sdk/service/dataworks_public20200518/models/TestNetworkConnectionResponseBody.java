@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TestNetworkConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>TestNetworkConnectionResponseBody</p>
@@ -61,7 +62,10 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         private TaskList taskList; 
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,11 +73,14 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -81,7 +88,7 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the connectivity test.
+         * <p>The information about the connectivity test.</p>
          */
         public Builder taskList(TaskList taskList) {
             this.taskList = taskList;
@@ -94,6 +101,12 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TestNetworkConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestNetworkConnectionResponseBody</p>
+     */
     public static class TaskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectMessage")
         private String connectMessage;
@@ -133,7 +146,7 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
             private Boolean connectStatus; 
 
             /**
-             * The reason why the data source and resource group failed the connectivity test. If data source and the resource group passed the connectivity test, this parameter is left empty.
+             * <p>The reason why the data source and resource group failed the connectivity test. If data source and the resource group passed the connectivity test, this parameter is left empty.</p>
              */
             public Builder connectMessage(String connectMessage) {
                 this.connectMessage = connectMessage;
@@ -141,11 +154,14 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the connectivity test. Valid values:
-             * <p>
+             * <p>The result of the connectivity test. Valid values:</p>
+             * <ul>
+             * <li>true: The data source and the resource group passed the connectivity test.</li>
+             * <li>false: The data source and the resource group failed the connectivity test. You can troubleshoot issues based on the ConnectMessage parameter.</li>
+             * </ul>
              * 
-             * *   true: The data source and the resource group passed the connectivity test.
-             * *   false: The data source and the resource group failed the connectivity test. You can troubleshoot issues based on the ConnectMessage parameter.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder connectStatus(Boolean connectStatus) {
                 this.connectStatus = connectStatus;

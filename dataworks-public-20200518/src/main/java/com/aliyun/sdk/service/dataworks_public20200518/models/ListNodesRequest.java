@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesRequest} extends {@link RequestModel}
  *
  * <p>ListNodesRequest</p>
@@ -182,7 +183,7 @@ public class ListNodesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -191,7 +192,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_bizName</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -200,7 +204,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The ID of the baseline with which the node is associated.
+         * <p>The ID of the baseline with which the node is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liux_test_n****</p>
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -209,7 +216,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The description of the node.
+         * <p>The description of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>193379****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -218,7 +228,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -227,7 +240,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -236,7 +252,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListNodes**.
+         * <p>The operation that you want to perform. Set the value to <strong>ListNodes</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         public Builder programType(String programType) {
             this.putBodyParameter("ProgramType", programType);
@@ -245,7 +264,11 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -254,7 +277,11 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The ID of the owner.
+         * <p>The ID of the owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

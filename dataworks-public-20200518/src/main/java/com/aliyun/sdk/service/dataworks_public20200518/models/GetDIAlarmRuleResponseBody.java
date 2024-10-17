@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDIAlarmRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetDIAlarmRuleResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the alert rule.
+         * <p>The details of the alert rule.</p>
          */
         public Builder DIAlarmRule(DIAlarmRule DIAlarmRule) {
             this.DIAlarmRule = DIAlarmRule;
@@ -57,7 +58,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A807D85-AC9F-55F7-A58F-998D5249CAD9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDIAlarmRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDIAlarmRuleResponseBody</p>
+     */
     public static class NotificationChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
         private java.util.List < String > channels;
@@ -109,7 +119,7 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             private String severity; 
 
             /**
-             * The alert notification methods.
+             * <p>The alert notification methods.</p>
              */
             public Builder channels(java.util.List < String > channels) {
                 this.channels = channels;
@@ -117,11 +127,14 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level. Valid values:
-             * <p>
+             * <p>The severity level. Valid values:</p>
+             * <ul>
+             * <li>Warning</li>
+             * <li>Critical</li>
+             * </ul>
              * 
-             * *   Warning
-             * *   Critical
+             * <strong>example:</strong>
+             * <p>Warning</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -135,6 +148,12 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDIAlarmRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDIAlarmRuleResponseBody</p>
+     */
     public static class NotificationReceivers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReceiverType")
         private String receiverType;
@@ -174,11 +193,14 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             private java.util.List < String > receiverValues; 
 
             /**
-             * The recipient type.
-             * <p>
+             * <p>The recipient type.</p>
+             * <ul>
+             * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</li>
+             * <li>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</li>
+             * </ul>
              * 
-             * *   If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.
-             * *   If the alert notification method is Ding, the recipient type is DingTalk chatbot token.
+             * <strong>example:</strong>
+             * <p>DingToken</p>
              */
             public Builder receiverType(String receiverType) {
                 this.receiverType = receiverType;
@@ -186,7 +208,7 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The recipients.
+             * <p>The recipients.</p>
              */
             public Builder receiverValues(java.util.List < String > receiverValues) {
                 this.receiverValues = receiverValues;
@@ -200,6 +222,12 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDIAlarmRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDIAlarmRuleResponseBody</p>
+     */
     public static class NotificationSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InhibitionInterval")
         private Integer inhibitionInterval;
@@ -251,7 +279,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             private java.util.List < NotificationReceivers> notificationReceivers; 
 
             /**
-             * The duration of the alert suppression interval. Unit: minutes.
+             * <p>The duration of the alert suppression interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder inhibitionInterval(Integer inhibitionInterval) {
                 this.inhibitionInterval = inhibitionInterval;
@@ -259,7 +290,7 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification methods.
+             * <p>The alert notification methods.</p>
              */
             public Builder notificationChannels(java.util.List < NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -267,7 +298,7 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification recipients.
+             * <p>The alert notification recipients.</p>
              */
             public Builder notificationReceivers(java.util.List < NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -281,6 +312,12 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDIAlarmRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDIAlarmRuleResponseBody</p>
+     */
     public static class TriggerConditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
@@ -332,7 +369,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             private Long threshold; 
 
             /**
-             * The time interval for alert calculation. Unit: minutes.
+             * <p>The time interval for alert calculation. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -340,11 +380,14 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level. Valid values:
-             * <p>
+             * <p>The severity level. Valid values:</p>
+             * <ul>
+             * <li>Warning</li>
+             * <li>Critical</li>
+             * </ul>
              * 
-             * *   Warning
-             * *   Critical
+             * <strong>example:</strong>
+             * <p>Warning</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -352,12 +395,15 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The alert threshold.
-             * <p>
+             * <p>The alert threshold.</p>
+             * <ul>
+             * <li>If the alert rule is for task status, no threshold is used.</li>
+             * <li>If the alert rule is for failovers, specify the number of failovers.</li>
+             * <li>If the alert rule is for latency, the threshold is the latency duration, in seconds.</li>
+             * </ul>
              * 
-             * *   If the alert rule is for task status, no threshold is used.
-             * *   If the alert rule is for failovers, specify the number of failovers.
-             * *   If the alert rule is for latency, the threshold is the latency duration, in seconds.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder threshold(Long threshold) {
                 this.threshold = threshold;
@@ -371,6 +417,12 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDIAlarmRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDIAlarmRuleResponseBody</p>
+     */
     public static class DIAlarmRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
@@ -518,7 +570,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             private String updatedUid; 
 
             /**
-             * The timestamp when the alert rule was created. Unit: seconds.
+             * <p>The timestamp when the alert rule was created. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663573162</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -526,7 +581,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who creates the alert rule.
+             * <p>The ID of the user who creates the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder createdUid(String createdUid) {
                 this.createdUid = createdUid;
@@ -534,7 +592,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The alert rule ID.
+             * <p>The alert rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34988</p>
              */
             public Builder DIAlarmRuleId(Long DIAlarmRuleId) {
                 this.DIAlarmRuleId = DIAlarmRuleId;
@@ -542,7 +603,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task with which the alert rule is associated.
+             * <p>The ID of the task with which the alert rule is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11170</p>
              */
             public Builder DIJobId(Long DIJobId) {
                 this.DIJobId = DIJobId;
@@ -550,7 +614,7 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert rule.
+             * <p>The description of the alert rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -558,7 +622,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert rule is enabled.
+             * <p>Indicates whether the alert rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -566,12 +633,15 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The metric type in the alert rule. Valid values:
-             * <p>
+             * <p>The metric type in the alert rule. Valid values:</p>
+             * <ul>
+             * <li>Heartbeat</li>
+             * <li>FailoverCount</li>
+             * <li>Delay</li>
+             * </ul>
              * 
-             * *   Heartbeat
-             * *   FailoverCount
-             * *   Delay
+             * <strong>example:</strong>
+             * <p>Heartbeat</p>
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
@@ -579,7 +649,7 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification settings.
+             * <p>The alert notification settings.</p>
              */
             public Builder notificationSettings(NotificationSettings notificationSettings) {
                 this.notificationSettings = notificationSettings;
@@ -587,7 +657,7 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The conditions that can trigger the alert rule.
+             * <p>The conditions that can trigger the alert rule.</p>
              */
             public Builder triggerConditions(java.util.List < TriggerConditions> triggerConditions) {
                 this.triggerConditions = triggerConditions;
@@ -595,7 +665,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert rule was last updated. Unit: seconds.
+             * <p>The timestamp when the alert rule was last updated. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663573163</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -603,7 +676,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who last updates the alert rule.
+             * <p>The ID of the user who last updates the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder updatedUid(String updatedUid) {
                 this.updatedUid = updatedUid;

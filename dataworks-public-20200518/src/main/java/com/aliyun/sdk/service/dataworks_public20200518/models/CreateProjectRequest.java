@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectRequest} extends {@link RequestModel}
  *
  * <p>CreateProjectRequest</p>
@@ -182,7 +183,7 @@ public class CreateProjectRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -191,7 +192,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. This parameter can be left empty.
+         * <p>The client token that is used to ensure the idempotence of the request. This parameter can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABFUOEUOTRTRJKE</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,11 +204,14 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable the Develop role. Valid values:
-         * <p>
+         * <p>Specifies whether to disable the Develop role. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false** (default)
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableDevelopment(Boolean disableDevelopment) {
             this.putQueryParameter("DisableDevelopment", disableDevelopment);
@@ -213,11 +220,14 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow you to download the query result from DataStudio. Valid values:
-         * <p>
+         * <p>Specifies whether to allow you to download the query result from DataStudio. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong> (default): allows you to download the query result from DataStudio.</li>
+         * <li><strong>0</strong>: does not allow you to download the query result from DataStudio.</li>
+         * </ul>
          * 
-         * *   **1** (default): allows you to download the query result from DataStudio.
-         * *   **0**: does not allow you to download the query result from DataStudio.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isAllowDownload(Integer isAllowDownload) {
             this.putQueryParameter("IsAllowDownload", isAllowDownload);
@@ -226,7 +236,11 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The description of the workspace.
+         * <p>The description of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_describe</p>
          */
         public Builder projectDescription(String projectDescription) {
             this.putQueryParameter("ProjectDescription", projectDescription);
@@ -235,7 +249,11 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The name of the workspace. The name can contain only letters, digits, and underscores (\_) and must start with a letter or digit.
+         * <p>The name of the workspace. The name can contain only letters, digits, and underscores (_) and must start with a letter or digit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putQueryParameter("ProjectIdentifier", projectIdentifier);
@@ -244,13 +262,15 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The mode of the workspace. For more information about the differences between the modes of workspaces, see [Differences between workspaces in basic mode and workspaces in standard mode](~~85772~~).
-         * <p>
+         * <p>The mode of the workspace. For more information about the differences between the modes of workspaces, see <a href="https://help.aliyun.com/document_detail/85772.html">Differences between workspaces in basic mode and workspaces in standard mode</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong> (default): basic mode</li>
+         * <li><strong>3</strong>: standard mode</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **2** (default): basic mode
-         * *   **3**: standard mode
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectMode(Integer projectMode) {
             this.putQueryParameter("ProjectMode", projectMode);
@@ -259,7 +279,11 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The display name of the workspace.
+         * <p>The display name of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -268,7 +292,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzbn7pti3****</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -277,7 +304,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The tags added to the workspace.
+         * <p>The tags added to the workspace.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -293,6 +320,12 @@ public class CreateProjectRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateProjectRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -334,7 +367,11 @@ public class CreateProjectRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -342,7 +379,11 @@ public class CreateProjectRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

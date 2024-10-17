@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddToMetaCategoryRequest} extends {@link RequestModel}
  *
  * <p>AddToMetaCategoryRequest</p>
@@ -83,7 +84,7 @@ public class AddToMetaCategoryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class AddToMetaCategoryRequest extends Request {
         }
 
         /**
-         * The ID of the category.
+         * <p>The ID of the category.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -101,7 +106,11 @@ public class AddToMetaCategoryRequest extends Request {
         }
 
         /**
-         * The GUID of the metatable.
+         * <p>The GUID of the metatable.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

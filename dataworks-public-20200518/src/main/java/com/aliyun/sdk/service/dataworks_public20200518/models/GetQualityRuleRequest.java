@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityRuleRequest} extends {@link RequestModel}
  *
  * <p>GetQualityRuleRequest</p>
@@ -97,7 +98,7 @@ public class GetQualityRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -106,7 +107,10 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -115,7 +119,11 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the compute engine or data source.
+         * <p>The name of the compute engine or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -124,7 +132,11 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * The monitoring rule ID. You can call the [ListQualityRules](~~173995~~) operation to query the ID.
+         * <p>The monitoring rule ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

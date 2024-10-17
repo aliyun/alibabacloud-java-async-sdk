@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTablesResponseBody</p>
@@ -49,7 +50,7 @@ public class ListTablesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E25887B7-579C-54A5-9C4F-83A0DE367DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablesResponseBody</p>
+     */
     public static class EntityContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceQualifiedName")
         private String dataSourceQualifiedName;
@@ -211,6 +221,12 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablesResponseBody</p>
+     */
     public static class TableEntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityContent")
         private EntityContent entityContent;
@@ -272,6 +288,12 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;

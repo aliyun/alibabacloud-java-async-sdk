@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeploymentRequest} extends {@link RequestModel}
  *
  * <p>GetDeploymentRequest</p>
@@ -96,7 +97,7 @@ public class GetDeploymentRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +106,11 @@ public class GetDeploymentRequest extends Request {
         }
 
         /**
-         * The ID of the deployment task. A deployment task ID is generated when you call the [SubmitFile](~~173944~~) or [DeployFile](~~173956~~) operation.
+         * <p>The ID of the deployment task. A deployment task ID is generated when you call the <a href="https://help.aliyun.com/document_detail/173944.html">SubmitFile</a> or <a href="https://help.aliyun.com/document_detail/173956.html">DeployFile</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000001</p>
          */
         public Builder deploymentId(Long deploymentId) {
             this.putBodyParameter("DeploymentId", deploymentId);
@@ -114,7 +119,10 @@ public class GetDeploymentRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.
+         * <p>The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -123,10 +131,11 @@ public class GetDeploymentRequest extends Request {
         }
 
         /**
-         * The GUID of the DataWorks workspace. You can view the GUID in the upper part of the DataStudio page. You can also select another GUID to switch to another workspace.
-         * <p>
+         * <p>The GUID of the DataWorks workspace. You can view the GUID in the upper part of the DataStudio page. You can also select another GUID to switch to another workspace.</p>
+         * <p>You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
          * 
-         * You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

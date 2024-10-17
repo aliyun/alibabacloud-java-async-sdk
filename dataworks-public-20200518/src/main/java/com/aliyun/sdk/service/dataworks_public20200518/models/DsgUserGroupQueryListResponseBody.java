@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgUserGroupQueryListResponseBody} extends {@link TeaModel}
  *
  * <p>DsgUserGroupQueryListResponseBody</p>
@@ -97,7 +98,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1029030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageData(PageData pageData) {
             this.pageData = pageData;
@@ -129,7 +139,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DsgUserGroupQueryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgUserGroupQueryListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accounts")
         private java.util.List < String > accounts;
@@ -241,7 +263,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             private String owner; 
 
             /**
-             * The usernames in the user group.
+             * <p>The usernames in the user group.</p>
              */
             public Builder accounts(java.util.List < String > accounts) {
                 this.accounts = accounts;
@@ -249,7 +271,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the user group was created.
+             * <p>The time when the user group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-10 17:14:44</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -257,7 +282,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the user group was modified.
+             * <p>The time when the user group was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-10 17:14:44</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -265,7 +293,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The user group ID.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -273,7 +304,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user group.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -281,7 +315,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the user group.
+             * <p>The owner of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -295,6 +332,12 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DsgUserGroupQueryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgUserGroupQueryListResponseBody</p>
+     */
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;
@@ -358,7 +401,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The user groups.
+             * <p>The user groups.</p>
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -366,7 +409,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -374,7 +420,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Maximum value: 100.
+             * <p>The number of entries per page. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -382,7 +431,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of user groups returned.
+             * <p>The total number of user groups returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgPlatformQueryProjectsAndSchemaFromMetaRequest} extends {@link RequestModel}
  *
  * <p>DsgPlatformQueryProjectsAndSchemaFromMetaRequest</p>
@@ -77,12 +78,16 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaRequest extends Request {
         }
 
         /**
-         * The type of the compute engine. Valid values:
-         * <p>
+         * <p>The type of the compute engine. Valid values:</p>
+         * <ul>
+         * <li>ODPS.ODPS</li>
+         * <li>EMR</li>
+         * <li>HOLO.POSTGRES</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ODPS.ODPS
-         * *   EMR
-         * *   HOLO.POSTGRES
+         * <strong>example:</strong>
+         * <p>EMR</p>
          */
         public Builder engineName(String engineName) {
             this.putQueryParameter("EngineName", engineName);

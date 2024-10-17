@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServiceApplicationRequest} extends {@link RequestModel}
  *
  * <p>GetDataServiceApplicationRequest</p>
@@ -97,7 +98,7 @@ public class GetDataServiceApplicationRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -106,7 +107,11 @@ public class GetDataServiceApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the application. You can view the information about the application in the API Gateway console.
+         * <p>The ID of the application. You can view the information about the application in the API Gateway console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder applicationId(Long applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -115,7 +120,11 @@ public class GetDataServiceApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -124,7 +133,10 @@ public class GetDataServiceApplicationRequest extends Request {
         }
 
         /**
-         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
+         * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

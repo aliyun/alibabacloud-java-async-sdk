@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgWhiteListAddOrUpdateRequest} extends {@link RequestModel}
  *
  * <p>DsgWhiteListAddOrUpdateRequest</p>
@@ -77,7 +78,8 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
         }
 
         /**
-         * A collection of whitelists.
+         * <p>A collection of whitelists.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder whiteLists(java.util.List < WhiteLists> whiteLists) {
             String whiteListsShrink = shrink(whiteLists, "WhiteLists", "json");
@@ -93,6 +95,12 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DsgWhiteListAddOrUpdateRequest} extends {@link TeaModel}
+     *
+     * <p>DsgWhiteListAddOrUpdateRequest</p>
+     */
     public static class WhiteLists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -171,7 +179,10 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             private java.util.List < Integer > userGroupIds; 
 
             /**
-             * The end of the time range to query. If you enter null, the whitelist is valid permanently.
+             * <p>The end of the time range to query. If you enter null, the whitelist is valid permanently.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -179,11 +190,14 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             }
 
             /**
-             * The ID of the data masking whitelist.
-             * <p>
+             * <p>The ID of the data masking whitelist.</p>
+             * <ul>
+             * <li>If you do not configure this parameter, the current operation is to add a data masking whitelist.</li>
+             * <li>If you configure this parameter, the current operation is to modify a data masking whitelist. You can call the <a href="https://help.aliyun.com/document_detail/2786508.html">DsgWhiteListQueryList</a> operation to query the whitelist ID.</li>
+             * </ul>
              * 
-             * *   If you do not configure this parameter, the current operation is to add a data masking whitelist.
-             * *   If you configure this parameter, the current operation is to modify a data masking whitelist. You can call the [DsgWhiteListQueryList](~~2786508~~) operation to query the whitelist ID.
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -191,7 +205,11 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             }
 
             /**
-             * The ID of the data masking rule. You can call the [DsgDesensPlanQueryList](~~2786578~~) operation to query the ID of the data masking rule.
+             * <p>The ID of the data masking rule. You can call the <a href="https://help.aliyun.com/document_detail/2786578.html">DsgDesensPlanQueryList</a> operation to query the ID of the data masking rule.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ruleId(Integer ruleId) {
                 this.ruleId = ruleId;
@@ -199,7 +217,11 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             }
 
             /**
-             * The beginning of the time range to query.
+             * <p>The beginning of the time range to query.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-10 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -207,7 +229,8 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             }
 
             /**
-             * A collection of user group IDs.
+             * <p>A collection of user group IDs.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder userGroupIds(java.util.List < Integer > userGroupIds) {
                 this.userGroupIds = userGroupIds;

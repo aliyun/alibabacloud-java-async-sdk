@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetEntityTagsRequest} extends {@link RequestModel}
  *
  * <p>SetEntityTagsRequest</p>
@@ -82,7 +83,7 @@ public class SetEntityTagsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +92,11 @@ public class SetEntityTagsRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
+         * <p>The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.projectA.tableA</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);
@@ -100,7 +105,7 @@ public class SetEntityTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < UserEntityTag > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

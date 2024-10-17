@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceAmountResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceAmountResponseBody</p>
@@ -49,7 +50,7 @@ public class ListInstanceAmountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The trend of the number of auto triggered node instances within the specified period of time.
+         * <p>The trend of the number of auto triggered node instances within the specified period of time.</p>
          */
         public Builder instanceCounts(java.util.List < InstanceCounts> instanceCounts) {
             this.instanceCounts = instanceCounts;
@@ -57,7 +58,10 @@ public class ListInstanceAmountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527adhfj****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListInstanceAmountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceAmountResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceAmountResponseBody</p>
+     */
     public static class InstanceCounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -109,7 +119,10 @@ public class ListInstanceAmountResponseBody extends TeaModel {
             private Long date; 
 
             /**
-             * The number of auto triggered node instances.
+             * <p>The number of auto triggered node instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class ListInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp at which the number of auto triggered node instances was obtained. This value is a UNIX timestamp.
+             * <p>The data timestamp at which the number of auto triggered node instances was obtained. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623772800000</p>
              */
             public Builder date(Long date) {
                 this.date = date;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodeIORequest} extends {@link RequestModel}
  *
  * <p>ListNodeIORequest</p>
@@ -98,7 +99,7 @@ public class ListNodeIORequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class ListNodeIORequest extends Request {
         }
 
         /**
-         * Specifies whether to query the information about ancestor or descendant nodes of the current node. Valid values: input and output.
+         * <p>Specifies whether to query the information about ancestor or descendant nodes of the current node. Valid values: input and output.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>output</p>
          */
         public Builder ioType(String ioType) {
             this.putBodyParameter("IoType", ioType);
@@ -116,7 +121,11 @@ public class ListNodeIORequest extends Request {
         }
 
         /**
-         * The node ID. You can call the [ListNodes](~~173979~~) operation to query the ID.
+         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -125,7 +134,11 @@ public class ListNodeIORequest extends Request {
         }
 
         /**
-         * The runtime environment. Valid values: DEV and PROD.
+         * <p>The runtime environment. Valid values: DEV and PROD.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

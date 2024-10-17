@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExtensionResponseBody} extends {@link TeaModel}
  *
  * <p>GetExtensionResponseBody</p>
@@ -49,7 +50,7 @@ public class GetExtensionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the extension.
+         * <p>The details of the extension.</p>
          */
         public Builder extension(Extension extension) {
             this.extension = extension;
@@ -57,7 +58,10 @@ public class GetExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the request ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetExtensionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExtensionResponseBody</p>
+     */
     public static class BindEventList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventCode")
         private String eventCode;
@@ -109,7 +119,10 @@ public class GetExtensionResponseBody extends TeaModel {
             private String eventName; 
 
             /**
-             * The code of the extension point event.
+             * <p>The code of the extension point event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>commit-file</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -117,7 +130,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extension point event.
+             * <p>The name of the extension point event.</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -131,6 +144,12 @@ public class GetExtensionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExtensionResponseBody</p>
+     */
     public static class EventCategoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryCode")
         private String categoryCode;
@@ -170,7 +189,10 @@ public class GetExtensionResponseBody extends TeaModel {
             private String categoryName; 
 
             /**
-             * The code of the event type.
+             * <p>The code of the event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file-change</p>
              */
             public Builder categoryCode(String categoryCode) {
                 this.categoryCode = categoryCode;
@@ -178,7 +200,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event type.
+             * <p>The name of the event type.</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -192,6 +214,12 @@ public class GetExtensionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExtensionResponseBody</p>
+     */
     public static class Extension extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindEventList")
         private java.util.List < BindEventList> bindEventList;
@@ -339,7 +367,7 @@ public class GetExtensionResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The list of extension points.
+             * <p>The list of extension points.</p>
              */
             public Builder bindEventList(java.util.List < BindEventList> bindEventList) {
                 this.bindEventList = bindEventList;
@@ -347,7 +375,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the extension details page, on which users can view the details of the process blocked by the extension.
+             * <p>The URL of the extension details page, on which users can view the details of the process blocked by the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
              */
             public Builder detailUrl(String detailUrl) {
                 this.detailUrl = detailUrl;
@@ -355,7 +386,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The list of event types.
+             * <p>The list of event types.</p>
              */
             public Builder eventCategoryList(java.util.List < EventCategoryList> eventCategoryList) {
                 this.eventCategoryList = eventCategoryList;
@@ -363,7 +394,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The unique code of the extension.
+             * <p>The unique code of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ce4*********086da5</p>
              */
             public Builder extensionCode(String extensionCode) {
                 this.extensionCode = extensionCode;
@@ -371,7 +405,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the extension.
+             * <p>The description of the extension.</p>
              */
             public Builder extensionDesc(String extensionDesc) {
                 this.extensionDesc = extensionDesc;
@@ -379,7 +413,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extension.
+             * <p>The name of the extension.</p>
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;
@@ -387,7 +421,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the help documentation of the extension.
+             * <p>The URL of the help documentation of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
              */
             public Builder helpDocUrl(String helpDocUrl) {
                 this.helpDocUrl = helpDocUrl;
@@ -395,7 +432,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The options defined for the extension.
+             * <p>The options defined for the extension.</p>
              */
             public Builder optionSetting(String optionSetting) {
                 this.optionSetting = optionSetting;
@@ -403,7 +440,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).
+             * <p>The parameter settings of the extension. For more information, see <a href="https://help.aliyun.com/document_detail/405354.html">Configure extension parameters</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>extension.project.disabled=projectId1,projectId2,projectId3</p>
              */
             public Builder parameterSetting(String parameterSetting) {
                 this.parameterSetting = parameterSetting;
@@ -411,7 +451,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace for testing. If the extension is being tested, the extension can be used only in the workspace for testing.
+             * <p>The workspace for testing. If the extension is being tested, the extension can be used only in the workspace for testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13552</p>
              */
             public Builder projectTesting(Long projectTesting) {
                 this.projectTesting = projectTesting;
@@ -419,7 +462,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the extension. 0: Testing, 1: Publishing, 3: Disabled, 4: Processing, 5: Approved, 6: Approve Failed
+             * <p>The state of the extension. 0: Testing, 1: Publishing, 3: Disabled, 4: Processing, 5: Approved, 6: Approve Failed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

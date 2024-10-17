@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDISyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDISyncTaskResponseBody</p>
@@ -61,7 +62,7 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The deletion result.
+         * <p>The deletion result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteDISyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -133,7 +146,10 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the synchronization task fails to be deleted. If the synchronization task is deleted, the value null is returned for this parameter.
+             * <p>The reason why the synchronization task fails to be deleted. If the synchronization task is deleted, the value null is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileId:[100] is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -141,11 +157,14 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the synchronization task is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the synchronization task is deleted. Valid values:</p>
+             * <ul>
+             * <li>success: The synchronization task is deleted.</li>
+             * <li>fail: The synchronization task fails to be deleted. You can troubleshoot the issue based on the failure reason.</li>
+             * </ul>
              * 
-             * *   success: The synchronization task is deleted.
-             * *   fail: The synchronization task fails to be deleted. You can troubleshoot the issue based on the failure reason.
+             * <strong>example:</strong>
+             * <p>fail</p>
              */
             public Builder status(String status) {
                 this.status = status;

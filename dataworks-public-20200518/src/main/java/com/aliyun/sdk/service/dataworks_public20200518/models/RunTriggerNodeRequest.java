@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunTriggerNodeRequest} extends {@link RequestModel}
  *
  * <p>RunTriggerNodeRequest</p>
@@ -113,7 +114,7 @@ public class RunTriggerNodeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +123,11 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace to which the manually triggered node belongs. You can call the [ListProjects](~~178393~~) operation to query the ID.
+         * <p>The ID of the DataWorks workspace to which the manually triggered node belongs. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder appId(Long appId) {
             this.putBodyParameter("AppId", appId);
@@ -131,7 +136,11 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * The data timestamp of the instance that is generated for the manually triggered node.
+         * <p>The data timestamp of the instance that is generated for the manually triggered node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1606200230105</p>
          */
         public Builder bizDate(Long bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -140,7 +149,11 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * The scheduling time to run the manually triggered node. Set the value to a 13-digit timestamp in milliseconds.
+         * <p>The scheduling time to run the manually triggered node. Set the value to a 13-digit timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1606200230105</p>
          */
         public Builder cycleTime(Long cycleTime) {
             this.putBodyParameter("CycleTime", cycleTime);
@@ -149,7 +162,11 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * The ID of the manually triggered node. You can call the [ListNodes](~~173979~~) operation to query the ID.
+         * <p>The ID of the manually triggered node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000011</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);

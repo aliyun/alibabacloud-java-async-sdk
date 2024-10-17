@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeTypeListInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetNodeTypeListInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of node types.
+         * <p>The list of node types.</p>
          */
         public Builder nodeTypeInfoList(NodeTypeInfoList nodeTypeInfoList) {
             this.nodeTypeInfoList = nodeTypeInfoList;
@@ -57,7 +58,10 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodeTypeListInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeTypeListInfoResponseBody</p>
+     */
     public static class NodeTypeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeType")
         private Integer nodeType;
@@ -109,7 +119,10 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             private String nodeTypeName; 
 
             /**
-             * The type of the node, which is specified by a number.
+             * <p>The type of the node, which is specified by a number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -117,7 +130,10 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node type.
+             * <p>The name of the node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS SQL</p>
              */
             public Builder nodeTypeName(String nodeTypeName) {
                 this.nodeTypeName = nodeTypeName;
@@ -131,6 +147,12 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNodeTypeListInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeTypeListInfoResponseBody</p>
+     */
     public static class NodeTypeInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeTypeInfo")
         private java.util.List < NodeTypeInfo> nodeTypeInfo;
@@ -194,7 +216,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The information about a node type.
+             * <p>The information about a node type.</p>
              */
             public Builder nodeTypeInfo(java.util.List < NodeTypeInfo> nodeTypeInfo) {
                 this.nodeTypeInfo = nodeTypeInfo;
@@ -202,7 +224,10 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -210,7 +235,10 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -218,7 +246,10 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

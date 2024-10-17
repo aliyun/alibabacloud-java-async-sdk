@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CallbackExtensionRequest} extends {@link RequestModel}
  *
  * <p>CallbackExtensionRequest</p>
@@ -121,7 +122,7 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * The check message of the extension point event. If CheckResult is set to FAIL, you must provide the failure cause.
+         * <p>The check message of the extension point event. If CheckResult is set to FAIL, you must provide the failure cause.</p>
          */
         public Builder checkMessage(String checkMessage) {
             this.putBodyParameter("CheckMessage", checkMessage);
@@ -130,12 +131,16 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * The check status of the extension point event. Valid values:
-         * <p>
+         * <p>The check status of the extension point event. Valid values:</p>
+         * <ul>
+         * <li>OK: The event passes the check.</li>
+         * <li>FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.</li>
+         * <li>WARN: The event passes the check, but an alert is reported.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   OK: The event passes the check.
-         * *   FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.
-         * *   WARN: The event passes the check, but an alert is reported.
+         * <strong>example:</strong>
+         * <p>FAIL</p>
          */
         public Builder checkResult(String checkResult) {
             this.putBodyParameter("CheckResult", checkResult);
@@ -144,7 +149,11 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * The unique code of the extension.
+         * <p>The unique code of the extension.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
          */
         public Builder extensionCode(String extensionCode) {
             this.putBodyParameter("ExtensionCode", extensionCode);
@@ -153,7 +162,11 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.
+         * <p>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03400b03-b721-4c34-8727-2d6884077091</p>
          */
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);

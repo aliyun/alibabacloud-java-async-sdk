@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgSceneQuerySceneListByNameRequest} extends {@link RequestModel}
  *
  * <p>DsgSceneQuerySceneListByNameRequest</p>
@@ -76,7 +77,10 @@ public class DsgSceneQuerySceneListByNameRequest extends Request {
         }
 
         /**
-         * The name of the data masking scenario. A fuzzy match is performed in the platform based on a keyword to search for the data masking scenario.
+         * <p>The name of the data masking scenario. A fuzzy match is performed in the platform based on a keyword to search for the data masking scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_</p>
          */
         public Builder sceneName(String sceneName) {
             this.putQueryParameter("SceneName", sceneName);

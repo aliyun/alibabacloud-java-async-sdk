@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectRequest} extends {@link RequestModel}
  *
  * <p>GetProjectRequest</p>
@@ -81,7 +82,7 @@ public class GetProjectRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -90,7 +91,10 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can call the [ListProjects](~~2780068~~) operation to query the ID.
+         * <p>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -99,7 +103,10 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * The name of the DataWorks workspace. You can call the [ListProjects](~~2780068~~) operation to query the name.
+         * <p>The name of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to query the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putQueryParameter("ProjectIdentifier", projectIdentifier);

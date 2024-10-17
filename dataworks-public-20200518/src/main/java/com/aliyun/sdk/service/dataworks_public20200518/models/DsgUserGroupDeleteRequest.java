@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgUserGroupDeleteRequest} extends {@link RequestModel}
  *
  * <p>DsgUserGroupDeleteRequest</p>
@@ -76,7 +77,7 @@ public class DsgUserGroupDeleteRequest extends Request {
         }
 
         /**
-         * The information about the user group.
+         * <p>The information about the user group.</p>
          */
         public Builder ids(java.util.List < Long > ids) {
             String idsShrink = shrink(ids, "Ids", "json");

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgDesensPlanUpdateStatusRequest} extends {@link RequestModel}
  *
  * <p>DsgDesensPlanUpdateStatusRequest</p>
@@ -107,7 +108,8 @@ public class DsgDesensPlanUpdateStatusRequest extends Request {
         }
 
         /**
-         * A collection of IDs of the data masking rules of which the status you want to modify.
+         * <p>A collection of IDs of the data masking rules of which the status you want to modify.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ids(java.util.List < Integer > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -117,15 +119,19 @@ public class DsgDesensPlanUpdateStatusRequest extends Request {
         }
 
         /**
-         * The code of the level-1 data masking scenario to which the rule belongs. Valid values:
-         * <p>
+         * <p>The code of the level-1 data masking scenario to which the rule belongs. Valid values:</p>
+         * <ul>
+         * <li>dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map</li>
+         * <li>maxcompute_desense_code: data masking at the MaxCompute compute engine layer</li>
+         * <li>maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)</li>
+         * <li>hologres_display_desense_code: data masking at the Hologres compute engine layer</li>
+         * <li>dataworks_data_integration_desense_code: static data masking in Data Integration</li>
+         * <li>dataworks_analysis_desense_code: masking of displayed data in DataAnalysis</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map
-         * *   maxcompute_desense_code: data masking at the MaxCompute compute engine layer
-         * *   maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)
-         * *   hologres_display_desense_code: data masking at the Hologres compute engine layer
-         * *   dataworks_data_integration_desense_code: static data masking in Data Integration
-         * *   dataworks_analysis_desense_code: masking of displayed data in DataAnalysis
+         * <strong>example:</strong>
+         * <p>dataworks_display_desense_code</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -134,11 +140,15 @@ public class DsgDesensPlanUpdateStatusRequest extends Request {
         }
 
         /**
-         * The status of the data masking rule. Valid values:
-         * <p>
+         * <p>The status of the data masking rule. Valid values:</p>
+         * <ul>
+         * <li>0: expired</li>
+         * <li>1: effective</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: expired
-         * *   1: effective
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

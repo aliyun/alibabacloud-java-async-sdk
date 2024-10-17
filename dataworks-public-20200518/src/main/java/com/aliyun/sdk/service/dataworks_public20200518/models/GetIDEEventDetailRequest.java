@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIDEEventDetailRequest} extends {@link RequestModel}
  *
  * <p>GetIDEEventDetailRequest</p>
@@ -83,7 +84,7 @@ public class GetIDEEventDetailRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class GetIDEEventDetailRequest extends Request {
         }
 
         /**
-         * The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.
+         * <p>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
          */
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);
@@ -101,7 +106,11 @@ public class GetIDEEventDetailRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can obtain the ID from the message.
+         * <p>The DataWorks workspace ID. You can obtain the ID from the message.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

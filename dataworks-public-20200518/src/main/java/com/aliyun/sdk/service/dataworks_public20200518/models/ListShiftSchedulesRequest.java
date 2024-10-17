@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListShiftSchedulesRequest} extends {@link RequestModel}
  *
  * <p>ListShiftSchedulesRequest</p>
@@ -111,7 +112,7 @@ public class ListShiftSchedulesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -120,7 +121,10 @@ public class ListShiftSchedulesRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.
+         * <p>The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1933790683****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -129,7 +133,10 @@ public class ListShiftSchedulesRequest extends Request {
         }
 
         /**
-         * The page number. Minimum value:1. Maximum value: 100. Default value: 1.
+         * <p>The page number. Minimum value:1. Maximum value: 100. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -138,7 +145,10 @@ public class ListShiftSchedulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -147,7 +157,7 @@ public class ListShiftSchedulesRequest extends Request {
         }
 
         /**
-         * The keyword used to perform a fuzzy search on shift schedules.
+         * <p>The keyword used to perform a fuzzy search on shift schedules.</p>
          */
         public Builder shiftScheduleName(String shiftScheduleName) {
             this.putBodyParameter("ShiftScheduleName", shiftScheduleName);

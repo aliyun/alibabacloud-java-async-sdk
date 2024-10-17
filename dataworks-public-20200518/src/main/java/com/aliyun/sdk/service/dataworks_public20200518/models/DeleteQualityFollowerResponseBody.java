@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQualityFollowerResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteQualityFollowerResponseBody</p>
@@ -97,11 +98,14 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the subscriber was successfully deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the subscriber was successfully deleted. Valid values:</p>
+         * <ul>
+         * <li>true: The subscriber was successfully deleted.</li>
+         * <li>false: The subscriber failed to be deleted. You can troubleshoot errors based on the error message returned.</li>
+         * </ul>
          * 
-         * *   true: The subscriber was successfully deleted.
-         * *   false: The subscriber failed to be deleted. You can troubleshoot errors based on the error message returned.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -109,7 +113,10 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>401</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -117,7 +124,10 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned when the subscriber failed to be deleted.
+         * <p>The error message returned when the subscriber failed to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You have no permission.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -125,7 +135,10 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -133,7 +146,10 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can troubleshoot errors based on the ID.
+         * <p>The request ID. You can troubleshoot errors based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6d739ef6-098a-47****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,11 +157,14 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

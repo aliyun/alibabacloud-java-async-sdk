@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNodeRunModeRequest} extends {@link RequestModel}
  *
  * <p>UpdateNodeRunModeRequest</p>
@@ -98,7 +99,7 @@ public class UpdateNodeRunModeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class UpdateNodeRunModeRequest extends Request {
         }
 
         /**
-         * The node ID. You can call the [ListNodes](~~173979~~) operation to query the node ID.
+         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -116,11 +121,15 @@ public class UpdateNodeRunModeRequest extends Request {
         }
 
         /**
-         * The environment in which the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment, and the value PROD indicates the production environment.
-         * <p>
+         * <p>The environment in which the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment, and the value PROD indicates the production environment.</p>
+         * <ul>
+         * <li>PROD</li>
+         * <li>DEV</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   PROD
-         * *   DEV
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -129,11 +138,15 @@ public class UpdateNodeRunModeRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the node. Valid values:
-         * <p>
+         * <p>The operation that you want to perform on the node. Valid values:</p>
+         * <ul>
+         * <li>0: indicates that you want to unfreeze the node.</li>
+         * <li>2: indicates that you want to freeze the node.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: indicates that you want to unfreeze the node.
-         * *   2: indicates that you want to freeze the node.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder schedulerType(Integer schedulerType) {
             this.putBodyParameter("SchedulerType", schedulerType);

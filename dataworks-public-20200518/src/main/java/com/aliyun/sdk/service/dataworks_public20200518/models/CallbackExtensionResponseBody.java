@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CallbackExtensionResponseBody} extends {@link TeaModel}
  *
  * <p>CallbackExtensionResponseBody</p>
@@ -49,7 +50,10 @@ public class CallbackExtensionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C352CB7-CD88-50CF-9D0D-E81BDF020E7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,12 +61,12 @@ public class CallbackExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true</p>
+         * <p>false</p>
          * 
-         * true
-         * 
-         * false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

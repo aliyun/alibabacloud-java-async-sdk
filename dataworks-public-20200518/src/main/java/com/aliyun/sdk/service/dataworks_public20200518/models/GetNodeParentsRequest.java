@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeParentsRequest} extends {@link RequestModel}
  *
  * <p>GetNodeParentsRequest</p>
@@ -83,7 +84,7 @@ public class GetNodeParentsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class GetNodeParentsRequest extends Request {
         }
 
         /**
-         * The node ID. You can go to the Operation Center page in the DataWorks console to query the node ID.
+         * <p>The node ID. You can go to the Operation Center page in the DataWorks console to query the node ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345456211234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -101,7 +106,11 @@ public class GetNodeParentsRequest extends Request {
         }
 
         /**
-         * The environment type of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
+         * <p>The environment type of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

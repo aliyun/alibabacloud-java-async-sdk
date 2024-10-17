@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityFollowerResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityFollowerResponseBody</p>
@@ -150,6 +151,12 @@ public class GetQualityFollowerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityFollowerResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityFollowerResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmMode")
         private Integer alarmMode;

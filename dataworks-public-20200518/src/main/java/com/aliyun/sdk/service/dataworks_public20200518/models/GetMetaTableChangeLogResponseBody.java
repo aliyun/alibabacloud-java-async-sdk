@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableChangeLogResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableChangeLogResponseBody</p>
@@ -97,7 +98,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableChangeLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableChangeLogResponseBody</p>
+     */
     public static class DataEntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeContent")
         private String changeContent;
@@ -237,7 +259,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             private String operator; 
 
             /**
-             * The content of the change.
+             * <p>The content of the change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;[{&quot;action&quot;:&quot;ADD_COLUMN&quot;,&quot;value&quot;:[{&quot;originName&quot;:&quot;&quot;,&quot;originType&quot;:&quot;&quot;,&quot;originComment&quot;:&quot;&quot;,&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;struct<a href="name:string">name:string</a>&quot;,&quot;comment&quot;:&quot;&quot;}]}]&quot;,</p>
              */
             public Builder changeContent(String changeContent) {
                 this.changeContent = changeContent;
@@ -245,7 +270,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the change.
+             * <p>The type of the change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE_TABLE</p>
              */
             public Builder changeType(String changeType) {
                 this.changeType = changeType;
@@ -253,7 +281,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was created.
+             * <p>The time when the metatable was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590722845000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -261,7 +292,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was modified.
+             * <p>The time when the metatable was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590722845000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -269,7 +303,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The entity on which the change was made. Valid values: TABLE and PARTITION.
+             * <p>The entity on which the change was made. Valid values: TABLE and PARTITION.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TABLE</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -277,7 +314,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operator.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -291,6 +331,12 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaTableChangeLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableChangeLogResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataEntityList")
         private java.util.List < DataEntityList> dataEntityList;
@@ -354,7 +400,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The list of instances.
+             * <p>The list of instances.</p>
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -362,7 +408,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -370,7 +419,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -378,7 +430,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of metatables.
+             * <p>The total number of metatables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

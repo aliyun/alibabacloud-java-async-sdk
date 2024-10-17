@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataSourceMetaRequest} extends {@link RequestModel}
  *
  * <p>GetDataSourceMetaRequest</p>
@@ -127,7 +128,7 @@ public class GetDataSourceMetaRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +137,11 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_name</p>
          */
         public Builder datasourceName(String datasourceName) {
             this.putQueryParameter("DatasourceName", datasourceName);
@@ -145,11 +150,14 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The environment in which the data source resides. Valid values:
-         * <p>
+         * <p>The environment in which the data source resides. Valid values:</p>
+         * <ul>
+         * <li>0: development environment</li>
+         * <li>1: production environment</li>
+         * </ul>
          * 
-         * *   0: development environment
-         * *   1: production environment
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -158,7 +166,10 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +178,10 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +190,11 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

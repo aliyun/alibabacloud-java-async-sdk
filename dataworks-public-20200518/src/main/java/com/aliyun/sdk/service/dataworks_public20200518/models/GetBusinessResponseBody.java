@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBusinessResponseBody} extends {@link TeaModel}
  *
  * <p>GetBusinessResponseBody</p>
@@ -97,7 +98,7 @@ public class GetBusinessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the workflow.
+         * <p>The details of the workflow.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetBusinessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBusinessResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBusinessResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
@@ -237,7 +259,10 @@ public class GetBusinessResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * The ID of the workflow.
+             * <p>The ID of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000001</p>
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -245,7 +270,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workflow.
+             * <p>The name of the workflow.</p>
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -253,7 +278,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the workflow.
+             * <p>The description of the workflow.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -261,7 +286,10 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID of the workflow owner.
+             * <p>The Alibaba Cloud account ID of the workflow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -269,7 +297,10 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the workflow belongs.
+             * <p>The ID of the workspace to which the workflow belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -277,7 +308,10 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * The module to which the workflow belongs. Valid values: NORMAL and MANUAL_BIZ.
+             * <p>The module to which the workflow belongs. Valid values: NORMAL and MANUAL_BIZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;

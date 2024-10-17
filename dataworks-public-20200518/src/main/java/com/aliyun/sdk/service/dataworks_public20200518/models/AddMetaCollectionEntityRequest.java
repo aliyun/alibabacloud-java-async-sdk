@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMetaCollectionEntityRequest} extends {@link RequestModel}
  *
  * <p>AddMetaCollectionEntityRequest</p>
@@ -107,7 +108,11 @@ public class AddMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the collection.
+         * <p>The unique identifier of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.2222</p>
          */
         public Builder collectionQualifiedName(String collectionQualifiedName) {
             this.putQueryParameter("CollectionQualifiedName", collectionQualifiedName);
@@ -116,7 +121,11 @@ public class AddMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
+         * <p>The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.projectA.tableB</p>
          */
         public Builder entityQualifiedName(String entityQualifiedName) {
             this.putQueryParameter("EntityQualifiedName", entityQualifiedName);
@@ -125,7 +134,10 @@ public class AddMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The remarks of the entity. Example: latest product table.
+         * <p>The remarks of the entity. Example: latest product table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a remark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

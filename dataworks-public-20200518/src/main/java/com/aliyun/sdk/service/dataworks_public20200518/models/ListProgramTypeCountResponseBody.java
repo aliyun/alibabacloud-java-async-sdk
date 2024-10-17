@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProgramTypeCountResponseBody} extends {@link TeaModel}
  *
  * <p>ListProgramTypeCountResponseBody</p>
@@ -49,7 +50,7 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of node types and quantity.
+         * <p>The list of node types and quantity.</p>
          */
         public Builder programTypeAndCounts(java.util.List < ProgramTypeAndCounts> programTypeAndCounts) {
             this.programTypeAndCounts = programTypeAndCounts;
@@ -57,7 +58,10 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProgramTypeCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProgramTypeCountResponseBody</p>
+     */
     public static class ProgramTypeAndCounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -109,7 +119,10 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
             private String programType; 
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
             }
 
             /**
-             * The node type.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder programType(String programType) {
                 this.programType = programType;

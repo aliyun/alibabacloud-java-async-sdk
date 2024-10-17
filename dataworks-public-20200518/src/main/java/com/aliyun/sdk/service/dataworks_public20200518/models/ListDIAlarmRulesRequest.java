@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDIAlarmRulesRequest} extends {@link RequestModel}
  *
  * <p>ListDIAlarmRulesRequest</p>
@@ -96,7 +97,7 @@ public class ListDIAlarmRulesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +106,11 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * The ID of the task with which the alert rules are associated.
+         * <p>The ID of the task with which the alert rules are associated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11260</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -114,7 +119,10 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -123,7 +131,10 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServiceFoldersResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataServiceFoldersResponseBody</p>
@@ -49,7 +50,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The paging result for the folders.
+         * <p>The paging result for the folders.</p>
          */
         public Builder folderPagingResult(FolderPagingResult folderPagingResult) {
             this.folderPagingResult = folderPagingResult;
@@ -57,7 +58,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataServiceFoldersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceFoldersResponseBody</p>
+     */
     public static class Folders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -181,7 +191,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The time when the folder was created.
+             * <p>The time when the folder was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-24T18:37:51+0800</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -189,7 +202,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The folder ID.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder folderId(Long folderId) {
                 this.folderId = folderId;
@@ -197,7 +213,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the folder.
+             * <p>The name of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -205,7 +224,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business process to which the folder belongs.
+             * <p>The ID of the business process to which the folder belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_1234</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -213,7 +235,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the folder was last modified.
+             * <p>The time when the folder was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-24T18:37:51+0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -221,7 +246,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent folder. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.
+             * <p>The ID of the parent folder. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -229,7 +257,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -237,7 +268,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10002</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -251,6 +285,12 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataServiceFoldersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceFoldersResponseBody</p>
+     */
     public static class FolderPagingResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Folders")
         private java.util.List < Folders> folders;
@@ -314,7 +354,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The folders.
+             * <p>The folders.</p>
              */
             public Builder folders(java.util.List < Folders> folders) {
                 this.folders = folders;
@@ -322,7 +362,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
+             * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -330,7 +373,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -338,7 +384,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

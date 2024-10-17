@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeColumnPermissionResponseBody} extends {@link TeaModel}
  *
  * <p>RevokeColumnPermissionResponseBody</p>
@@ -49,7 +50,10 @@ public class RevokeColumnPermissionResponseBody extends TeaModel {
         private Boolean revokeSuccess; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class RevokeColumnPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the permissions are revoked.
+         * <p>Indicates whether the permissions are revoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder revokeSuccess(Boolean revokeSuccess) {
             this.revokeSuccess = revokeSuccess;

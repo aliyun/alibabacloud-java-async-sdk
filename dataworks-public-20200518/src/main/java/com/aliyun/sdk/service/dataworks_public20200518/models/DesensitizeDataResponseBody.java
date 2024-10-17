@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DesensitizeDataResponseBody} extends {@link TeaModel}
  *
  * <p>DesensitizeDataResponseBody</p>
@@ -49,7 +50,10 @@ public class DesensitizeDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned after masking.
+         * <p>The data returned after masking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;desensData&quot;: &quot;<strong>198807120510</strong>&quot;   }</p>
          */
         public Builder desensitizeData(String desensitizeData) {
             this.desensitizeData = desensitizeData;
@@ -57,7 +61,10 @@ public class DesensitizeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCA321BA-46C5-40E9-8A08-6******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

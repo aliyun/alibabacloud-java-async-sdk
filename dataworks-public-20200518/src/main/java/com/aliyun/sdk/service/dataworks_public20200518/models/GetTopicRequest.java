@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicRequest} extends {@link RequestModel}
  *
  * <p>GetTopicRequest</p>
@@ -68,7 +69,7 @@ public class GetTopicRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class GetTopicRequest extends Request {
         }
 
         /**
-         * The event ID. You can call the [ListTopics](~~173973~~) operation to query the ID.
+         * <p>The event ID. You can call the <a href="https://help.aliyun.com/document_detail/173973.html">ListTopics</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder topicId(Long topicId) {
             this.putBodyParameter("TopicId", topicId);

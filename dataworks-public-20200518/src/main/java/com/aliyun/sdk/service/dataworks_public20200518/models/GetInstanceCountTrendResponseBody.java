@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceCountTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceCountTrendResponseBody</p>
@@ -49,7 +50,7 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The quantity trend of instances.
+         * <p>The quantity trend of instances.</p>
          */
         public Builder instanceCounts(java.util.List < InstanceCounts> instanceCounts) {
             this.instanceCounts = instanceCounts;
@@ -57,7 +58,10 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527adhfj****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceCountTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceCountTrendResponseBody</p>
+     */
     public static class InstanceCounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -109,7 +119,10 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
             private Long date; 
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp.
+             * <p>The data timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600963200000</p>
              */
             public Builder date(Long date) {
                 this.date = date;

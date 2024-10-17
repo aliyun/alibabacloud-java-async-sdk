@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScanSensitiveDataRequest} extends {@link RequestModel}
  *
  * <p>ScanSensitiveDataRequest</p>
@@ -68,7 +69,7 @@ public class ScanSensitiveDataRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class ScanSensitiveDataRequest extends Request {
         }
 
         /**
-         * The data that you want to check.
+         * <p>The data that you want to check.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900001234</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);

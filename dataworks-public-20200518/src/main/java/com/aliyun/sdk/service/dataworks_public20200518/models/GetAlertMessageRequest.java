@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAlertMessageRequest} extends {@link RequestModel}
  *
  * <p>GetAlertMessageRequest</p>
@@ -77,7 +78,11 @@ public class GetAlertMessageRequest extends Request {
         }
 
         /**
-         * The alert ID. You can all the [ListAlertMessages](~~173961~~) operation to obtain the alert ID.
+         * <p>The alert ID. You can all the <a href="https://help.aliyun.com/document_detail/173961.html">ListAlertMessages</a> operation to obtain the alert ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1421</p>
          */
         public Builder alertId(String alertId) {
             this.putBodyParameter("AlertId", alertId);

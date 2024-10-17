@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeParentsResponseBody} extends {@link TeaModel}
  *
  * <p>GetNodeParentsResponseBody</p>
@@ -97,7 +98,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the ancestor nodes.
+         * <p>The information about the ancestor nodes.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1060010000000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>err</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asfasdfs-adfasdf-asfas-dfasdf-asdf</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetNodeParentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodeParentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeParentsResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
@@ -297,7 +319,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
             private String stepType; 
 
             /**
-             * The baseline ID.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1244564565</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -305,7 +330,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The CRON expression. CRON expressions are used to run auto triggered nodes.
+             * <p>The CRON expression. CRON expressions are used to run auto triggered nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 * * * *</p>
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -313,7 +341,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1244564565</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -321,7 +352,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_Node</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -329,7 +363,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the node owner.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123124561341251321</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -337,7 +374,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority. Valid values: 1 to 8. A large value indicates a high priority.
+             * <p>The priority. Valid values: 1 to 8. A large value indicates a high priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -345,7 +385,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * <p>The type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder programType(String programType) {
                 this.programType = programType;
@@ -353,7 +396,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the node belongs.
+             * <p>The ID of the workspace to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12315412412</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -361,11 +407,14 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node can be rerun if the node fails to run. Valid values:
-             * <p>
+             * <p>Indicates whether the node can be rerun if the node fails to run. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder repeatability(Boolean repeatability) {
                 this.repeatability = repeatability;
@@ -373,13 +422,16 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling type of the node. Valid values:
-             * <p>
+             * <p>The scheduling type of the node. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The node is an auto triggered node.</li>
+             * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</li>
+             * <li>PAUSE: The node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.</li>
+             * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
+             * </ul>
              * 
-             * *   NORMAL: The node is an auto triggered node.
-             * *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.
-             * *   PAUSE: The node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.
-             * *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -401,6 +453,12 @@ public class GetNodeParentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNodeParentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeParentsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
@@ -428,7 +486,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * The ancestor nodes.
+             * <p>The ancestor nodes.</p>
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;

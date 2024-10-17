@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTableThemeRequest} extends {@link RequestModel}
  *
  * <p>ListTableThemeRequest</p>
@@ -113,7 +114,7 @@ public class ListTableThemeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +123,10 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -131,7 +135,10 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -140,7 +147,10 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the parent table theme.
+         * <p>The ID of the parent table theme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -149,7 +159,10 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

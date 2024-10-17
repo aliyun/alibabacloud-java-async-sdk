@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableOutputRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableOutputRequest</p>
@@ -140,7 +141,7 @@ public class GetMetaTableOutputRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -149,7 +150,11 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The end date.
+         * <p>The end date.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-15</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -158,7 +163,10 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: 1 to 30. Default value: 1.
+         * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +175,10 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +187,11 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The start date.
+         * <p>The start date.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-02</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -185,7 +200,11 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The GUID of the metatable.
+         * <p>The GUID of the metatable.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.sample_project.sample_table</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -194,7 +213,10 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

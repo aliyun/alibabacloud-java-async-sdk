@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OfflineNodeRequest} extends {@link RequestModel}
  *
  * <p>OfflineNodeRequest</p>
@@ -83,7 +84,7 @@ public class OfflineNodeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class OfflineNodeRequest extends Request {
         }
 
         /**
-         * The node ID. You can call the [ListNodes](~~173979~~) operation to obtain the node ID.
+         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain the node ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -101,7 +106,11 @@ public class OfflineNodeRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can call the [ListProjects](~~178393~~) operation to obtain the ID.
+         * <p>The DataWorks workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

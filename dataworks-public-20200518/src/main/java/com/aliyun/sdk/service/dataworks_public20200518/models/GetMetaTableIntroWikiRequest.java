@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableIntroWikiRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableIntroWikiRequest</p>
@@ -82,7 +83,7 @@ public class GetMetaTableIntroWikiRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +92,11 @@ public class GetMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * The GUID of the metatable.
+         * <p>The GUID of the metatable.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -100,7 +105,10 @@ public class GetMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * The version of the instructions.
+         * <p>The version of the instructions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder wikiVersion(Long wikiVersion) {
             this.putQueryParameter("WikiVersion", wikiVersion);

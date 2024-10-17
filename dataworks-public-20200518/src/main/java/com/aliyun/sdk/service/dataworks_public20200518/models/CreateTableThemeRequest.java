@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTableThemeRequest} extends {@link RequestModel}
  *
  * <p>CreateTableThemeRequest</p>
@@ -113,7 +114,7 @@ public class CreateTableThemeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +123,11 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * The level of the table theme. Valid values: 1 and 2. The value 1 indicates the first level. The value 2 indicates the second level.
+         * <p>The level of the table theme. Valid values: 1 and 2. The value 1 indicates the first level. The value 2 indicates the second level.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder level(Integer level) {
             this.putQueryParameter("Level", level);
@@ -131,7 +136,11 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * The name of the table theme.
+         * <p>The name of the table theme.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -140,7 +149,10 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the level of the parent table theme.
+         * <p>The ID of the level of the parent table theme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -149,7 +161,10 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

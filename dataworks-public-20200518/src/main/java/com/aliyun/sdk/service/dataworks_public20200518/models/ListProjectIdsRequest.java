@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectIdsRequest} extends {@link RequestModel}
  *
  * <p>ListProjectIdsRequest</p>
@@ -77,10 +78,12 @@ public class ListProjectIdsRequest extends Request {
         }
 
         /**
-         * The ID of the desired Alibaba Cloud account.
-         * <p>
+         * <p>The ID of the desired Alibaba Cloud account.</p>
+         * <p>You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks</a> console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [DataWorks](https://workbench.data.aliyun.com/console) console and move the pointer over the profile picture in the upper-right corner to view the ID.
+         * <strong>example:</strong>
+         * <p>171111</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFoldersResponseBody} extends {@link TeaModel}
  *
  * <p>ListFoldersResponseBody</p>
@@ -97,7 +98,7 @@ public class ListFoldersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the folders.
+         * <p>The information about the folders.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListFoldersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFoldersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersResponseBody</p>
+     */
     public static class Folders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
@@ -189,7 +211,10 @@ public class ListFoldersResponseBody extends TeaModel {
             private String folderPath; 
 
             /**
-             * The folder ID.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2735c2****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -197,7 +222,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the folder.
+             * <p>The path of the folder.</p>
              */
             public Builder folderPath(String folderPath) {
                 this.folderPath = folderPath;
@@ -211,6 +236,12 @@ public class ListFoldersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFoldersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Folders")
         private java.util.List < Folders> folders;
@@ -274,7 +305,7 @@ public class ListFoldersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The list of folders.
+             * <p>The list of folders.</p>
              */
             public Builder folders(java.util.List < Folders> folders) {
                 this.folders = folders;
@@ -282,7 +313,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -290,7 +324,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -298,7 +335,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

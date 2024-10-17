@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableModelInfoRequest} extends {@link RequestModel}
  *
  * <p>UpdateTableModelInfoRequest</p>
@@ -128,7 +129,7 @@ public class UpdateTableModelInfoRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -137,7 +138,10 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The ID of the first-level table folder.
+         * <p>The ID of the first-level table folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder firstLevelThemeId(Long firstLevelThemeId) {
             this.putQueryParameter("FirstLevelThemeId", firstLevelThemeId);
@@ -146,7 +150,10 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The table level ID.
+         * <p>The table level ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -155,7 +162,10 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
+         * <p>The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -164,7 +174,10 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The ID of the second-level table folder.
+         * <p>The ID of the second-level table folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder secondLevelThemeId(Long secondLevelThemeId) {
             this.putQueryParameter("SecondLevelThemeId", secondLevelThemeId);
@@ -173,7 +186,11 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.
+         * <p>The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.test.table1</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

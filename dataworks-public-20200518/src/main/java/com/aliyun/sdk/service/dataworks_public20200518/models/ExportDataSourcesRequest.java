@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportDataSourcesRequest} extends {@link RequestModel}
  *
  * <p>ExportDataSourcesRequest</p>
@@ -154,7 +155,7 @@ public class ExportDataSourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -163,22 +164,25 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>odps</li>
+         * <li>mysql</li>
+         * <li>rds</li>
+         * <li>oss</li>
+         * <li>sqlserver</li>
+         * <li>polardb</li>
+         * <li>oracle</li>
+         * <li>mongodb</li>
+         * <li>emr</li>
+         * <li>postgresql</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>hybriddb_for_postgresql</li>
+         * <li>holo</li>
+         * </ul>
          * 
-         * *   odps
-         * *   mysql
-         * *   rds
-         * *   oss
-         * *   sqlserver
-         * *   polardb
-         * *   oracle
-         * *   mongodb
-         * *   emr
-         * *   postgresql
-         * *   analyticdb_for_mysql
-         * *   hybriddb_for_postgresql
-         * *   holo
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -187,11 +191,14 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The environment in which the data source resides. Valid values:
-         * <p>
+         * <p>The environment in which the data source resides. Valid values:</p>
+         * <ul>
+         * <li>0: development environment</li>
+         * <li>1: production environment</li>
+         * </ul>
          * 
-         * *   0: development environment
-         * *   1: production environment
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -200,7 +207,10 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The keyword contained in the names of the data sources that you want to export. You can specify only one keyword. For example, if you set this parameter to test, you can call the ExportDataSources operation to export all data sources whose names contain test in the workspace.
+         * <p>The keyword contained in the names of the data sources that you want to export. You can specify only one keyword. For example, if you set this parameter to test, you can call the ExportDataSources operation to export all data sources whose names contain test in the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -209,7 +219,10 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -218,7 +231,10 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -227,7 +243,11 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
+         * <p>The ID of the DataWorks workspace to which the data sources belong. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -236,10 +256,11 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.
-         * <p>
+         * <p>The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.</p>
+         * <p>If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.</p>
          * 
-         * If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

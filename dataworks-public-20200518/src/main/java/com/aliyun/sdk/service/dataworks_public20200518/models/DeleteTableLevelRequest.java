@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTableLevelRequest} extends {@link RequestModel}
  *
  * <p>DeleteTableLevelRequest</p>
@@ -83,7 +84,7 @@ public class DeleteTableLevelRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class DeleteTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the table level that you want to delete. You can call the ListTableLevel operation to query the ID.
+         * <p>The ID of the table level that you want to delete. You can call the ListTableLevel operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -101,7 +106,11 @@ public class DeleteTableLevelRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

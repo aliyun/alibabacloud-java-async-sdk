@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServiceFolderResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataServiceFolderResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the folder.
+         * <p>The details of the folder.</p>
          */
         public Builder folder(Folder folder) {
             this.folder = folder;
@@ -57,7 +58,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataServiceFolderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServiceFolderResponseBody</p>
+     */
     public static class Folder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -181,7 +191,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The time when the folder was created.
+             * <p>The time when the folder was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-24T18:37:51+0800</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -189,7 +202,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The folder ID.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder folderId(Long folderId) {
                 this.folderId = folderId;
@@ -197,7 +213,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the folder.
+             * <p>The name of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -205,7 +224,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business process to which the folder belongs.
+             * <p>The ID of the business process to which the folder belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_1234</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -213,7 +235,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the folder was last modified.
+             * <p>The time when the folder was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-24T18:37:51+0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -221,7 +246,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The parent folder ID. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.
+             * <p>The parent folder ID. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -229,7 +257,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -237,7 +268,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10002</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListShiftPersonnelsRequest} extends {@link RequestModel}
  *
  * <p>ListShiftPersonnelsRequest</p>
@@ -135,7 +136,11 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.
+         * <p>The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593950832000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -144,7 +149,11 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.
+         * <p>The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593950832000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -153,7 +162,10 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.
+         * <p>The ID of the Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1933790****551</p>
          */
         public Builder shiftPersonUID(String shiftPersonUID) {
             this.putBodyParameter("ShiftPersonUID", shiftPersonUID);
@@ -162,7 +174,11 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The unique identifier of the shift schedule.
+         * <p>The unique identifier of the shift schedule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ab6456ada634b2f938ee******9b45b</p>
          */
         public Builder shiftScheduleIdentifier(String shiftScheduleIdentifier) {
             this.putBodyParameter("ShiftScheduleIdentifier", shiftScheduleIdentifier);
@@ -171,7 +187,10 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The type of the on-duty engineer that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.
+         * <p>The type of the on-duty engineer that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder userType(String userType) {
             this.putBodyParameter("UserType", userType);

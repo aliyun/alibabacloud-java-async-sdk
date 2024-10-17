@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgDesensPlanQueryListResponseBody} extends {@link TeaModel}
  *
  * <p>DsgDesensPlanQueryListResponseBody</p>
@@ -97,7 +98,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1029030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageData(PageData pageData) {
             this.pageData = pageData;
@@ -129,7 +139,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DsgDesensPlanQueryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgDesensPlanQueryListResponseBody</p>
+     */
     public static class DesensPlan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesensPlanType")
         private String desensPlanType;
@@ -193,7 +215,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             private java.util.Map < String, ? > extParam; 
 
             /**
-             * The type of the data masking rule.
+             * <p>The type of the data masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder desensPlanType(String desensPlanType) {
                 this.desensPlanType = desensPlanType;
@@ -201,7 +226,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters for the data masking rule. For more information about the parameters, see the [DsgDesensPlanAddOrUpdate](~~2786295~~) API reference.
+             * <p>The parameters for the data masking rule. For more information about the parameters, see the <a href="https://help.aliyun.com/document_detail/2786295.html">DsgDesensPlanAddOrUpdate</a> API reference.</p>
              */
             public Builder extParam(java.util.Map < String, ? > extParam) {
                 this.extParam = extParam;
@@ -215,6 +240,12 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DsgDesensPlanQueryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgDesensPlanQueryListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckWatermark")
         private Boolean checkWatermark;
@@ -398,11 +429,14 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Indicates whether a watermark is added. Valid values:
-             * <p>
+             * <p>Indicates whether a watermark is added. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder checkWatermark(Boolean checkWatermark) {
                 this.checkWatermark = checkWatermark;
@@ -410,7 +444,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitive field type.
+             * <p>The sensitive field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -418,7 +455,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data masking method.
+             * <p>The type of the data masking method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HASH</p>
              */
             public Builder desenMode(String desenMode) {
                 this.desenMode = desenMode;
@@ -426,7 +466,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the data masking rule.
+             * <p>The details of the data masking rule.</p>
              */
             public Builder desensPlan(DesensPlan desensPlan) {
                 this.desensPlan = desensPlan;
@@ -434,7 +474,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The data masking rule.
+             * <p>The data masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HASH</p>
              */
             public Builder desensRule(String desensRule) {
                 this.desensRule = desensRule;
@@ -442,7 +485,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The data masking method.
+             * <p>The data masking method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HASH</p>
              */
             public Builder desensWay(String desensWay) {
                 this.desensWay = desensWay;
@@ -450,7 +496,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data masking rule was created.
+             * <p>The time when the data masking rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-09 15:46:20</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -458,7 +507,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data masking rule was modified.
+             * <p>The time when the data masking rule was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-09 15:46:20</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -466,7 +518,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data masking rule.
+             * <p>The ID of the data masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -474,7 +529,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the data masking rule.
+             * <p>The owner of the data masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -482,7 +540,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data masking rule.
+             * <p>The name of the data masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone_hash</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -490,15 +551,18 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the level-1 data masking scenario to which the rule belongs. Valid values:
-             * <p>
+             * <p>The code of the level-1 data masking scenario to which the rule belongs. Valid values:</p>
+             * <ul>
+             * <li>dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map</li>
+             * <li>maxcompute_desense_code: data masking at the MaxCompute compute engine layer</li>
+             * <li>maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)</li>
+             * <li>hologres_display_desense_code: data masking at the Hologres compute engine layer</li>
+             * <li>dataworks_data_integration_desense_code: static data masking in Data Integration</li>
+             * <li>dataworks_analysis_desense_code: masking of displayed data in DataAnalysis</li>
+             * </ul>
              * 
-             * *   dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map
-             * *   maxcompute_desense_code: data masking at the MaxCompute compute engine layer
-             * *   maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)
-             * *   hologres_display_desense_code: data masking at the Hologres compute engine layer
-             * *   dataworks_data_integration_desense_code: static data masking in Data Integration
-             * *   dataworks_analysis_desense_code: masking of displayed data in DataAnalysis
+             * <strong>example:</strong>
+             * <p>dataworks_display_desense_code</p>
              */
             public Builder sceneCode(String sceneCode) {
                 this.sceneCode = sceneCode;
@@ -506,7 +570,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the level-2 data masking scenario to which the data masking rule belongs.
+             * <p>The name of the level-2 data masking scenario to which the data masking rule belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_scene</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -514,11 +581,14 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data masking rule. Valid values:
-             * <p>
+             * <p>The status of the data masking rule. Valid values:</p>
+             * <ul>
+             * <li>0: expired</li>
+             * <li>1: effective</li>
+             * </ul>
              * 
-             * *   0: expired
-             * *   1: effective
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -532,6 +602,12 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DsgDesensPlanQueryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgDesensPlanQueryListResponseBody</p>
+     */
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;
@@ -595,7 +671,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The information about the data masking rule.
+             * <p>The information about the data masking rule.</p>
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -603,7 +679,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -611,7 +690,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Maximum value: 100.
+             * <p>The number of entries per page. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -619,7 +701,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data masking rules.
+             * <p>The number of data masking rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

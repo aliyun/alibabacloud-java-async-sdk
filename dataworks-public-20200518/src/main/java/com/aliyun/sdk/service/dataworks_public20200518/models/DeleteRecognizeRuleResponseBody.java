@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRecognizeRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteRecognizeRuleResponseBody</p>
@@ -97,7 +98,10 @@ public class DeleteRecognizeRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned data about whether the deletion is successful.
+         * <p>The returned data about whether the deletion is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;HttpStatusCode&quot;: 200,   &quot;Success&quot;: true }</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -105,7 +109,10 @@ public class DeleteRecognizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9990030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +120,7 @@ public class DeleteRecognizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class DeleteRecognizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class DeleteRecognizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DeleteRecognizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

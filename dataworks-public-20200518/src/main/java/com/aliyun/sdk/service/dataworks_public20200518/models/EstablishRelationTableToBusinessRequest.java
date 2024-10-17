@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EstablishRelationTableToBusinessRequest} extends {@link RequestModel}
  *
  * <p>EstablishRelationTableToBusinessRequest</p>
@@ -125,7 +126,7 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -134,7 +135,11 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the ID.
+         * <p>The ID of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         public Builder businessId(String businessId) {
             this.putBodyParameter("BusinessId", businessId);
@@ -143,7 +148,10 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * The ID of the folder. You can call the [GetFolder](~~173952~~) or [ListFolders](~~173955~~) operation to query the ID.
+         * <p>The ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/173952.html">GetFolder</a> or <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2eb6f9****</p>
          */
         public Builder folderId(String folderId) {
             this.putBodyParameter("FolderId", folderId);
@@ -152,7 +160,10 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.
+         * <p>The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -161,10 +172,11 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.
-         * <p>
+         * <p>The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.</p>
+         * <p>You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.</p>
          * 
-         * You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.
+         * <strong>example:</strong>
+         * <p>dw</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -173,7 +185,11 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * The universally unique identifier (UUID) of the table. You can call the [SearchMetaTables](~~173919~~) operation to query the UUID.
+         * <p>The universally unique identifier (UUID) of the table. You can call the <a href="https://help.aliyun.com/document_detail/173919.html">SearchMetaTables</a> operation to query the UUID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.dw_project.tb1</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putBodyParameter("TableGuid", tableGuid);

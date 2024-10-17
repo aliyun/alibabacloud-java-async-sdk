@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgUserGroupGetOdpsRoleGroupsRequest} extends {@link RequestModel}
  *
  * <p>DsgUserGroupGetOdpsRoleGroupsRequest</p>
@@ -77,7 +78,11 @@ public class DsgUserGroupGetOdpsRoleGroupsRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute project. You can call the [DsgPlatformQueryProjectsAndSchemaFromMeta](~~2786303~~) operation to query a list of MaxCompute projects.
+         * <p>The name of the MaxCompute project. You can call the <a href="https://help.aliyun.com/document_detail/2786303.html">DsgPlatformQueryProjectsAndSchemaFromMeta</a> operation to query a list of MaxCompute projects.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

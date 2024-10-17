@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataServiceFolderRequest} extends {@link RequestModel}
  *
  * <p>CreateDataServiceFolderRequest</p>
@@ -128,7 +129,7 @@ public class CreateDataServiceFolderRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -137,7 +138,11 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * The name of the folder.
+         * <p>The name of the folder.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test folder</p>
          */
         public Builder folderName(String folderName) {
             this.putBodyParameter("FolderName", folderName);
@@ -146,7 +151,11 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * The ID of the desired workflow to which the folder belongs.
+         * <p>The ID of the desired workflow to which the folder belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000abcd</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -155,7 +164,11 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * The ID of the desired parent folder of the folder. The ID of the root folder in a workflow is 0. The ID of the folder created by users in a workflow is greater than 0.
+         * <p>The ID of the desired parent folder of the folder. The ID of the root folder in a workflow is 0. The ID of the folder created by users in a workflow is greater than 0.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder parentId(Long parentId) {
             this.putBodyParameter("ParentId", parentId);
@@ -164,7 +177,11 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -173,7 +190,10 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * The tenant ID.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

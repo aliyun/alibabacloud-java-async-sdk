@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMetaTableRequest} extends {@link RequestModel}
  *
  * <p>UpdateMetaTableRequest</p>
@@ -210,7 +211,7 @@ public class UpdateMetaTableRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -219,7 +220,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The names of the labels that you want to add. Separate the labels with commas (,).
+         * <p>The names of the labels that you want to add. Separate the labels with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a,b,c</p>
          */
         public Builder addedLabels(String addedLabels) {
             this.putBodyParameter("AddedLabels", addedLabels);
@@ -228,7 +232,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The display name of the table.
+         * <p>The display name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder caption(String caption) {
             this.putQueryParameter("Caption", caption);
@@ -237,7 +244,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The ID of the category that you want to associate.
+         * <p>The ID of the category that you want to associate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -246,7 +256,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
+         * <p>The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -255,7 +268,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The new owner ID. If you leave this parameter empty, the owner ID is not updated.
+         * <p>The new owner ID. If you leave this parameter empty, the owner ID is not updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder newOwnerId(String newOwnerId) {
             this.putQueryParameter("NewOwnerId", newOwnerId);
@@ -264,7 +280,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -273,7 +292,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The names of labels that you want to remove. Separate the labels with commas (,).
+         * <p>The names of labels that you want to remove. Separate the labels with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a,b,c</p>
          */
         public Builder removedLabels(String removedLabels) {
             this.putBodyParameter("RemovedLabels", removedLabels);
@@ -282,7 +304,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The schema information about the table. You must configure this parameter if you enable the three-layer model of MaxCompute.
+         * <p>The schema information about the table. You must configure this parameter if you enable the three-layer model of MaxCompute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -291,7 +316,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The GUID of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.
+         * <p>The GUID of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.test.table1</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -300,7 +328,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table1</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -309,7 +340,10 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all members. The value 1 indicates that the table is visible to all members. The value 2 indicates that the table is visible to workspace members.
+         * <p>The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all members. The value 1 indicates that the table is visible to all members. The value 2 indicates that the table is visible to workspace members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder visibility(Integer visibility) {
             this.putQueryParameter("Visibility", visibility);

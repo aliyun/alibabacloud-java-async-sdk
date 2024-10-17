@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetaCollectionRequest} extends {@link RequestModel}
  *
  * <p>DeleteMetaCollectionRequest</p>
@@ -77,7 +78,11 @@ public class DeleteMetaCollectionRequest extends Request {
         }
 
         /**
-         * The unique identifier of the collection.
+         * <p>The unique identifier of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.12333</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSensitiveDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetSensitiveDataResponseBody</p>
@@ -49,7 +50,10 @@ public class GetSensitiveDataResponseBody extends TeaModel {
         private java.util.Map < String, ? > sensitiveData; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,12 +61,12 @@ public class GetSensitiveDataResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the sensitive data returned. The information includes totalCount and sensDatas. sensDatas includes the following parameters:
-         * <p>
-         * 
-         * *   guid: the ID of the metadata of the tenant. For example, the ID of the metadata in the MaxCompute compute engine is in the Project name.Table name.Column name format.
-         * *   sensType: the type of the sensitive data.
-         * *   sensLevel: the sensitivity level of the sensitive data
+         * <p>The information about the sensitive data returned. The information includes totalCount and sensDatas. sensDatas includes the following parameters:</p>
+         * <ul>
+         * <li>guid: the ID of the metadata of the tenant. For example, the ID of the metadata in the MaxCompute compute engine is in the Project name.Table name.Column name format.</li>
+         * <li>sensType: the type of the sensitive data.</li>
+         * <li>sensLevel: the sensitivity level of the sensitive data</li>
+         * </ul>
          */
         public Builder sensitiveData(java.util.Map < String, ? > sensitiveData) {
             this.sensitiveData = sensitiveData;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDagComplementRequest} extends {@link RequestModel}
  *
  * <p>CreateDagComplementRequest</p>
@@ -214,7 +215,10 @@ public class CreateDagComplementRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -241,7 +245,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * EndBizDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-21 00:00:00</p>
          */
         public Builder endBizDate(String endBizDate) {
             this.putBodyParameter("EndBizDate", endBizDate);
@@ -259,7 +266,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * IncludeNodeIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74324,74325</p>
          */
         public Builder includeNodeIds(String includeNodeIds) {
             this.putBodyParameter("IncludeNodeIds", includeNodeIds);
@@ -268,7 +278,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xm_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -286,7 +299,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * Parallelism.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder parallelism(Boolean parallelism) {
             this.putBodyParameter("Parallelism", parallelism);
@@ -295,7 +311,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -304,7 +323,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * RootNodeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder rootNodeId(Long rootNodeId) {
             this.putBodyParameter("RootNodeId", rootNodeId);
@@ -313,7 +335,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * StartBizDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-20 00:00:00</p>
          */
         public Builder startBizDate(String startBizDate) {
             this.putBodyParameter("StartBizDate", startBizDate);

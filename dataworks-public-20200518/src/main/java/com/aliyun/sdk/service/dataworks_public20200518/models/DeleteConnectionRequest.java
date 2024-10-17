@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConnectionRequest} extends {@link RequestModel}
  *
  * <p>DeleteConnectionRequest</p>
@@ -68,7 +69,7 @@ public class DeleteConnectionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class DeleteConnectionRequest extends Request {
         }
 
         /**
-         * The data source ID. You can call the [ListConnection](~~173911~~) operation to query the ID.
+         * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/173911.html">ListConnection</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder connectionId(Long connectionId) {
             this.putQueryParameter("ConnectionId", connectionId);

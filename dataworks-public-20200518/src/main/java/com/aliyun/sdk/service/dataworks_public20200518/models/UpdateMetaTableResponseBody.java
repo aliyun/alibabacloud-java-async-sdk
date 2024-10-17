@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMetaTableResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMetaTableResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateMetaTableResponseBody extends TeaModel {
         private Boolean updateResult; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class UpdateMetaTableResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the metadata information about the table was updated.
+         * <p>Indicates whether the metadata information about the table was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder updateResult(Boolean updateResult) {
             this.updateResult = updateResult;

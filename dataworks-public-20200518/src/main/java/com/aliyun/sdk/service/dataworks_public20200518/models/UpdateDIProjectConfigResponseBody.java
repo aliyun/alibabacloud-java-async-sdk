@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDIProjectConfigResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDIProjectConfigResponseBody</p>
@@ -61,7 +62,7 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the modification.
+         * <p>The information about the modification.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDIProjectConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateDIProjectConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -121,11 +134,14 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Indicates whether the default global configuration of synchronization solutions is modified. Valid values:
-             * <p>
+             * <p>Indicates whether the default global configuration of synchronization solutions is modified. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>fail</li>
+             * </ul>
              * 
-             * *   success
-             * *   fail
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataServiceApiAuthorityResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDataServiceApiAuthorityResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDataServiceApiAuthorityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateDataServiceApiAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the authorization was successful.
+         * <p>Indicates whether the authorization was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

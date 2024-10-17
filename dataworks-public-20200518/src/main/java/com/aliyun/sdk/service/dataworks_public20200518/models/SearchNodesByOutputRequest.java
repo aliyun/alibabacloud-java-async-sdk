@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchNodesByOutputRequest} extends {@link RequestModel}
  *
  * <p>SearchNodesByOutputRequest</p>
@@ -83,7 +84,7 @@ public class SearchNodesByOutputRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class SearchNodesByOutputRequest extends Request {
         }
 
         /**
-         * The output names of the node. If you specify multiple output names, separate them with commas (,).
+         * <p>The output names of the node. If you specify multiple output names, separate them with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaaaa.1231412_out,bbbb.12313123_out</p>
          */
         public Builder outputs(String outputs) {
             this.putBodyParameter("Outputs", outputs);
@@ -101,7 +106,11 @@ public class SearchNodesByOutputRequest extends Request {
         }
 
         /**
-         * The environment of Operation Center. Valid values: PROD and DEV.
+         * <p>The environment of Operation Center. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServiceApiTestResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataServiceApiTestResponseBody</p>
@@ -70,6 +71,12 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataServiceApiTestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServiceApiTestResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeOnBaselineRequest} extends {@link RequestModel}
  *
  * <p>GetNodeOnBaselineRequest</p>
@@ -68,7 +69,7 @@ public class GetNodeOnBaselineRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class GetNodeOnBaselineRequest extends Request {
         }
 
         /**
-         * The baseline ID.
+         * <p>The baseline ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);

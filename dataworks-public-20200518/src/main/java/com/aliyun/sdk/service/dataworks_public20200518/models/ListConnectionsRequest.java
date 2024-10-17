@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConnectionsRequest} extends {@link RequestModel}
  *
  * <p>ListConnectionsRequest</p>
@@ -166,7 +167,7 @@ public class ListConnectionsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -175,22 +176,25 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>odps</li>
+         * <li>mysql</li>
+         * <li>rds</li>
+         * <li>oss</li>
+         * <li>sqlserver</li>
+         * <li>polardb</li>
+         * <li>oracle</li>
+         * <li>mongodb</li>
+         * <li>emr</li>
+         * <li>postgresql</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>hybriddb_for_postgresql</li>
+         * <li>holo</li>
+         * </ul>
          * 
-         * *   odps
-         * *   mysql
-         * *   rds
-         * *   oss
-         * *   sqlserver
-         * *   polardb
-         * *   oracle
-         * *   mongodb
-         * *   emr
-         * *   postgresql
-         * *   analyticdb_for_mysql
-         * *   hybriddb_for_postgresql
-         * *   holo
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);
@@ -199,7 +203,10 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * The environment in which the data source is used. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
+         * <p>The environment in which the data source is used. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -208,7 +215,10 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * The name of the data source that you want to query.
+         * <p>The name of the data source that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -217,7 +227,10 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +239,10 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +251,11 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID.
+         * <p>The ID of the workspace to which the data source belongs. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76086</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -244,11 +264,14 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * The status of the data source. Valid values:
-         * <p>
+         * <p>The status of the data source. Valid values:</p>
+         * <ul>
+         * <li>ENABLED</li>
+         * <li>DISABLED</li>
+         * </ul>
          * 
-         * *   ENABLED
-         * *   DISABLED
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -257,11 +280,14 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * The subtype of the data source. This parameter is used in scenarios where a type includes subtypes. The following type and subtypes are supported:
-         * <p>
+         * <p>The subtype of the data source. This parameter is used in scenarios where a type includes subtypes. The following type and subtypes are supported:</p>
+         * <ul>
+         * <li>Type: <code>rds</code></li>
+         * <li>Subtypes: <code>mysql</code>, <code>sqlserver</code>, and <code>postgresql</code></li>
+         * </ul>
          * 
-         * *   Type: `rds`
-         * *   Subtypes: `mysql`, `sqlserver`, and `postgresql`
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

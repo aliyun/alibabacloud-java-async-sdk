@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDagRequest} extends {@link RequestModel}
  *
  * <p>GetDagRequest</p>
@@ -83,7 +84,7 @@ public class GetDagRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,12 +93,16 @@ public class GetDagRequest extends Request {
         }
 
         /**
-         * The ID of the DAG. You can use one of the following method to obtain the ID:
-         * <p>
+         * <p>The ID of the DAG. You can use one of the following method to obtain the ID:</p>
+         * <ul>
+         * <li>Call the <a href="https://help.aliyun.com/document_detail/2780209.html">RunCycleDagNodes</a> operation and obtain the value of the <strong>Data</strong> response parameter.</li>
+         * <li>Call the <a href="https://help.aliyun.com/document_detail/2780210.html">RunSmokeTest</a> operation and obtain the value of the <strong>Data</strong> response parameter.</li>
+         * <li>Call the <a href="https://help.aliyun.com/document_detail/2780218.html">RunManualDagNodes</a> operation and obtain the value of the <strong>DagId</strong> response parameter.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Call the [RunCycleDagNodes](~~2780209~~) operation and obtain the value of the **Data** response parameter.
-         * *   Call the [RunSmokeTest](~~2780210~~) operation and obtain the value of the **Data** response parameter.
-         * *   Call the [RunManualDagNodes](~~2780218~~) operation and obtain the value of the **DagId** response parameter.
+         * <strong>example:</strong>
+         * <p>123141452344525</p>
          */
         public Builder dagId(Long dagId) {
             this.putBodyParameter("DagId", dagId);
@@ -106,7 +111,11 @@ public class GetDagRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV.
+         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

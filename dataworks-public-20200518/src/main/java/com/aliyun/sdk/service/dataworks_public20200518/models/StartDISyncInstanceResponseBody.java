@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartDISyncInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>StartDISyncInstanceResponseBody</p>
@@ -61,7 +62,7 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result returned for the start.
+         * <p>The result returned for the start.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartDISyncInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartDISyncInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -133,10 +146,11 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the real-time synchronization task or the data synchronization solution fails to be started.
-             * <p>
+             * <p>The reason why the real-time synchronization task or the data synchronization solution fails to be started.</p>
+             * <p>If the real-time synchronization task or the data synchronization solution is started, the value null is returned.</p>
              * 
-             * If the real-time synchronization task or the data synchronization solution is started, the value null is returned.
+             * <strong>example:</strong>
+             * <p>fileId:[100] is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -144,11 +158,14 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the real-time synchronization task or the data synchronization solution is started. Valid values:
-             * <p>
+             * <p>Indicates whether the real-time synchronization task or the data synchronization solution is started. Valid values:</p>
+             * <ul>
+             * <li>success: The real-time synchronization task or the data synchronization solution is started.</li>
+             * <li>fail: The real-time synchronization task or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.</li>
+             * </ul>
              * 
-             * *   success: The real-time synchronization task or the data synchronization solution is started.
-             * *   fail: The real-time synchronization task or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

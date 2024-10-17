@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMetaCollectionsRequest} extends {@link RequestModel}
  *
  * <p>ListMetaCollectionsRequest</p>
@@ -189,7 +190,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The ID of the collection administrator.
+         * <p>The ID of the collection administrator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200759642363000</p>
          */
         public Builder administrator(String administrator) {
             this.putQueryParameter("Administrator", administrator);
@@ -198,9 +202,14 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * - ALBUM: data album 
-         * <p>
-         * - ALBUM_CATEGORY: category in a data album
+         * <ul>
+         * <li>ALBUM: data album </li>
+         * <li>ALBUM_CATEGORY: category in a data album</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALBUM</p>
          */
         public Builder collectionType(String collectionType) {
             this.putQueryParameter("CollectionType", collectionType);
@@ -209,7 +218,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The ID of the collection creator.
+         * <p>The ID of the collection creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200759642363000</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -218,7 +230,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The ID of the collection follower.
+         * <p>The ID of the collection follower.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200759642363000</p>
          */
         public Builder follower(String follower) {
             this.putQueryParameter("Follower", follower);
@@ -227,7 +242,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The keyword.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -236,7 +254,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -245,7 +266,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The name of the sorting field.
+         * <p>The name of the sorting field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -254,7 +278,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,7 +290,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The unique identifier of the parent collection.
+         * <p>The unique identifier of the parent collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Album.1234</p>
          */
         public Builder parentQualifiedName(String parentQualifiedName) {
             this.putQueryParameter("ParentQualifiedName", parentQualifiedName);

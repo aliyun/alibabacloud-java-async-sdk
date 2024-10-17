@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQualityRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateQualityRuleRequest</p>
@@ -341,7 +342,7 @@ public class CreateQualityRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -350,7 +351,11 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The strength type of the monitoring rule. Valid values: 0 and 1. The value 0 indicates that the monitoring rule is a weak rule. The value 1 indicates that the monitoring rule is a strong rule.
+         * <p>The strength type of the monitoring rule. Valid values: 0 and 1. The value 0 indicates that the monitoring rule is a weak rule. The value 1 indicates that the monitoring rule is a strong rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder blockType(Integer blockType) {
             this.putBodyParameter("BlockType", blockType);
@@ -359,7 +364,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The checker ID.
+         * <p>The checker ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder checker(Integer checker) {
             this.putBodyParameter("Checker", checker);
@@ -368,7 +376,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The description of the monitoring rule.
+         * <p>The description of the monitoring rule.</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -377,7 +385,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is triggered, nodes are blocked.
+         * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is triggered, nodes are blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder criticalThreshold(String criticalThreshold) {
             this.putBodyParameter("CriticalThreshold", criticalThreshold);
@@ -386,7 +397,11 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the partition filter expression.
+         * <p>The ID of the partition filter expression.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15224</p>
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -395,7 +410,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The expected value.
+         * <p>The expected value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder expectValue(String expectValue) {
             this.putBodyParameter("ExpectValue", expectValue);
@@ -404,7 +422,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The method used to collect sample data. If you want to use a custom SQL statement as a sampling method, set this parameter to user_defined.
+         * <p>The method used to collect sample data. If you want to use a custom SQL statement as a sampling method, set this parameter to user_defined.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>count/table_count</p>
          */
         public Builder methodName(String methodName) {
             this.putBodyParameter("MethodName", methodName);
@@ -413,10 +434,14 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The comparison operator, such as >, >=, =, ≠, <, or <=.
-         * <p>
+         * <p>The comparison operator, such as &gt;, &gt;=, =, ≠, &lt;, or &lt;=.</p>
+         * <blockquote>
+         * <p>If you set the Checker parameter to 9, you must configure the Operator parameter.</p>
+         * </blockquote>
          * 
-         * > If you set the Checker parameter to 9, you must configure the Operator parameter.
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         public Builder operator(String operator) {
             this.putBodyParameter("Operator", operator);
@@ -425,7 +450,11 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. The value 0 indicates that the monitoring rule is not a dynamic threshold rule. The value 2 indicates that the monitoring rule is a dynamic threshold rule.
+         * <p>Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. The value 0 indicates that the monitoring rule is not a dynamic threshold rule. The value 2 indicates that the monitoring rule is a dynamic threshold rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder predictType(Integer predictType) {
             this.putBodyParameter("PredictType", predictType);
@@ -434,7 +463,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -443,7 +475,11 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the compute engine or data source.
+         * <p>The name of the compute engine or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -452,7 +488,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The fields that you want to monitor. If you want to monitor all fields in a table and check the table rows, set this parameter to table_count. If you want to monitor all fields in a table and check the table size, set this parameter to table_size.
+         * <p>The fields that you want to monitor. If you want to monitor all fields in a table and check the table rows, set this parameter to table_count. If you want to monitor all fields in a table and check the table size, set this parameter to table_size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_id</p>
          */
         public Builder property(String property) {
             this.putBodyParameter("Property", property);
@@ -461,7 +500,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The data type of the fields that you want to monitor. If you want to monitor all fields in a table, set this parameter to table. If you want to monitor only a specific field, set this parameter to bigint.
+         * <p>The data type of the fields that you want to monitor. If you want to monitor all fields in a table, set this parameter to table. If you want to monitor only a specific field, set this parameter to bigint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bigint</p>
          */
         public Builder propertyType(String propertyType) {
             this.putBodyParameter("PropertyType", propertyType);
@@ -470,7 +512,11 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the monitoring rule.
+         * <p>The name of the monitoring rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -479,7 +525,11 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The type of the monitoring rule. Valid values: 0, 1, and 2. The value 0 indicates that the monitoring rule is created by the system. The value 1 indicates that the monitoring rule is created by a user. The value 2 indicates that the monitoring rule is a workspace-level rule.
+         * <p>The type of the monitoring rule. Valid values: 0, 1, and 2. The value 0 indicates that the monitoring rule is created by the system. The value 1 indicates that the monitoring rule is created by a user. The value 2 indicates that the monitoring rule is a workspace-level rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putBodyParameter("RuleType", ruleType);
@@ -488,7 +538,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The variable settings inserted before the custom rule. Format: x=a,y=b.
+         * <p>The variable settings inserted before the custom rule. Format: x=a,y=b.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x=a,y=b</p>
          */
         public Builder taskSetting(String taskSetting) {
             this.putBodyParameter("TaskSetting", taskSetting);
@@ -497,7 +550,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The template ID.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder templateId(Integer templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -506,12 +562,15 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The trend of the monitoring result. Valid values:
-         * <p>
+         * <p>The trend of the monitoring result. Valid values:</p>
+         * <ul>
+         * <li>up: increasing</li>
+         * <li>down: decreasing</li>
+         * <li>abs: absolute value</li>
+         * </ul>
          * 
-         * *   up: increasing
-         * *   down: decreasing
-         * *   abs: absolute value
+         * <strong>example:</strong>
+         * <p>abs</p>
          */
         public Builder trend(String trend) {
             this.putBodyParameter("Trend", trend);
@@ -520,7 +579,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.
+         * <p>The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder warningThreshold(String warningThreshold) {
             this.putBodyParameter("WarningThreshold", warningThreshold);
@@ -529,7 +591,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The filter condition or custom SQL statement.
+         * <p>The filter condition or custom SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_id&gt;1</p>
          */
         public Builder whereCondition(String whereCondition) {
             this.putBodyParameter("WhereCondition", whereCondition);

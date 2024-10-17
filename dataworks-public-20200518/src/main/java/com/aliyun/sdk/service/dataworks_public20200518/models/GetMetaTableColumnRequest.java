@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableColumnRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableColumnRequest</p>
@@ -151,7 +152,7 @@ public class GetMetaTableColumnRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -160,7 +161,10 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The ID of the E-MapReduce (EMR) cluster. You can log on to the EMR console to obtain the ID.
+         * <p>The ID of the E-MapReduce (EMR) cluster. You can log on to the EMR console to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-010A704DA760****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -169,7 +173,10 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The type of the data source. Set the value to emr.
+         * <p>The type of the data source. Set the value to emr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -178,7 +185,10 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase of the EMR cluster. You can call the [ListMetaDB](~~2780105~~) operation to query the name.
+         * <p>The name of the metadatabase of the EMR cluster. You can call the <a href="https://help.aliyun.com/document_detail/2780105.html">ListMetaDB</a> operation to query the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -187,7 +197,10 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -196,7 +209,10 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,7 +221,10 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The GUID of the metatable. You can call the [GetMetaDBTableList](~~2780086~~) operation to query the GUID.
+         * <p>The GUID of the metatable. You can call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the GUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -214,7 +233,10 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The name of the metatable in the EMR cluster. You can call the [GetMetaDBTableList](~~2780086~~) operation to query the name.
+         * <p>The name of the metatable in the EMR cluster. You can call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

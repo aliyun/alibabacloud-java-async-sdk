@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMetaTableIntroWikiRequest} extends {@link RequestModel}
  *
  * <p>UpdateMetaTableIntroWikiRequest</p>
@@ -83,7 +84,7 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * The details of the instructions on how to use the metatable.
+         * <p>The details of the instructions on how to use the metatable.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -101,7 +106,11 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.
+         * <p>The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.test.table1</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

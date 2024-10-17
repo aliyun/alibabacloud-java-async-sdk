@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicInfluenceRequest} extends {@link RequestModel}
  *
  * <p>GetTopicInfluenceRequest</p>
@@ -68,7 +69,7 @@ public class GetTopicInfluenceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,10 @@ public class GetTopicInfluenceRequest extends Request {
         }
 
         /**
-         * TopicId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder topicId(Long topicId) {
             this.putBodyParameter("TopicId", topicId);

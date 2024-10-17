@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaColumnLineageResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaColumnLineageResponseBody</p>
@@ -97,7 +98,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaColumnLineageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaColumnLineageResponseBody</p>
+     */
     public static class DataEntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -225,7 +247,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The EMR cluster ID.
+             * <p>The EMR cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -233,7 +258,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the field.
+             * <p>The unique identifier of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.engine_name.table_name.1</p>
              */
             public Builder columnGuid(String columnGuid) {
                 this.columnGuid = columnGuid;
@@ -241,7 +269,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -249,7 +280,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -257,7 +291,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -271,6 +308,12 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaColumnLineageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaColumnLineageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataEntityList")
         private java.util.List < DataEntityList> dataEntityList;
@@ -334,7 +377,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The returned result.
+             * <p>The returned result.</p>
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -342,7 +385,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -350,7 +396,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -358,7 +407,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of fields.
+             * <p>The total number of fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

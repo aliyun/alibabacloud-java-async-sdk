@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Cluster} extends {@link TeaModel}
  *
  * <p>Cluster</p>
@@ -51,7 +52,10 @@ public class Cluster extends TeaModel {
         private Long clusterId; 
 
         /**
-         * ClusterBizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-d8a7523****</p>
          */
         public Builder clusterBizId(String clusterBizId) {
             this.clusterBizId = clusterBizId;
@@ -59,7 +63,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder clusterId(Long clusterId) {
             this.clusterId = clusterId;

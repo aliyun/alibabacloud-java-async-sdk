@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlertMessagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAlertMessagesResponseBody</p>
@@ -97,7 +98,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about returned alerts.
+         * <p>The information about returned alerts.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAlertMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertMessagesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
@@ -225,7 +247,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -233,7 +258,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -241,7 +269,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -249,7 +277,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the node belongs.
+             * <p>The ID of the workspace to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -257,7 +288,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the node for which the instance is generated. The value CHECKING_CONDITION indicates that branch conditions are being checked for the node for which the instance is generated. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is successfully run.
+             * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the node for which the instance is generated. The value CHECKING_CONDITION indicates that branch conditions are being checked for the node for which the instance is generated. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is successfully run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NOT_RUN</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -271,6 +305,12 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAlertMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertMessagesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
@@ -334,7 +374,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -342,7 +385,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -350,7 +393,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the node owner.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95279527952****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -358,7 +404,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the node belongs.
+             * <p>The ID of the workspace to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -372,6 +421,12 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAlertMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertMessagesResponseBody</p>
+     */
     public static class SlaAlert extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
@@ -471,7 +526,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The baseline ID.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -479,7 +537,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * <p>The name of the baseline.</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -487,7 +545,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).
+             * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952795279****</p>
              */
             public Builder baselineOwner(String baselineOwner) {
                 this.baselineOwner = baselineOwner;
@@ -495,7 +556,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp of the baseline instance.
+             * <p>The data timestamp of the baseline instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553443200000</p>
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -503,7 +567,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: \[1,24]. The ID of a day-level cycle is 1.
+             * <p>The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: [1,24]. The ID of a day-level cycle is 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder inGroupId(Integer inGroupId) {
                 this.inGroupId = inGroupId;
@@ -511,7 +578,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the baseline belongs.
+             * <p>The ID of the workspace to which the baseline belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -519,7 +589,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.
+             * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAFE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -533,6 +606,12 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAlertMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertMessagesResponseBody</p>
+     */
     public static class Topics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
@@ -620,7 +699,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String topicStatus; 
 
             /**
-             * The ID of the instance that triggered the event.
+             * <p>The ID of the instance that triggered the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -628,7 +710,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node that triggered the event.
+             * <p>The ID of the node that triggered the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -636,7 +721,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The event ID.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -644,7 +732,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event.
+             * <p>The name of the event.</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -652,7 +740,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the event owner.
+             * <p>The ID of the Alibaba Cloud account used by the event owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527952795****</p>
              */
             public Builder topicOwner(String topicOwner) {
                 this.topicOwner = topicOwner;
@@ -660,7 +751,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being handled. The value RECOVER indicates that the event is handled.
+             * <p>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being handled. The value RECOVER indicates that the event is handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FIXING</p>
              */
             public Builder topicStatus(String topicStatus) {
                 this.topicStatus = topicStatus;
@@ -674,6 +768,12 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAlertMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertMessagesResponseBody</p>
+     */
     public static class AlertMessages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertId")
         private Long alertId;
@@ -845,7 +945,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private java.util.List < Topics> topics; 
 
             /**
-             * The alert ID.
+             * <p>The alert ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -853,7 +956,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The sending status of the notification. Valid values: READY_TO_SEND, SEND_FAIL, SEND_SUCCESS, and SEND_OVERLIMIT. The value READY_TO_SEND indicates that the notification is waiting to be sent. The value SEND_FAIL indicates that the notification fails to be sent. The value SEND_SUCCESS indicates that the notification is sent. The value SEND_OVERLIMIT indicates that the number of notifications that are sent exceeds the upper limit.
+             * <p>The sending status of the notification. Valid values: READY_TO_SEND, SEND_FAIL, SEND_SUCCESS, and SEND_OVERLIMIT. The value READY_TO_SEND indicates that the notification is waiting to be sent. The value SEND_FAIL indicates that the notification fails to be sent. The value SEND_SUCCESS indicates that the notification is sent. The value SEND_OVERLIMIT indicates that the number of notifications that are sent exceeds the upper limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>READY_TO_SEND</p>
              */
             public Builder alertMessageStatus(String alertMessageStatus) {
                 this.alertMessageStatus = alertMessageStatus;
@@ -861,7 +967,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The notification method. Valid values: MAIL, SMS, and PHONE. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.
+             * <p>The notification method. Valid values: MAIL, SMS, and PHONE. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS</p>
              */
             public Builder alertMethod(String alertMethod) {
                 this.alertMethod = alertMethod;
@@ -869,7 +978,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert was reported.
+             * <p>The timestamp when the alert was reported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531401000</p>
              */
             public Builder alertTime(Long alertTime) {
                 this.alertTime = alertTime;
@@ -877,7 +989,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud used by the alert recipient.
+             * <p>The ID of the Alibaba Cloud used by the alert recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527952795****</p>
              */
             public Builder alertUser(String alertUser) {
                 this.alertUser = alertUser;
@@ -885,7 +1000,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the alert.
+             * <p>The content of the alert.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -893,7 +1008,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that triggered the custom alert rule. This parameter is returned if the value of the Source parameter is REMIND_ALERT. This parameter is left empty if the value of the Source parameter is not REMIND_ALERT.
+             * <p>The instances that triggered the custom alert rule. This parameter is returned if the value of the Source parameter is REMIND_ALERT. This parameter is left empty if the value of the Source parameter is not REMIND_ALERT.</p>
              */
             public Builder instances(java.util.List < Instances> instances) {
                 this.instances = instances;
@@ -901,11 +1016,11 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The nodes returned for different alert sources.
-             * <p>
-             * 
-             * *   The nodes that form a loop are returned if the value of the Source parameter is NODE_CYCLE_ALERT.
-             * *   The nodes that are isolated are returned if the value of the Source parameter is NODE_LONELY_ALERT.
+             * <p>The nodes returned for different alert sources.</p>
+             * <ul>
+             * <li>The nodes that form a loop are returned if the value of the Source parameter is NODE_CYCLE_ALERT.</li>
+             * <li>The nodes that are isolated are returned if the value of the Source parameter is NODE_LONELY_ALERT.</li>
+             * </ul>
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
@@ -913,7 +1028,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.
+             * <p>The ID of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder remindId(Long remindId) {
                 this.remindId = remindId;
@@ -921,7 +1039,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.
+             * <p>The name of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</p>
              */
             public Builder remindName(String remindName) {
                 this.remindName = remindName;
@@ -929,7 +1047,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The basic information about the baseline instance that triggered an alert. This parameter is returned if the value of the Source parameter is SLA_ALERT. This parameter is left empty if the value of the Source parameter is not SLA_ALERT.
+             * <p>The basic information about the baseline instance that triggered an alert. This parameter is returned if the value of the Source parameter is SLA_ALERT. This parameter is left empty if the value of the Source parameter is not SLA_ALERT.</p>
              */
             public Builder slaAlert(SlaAlert slaAlert) {
                 this.slaAlert = slaAlert;
@@ -937,7 +1055,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert. Valid values: REMIND_ALERT, TOPIC_ALERT, SLA_ALERT, NODE_CYCLE_ALERT, and NODE_LONELY_ALERT. The value REMIND_ALERT indicates that the alert is a custom alert. The value TOPIC_ALERT indicates that the alert is an event alert. The value SLA_ALERT indicates that the alert is a baseline alert. The value NODE_CYCLE_ALERT indicates that the alert is reported for a node dependency loop. The value NODE_LONELY_ALERT indicates that the alert is reported for isolated nodes.
+             * <p>The type of the alert. Valid values: REMIND_ALERT, TOPIC_ALERT, SLA_ALERT, NODE_CYCLE_ALERT, and NODE_LONELY_ALERT. The value REMIND_ALERT indicates that the alert is a custom alert. The value TOPIC_ALERT indicates that the alert is an event alert. The value SLA_ALERT indicates that the alert is a baseline alert. The value NODE_CYCLE_ALERT indicates that the alert is reported for a node dependency loop. The value NODE_LONELY_ALERT indicates that the alert is reported for isolated nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REMIND_ALERT</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -945,7 +1066,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The events that triggered alerts. This parameter is returned if the value of the Source parameter is TOPIC_ALERT. This parameter is left empty if the value of the Source parameter is not TOPIC_ALERT.
+             * <p>The events that triggered alerts. This parameter is returned if the value of the Source parameter is TOPIC_ALERT. This parameter is left empty if the value of the Source parameter is not TOPIC_ALERT.</p>
              */
             public Builder topics(java.util.List < Topics> topics) {
                 this.topics = topics;
@@ -959,6 +1080,12 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAlertMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertMessagesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertMessages")
         private java.util.List < AlertMessages> alertMessages;
@@ -1022,7 +1149,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String totalCount; 
 
             /**
-             * The alerts.
+             * <p>The alerts.</p>
              */
             public Builder alertMessages(java.util.List < AlertMessages> alertMessages) {
                 this.alertMessages = alertMessages;
@@ -1030,7 +1157,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1038,7 +1168,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -1046,7 +1179,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of alerts returned.
+             * <p>The total number of alerts returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

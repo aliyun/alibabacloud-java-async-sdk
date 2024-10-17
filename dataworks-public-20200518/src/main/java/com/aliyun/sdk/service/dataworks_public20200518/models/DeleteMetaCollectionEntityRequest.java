@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetaCollectionEntityRequest} extends {@link RequestModel}
  *
  * <p>DeleteMetaCollectionEntityRequest</p>
@@ -92,7 +93,11 @@ public class DeleteMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the collection.
+         * <p>The unique identifier of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.12345</p>
          */
         public Builder collectionQualifiedName(String collectionQualifiedName) {
             this.putQueryParameter("CollectionQualifiedName", collectionQualifiedName);
@@ -101,7 +106,11 @@ public class DeleteMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity.
+         * <p>The unique identifier of the entity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute.projectA.tableB</p>
          */
         public Builder entityQualifiedName(String entityQualifiedName) {
             this.putQueryParameter("EntityQualifiedName", entityQualifiedName);

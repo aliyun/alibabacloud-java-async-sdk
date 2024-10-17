@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDISyncTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteDISyncTaskRequest</p>
@@ -98,7 +99,7 @@ public class DeleteDISyncTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class DeleteDISyncTaskRequest extends Request {
         }
 
         /**
-         * The ID of the real-time synchronization task. You can call the [ListFiles](~~173942~~) operation to query the ID.
+         * <p>The ID of the real-time synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -116,10 +121,12 @@ public class DeleteDISyncTaskRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
-         * <p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the operation is applied.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You must configure this parameter to specify the DataWorks workspace to which the operation is applied.
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -128,7 +135,11 @@ public class DeleteDISyncTaskRequest extends Request {
         }
 
         /**
-         * The type of the task. Set the value to DI_REALTIME, which indicates a real-time synchronization task.
+         * <p>The type of the task. Set the value to DI_REALTIME, which indicates a real-time synchronization task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DI_REALTIME</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

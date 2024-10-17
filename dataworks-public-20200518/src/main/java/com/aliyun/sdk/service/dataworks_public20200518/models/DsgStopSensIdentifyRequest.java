@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgStopSensIdentifyRequest} extends {@link RequestModel}
  *
  * <p>DsgStopSensIdentifyRequest</p>
@@ -92,7 +93,11 @@ public class DsgStopSensIdentifyRequest extends Request {
         }
 
         /**
-         * The ID of the sensitive data identification task. You can call the [DsgRunSensIdentify](~~2744039~~) operation to obtain the task ID.
+         * <p>The ID of the sensitive data identification task. You can call the <a href="https://help.aliyun.com/document_detail/2744039.html">DsgRunSensIdentify</a> operation to obtain the task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         public Builder jobId(Long jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -101,7 +106,11 @@ public class DsgStopSensIdentifyRequest extends Request {
         }
 
         /**
-         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
+         * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10241024</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

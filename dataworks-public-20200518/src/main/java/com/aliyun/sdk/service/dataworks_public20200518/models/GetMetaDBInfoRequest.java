@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaDBInfoRequest} extends {@link RequestModel}
  *
  * <p>GetMetaDBInfoRequest</p>
@@ -109,7 +110,7 @@ public class GetMetaDBInfoRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -118,7 +119,10 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The compute engine instance ID. Specify the ID in the `Engine type.Engine name` format.
+         * <p>The compute engine instance ID. Specify the ID in the <code>Engine type.Engine name</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.some_engine_name</p>
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -127,7 +131,10 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The E-MapReduce (EMR) cluster ID.
+         * <p>The E-MapReduce (EMR) cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -136,7 +143,10 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * <p>The type of the data source. Valid values: odps and emr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -145,7 +155,10 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase of the EMR cluster.
+         * <p>The name of the metadatabase of the EMR cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);

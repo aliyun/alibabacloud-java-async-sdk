@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDISyncTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateDISyncTaskRequest</p>
@@ -24,7 +25,7 @@ public class CreateDISyncTaskRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskContent")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskContent;
@@ -140,7 +141,7 @@ public class CreateDISyncTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -149,7 +150,10 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. This parameter can be left empty.
+         * <p>The client token that is used to ensure the idempotence of the request. This parameter can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -158,7 +162,11 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -167,16 +175,19 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The configurations of the batch synchronization task to be created. Calling this API operation to create a batch synchronization task is equivalent to creating a batch synchronization task by using the code editor in the DataWorks console. For more information, see [Create a data synchronization task by using the code editor](~~137717~~).
+         * <p>This parameter is required.</p>
          */
         public Builder taskContent(String taskContent) {
-            this.putQueryParameter("TaskContent", taskContent);
+            this.putBodyParameter("TaskContent", taskContent);
             this.taskContent = taskContent;
             return this;
         }
 
         /**
-         * The name of the data synchronization task.
+         * <p>The name of the data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_di_task</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -185,11 +196,14 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The settings that specify the storage path of the data synchronization task and the resource group used by the task. The following parameters are supported:
-         * <p>
+         * <p>The settings that specify the storage path of the data synchronization task and the resource group used by the task. The following parameters are supported:</p>
+         * <ul>
+         * <li>FileFolderPath: the storage path of the data synchronization task.</li>
+         * <li>ResourceGroup: the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</li>
+         * </ul>
          * 
-         * *   FileFolderPath: the storage path of the data synchronization task.
-         * *   ResourceGroup: the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the [ListResourceGroups](~~173913~~) operation to query the identifier of the resource group.
+         * <strong>example:</strong>
+         * <p>{&quot;FileFolderPath&quot;:&quot;Business Flow/XXX/Data Integration&quot;,&quot;ResourceGroup&quot;:&quot;S_res_group_XXX_XXXX&quot;}</p>
          */
         public Builder taskParam(String taskParam) {
             this.putQueryParameter("TaskParam", taskParam);
@@ -198,7 +212,11 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The type of the data synchronization task. Valid values: DI_OFFLINE, DI_REALTIME, and DI_SOLUTION.
+         * <p>The type of the data synchronization task. Valid values: DI_OFFLINE, DI_REALTIME, and DI_SOLUTION.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DI_OFFLINE</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

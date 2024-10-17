@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgScenedDeleteSceneRequest} extends {@link RequestModel}
  *
  * <p>DsgScenedDeleteSceneRequest</p>
@@ -77,7 +78,8 @@ public class DsgScenedDeleteSceneRequest extends Request {
         }
 
         /**
-         * The IDs of level-2 data masking scenarios.
+         * <p>The IDs of level-2 data masking scenarios.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ids(java.util.List < Integer > ids) {
             String idsShrink = shrink(ids, "Ids", "json");

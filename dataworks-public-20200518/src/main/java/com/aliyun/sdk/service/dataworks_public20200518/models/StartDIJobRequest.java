@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartDIJobRequest} extends {@link RequestModel}
  *
  * <p>StartDIJobRequest</p>
@@ -96,7 +97,7 @@ public class StartDIJobRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +106,11 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11743</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -114,7 +119,10 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not forcefully rerun the task.
+         * <p>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not forcefully rerun the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceToRerun(Boolean forceToRerun) {
             this.putBodyParameter("ForceToRerun", forceToRerun);
@@ -123,7 +131,7 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * The settings for the start.
+         * <p>The settings for the start.</p>
          */
         public Builder realtimeStartSettings(RealtimeStartSettings realtimeStartSettings) {
             String realtimeStartSettingsShrink = shrink(realtimeStartSettings, "RealtimeStartSettings", "json");
@@ -139,6 +147,12 @@ public class StartDIJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>StartDIJobRequest</p>
+     */
     public static class FailoverSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
@@ -178,7 +192,10 @@ public class StartDIJobRequest extends Request {
             private Long upperLimit; 
 
             /**
-             * The failover interval. Unit: minutes.
+             * <p>The failover interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -186,7 +203,10 @@ public class StartDIJobRequest extends Request {
             }
 
             /**
-             * The maximum number of failovers.
+             * <p>The maximum number of failovers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder upperLimit(Long upperLimit) {
                 this.upperLimit = upperLimit;
@@ -200,6 +220,12 @@ public class StartDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>StartDIJobRequest</p>
+     */
     public static class RealtimeStartSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailoverSettings")
         private FailoverSettings failoverSettings;
@@ -239,7 +265,7 @@ public class StartDIJobRequest extends Request {
             private Long startTime; 
 
             /**
-             * The failover settings.
+             * <p>The failover settings.</p>
              */
             public Builder failoverSettings(FailoverSettings failoverSettings) {
                 this.failoverSettings = failoverSettings;
@@ -247,7 +273,10 @@ public class StartDIJobRequest extends Request {
             }
 
             /**
-             * The timestamp of the start offset. Unit: seconds. If you do not configure this parameter, the offset is not reset by default.
+             * <p>The timestamp of the start offset. Unit: seconds. If you do not configure this parameter, the offset is not reset by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671516776</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

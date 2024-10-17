@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBaselineStatusesResponseBody} extends {@link TeaModel}
  *
  * <p>ListBaselineStatusesResponseBody</p>
@@ -97,7 +98,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBaselineStatusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBaselineStatusesResponseBody</p>
+     */
     public static class BaselineStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
@@ -333,7 +355,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The baseline ID.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -341,7 +366,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Baseline name</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -349,7 +377,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp.
+             * <p>The data timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553443200000</p>
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -357,7 +388,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The margin of the baseline instance. Unit: seconds.
+             * <p>The margin of the baseline instance. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder buffer(Long buffer) {
                 this.buffer = buffer;
@@ -365,7 +399,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the predicted time when the baseline instance finished running.
+             * <p>The timestamp of the predicted time when the baseline instance finished running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531400000</p>
              */
             public Builder endCast(Long endCast) {
                 this.endCast = endCast;
@@ -373,7 +410,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the alerting time of the baseline instance.
+             * <p>The timestamp of the alerting time of the baseline instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531400000</p>
              */
             public Builder expTime(Long expTime) {
                 this.expTime = expTime;
@@ -381,7 +421,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline instance. Valid values: UNFINISH and FINISH.
+             * <p>The status of the baseline instance. Valid values: UNFINISH and FINISH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNFINISH</p>
              */
             public Builder finishStatus(String finishStatus) {
                 this.finishStatus = finishStatus;
@@ -389,7 +432,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the actual time when the baseline instance finished running. This parameter is returned if the value of the FinishStatus parameter is FINISH.
+             * <p>The timestamp of the actual time when the baseline instance finished running. This parameter is returned if the value of the FinishStatus parameter is FINISH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531400000</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -397,7 +443,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: \[1,24]. The ID of a day-level cycle is 1.
+             * <p>The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: [1,24]. The ID of a day-level cycle is 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder inGroupId(Integer inGroupId) {
                 this.inGroupId = inGroupId;
@@ -405,7 +454,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).
+             * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527952795****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -413,7 +465,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the baseline. Valid values: {1,3,5,7,8}.
+             * <p>The priority of the baseline. Valid values: {1,3,5,7,8}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -421,7 +476,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the baseline belongs.
+             * <p>The ID of the workspace to which the baseline belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -429,7 +487,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the actual time when the baseline instance finished running.
+             * <p>The timestamp of the actual time when the baseline instance finished running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531400000</p>
              */
             public Builder slaTime(Long slaTime) {
                 this.slaTime = slaTime;
@@ -437,7 +498,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.
+             * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAFE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -451,6 +515,12 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListBaselineStatusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBaselineStatusesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineStatuses")
         private java.util.List < BaselineStatuses> baselineStatuses;
@@ -514,7 +584,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The list of baseline instances.
+             * <p>The list of baseline instances.</p>
              */
             public Builder baselineStatuses(java.util.List < BaselineStatuses> baselineStatuses) {
                 this.baselineStatuses = baselineStatuses;
@@ -522,7 +592,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -530,7 +603,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -538,7 +614,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of baseline instances.
+             * <p>The total number of baseline instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

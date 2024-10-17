@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableBasicInfoRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableBasicInfoRequest</p>
@@ -137,7 +138,7 @@ public class GetMetaTableBasicInfoRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -146,10 +147,11 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
-         * <p>
+         * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+         * <p>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to query the ID.</p>
          * 
-         * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to query the ID.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -158,7 +160,10 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * <p>The type of the data source. Valid values: odps and emr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -167,10 +172,11 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase. This parameter is required only if you set the DataSourceType parameter to emr.
-         * <p>
+         * <p>The name of the metadatabase. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2780105.html">ListMetaDB</a> operation to query the name.</p>
          * 
-         * You can call the [ListMetaDB](~~2780105~~) operation to query the name.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -179,7 +185,10 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * Specifies whether to include extended fields in query results. The extended fields include ReadCount, FavoriteCount, and ViewCount. This parameter takes effect only if you set the DataSourceType parameter to odps.
+         * <p>Specifies whether to include extended fields in query results. The extended fields include ReadCount, FavoriteCount, and ViewCount. This parameter takes effect only if you set the DataSourceType parameter to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder extension(Boolean extension) {
             this.putQueryParameter("Extension", extension);
@@ -188,10 +197,13 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The GUID of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.
-         * <p>
+         * <p>The GUID of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.</p>
+         * <blockquote>
+         * <p>This parameter is optional for E-MapReduce (EMR) tables.</p>
+         * </blockquote>
          * 
-         * > This parameter is optional for E-MapReduce (EMR) tables.
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -200,10 +212,11 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
-         * <p>
+         * <p>The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the name.</p>
          * 
-         * You can call the [GetMetaDBTableList](~~2780086~~) operation to query the name.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEntitiesByTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEntitiesByTagsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101011005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Entity.EntityTypeNotSupported</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,11 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true<br>false</p>
          * 
-         * true\
-         * false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +167,12 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEntitiesByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEntitiesByTagsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityList")
         private java.util.List < Entity > entityList;
@@ -193,7 +212,7 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * The entities.
+             * <p>The entities.</p>
              */
             public Builder entityList(java.util.List < Entity > entityList) {
                 this.entityList = entityList;
@@ -201,7 +220,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * A pagination token. It can be used in the next request to retrieve a new page of results.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

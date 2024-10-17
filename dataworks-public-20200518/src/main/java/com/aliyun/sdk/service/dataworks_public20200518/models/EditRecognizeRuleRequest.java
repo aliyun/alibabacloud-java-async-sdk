@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditRecognizeRuleRequest} extends {@link RequestModel}
  *
  * <p>EditRecognizeRuleRequest</p>
@@ -337,7 +338,11 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account that is used to create the sensitive data identification rule. Enter the username of the Alibaba Cloud account.
+         * <p>The Alibaba Cloud account that is used to create the sensitive data identification rule. Enter the username of the Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsg-uat</p>
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -346,11 +351,14 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * Excludes fields. The system does not identify fields that are assigned with values.
-         * <p>
+         * <p>Excludes fields. The system does not identify fields that are assigned with values.</p>
+         * <ul>
+         * <li>The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.</li>
+         * <li>*Wildcards are supported. For example, the asterisk (*) in default.table.column1* can be used to match any content following default.table.column1, such as default.table.column10.</li>
+         * </ul>
          * 
-         * *   The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.
-         * *   *Wildcards are supported. For example, the asterisk (\*) in default.table.column1\* can be used to match any content following default.table.column1, such as default.table.column10.
+         * <strong>example:</strong>
+         * <p>default.qujian.*6</p>
          */
         public Builder colExclude(String colExclude) {
             this.putBodyParameter("ColExclude", colExclude);
@@ -359,11 +367,14 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * Scans fields. The system identifies only fields that are assigned with values.
-         * <p>
+         * <p>Scans fields. The system identifies only fields that are assigned with values.</p>
+         * <ul>
+         * <li>The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.</li>
+         * <li>*Wildcards are supported. For example, the asterisk (*) in default.table.column1* can be used to match any content following default.table.column1, such as default.table.column10.</li>
+         * </ul>
          * 
-         * *   The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.
-         * *   *Wildcards are supported. For example, the asterisk (\*) in default.table.column1\* can be used to match any content following default.table.column1, such as default.table.column10.
+         * <strong>example:</strong>
+         * <p>default.qujian.*</p>
          */
         public Builder colScan(String colScan) {
             this.putBodyParameter("ColScan", colScan);
@@ -372,7 +383,10 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * Scans content. The value is the text of each field comment in your data asset. Fuzzy match is supported.
+         * <p>Scans content. The value is the text of each field comment in your data asset. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder commentScan(String commentScan) {
             this.putBodyParameter("CommentScan", commentScan);
@@ -381,7 +395,10 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * Identifies content. You can call the [QuerySensNodeInfo](~~2747189~~) operation to query the value of the current parameter for a built-in sensitive field.
+         * <p>Identifies content. You can call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation to query the value of the current parameter for a built-in sensitive field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;_clazz&quot;:&quot;com.alipay.dsgclient.sdk.dsg.fastscan.engine.cond.NationalityCond&quot;}</p>
          */
         public Builder contentScan(String contentScan) {
             this.putBodyParameter("ContentScan", contentScan);
@@ -390,7 +407,10 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The hit ratio threshold. If more than 60%, which is a sample hit ratio threshold, of all sample data records hit the Name Entity Recognition (NER) model, the sensitive field is hit. The value can be an integer from 0 to 100.
+         * <p>The hit ratio threshold. If more than 60%, which is a sample hit ratio threshold, of all sample data records hit the Name Entity Recognition (NER) model, the sensitive field is hit. The value can be an integer from 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder hitThreshold(Integer hitThreshold) {
             this.putBodyParameter("HitThreshold", hitThreshold);
@@ -399,7 +419,7 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The name of the sensitivity level. You can call the [QueryDefaultTemplate](~~2743948~~) operation to obtain the name of the sensitivity level in the related template.
+         * <p>The name of the sensitivity level. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the name of the sensitivity level in the related template.</p>
          */
         public Builder levelName(String levelName) {
             this.putBodyParameter("LevelName", levelName);
@@ -408,7 +428,11 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The ID of the data category. You can call the [QuerySensClassification](~~2746850~~) operation to query the ID of all data categories. Then, you can select a data category to create a sensitive field. Enter the ID of the selected data category.
+         * <p>The ID of the data category. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation to query the ID of all data categories. Then, you can select a data category to create a sensitive field. Enter the ID of the selected data category.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ce67949-0810-400f-a24a-cc5ffafe1024</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -417,7 +441,8 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The information about the parent data category of the current data category. You can call the [QuerySensClassification](~~2746850~~) operation to obtain the ID of a data category.
+         * <p>The information about the parent data category of the current data category. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation to obtain the ID of a data category.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder nodeParent(String nodeParent) {
             this.putBodyParameter("NodeParent", nodeParent);
@@ -426,11 +451,15 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The type of the arithmetic operation. Valid values:
-         * <p>
+         * <p>The type of the arithmetic operation. Valid values:</p>
+         * <ul>
+         * <li>0: OR</li>
+         * <li>1: AND</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: OR
-         * *   1: AND
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder operationType(Integer operationType) {
             this.putBodyParameter("OperationType", operationType);
@@ -439,7 +468,10 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The content of the sensitive data identification rule. You can call the [QuerySensNodeInfo](~~2747189~~) operation to query the value of the current parameter for a built-in sensitive field.
+         * <p>The content of the sensitive data identification rule. You can call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation to query the value of the current parameter for a built-in sensitive field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;contentRule&quot;:{&quot;_clazz&quot;:&quot;com.alipay.dsgclient.sdk.dsg.fastscan.engine.cond.GenderCond&quot;},&quot;_clazz&quot;:&quot;com.alipay.dsg.dal.model.RuleContent&quot;}</p>
          */
         public Builder recognizeRules(String recognizeRules) {
             this.putBodyParameter("RecognizeRules", recognizeRules);
@@ -448,13 +480,16 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The type of the sensitive data identification rule. Valid values:
-         * <p>
+         * <p>The type of the sensitive data identification rule. Valid values:</p>
+         * <ul>
+         * <li>1: regular expression</li>
+         * <li>2: built-in rule</li>
+         * <li>3: sample library</li>
+         * <li>4: self-generated data identification model</li>
+         * </ul>
          * 
-         * *   1: regular expression
-         * *   2: built-in rule
-         * *   3: sample library
-         * *   4: self-generated data identification model
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recognizeRulesType(String recognizeRulesType) {
             this.putBodyParameter("RecognizeRulesType", recognizeRulesType);
@@ -463,7 +498,7 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The description of the sensitive field. Enter a string that is less than 128 characters in length.
+         * <p>The description of the sensitive field. Enter a string that is less than 128 characters in length.</p>
          */
         public Builder sensitiveDescription(String sensitiveDescription) {
             this.putBodyParameter("SensitiveDescription", sensitiveDescription);
@@ -472,7 +507,11 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The sensitive field ID. You can call the [QuerySensNodeInfo](~~2747189~~) operation to query the IDs of all sensitive fields. You can also call the [QueryRecognizeRuleDetail](~~2766023~~) operation to query the IDs of specific sensitive fields.
+         * <p>The sensitive field ID. You can call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation to query the IDs of all sensitive fields. You can also call the <a href="https://help.aliyun.com/document_detail/2766023.html">QueryRecognizeRuleDetail</a> operation to query the IDs of specific sensitive fields.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a928de7-3962-4e07-93ac-e1973baa1024</p>
          */
         public Builder sensitiveId(String sensitiveId) {
             this.putBodyParameter("SensitiveId", sensitiveId);
@@ -481,7 +520,8 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The name of the custom sensitive field. Enter a string that is less than 128 characters in length.
+         * <p>The name of the custom sensitive field. Enter a string that is less than 128 characters in length.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sensitiveName(String sensitiveName) {
             this.putBodyParameter("SensitiveName", sensitiveName);
@@ -490,11 +530,14 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The status of the sensitive field. Valid values:
-         * <p>
+         * <p>The status of the sensitive field. Valid values:</p>
+         * <ul>
+         * <li>0: draft</li>
+         * <li>1: effective</li>
+         * </ul>
          * 
-         * *   0: draft
-         * *   1: effective
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -503,7 +546,11 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The template ID. You can call the [QueryDefaultTemplate](~~2743948~~) operation to obtain the template ID.
+         * <p>The template ID. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the template ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e1970541-6cf5-4d23-b101-d5b66f6e1024</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -512,7 +559,11 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
+         * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10241024</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -521,7 +572,11 @@ public class EditRecognizeRuleRequest extends Request {
         }
 
         /**
-         * The sensitivity level of the sensitive field. You can select one from all sensitivity levels that are defined in a template as the sensitivity level of the sensitive field, such as level 1 to level 10.
+         * <p>The sensitivity level of the sensitive field. You can select one from all sensitivity levels that are defined in a template as the sensitivity level of the sensitive field, such as level 1 to level 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder level(String level) {
             this.putBodyParameter("level", level);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaCategoryRequest} extends {@link RequestModel}
  *
  * <p>GetMetaCategoryRequest</p>
@@ -95,7 +96,7 @@ public class GetMetaCategoryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -104,7 +105,10 @@ public class GetMetaCategoryRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -113,7 +117,10 @@ public class GetMetaCategoryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -122,7 +129,10 @@ public class GetMetaCategoryRequest extends Request {
         }
 
         /**
-         * The category tree ID.
+         * <p>The category tree ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>333</p>
          */
         public Builder parentCategoryId(Long parentCategoryId) {
             this.putQueryParameter("ParentCategoryId", parentCategoryId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchNodesByOutputResponseBody} extends {@link TeaModel}
  *
  * <p>SearchNodesByOutputResponseBody</p>
@@ -97,7 +98,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The map returned. The key in the map indicates an output name, and the value in the map indicates the information about the node that generates the output.
+         * <p>The map returned. The key in the map indicates an output name, and the value in the map indicates the information about the node that generates the output.</p>
          */
         public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SDFSDFSDF-asdfDFSDF-SDFSDf-SDfSFD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

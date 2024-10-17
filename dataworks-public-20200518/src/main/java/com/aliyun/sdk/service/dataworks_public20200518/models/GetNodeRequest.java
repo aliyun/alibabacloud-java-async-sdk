@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeRequest} extends {@link RequestModel}
  *
  * <p>GetNodeRequest</p>
@@ -83,7 +84,7 @@ public class GetNodeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class GetNodeRequest extends Request {
         }
 
         /**
-         * The interval at which the node is rerun after the node fails to run.
+         * <p>The interval at which the node is rerun after the node fails to run.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -101,7 +106,11 @@ public class GetNodeRequest extends Request {
         }
 
         /**
-         * The priority of the node. Valid values: 1, 3, 5, 7, and 8.
+         * <p>The priority of the node. Valid values: 1, 3, 5, 7, and 8.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

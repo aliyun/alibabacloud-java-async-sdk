@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetSuccessInstanceTrendResponseBody</p>
@@ -49,7 +50,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The trend of statistics on the instance status in different time periods.
+         * <p>The trend of statistics on the instance status in different time periods.</p>
          */
         public Builder instanceStatusTrend(InstanceStatusTrend instanceStatusTrend) {
             this.instanceStatusTrend = instanceStatusTrend;
@@ -57,7 +58,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527ab****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSuccessInstanceTrendResponseBody</p>
+     */
     public static class AvgTrend extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -109,7 +119,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time. Valid values: 00:00 to 23:00.
+             * <p>The point in time. Valid values: 00:00 to 23:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01:00</p>
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -131,6 +147,12 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSuccessInstanceTrendResponseBody</p>
+     */
     public static class TodayTrend extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -170,7 +192,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,7 +203,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time. Valid values: 00:00 to 23:00.
+             * <p>The point in time. Valid values: 00:00 to 23:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01:00</p>
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -192,6 +220,12 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSuccessInstanceTrendResponseBody</p>
+     */
     public static class YesterdayTrend extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -231,7 +265,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -239,7 +276,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time. Valid values: 00:00 to 23:00.
+             * <p>The point in time. Valid values: 00:00 to 23:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01:00</p>
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -253,6 +293,12 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSuccessInstanceTrendResponseBody</p>
+     */
     public static class InstanceStatusTrend extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgTrend")
         private java.util.List < AvgTrend> avgTrend;
@@ -304,7 +350,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private java.util.List < YesterdayTrend> yesterdayTrend; 
 
             /**
-             * The average trend.
+             * <p>The average trend.</p>
              */
             public Builder avgTrend(java.util.List < AvgTrend> avgTrend) {
                 this.avgTrend = avgTrend;
@@ -312,7 +358,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The trend on the current day.
+             * <p>The trend on the current day.</p>
              */
             public Builder todayTrend(java.util.List < TodayTrend> todayTrend) {
                 this.todayTrend = todayTrend;
@@ -320,7 +366,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The trend on the previous day.
+             * <p>The trend on the previous day.</p>
              */
             public Builder yesterdayTrend(java.util.List < YesterdayTrend> yesterdayTrend) {
                 this.yesterdayTrend = yesterdayTrend;

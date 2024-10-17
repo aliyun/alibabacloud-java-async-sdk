@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLineageRelationRequest} extends {@link RequestModel}
  *
  * <p>DeleteLineageRelationRequest</p>
@@ -111,7 +112,7 @@ public class DeleteLineageRelationRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -120,7 +121,11 @@ public class DeleteLineageRelationRequest extends Request {
         }
 
         /**
-         * The unique identifier of the destination entity.
+         * <p>The unique identifier of the destination entity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom-report.report123</p>
          */
         public Builder destEntityQualifiedName(String destEntityQualifiedName) {
             this.putQueryParameter("DestEntityQualifiedName", destEntityQualifiedName);
@@ -129,7 +134,10 @@ public class DeleteLineageRelationRequest extends Request {
         }
 
         /**
-         * The unique identifier of the lineage.
+         * <p>The unique identifier of the lineage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfazcdfdfccdedd</p>
          */
         public Builder relationshipGuid(String relationshipGuid) {
             this.putQueryParameter("RelationshipGuid", relationshipGuid);
@@ -147,7 +155,11 @@ public class DeleteLineageRelationRequest extends Request {
         }
 
         /**
-         * The unique identifier of the source entity.
+         * <p>The unique identifier of the source entity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.project.table</p>
          */
         public Builder srcEntityQualifiedName(String srcEntityQualifiedName) {
             this.putQueryParameter("SrcEntityQualifiedName", srcEntityQualifiedName);

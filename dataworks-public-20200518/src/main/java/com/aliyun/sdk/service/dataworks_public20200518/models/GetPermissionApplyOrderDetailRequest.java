@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionApplyOrderDetailRequest} extends {@link RequestModel}
  *
  * <p>GetPermissionApplyOrderDetailRequest</p>
@@ -68,7 +69,7 @@ public class GetPermissionApplyOrderDetailRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class GetPermissionApplyOrderDetailRequest extends Request {
         }
 
         /**
-         * The ID of the permission request order. You can call the [ListPermissionApplyOrders](~~211008~~) operation to obtain the ID.
+         * <p>The ID of the permission request order. You can call the <a href="https://help.aliyun.com/document_detail/211008.html">ListPermissionApplyOrders</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48f36729-05f9-4a40-9286-933fd940f30a</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

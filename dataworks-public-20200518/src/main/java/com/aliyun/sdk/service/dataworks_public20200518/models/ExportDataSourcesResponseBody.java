@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportDataSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ExportDataSourcesResponseBody</p>
@@ -73,7 +74,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the exported data sources.
+         * <p>The information about the exported data sources.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,11 +82,14 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned. Valid values:
-         * <p>
+         * <p>The HTTP status code returned. Valid values:</p>
+         * <ul>
+         * <li>200: The request was successful.</li>
+         * <li>Other values: The request failed. You can troubleshoot issues based on the HTTP status code returned.</li>
+         * </ul>
          * 
-         * *   200: The request was successful.
-         * *   Other values: The request failed. You can troubleshoot issues based on the HTTP status code returned.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -93,7 +97,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc14115159376359****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +108,14 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,6 +128,12 @@ public class ExportDataSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExportDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExportDataSourcesResponseBody</p>
+     */
     public static class DataSources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindingCalcEngineId")
         private Integer bindingCalcEngineId;
@@ -349,7 +365,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The ID of the compute engine that is added as the data source.
+             * <p>The ID of the compute engine that is added as the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder bindingCalcEngineId(Integer bindingCalcEngineId) {
                 this.bindingCalcEngineId = bindingCalcEngineId;
@@ -357,11 +376,14 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data source is connected to an exclusive resource group. Valid values:
-             * <p>
+             * <p>Indicates whether the data source is connected to an exclusive resource group. Valid values:</p>
+             * <ul>
+             * <li>1: The data source is connected to at least one exclusive resource group.</li>
+             * <li>0: The data source is not connected to any exclusive resource group.</li>
+             * </ul>
              * 
-             * *   1: The data source is connected to at least one exclusive resource group.
-             * *   0: The data source is not connected to any exclusive resource group.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder connectStatus(Integer connectStatus) {
                 this.connectStatus = connectStatus;
@@ -369,7 +391,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the data source.
+             * <p>The configuration of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;pubEndpoint&quot;:&quot;<a href="http://service.cn.maxcompute.aliyun.com/api%22,%22accessId%22:%22TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC%22,%22securityToken%22:null,%22endpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22accessKey%22:%22***%22,%22name%22:%22PRE_PROJECT_A_engine%22,%22project%22:%22PRE_PROJECT_A%22,%22vpcEndpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22region%22:%22cn-shanghai%22,%22authType%22:%222%22%7D">http://service.cn.maxcompute.aliyun.com/api&quot;,&quot;accessId&quot;:&quot;TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC&quot;,&quot;securityToken&quot;:null,&quot;endpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;accessKey&quot;:&quot;***&quot;,&quot;name&quot;:&quot;PRE_PROJECT_A_engine&quot;,&quot;project&quot;:&quot;PRE_PROJECT_A&quot;,&quot;vpcEndpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;region&quot;:&quot;cn-shanghai&quot;,&quot;authType&quot;:&quot;2&quot;}</a></p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -377,22 +402,25 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>odps</li>
+             * <li>mysql</li>
+             * <li>rds</li>
+             * <li>oss</li>
+             * <li>sqlserver</li>
+             * <li>polardb</li>
+             * <li>oracle</li>
+             * <li>mongodb</li>
+             * <li>emr</li>
+             * <li>postgresql</li>
+             * <li>analyticdb_for_mysql</li>
+             * <li>hybriddb_for_postgresql</li>
+             * <li>holo</li>
+             * </ul>
              * 
-             * *   odps
-             * *   mysql
-             * *   rds
-             * *   oss
-             * *   sqlserver
-             * *   polardb
-             * *   oracle
-             * *   mongodb
-             * *   emr
-             * *   postgresql
-             * *   analyticdb_for_mysql
-             * *   hybriddb_for_postgresql
-             * *   holo
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -400,11 +428,14 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the compute engine that is added as the data source is the default compute engine. Valid values:
-             * <p>
+             * <p>Indicates whether the compute engine that is added as the data source is the default compute engine. Valid values:</p>
+             * <ul>
+             * <li>true: The compute engine is the default compute engine.</li>
+             * <li>false: The compute engine is not the default compute engine.</li>
+             * </ul>
              * 
-             * *   true: The compute engine is the default compute engine.
-             * *   false: The compute engine is not the default compute engine.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultEngine(Boolean defaultEngine) {
                 this.defaultEngine = defaultEngine;
@@ -412,7 +443,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the data source.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a connection</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -420,11 +454,14 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The environment in which the data source resides. Valid values:
-             * <p>
+             * <p>The environment in which the data source resides. Valid values:</p>
+             * <ul>
+             * <li>0: development environment</li>
+             * <li>1: production environment</li>
+             * </ul>
              * 
-             * *   0: development environment
-             * *   1: production environment
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -432,7 +469,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
+             * <p>The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mar 17, 2021 4:09:32 PM</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -440,7 +480,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
+             * <p>The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mar 17, 2021 4:09:32 PM</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -448,7 +491,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The data source ID.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -456,7 +502,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -464,7 +513,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who exported the data source.
+             * <p>The ID of the user who exported the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>193543050****</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -472,7 +524,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DataWorks workspace to which the data source belongs.
+             * <p>The ID of the DataWorks workspace to which the data source belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -480,7 +535,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the data source.
+             * <p>The sequence number of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -488,11 +546,14 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data source can be shared. Valid values:
-             * <p>
+             * <p>Indicates whether the data source can be shared. Valid values:</p>
+             * <ul>
+             * <li>true: The data source can be shared.</li>
+             * <li>false: The data source cannot be shared.</li>
+             * </ul>
              * 
-             * *   true: The data source can be shared.
-             * *   false: The data source cannot be shared.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder shared(Boolean shared) {
                 this.shared = shared;
@@ -500,11 +561,14 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data source is available. Valid values:
-             * <p>
+             * <p>Indicates whether the data source is available. Valid values:</p>
+             * <ul>
+             * <li>1: The data source is available.</li>
+             * <li>0: The data source is unavailable.</li>
+             * </ul>
              * 
-             * *   1: The data source is available.
-             * *   0: The data source is unavailable.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -512,10 +576,11 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.
-             * <p>
+             * <p>The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.</p>
+             * <p>If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.</p>
              * 
-             * If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -523,7 +588,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the data source belongs.
+             * <p>The ID of the Alibaba Cloud account to which the data source belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -537,6 +605,12 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ExportDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExportDataSourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSources")
         private java.util.List < DataSources> dataSources;
@@ -600,7 +674,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The details of the exported data sources. The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.
+             * <p>The details of the exported data sources. The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.</p>
              */
             public Builder dataSources(java.util.List < DataSources> dataSources) {
                 this.dataSources = dataSources;
@@ -608,7 +682,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number. Pages start from page 1.
+             * <p>The page number. Pages start from page 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -616,7 +693,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -624,7 +704,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

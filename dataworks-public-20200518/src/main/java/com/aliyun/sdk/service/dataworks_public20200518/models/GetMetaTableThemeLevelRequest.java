@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableThemeLevelRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableThemeLevelRequest</p>
@@ -83,7 +84,7 @@ public class GetMetaTableThemeLevelRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class GetMetaTableThemeLevelRequest extends Request {
         }
 
         /**
-         * The type of the data source. Set the value to odps.
+         * <p>The type of the data source. Set the value to odps.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -101,7 +106,11 @@ public class GetMetaTableThemeLevelRequest extends Request {
         }
 
         /**
-         * The GUID of the metatable. Specify the GUID in the format of odps.${projectName}.${tableName}.
+         * <p>The GUID of the metatable. Specify the GUID in the format of odps.${projectName}.${tableName}.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.project1.name1</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

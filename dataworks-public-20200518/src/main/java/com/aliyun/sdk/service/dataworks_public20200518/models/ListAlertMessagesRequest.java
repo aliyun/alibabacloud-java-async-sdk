@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlertMessagesRequest} extends {@link RequestModel}
  *
  * <p>ListAlertMessagesRequest</p>
@@ -183,7 +184,7 @@ public class ListAlertMessagesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -192,13 +193,15 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The notification method. Valid values:
-         * <p>
+         * <p>The notification method. Valid values:</p>
+         * <ul>
+         * <li>MAIL</li>
+         * <li>SMS Alert notifications can be sent by text message only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.</li>
+         * </ul>
+         * <p>You can specify multiple notification methods. Separate them with commas (,).</p>
          * 
-         * *   MAIL
-         * *   SMS Alert notifications can be sent by text message only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.
-         * 
-         * You can specify multiple notification methods. Separate them with commas (,).
+         * <strong>example:</strong>
+         * <p>SMS,MAIL,PHONE</p>
          */
         public Builder alertMethods(String alertMethods) {
             this.putBodyParameter("AlertMethods", alertMethods);
@@ -207,7 +210,10 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The type of the alert rule. Valid values: GLOBAL, USER_DEFINE, and OTHER. The value GLOBAL indicates that the alert rule is a global alert rule. The value USER_DEFINE indicates that the alert rule is customized by a user. The value OTHER indicates that the alert rule is a rule of another type. You can specify multiple types. Separate them with commas (,).
+         * <p>The type of the alert rule. Valid values: GLOBAL, USER_DEFINE, and OTHER. The value GLOBAL indicates that the alert rule is a global alert rule. The value USER_DEFINE indicates that the alert rule is customized by a user. The value OTHER indicates that the alert rule is a rule of another type. You can specify multiple types. Separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL,USER_DEFINE,OTHER</p>
          */
         public Builder alertRuleTypes(String alertRuleTypes) {
             this.putBodyParameter("AlertRuleTypes", alertRuleTypes);
@@ -216,7 +222,10 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the alert recipient.
+         * <p>The ID of the Alibaba Cloud account used by the alert recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder alertUser(String alertUser) {
             this.putBodyParameter("AlertUser", alertUser);
@@ -225,7 +234,10 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The baseline ID. This parameter takes effect if the AlertRuleTypes parameter is set to GLOBAL. You can configure either this parameter or the RemindId parameter.
+         * <p>The baseline ID. This parameter takes effect if the AlertRuleTypes parameter is set to GLOBAL. You can configure either this parameter or the RemindId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -234,7 +246,11 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-02T00:00:00+0800</p>
          */
         public Builder beginTime(String beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -243,7 +259,11 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-04T00:00:00+0800</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -252,7 +272,11 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1. Minimum value: 1. Maximum value: 30.
+         * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -261,7 +285,11 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -270,7 +298,10 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The custom alert rule ID. This parameter takes effect if the AlertRuleTypes parameter is set to USER_DEFINE. You can configure either this parameter or the BaselineId parameter.
+         * <p>The custom alert rule ID. This parameter takes effect if the AlertRuleTypes parameter is set to USER_DEFINE. You can configure either this parameter or the BaselineId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
          */
         public Builder remindId(Long remindId) {
             this.putBodyParameter("RemindId", remindId);

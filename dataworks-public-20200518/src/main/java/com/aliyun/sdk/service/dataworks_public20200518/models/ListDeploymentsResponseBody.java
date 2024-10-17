@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeploymentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeploymentsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeploymentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeploymentsResponseBody</p>
+     */
     public static class Deployments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -181,7 +191,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The time when the deployment package was created.
+             * <p>The time when the deployment package was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593877765000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -189,7 +202,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who created the deployment package.
+             * <p>The ID of the Alibaba Cloud account used by the user who created the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2003****</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -197,7 +213,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned when the deployment package failed.
+             * <p>The error message returned when the deployment package failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -205,7 +224,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the deployment package was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the deployment package was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593877765000</p>
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -213,7 +235,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who ran the deployment package.
+             * <p>The ID of the Alibaba Cloud account used by the user who ran the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2003****</p>
              */
             public Builder executor(String executor) {
                 this.executor = executor;
@@ -221,7 +246,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment package ID. You can call the [GetDeployment](~~173950~~) operation to obtain the ID.
+             * <p>The deployment package ID. You can call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to obtain the ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -229,7 +257,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the deployment package.
+             * <p>The name of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto_created</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,13 +268,16 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the deployment package. Valid values:
-             * <p>
+             * <p>The status of the deployment package. Valid values:</p>
+             * <ul>
+             * <li>0: The deployment package is ready.</li>
+             * <li>1: The deployment package is deployed.</li>
+             * <li>2: The deployment package fails to be deployed.</li>
+             * <li>6: The deployment package is rejected.</li>
+             * </ul>
              * 
-             * *   0: The deployment package is ready.
-             * *   1: The deployment package is deployed.
-             * *   2: The deployment package fails to be deployed.
-             * *   6: The deployment package is rejected.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -257,6 +291,12 @@ public class ListDeploymentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeploymentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeploymentsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Deployments")
         private java.util.List < Deployments> deployments;
@@ -320,7 +360,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The deployment packages.
+             * <p>The deployment packages.</p>
              */
             public Builder deployments(java.util.List < Deployments> deployments) {
                 this.deployments = deployments;
@@ -328,7 +368,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -336,7 +379,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -344,7 +390,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

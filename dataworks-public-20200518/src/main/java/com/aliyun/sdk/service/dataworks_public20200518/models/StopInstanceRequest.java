@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstanceRequest} extends {@link RequestModel}
  *
  * <p>StopInstanceRequest</p>
@@ -83,7 +84,7 @@ public class StopInstanceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [ListInstances](~~173982~~) operation to obtain the ID.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/173982.html">ListInstances</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -101,7 +106,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV.
+         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

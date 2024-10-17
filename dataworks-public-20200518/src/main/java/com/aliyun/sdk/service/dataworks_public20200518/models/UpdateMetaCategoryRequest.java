@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMetaCategoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateMetaCategoryRequest</p>
@@ -96,7 +97,7 @@ public class UpdateMetaCategoryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +106,11 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
-         * The ID of the category.
+         * <p>The ID of the category.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -114,7 +119,10 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
-         * The remarks of the category.
+         * <p>The remarks of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category name</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -123,7 +131,10 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
-         * The name of the category.
+         * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

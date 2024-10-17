@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTableLevelResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteTableLevelResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteTableLevelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the table level was deleted.
+         * <p>Indicates whether the table level was deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteResult(Boolean deleteResult) {
             this.deleteResult = deleteResult;
@@ -57,7 +61,10 @@ public class DeleteTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

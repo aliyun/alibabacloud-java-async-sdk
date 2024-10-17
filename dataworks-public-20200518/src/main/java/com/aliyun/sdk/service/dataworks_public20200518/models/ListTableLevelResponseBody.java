@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTableLevelResponseBody} extends {@link TeaModel}
  *
  * <p>ListTableLevelResponseBody</p>
@@ -97,7 +98,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         private TableLevelInfo tableLevelInfo; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +153,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the table levels.
+         * <p>The information about the table levels.</p>
          */
         public Builder tableLevelInfo(TableLevelInfo tableLevelInfo) {
             this.tableLevelInfo = tableLevelInfo;
@@ -150,6 +166,12 @@ public class ListTableLevelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTableLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTableLevelResponseBody</p>
+     */
     public static class LevelList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -225,7 +247,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The description of the table level.
+             * <p>The description of the table level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,7 +258,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The table level ID.
+             * <p>The table level ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder levelId(Long levelId) {
                 this.levelId = levelId;
@@ -241,7 +269,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
+             * <p>The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelType(Integer levelType) {
                 this.levelType = levelType;
@@ -249,7 +280,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table level.
+             * <p>The name of the table level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +291,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DataWorks workspace.
+             * <p>The ID of the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -271,6 +308,12 @@ public class ListTableLevelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTableLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTableLevelResponseBody</p>
+     */
     public static class TableLevelInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LevelList")
         private java.util.List < LevelList> levelList;
@@ -310,7 +353,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The list of table levels.
+             * <p>The list of table levels.</p>
              */
             public Builder levelList(java.util.List < LevelList> levelList) {
                 this.levelList = levelList;
@@ -318,7 +361,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of table levels returned.
+             * <p>The total number of table levels returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

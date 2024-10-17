@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQualityEntityRequest} extends {@link RequestModel}
  *
  * <p>DeleteQualityEntityRequest</p>
@@ -112,7 +113,7 @@ public class DeleteQualityEntityRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +122,11 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * The ID of the partition filter expression.
+         * <p>The ID of the partition filter expression.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -130,17 +135,20 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * The type of the compute engine or data source. The following types are supported: E-MapReduce (EMR), Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka, and DataHub.
-         * <p>
+         * <p>The type of the compute engine or data source. The following types are supported: E-MapReduce (EMR), Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka, and DataHub.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>odps</li>
+         * <li>emr</li>
+         * <li>hadoop</li>
+         * <li>cdh</li>
+         * <li>hybriddb_for_postgresql</li>
+         * <li>holodb</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   odps
-         * *   emr
-         * *   hadoop
-         * *   cdh
-         * *   hybriddb_for_postgresql
-         * *   holodb
+         * <strong>example:</strong>
+         * <p>ODPS</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -149,7 +157,10 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -158,7 +169,11 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * The name of the compute engine or data source.
+         * <p>The name of the compute engine or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

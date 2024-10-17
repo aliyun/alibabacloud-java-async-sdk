@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgQuerySensResultResponseBody} extends {@link TeaModel}
  *
  * <p>DsgQuerySensResultResponseBody</p>
@@ -121,7 +122,10 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -129,7 +133,10 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error code. The value is the same as that of ErrorCode.
+         * <p>The error code. The value is the same as that of ErrorCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder dynamicErrorCode(String dynamicErrorCode) {
             this.dynamicErrorCode = dynamicErrorCode;
@@ -137,7 +144,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error message. The value is the same as that of ErrorMessage.
+         * <p>The error message. The value is the same as that of ErrorMessage.</p>
          */
         public Builder dynamicErrorMessage(String dynamicErrorMessage) {
             this.dynamicErrorMessage = dynamicErrorMessage;
@@ -145,7 +152,10 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -153,7 +163,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -161,7 +171,10 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -169,7 +182,10 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900000001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,11 +193,14 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

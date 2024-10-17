@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectRolesResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectRolesResponseBody</p>
@@ -49,7 +50,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The roles in the DataWorks workspace.
+         * <p>The roles in the DataWorks workspace.</p>
          */
         public Builder projectRoleList(java.util.List < ProjectRoleList> projectRoleList) {
             this.projectRoleList = projectRoleList;
@@ -57,7 +58,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectRolesResponseBody</p>
+     */
     public static class ProjectRoleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProjectRoleCode")
         private String projectRoleCode;
@@ -133,7 +143,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             private String projectRoleType; 
 
             /**
-             * The code of the role in the DataWorks workspace.
+             * <p>The code of the role in the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_project_guest</p>
              */
             public Builder projectRoleCode(String projectRoleCode) {
                 this.projectRoleCode = projectRoleCode;
@@ -141,7 +154,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the role in the DataWorks workspace.
+             * <p>The ID of the role in the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder projectRoleId(Integer projectRoleId) {
                 this.projectRoleId = projectRoleId;
@@ -149,7 +165,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the role in the DataWorks workspace.
+             * <p>The name of the role in the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>visitor</p>
              */
             public Builder projectRoleName(String projectRoleName) {
                 this.projectRoleName = projectRoleName;
@@ -157,7 +176,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the role in the DataWorks workspace.
+             * <p>The type of the role in the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder projectRoleType(String projectRoleType) {
                 this.projectRoleType = projectRoleType;

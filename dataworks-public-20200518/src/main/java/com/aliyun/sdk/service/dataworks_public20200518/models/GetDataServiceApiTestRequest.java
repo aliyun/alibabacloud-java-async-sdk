@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServiceApiTestRequest} extends {@link RequestModel}
  *
  * <p>GetDataServiceApiTestRequest</p>
@@ -68,7 +69,7 @@ public class GetDataServiceApiTestRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,10 @@ public class GetDataServiceApiTestRequest extends Request {
         }
 
         /**
-         * TestId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123434</p>
          */
         public Builder testId(Long testId) {
             this.putQueryParameter("TestId", testId);

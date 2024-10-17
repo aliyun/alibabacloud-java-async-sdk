@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDagsRequest} extends {@link RequestModel}
  *
  * <p>ListDagsRequest</p>
@@ -83,7 +84,7 @@ public class ListDagsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class ListDagsRequest extends Request {
         }
 
         /**
-         * The sequence number that uniquely identifies the data backfill operation. You can call the [GetDag](~~189753~~) operation to query the sequence number.
+         * <p>The sequence number that uniquely identifies the data backfill operation. You can call the <a href="https://help.aliyun.com/document_detail/189753.html">GetDag</a> operation to query the sequence number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder opSeq(Long opSeq) {
             this.putBodyParameter("OpSeq", opSeq);
@@ -101,7 +106,11 @@ public class ListDagsRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
+         * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

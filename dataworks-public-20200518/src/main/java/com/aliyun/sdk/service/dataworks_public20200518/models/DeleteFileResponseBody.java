@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteFileResponseBody</p>
@@ -97,7 +98,10 @@ public class DeleteFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
+         * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000001</p>
          */
         public Builder deploymentId(Long deploymentId) {
             this.deploymentId = deploymentId;
@@ -113,11 +117,14 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -125,10 +132,11 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the deployment task that deploys the file. If the file has been committed, an asynchronous process is triggered to delete the file in the scheduling system. The value of this parameter is used to call the GetDeployment operation to poll the status of the asynchronous process.
-         * <p>
+         * <p>The ID of the deployment task that deploys the file. If the file has been committed, an asynchronous process is triggered to delete the file in the scheduling system. The value of this parameter is used to call the GetDeployment operation to poll the status of the asynchronous process.</p>
+         * <p>If this parameter is empty, the file is deleted and the polling is not required.</p>
          * 
-         * If this parameter is empty, the file is deleted and the polling is not required.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -136,7 +144,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +155,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDataSourceShareRequest} extends {@link RequestModel}
  *
  * <p>SetDataSourceShareRequest</p>
@@ -125,7 +126,7 @@ public class SetDataSourceShareRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -134,7 +135,11 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The name of the data source that you want to share.
+         * <p>The name of the data source that you want to share.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_name</p>
          */
         public Builder datasourceName(String datasourceName) {
             this.putQueryParameter("DatasourceName", datasourceName);
@@ -143,11 +148,14 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The environment in which the data source is used. Valid values:
-         * <p>
+         * <p>The environment in which the data source is used. Valid values:</p>
+         * <ul>
+         * <li>0: development environment</li>
+         * <li>1: production environment</li>
+         * </ul>
          * 
-         * *   0: development environment
-         * *   1: production environment
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -156,7 +164,11 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID.
+         * <p>The ID of the DataWorks workspace to which the data source belongs. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -165,12 +177,15 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace to which you want to share the data source. If you configure this parameter, all members of the specified DataWorks workspace can view and use the data source. The value of this parameter is a JSON array. Example: \[{"projectId":1000,"permission":"WRITE","sharedName":"PX_DATAHUB1.shared_name"}], Parameter description:
-         * <p>
+         * <p>The DataWorks workspace to which you want to share the data source. If you configure this parameter, all members of the specified DataWorks workspace can view and use the data source. The value of this parameter is a JSON array. Example: [{&quot;projectId&quot;:1000,&quot;permission&quot;:&quot;WRITE&quot;,&quot;sharedName&quot;:&quot;PX_DATAHUB1.shared_name&quot;}], Parameter description:</p>
+         * <ul>
+         * <li>projectId: the ID of the DataWorks workspace to which you want to share the data source.</li>
+         * <li>permission: the mode in which the data source is shared. Valid values: READ and WRITE. The value READ indicates that all members of the specified workspace can read data from the data source, but cannot modify the data. The value WRITE indicates that all members of the specified workspace can modify the data in the data source.</li>
+         * <li>sharedName: the name of the data source that you want to share.</li>
+         * </ul>
          * 
-         * *   projectId: the ID of the DataWorks workspace to which you want to share the data source.
-         * *   permission: the mode in which the data source is shared. Valid values: READ and WRITE. The value READ indicates that all members of the specified workspace can read data from the data source, but cannot modify the data. The value WRITE indicates that all members of the specified workspace can modify the data in the data source.
-         * *   sharedName: the name of the data source that you want to share.
+         * <strong>example:</strong>
+         * <p>[{&quot;projectId&quot;:1000,&quot;permission&quot;:&quot;WRITE&quot;,&quot;sharedName&quot;:&quot;PX_DATAHUB1.shared_name&quot;}]</p>
          */
         public Builder projectPermissions(String projectPermissions) {
             this.putQueryParameter("ProjectPermissions", projectPermissions);
@@ -179,15 +194,17 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The user to whom you want to share the data source. If you configure this parameter, the specified user can view or use the data source. The value of this parameter is a JSON array. Example: \[{"projectId":10000,"users":\[{"userId":"276184575345452131","permission":"WRITE"}],"sharedName":"PX_DATAHUB1.shared_name"}], Parameter description:
-         * <p>
+         * <p>The user to whom you want to share the data source. If you configure this parameter, the specified user can view or use the data source. The value of this parameter is a JSON array. Example: [{&quot;projectId&quot;:10000,&quot;users&quot;:[{&quot;userId&quot;:&quot;276184575345452131&quot;,&quot;permission&quot;:&quot;WRITE&quot;}],&quot;sharedName&quot;:&quot;PX_DATAHUB1.shared_name&quot;}], Parameter description:</p>
+         * <ul>
+         * <li>projectId: the ID of the DataWorks workspace. If you configure the UserPermissions parameter, the specified user can view or use the data source only in the specified DataWorks workspace.</li>
+         * <li>userId: the ID of the user to whom you want to share the data source.</li>
+         * <li>permission: the mode in which the data source is shared. Valid values: READ and WRITE. The value READ indicates that the specified user can read data from the data source, but cannot modify the data. The value WRITE indicates that the specified user can modify the data in the data source.</li>
+         * <li>sharedName: the name of the data source that you want to share.</li>
+         * </ul>
+         * <p>If the ProjectPermissions and UserPermissions parameters are both left empty, the specified data source is not shared to any DataWorks workspace or user. If neither of the parameters is left empty, both parameters take effect.</p>
          * 
-         * *   projectId: the ID of the DataWorks workspace. If you configure the UserPermissions parameter, the specified user can view or use the data source only in the specified DataWorks workspace.
-         * *   userId: the ID of the user to whom you want to share the data source.
-         * *   permission: the mode in which the data source is shared. Valid values: READ and WRITE. The value READ indicates that the specified user can read data from the data source, but cannot modify the data. The value WRITE indicates that the specified user can modify the data in the data source.
-         * *   sharedName: the name of the data source that you want to share.
-         * 
-         * If the ProjectPermissions and UserPermissions parameters are both left empty, the specified data source is not shared to any DataWorks workspace or user. If neither of the parameters is left empty, both parameters take effect.
+         * <strong>example:</strong>
+         * <p>[{&quot;projectId&quot;:10000,&quot;users&quot;:[{&quot;userId&quot;:&quot;276184575345452131&quot;,&quot;permission&quot;:&quot;WRITE&quot;}],&quot;sharedName&quot;:&quot;PX_DATAHUB1.shared_name&quot;}]</p>
          */
         public Builder userPermissions(String userPermissions) {
             this.putQueryParameter("UserPermissions", userPermissions);

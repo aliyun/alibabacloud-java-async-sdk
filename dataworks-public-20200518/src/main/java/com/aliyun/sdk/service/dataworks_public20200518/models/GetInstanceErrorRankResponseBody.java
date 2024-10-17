@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceErrorRankResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceErrorRankResponseBody</p>
@@ -49,7 +50,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ranking data of nodes on which errors occurred.
+         * <p>The ranking data of nodes on which errors occurred.</p>
          */
         public Builder instanceErrorRank(InstanceErrorRank instanceErrorRank) {
             this.instanceErrorRank = instanceErrorRank;
@@ -57,7 +58,10 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceErrorRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceErrorRankResponseBody</p>
+     */
     public static class ErrorRank extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -157,7 +167,10 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The number of errors that occurred on the node.
+             * <p>The number of errors that occurred on the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -165,7 +178,10 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -173,7 +189,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -181,7 +197,10 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the node owner.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952795279527</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -189,7 +208,10 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * <p>The type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder prgType(Integer prgType) {
                 this.prgType = prgType;
@@ -197,7 +219,10 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * The DataWorks workspace ID.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -211,6 +236,12 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceErrorRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceErrorRankResponseBody</p>
+     */
     public static class InstanceErrorRank extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorRank")
         private java.util.List < ErrorRank> errorRank;
@@ -250,7 +281,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The ranking data of nodes on which errors occurred within the last month.
+             * <p>The ranking data of nodes on which errors occurred within the last month.</p>
              */
             public Builder errorRank(java.util.List < ErrorRank> errorRank) {
                 this.errorRank = errorRank;
@@ -258,7 +289,10 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the rankings were updated.
+             * <p>The timestamp at which the rankings were updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600963200000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

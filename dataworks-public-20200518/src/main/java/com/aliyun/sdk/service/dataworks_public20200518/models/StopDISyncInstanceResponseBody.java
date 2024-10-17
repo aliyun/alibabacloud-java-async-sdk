@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopDISyncInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>StopDISyncInstanceResponseBody</p>
@@ -61,7 +62,7 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information returned for the synchronization task.
+         * <p>The information returned for the synchronization task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StopDISyncInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>StopDISyncInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -133,10 +146,11 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the synchronization task fails to be stopped.
-             * <p>
+             * <p>The reason why the synchronization task fails to be stopped.</p>
+             * <p>If the synchronization task is stopped, the value null is returned.</p>
              * 
-             * If the synchronization task is stopped, the value null is returned.
+             * <strong>example:</strong>
+             * <p>fileId:[100] is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -144,11 +158,14 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the synchronization task is stopped. Valid values:
-             * <p>
+             * <p>Indicates whether the synchronization task is stopped. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>fail</li>
+             * </ul>
              * 
-             * *   success
-             * *   fail
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

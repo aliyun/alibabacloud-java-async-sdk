@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TerminateDISyncInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>TerminateDISyncInstanceResponseBody</p>
@@ -61,7 +62,7 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TerminateDISyncInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>TerminateDISyncInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -133,7 +146,10 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the real-time synchronization task fails to be terminated. If the real-time synchronization task is undeployed, the value of this parameter is null.
+             * <p>The reason why the real-time synchronization task fails to be terminated. If the real-time synchronization task is undeployed, the value of this parameter is null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileId:[100] is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -141,11 +157,14 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the real-time synchronization task is undeployed. Valid values:
-             * <p>
+             * <p>Indicates whether the real-time synchronization task is undeployed. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>fail</li>
+             * </ul>
              * 
-             * *   success
-             * *   fail
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

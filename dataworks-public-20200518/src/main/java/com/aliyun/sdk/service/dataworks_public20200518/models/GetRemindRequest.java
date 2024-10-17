@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRemindRequest} extends {@link RequestModel}
  *
  * <p>GetRemindRequest</p>
@@ -68,7 +69,7 @@ public class GetRemindRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class GetRemindRequest extends Request {
         }
 
         /**
-         * The custom alert rule ID.
+         * <p>The custom alert rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder remindId(Long remindId) {
             this.putBodyParameter("RemindId", remindId);

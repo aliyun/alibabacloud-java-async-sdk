@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDagTestRequest} extends {@link RequestModel}
  *
  * <p>CreateDagTestRequest</p>
@@ -127,7 +128,10 @@ public class CreateDagTestRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +140,10 @@ public class CreateDagTestRequest extends Request {
         }
 
         /**
-         * Bizdate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-26 00:00:00</p>
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -145,7 +152,10 @@ public class CreateDagTestRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xm_create_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -154,7 +164,10 @@ public class CreateDagTestRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -172,7 +185,10 @@ public class CreateDagTestRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

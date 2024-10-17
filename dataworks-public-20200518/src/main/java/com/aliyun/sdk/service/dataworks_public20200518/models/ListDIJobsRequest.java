@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDIJobsRequest} extends {@link RequestModel}
  *
  * <p>ListDIJobsRequest</p>
@@ -138,7 +139,7 @@ public class ListDIJobsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -147,7 +148,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * The destination type. If you do not configure this parameter, no limits are imposed on the tasks.
+         * <p>The destination type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hologres</p>
          */
         public Builder destinationDataSourceType(String destinationDataSourceType) {
             this.putBodyParameter("DestinationDataSourceType", destinationDataSourceType);
@@ -156,7 +160,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * The name of the task. Fuzzy match is supported. If you do not configure this parameter, no limits are imposed on the tasks.
+         * <p>The name of the task. Fuzzy match is supported. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_to_holo_sync_8772</p>
          */
         public Builder jobName(String jobName) {
             this.putBodyParameter("JobName", jobName);
@@ -165,7 +172,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -174,7 +184,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -183,7 +196,11 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1967</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -192,7 +209,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * The source type. If you do not configure this parameter, no limits are imposed on the tasks.
+         * <p>The source type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder sourceDataSourceType(String sourceDataSourceType) {
             this.putBodyParameter("SourceDataSourceType", sourceDataSourceType);

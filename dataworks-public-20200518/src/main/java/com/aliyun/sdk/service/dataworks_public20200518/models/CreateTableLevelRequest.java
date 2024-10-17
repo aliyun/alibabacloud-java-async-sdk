@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTableLevelRequest} extends {@link RequestModel}
  *
  * <p>CreateTableLevelRequest</p>
@@ -112,7 +113,7 @@ public class CreateTableLevelRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +122,10 @@ public class CreateTableLevelRequest extends Request {
         }
 
         /**
-         * The description of the table level.
+         * <p>The description of the table level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The HTTP status code returned.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -130,7 +134,11 @@ public class CreateTableLevelRequest extends Request {
         }
 
         /**
-         * The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
+         * <p>The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -139,7 +147,11 @@ public class CreateTableLevelRequest extends Request {
         }
 
         /**
-         * The name of the table level.
+         * <p>The name of the table level.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the table level.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,7 +160,10 @@ public class CreateTableLevelRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

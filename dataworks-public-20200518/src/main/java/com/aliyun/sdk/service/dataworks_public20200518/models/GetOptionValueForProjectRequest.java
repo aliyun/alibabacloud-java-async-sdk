@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOptionValueForProjectRequest} extends {@link RequestModel}
  *
  * <p>GetOptionValueForProjectRequest</p>
@@ -90,7 +91,10 @@ public class GetOptionValueForProjectRequest extends Request {
         }
 
         /**
-         * The unique code of the extension.
+         * <p>The unique code of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce4*********086da5</p>
          */
         public Builder extensionCode(String extensionCode) {
             this.putBodyParameter("ExtensionCode", extensionCode);
@@ -99,7 +103,10 @@ public class GetOptionValueForProjectRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);

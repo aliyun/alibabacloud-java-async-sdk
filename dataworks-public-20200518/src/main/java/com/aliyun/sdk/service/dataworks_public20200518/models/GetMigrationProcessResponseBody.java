@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMigrationProcessResponseBody} extends {@link TeaModel}
  *
  * <p>GetMigrationProcessResponseBody</p>
@@ -97,7 +98,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The progress information of the migration task, including the names of all steps in and status of the migration task.
+         * <p>The progress information of the migration task, including the names of all steps in and status of the migration task.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110001123456</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test error msg</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SADFSDFSD-SDFSDF-XDXCVX-ESWW</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetMigrationProcessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMigrationProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMigrationProcessResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
@@ -189,7 +211,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * The name of the step in the migration task.
+             * <p>The name of the step in the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMPORE_PREPARE</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -197,13 +222,16 @@ public class GetMigrationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the step in the migration task. Valid values:
-             * <p>
+             * <p>The running status of the step in the migration task. Valid values:</p>
+             * <ul>
+             * <li>INIT</li>
+             * <li>RUNNING</li>
+             * <li>FAILURE</li>
+             * <li>SUCCESS</li>
+             * </ul>
              * 
-             * *   INIT
-             * *   RUNNING
-             * *   FAILURE
-             * *   SUCCESS
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

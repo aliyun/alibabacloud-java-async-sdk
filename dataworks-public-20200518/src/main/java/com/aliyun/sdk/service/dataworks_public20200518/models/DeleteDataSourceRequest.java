@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDataSourceRequest} extends {@link RequestModel}
  *
  * <p>DeleteDataSourceRequest</p>
@@ -68,7 +69,7 @@ public class DeleteDataSourceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class DeleteDataSourceRequest extends Request {
         }
 
         /**
-         * The data source ID. You can call the [ListDataSources](~~211431~~) operation to query the ID.
+         * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataSourceId(Long dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);

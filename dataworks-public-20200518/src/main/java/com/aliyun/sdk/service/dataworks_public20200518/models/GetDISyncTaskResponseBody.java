@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetDISyncTaskResponseBody</p>
@@ -61,7 +62,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
          * 
-         * *   True
-         * *   False
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
     public static class SolutionDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
@@ -241,7 +254,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The creator of the data synchronization solution.
+             * <p>The creator of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks_di</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -249,7 +265,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data synchronization solution.
+             * <p>The ID of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -257,7 +276,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data synchronization solution.
+             * <p>The name of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>holo_20211206161025</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -265,7 +287,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration details of the data synchronization solution.
+             * <p>The configuration details of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;holoDatasource&quot;:&quot;holo&quot;,&quot;offlineSyncConfig&quot;:{&quot;nodeNameRule&quot;:&quot;oneclick_holo_di_${db_table_name_src}<em>to</em>${db_table_name_dest}&quot;,&quot;resourceGroup&quot;:&quot;group_219193793999490&quot;},&quot;processRuleId&quot;:1007,&quot;readerConcurrent&quot;:10,&quot;realtimeSyncConfig&quot;:{&quot;content&quot;:{&quot;order&quot;:{&quot;hops&quot;:[{&quot;from&quot;:&quot;reader&quot;,&quot;to&quot;:&quot;writer&quot;}]},&quot;setting&quot;:{&quot;speed&quot;:{&quot;readerConcurrent&quot;:10}},&quot;steps&quot;:[{&quot;stepType&quot;:&quot;mysql&quot;,&quot;name&quot;:&quot;reader&quot;,&quot;category&quot;:&quot;reader&quot;,&quot;parameter&quot;:{&quot;connection&quot;:[{&quot;datasource&quot;:&quot;mm&quot;,&quot;datasourceType&quot;:&quot;mysql&quot;,&quot;table&quot;:[]}]}},{&quot;stepType&quot;:&quot;holo&quot;,&quot;name&quot;:&quot;writer&quot;,&quot;category&quot;:&quot;writer&quot;,&quot;parameter&quot;:{&quot;datasource&quot;:&quot;holo&quot;,&quot;writeMode&quot;:&quot;replay&quot;,&quot;datasourceSchema&quot;:&quot;public&quot;,&quot;tableMappingRule&quot;:{&quot;datasource&quot;:[{&quot;tableRule&quot;:[],&quot;srcDatasourceName&quot;:&quot;mm&quot;}]}}}]},&quot;extend&quot;:{&quot;mode&quot;:&quot;migration_holo&quot;,&quot;resourceGroup&quot;:&quot;group_219193793999490&quot;}},&quot;setting&quot;:{&quot;autoCreateWorkflow&quot;:true,&quot;userDefinedFileNameExpression&quot;:&quot;oneclick&quot;},&quot;srcType&quot;:&quot;mysql&quot;,&quot;tableMappingRuleFromRealtimeSyncConfig&quot;:{&quot;datasource&quot;:[{&quot;srcDatasourceName&quot;:&quot;mm&quot;,&quot;tableRule&quot;:[]}]}}</p>
              */
             public Builder processContent(String processContent) {
                 this.processContent = processContent;
@@ -273,7 +298,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The additional parameters of the data synchronization solution.
+             * <p>The additional parameters of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;processType&quot;:&quot;new&quot;,&quot;tableNum&quot;:300}</p>
              */
             public Builder processExtra(String processExtra) {
                 this.processExtra = processExtra;
@@ -281,7 +309,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the project to which the data synchronization solution belongs.
+             * <p>The ID of the project to which the data synchronization solution belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -289,7 +320,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source of the data synchronization solution.
+             * <p>The type of the source of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -297,7 +331,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the data synchronization solution.
+             * <p>The start time of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-07 14:40:51</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -305,19 +342,22 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data synchronization solution. Valid values:
-             * <p>
+             * <p>The status of the data synchronization solution. Valid values:</p>
+             * <ul>
+             * <li>0: successful</li>
+             * <li>1: not running</li>
+             * <li>2: running</li>
+             * <li>3: failed</li>
+             * <li>4: committed</li>
+             * <li>5: pending manual confirmation</li>
+             * <li>6: manually confirmed</li>
+             * <li>7: others</li>
+             * <li>8: waiting</li>
+             * <li>9: deleted</li>
+             * </ul>
              * 
-             * *   0: successful
-             * *   1: not running
-             * *   2: running
-             * *   3: failed
-             * *   4: committed
-             * *   5: pending manual confirmation
-             * *   6: manually confirmed
-             * *   7: others
-             * *   8: waiting
-             * *   9: deleted
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -325,7 +365,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data synchronization solution was committed.
+             * <p>The time when the data synchronization solution was committed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-07 14:40:51</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -333,7 +376,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data synchronization solution.
+             * <p>The type of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>holo</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -347,6 +393,12 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -410,9 +462,13 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * *   If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.
-             * <p>
-             * *   If the TaskType parameter is set to DI_SOLUTION, the value null is returned.
+             * <ul>
+             * <li>If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.</li>
+             * <li>If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;extend&quot;:{&quot;mode&quot;:&quot;wizard&quot;,&quot;resourceGroup&quot;:&quot;S_res_group_287114642182658_1560324290517&quot;},&quot;nodeDef&quot;:{},&quot;order&quot;:{&quot;hops&quot;:[{&quot;from&quot;:&quot;datahub_8htXSsfiS2vtZCVG&quot;,&quot;to&quot;:&quot;datahub_CRHBAyGfhSaLmv2f&quot;}]},&quot;setting&quot;:{&quot;errorLimit&quot;:{},&quot;jvmOption&quot;:&quot;&quot;},&quot;steps&quot;:[{&quot;stepType&quot;:&quot;datahub&quot;,&quot;category&quot;:&quot;writer&quot;,&quot;displayName&quot;:&quot;DataHub1&quot;,&quot;parameter&quot;:{&quot;batchSize&quot;:1000,&quot;datasource&quot;:&quot;datahub_cloud_dev_test&quot;,&quot;topic&quot;:&quot;dwd_tfc_opt_speed_rid_amap_rt&quot;},&quot;name&quot;:&quot;datahub_CRHBAyGfhSaLmv2f&quot;,&quot;gui&quot;:{&quot;x&quot;:262,&quot;y&quot;:325}},{&quot;stepType&quot;:&quot;datahub&quot;,&quot;displayName&quot;:&quot;DataHub2&quot;,&quot;parameter&quot;:{&quot;datasource&quot;:&quot;datahub_uric_test&quot;,&quot;topic&quot;:&quot;dwd_tfc_opt_speed_rid_amap_rt_330000&quot;,&quot;batchSize&quot;:1000},&quot;name&quot;:&quot;datahub_8htXSsfiS2vtZCVG&quot;,&quot;gui&quot;:{&quot;x&quot;:268,&quot;y&quot;:160.5},&quot;category&quot;:&quot;writer&quot;}]}</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -420,10 +476,11 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the failure to obtain the details of the real-time synchronization task or data synchronization solution.
-             * <p>
+             * <p>The cause of the failure to obtain the details of the real-time synchronization task or data synchronization solution.</p>
+             * <p>If the details of the real-time synchronization task or data synchronization solution are obtained, the value null is returned.</p>
              * 
-             * If the details of the real-time synchronization task or data synchronization solution are obtained, the value null is returned.
+             * <strong>example:</strong>
+             * <p>fileId:[100] is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -431,9 +488,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * *   If the TaskType parameter is set to DI_REALTIME, the value null is returned.
-             * <p>
-             * *   If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution are returned.
+             * <ul>
+             * <li>If the TaskType parameter is set to DI_REALTIME, the value null is returned.</li>
+             * <li>If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution are returned.</li>
+             * </ul>
              */
             public Builder solutionDetail(SolutionDetail solutionDetail) {
                 this.solutionDetail = solutionDetail;
@@ -441,10 +499,11 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the details of the real-time synchronization task or data synchronization solution are obtained. Valid values:
-             * <p>
+             * <p>Indicates whether the details of the real-time synchronization task or data synchronization solution are obtained. Valid values:</p>
+             * <p>success: The details are obtained. fail: The details fail to be obtained.</p>
              * 
-             * success: The details are obtained. fail: The details fail to be obtained.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

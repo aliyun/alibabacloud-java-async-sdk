@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySensClassificationResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySensClassificationResponseBody</p>
@@ -97,7 +98,10 @@ public class QuerySensClassificationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned data about data categories. The data is in the JSON format.
+         * <p>The returned data about data categories. The data is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{         &quot;nodeName&quot;: &quot;teset1&quot;,         &quot;sensitiveNotNull&quot;: true,         &quot;nodeId&quot;: &quot;1aac2e35-b437-486b-95c7-a5ae48371024&quot;,         &quot;nodeOldId&quot;: &quot;1aac2e35-b437-486b-95c7-a5ae48371024&quot;,         &quot;parentId&quot;: &quot;0&quot;     }]</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -105,7 +109,10 @@ public class QuerySensClassificationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9990030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +120,7 @@ public class QuerySensClassificationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class QuerySensClassificationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class QuerySensClassificationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class QuerySensClassificationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

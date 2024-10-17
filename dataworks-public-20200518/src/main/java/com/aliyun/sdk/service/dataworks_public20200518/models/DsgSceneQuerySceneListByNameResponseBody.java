@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgSceneQuerySceneListByNameResponseBody} extends {@link TeaModel}
  *
  * <p>DsgSceneQuerySceneListByNameResponseBody</p>
@@ -97,7 +98,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1029030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DsgSceneQuerySceneListByNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgSceneQuerySceneListByNameResponseBody</p>
+     */
     public static class Projects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -205,7 +227,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             private String projectName; 
 
             /**
-             * The ID of the EMR cluster. This parameter is returned only when the data scope that takes effect in the data masking scenario is an EMR compute engine.
+             * <p>The ID of the EMR cluster. This parameter is returned only when the data scope that takes effect in the data masking scenario is an EMR compute engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-1234</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -213,12 +238,15 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the compute engine. Valid values:
-             * <p>
+             * <p>The type of the compute engine. Valid values:</p>
+             * <ul>
+             * <li>ODPS: ODPS.ODPS</li>
+             * <li>HOLO: HOLO.POSTGRES</li>
+             * <li>EMR: EMR</li>
+             * </ul>
              * 
-             * *   ODPS: ODPS.ODPS
-             * *   HOLO: HOLO.POSTGRES
-             * *   EMR: EMR
+             * <strong>example:</strong>
+             * <p>ODPS.ODPS</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -226,7 +254,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute engine.
+             * <p>The name of the compute engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_project</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -240,6 +271,12 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DsgSceneQuerySceneListByNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DsgSceneQuerySceneListByNameResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Children")
         private java.util.List < ? > children;
@@ -351,7 +388,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             private String userGroups; 
 
             /**
-             * The information about multiple levels of data masking scenarios.
+             * <p>The information about multiple levels of data masking scenarios.</p>
              */
             public Builder children(java.util.List < ? > children) {
                 this.children = children;
@@ -359,7 +396,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the data masking scenario.
+             * <p>The description of the data masking scenario.</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -367,7 +404,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data masking scenario.
+             * <p>The ID of the data masking scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -375,7 +415,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the compute engine for which the data masking scenario takes effect.
+             * <p>The information about the compute engine for which the data masking scenario takes effect.</p>
              */
             public Builder projects(java.util.List < Projects> projects) {
                 this.projects = projects;
@@ -383,15 +423,18 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the level-1 data masking scenario. Valid values:
-             * <p>
+             * <p>The code of the level-1 data masking scenario. Valid values:</p>
+             * <ul>
+             * <li>dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map</li>
+             * <li>maxcompute_desense_code: data masking at the MaxCompute compute engine layer</li>
+             * <li>maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)</li>
+             * <li>hologres_display_desense_code: data masking at the Hologres compute engine layer</li>
+             * <li>dataworks_data_integration_desense_code: static data masking in Data Integration</li>
+             * <li>dataworks_analysis_desense_code: masking of displayed data in DataAnalysis</li>
+             * </ul>
              * 
-             * *   dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map
-             * *   maxcompute_desense_code: data masking at the MaxCompute compute engine layer
-             * *   maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)
-             * *   hologres_display_desense_code: data masking at the Hologres compute engine layer
-             * *   dataworks_data_integration_desense_code: static data masking in Data Integration
-             * *   dataworks_analysis_desense_code: masking of displayed data in DataAnalysis
+             * <strong>example:</strong>
+             * <p>dataworks_display_desense_code</p>
              */
             public Builder sceneCode(String sceneCode) {
                 this.sceneCode = sceneCode;
@@ -399,11 +442,14 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the data masking scenario. Valid values:
-             * <p>
+             * <p>The level of the data masking scenario. Valid values:</p>
+             * <ul>
+             * <li>0: level-1 data masking scenario</li>
+             * <li>1: level-2 data masking scenario</li>
+             * </ul>
              * 
-             * *   0: level-1 data masking scenario
-             * *   1: level-2 data masking scenario
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sceneLevel(Integer sceneLevel) {
                 this.sceneLevel = sceneLevel;
@@ -411,7 +457,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data masking scenario.
+             * <p>The name of the data masking scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_scene</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -419,7 +468,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The list of user groups in the data masking scenario. Separate user groups with commas (,).
+             * <p>The list of user groups in the data masking scenario. Separate user groups with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1,user2</p>
              */
             public Builder userGroups(String userGroups) {
                 this.userGroups = userGroups;

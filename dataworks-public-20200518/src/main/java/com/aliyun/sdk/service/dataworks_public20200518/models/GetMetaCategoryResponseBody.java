@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaCategoryResponseBody</p>
@@ -97,7 +98,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetMetaCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaCategoryResponseBody</p>
+     */
     public static class DataEntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
@@ -273,7 +295,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             private Long parentCategoryId; 
 
             /**
-             * The category ID.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>133</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -281,7 +306,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the category.
+             * <p>The remarks of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category 1</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -289,7 +317,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the category was created.
+             * <p>The time when the category was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1541576644000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -297,7 +328,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of category levels.
+             * <p>The number of category levels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -305,7 +339,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user that performed the last operation.
+             * <p>The ID of the user that performed the last operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder lastOperatorId(String lastOperatorId) {
                 this.lastOperatorId = lastOperatorId;
@@ -313,7 +350,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the category was last modified.
+             * <p>The time when the category was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1541576644000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -321,7 +361,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +372,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The category owner ID.
+             * <p>The category owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -337,7 +383,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The parent category ID.
+             * <p>The parent category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder parentCategoryId(Long parentCategoryId) {
                 this.parentCategoryId = parentCategoryId;
@@ -351,6 +400,12 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaCategoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataEntityList")
         private java.util.List < DataEntityList> dataEntityList;
@@ -414,7 +469,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The information about the category tree.
+             * <p>The information about the category tree.</p>
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -422,7 +477,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -430,7 +488,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -438,7 +499,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of categories returned.
+             * <p>The total number of categories returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

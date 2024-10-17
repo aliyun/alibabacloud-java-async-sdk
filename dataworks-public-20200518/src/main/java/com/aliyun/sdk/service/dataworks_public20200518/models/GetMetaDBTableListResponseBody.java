@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaDBTableListResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaDBTableListResponseBody</p>
@@ -49,7 +50,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The metatable information in a compute engine instance.
+         * <p>The metatable information in a compute engine instance.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaDBTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaDBTableListResponseBody</p>
+     */
     public static class TableEntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -121,7 +131,10 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the metadatabase.
+             * <p>The name of the metadatabase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -129,7 +142,10 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the metatable.
+             * <p>The GUID of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.engine_name.tname</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -137,7 +153,10 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metatable.
+             * <p>The name of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tname</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -151,6 +170,12 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaDBTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaDBTableListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -214,7 +239,10 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -222,7 +250,10 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -230,7 +261,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The list of metatables in the compute engine instance.
+             * <p>The list of metatables in the compute engine instance.</p>
              */
             public Builder tableEntityList(java.util.List < TableEntityList> tableEntityList) {
                 this.tableEntityList = tableEntityList;
@@ -238,7 +269,10 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of compute engine instances returned.
+             * <p>The total number of compute engine instances returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

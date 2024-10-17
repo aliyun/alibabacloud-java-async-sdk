@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServiceApiTestRequest} extends {@link RequestModel}
  *
  * <p>ListDataServiceApiTestRequest</p>
@@ -82,7 +83,7 @@ public class ListDataServiceApiTestRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +92,11 @@ public class ListDataServiceApiTestRequest extends Request {
         }
 
         /**
-         * The ID of the DataService Studio API on which tests are performed.
+         * <p>The ID of the DataService Studio API on which tests are performed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder apiId(Long apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -100,7 +105,10 @@ public class ListDataServiceApiTestRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
+         * <p>The number of entries to return on each page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

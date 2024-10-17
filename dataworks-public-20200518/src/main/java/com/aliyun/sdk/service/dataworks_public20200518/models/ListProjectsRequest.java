@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectsRequest} extends {@link RequestModel}
  *
  * <p>ListProjectsRequest</p>
@@ -111,7 +112,7 @@ public class ListProjectsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -120,7 +121,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: 1 to 100.
+         * <p>The page number. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -129,7 +133,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +145,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzbn7pti3zfa</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -147,7 +157,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The tags to add to the workspace.
+         * <p>The tags to add to the workspace.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -163,6 +173,12 @@ public class ListProjectsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectsRequest} extends {@link TeaModel}
+     *
+     * <p>ListProjectsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -202,7 +218,10 @@ public class ListProjectsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the workspace.
+             * <p>The key of tag N to add to the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +229,10 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the workspace.
+             * <p>The value of tag N to add to the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;

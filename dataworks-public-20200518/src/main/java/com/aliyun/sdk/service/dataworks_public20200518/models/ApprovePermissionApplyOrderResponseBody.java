@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApprovePermissionApplyOrderResponseBody} extends {@link TeaModel}
  *
  * <p>ApprovePermissionApplyOrderResponseBody</p>
@@ -49,7 +50,10 @@ public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the permission request order is processed.
+         * <p>Indicates whether the permission request order is processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder approveSuccess(Boolean approveSuccess) {
             this.approveSuccess = approveSuccess;
@@ -57,7 +61,10 @@ public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

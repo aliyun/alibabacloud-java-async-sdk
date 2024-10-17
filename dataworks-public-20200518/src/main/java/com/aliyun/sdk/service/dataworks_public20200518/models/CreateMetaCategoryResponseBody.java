@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMetaCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMetaCategoryResponseBody</p>
@@ -97,7 +98,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the category.
+         * <p>The information about the category.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMetaCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMetaCategoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
@@ -177,7 +199,10 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
             private Long categoryId; 
 
             /**
-             * The category ID.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;

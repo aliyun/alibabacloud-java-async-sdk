@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TopTenErrorTimesInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>TopTenErrorTimesInstanceResponseBody</p>
@@ -49,7 +50,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ranking data of nodes on which errors occurred.
+         * <p>The ranking data of nodes on which errors occurred.</p>
          */
         public Builder instanceErrorRank(InstanceErrorRank instanceErrorRank) {
             this.instanceErrorRank = instanceErrorRank;
@@ -57,7 +58,10 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TopTenErrorTimesInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>TopTenErrorTimesInstanceResponseBody</p>
+     */
     public static class ErrorRank extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -157,7 +167,10 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The number of errors that occurred on the node.
+             * <p>The number of errors that occurred on the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -165,7 +178,10 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -173,7 +189,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -181,7 +197,10 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the node owner.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952795279527</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -189,7 +208,10 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
+             * <p>The type of the node. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder programType(Integer programType) {
                 this.programType = programType;
@@ -197,7 +219,10 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The DataWorks workspace ID.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -211,6 +236,12 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TopTenErrorTimesInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>TopTenErrorTimesInstanceResponseBody</p>
+     */
     public static class InstanceErrorRank extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorRank")
         private java.util.List < ErrorRank> errorRank;
@@ -250,7 +281,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The ranking data of nodes on which errors occurred within the last month.
+             * <p>The ranking data of nodes on which errors occurred within the last month.</p>
              */
             public Builder errorRank(java.util.List < ErrorRank> errorRank) {
                 this.errorRank = errorRank;
@@ -258,7 +289,10 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the rankings were updated.
+             * <p>The timestamp at which the rankings were updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600963200000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

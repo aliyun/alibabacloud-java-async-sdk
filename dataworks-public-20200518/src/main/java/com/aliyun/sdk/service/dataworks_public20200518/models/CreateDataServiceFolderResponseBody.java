@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataServiceFolderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDataServiceFolderResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDataServiceFolderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the created folder.
+         * <p>The ID of the created folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder folderId(Long folderId) {
             this.folderId = folderId;
@@ -57,7 +61,10 @@ public class CreateDataServiceFolderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

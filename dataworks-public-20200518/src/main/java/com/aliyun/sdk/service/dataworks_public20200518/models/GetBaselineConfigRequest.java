@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBaselineConfigRequest} extends {@link RequestModel}
  *
  * <p>GetBaselineConfigRequest</p>
@@ -68,7 +69,7 @@ public class GetBaselineConfigRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class GetBaselineConfigRequest extends Request {
         }
 
         /**
-         * The baseline ID. You can call the [GetNode](~~173977~~) operation to query the baseline ID.
+         * <p>The baseline ID. You can call the <a href="https://help.aliyun.com/document_detail/173977.html">GetNode</a> operation to query the baseline ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);

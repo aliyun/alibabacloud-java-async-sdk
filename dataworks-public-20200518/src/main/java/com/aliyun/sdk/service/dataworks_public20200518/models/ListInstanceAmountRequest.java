@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceAmountRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceAmountRequest</p>
@@ -98,7 +99,7 @@ public class ListInstanceAmountRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class ListInstanceAmountRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13T00:00:00+0800</p>
          */
         public Builder beginDate(String beginDate) {
             this.putBodyParameter("BeginDate", beginDate);
@@ -116,7 +121,11 @@ public class ListInstanceAmountRequest extends Request {
         }
 
         /**
-         * The end of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
+         * <p>The end of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-16T00:00:00+0800</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -125,7 +134,11 @@ public class ListInstanceAmountRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the DataWorks console and go to the Work space page to obtain the workspace ID.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Work space page to obtain the workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

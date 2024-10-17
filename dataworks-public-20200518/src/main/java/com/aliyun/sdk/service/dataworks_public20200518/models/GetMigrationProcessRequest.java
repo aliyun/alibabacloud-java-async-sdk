@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMigrationProcessRequest} extends {@link RequestModel}
  *
  * <p>GetMigrationProcessRequest</p>
@@ -83,7 +84,7 @@ public class GetMigrationProcessRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class GetMigrationProcessRequest extends Request {
         }
 
         /**
-         * The migration package ID. You can call the CreateImportMigration operation to query the ID.
+         * <p>The migration package ID. You can call the CreateImportMigration operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder migrationId(Long migrationId) {
             this.putBodyParameter("MigrationId", migrationId);
@@ -101,7 +106,11 @@ public class GetMigrationProcessRequest extends Request {
         }
 
         /**
-         * The workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.
+         * <p>The workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServiceApiTestResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataServiceApiTestResponseBody</p>
@@ -49,7 +50,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of test records.
+         * <p>The list of test records.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ESDAFWEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataServiceApiTestResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceApiTestResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;
@@ -181,7 +191,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             private Long testId; 
 
             /**
-             * The ID of the DataService Studio API on which the test is performed.
+             * <p>The ID of the DataService Studio API on which the test is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2343</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -189,7 +202,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * The time that is consumed to complete the test.
+             * <p>The time that is consumed to complete the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder costTime(Integer costTime) {
                 this.costTime = costTime;
@@ -197,7 +213,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the test was initiated.
+             * <p>The time when the test was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1651824913000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -205,7 +224,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * The request parameters configured for the test.
+             * <p>The request parameters configured for the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;test&quot;}</p>
              */
             public Builder paramMap(String paramMap) {
                 this.paramMap = paramMap;
@@ -213,7 +235,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * The status code returned for the test. If the test is not complete, this parameter is not returned.
+             * <p>The status code returned for the test. If the test is not complete, this parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode(Long retCode) {
                 this.retCode = retCode;
@@ -221,7 +246,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * The result returned for the test.
+             * <p>The result returned for the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;id&quot;:2}</p>
              */
             public Builder retResult(String retResult) {
                 this.retResult = retResult;
@@ -229,7 +257,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the test. Valid values: RUNNING and FINISHED.
+             * <p>The status of the test. Valid values: RUNNING and FINISHED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -237,7 +268,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the test.
+             * <p>The ID of the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder testId(Long testId) {
                 this.testId = testId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunSmokeTestRequest} extends {@link RequestModel}
  *
  * <p>RunSmokeTestRequest</p>
@@ -127,7 +128,7 @@ public class RunSmokeTestRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +137,11 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * The data timestamp.
+         * <p>The data timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-26 00:00:00</p>
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -145,7 +150,11 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * The name of the workflow.
+         * <p>The name of the workflow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xm_create_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -154,7 +163,11 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * The node ID. You can call the [ListNodes](~~173979~~) operation to query the ID.
+         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -163,7 +176,10 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * The parameters related to the node. Set this parameter to a JSON string. A key in the string indicates a parameter, and a value in the string indicates the value of the related parameter.
+         * <p>The parameters related to the node. Set this parameter to a JSON string. A key in the string indicates a parameter, and a value in the string indicates the value of the related parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bizdate=$bizdate tbods=$tbods</p>
          */
         public Builder nodeParams(String nodeParams) {
             this.putBodyParameter("NodeParams", nodeParams);
@@ -172,7 +188,11 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment. A workspace in basic mode does not have a development environment. For more information, see [Differences between workspaces in basic mode and workspaces in standard mode](~~85772~~).
+         * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment. A workspace in basic mode does not have a development environment. For more information, see <a href="https://help.aliyun.com/document_detail/85772.html">Differences between workspaces in basic mode and workspaces in standard mode</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

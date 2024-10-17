@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectMemberRequest} extends {@link RequestModel}
  *
  * <p>CreateProjectMemberRequest</p>
@@ -111,7 +112,7 @@ public class CreateProjectMemberRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -120,7 +121,10 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.
+         * <p>The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -129,7 +133,11 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID.
+         * <p>The DataWorks workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -138,7 +146,10 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The code of the role. This parameter is optional. If you configure the RoleCode parameter, the user is assigned the role.
+         * <p>The code of the role. This parameter is optional. If you configure the RoleCode parameter, the user is assigned the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_project_guest</p>
          */
         public Builder roleCode(String roleCode) {
             this.putQueryParameter("RoleCode", roleCode);
@@ -147,7 +158,11 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The ID of the user to be added.
+         * <p>The ID of the user to be added.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

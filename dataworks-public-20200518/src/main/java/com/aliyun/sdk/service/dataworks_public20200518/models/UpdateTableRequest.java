@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableRequest} extends {@link RequestModel}
  *
  * <p>UpdateTableRequest</p>
@@ -338,7 +339,7 @@ public class UpdateTableRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -347,7 +348,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The unique identifier of the MaxCompute project. Specify the GUID in the odps.{projectName} format.
+         * <p>The unique identifier of the MaxCompute project. Specify the GUID in the odps.{projectName} format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.test</p>
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -356,7 +360,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The ID of the associated category.
+         * <p>The ID of the associated category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -365,7 +372,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The list of fields.
+         * <p>The list of fields.</p>
          */
         public Builder columns(java.util.List < Columns> columns) {
             this.putBodyParameter("Columns", columns);
@@ -374,7 +381,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The comment.
+         * <p>The comment.</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -383,13 +390,15 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * Specifies whether the table exists. Valid values:
-         * <p>
+         * <p>Specifies whether the table exists. Valid values:</p>
+         * <ul>
+         * <li>true: The table exists.</li>
+         * <li>false: The table does not exist.</li>
+         * </ul>
+         * <p>This parameter is deprecated. Do not use this parameter.</p>
          * 
-         * *   true: The table exists.
-         * *   false: The table does not exist.
-         * 
-         * This parameter is deprecated. Do not use this parameter.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder createIfNotExists(Boolean createIfNotExists) {
             this.putQueryParameter("CreateIfNotExists", createIfNotExists);
@@ -398,7 +407,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The endpoint of MaxCompute. If you do not specify this parameter, the endpoint of the MaxCompute project is used.
+         * <p>The endpoint of MaxCompute. If you do not specify this parameter, the endpoint of the MaxCompute project is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps://</p>
          */
         public Builder endpoint(String endpoint) {
             this.putBodyParameter("Endpoint", endpoint);
@@ -407,7 +419,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
+         * <p>The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(Integer envType) {
             this.putBodyParameter("EnvType", envType);
@@ -416,7 +431,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The type of the external table. Valid values: 0, 1, 2, and 3. The value 0 indicates that the external table is an OSS external table. The value 1 indicates that the external table is a Tablestore external table. The value 2 indicates that the external table is a volume external table. The value 3 indicates that the external table is a MySQL external table. This parameter is deprecated. Do not use this parameter.
+         * <p>The type of the external table. Valid values: 0, 1, 2, and 3. The value 0 indicates that the external table is an OSS external table. The value 1 indicates that the external table is a Tablestore external table. The value 2 indicates that the external table is a volume external table. The value 3 indicates that the external table is a MySQL external table. This parameter is deprecated. Do not use this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder externalTableType(String externalTableType) {
             this.putQueryParameter("ExternalTableType", externalTableType);
@@ -425,7 +443,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * Specifies whether the table that you want to update is a partitioned table. Valid values: 0 and 1. The value 0 indicates that the table is not a partitioned table. The value 1 indicates that the table is a partitioned table. This parameter is deprecated. Do not use this parameter. The Column.N.isPartitionCol parameter is used instead of the HasPart parameter to specify whether the MaxCompute table is a partitioned table. If the Column.N.isPartitionCol parameter is set to 1, the MaxCompute table is a partitioned table.
+         * <p>Specifies whether the table that you want to update is a partitioned table. Valid values: 0 and 1. The value 0 indicates that the table is not a partitioned table. The value 1 indicates that the table is a partitioned table. This parameter is deprecated. Do not use this parameter. The Column.N.isPartitionCol parameter is used instead of the HasPart parameter to specify whether the MaxCompute table is a partitioned table. If the Column.N.isPartitionCol parameter is set to 1, the MaxCompute table is a partitioned table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder hasPart(Integer hasPart) {
             this.putQueryParameter("HasPart", hasPart);
@@ -434,7 +455,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * Specifies whether the table is a view. Valid values: 0 and 1. The value 0 indicates that the table is not a view. The value 1 indicates that the table is a view. This parameter is deprecated. Do not use this parameter.
+         * <p>Specifies whether the table is a view. Valid values: 0 and 1. The value 0 indicates that the table is not a view. The value 1 indicates that the table is a view. This parameter is deprecated. Do not use this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isView(Integer isView) {
             this.putQueryParameter("IsView", isView);
@@ -443,7 +467,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The lifecycle of the table. Unit: days. If this parameter is left empty, the table is permanently stored.
+         * <p>The lifecycle of the table. Unit: days. If this parameter is left empty, the table is permanently stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder lifeCycle(Integer lifeCycle) {
             this.putQueryParameter("LifeCycle", lifeCycle);
@@ -452,7 +479,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The storage location of the external table. This parameter is deprecated. Do not use this parameter.
+         * <p>The storage location of the external table. This parameter is deprecated. Do not use this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>location</p>
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);
@@ -461,7 +491,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The ID of the logical level.
+         * <p>The ID of the logical level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder logicalLevelId(Long logicalLevelId) {
             this.putQueryParameter("LogicalLevelId", logicalLevelId);
@@ -479,7 +512,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The ID of the physical layer.
+         * <p>The ID of the physical layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder physicsLevelId(Long physicsLevelId) {
             this.putQueryParameter("PhysicsLevelId", physicsLevelId);
@@ -488,7 +524,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the DataWorks console to obtain the ID of the DataWorks workspace.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console to obtain the ID of the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -497,7 +536,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.
+         * <p>The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -506,7 +548,11 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute table.
+         * <p>The name of the MaxCompute table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -515,7 +561,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The list of fields.
+         * <p>The list of fields.</p>
          */
         public Builder themes(java.util.List < Themes> themes) {
             this.putBodyParameter("Themes", themes);
@@ -524,7 +570,10 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.
+         * <p>The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder visibility(Integer visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -539,6 +588,12 @@ public class UpdateTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTableRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTableRequest</p>
+     */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -640,7 +695,11 @@ public class UpdateTableRequest extends Request {
             private Integer seqNumber; 
 
             /**
-             * The name of the field.
+             * <p>The name of the field.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -648,7 +707,7 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The display name of the field.
+             * <p>The display name of the field.</p>
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -656,7 +715,11 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The type of the field. For more information, see MaxCompute field types.
+             * <p>The type of the field. For more information, see MaxCompute field types.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -664,7 +727,7 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The comment of the field.
+             * <p>The comment of the field.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -672,7 +735,10 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * Specifies whether the field is a partition field. Valid values: 0 and 1. The value 0 indicates that the field is not a partition field. The value 1 indicates that the field is a partition field.
+             * <p>Specifies whether the field is a partition field. Valid values: 0 and 1. The value 0 indicates that the field is not a partition field. The value 1 indicates that the field is a partition field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isPartitionCol(Boolean isPartitionCol) {
                 this.isPartitionCol = isPartitionCol;
@@ -680,7 +746,10 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The length of the field.
+             * <p>The length of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder length(Integer length) {
                 this.length = length;
@@ -688,7 +757,10 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The sequence number of the field. If the field is a partition field, this parameter is not supported.
+             * <p>The sequence number of the field. If the field is a partition field, this parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder seqNumber(Integer seqNumber) {
                 this.seqNumber = seqNumber;
@@ -702,6 +774,12 @@ public class UpdateTableRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTableRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTableRequest</p>
+     */
     public static class Themes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ThemeId")
         @com.aliyun.core.annotation.Validation(minimum = 1)
@@ -742,7 +820,10 @@ public class UpdateTableRequest extends Request {
             private Integer themeLevel; 
 
             /**
-             * The ID of the associated topic.
+             * <p>The ID of the associated topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder themeId(Long themeId) {
                 this.themeId = themeId;
@@ -750,7 +831,10 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The level that corresponds to the topic ID.
+             * <p>The level that corresponds to the topic ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder themeLevel(Integer themeLevel) {
                 this.themeLevel = themeLevel;

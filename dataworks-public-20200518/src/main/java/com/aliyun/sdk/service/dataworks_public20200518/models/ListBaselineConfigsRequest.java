@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBaselineConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListBaselineConfigsRequest</p>
@@ -168,7 +169,7 @@ public class ListBaselineConfigsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -177,7 +178,10 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple baseline types with commas (,).
+         * <p>The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple baseline types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY,HOURLY</p>
          */
         public Builder baselineTypes(String baselineTypes) {
             this.putBodyParameter("BaselineTypes", baselineTypes);
@@ -186,7 +190,10 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the baseline owner.
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -195,7 +202,11 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: 1 to 30. Default value: 1.
+         * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -204,7 +215,11 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -213,7 +228,10 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The priority of the baseline. Valid values: {1,3,5,7,8}. Separate multiple priorities with commas (,).
+         * <p>The priority of the baseline. Valid values: {1,3,5,7,8}. Separate multiple priorities with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,3,5,7,8</p>
          */
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
@@ -222,7 +240,11 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The workspace ID. You can call the ListProjects operation to query the ID.
+         * <p>The workspace ID. You can call the ListProjects operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -231,7 +253,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The keyword in the baseline name, which is used to search for the baseline.
+         * <p>The keyword in the baseline name, which is used to search for the baseline.</p>
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);
@@ -240,7 +262,10 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the baseline. Valid values: true and false.
+         * <p>Specifies whether to enable the baseline. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useflag(Boolean useflag) {
             this.putBodyParameter("Useflag", useflag);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDIAlarmRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateDIAlarmRuleRequest</p>
@@ -141,7 +142,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -150,7 +151,11 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * The ID of the task with which the alert rule is associated.
+         * <p>The ID of the task with which the alert rule is associated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11265</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -159,7 +164,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * The description of the alert rule.
+         * <p>The description of the alert rule.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -168,7 +173,10 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the alert rule. By default, the alert rule is disabled.
+         * <p>Specifies whether to enable the alert rule. By default, the alert rule is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -177,12 +185,16 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * The metric type in the alert rule. Valid values:
-         * <p>
+         * <p>The metric type in the alert rule. Valid values:</p>
+         * <ul>
+         * <li>Heartbeat</li>
+         * <li>FailoverCount</li>
+         * <li>Delay</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Heartbeat
-         * *   FailoverCount
-         * *   Delay
+         * <strong>example:</strong>
+         * <p>Heartbeat</p>
          */
         public Builder metricType(String metricType) {
             this.putBodyParameter("MetricType", metricType);
@@ -191,7 +203,8 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * The alert notification settings.
+         * <p>The alert notification settings.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder notificationSettings(NotificationSettings notificationSettings) {
             String notificationSettingsShrink = shrink(notificationSettings, "NotificationSettings", "json");
@@ -201,7 +214,8 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * The conditions that can trigger the alert rule.
+         * <p>The conditions that can trigger the alert rule.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder triggerConditions(java.util.List < TriggerConditions> triggerConditions) {
             String triggerConditionsShrink = shrink(triggerConditions, "TriggerConditions", "json");
@@ -217,6 +231,12 @@ public class CreateDIAlarmRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDIAlarmRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDIAlarmRuleRequest</p>
+     */
     public static class NotificationChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
         private java.util.List < String > channels;
@@ -256,7 +276,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             private String severity; 
 
             /**
-             * The alert notification methods.
+             * <p>The alert notification methods.</p>
              */
             public Builder channels(java.util.List < String > channels) {
                 this.channels = channels;
@@ -264,13 +284,15 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * The severity level.
-             * <p>
+             * <p>The severity level.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Warning</li>
+             * <li>Critical</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Warning
-             * *   Critical
+             * <strong>example:</strong>
+             * <p>Warning</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -284,6 +306,12 @@ public class CreateDIAlarmRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDIAlarmRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDIAlarmRuleRequest</p>
+     */
     public static class NotificationReceivers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReceiverType")
         private String receiverType;
@@ -323,11 +351,14 @@ public class CreateDIAlarmRuleRequest extends Request {
             private java.util.List < String > receiverValues; 
 
             /**
-             * The recipient type.
-             * <p>
+             * <p>The recipient type.</p>
+             * <ul>
+             * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</li>
+             * <li>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</li>
+             * </ul>
              * 
-             * *   If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.
-             * *   If the alert notification method is Ding, the recipient type is DingTalk chatbot token.
+             * <strong>example:</strong>
+             * <p>DingToken</p>
              */
             public Builder receiverType(String receiverType) {
                 this.receiverType = receiverType;
@@ -335,7 +366,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * The recipients.
+             * <p>The recipients.</p>
              */
             public Builder receiverValues(java.util.List < String > receiverValues) {
                 this.receiverValues = receiverValues;
@@ -349,6 +380,12 @@ public class CreateDIAlarmRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDIAlarmRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDIAlarmRuleRequest</p>
+     */
     public static class NotificationSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InhibitionInterval")
         private Integer inhibitionInterval;
@@ -402,7 +439,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             private java.util.List < NotificationReceivers> notificationReceivers; 
 
             /**
-             * The duration of the alert suppression interval. Default value: 5. Unit: minutes.
+             * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder inhibitionInterval(Integer inhibitionInterval) {
                 this.inhibitionInterval = inhibitionInterval;
@@ -410,7 +450,8 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * The alert notification methods.
+             * <p>The alert notification methods.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder notificationChannels(java.util.List < NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -418,7 +459,8 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * The alert notification recipients.
+             * <p>The alert notification recipients.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder notificationReceivers(java.util.List < NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -432,6 +474,12 @@ public class CreateDIAlarmRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDIAlarmRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDIAlarmRuleRequest</p>
+     */
     public static class TriggerConditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
@@ -483,7 +531,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             private Long threshold; 
 
             /**
-             * The time interval for alert calculation. Unit: minutes.
+             * <p>The time interval for alert calculation. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -491,11 +542,14 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * The severity level. Valid values:
-             * <p>
+             * <p>The severity level. Valid values:</p>
+             * <ul>
+             * <li>Warning</li>
+             * <li>Critical</li>
+             * </ul>
              * 
-             * *   Warning
-             * *   Critical
+             * <strong>example:</strong>
+             * <p>Warning</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -503,12 +557,15 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * The alert threshold.
-             * <p>
+             * <p>The alert threshold.</p>
+             * <ul>
+             * <li>If the alert rule is for task status, you do not need to specify a threshold.</li>
+             * <li>If the alert rule is for failovers, specify the number of failovers.</li>
+             * <li>If the alert rule is for latency, the threshold is the latency duration, in seconds.</li>
+             * </ul>
              * 
-             * *   If the alert rule is for task status, you do not need to specify a threshold.
-             * *   If the alert rule is for failovers, specify the number of failovers.
-             * *   If the alert rule is for latency, the threshold is the latency duration, in seconds.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder threshold(Long threshold) {
                 this.threshold = threshold;

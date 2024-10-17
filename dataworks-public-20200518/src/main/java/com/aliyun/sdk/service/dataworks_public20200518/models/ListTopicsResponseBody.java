@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTopicsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTopicsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListTopicsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the events returned.
+         * <p>The information about the events returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListTopicsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTopicsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTopicsResponseBody</p>
+     */
     public static class Topics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddTime")
         private Long addTime;
@@ -309,7 +331,10 @@ public class ListTopicsResponseBody extends TeaModel {
             private String topicType; 
 
             /**
-             * The timestamp when the event was found.
+             * <p>The timestamp when the event was found.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553524393000</p>
              */
             public Builder addTime(Long addTime) {
                 this.addTime = addTime;
@@ -317,7 +342,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the event was processed.
+             * <p>The timestamp when the event was processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553508465000</p>
              */
             public Builder fixTime(Long fixTime) {
                 this.fixTime = fixTime;
@@ -325,7 +353,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.
+             * <p>The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553508465000</p>
              */
             public Builder happenTime(Long happenTime) {
                 this.happenTime = happenTime;
@@ -333,7 +364,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node instance that triggers the event.
+             * <p>The ID of the node instance that triggers the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -341,7 +375,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node that triggers the event.
+             * <p>The ID of the node that triggers the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -349,7 +386,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node Name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -357,7 +397,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used by the node owner.
+             * <p>The ID of the Alibaba Cloud account that is used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952795****</p>
              */
             public Builder nodeOwner(String nodeOwner) {
                 this.nodeOwner = nodeOwner;
@@ -365,7 +408,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the node belongs.
+             * <p>The ID of the workspace to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -373,7 +419,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * <p>The ID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -381,7 +430,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234 Error</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -389,7 +441,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being processed. The value RECOVER indicates that the event is processed.
+             * <p>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being processed. The value RECOVER indicates that the event is processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NEW</p>
              */
             public Builder topicStatus(String topicStatus) {
                 this.topicStatus = topicStatus;
@@ -397,7 +452,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the running duration of the node in the current scheduling cycle is significantly longer than the average running duration of the node in previous scheduling cycles. The value ERROR indicates that the node fails to run.
+             * <p>The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the running duration of the node in the current scheduling cycle is significantly longer than the average running duration of the node in previous scheduling cycles. The value ERROR indicates that the node fails to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ERROR</p>
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -411,6 +469,12 @@ public class ListTopicsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTopicsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTopicsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -474,7 +538,10 @@ public class ListTopicsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -482,7 +549,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -490,7 +560,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The events returned.
+             * <p>The events returned.</p>
              */
             public Builder topics(java.util.List < Topics> topics) {
                 this.topics = topics;
@@ -498,7 +568,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the events returned.
+             * <p>The total number of the events returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

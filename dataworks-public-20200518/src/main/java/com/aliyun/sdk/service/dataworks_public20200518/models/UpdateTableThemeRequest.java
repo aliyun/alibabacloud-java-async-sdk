@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableThemeRequest} extends {@link RequestModel}
  *
  * <p>UpdateTableThemeRequest</p>
@@ -98,7 +99,7 @@ public class UpdateTableThemeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class UpdateTableThemeRequest extends Request {
         }
 
         /**
-         * The name of the theme.
+         * <p>The name of the theme.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table folder name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,7 +121,10 @@ public class UpdateTableThemeRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -125,7 +133,11 @@ public class UpdateTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the theme.
+         * <p>The ID of the theme.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder themeId(Long themeId) {
             this.putQueryParameter("ThemeId", themeId);

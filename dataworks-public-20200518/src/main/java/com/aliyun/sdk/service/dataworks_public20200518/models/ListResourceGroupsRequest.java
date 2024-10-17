@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListResourceGroupsRequest</p>
@@ -123,7 +124,7 @@ public class ListResourceGroupsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -132,11 +133,14 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * The category of the resource group. Valid values:
-         * <p>
+         * <p>The category of the resource group. Valid values:</p>
+         * <ul>
+         * <li>default (default): shared resource group</li>
+         * <li>single: exclusive resource group</li>
+         * </ul>
          * 
-         * *   default (default): shared resource group
-         * *   single: exclusive resource group
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder bizExtKey(String bizExtKey) {
             this.putQueryParameter("BizExtKey", bizExtKey);
@@ -145,7 +149,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * The keyword that is used for fuzzy match by resource group name and identifier.
+         * <p>The keyword that is used for fuzzy match by resource group name and identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -154,19 +161,21 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * The type of the resource group that you want to query. Valid values:
-         * <p>
+         * <p>The type of the resource group that you want to query. Valid values:</p>
+         * <ul>
+         * <li>0: DataWorks</li>
+         * <li>1: scheduling</li>
+         * <li>2: MaxCompute</li>
+         * <li>3: Platform for AI (PAI)</li>
+         * <li>4: Data Integration</li>
+         * <li>7: exclusive resource group for scheduling (An ID is generated for the purchased resource when you purchase an exclusive resource group for scheduling.)</li>
+         * <li>9: DataService Studio</li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * <p>If the value indicates a compute engine, the resource groups to query are the ones that were created when you purchased the compute engine.</p>
          * 
-         * *   0: DataWorks
-         * *   1: scheduling
-         * *   2: MaxCompute
-         * *   3: Platform for AI (PAI)
-         * *   4: Data Integration
-         * *   7: exclusive resource group for scheduling (An ID is generated for the purchased resource when you purchase an exclusive resource group for scheduling.)
-         * *   9: DataService Studio
-         * *   Default value: 1
-         * 
-         * If the value indicates a compute engine, the resource groups to query are the ones that were created when you purchased the compute engine.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder resourceGroupType(Integer resourceGroupType) {
             this.putQueryParameter("ResourceGroupType", resourceGroupType);
@@ -175,7 +184,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzbn7pti3zfa</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -184,7 +196,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -200,6 +212,12 @@ public class ListResourceGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -239,7 +257,10 @@ public class ListResourceGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -247,7 +268,10 @@ public class ListResourceGroupsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTableThemeRequest} extends {@link RequestModel}
  *
  * <p>DeleteTableThemeRequest</p>
@@ -83,7 +84,7 @@ public class DeleteTableThemeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,10 @@ public class DeleteTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The ID of the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -101,7 +105,11 @@ public class DeleteTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the theme.
+         * <p>The ID of the theme.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder themeId(Long themeId) {
             this.putQueryParameter("ThemeId", themeId);

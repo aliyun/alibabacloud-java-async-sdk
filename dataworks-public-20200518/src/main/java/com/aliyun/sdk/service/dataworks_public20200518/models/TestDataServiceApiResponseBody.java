@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TestDataServiceApiResponseBody} extends {@link TeaModel}
  *
  * <p>TestDataServiceApiResponseBody</p>
@@ -49,7 +50,7 @@ public class TestDataServiceApiResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the test.
+         * <p>The information about the test.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class TestDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abdsfewe</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class TestDataServiceApiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TestDataServiceApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TestId")
         private String testId;
@@ -97,7 +107,10 @@ public class TestDataServiceApiResponseBody extends TeaModel {
             private String testId; 
 
             /**
-             * The ID of the test.
+             * <p>The ID of the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232432</p>
              */
             public Builder testId(String testId) {
                 this.testId = testId;

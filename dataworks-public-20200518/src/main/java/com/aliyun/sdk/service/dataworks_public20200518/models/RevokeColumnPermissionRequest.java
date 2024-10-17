@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeColumnPermissionRequest} extends {@link RequestModel}
  *
  * <p>RevokeColumnPermissionRequest</p>
@@ -141,7 +142,7 @@ public class RevokeColumnPermissionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -150,7 +151,11 @@ public class RevokeColumnPermissionRequest extends Request {
         }
 
         /**
-         * The fields for which you want to revoke permissions from a user. Separate multiple fields with commas (,). You can revoke the permissions on the fields only in MaxCompute tables.
+         * <p>The fields for which you want to revoke permissions from a user. Separate multiple fields with commas (,). You can revoke the permissions on the fields only in MaxCompute tables.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id,name</p>
          */
         public Builder columns(String columns) {
             this.putQueryParameter("Columns", columns);
@@ -159,7 +164,11 @@ public class RevokeColumnPermissionRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute project to which the fields belong. You can log on to the DataWorks console and go to the SettingCenter page to obtain the name of the MaxCompute project that you associate with the workspace.
+         * <p>The name of the MaxCompute project to which the fields belong. You can log on to the DataWorks console and go to the SettingCenter page to obtain the name of the MaxCompute project that you associate with the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aMaxcomputeProjectName</p>
          */
         public Builder maxComputeProjectName(String maxComputeProjectName) {
             this.putQueryParameter("MaxComputeProjectName", maxComputeProjectName);
@@ -168,7 +177,10 @@ public class RevokeColumnPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account of the user from which you want to revoke permissions. You can log on to the DataWorks console and go to the Security Settings page to obtain the ID. You must specify either this parameter or the RevokeUserName parameter. If you specify both this parameter and the RevokeUserName parameter and the parameter values are different, the value of this parameter prevails.
+         * <p>The ID of the Alibaba Cloud account of the user from which you want to revoke permissions. You can log on to the DataWorks console and go to the Security Settings page to obtain the ID. You must specify either this parameter or the RevokeUserName parameter. If you specify both this parameter and the RevokeUserName parameter and the parameter values are different, the value of this parameter prevails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>267842600408993176</p>
          */
         public Builder revokeUserId(String revokeUserId) {
             this.putQueryParameter("RevokeUserId", revokeUserId);
@@ -177,13 +189,15 @@ public class RevokeColumnPermissionRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account from which you want to revoke permissions. Specify this parameter in the format that is the same as the format of the account used to access the MaxCompute project.
-         * <p>
+         * <p>The Alibaba Cloud account from which you want to revoke permissions. Specify this parameter in the format that is the same as the format of the account used to access the MaxCompute project.</p>
+         * <ul>
+         * <li>If the account is an Alibaba Cloud account, the value is in the ALIYUN$+Account name format.</li>
+         * <li>If the account is a RAM user, the value is in the RAM$+Account name format.</li>
+         * </ul>
+         * <p>You must specify either this parameter or the RevokeUserId parameter. If you specify both this parameter and the RevokeUserId parameter and the parameter values are different, the value of the RevokeUserId parameter prevails.</p>
          * 
-         * *   If the account is an Alibaba Cloud account, the value is in the ALIYUN$+Account name format.
-         * *   If the account is a RAM user, the value is in the RAM$+Account name format.
-         * 
-         * You must specify either this parameter or the RevokeUserId parameter. If you specify both this parameter and the RevokeUserId parameter and the parameter values are different, the value of the RevokeUserId parameter prevails.
+         * <strong>example:</strong>
+         * <p>RAM$dataworks_3h1_1:stsramuser</p>
          */
         public Builder revokeUserName(String revokeUserName) {
             this.putQueryParameter("RevokeUserName", revokeUserName);
@@ -192,7 +206,11 @@ public class RevokeColumnPermissionRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute table to which the fields belong. You can call the [SearchMetaTables](~~173919~~) operation to query the name of the MaxCompute table.
+         * <p>The name of the MaxCompute table to which the fields belong. You can call the <a href="https://help.aliyun.com/document_detail/173919.html">SearchMetaTables</a> operation to query the name of the MaxCompute table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aTableName</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -201,7 +219,11 @@ public class RevokeColumnPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace with which the MaxCompute project is associated. You can log on to the DataWorks console and go to the Workspace page to obtain the ID.
+         * <p>The ID of the DataWorks workspace with which the MaxCompute project is associated. You can log on to the DataWorks console and go to the Workspace page to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

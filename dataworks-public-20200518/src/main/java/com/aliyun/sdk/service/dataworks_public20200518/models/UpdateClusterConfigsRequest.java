@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClusterConfigsRequest} extends {@link RequestModel}
  *
  * <p>UpdateClusterConfigsRequest</p>
@@ -113,7 +114,7 @@ public class UpdateClusterConfigsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +123,10 @@ public class UpdateClusterConfigsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder clusterId(Long clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -131,7 +135,10 @@ public class UpdateClusterConfigsRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPARK_CONF</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -140,7 +147,7 @@ public class UpdateClusterConfigsRequest extends Request {
         }
 
         /**
-         * ConfigValues.
+         * <p>This parameter is required.</p>
          */
         public Builder configValues(java.util.List < ClusterConfig > configValues) {
             String configValuesShrink = shrink(configValues, "ConfigValues", "json");
@@ -150,7 +157,10 @@ public class UpdateClusterConfigsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5678</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

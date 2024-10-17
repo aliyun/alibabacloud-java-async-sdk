@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceStatusStatisticRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceStatusStatisticRequest</p>
@@ -140,7 +141,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -149,7 +150,11 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The date on which the numbers of instances in different states are obtained. Specify the date in the yyyy-MM-dd format.
+         * <p>The date on which the numbers of instances in different states are obtained. Specify the date in the yyyy-MM-dd format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
          */
         public Builder bizDate(String bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -158,21 +163,25 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The type of the directed acyclic graph (DAG). Valid values:
-         * <p>
-         * 
-         * *   MANUAL: DAG for a manually triggered workflow
-         * *   SMOKE_TEST: DAG for a smoke testing workflow
-         * *   SUPPLY_DATA: DAG for a data backfill instance
-         * *   BUSINESS_PROCESS_DAG: DAG for a one-time workflow
-         * 
+         * <p>The type of the directed acyclic graph (DAG). Valid values:</p>
+         * <ul>
+         * <li>MANUAL: DAG for a manually triggered workflow</li>
+         * <li>SMOKE_TEST: DAG for a smoke testing workflow</li>
+         * <li>SUPPLY_DATA: DAG for a data backfill instance</li>
+         * <li>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</li>
+         * </ul>
          * <!---->
          * 
-         * *   DAILY
-         * *   MANUAL
-         * *   SMOKE_TEST
-         * *   SUPPLY_DATA
-         * *   BUSINESS_PROCESS_DAG
+         * <ul>
+         * <li>DAILY</li>
+         * <li>MANUAL</li>
+         * <li>SMOKE_TEST</li>
+         * <li>SUPPLY_DATA</li>
+         * <li>BUSINESS_PROCESS_DAG</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MANUAL</p>
          */
         public Builder dagType(String dagType) {
             this.putBodyParameter("DagType", dagType);
@@ -181,7 +190,11 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The runtime environment. Valid values: PROD and DEV.
+         * <p>The runtime environment. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -190,7 +203,11 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -199,14 +216,17 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The scheduling cycle. Valid values:
-         * <p>
+         * <p>The scheduling cycle. Valid values:</p>
+         * <ul>
+         * <li>MINUTE</li>
+         * <li>HOUR</li>
+         * <li>DAY</li>
+         * <li>WEEK</li>
+         * <li>MONTH</li>
+         * </ul>
          * 
-         * *   MINUTE
-         * *   HOUR
-         * *   DAY
-         * *   WEEK
-         * *   MONTH
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder schedulerPeriod(String schedulerPeriod) {
             this.putBodyParameter("SchedulerPeriod", schedulerPeriod);
@@ -215,13 +235,16 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The scheduling type of the node. Valid values:
-         * <p>
+         * <p>The scheduling type of the node. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: auto triggered node</li>
+         * <li>MANUAL: manually triggered node</li>
+         * <li>PAUSE: paused node</li>
+         * <li>SKIP: dry-run node</li>
+         * </ul>
          * 
-         * *   NORMAL: auto triggered node
-         * *   MANUAL: manually triggered node
-         * *   PAUSE: paused node
-         * *   SKIP: dry-run node
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder schedulerType(String schedulerType) {
             this.putBodyParameter("SchedulerType", schedulerType);

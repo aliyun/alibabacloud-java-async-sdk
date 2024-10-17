@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMetaCollectionRequest} extends {@link RequestModel}
  *
  * <p>UpdateMetaCollectionRequest</p>
@@ -105,7 +106,10 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The comment of the collection. The comment must be 1 to 64 characters in length.
+         * <p>The comment of the collection. The comment must be 1 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -114,7 +118,10 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The name of the collection.
+         * <p>The name of the collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myCollectionName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -123,7 +130,11 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The unique identifier of the collection.
+         * <p>The unique identifier of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.396397</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);

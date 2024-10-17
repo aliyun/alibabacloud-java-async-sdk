@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceConsumeTimeRankResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceConsumeTimeRankResponseBody</p>
@@ -49,7 +50,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ranking record of the running durations of instances.
+         * <p>The ranking record of the running durations of instances.</p>
          */
         public Builder instanceConsumeTimeRank(InstanceConsumeTimeRank instanceConsumeTimeRank) {
             this.instanceConsumeTimeRank = instanceConsumeTimeRank;
@@ -57,7 +58,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6347364dadsfadf****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceConsumeTimeRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceConsumeTimeRankResponseBody</p>
+     */
     public static class ConsumeTimeRank extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
@@ -169,7 +179,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             private Integer prgType; 
 
             /**
-             * The data timestamp of the instance.
+             * <p>The data timestamp of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600963200000</p>
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -177,7 +190,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * The running duration of the instance. Unit: seconds.
+             * <p>The running duration of the instance. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder consumed(Long consumed) {
                 this.consumed = consumed;
@@ -185,7 +201,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95279527</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -193,7 +212,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -201,7 +223,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -209,7 +231,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the node owner.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952795279527</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -217,7 +242,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * <p>The type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder prgType(Integer prgType) {
                 this.prgType = prgType;
@@ -231,6 +259,12 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceConsumeTimeRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceConsumeTimeRankResponseBody</p>
+     */
     public static class InstanceConsumeTimeRank extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumeTimeRank")
         private java.util.List < ConsumeTimeRank> consumeTimeRank;
@@ -270,7 +304,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The ranking data of the running durations of instances.
+             * <p>The ranking data of the running durations of instances.</p>
              */
             public Builder consumeTimeRank(java.util.List < ConsumeTimeRank> consumeTimeRank) {
                 this.consumeTimeRank = consumeTimeRank;
@@ -278,7 +312,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the ranking was updated.
+             * <p>The timestamp when the ranking was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600963200000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServiceAuthorizedApisResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataServiceAuthorizedApisResponseBody</p>
@@ -97,7 +98,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the APIs that you are authorized to access.
+         * <p>The information about the APIs that you are authorized to access.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataServiceAuthorizedApisResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceAuthorizedApisResponseBody</p>
+     */
     public static class ApiAuthorizedList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;
@@ -321,7 +343,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The API ID.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10002</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -329,7 +354,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My API Name</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -337,7 +365,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the API.
+             * <p>The path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/1</p>
              */
             public Builder apiPath(String apiPath) {
                 this.apiPath = apiPath;
@@ -345,7 +376,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.
+             * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder apiStatus(Integer apiStatus) {
                 this.apiStatus = apiStatus;
@@ -353,7 +387,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API was created.
+             * <p>The time when the API was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-23T00:21:01+0800</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -361,7 +398,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the API owner.
+             * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -369,7 +409,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access permissions on the API were granted.
+             * <p>The time when the access permissions on the API were granted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-23T00:21:01+0800</p>
              */
             public Builder grantCreatedTime(String grantCreatedTime) {
                 this.grantCreatedTime = grantCreatedTime;
@@ -377,7 +420,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the access permissions granted on the API.
+             * <p>The expiration time of the access permissions granted on the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-24T00:21:01+0800</p>
              */
             public Builder grantEndTime(String grantEndTime) {
                 this.grantEndTime = grantEndTime;
@@ -385,7 +431,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who granted the access permissions on the API.
+             * <p>The ID of the Alibaba Cloud account used by the user who granted the access permissions on the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23456</p>
              */
             public Builder grantOperatorId(String grantOperatorId) {
                 this.grantOperatorId = grantOperatorId;
@@ -393,7 +442,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The group ID.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcde123456789</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -401,7 +453,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API was last updated.
+             * <p>The time when the API was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-23T00:21:01+0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -409,7 +464,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -417,7 +475,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -431,6 +492,12 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataServiceAuthorizedApisResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceAuthorizedApisResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiAuthorizedList")
         private java.util.List < ApiAuthorizedList> apiAuthorizedList;
@@ -494,7 +561,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The APIs that you are authorized to access.
+             * <p>The APIs that you are authorized to access.</p>
              */
             public Builder apiAuthorizedList(java.util.List < ApiAuthorizedList> apiAuthorizedList) {
                 this.apiAuthorizedList = apiAuthorizedList;
@@ -502,7 +569,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
+             * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -510,7 +580,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -518,7 +591,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

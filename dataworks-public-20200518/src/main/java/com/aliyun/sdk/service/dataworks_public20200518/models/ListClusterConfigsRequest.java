@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListClusterConfigsRequest</p>
@@ -98,7 +99,7 @@ public class ListClusterConfigsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,10 @@ public class ListClusterConfigsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder clusterId(Long clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -116,7 +120,10 @@ public class ListClusterConfigsRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPARK_CONF</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -125,7 +132,10 @@ public class ListClusterConfigsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5678</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDIJobRequest} extends {@link RequestModel}
  *
  * <p>UpdateDIJobRequest</p>
@@ -146,7 +147,10 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * The ID of the synchronization task.
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11588</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -155,7 +159,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * The description of the synchronization task.
+         * <p>The description of the synchronization task.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -164,7 +168,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.
+         * <p>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</p>
          */
         public Builder jobSettings(JobSettings jobSettings) {
             String jobSettingsShrink = shrink(jobSettings, "JobSettings", "json");
@@ -174,7 +178,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * The resource settings.
+         * <p>The resource settings.</p>
          */
         public Builder resourceSettings(ResourceSettings resourceSettings) {
             String resourceSettingsShrink = shrink(resourceSettings, "ResourceSettings", "json");
@@ -184,7 +188,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.
+         * <p>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</p>
          */
         public Builder tableMappings(java.util.List < TableMappings> tableMappings) {
             String tableMappingsShrink = shrink(tableMappings, "TableMappings", "json");
@@ -194,7 +198,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.
+         * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
          */
         public Builder transformationRules(java.util.List < TransformationRules> transformationRules) {
             String transformationRulesShrink = shrink(transformationRules, "TransformationRules", "json");
@@ -210,6 +214,12 @@ public class UpdateDIJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class ColumnDataTypeSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationDataType")
         private String destinationDataType;
@@ -249,7 +259,10 @@ public class UpdateDIJobRequest extends Request {
             private String sourceDataType; 
 
             /**
-             * The data type of a destination field.
+             * <p>The data type of a destination field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder destinationDataType(String destinationDataType) {
                 this.destinationDataType = destinationDataType;
@@ -257,7 +270,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The data type of a source field.
+             * <p>The data type of a source field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder sourceDataType(String sourceDataType) {
                 this.sourceDataType = sourceDataType;
@@ -271,6 +287,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class CycleScheduleSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScheduleParameters")
         private String scheduleParameters;
@@ -312,6 +334,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class DdlHandlingSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -351,12 +379,15 @@ public class UpdateDIJobRequest extends Request {
             private String type; 
 
             /**
-             * The processing policy for DDL messages. Valid values:
-             * <p>
+             * <p>The processing policy for DDL messages. Valid values:</p>
+             * <ul>
+             * <li>Ignore: ignores a DDL message.</li>
+             * <li>Critical: reports an error for a DDL message.</li>
+             * <li>Normal: normally processes a DDL message.</li>
+             * </ul>
              * 
-             * *   Ignore: ignores a DDL message.
-             * *   Critical: reports an error for a DDL message.
-             * *   Normal: normally processes a DDL message.
+             * <strong>example:</strong>
+             * <p>Critical</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -364,16 +395,19 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The type of the DDL operation. Valid values:
-             * <p>
+             * <p>The type of the DDL operation. Valid values:</p>
+             * <ul>
+             * <li>RenameColumn</li>
+             * <li>ModifyColumn</li>
+             * <li>CreateTable</li>
+             * <li>TruncateTable</li>
+             * <li>DropTable</li>
+             * <li>DropColumn</li>
+             * <li>AddColumn</li>
+             * </ul>
              * 
-             * *   RenameColumn
-             * *   ModifyColumn
-             * *   CreateTable
-             * *   TruncateTable
-             * *   DropTable
-             * *   DropColumn
-             * *   AddColumn
+             * <strong>example:</strong>
+             * <p>AddColumn</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -387,6 +421,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class RuntimeSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -426,17 +466,20 @@ public class UpdateDIJobRequest extends Request {
             private String value; 
 
             /**
-             * The name of the configuration item. Valid values:
-             * <p>
+             * <p>The name of the configuration item. Valid values:</p>
+             * <ul>
+             * <li>runtime.offline.speed.limit.mb: indicates the maximum transmission rate that is allowed for a batch synchronization task. This configuration item takes effect only when runtime.offline.speed.limit.enable is set to true.</li>
+             * <li>runtime.offline.speed.limit.enable: indicates whether throttling is enabled for a batch synchronization task.</li>
+             * <li>dst.offline.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a batch synchronization task.</li>
+             * <li>runtime.offline.concurrent: indicates the maximum number of parallel threads that are allowed for a batch synchronization task.</li>
+             * <li>dst.realtime.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a real-time synchronization task.</li>
+             * <li>runtime.enable.auto.create.schema: indicates whether schemas are automatically created in the destination of a synchronization task.</li>
+             * <li>src.offline.datasource.max.connection: indicates the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</li>
+             * <li>runtime.realtime.concurrent: indicates the maximum number of parallel threads that are allowed for a real-time synchronization task.</li>
+             * </ul>
              * 
-             * *   runtime.offline.speed.limit.mb: indicates the maximum transmission rate that is allowed for a batch synchronization task. This configuration item takes effect only when runtime.offline.speed.limit.enable is set to true.
-             * *   runtime.offline.speed.limit.enable: indicates whether throttling is enabled for a batch synchronization task.
-             * *   dst.offline.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a batch synchronization task.
-             * *   runtime.offline.concurrent: indicates the maximum number of parallel threads that are allowed for a batch synchronization task.
-             * *   dst.realtime.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a real-time synchronization task.
-             * *   runtime.enable.auto.create.schema: indicates whether schemas are automatically created in the destination of a synchronization task.
-             * *   src.offline.datasource.max.connection: indicates the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.
-             * *   runtime.realtime.concurrent: indicates the maximum number of parallel threads that are allowed for a real-time synchronization task.
+             * <strong>example:</strong>
+             * <p>runtime.offline.concurrent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -444,7 +487,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The value of the configuration item.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -458,6 +504,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class JobSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelSettings")
         private String channelSettings;
@@ -541,7 +593,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The settings for data type mappings between source fields and destination fields. The value of this parameter must be an array.
+             * <p>The settings for data type mappings between source fields and destination fields. The value of this parameter must be an array.</p>
              */
             public Builder columnDataTypeSettings(java.util.List < ColumnDataTypeSettings> columnDataTypeSettings) {
                 this.columnDataTypeSettings = columnDataTypeSettings;
@@ -557,7 +609,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The settings for processing DDL messages. The value of this parameter must be an array.
+             * <p>The settings for processing DDL messages. The value of this parameter must be an array.</p>
              */
             public Builder ddlHandlingSettings(java.util.List < DdlHandlingSettings> ddlHandlingSettings) {
                 this.ddlHandlingSettings = ddlHandlingSettings;
@@ -565,7 +617,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The runtime settings. The value of this parameter must be an array.
+             * <p>The runtime settings. The value of this parameter must be an array.</p>
              */
             public Builder runtimeSettings(java.util.List < RuntimeSettings> runtimeSettings) {
                 this.runtimeSettings = runtimeSettings;
@@ -579,6 +631,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class OfflineResourceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupIdentifier")
         private String resourceGroupIdentifier;
@@ -606,7 +664,10 @@ public class UpdateDIJobRequest extends Request {
             private String resourceGroupIdentifier; 
 
             /**
-             * The identifier of the resource group for Data Integration used for batch synchronization.
+             * <p>The identifier of the resource group for Data Integration used for batch synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_111_222</p>
              */
             public Builder resourceGroupIdentifier(String resourceGroupIdentifier) {
                 this.resourceGroupIdentifier = resourceGroupIdentifier;
@@ -620,6 +681,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class RealtimeResourceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupIdentifier")
         private String resourceGroupIdentifier;
@@ -647,7 +714,10 @@ public class UpdateDIJobRequest extends Request {
             private String resourceGroupIdentifier; 
 
             /**
-             * The identifier of the resource group for Data Integration used for real-time synchronization.
+             * <p>The identifier of the resource group for Data Integration used for real-time synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_111_222</p>
              */
             public Builder resourceGroupIdentifier(String resourceGroupIdentifier) {
                 this.resourceGroupIdentifier = resourceGroupIdentifier;
@@ -661,6 +731,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class ResourceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfflineResourceSettings")
         private OfflineResourceSettings offlineResourceSettings;
@@ -712,7 +788,7 @@ public class UpdateDIJobRequest extends Request {
             private Float requestedCu; 
 
             /**
-             * The resource used for batch synchronization.
+             * <p>The resource used for batch synchronization.</p>
              */
             public Builder offlineResourceSettings(OfflineResourceSettings offlineResourceSettings) {
                 this.offlineResourceSettings = offlineResourceSettings;
@@ -720,7 +796,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The resource used for real-time synchronization.
+             * <p>The resource used for real-time synchronization.</p>
              */
             public Builder realtimeResourceSettings(RealtimeResourceSettings realtimeResourceSettings) {
                 this.realtimeResourceSettings = realtimeResourceSettings;
@@ -742,6 +818,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class SourceObjectSelectionRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
@@ -781,7 +863,10 @@ public class UpdateDIJobRequest extends Request {
             private String objectType; 
 
             /**
-             * The expression.
+             * <p>The expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_table_1</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -789,11 +874,14 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
+             * <p>The type of the object. Valid values:</p>
+             * <ul>
+             * <li>Table</li>
+             * <li>Database</li>
+             * </ul>
              * 
-             * *   Table
-             * *   Database
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -807,6 +895,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class TableMappingsTransformationRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleActionType")
         private String ruleActionType;
@@ -858,13 +952,16 @@ public class UpdateDIJobRequest extends Request {
             private String ruleTargetType; 
 
             /**
-             * The type of the action. Valid values:
-             * <p>
+             * <p>The type of the action. Valid values:</p>
+             * <ul>
+             * <li>DefinePrimaryKey</li>
+             * <li>Rename</li>
+             * <li>AddColumn</li>
+             * <li>HandleDml</li>
+             * </ul>
              * 
-             * *   DefinePrimaryKey
-             * *   Rename
-             * *   AddColumn
-             * *   HandleDml
+             * <strong>example:</strong>
+             * <p>Rename</p>
              */
             public Builder ruleActionType(String ruleActionType) {
                 this.ruleActionType = ruleActionType;
@@ -872,7 +969,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The name of the rule. If the values of the RuleActionType parameter and the RuleTargetType parameter are the same for multiple transformation rules, you must make sure that the transformation rule names are unique.
+             * <p>The name of the rule. If the values of the RuleActionType parameter and the RuleTargetType parameter are the same for multiple transformation rules, you must make sure that the transformation rule names are unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rename_rule_1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -880,11 +980,14 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The type of the object on which you want to perform the action. Valid values:
-             * <p>
+             * <p>The type of the object on which you want to perform the action. Valid values:</p>
+             * <ul>
+             * <li>Table</li>
+             * <li>Schema</li>
+             * </ul>
              * 
-             * *   Table
-             * *   Schema
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder ruleTargetType(String ruleTargetType) {
                 this.ruleTargetType = ruleTargetType;
@@ -898,6 +1001,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class TableMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceObjectSelectionRules")
         private java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules;
@@ -937,7 +1046,7 @@ public class UpdateDIJobRequest extends Request {
             private java.util.List < TableMappingsTransformationRules> transformationRules; 
 
             /**
-             * The rule used to select synchronization objects in the source. You can configure multiple rules.
+             * <p>The rule used to select synchronization objects in the source. You can configure multiple rules.</p>
              */
             public Builder sourceObjectSelectionRules(java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules) {
                 this.sourceObjectSelectionRules = sourceObjectSelectionRules;
@@ -945,7 +1054,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The transformation rules that are applied to the selected synchronization objects.
+             * <p>The transformation rules that are applied to the selected synchronization objects.</p>
              */
             public Builder transformationRules(java.util.List < TableMappingsTransformationRules> transformationRules) {
                 this.transformationRules = transformationRules;
@@ -959,6 +1068,12 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDIJobRequest</p>
+     */
     public static class TransformationRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleActionType")
         private String ruleActionType;
@@ -1022,13 +1137,16 @@ public class UpdateDIJobRequest extends Request {
             private String ruleTargetType; 
 
             /**
-             * The type of the action. Valid values:
-             * <p>
+             * <p>The type of the action. Valid values:</p>
+             * <ul>
+             * <li>DefinePrimaryKey</li>
+             * <li>Rename</li>
+             * <li>AddColumn</li>
+             * <li>HandleDml</li>
+             * </ul>
              * 
-             * *   DefinePrimaryKey
-             * *   Rename
-             * *   AddColumn
-             * *   HandleDml
+             * <strong>example:</strong>
+             * <p>Rename</p>
              */
             public Builder ruleActionType(String ruleActionType) {
                 this.ruleActionType = ruleActionType;
@@ -1036,18 +1154,15 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The expression of the rule. The expression is a JSON string.
-             * <p>
+             * <p>The expression of the rule. The expression is a JSON string.</p>
+             * <p>Example of a renaming rule: {&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;,&quot;variables&quot;:[{&quot;variableName&quot;:&quot;srcDatabaseName&quot;,&quot;variableRules&quot;:[{&quot;from&quot;:&quot;fromdb&quot;,&quot;to&quot;:&quot;todb&quot;}]}]}.</p>
+             * <p>expression: the expression of the renaming rule. The expression may contain the following variables: ${srcDatasourceName}, ${srcDatabaseName}, and ${srcTableName}. ${srcDatasourceName} indicates the name of the source. ${srcDatabaseName} indicates the name of a source database. ${srcTableName} indicates the name of a source table. variables: the generation rule for a variable used in the expression of the renaming rule. The default value of the specified variable is the original value of the object indicated by the variable. You can define a group of string replacement rules to change the original values based on your business requirements. variableName: the name of the variable. The variable name is not enclosed in ${}. variableRules: the string replacement rules for variables. The system runs the string replacement rules in sequence for string replacement. from indicates the original string. to indicates the new string. Example of a rule used to add a specific field to the destination and assign a value to the field: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}.</p>
+             * <p>If no rule of this type is configured, no fields are added to the destination and no values are assigned by default. columnName: the name of the field that is added. columnValueType: the value type of the field. Valid values: Constant and Variable. columnValue: the value of the field that is added. If the valueType parameter is set to Constant, the value of the columnValue parameter must be a constant of the STRING type. If the valueType parameter is set to Variable, the value of the columnValue parameter must be a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME indicates the execution time. DB_NAME_SRC indicates the name of a source database. DATASOURCE_NAME_SRC indicates the name of the source. TABLE_NAME_SRC indicates the name of a source table. DB_NAME_DEST indicates the name of a destination database. DATASOURCE_NAME_DEST indicates the name of the destination. TABLE_NAME_DEST indicates the name of a destination table. DB_NAME_SRC_TRANSED indicates the database name obtained after a transformation. Example of a rule used to specify primary key fields for a destination table: {&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}.</p>
+             * <p>If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default. If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. Example of a rule used to process DML messages: {&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}.</p>
+             * <p>If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal. dmlType: the DML operation. Valid values: Insert, Update, and Delete. dmlAction: the processing policy for DML messages. Valid values: Normal, Ignore, Filter, and LogicalDelete. Filter indicates conditional processing. You can set the dmlAction parameter to Filter only when the dmlType parameter is set to Update or Delete. filterCondition: the condition used to filter DML messages. This parameter is required only when the dmlAction parameter is set to Filter.</p>
              * 
-             * Example of a renaming rule: {"expression":"${srcDatasourceName}\_${srcDatabaseName}\_0922","variables":\[{"variableName":"srcDatabaseName","variableRules":\[{"from":"fromdb","to":"todb"}]}]}.
-             * 
-             * expression: the expression of the renaming rule. The expression may contain the following variables: ${srcDatasourceName}, ${srcDatabaseName}, and ${srcTableName}. ${srcDatasourceName} indicates the name of the source. ${srcDatabaseName} indicates the name of a source database. ${srcTableName} indicates the name of a source table. variables: the generation rule for a variable used in the expression of the renaming rule. The default value of the specified variable is the original value of the object indicated by the variable. You can define a group of string replacement rules to change the original values based on your business requirements. variableName: the name of the variable. The variable name is not enclosed in ${}. variableRules: the string replacement rules for variables. The system runs the string replacement rules in sequence for string replacement. from indicates the original string. to indicates the new string. Example of a rule used to add a specific field to the destination and assign a value to the field: {"columns":\[{"columnName":"my_add_column","columnValueType":"Constant","columnValue":"123"}]}.
-             * 
-             * If no rule of this type is configured, no fields are added to the destination and no values are assigned by default. columnName: the name of the field that is added. columnValueType: the value type of the field. Valid values: Constant and Variable. columnValue: the value of the field that is added. If the valueType parameter is set to Constant, the value of the columnValue parameter must be a constant of the STRING type. If the valueType parameter is set to Variable, the value of the columnValue parameter must be a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME indicates the execution time. DB_NAME_SRC indicates the name of a source database. DATASOURCE_NAME_SRC indicates the name of the source. TABLE_NAME_SRC indicates the name of a source table. DB_NAME_DEST indicates the name of a destination database. DATASOURCE_NAME_DEST indicates the name of the destination. TABLE_NAME_DEST indicates the name of a destination table. DB_NAME_SRC_TRANSED indicates the database name obtained after a transformation. Example of a rule used to specify primary key fields for a destination table: {"columns":\["ukcolumn1","ukcolumn2"]}.
-             * 
-             * If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default. If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. Example of a rule used to process DML messages: {"dmlPolicies":\[{"dmlType":"Delete","dmlAction":"Filter","filterCondition":"id > 1"}]}.
-             * 
-             * If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal. dmlType: the DML operation. Valid values: Insert, Update, and Delete. dmlAction: the processing policy for DML messages. Valid values: Normal, Ignore, Filter, and LogicalDelete. Filter indicates conditional processing. You can set the dmlAction parameter to Filter only when the dmlType parameter is set to Update or Delete. filterCondition: the condition used to filter DML messages. This parameter is required only when the dmlAction parameter is set to Filter.
+             * <strong>example:</strong>
+             * <p>{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}</p>
              */
             public Builder ruleExpression(String ruleExpression) {
                 this.ruleExpression = ruleExpression;
@@ -1055,7 +1170,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The name of the rule. If the values of the RuleActionType parameter and the RuleTargetType parameter are the same for multiple transformation rules, you must make sure that the transformation rule names are unique.
+             * <p>The name of the rule. If the values of the RuleActionType parameter and the RuleTargetType parameter are the same for multiple transformation rules, you must make sure that the transformation rule names are unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rename_rule_1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1063,11 +1181,14 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * The type of the object on which you want to perform the action. Valid values:
-             * <p>
+             * <p>The type of the object on which you want to perform the action. Valid values:</p>
+             * <ul>
+             * <li>Table</li>
+             * <li>Schema</li>
+             * </ul>
              * 
-             * *   Table
-             * *   Schema
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder ruleTargetType(String ruleTargetType) {
                 this.ruleTargetType = ruleTargetType;

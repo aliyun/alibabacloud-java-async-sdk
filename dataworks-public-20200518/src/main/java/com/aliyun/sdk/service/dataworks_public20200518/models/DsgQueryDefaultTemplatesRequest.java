@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgQueryDefaultTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DsgQueryDefaultTemplatesRequest</p>
@@ -77,7 +78,11 @@ public class DsgQueryDefaultTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the level-2 data masking scenario. You can call the [DsgSceneQuerySceneListByName](~~2786322~~) operation to query the list of IDs.
+         * <p>The ID of the level-2 data masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the list of IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder sceneId(Integer sceneId) {
             this.putQueryParameter("SceneId", sceneId);

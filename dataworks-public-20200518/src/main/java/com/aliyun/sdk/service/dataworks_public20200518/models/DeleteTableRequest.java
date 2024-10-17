@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTableRequest} extends {@link RequestModel}
  *
  * <p>DeleteTableRequest</p>
@@ -126,7 +127,7 @@ public class DeleteTableRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -135,7 +136,10 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.
+         * <p>The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.test</p>
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -144,16 +148,19 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * The type of the compute engine or data source. Valid values:
-         * <p>
+         * <p>The type of the compute engine or data source. Valid values:</p>
+         * <ul>
+         * <li>cdh</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>odps</li>
+         * <li>emr</li>
+         * <li>hadoop</li>
+         * <li>holodb</li>
+         * <li>hybriddb_for_postgresql</li>
+         * </ul>
          * 
-         * *   cdh
-         * *   analyticdb_for_mysql
-         * *   odps
-         * *   emr
-         * *   hadoop
-         * *   holodb
-         * *   hybriddb_for_postgresql
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -162,7 +169,10 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The ID of the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -171,7 +181,10 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.
+         * <p>The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -180,7 +193,11 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute table.
+         * <p>The name of the MaxCompute table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table1</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEntityTagsRequest} extends {@link RequestModel}
  *
  * <p>ListEntityTagsRequest</p>
@@ -68,7 +69,7 @@ public class ListEntityTagsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class ListEntityTagsRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
+         * <p>The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.projectA.tableA</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);

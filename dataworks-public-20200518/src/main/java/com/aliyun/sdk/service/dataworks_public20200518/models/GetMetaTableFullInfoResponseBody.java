@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableFullInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableFullInfoResponseBody</p>
@@ -97,7 +98,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data returned.
+         * <p>The business data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableFullInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableFullInfoResponseBody</p>
+     */
     public static class ColumnList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
@@ -273,7 +295,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             private Integer position; 
 
             /**
-             * The description of the field.
+             * <p>The description of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data comment</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -281,7 +306,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the field.
+             * <p>The GUID of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.engine_name.table_name.1</p>
              */
             public Builder columnGuid(String columnGuid) {
                 this.columnGuid = columnGuid;
@@ -289,7 +317,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -297,7 +328,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the field.
+             * <p>The data type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -305,7 +339,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the field.
+             * <p>The remarks of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -313,11 +350,14 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field is a foreign key. Valid values:
-             * <p>
+             * <p>Indicates whether the field is a foreign key. Valid values:</p>
+             * <ul>
+             * <li>true: The field is a foreign key.</li>
+             * <li>false: The field is not a foreign key.</li>
+             * </ul>
              * 
-             * *   true: The field is a foreign key.
-             * *   false: The field is not a foreign key.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isForeignKey(Boolean isForeignKey) {
                 this.isForeignKey = isForeignKey;
@@ -325,11 +365,14 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field is a partition field. Valid values:
-             * <p>
+             * <p>Indicates whether the field is a partition field. Valid values:</p>
+             * <ul>
+             * <li>true: The field is a partition field.</li>
+             * <li>false: The field is not a partition field.</li>
+             * </ul>
              * 
-             * *   true: The field is a partition field.
-             * *   false: The field is not a partition field.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPartitionColumn(Boolean isPartitionColumn) {
                 this.isPartitionColumn = isPartitionColumn;
@@ -337,11 +380,14 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field is the primary key. Valid values:
-             * <p>
+             * <p>Indicates whether the field is the primary key. Valid values:</p>
+             * <ul>
+             * <li>true: The field is the primary key.</li>
+             * <li>false: The field is not the primary key.</li>
+             * </ul>
              * 
-             * *   true: The field is the primary key.
-             * *   false: The field is not the primary key.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPrimaryKey(Boolean isPrimaryKey) {
                 this.isPrimaryKey = isPrimaryKey;
@@ -349,7 +395,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ordinal number of the field.
+             * <p>The ordinal number of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder position(Integer position) {
                 this.position = position;
@@ -363,6 +412,12 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaTableFullInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableFullInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -642,7 +697,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             private Long totalColumnCount; 
 
             /**
-             * The ID of the EMR cluster.
+             * <p>The ID of the EMR cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C-010A704DA760****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -650,7 +708,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The fields in the metatable.
+             * <p>The fields in the metatable.</p>
              */
             public Builder columnList(java.util.List < ColumnList> columnList) {
                 this.columnList = columnList;
@@ -658,7 +716,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the metatable.
+             * <p>The remarks of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -666,7 +727,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was created. You can convert the timestamp to the related date based on the time zone that you use.
+             * <p>The time when the metatable was created. You can convert the timestamp to the related date based on the time zone that you use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589870293000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -674,7 +738,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of storage resources that are consumed by the metatable. Unit: bytes.
+             * <p>The amount of storage resources that are consumed by the metatable. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -682,7 +749,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -690,11 +760,14 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment in which the metatable resides. Valid values:
-             * <p>
+             * <p>The type of the environment in which the metatable resides. Valid values:</p>
+             * <ul>
+             * <li>0: indicates that the metatable resides in the development environment.</li>
+             * <li>1: indicates that the metatable resides in the production environment.</li>
+             * </ul>
              * 
-             * *   0: indicates that the metatable resides in the development environment.
-             * *   1: indicates that the metatable resides in the production environment.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -702,13 +775,16 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The scope in which the metatable is visible. Valid values:
-             * <p>
+             * <p>The scope in which the metatable is visible. Valid values:</p>
+             * <ul>
+             * <li>0: indicates that the metatable is visible to workspace members.</li>
+             * <li>1: indicates that the metatable is visible to users within a tenant.</li>
+             * <li>2: indicates that the metatable is visible to all tenants.</li>
+             * <li>3: indicates that the metatable is visible only to the metatable owner.</li>
+             * </ul>
              * 
-             * *   0: indicates that the metatable is visible to workspace members.
-             * *   1: indicates that the metatable is visible to users within a tenant.
-             * *   2: indicates that the metatable is visible to all tenants.
-             * *   3: indicates that the metatable is visible only to the metatable owner.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isVisible(Integer isVisible) {
                 this.isVisible = isVisible;
@@ -716,7 +792,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was last accessed. You can convert the timestamp to the related date based on the time zone that you use.
+             * <p>The time when the metatable was last accessed. You can convert the timestamp to the related date based on the time zone that you use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589870294000</p>
              */
             public Builder lastAccessTime(Long lastAccessTime) {
                 this.lastAccessTime = lastAccessTime;
@@ -724,7 +803,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the schema of the metatable was last changed. You can convert the timestamp to the related date based on the time zone that you use.
+             * <p>The time when the schema of the metatable was last changed. You can convert the timestamp to the related date based on the time zone that you use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589870294000</p>
              */
             public Builder lastDdlTime(Long lastDdlTime) {
                 this.lastDdlTime = lastDdlTime;
@@ -732,7 +814,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was last updated. You can convert the timestamp to the related date based on the time zone that you use.
+             * <p>The time when the metatable was last updated. You can convert the timestamp to the related date based on the time zone that you use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589870294000</p>
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -740,7 +825,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle of the metatable. Unit: days.
+             * <p>The lifecycle of the metatable. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder lifeCycle(Integer lifeCycle) {
                 this.lifeCycle = lifeCycle;
@@ -748,7 +836,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The storage path of the Hive metatable.
+             * <p>The storage path of the Hive metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs://localhost:777/user/hadoop/test.txt</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -756,7 +847,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the metatable owner.
+             * <p>The ID of the metatable owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -764,7 +858,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The partition key.
+             * <p>The partition key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder partitionKeys(String partitionKeys) {
                 this.partitionKeys = partitionKeys;
@@ -772,7 +869,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the metatable belongs.
+             * <p>The ID of the workspace to which the metatable belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -780,7 +880,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace to which the metatable belongs.
+             * <p>The name of the workspace to which the metatable belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -796,7 +899,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the metatable.
+             * <p>The GUID of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.engine_name.table_name</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -804,7 +910,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metatable.
+             * <p>The name of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_name</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -812,7 +921,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -820,7 +932,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of fields.
+             * <p>The total number of fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder totalColumnCount(Long totalColumnCount) {
                 this.totalColumnCount = totalColumnCount;

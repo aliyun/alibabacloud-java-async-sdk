@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateManualDagResponseBody} extends {@link TeaModel}
  *
  * <p>CreateManualDagResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateManualDagResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the DAG for the manually triggered workflow. You can call an operation with this parameter as a request parameter to query the details and states of the nodes in the manually triggered workflow.
+         * <p>The ID of the DAG for the manually triggered workflow. You can call an operation with this parameter as a request parameter to query the details and states of the nodes in the manually triggered workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700000123123141</p>
          */
         public Builder dagId(Long dagId) {
             this.dagId = dagId;
@@ -57,7 +61,10 @@ public class CreateManualDagResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

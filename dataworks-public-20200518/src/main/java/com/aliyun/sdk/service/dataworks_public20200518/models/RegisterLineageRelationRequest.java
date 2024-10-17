@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterLineageRelationRequest} extends {@link RequestModel}
  *
  * <p>RegisterLineageRelationRequest</p>
@@ -68,7 +69,7 @@ public class RegisterLineageRelationRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,8 @@ public class RegisterLineageRelationRequest extends Request {
         }
 
         /**
-         * The structure whose lineage you want to register to DataWorks.
+         * <p>The structure whose lineage you want to register to DataWorks.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder lineageRelationRegisterVO(LineageRelationRegisterVO lineageRelationRegisterVO) {
             String lineageRelationRegisterVOShrink = shrink(lineageRelationRegisterVO, "LineageRelationRegisterVO", "json");

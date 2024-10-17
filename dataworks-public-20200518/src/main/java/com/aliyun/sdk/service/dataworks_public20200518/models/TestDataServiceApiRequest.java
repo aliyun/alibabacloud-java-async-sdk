@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TestDataServiceApiRequest} extends {@link RequestModel}
  *
  * <p>TestDataServiceApiRequest</p>
@@ -138,7 +139,7 @@ public class TestDataServiceApiRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -147,7 +148,11 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the DataService Studio API on which the test is performed.
+         * <p>The ID of the DataService Studio API on which the test is performed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12343</p>
          */
         public Builder apiId(Long apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -156,7 +161,10 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * The data of the request body.
+         * <p>The data of the request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;test&quot;}</p>
          */
         public Builder bodyContent(String bodyContent) {
             this.putBodyParameter("BodyContent", bodyContent);
@@ -165,7 +173,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * The request parameters that are contained in the request body.
+         * <p>The request parameters that are contained in the request body.</p>
          */
         public Builder bodyParams(java.util.List < BodyParams> bodyParams) {
             this.putBodyParameter("BodyParams", bodyParams);
@@ -174,7 +182,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * The request parameters that are contained in the request header.
+         * <p>The request parameters that are contained in the request header.</p>
          */
         public Builder headParams(java.util.List < HeadParams> headParams) {
             this.putBodyParameter("HeadParams", headParams);
@@ -183,7 +191,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * The request parameters that are contained in the request path.
+         * <p>The request parameters that are contained in the request path.</p>
          */
         public Builder pathParams(java.util.List < PathParams> pathParams) {
             this.putBodyParameter("PathParams", pathParams);
@@ -192,7 +200,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * The request parameters that are contained in the query.
+         * <p>The request parameters that are contained in the query.</p>
          */
         public Builder queryParam(java.util.List < QueryParam> queryParam) {
             this.putBodyParameter("QueryParam", queryParam);
@@ -207,6 +215,12 @@ public class TestDataServiceApiRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TestDataServiceApiRequest} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiRequest</p>
+     */
     public static class BodyParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
@@ -246,7 +260,10 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -254,7 +271,10 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -268,6 +288,12 @@ public class TestDataServiceApiRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TestDataServiceApiRequest} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiRequest</p>
+     */
     public static class HeadParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
@@ -307,7 +333,10 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>requestId</p>
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -315,7 +344,10 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -329,6 +361,12 @@ public class TestDataServiceApiRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TestDataServiceApiRequest} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiRequest</p>
+     */
     public static class PathParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
@@ -368,7 +406,10 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>path1</p>
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -376,7 +417,10 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -390,6 +434,12 @@ public class TestDataServiceApiRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TestDataServiceApiRequest} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiRequest</p>
+     */
     public static class QueryParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
@@ -429,7 +479,10 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -437,7 +490,10 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;

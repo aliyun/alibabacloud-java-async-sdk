@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceStatusStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceStatusStatisticResponseBody</p>
@@ -49,7 +50,10 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
         private StatusCount statusCount; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The numbers of instances in different states.
+         * <p>The numbers of instances in different states.</p>
          */
         public Builder statusCount(StatusCount statusCount) {
             this.statusCount = statusCount;
@@ -70,6 +74,12 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceStatusStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceStatusStatisticResponseBody</p>
+     */
     public static class StatusCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailureCount")
         private Integer failureCount;
@@ -169,7 +179,10 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
             private Integer waitTimeCount; 
 
             /**
-             * The number of instances that failed to run.
+             * <p>The number of instances that failed to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failureCount(Integer failureCount) {
                 this.failureCount = failureCount;
@@ -177,7 +190,10 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are not run.
+             * <p>The number of instances that are not run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notRunCount(Integer notRunCount) {
                 this.notRunCount = notRunCount;
@@ -185,7 +201,10 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are running.
+             * <p>The number of instances that are running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runningCount(Integer runningCount) {
                 this.runningCount = runningCount;
@@ -193,7 +212,10 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are successfully run.
+             * <p>The number of instances that are successfully run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -201,7 +223,10 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances returned.
+             * <p>The total number of instances returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -209,7 +234,10 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are waiting for resources.
+             * <p>The number of instances that are waiting for resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder waitResCount(Integer waitResCount) {
                 this.waitResCount = waitResCount;
@@ -217,7 +245,10 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are waiting to run.
+             * <p>The number of instances that are waiting to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder waitTimeCount(Integer waitTimeCount) {
                 this.waitTimeCount = waitTimeCount;

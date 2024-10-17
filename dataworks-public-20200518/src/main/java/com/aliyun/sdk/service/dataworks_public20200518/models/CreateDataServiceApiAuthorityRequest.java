@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataServiceApiAuthorityRequest} extends {@link RequestModel}
  *
  * <p>CreateDataServiceApiAuthorityRequest</p>
@@ -128,7 +129,7 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -137,7 +138,11 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -146,7 +151,11 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the access permissions on the API are granted.
+         * <p>The ID of the workspace to which the access permissions on the API are granted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         public Builder authorizedProjectId(Long authorizedProjectId) {
             this.putBodyParameter("AuthorizedProjectId", authorizedProjectId);
@@ -155,7 +164,11 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The end time of the validity period of the access permissions. The time must be a UNIX timestamp. Unit: seconds. Example: 1600531564, which indicates 2020-09-20 00:06:04 (UTC+8).
+         * <p>The end time of the validity period of the access permissions. The time must be a UNIX timestamp. Unit: seconds. Example: 1600531564, which indicates 2020-09-20 00:06:04 (UTC+8).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600531564</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -164,7 +177,11 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10003</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -173,7 +190,10 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The tenant ID.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1004</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

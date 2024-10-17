@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeployFileRequest} extends {@link RequestModel}
  *
  * <p>DeployFileRequest</p>
@@ -123,7 +124,7 @@ public class DeployFileRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -132,7 +133,7 @@ public class DeployFileRequest extends Request {
         }
 
         /**
-         * The description of the deployment operation.
+         * <p>The description of the deployment operation.</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -141,10 +142,11 @@ public class DeployFileRequest extends Request {
         }
 
         /**
-         * The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.
-         * <p>
+         * <p>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</p>
+         * <p>You must configure either the FileId parameter or the NodeId parameter.</p>
          * 
-         * You must configure either the FileId parameter or the NodeId parameter.
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder fileId(Long fileId) {
             this.putBodyParameter("FileId", fileId);
@@ -153,7 +155,10 @@ public class DeployFileRequest extends Request {
         }
 
         /**
-         * The ID of the node in the scheduling system that corresponds to the file that you want to deploy. You must configure either the NodeId parameter or the FileId parameter.
+         * <p>The ID of the node in the scheduling system that corresponds to the file that you want to deploy. You must configure either the NodeId parameter or the FileId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000001</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -162,7 +167,10 @@ public class DeployFileRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
+         * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -171,7 +179,10 @@ public class DeployFileRequest extends Request {
         }
 
         /**
-         * The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
+         * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

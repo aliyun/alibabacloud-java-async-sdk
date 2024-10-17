@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionApplyOrderDetailResponse} extends {@link TeaModel}
  *
  * <p>GetPermissionApplyOrderDetailResponse</p>

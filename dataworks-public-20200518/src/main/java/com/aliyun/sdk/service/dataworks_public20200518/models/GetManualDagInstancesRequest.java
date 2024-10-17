@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetManualDagInstancesRequest} extends {@link RequestModel}
  *
  * <p>GetManualDagInstancesRequest</p>
@@ -98,7 +99,7 @@ public class GetManualDagInstancesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class GetManualDagInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the directed acyclic graph (DAG) for the manually triggered workflow. You can call the [CreateManualDag](~~189728~~) operation to query the ID.
+         * <p>The ID of the directed acyclic graph (DAG) for the manually triggered workflow. You can call the <a href="https://help.aliyun.com/document_detail/189728.html">CreateManualDag</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7000001231241</p>
          */
         public Builder dagId(String dagId) {
             this.putBodyParameter("DagId", dagId);
@@ -116,7 +121,11 @@ public class GetManualDagInstancesRequest extends Request {
         }
 
         /**
-         * The environment of Operation Center. Valid values: PROD and DEV.
+         * <p>The environment of Operation Center. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RPOD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -125,7 +134,11 @@ public class GetManualDagInstancesRequest extends Request {
         }
 
         /**
-         * The name of the workspace to which the manually triggered workflow belongs. You can log on to the DataWorks console and go to the Workspace Settings panel to query the name.
+         * <p>The name of the workspace to which the manually triggered workflow belongs. You can log on to the DataWorks console and go to the Workspace Settings panel to query the name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_workspace</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

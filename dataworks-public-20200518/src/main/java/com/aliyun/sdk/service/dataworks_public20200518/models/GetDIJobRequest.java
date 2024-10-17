@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDIJobRequest} extends {@link RequestModel}
  *
  * <p>GetDIJobRequest</p>
@@ -82,7 +83,7 @@ public class GetDIJobRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +92,11 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * The ID of the synchronization task.
+         * <p>The ID of the synchronization task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11588</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -100,7 +105,10 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to return detailed configuration information, including TransformationRules, TableMappings, and JobSettings. Valid values: true and false. Default value: true.
+         * <p>Specifies whether to return detailed configuration information, including TransformationRules, TableMappings, and JobSettings. Valid values: true and false. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withDetails(Boolean withDetails) {
             this.putBodyParameter("WithDetails", withDetails);

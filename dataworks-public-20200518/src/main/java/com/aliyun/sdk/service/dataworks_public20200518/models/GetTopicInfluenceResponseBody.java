@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicInfluenceResponseBody} extends {@link TeaModel}
  *
  * <p>GetTopicInfluenceResponseBody</p>
@@ -150,6 +151,12 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicInfluenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicInfluenceResponseBody</p>
+     */
     public static class Influences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
@@ -351,6 +358,12 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicInfluenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicInfluenceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Influences")
         private java.util.List < Influences> influences;

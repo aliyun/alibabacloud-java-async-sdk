@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataSourceMetaResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataSourceMetaResponseBody</p>
@@ -61,7 +62,7 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataSourceMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceMetaResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -145,7 +158,10 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the metadata of the data source fails to be obtained. If the metadata of the data source is obtained, no value is returned for this parameter.
+             * <p>The reason why the metadata of the data source fails to be obtained. If the metadata of the data source is obtained, no value is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>read datasource time out</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -153,18 +169,19 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The returned metadata of the data source. The returned metadata is in the JSON format.
-             * <p>
+             * <p>The returned metadata of the data source. The returned metadata is in the JSON format.</p>
+             * <p><code>{&quot;dbTables&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;schema&quot;:[{&quot;tableInfos&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;enable&quot;:true,&quot;table&quot;:&quot;table1&quot;,&quot;tableName&quot;:&quot;table1&quot;}]},{&quot;tableInfos&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;enable&quot;:true,&quot;table&quot;:&quot;table2&quot;,&quot;tableName&quot;:&quot;table2&quot;}]}]}]}</code></p>
+             * <p>Parameter description:</p>
+             * <ul>
+             * <li>dbName: the name of the database in which the data source resides.</li>
+             * <li>schema: the schema of the database.</li>
+             * <li>enable: indicates whether the database is available. The valid values are true and false. The value true indicates that the database is available. The value false indicates that the database is unavailable.</li>
+             * <li>tableName: the name of the table in the database.</li>
+             * <li>tableInfos: the information about the table in the database.</li>
+             * </ul>
              * 
-             * `{"dbTables":[{"dbName":"testdb","schema":[{"tableInfos":[{"dbName":"testdb","enable":true,"table":"table1","tableName":"table1"}]},{"tableInfos":[{"dbName":"testdb","enable":true,"table":"table2","tableName":"table2"}]}]}]}`
-             * 
-             * Parameter description:
-             * 
-             * *   dbName: the name of the database in which the data source resides.
-             * *   schema: the schema of the database.
-             * *   enable: indicates whether the database is available. The valid values are true and false. The value true indicates that the database is available. The value false indicates that the database is unavailable.
-             * *   tableName: the name of the table in the database.
-             * *   tableInfos: the information about the table in the database.
+             * <strong>example:</strong>
+             * <p>{&quot;dbTables&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;schema&quot;:[{&quot;tableInfos&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;enable&quot;:true,&quot;table&quot;:&quot;table1&quot;,&quot;tableName&quot;:&quot;table1&quot;}]},{&quot;tableInfos&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;enable&quot;:true,&quot;table&quot;:&quot;table2&quot;,&quot;tableName&quot;:&quot;table2&quot;}]}]}]}</p>
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -172,11 +189,14 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the metadata of the data source is obtained. Valid values:
-             * <p>
+             * <p>Indicates whether the metadata of the data source is obtained. Valid values:</p>
+             * <ul>
+             * <li>success: The metadata of the data source is obtained.</li>
+             * <li>fail: The metadata of the data source failed to be obtained. You can troubleshoot issues based on the Message parameter.</li>
+             * </ul>
              * 
-             * *   success: The metadata of the data source is obtained.
-             * *   fail: The metadata of the data source failed to be obtained. You can troubleshoot issues based on the Message parameter.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

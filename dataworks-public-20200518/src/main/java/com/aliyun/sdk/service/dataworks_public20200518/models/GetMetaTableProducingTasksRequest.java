@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableProducingTasksRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableProducingTasksRequest</p>
@@ -183,7 +184,10 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.sample_project.sample_table</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

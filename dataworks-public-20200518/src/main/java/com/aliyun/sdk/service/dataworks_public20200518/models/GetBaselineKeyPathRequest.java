@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBaselineKeyPathRequest} extends {@link RequestModel}
  *
  * <p>GetBaselineKeyPathRequest</p>
@@ -98,7 +99,7 @@ public class GetBaselineKeyPathRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class GetBaselineKeyPathRequest extends Request {
         }
 
         /**
-         * The name of the event.
+         * <p>The name of the event.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -116,7 +121,11 @@ public class GetBaselineKeyPathRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-07T00:00:00+0800</p>
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -125,7 +134,11 @@ public class GetBaselineKeyPathRequest extends Request {
         }
 
         /**
-         * The ID of the event.
+         * <p>The ID of the event.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder inGroupId(Integer inGroupId) {
             this.putBodyParameter("InGroupId", inGroupId);

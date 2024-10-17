@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDDLJobStatusRequest} extends {@link RequestModel}
  *
  * <p>GetDDLJobStatusRequest</p>
@@ -68,7 +69,7 @@ public class GetDDLJobStatusRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +78,11 @@ public class GetDDLJobStatusRequest extends Request {
         }
 
         /**
-         * The ID of the DDL task.
+         * <p>The ID of the DDL task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

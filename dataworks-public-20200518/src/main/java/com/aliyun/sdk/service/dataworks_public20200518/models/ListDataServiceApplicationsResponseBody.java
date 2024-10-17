@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServiceApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataServiceApplicationsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataServiceApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private Long applicationId;
@@ -201,7 +223,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder applicationId(Long applicationId) {
                 this.applicationId = applicationId;
@@ -209,7 +234,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My application</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -217,7 +245,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -231,6 +262,12 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataServiceApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceApplicationsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List < Applications> applications;
@@ -294,7 +331,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The basic information of the applications.
+             * <p>The basic information of the applications.</p>
              */
             public Builder applications(java.util.List < Applications> applications) {
                 this.applications = applications;
@@ -302,7 +339,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
+             * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -310,7 +350,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -318,7 +361,10 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

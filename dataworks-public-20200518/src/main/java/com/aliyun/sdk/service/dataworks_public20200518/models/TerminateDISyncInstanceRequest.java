@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TerminateDISyncInstanceRequest} extends {@link RequestModel}
  *
  * <p>TerminateDISyncInstanceRequest</p>
@@ -98,7 +99,7 @@ public class TerminateDISyncInstanceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,11 @@ public class TerminateDISyncInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the real-time synchronization task.
+         * <p>The ID of the real-time synchronization task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -116,10 +121,12 @@ public class TerminateDISyncInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
-         * <p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -128,7 +135,11 @@ public class TerminateDISyncInstanceRequest extends Request {
         }
 
         /**
-         * The value DI_REALTIME indicates that the task is a real-time synchronization task.
+         * <p>The value DI_REALTIME indicates that the task is a real-time synchronization task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DI_REALTIME</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

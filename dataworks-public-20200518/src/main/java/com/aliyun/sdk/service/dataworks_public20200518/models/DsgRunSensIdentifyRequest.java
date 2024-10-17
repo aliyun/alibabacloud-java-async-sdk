@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgRunSensIdentifyRequest} extends {@link RequestModel}
  *
  * <p>DsgRunSensIdentifyRequest</p>
@@ -91,7 +92,7 @@ public class DsgRunSensIdentifyRequest extends Request {
         }
 
         /**
-         * The parameters that you need to configure to scan specified metadata.
+         * <p>The parameters that you need to configure to scan specified metadata.</p>
          */
         public Builder esMetaParams(java.util.List < EsMetaParams> esMetaParams) {
             String esMetaParamsShrink = shrink(esMetaParams, "EsMetaParams", "json");
@@ -101,7 +102,11 @@ public class DsgRunSensIdentifyRequest extends Request {
         }
 
         /**
-         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
+         * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10241024</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -116,6 +121,12 @@ public class DsgRunSensIdentifyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DsgRunSensIdentifyRequest} extends {@link TeaModel}
+     *
+     * <p>DsgRunSensIdentifyRequest</p>
+     */
     public static class EsMetaParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -227,7 +238,10 @@ public class DsgRunSensIdentifyRequest extends Request {
             private String user; 
 
             /**
-             * The cluster ID. You can obtain the ID based on the data source you use.
+             * <p>The cluster ID. You can obtain the ID based on the data source you use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101010</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -235,12 +249,15 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>ODPS.ODPS</li>
+             * <li>EMR</li>
+             * <li>HOLO.POSTGRES</li>
+             * </ul>
              * 
-             * *   ODPS.ODPS
-             * *   EMR
-             * *   HOLO.POSTGRES
+             * <strong>example:</strong>
+             * <p>ODPS.ODPS</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -248,7 +265,10 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * The instance ID. You can obtain the ID based on the data source you use.
+             * <p>The instance ID. You can obtain the ID based on the data source you use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgprecn-cn-9lb37k181024</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -256,7 +276,10 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the name.
+             * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1666676756691024</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -264,7 +287,10 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * The name of the schema.
+             * <p>The name of the schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -272,7 +298,10 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -280,7 +309,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * The names of the tables.
+             * <p>The names of the tables.</p>
              */
             public Builder tableNameList(java.util.List < String > tableNameList) {
                 this.tableNameList = tableNameList;
@@ -288,7 +317,10 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * The username of the operator. We recommend that you enter the username of your Alibaba Cloud account.
+             * <p>The username of the operator. We recommend that you enter the username of your Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx-uat</p>
              */
             public Builder user(String user) {
                 this.user = user;

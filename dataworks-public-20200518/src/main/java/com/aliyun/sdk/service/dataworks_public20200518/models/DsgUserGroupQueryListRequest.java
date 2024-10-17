@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DsgUserGroupQueryListRequest} extends {@link RequestModel}
  *
  * <p>DsgUserGroupQueryListRequest</p>
@@ -134,7 +135,10 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * The keyword of the user group name. A fuzzy match is performed based on the keyword to search for the user group.
+         * <p>The keyword of the user group name. A fuzzy match is performed based on the keyword to search for the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yun_group</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -143,7 +147,10 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * The owner of the user group.
+         * <p>The owner of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -152,7 +159,11 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +172,11 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +185,10 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * The name of the compute engine. If you want to query the information about a MaxCompute user group, you need to configure this parameter.
+         * <p>The name of the compute engine. If you want to query the information about a MaxCompute user group, you need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

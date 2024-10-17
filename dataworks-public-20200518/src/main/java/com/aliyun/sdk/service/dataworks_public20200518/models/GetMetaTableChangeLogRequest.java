@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableChangeLogRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableChangeLogRequest</p>
@@ -152,7 +153,7 @@ public class GetMetaTableChangeLogRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -161,7 +162,10 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.
+         * <p>The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALTER_TABLE</p>
          */
         public Builder changeType(String changeType) {
             this.putBodyParameter("ChangeType", changeType);
@@ -170,11 +174,14 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <ul>
+         * <li>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</li>
+         * <li>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</li>
+         * </ul>
          * 
-         * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
-         * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
+         * <strong>example:</strong>
+         * <p>2020-06-02 00:00:00</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -183,7 +190,10 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The entity on which the change is made. Valid values: TABLE and PARTITION.
+         * <p>The entity on which the change is made. Valid values: TABLE and PARTITION.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         public Builder objectType(String objectType) {
             this.putBodyParameter("ObjectType", objectType);
@@ -192,7 +202,10 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -201,7 +214,10 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -210,11 +226,14 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <ul>
+         * <li>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</li>
+         * <li>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</li>
+         * </ul>
          * 
-         * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
-         * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
+         * <strong>example:</strong>
+         * <p>2020-06-01 00:00:00</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
@@ -223,10 +242,14 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The GUID of the table. Specify the GUID in the odps.projectName.tableName format. You can call the [GetMetaDBTableList](~~2780086~~) operation to query the GUID.
-         * <p>
+         * <p>The GUID of the table. Specify the GUID in the odps.projectName.tableName format. You can call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the GUID.</p>
+         * <blockquote>
+         * <p>To query the change logs of a MaxCompute table, you must call the <a href="https://help.aliyun.com/document_detail/2780094.html">GetMetaTableChangeLog</a> operation.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](~~2780094~~) operation.
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putBodyParameter("TableGuid", tableGuid);

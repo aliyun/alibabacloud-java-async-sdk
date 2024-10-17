@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMetaCollectionEntitiesRequest} extends {@link RequestModel}
  *
  * <p>ListMetaCollectionEntitiesRequest</p>
@@ -133,7 +134,11 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The unique identifier of the collection.
+         * <p>The unique identifier of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.12345</p>
          */
         public Builder collectionQualifiedName(String collectionQualifiedName) {
             this.putQueryParameter("CollectionQualifiedName", collectionQualifiedName);
@@ -142,10 +147,11 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The type of the entities.
-         * <p>
+         * <p>The type of the entities.</p>
+         * <p>For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.</p>
          * 
-         * For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.
+         * <strong>example:</strong>
+         * <p>maxcompute-table</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -154,7 +160,10 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -163,7 +172,10 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12222</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -172,7 +184,10 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

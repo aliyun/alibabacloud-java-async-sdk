@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInnerNodesRequest} extends {@link RequestModel}
  *
  * <p>ListInnerNodesRequest</p>
@@ -155,7 +156,7 @@ public class ListInnerNodesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -164,7 +165,10 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The name of the node to which the inner nodes belong.
+         * <p>The name of the node to which the inner nodes belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liux_test_n****</p>
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -173,7 +177,11 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The ID of the node group to which the inner nodes belong.
+         * <p>The ID of the node group to which the inner nodes belong.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder outerNodeId(Long outerNodeId) {
             this.putBodyParameter("OuterNodeId", outerNodeId);
@@ -182,7 +190,10 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: 1 to 100.
+         * <p>The page number. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -191,7 +202,10 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -200,10 +214,11 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The type of the node to which the inner nodes belong.
-         * <p>
+         * <p>The type of the node to which the inner nodes belong.</p>
+         * <p>Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (node group), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1002 (PAI inner node), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), 1106 (for-each), and 1221 (PyODPS 3). You can call the ListNodes operation to query the type of the node.</p>
          * 
-         * Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (node group), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1002 (PAI inner node), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), 1106 (for-each), and 1221 (PyODPS 3). You can call the ListNodes operation to query the type of the node.
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         public Builder programType(String programType) {
             this.putBodyParameter("ProgramType", programType);
@@ -212,7 +227,10 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The environment in which the node is run. Valid values: DEV and PROD. Default value: PROD.
+         * <p>The environment in which the node is run. Valid values: DEV and PROD. Default value: PROD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -221,7 +239,11 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

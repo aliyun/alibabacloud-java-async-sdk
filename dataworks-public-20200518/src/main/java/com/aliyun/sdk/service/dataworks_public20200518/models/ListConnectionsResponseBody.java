@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListConnectionsResponseBody</p>
@@ -73,7 +74,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The query results for data sources that are returned on multiple pages.
+         * <p>The query results for data sources that are returned on multiple pages.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +82,10 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +93,10 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc14115159376359****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -110,6 +120,12 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class Connections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindingCalcEngineId")
         private Integer bindingCalcEngineId;
@@ -341,7 +357,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The ID of the compute engine with which the data source is associated.
+             * <p>The ID of the compute engine with which the data source is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder bindingCalcEngineId(Integer bindingCalcEngineId) {
                 this.bindingCalcEngineId = bindingCalcEngineId;
@@ -349,11 +368,14 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data source. Valid values:
-             * <p>
+             * <p>The status of the data source. Valid values:</p>
+             * <ul>
+             * <li>1: The data source is normal.</li>
+             * <li>2: The data source is disabled.</li>
+             * </ul>
              * 
-             * *   1: The data source is normal.
-             * *   2: The data source is disabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder connectStatus(Integer connectStatus) {
                 this.connectStatus = connectStatus;
@@ -361,22 +383,25 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>odps</li>
+             * <li>mysql</li>
+             * <li>rds</li>
+             * <li>oss</li>
+             * <li>sqlserver</li>
+             * <li>polardb</li>
+             * <li>oracle</li>
+             * <li>mongodb</li>
+             * <li>emr</li>
+             * <li>postgresql</li>
+             * <li>analyticdb_for_mysql</li>
+             * <li>hybriddb_for_postgresql</li>
+             * <li>holo</li>
+             * </ul>
              * 
-             * *   odps
-             * *   mysql
-             * *   rds
-             * *   oss
-             * *   sqlserver
-             * *   polardb
-             * *   oracle
-             * *   mongodb
-             * *   emr
-             * *   postgresql
-             * *   analyticdb_for_mysql
-             * *   hybriddb_for_postgresql
-             * *   holo
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder connectionType(String connectionType) {
                 this.connectionType = connectionType;
@@ -384,187 +409,203 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the data source. Examples of details of some common data sources:
-             * <p>
-             * 
-             * *   odps
-             * 
+             * <p>The details of the data source. Examples of details of some common data sources:</p>
+             * <ul>
+             * <li>odps</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "accessId": "xssssss",
-             *       "accessKey": "xsaxsaxsa",
-             *       "authType": 2,
-             *       "endpoint": "http://service.odps.aliyun.com/api",
-             *       "project": "xsaxsax",
-             *       "tag": "public"
-             *     }
-             * 
-             * *   mysql
-             * 
+             * <pre><code>{
+             *   &quot;accessId&quot;: &quot;xssssss&quot;,
+             *   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
+             *   &quot;authType&quot;: 2,
+             *   &quot;endpoint&quot;: &quot;http://service.odps.aliyun.com/api&quot;,
+             *   &quot;project&quot;: &quot;xsaxsax&quot;,
+             *   &quot;tag&quot;: &quot;public&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>mysql</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "database": "xsaxsa",
-             *       "instanceName": "rm-xsaxsa",
-             *       "password": "xsaxsa",
-             *       "rdsOwnerId": "xasxsa",
-             *       "regionId": "cn-shanghai",
-             *       "tag": "rds",
-             *       "username": "xsaxsa"
-             *     }
-             * 
-             * *   rds
-             * 
+             * <pre><code>{
+             *   &quot;database&quot;: &quot;xsaxsa&quot;,
+             *   &quot;instanceName&quot;: &quot;rm-xsaxsa&quot;,
+             *   &quot;password&quot;: &quot;xsaxsa&quot;,
+             *   &quot;rdsOwnerId&quot;: &quot;xasxsa&quot;,
+             *   &quot;regionId&quot;: &quot;cn-shanghai&quot;,
+             *   &quot;tag&quot;: &quot;rds&quot;,
+             *   &quot;username&quot;: &quot;xsaxsa&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>rds</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "configType": 1,
-             *       "tag": "rds",
-             *       "database": "xsaxsa",
-             *       "username": "xsaxsa",
-             *       "password": "xssaxsa$32050",
-             *       "instanceName": "rm-xsaxs",
-             *       "rdsOwnerId": "11111111"
-             *     }
-             * 
-             * *   oss
-             * 
+             * <pre><code>{
+             *   &quot;configType&quot;: 1,
+             *   &quot;tag&quot;: &quot;rds&quot;,
+             *   &quot;database&quot;: &quot;xsaxsa&quot;,
+             *   &quot;username&quot;: &quot;xsaxsa&quot;,
+             *   &quot;password&quot;: &quot;xssaxsa$32050&quot;,
+             *   &quot;instanceName&quot;: &quot;rm-xsaxs&quot;,
+             *   &quot;rdsOwnerId&quot;: &quot;11111111&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>oss</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "accessId": "sssssxx",
-             *       "accessKey": "xsaxaxsaxs",
-             *       "bucket": "xsa-xs-xs",
-             *       "endpoint": "http://oss-cn-shanghai.aliyuncs.com",
-             *       "tag": "public"
-             *     }
-             * 
-             * *   sqlserver
-             * 
+             * <pre><code>{
+             *   &quot;accessId&quot;: &quot;sssssxx&quot;,
+             *   &quot;accessKey&quot;: &quot;xsaxaxsaxs&quot;,
+             *   &quot;bucket&quot;: &quot;xsa-xs-xs&quot;,
+             *   &quot;endpoint&quot;: &quot;http://oss-cn-shanghai.aliyuncs.com&quot;,
+             *   &quot;tag&quot;: &quot;public&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>sqlserver</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "jdbcUrl": "jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs",
-             *       "password": "sdasda$fs",
-             *       "tag": "public",
-             *       "username": "sxaxacdacdd"
-             *     }
-             * 
-             * *   polardb
-             * 
+             * <pre><code>{
+             *   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs&quot;,
+             *   &quot;password&quot;: &quot;sdasda$fs&quot;,
+             *   &quot;tag&quot;: &quot;public&quot;,
+             *   &quot;username&quot;: &quot;sxaxacdacdd&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>polardb</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "clusterId": "pc-sdadsadsa",
-             *       "database": "dsadsadsa",
-             *       "ownerId": "121212122",
-             *       "password": "sdasdafssa",
-             *       "region": "cn-shanghai",
-             *       "tag": "polardb",
-             *       "username": "asdadsads"
-             *     }
-             * 
-             * *   oracle
-             * 
+             * <pre><code>{
+             *   &quot;clusterId&quot;: &quot;pc-sdadsadsa&quot;,
+             *   &quot;database&quot;: &quot;dsadsadsa&quot;,
+             *   &quot;ownerId&quot;: &quot;121212122&quot;,
+             *   &quot;password&quot;: &quot;sdasdafssa&quot;,
+             *   &quot;region&quot;: &quot;cn-shanghai&quot;,
+             *   &quot;tag&quot;: &quot;polardb&quot;,
+             *   &quot;username&quot;: &quot;asdadsads&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>oracle</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "jdbcUrl": "jdbc:oracle:saaa:@xxxxx:1521:PROD",
-             *       "password": "sxasaxsa",
-             *       "tag": "public",
-             *       "username": "sasfadfa"
-             *     }
-             * 
-             * *   mongodb
-             * 
+             * <pre><code>{
+             *   &quot;jdbcUrl&quot;: &quot;jdbc:oracle:saaa:@xxxxx:1521:PROD&quot;,
+             *   &quot;password&quot;: &quot;sxasaxsa&quot;,
+             *   &quot;tag&quot;: &quot;public&quot;,
+             *   &quot;username&quot;: &quot;sasfadfa&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>mongodb</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "address": "[\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\"]",
-             *       "database": "admin",
-             *       "password": "sadsda@",
-             *       "tag": "public",
-             *       "username": "dsadsadas"
-             *     }
-             * 
-             * *   emr
-             * 
+             * <pre><code>{
+             *   &quot;address&quot;: &quot;[\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\&quot;]&quot;,
+             *   &quot;database&quot;: &quot;admin&quot;,
+             *   &quot;password&quot;: &quot;sadsda@&quot;,
+             *   &quot;tag&quot;: &quot;public&quot;,
+             *   &quot;username&quot;: &quot;dsadsadas&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>emr</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "accessId": "xsaxsa",
-             *       "emrClusterId": "C-dsads",
-             *       "emrResourceQueueName": "default",
-             *       "emrEndpoint": "emr.aliyuncs.com",
-             *       "accessKey": "dsadsad",
-             *       "emrUserId": "224833315798889783",
-             *       "name": "sasdsadsa",
-             *       "emrAccessMode": "simple",
-             *       "region": "cn-shanghai",
-             *       "authType": "2",
-             *       "emrProjectId": "FP-sdadsad"
-             *     }
-             * 
-             * *   postgresql
-             * 
+             * <pre><code>{
+             *   &quot;accessId&quot;: &quot;xsaxsa&quot;,
+             *   &quot;emrClusterId&quot;: &quot;C-dsads&quot;,
+             *   &quot;emrResourceQueueName&quot;: &quot;default&quot;,
+             *   &quot;emrEndpoint&quot;: &quot;emr.aliyuncs.com&quot;,
+             *   &quot;accessKey&quot;: &quot;dsadsad&quot;,
+             *   &quot;emrUserId&quot;: &quot;224833315798889783&quot;,
+             *   &quot;name&quot;: &quot;sasdsadsa&quot;,
+             *   &quot;emrAccessMode&quot;: &quot;simple&quot;,
+             *   &quot;region&quot;: &quot;cn-shanghai&quot;,
+             *   &quot;authType&quot;: &quot;2&quot;,
+             *   &quot;emrProjectId&quot;: &quot;FP-sdadsad&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>postgresql</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "jdbcUrl": "jdbc:postgresql://xxxx:1921/ssss",
-             *       "password": "sdadsads",
-             *       "tag": "public",
-             *       "username": "sdsasda"
-             *     }
-             * 
-             * *   analyticdb_for_mysql
-             * 
+             * <pre><code>{
+             *   &quot;jdbcUrl&quot;: &quot;jdbc:postgresql://xxxx:1921/ssss&quot;,
+             *   &quot;password&quot;: &quot;sdadsads&quot;,
+             *   &quot;tag&quot;: &quot;public&quot;,
+             *   &quot;username&quot;: &quot;sdsasda&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>analyticdb_for_mysql</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "instanceId": "am-sadsada",
-             *       "database": "xsxsx",
-             *       "username": "xsxsa",
-             *       "password": "asdadsa",
-             *       "connectionString": "am-xssxsxs.ads.aliyuncs.com:3306"
-             *     }
-             * 
-             * *   hybriddb_for_postgresql
-             * 
+             * <pre><code>{
+             *   &quot;instanceId&quot;: &quot;am-sadsada&quot;,
+             *   &quot;database&quot;: &quot;xsxsx&quot;,
+             *   &quot;username&quot;: &quot;xsxsa&quot;,
+             *   &quot;password&quot;: &quot;asdadsa&quot;,
+             *   &quot;connectionString&quot;: &quot;am-xssxsxs.ads.aliyuncs.com:3306&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>hybriddb_for_postgresql</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "connectionString": "gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com",
-             *       "database": "xsaxsaxas",
-             *       "password": "xsaxsaxsa@11",
-             *       "instanceId": "gp-xsaxsaxsa",
-             *       "port": "541132",
-             *       "ownerId": "xsaxsaxsas",
-             *       "username": "sadsad"
-             *     }
-             * 
-             * *   holo
-             * 
+             * <pre><code>{
+             *   &quot;connectionString&quot;: &quot;gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com&quot;,
+             *   &quot;database&quot;: &quot;xsaxsaxas&quot;,
+             *   &quot;password&quot;: &quot;xsaxsaxsa@11&quot;,
+             *   &quot;instanceId&quot;: &quot;gp-xsaxsaxsa&quot;,
+             *   &quot;port&quot;: &quot;541132&quot;,
+             *   &quot;ownerId&quot;: &quot;xsaxsaxsas&quot;,
+             *   &quot;username&quot;: &quot;sadsad&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>holo</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "accessId": "xsaxsaxs",
-             *       "accessKey": "xsaxsaxsa",
-             *       "database": "xsaxsaxsa",
-             *       "instanceId": "xsaxa",
-             *       "tag": "aliyun"
-             *     }
-             * 
-             * *   kafka
-             * 
+             * <pre><code>{
+             *   &quot;accessId&quot;: &quot;xsaxsaxs&quot;,
+             *   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
+             *   &quot;database&quot;: &quot;xsaxsaxsa&quot;,
+             *   &quot;instanceId&quot;: &quot;xsaxa&quot;,
+             *   &quot;tag&quot;: &quot;aliyun&quot;
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>kafka</li>
+             * </ul>
              * <!---->
              * 
-             *     {
-             *       "instanceId": "xsax-cn-xsaxsa",
-             *       "regionId": "cn-shanghai",
-             *       "tag": "aliyun",
-             *       "ownerId": "1212121212112"
-             *     }
+             * <pre><code>{
+             *   &quot;instanceId&quot;: &quot;xsax-cn-xsaxsa&quot;,
+             *   &quot;regionId&quot;: &quot;cn-shanghai&quot;,
+             *   &quot;tag&quot;: &quot;aliyun&quot;,
+             *   &quot;ownerId&quot;: &quot;1212121212112&quot;
+             * }
+             * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;database&quot;:&quot;xxx&quot;,&quot;instanceName&quot;:&quot;xxx&quot;,&quot;password&quot;:&quot;xxx&quot;,&quot;rdsOwnerId&quot;:&quot;xxx&quot;,&quot;tag&quot;:&quot;rds&quot;,&quot;username&quot;:&quot;xxx&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -572,7 +613,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the compute engine that is associated with the data source is the default compute engine used by data sources of the same type.
+             * <p>Indicates whether the compute engine that is associated with the data source is the default compute engine used by data sources of the same type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultEngine(Boolean defaultEngine) {
                 this.defaultEngine = defaultEngine;
@@ -580,7 +624,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the data source.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a connection</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -588,11 +635,14 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The environment in which the data source is used. Valid values:
-             * <p>
+             * <p>The environment in which the data source is used. Valid values:</p>
+             * <ul>
+             * <li>0: development environment</li>
+             * <li>1: production environment</li>
+             * </ul>
              * 
-             * *   0: development environment
-             * *   1: production environment
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -600,7 +650,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
+             * <p>The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mar 17, 2021 4:09:32 PM</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -608,7 +661,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
+             * <p>The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mar 17, 2021 4:09:32 PM</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -616,7 +672,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The data source ID.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -624,7 +683,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -632,7 +694,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to last modify the data source.
+             * <p>The ID of the Alibaba Cloud account that is used to last modify the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>193543050****</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -640,7 +705,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace with which the data source is associated.
+             * <p>The ID of the workspace with which the data source is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -648,7 +716,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.
+             * <p>The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -656,7 +727,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data source is a shared data source.
+             * <p>Indicates whether the data source is a shared data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder shared(Boolean shared) {
                 this.shared = shared;
@@ -664,11 +738,14 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data source. Valid values:
-             * <p>
+             * <p>The status of the data source. Valid values:</p>
+             * <ul>
+             * <li>1: The data source is normal.</li>
+             * <li>2: The data source is disabled.</li>
+             * </ul>
              * 
-             * *   1: The data source is normal.
-             * *   2: The data source is disabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -676,11 +753,14 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the data source. This parameter is used in scenarios where a type includes subtypes. The following type and subtypes are supported:
-             * <p>
+             * <p>The subtype of the data source. This parameter is used in scenarios where a type includes subtypes. The following type and subtypes are supported:</p>
+             * <ul>
+             * <li>Type: <code>rds</code></li>
+             * <li>Subtypes: <code>mysql</code>, <code>sqlserver</code>, and <code>postgresql</code>.</li>
+             * </ul>
              * 
-             * *   Type: `rds`
-             * *   Subtypes: `mysql`, `sqlserver`, and `postgresql`.
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -688,7 +768,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -702,6 +785,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Connections")
         private java.util.List < Connections> connections;
@@ -765,7 +854,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The data sources.
+             * <p>The data sources.</p>
              */
             public Builder connections(java.util.List < Connections> connections) {
                 this.connections = connections;
@@ -773,7 +862,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -781,7 +873,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -789,7 +884,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of data sources returned.
+             * <p>The total number of data sources returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

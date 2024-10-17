@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityEntityRequest} extends {@link RequestModel}
  *
  * <p>GetQualityEntityRequest</p>
@@ -136,16 +137,20 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * The type of the compute engine or data source. Valid values:
-         * <p>
+         * <p>The type of the compute engine or data source. Valid values:</p>
+         * <ul>
+         * <li>cdh</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>odps</li>
+         * <li>emr</li>
+         * <li>hadoop</li>
+         * <li>holodb</li>
+         * <li>hybriddb_for_postgresql</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cdh
-         * *   analyticdb_for_mysql
-         * *   odps
-         * *   emr
-         * *   hadoop
-         * *   holodb
-         * *   hybriddb_for_postgresql
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -154,7 +159,10 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * The partition filter expression.
+         * <p>The partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=$[yyyymmdd]</p>
          */
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
@@ -172,7 +180,11 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source. You can obtain the name from data source configurations.
+         * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -181,7 +193,11 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * The name of the partitioned table. You can call the [GetMetaTablePartition](~~173923~~) operation to obtain the name.
+         * <p>The name of the partitioned table. You can call the <a href="https://help.aliyun.com/document_detail/173923.html">GetMetaTablePartition</a> operation to obtain the name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dual</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

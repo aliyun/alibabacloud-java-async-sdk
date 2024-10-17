@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRecognizeRuleDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRecognizeRuleDetailResponseBody</p>
@@ -97,7 +98,7 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the sensitive field in the JSON format.
+         * <p>The details of the sensitive field in the JSON format.</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9990030003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,7 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +125,10 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +136,10 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the request ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +147,14 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
