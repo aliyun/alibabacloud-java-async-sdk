@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCommercialUsageResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCommercialUsageResponseBody</p>
@@ -97,7 +98,10 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response status. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.
+         * <p>The response status. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -121,7 +125,10 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +136,10 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +147,14 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +167,12 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCommercialUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCommercialUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Complete")
         private Boolean complete;
@@ -193,11 +212,14 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> items; 
 
             /**
-             * Indicates whether a multi-region query is complete. Valid values:
-             * <p>
+             * <p>Indicates whether a multi-region query is complete. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder complete(Boolean complete) {
                 this.complete = complete;
@@ -205,7 +227,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The returned struct.
+             * <p>The returned struct.</p>
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;

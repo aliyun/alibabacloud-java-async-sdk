@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchAlertContactResponseBody} extends {@link TeaModel}
  *
  * <p>SearchAlertContactResponseBody</p>
@@ -49,7 +50,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -57,7 +58,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class SearchAlertContactResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchAlertContactResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertContactResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactId")
         private Long contactId;
@@ -229,7 +239,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             private String webhook; 
 
             /**
-             * The ID of the alert contact.
+             * <p>The ID of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -237,7 +250,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact.
+             * <p>The name of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Doe</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -245,7 +261,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The contact group to which the contact belongs. If your contacts are added to multiple contact groups, the contact groups are separated by vertical bars (|).
+             * <p>The contact group to which the contact belongs. If your contacts are added to multiple contact groups, the contact groups are separated by vertical bars (|).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default Group | SRE Group</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -253,7 +272,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the alert contact was created.
+             * <p>The timestamp generated when the alert contact was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572349025000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -261,7 +283,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f6">https://oapi.dingtalk.com/robot/send?access_token=91f2f6</a>****</p>
              */
             public Builder dingRobot(String dingRobot) {
                 this.dingRobot = dingRobot;
@@ -269,7 +294,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -277,7 +305,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the alert contact.
+             * <p>The mobile number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111*****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -285,7 +316,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxyexli2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -293,11 +327,14 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert contact receives system notifications. Valid values:
-             * <p>
+             * <p>Indicates whether the alert contact receives system notifications. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The alert contact receives system notifications.</li>
+             * <li><code>false</code>: The alert contact does not receive system notifications.</li>
+             * </ul>
              * 
-             * *   `true`: The alert contact receives system notifications.
-             * *   `false`: The alert contact does not receive system notifications.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder systemNoc(Boolean systemNoc) {
                 this.systemNoc = systemNoc;
@@ -305,7 +342,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the alert contact was updated.
+             * <p>The timestamp generated when the alert contact was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1580258717000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -313,7 +353,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -321,7 +364,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the webhook.
+             * <p>The information about the webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;body&quot;:&quot;{   \&quot;msg_type\&quot;: \&quot;text\&quot;,   \&quot;content\&quot;: {     \&quot;text\&quot;: \&quot;$content\&quot;   } }&quot;,&quot;header&quot;:{&quot;Arms-Content-Type&quot;:&quot;json&quot;},&quot;method&quot;:&quot;post&quot;,&quot;params&quot;:{},&quot;url&quot;:&quot;https://<em><strong>&quot;,&quot;userId&quot;:&quot;1131971649</strong></em>&quot;}&quot;,</p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -335,6 +381,12 @@ public class SearchAlertContactResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchAlertContactResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertContactResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contacts")
         private java.util.List < Contacts> contacts;
@@ -398,7 +450,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The information about the alert contacts.
+             * <p>The information about the alert contacts.</p>
              */
             public Builder contacts(java.util.List < Contacts> contacts) {
                 this.contacts = contacts;
@@ -406,7 +458,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -414,7 +469,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -422,7 +480,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlertContactGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteAlertContactGroupRequest</p>
@@ -69,7 +70,11 @@ public class DeleteAlertContactGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact group.
+         * <p>The ID of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder contactGroupId(Long contactGroupId) {
             this.putQueryParameter("ContactGroupId", contactGroupId);
@@ -78,7 +83,11 @@ public class DeleteAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

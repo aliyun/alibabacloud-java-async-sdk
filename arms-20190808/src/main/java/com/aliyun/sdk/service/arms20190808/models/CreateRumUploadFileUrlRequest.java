@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRumUploadFileUrlRequest} extends {@link RequestModel}
  *
  * <p>CreateRumUploadFileUrlRequest</p>
@@ -154,7 +155,10 @@ public class CreateRumUploadFileUrlRequest extends Request {
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -163,7 +167,10 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * The type of the file. You can set this parameter to "application/zip", "text/plain", or an empty string.
+         * <p>The type of the file. You can set this parameter to &quot;application/zip&quot;, &quot;text/plain&quot;, or an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/plain</p>
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -172,7 +179,11 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * The file name.
+         * <p>The file name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.js.map</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -181,7 +192,11 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * The process ID (PID) of the application.
+         * <p>The process ID (PID) of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iioe7jcnuk@582846f37******</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -190,7 +205,11 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +218,10 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.
+         * <p>The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source-map</p>
          */
         public Builder sourcemapType(String sourcemapType) {
             this.putQueryParameter("SourcemapType", sourcemapType);
@@ -208,7 +230,10 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125bdb39-a415-4503-bd96-e293925fc64c</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -217,7 +242,10 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * The version number of the file.
+         * <p>The version number of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

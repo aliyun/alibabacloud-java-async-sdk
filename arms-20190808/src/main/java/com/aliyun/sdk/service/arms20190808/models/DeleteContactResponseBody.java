@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContactResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteContactResponseBody</p>
@@ -49,11 +50,14 @@ public class DeleteContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the alert contact is deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the alert contact is deleted. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The alert contact is deleted.</li>
+         * <li><code>false</code>: The alert contact is not deleted.</li>
+         * </ul>
          * 
-         * *   `true`: The alert contact is deleted.
-         * *   `false`: The alert contact is not deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -61,7 +65,10 @@ public class DeleteContactResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTimingSyntheticTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateTimingSyntheticTaskRequest</p>
@@ -193,7 +194,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * The list of assertions.
+         * <p>The list of assertions.</p>
          */
         public Builder availableAssertions(java.util.List < AvailableAssertions> availableAssertions) {
             String availableAssertionsShrink = shrink(availableAssertions, "AvailableAssertions", "json");
@@ -203,7 +204,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The general settings.
+         * <p>The general settings.</p>
          */
         public Builder commonSetting(CommonSetting commonSetting) {
             String commonSettingShrink = shrink(commonSetting, "CommonSetting", "json");
@@ -213,7 +214,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The custom cycle.
+         * <p>The custom cycle.</p>
          */
         public Builder customPeriod(CustomPeriod customPeriod) {
             String customPeriodShrink = shrink(customPeriod, "CustomPeriod", "json");
@@ -223,7 +224,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.
+         * <p>The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5m</p>
          */
         public Builder frequency(String frequency) {
             this.putQueryParameter("Frequency", frequency);
@@ -232,7 +236,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The monitoring configurations.
+         * <p>The monitoring configurations.</p>
          */
         public Builder monitorConf(MonitorConf monitorConf) {
             String monitorConfShrink = shrink(monitorConf, "MonitorConf", "json");
@@ -242,7 +246,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The list of monitoring points.
+         * <p>The list of monitoring points.</p>
          */
         public Builder monitors(java.util.List < Monitors> monitors) {
             String monitorsShrink = shrink(monitors, "Monitors", "json");
@@ -252,7 +256,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The name of the task.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AlibabaCloud DNS Task</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -261,7 +268,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,7 +280,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -279,7 +292,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -289,7 +302,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The ID of the synthetic monitoring task.
+         * <p>The ID of the synthetic monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5308a2691f59422c8c3b7aeccxxxxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -304,6 +320,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class AvailableAssertions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expect")
         private String expect;
@@ -367,7 +389,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String type; 
 
             /**
-             * The expected value.
+             * <p>The expected value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder expect(String expect) {
                 this.expect = expect;
@@ -375,7 +400,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The condition. gt: greater than. gte: greater than or equal to. lt: less than. lte: less than or equal to. eq: equal to. neq: not equal to. ctn: contain. nctn: does not contain. exist: exist. n_exist: does not exist. belong: belong to. n_belong: does not belong to. reg_match: regular expression.
+             * <p>The condition. gt: greater than. gte: greater than or equal to. lt: less than. lte: less than or equal to. eq: equal to. neq: not equal to. ctn: contain. nctn: does not contain. exist: exist. n_exist: does not exist. belong: belong to. n_belong: does not belong to. reg_match: regular expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -383,7 +411,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The check target. If you set the type parameter to HttpResCode, HttpResBody, or HttpResponseTime, you do not need to set the target parameter. If you set the type parameter to HttpResHead, you must specify the key in the header. If you set the type parameter to HttpResBodyJson, use jsonPath.
+             * <p>The check target. If you set the type parameter to HttpResCode, HttpResBody, or HttpResponseTime, you do not need to set the target parameter. If you set the type parameter to HttpResHead, you must specify the key in the header. If you set the type parameter to HttpResBodyJson, use jsonPath.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HttpResponseTime</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -391,7 +422,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The assertion type. Valid values: HttpResCode, HttpResHead, HttpResBody, HttpResBodyJson, HttpResponseTime, IcmpPackLoss (packet loss rate), IcmpPackMaxLatency (maximum packet latency), IcmpPackAvgLatency (average packet latency), TraceRouteHops (number of hops), DnsARecord (A record), DnsCName (CNAME), websiteTTFB (time to first packet), websiteTTLB (time to last packet), websiteFST (first paint time), websiteFFST (first meaningful paint), websiteOnload (full loaded time). For more information, see the following description.
+             * <p>The assertion type. Valid values: HttpResCode, HttpResHead, HttpResBody, HttpResBodyJson, HttpResponseTime, IcmpPackLoss (packet loss rate), IcmpPackMaxLatency (maximum packet latency), IcmpPackAvgLatency (average packet latency), TraceRouteHops (number of hops), DnsARecord (A record), DnsCName (CNAME), websiteTTFB (time to first packet), websiteTTLB (time to last packet), websiteFST (first paint time), websiteFFST (first meaningful paint), websiteOnload (full loaded time). For more information, see the following description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TraceRouteHops</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -405,6 +439,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class Hosts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -456,7 +496,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private java.util.List < String > ips; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -464,12 +507,15 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The IP version. Valid values:
-             * <p>
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li>0: A version is automatically selected.</li>
+             * <li>1: IPv4</li>
+             * <li>2: IPv6</li>
+             * </ul>
              * 
-             * *   0: A version is automatically selected.
-             * *   1: IPv4
-             * *   2: IPv6
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipType(Integer ipType) {
                 this.ipType = ipType;
@@ -477,7 +523,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The list of IP addresses.
+             * <p>The list of IP addresses.</p>
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -491,6 +537,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class CustomHost extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hosts")
         private java.util.List < Hosts> hosts;
@@ -530,7 +582,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Integer selectType; 
 
             /**
-             * The list of hosts.
+             * <p>The list of hosts.</p>
              */
             public Builder hosts(java.util.List < Hosts> hosts) {
                 this.hosts = hosts;
@@ -538,11 +590,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The selection mode. Valid values:
-             * <p>
+             * <p>The selection mode. Valid values:</p>
+             * <ul>
+             * <li>0: random</li>
+             * <li>1: polling</li>
+             * </ul>
              * 
-             * *   0: random
-             * *   1: polling
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectType(Integer selectType) {
                 this.selectType = selectType;
@@ -556,6 +611,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class CustomPrometheusSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrometheusClusterId")
         private String prometheusClusterId;
@@ -607,7 +668,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private java.util.Map < String, String > prometheusLabels; 
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -615,7 +676,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -623,7 +684,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The reserved parameters.
+             * <p>The reserved parameters.</p>
              */
             public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
                 this.prometheusLabels = prometheusLabels;
@@ -637,6 +698,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class CustomVPCSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -700,7 +767,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String vpcId; 
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -708,7 +778,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The ID of the security group to which the client belongs. The security group specifies the inbound and outbound rules of the client for the VPC. You need to allow the security group to which the client belongs to access the security group to which the VPC belongs. Otherwise, the client cannot access resources in the VPC.
+             * <p>The ID of the security group to which the client belongs. The security group specifies the inbound and outbound rules of the client for the VPC. You need to allow the security group to which the client belongs to access the security group to which the VPC belongs. Otherwise, the client cannot access resources in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxxxx</p>
              */
             public Builder secureGroupId(String secureGroupId) {
                 this.secureGroupId = secureGroupId;
@@ -716,7 +789,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zevek6r3mpny7wxxxxxv</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -724,7 +800,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * VPC ID.
+             * <p>VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp15bjtubjytclwxxxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -738,6 +817,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class CommonSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomHost")
         private CustomHost customHost;
@@ -849,7 +934,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String xtraceRegion; 
 
             /**
-             * The custom host settings.
+             * <p>The custom host settings.</p>
              */
             public Builder customHost(CustomHost customHost) {
                 this.customHost = customHost;
@@ -857,7 +942,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The reserved parameters.
+             * <p>The reserved parameters.</p>
              */
             public Builder customPrometheusSetting(CustomPrometheusSetting customPrometheusSetting) {
                 this.customPrometheusSetting = customPrometheusSetting;
@@ -865,7 +950,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The information about the virtual private cloud (VPC). If the destination URL is an Alibaba Cloud internal endpoint, you need to configure a VPC.
+             * <p>The information about the virtual private cloud (VPC). If the destination URL is an Alibaba Cloud internal endpoint, you need to configure a VPC.</p>
              */
             public Builder customVPCSetting(CustomVPCSetting customVPCSetting) {
                 this.customVPCSetting = customVPCSetting;
@@ -873,12 +958,15 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The IP version. Valid values:
-             * <p>
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li>0: A version is automatically selected.</li>
+             * <li>1: IPv4</li>
+             * <li>2: IPv6</li>
+             * </ul>
              * 
-             * *   0: A version is automatically selected.
-             * *   1: IPv4
-             * *   2: IPv6
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipType(Integer ipType) {
                 this.ipType = ipType;
@@ -886,7 +974,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable tracing.
+             * <p>Specifies whether to enable tracing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isOpenTrace(Boolean isOpenTrace) {
                 this.isOpenTrace = isOpenTrace;
@@ -894,11 +985,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to evenly distribute monitoring samples. Valid values:
-             * <p>
+             * <p>Specifies whether to evenly distribute monitoring samples. Valid values:</p>
+             * <ul>
+             * <li>0: no</li>
+             * <li>1: yes</li>
+             * </ul>
              * 
-             * *   0: no
-             * *   1: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder monitorSamples(Integer monitorSamples) {
                 this.monitorSamples = monitorSamples;
@@ -906,12 +1000,15 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The type of the client for tracing. Valid values:
-             * <p>
+             * <p>The type of the client for tracing. Valid values:</p>
+             * <ul>
+             * <li>0: ARMS agent</li>
+             * <li>1: OpenTelemetry</li>
+             * <li>2: Jaeger</li>
+             * </ul>
              * 
-             * *   0: ARMS agent
-             * *   1: OpenTelemetry
-             * *   2: Jaeger
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder traceClientType(Integer traceClientType) {
                 this.traceClientType = traceClientType;
@@ -919,7 +1016,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The region to which trace data is reported.
+             * <p>The region to which trace data is reported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder xtraceRegion(String xtraceRegion) {
                 this.xtraceRegion = xtraceRegion;
@@ -933,6 +1033,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class CustomPeriod extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndHour")
         private Integer endHour;
@@ -972,7 +1078,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Integer startHour; 
 
             /**
-             * The hour at which the test ends. Valid values: 0 to 24.
+             * <p>The hour at which the test ends. Valid values: 0 to 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder endHour(Integer endHour) {
                 this.endHour = endHour;
@@ -980,7 +1089,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The hour at which the test starts. Valid values: 0 to 24.
+             * <p>The hour at which the test starts. Valid values: 0 to 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder startHour(Integer startHour) {
                 this.startHour = startHour;
@@ -994,6 +1106,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class RequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -1033,7 +1151,13 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String type; 
 
             /**
-             * The content of the request body. Format: JSON string. The parameter is required if the Type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.
+             * <p>The content of the request body. Format: JSON string. The parameter is required if the Type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;key1&quot;: &quot;value1&quot;,
+             *       &quot;key2&quot;: &quot;value2&quot;
+             * }</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1041,7 +1165,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The type of the request body. Valid values: text/plain, application/json, application/x-www-form-urlencoded, multipart/form-data, application/xml, and text/html.
+             * <p>The type of the request body. Valid values: text/plain, application/json, application/x-www-form-urlencoded, multipart/form-data, application/xml, and text/html.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/json</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1055,6 +1182,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class ApiHTTP extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckCert")
         private Boolean checkCert;
@@ -1166,7 +1299,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Long timeout; 
 
             /**
-             * Specifies whether to verify the certificate. Default value: false.
+             * <p>Specifies whether to verify the certificate. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder checkCert(Boolean checkCert) {
                 this.checkCert = checkCert;
@@ -1174,7 +1310,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The connection timeout period. Unit: milliseconds. Default value: 5000. Minimum value: 1000. Maximum value: 300000.
+             * <p>The connection timeout period. Unit: milliseconds. Default value: 5000. Minimum value: 1000. Maximum value: 300000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder connectTimeout(Long connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -1182,11 +1321,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The request method. Valid values:
-             * <p>
+             * <p>The request method. Valid values:</p>
+             * <ul>
+             * <li>POST</li>
+             * <li>GET</li>
+             * </ul>
              * 
-             * *   POST
-             * *   GET
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -1194,16 +1336,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:
-             * <p>
+             * <p>The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:</p>
+             * <p>0: default</p>
+             * <p>1-http/1.1</p>
+             * <p>2-h2</p>
+             * <p>3: disables the ALPN protocol</p>
              * 
-             * 0: default
-             * 
-             * 1-http/1.1
-             * 
-             * 2-h2
-             * 
-             * 3: disables the ALPN protocol
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder protocolAlpnProtocol(Integer protocolAlpnProtocol) {
                 this.protocolAlpnProtocol = protocolAlpnProtocol;
@@ -1211,7 +1351,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The HTTP request body.
+             * <p>The HTTP request body.</p>
              */
             public Builder requestBody(RequestBody requestBody) {
                 this.requestBody = requestBody;
@@ -1219,7 +1359,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The custom header field.
+             * <p>The custom header field.</p>
              */
             public Builder requestHeaders(java.util.Map < String, String > requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -1227,7 +1367,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The URL or request path for synthetic monitoring.
+             * <p>The URL or request path for synthetic monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://********</p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -1235,7 +1378,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period. Unit: milliseconds. Default value: 10000. Minimum value: 1000. Maximum value: 300000.
+             * <p>The timeout period. Unit: milliseconds. Default value: 10000. Minimum value: 1000. Maximum value: 300000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -1249,6 +1395,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class FileDownload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionTimeout")
         private Long connectionTimeout;
@@ -1480,7 +1632,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String whiteList; 
 
             /**
-             * Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.
+             * <p>Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder connectionTimeout(Long connectionTimeout) {
                 this.connectionTimeout = connectionTimeout;
@@ -1488,7 +1643,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The content of the custom request header. Format: JSON map.
+             * <p>The content of the custom request header. Format: JSON map.</p>
              */
             public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
@@ -1496,11 +1651,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The kernel type. Valid values:
-             * <p>
+             * <p>The kernel type. Valid values:</p>
+             * <ul>
+             * <li>1: curl</li>
+             * <li>0: WinInet</li>
+             * </ul>
              * 
-             * *   1: curl
-             * *   0: WinInet
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder downloadKernel(Integer downloadKernel) {
                 this.downloadKernel = downloadKernel;
@@ -1508,7 +1666,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore CA certificate authentication errors. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to ignore CA certificate authentication errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateAuthError(Integer ignoreCertificateAuthError) {
                 this.ignoreCertificateAuthError = ignoreCertificateAuthError;
@@ -1516,7 +1677,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate revocation errors. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate revocation errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateCanceledError(Integer ignoreCertificateCanceledError) {
                 this.ignoreCertificateCanceledError = ignoreCertificateCanceledError;
@@ -1524,7 +1688,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate invalidity. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate invalidity. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateOutOfDateError(Integer ignoreCertificateOutOfDateError) {
                 this.ignoreCertificateOutOfDateError = ignoreCertificateOutOfDateError;
@@ -1532,7 +1699,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate status errors. 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate status errors. 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateStatusError(Integer ignoreCertificateStatusError) {
                 this.ignoreCertificateStatusError = ignoreCertificateStatusError;
@@ -1540,7 +1710,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate incredibility. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate incredibility. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateUntrustworthyError(Integer ignoreCertificateUntrustworthyError) {
                 this.ignoreCertificateUntrustworthyError = ignoreCertificateUntrustworthyError;
@@ -1548,7 +1721,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate usage errors. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate usage errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateUsingError(Integer ignoreCertificateUsingError) {
                 this.ignoreCertificateUsingError = ignoreCertificateUsingError;
@@ -1556,7 +1732,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore host invalidity. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to ignore host invalidity. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreInvalidHostError(Integer ignoreInvalidHostError) {
                 this.ignoreInvalidHostError = ignoreInvalidHostError;
@@ -1564,7 +1743,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The monitoring timeout period. Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 60000.
+             * <p>The monitoring timeout period. Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 60000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60000</p>
              */
             public Builder monitorTimeout(Long monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -1572,12 +1754,15 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The QUIC protocol type. Valid values:
-             * <p>
+             * <p>The QUIC protocol type. Valid values:</p>
+             * <ul>
+             * <li>1: HTTP/1</li>
+             * <li>2: HTTP/2</li>
+             * <li>3: http3</li>
+             * </ul>
              * 
-             * *   1: HTTP/1
-             * *   2: HTTP/2
-             * *   3: http3
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quickProtocol(Integer quickProtocol) {
                 this.quickProtocol = quickProtocol;
@@ -1585,7 +1770,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to support redirection. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to support redirection. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder redirection(Integer redirection) {
                 this.redirection = redirection;
@@ -1593,7 +1781,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The URL that is used to download the file.
+             * <p>The URL that is used to download the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png">https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -1601,7 +1792,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The maximum file size of a single transfer. Unit: KB. Minimum value: 1. Maximum value: 20480. Valid values: 2048.
+             * <p>The maximum file size of a single transfer. Unit: KB. Minimum value: 1. Maximum value: 20480. Valid values: 2048.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder transmissionSize(Long transmissionSize) {
                 this.transmissionSize = transmissionSize;
@@ -1609,7 +1803,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The keyword that is used in verification.
+             * <p>The keyword that is used in verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder validateKeywords(String validateKeywords) {
                 this.validateKeywords = validateKeywords;
@@ -1617,12 +1814,15 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The verification method. Valid values:
-             * <p>
+             * <p>The verification method. Valid values:</p>
+             * <ul>
+             * <li>0: no verification</li>
+             * <li>1: string verification</li>
+             * <li>2: MD5 verification</li>
+             * </ul>
              * 
-             * *   0: no verification
-             * *   1: string verification
-             * *   2: MD5 verification
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder verifyWay(Integer verifyWay) {
                 this.verifyWay = verifyWay;
@@ -1630,7 +1830,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: www.aliyun.com:203.0.3.55|203.3.44.67. It indicates that all IP addresses that belong to the www.aliyun.com domain name except 203.0.3.55 and 203.3.44.67 are hijacked.
+             * <p>The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -1644,6 +1847,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class NetDNS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dig")
         private Integer dig;
@@ -1731,7 +1940,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Long timeout; 
 
             /**
-             * Specifies whether to use the dig command to display the data. Valid values: 0: no. 1: yes.
+             * <p>Specifies whether to use the dig command to display the data. Valid values: 0: no. 1: yes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dig(Integer dig) {
                 this.dig = dig;
@@ -1739,7 +1951,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The IP version of the DNS server. Valid values: 0: IPv4. 1: IPv6. 2: A version is automatically selected. Default value: 0.
+             * <p>The IP version of the DNS server. Valid values: 0: IPv4. 1: IPv6. 2: A version is automatically selected. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dnsServerIpType(Integer dnsServerIpType) {
                 this.dnsServerIpType = dnsServerIpType;
@@ -1747,7 +1962,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The IP address of the DNS server. Default value: 114.114.114.114.
+             * <p>The IP address of the DNS server. Default value: 114.114.114.114.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.114.114.114</p>
              */
             public Builder nsServer(String nsServer) {
                 this.nsServer = nsServer;
@@ -1755,7 +1973,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The DNS query method. Valid values: 0: recursive. 1: iterative. Default value: 0.
+             * <p>The DNS query method. Valid values: 0: recursive. 1: iterative. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queryMethod(Integer queryMethod) {
                 this.queryMethod = queryMethod;
@@ -1763,7 +1984,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -1771,7 +1995,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period for the DNS synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 45000. Default value: 5000.
+             * <p>The timeout period for the DNS synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 45000. Default value: 5000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -1785,6 +2012,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class NetICMP extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
@@ -1908,7 +2141,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Long tracertTimeout; 
 
             /**
-             * The interval at which ICMP packets are sent. Unit: milliseconds. Minimum value: 200. Maximum value: 10000.
+             * <p>The interval at which ICMP packets are sent. Unit: milliseconds. Minimum value: 200. Maximum value: 10000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -1916,7 +2152,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The number of ICMP packets that are sent. Minimum value: 1. Maximum value: 50. Default value: 4.
+             * <p>The number of ICMP packets that are sent. Minimum value: 1. Maximum value: 50. Default value: 4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder packageNum(Integer packageNum) {
                 this.packageNum = packageNum;
@@ -1924,7 +2163,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The size of each ICMP packet. Unit: bytes. Valid values: 32, 64, 128, 256, 512, 1024, 1080, and 1450.
+             * <p>The size of each ICMP packet. Unit: bytes. Valid values: 32, 64, 128, 256, 512, 1024, 1080, and 1450.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder packageSize(Integer packageSize) {
                 this.packageSize = packageSize;
@@ -1932,7 +2174,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to split ICMP packets. Default value: true.
+             * <p>Specifies whether to split ICMP packets. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder splitPackage(Boolean splitPackage) {
                 this.splitPackage = splitPackage;
@@ -1940,7 +2185,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The IP address or domain name of the destination host. The value cannot contain port numbers, protocol headers, or request paths.
+             * <p>The IP address or domain name of the destination host. The value cannot contain port numbers, protocol headers, or request paths.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -1948,7 +2196,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period for the ICMP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.
+             * <p>The timeout period for the ICMP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -1956,7 +2207,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the tracert command. Default value: true.
+             * <p>Specifies whether to enable the tracert command. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tracertEnable(Boolean tracertEnable) {
                 this.tracertEnable = tracertEnable;
@@ -1964,7 +2218,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.
+             * <p>The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tracertNumMax(Integer tracertNumMax) {
                 this.tracertNumMax = tracertNumMax;
@@ -1972,7 +2229,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.
+             * <p>The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60000</p>
              */
             public Builder tracertTimeout(Long tracertTimeout) {
                 this.tracertTimeout = tracertTimeout;
@@ -1986,6 +2246,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class NetTCP extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectTimes")
         private Integer connectTimes;
@@ -2085,7 +2351,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Long tracertTimeout; 
 
             /**
-             * The number of TCP connections that are established. Minimum value: 1. Maximum value: 16. Default value: 4.
+             * <p>The number of TCP connections that are established. Minimum value: 1. Maximum value: 16. Default value: 4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder connectTimes(Integer connectTimes) {
                 this.connectTimes = connectTimes;
@@ -2093,7 +2362,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The interval at which TCP connections are established. Unit: milliseconds. Minimum value: 200. Maximum value: 10000. Default value: 200.
+             * <p>The interval at which TCP connections are established. Unit: milliseconds. Minimum value: 200. Maximum value: 10000. Default value: 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -2101,7 +2373,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The IP address of the destination host.
+             * <p>The IP address of the destination host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1:8888</p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -2109,7 +2384,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period for the TCP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.
+             * <p>The timeout period for the TCP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -2117,7 +2395,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the tracert command. Default value: true.
+             * <p>Specifies whether to enable the tracert command. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tracertEnable(Boolean tracertEnable) {
                 this.tracertEnable = tracertEnable;
@@ -2125,7 +2406,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.
+             * <p>The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tracertNumMax(Integer tracertNumMax) {
                 this.tracertNumMax = tracertNumMax;
@@ -2133,7 +2417,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.
+             * <p>The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder tracertTimeout(Long tracertTimeout) {
                 this.tracertTimeout = tracertTimeout;
@@ -2147,6 +2434,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class Stream extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomHeaderContent")
         private java.util.Map < String, String > customHeaderContent;
@@ -2246,7 +2539,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String whiteList; 
 
             /**
-             * The custom header. Format: JSON map.
+             * <p>The custom header. Format: JSON map.</p>
              */
             public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
@@ -2254,11 +2547,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The player. Default value: 12. Valid values:
-             * <p>
+             * <p>The player. Default value: 12. Valid values:</p>
+             * <ul>
+             * <li>12: VLC</li>
+             * <li>2: Flash Player</li>
+             * </ul>
              * 
-             * *   12: VLC
-             * *   2: Flash Player
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder playerType(Integer playerType) {
                 this.playerType = playerType;
@@ -2266,11 +2562,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The address type of the resource. Valid values:
-             * <p>
+             * <p>The address type of the resource. Valid values:</p>
+             * <ul>
+             * <li>1: resource URL.</li>
+             * <li>0: page URL. Default value: 0.</li>
+             * </ul>
              * 
-             * *   1: resource URL.
-             * *   0: page URL. Default value: 0.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder streamAddressType(Integer streamAddressType) {
                 this.streamAddressType = streamAddressType;
@@ -2278,7 +2577,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The monitoring duration. Unit: seconds. Maximum and default value: 60.
+             * <p>The monitoring duration. Unit: seconds. Maximum and default value: 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder streamMonitorTimeout(Integer streamMonitorTimeout) {
                 this.streamMonitorTimeout = streamMonitorTimeout;
@@ -2286,7 +2588,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether the resource is a video or audio. Valid values: 0: video. 1: audio.
+             * <p>Specifies whether the resource is a video or audio. Valid values: 0: video. 1: audio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder streamType(Integer streamType) {
                 this.streamType = streamType;
@@ -2294,7 +2599,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The resource URL of the streaming media.
+             * <p>The resource URL of the streaming media.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com/stream/test.mp4">http://www.aliyun.com/stream/test.mp4</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -2302,7 +2610,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: www.aliyun.com:203.0.3.55|203.3.44.67. It indicates that all IP addresses that belong to the www.aliyun.com domain name except 203.0.3.55 and 203.3.44.67 are hijacked.
+             * <p>The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -2316,6 +2627,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class Website extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutomaticScrolling")
         private Integer automaticScrolling;
@@ -2559,7 +2876,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Long waitCompletionTime; 
 
             /**
-             * Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: no. 1: yes. Default value: 0.
+             * <p>Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: no. 1: yes. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder automaticScrolling(Integer automaticScrolling) {
                 this.automaticScrolling = automaticScrolling;
@@ -2567,7 +2887,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to create a custom header. Valid values: 0: no. 1: The first packet is modified. 2: All packets are modified. Default value: 0.
+             * <p>Specifies whether to create a custom header. Valid values: 0: no. 1: The first packet is modified. 2: All packets are modified. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder customHeader(Integer customHeader) {
                 this.customHeader = customHeader;
@@ -2575,7 +2898,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The custom header. Format: JSON map.
+             * <p>The custom header. Format: JSON map.</p>
              */
             public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
@@ -2583,10 +2906,11 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * If the IP address or CNAME record resolved from a domain name is not included in the DNS whitelist, you cannot access the domain name, or an IP address that belongs to a different domain name is returned. If the IP address or CNAME record is included in the DNS whitelist, DNS hijacking does not occur.
-             * <p>
+             * <p>If the IP address or CNAME record resolved from a domain name is not included in the DNS whitelist, you cannot access the domain name, or an IP address that belongs to a different domain name is returned. If the IP address or CNAME record is included in the DNS whitelist, DNS hijacking does not occur.</p>
+             * <p>Format: &lt;domain name&gt;:&lt;objects&gt;. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
              * 
-             * Format: \<domain name>:\<objects>. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: www.aliyun.com:203.0.3.55|203.3.44.67. It indicates that all IP addresses that belong to the www.aliyun.com domain name except 203.0.3.55 and 203.3.44.67 are hijacked.
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
              */
             public Builder DNSHijackWhitelist(String DNSHijackWhitelist) {
                 this.DNSHijackWhitelist = DNSHijackWhitelist;
@@ -2594,7 +2918,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to disable the cache. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to disable the cache. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder disableCache(Integer disableCache) {
                 this.disableCache = disableCache;
@@ -2602,7 +2929,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: no. 1: yes. Default value: 0.
+             * <p>Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: no. 1: yes. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder disableCompression(Integer disableCompression) {
                 this.disableCompression = disableCompression;
@@ -2610,7 +2940,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The elements not to be loaded in the page loading process.
+             * <p>The elements not to be loaded in the page loading process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.jpg</p>
              */
             public Builder elementBlacklist(String elementBlacklist) {
                 this.elementBlacklist = elementBlacklist;
@@ -2618,11 +2951,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to exclude invalid IP addresses. Valid values:
-             * <p>
+             * <p>Specifies whether to exclude invalid IP addresses. Valid values:</p>
+             * <ul>
+             * <li>1: no</li>
+             * <li>0: yes</li>
+             * </ul>
              * 
-             * *   1: no
-             * *   0: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder filterInvalidIP(Integer filterInvalidIP) {
                 this.filterInvalidIP = filterInvalidIP;
@@ -2630,7 +2966,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The total number of elements on the page.
+             * <p>The total number of elements on the page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flowHijackJumpTimes(Integer flowHijackJumpTimes) {
                 this.flowHijackJumpTimes = flowHijackJumpTimes;
@@ -2638,7 +2977,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The keyword that is used to identify hijacking. Asterisks (\*) are allowed.
+             * <p>The keyword that is used to identify hijacking. Asterisks (*) are allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder flowHijackLogo(String flowHijackLogo) {
                 this.flowHijackLogo = flowHijackLogo;
@@ -2646,7 +2988,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateError(Integer ignoreCertificateError) {
                 this.ignoreCertificateError = ignoreCertificateError;
@@ -2654,7 +2999,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The monitoring timeout period. Unit: milliseconds. Minimum value: 5000. Maximum value: 300000. Default value: 40000.
+             * <p>The monitoring timeout period. Unit: milliseconds. Minimum value: 5000. Maximum value: 300000. Default value: 40000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder monitorTimeout(Long monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -2662,7 +3010,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Elements that are not included in the whitelist and appear on the page are manipulated. These elements can be pop-up ads, floating ads, and page redirection.
+             * <p>Elements that are not included in the whitelist and appear on the page are manipulated. These elements can be pop-up ads, floating ads, and page redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</a></p>
              */
             public Builder pageTamper(String pageTamper) {
                 this.pageTamper = pageTamper;
@@ -2670,7 +3021,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to continue browsing after redirection. Valid values: 0: no. 1: yes. Default value: 1.
+             * <p>Specifies whether to continue browsing after redirection. Valid values: 0: no. 1: yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder redirection(Integer redirection) {
                 this.redirection = redirection;
@@ -2678,7 +3032,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The time threshold that is used to define a slow element. Unit: milliseconds. Default value: 5000. Minimum value: 1. Maximum value: 300000.
+             * <p>The time threshold that is used to define a slow element. Unit: milliseconds. Default value: 5000. Minimum value: 1. Maximum value: 300000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder slowElementThreshold(Long slowElementThreshold) {
                 this.slowElementThreshold = slowElementThreshold;
@@ -2686,7 +3043,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The URL of the website.
+             * <p>The URL of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://********</p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -2694,7 +3054,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is in the blacklist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).
+             * <p>An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is in the blacklist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder verifyStringBlacklist(String verifyStringBlacklist) {
                 this.verifyStringBlacklist = verifyStringBlacklist;
@@ -2702,7 +3065,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is not in the whitelist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).
+             * <p>An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is not in the whitelist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder verifyStringWhitelist(String verifyStringWhitelist) {
                 this.verifyStringWhitelist = verifyStringWhitelist;
@@ -2710,7 +3076,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The maximum waiting time. Unit: milliseconds. Default value: 5000. Minimum value: 5000. Maximum value: 300000.
+             * <p>The maximum waiting time. Unit: milliseconds. Default value: 5000. Minimum value: 5000. Maximum value: 300000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder waitCompletionTime(Long waitCompletionTime) {
                 this.waitCompletionTime = waitCompletionTime;
@@ -2724,6 +3093,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class MonitorConf extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiHTTP")
         private ApiHTTP apiHTTP;
@@ -2823,7 +3198,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Website website; 
 
             /**
-             * The parameters of the HTTP(S) synthetic test.
+             * <p>The parameters of the HTTP(S) synthetic test.</p>
              */
             public Builder apiHTTP(ApiHTTP apiHTTP) {
                 this.apiHTTP = apiHTTP;
@@ -2831,7 +3206,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The parameters of file downloading.
+             * <p>The parameters of file downloading.</p>
              */
             public Builder fileDownload(FileDownload fileDownload) {
                 this.fileDownload = fileDownload;
@@ -2839,7 +3214,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The parameters of the DNS synthetic test.
+             * <p>The parameters of the DNS synthetic test.</p>
              */
             public Builder netDNS(NetDNS netDNS) {
                 this.netDNS = netDNS;
@@ -2847,7 +3222,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The parameters of the ICMP synthetic test.
+             * <p>The parameters of the ICMP synthetic test.</p>
              */
             public Builder netICMP(NetICMP netICMP) {
                 this.netICMP = netICMP;
@@ -2855,7 +3230,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The parameters of the TCP synthetic test.
+             * <p>The parameters of the TCP synthetic test.</p>
              */
             public Builder netTCP(NetTCP netTCP) {
                 this.netTCP = netTCP;
@@ -2863,7 +3238,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The parameters of the streaming-media synthetic test.
+             * <p>The parameters of the streaming-media synthetic test.</p>
              */
             public Builder stream(Stream stream) {
                 this.stream = stream;
@@ -2871,7 +3246,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The parameters of the website speed measurement.
+             * <p>The parameters of the website speed measurement.</p>
              */
             public Builder website(Website website) {
                 this.website = website;
@@ -2885,6 +3260,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class Monitors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -2936,7 +3317,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String operatorCode; 
 
             /**
-             * The city code.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -2944,7 +3328,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The client type of the monitoring point. Valid values: 1: data center. 2: Internet. 3: mobile device. 4: ECS instance.
+             * <p>The client type of the monitoring point. Valid values: 1: data center. 2: Internet. 3: mobile device. 4: ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder clientType(Integer clientType) {
                 this.clientType = clientType;
@@ -2952,7 +3339,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The carrier code.
+             * <p>The carrier code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder operatorCode(String operatorCode) {
                 this.operatorCode = operatorCode;
@@ -2966,6 +3356,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTimingSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTimingSyntheticTaskRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -3005,7 +3401,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3013,7 +3412,10 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvironmentDashboardsRequest} extends {@link RequestModel}
  *
  * <p>ListEnvironmentDashboardsRequest</p>
@@ -96,7 +97,10 @@ public class ListEnvironmentDashboardsRequest extends Request {
         } 
 
         /**
-         * Name of Addon,One of AddonName and Scene must be filled in.
+         * <p>Name of Addon,One of AddonName and Scene must be filled in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace-java</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
@@ -105,7 +109,11 @@ public class ListEnvironmentDashboardsRequest extends Request {
         }
 
         /**
-         * The ID of the environment instance.
+         * <p>The ID of the environment instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -114,7 +122,10 @@ public class ListEnvironmentDashboardsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,7 +134,10 @@ public class ListEnvironmentDashboardsRequest extends Request {
         }
 
         /**
-         * The scenario of Addon. Either AddonName or Scene is required.
+         * <p>The scenario of Addon. Either AddonName or Scene is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);

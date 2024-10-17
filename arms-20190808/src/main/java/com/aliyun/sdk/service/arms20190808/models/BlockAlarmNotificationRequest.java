@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BlockAlarmNotificationRequest} extends {@link RequestModel}
  *
  * <p>BlockAlarmNotificationRequest</p>
@@ -98,10 +99,12 @@ public class BlockAlarmNotificationRequest extends Request {
         } 
 
         /**
-         * The ID of the alert.
-         * <p>
+         * <p>The ID of the alert.</p>
+         * <p>For more information about how to obtain the ID of an alert, see <a href="https://help.aliyun.com/document_detail/2612346.html">ListAlertEvents</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an alert, see [ListAlertEvents](~~2612346~~).
+         * <strong>example:</strong>
+         * <p>133</p>
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -110,7 +113,10 @@ public class BlockAlarmNotificationRequest extends Request {
         }
 
         /**
-         * The ID of the alert handler.
+         * <p>The ID of the alert handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2044049</p>
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -119,7 +125,11 @@ public class BlockAlarmNotificationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +138,11 @@ public class BlockAlarmNotificationRequest extends Request {
         }
 
         /**
-         * The number of seconds that elapse before alert notifications are blocked. Unit: seconds.
+         * <p>The number of seconds that elapse before alert notifications are blocked. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddRecordingRuleRequest} extends {@link RequestModel}
  *
  * <p>AddRecordingRuleRequest</p>
@@ -84,7 +85,11 @@ public class AddRecordingRuleRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +98,11 @@ public class AddRecordingRuleRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +111,11 @@ public class AddRecordingRuleRequest extends Request {
         }
 
         /**
-         * The custom recording rule. The value is in the YAML format.
+         * <p>The custom recording rule. The value is in the YAML format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>groups: - name: &quot;recording_demo&quot;   rules:   - expr: &quot;sum(jvm_memory_max_bytes)&quot;     record: &quot;rate_coredns_demo&quot;</p>
          */
         public Builder ruleYaml(String ruleYaml) {
             this.putQueryParameter("RuleYaml", ruleYaml);

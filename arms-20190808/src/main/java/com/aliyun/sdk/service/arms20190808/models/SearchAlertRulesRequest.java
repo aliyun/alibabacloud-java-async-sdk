@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchAlertRulesRequest} extends {@link RequestModel}
  *
  * <p>SearchAlertRulesRequest</p>
@@ -194,7 +195,10 @@ public class SearchAlertRulesRequest extends Request {
         } 
 
         /**
-         * The id of AlertRule.
+         * <p>The id of AlertRule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder alertRuleId(String alertRuleId) {
             this.putQueryParameter("AlertRuleId", alertRuleId);
@@ -203,11 +207,14 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The type of the application that is associated with the alert rule. Valid values:
-         * <p>
+         * <p>The type of the application that is associated with the alert rule. Valid values:</p>
+         * <ul>
+         * <li><code>TRACE</code>: application</li>
+         * <li><code>RETCODE</code>: browser</li>
+         * </ul>
          * 
-         * *   `TRACE`: application
-         * *   `RETCODE`: browser
+         * <strong>example:</strong>
+         * <p>TRACE</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -216,7 +223,10 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Default value: `1`.
+         * <p>The page number of the page to return. Default value: <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -225,7 +235,10 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Default value: `10`.
+         * <p>The number of entries to return per page. Default value: <code>10</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +247,10 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The process identifier (PID) of the application that is associated with the alert rule. For more information about how to obtain the PID, see [Obtain the PID of an application](https://help.aliyun.com/document_detail/186100.html?spm=a2c4g.11186623.6.792.1b50654cqcDPyk#title-imy-7gj-qhr).
+         * <p>The process identifier (PID) of the application that is associated with the alert rule. For more information about how to obtain the PID, see <a href="https://help.aliyun.com/document_detail/186100.html?spm=a2c4g.11186623.6.792.1b50654cqcDPyk#title-imy-7gj-qhr">Obtain the PID of an application</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atc889zkcf@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -243,7 +259,11 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The region ID of the alert data. For more information about the mappings between **RegionId** and **SystemRegionId**, see the detailed description below the table.
+         * <p>The region ID of the alert data. For more information about the mappings between <strong>RegionId</strong> and <strong>SystemRegionId</strong>, see the detailed description below the table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,7 +272,10 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
+         * <p>The ID of the resource group. You can obtain the resource group ID in the <strong>Resource Management</strong> console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -261,7 +284,10 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The region ID of the alert rule. For more information about the mappings between **RegionId** and **SystemRegionId**, see the detailed description below the table.
+         * <p>The region ID of the alert rule. For more information about the mappings between <strong>RegionId</strong> and <strong>SystemRegionId</strong>, see the detailed description below the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder systemRegionId(String systemRegionId) {
             this.putQueryParameter("SystemRegionId", systemRegionId);
@@ -270,7 +296,7 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -279,7 +305,10 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The alert rule name.
+         * <p>The alert rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AlertRuleTitle</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -288,17 +317,20 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * The alert rule type. Valid values:
-         * <p>
+         * <p>The alert rule type. Valid values:</p>
+         * <ul>
+         * <li><code>1</code>: custom alert rules that are used to monitor drill-down data sets</li>
+         * <li><code>3</code>: custom alert rules that are used to monitor tiled data sets</li>
+         * <li><code>4</code>: alert rules that are used to monitor the browser, including the default frontend alert rules</li>
+         * <li><code>5</code>: alert rules that are used to monitor applications, including the default application alert rules</li>
+         * <li><code>6</code>: the default browser alert rules</li>
+         * <li><code>7</code>: the default application alert rules</li>
+         * <li><code>8</code>: Tracing Analysis alert rules</li>
+         * <li><code>101</code>: Prometheus alert rules</li>
+         * </ul>
          * 
-         * *   `1`: custom alert rules that are used to monitor drill-down data sets
-         * *   `3`: custom alert rules that are used to monitor tiled data sets
-         * *   `4`: alert rules that are used to monitor the browser, including the default frontend alert rules
-         * *   `5`: alert rules that are used to monitor applications, including the default application alert rules
-         * *   `6`: the default browser alert rules
-         * *   `7`: the default application alert rules
-         * *   `8`: Tracing Analysis alert rules
-         * *   `101`: Prometheus alert rules
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -313,6 +345,12 @@ public class SearchAlertRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchAlertRulesRequest} extends {@link TeaModel}
+     *
+     * <p>SearchAlertRulesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -352,19 +390,22 @@ public class SearchAlertRulesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. The following system preset fields are provided:
-             * <p>
+             * <p>The key of the tag. The following system preset fields are provided:</p>
+             * <ul>
+             * <li>traceId: the ID of the trace.</li>
+             * <li>serverApp: the name of the server application.</li>
+             * <li>clientApp: the name of the client application.</li>
+             * <li>service: the name of the operation.</li>
+             * <li>rpc: the type of the call.</li>
+             * <li>msOfSpan: the duration exceeds a specific value.</li>
+             * <li>clientIp: the IP address of the client.</li>
+             * <li>serverIp: the IP address of the server.</li>
+             * <li>isError: specifies whether the call is abnormal.</li>
+             * <li>hasTprof: contains only thread profiling.</li>
+             * </ul>
              * 
-             * *   traceId: the ID of the trace.
-             * *   serverApp: the name of the server application.
-             * *   clientApp: the name of the client application.
-             * *   service: the name of the operation.
-             * *   rpc: the type of the call.
-             * *   msOfSpan: the duration exceeds a specific value.
-             * *   clientIp: the IP address of the client.
-             * *   serverIp: the IP address of the server.
-             * *   isError: specifies whether the call is abnormal.
-             * *   hasTprof: contains only thread profiling.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -372,7 +413,10 @@ public class SearchAlertRulesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

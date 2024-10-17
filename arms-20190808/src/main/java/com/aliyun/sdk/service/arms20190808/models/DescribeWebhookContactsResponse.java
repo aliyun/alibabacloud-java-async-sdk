@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebhookContactsResponse} extends {@link TeaModel}
  *
  * <p>DescribeWebhookContactsResponse</p>

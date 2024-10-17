@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPrometheusGlobalViewByAliClusterIdsRequest} extends {@link RequestModel}
  *
  * <p>AddPrometheusGlobalViewByAliClusterIdsRequest</p>
@@ -98,7 +99,11 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends Request {
         } 
 
         /**
-         * The IDs of clusters. Separate multiple IDs with commas (,).
+         * <p>The IDs of clusters. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd1d55bef19904324a20ed0ebb86caa5c,c5b48729918ab4745a24482ac29d0973a, c00a94896641449098bf24931e4166003, cd174485c09384060ba542bc1be1185a4</p>
          */
         public Builder clusterIds(String clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -107,7 +112,11 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends Request {
         }
 
         /**
-         * The name of the global aggregation instance.
+         * <p>The name of the global aggregation instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zyGlobalView</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -116,7 +125,10 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends Request {
         }
 
         /**
-         * The identifier to identify the service if custom dashboards are created for the specified clusters.
+         * <p>The identifier to identify the service if custom dashboards are created for the specified clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcp</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -125,7 +137,11 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

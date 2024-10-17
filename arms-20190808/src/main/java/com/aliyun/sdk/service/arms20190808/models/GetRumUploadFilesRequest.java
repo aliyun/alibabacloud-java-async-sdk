@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRumUploadFilesRequest} extends {@link RequestModel}
  *
  * <p>GetRumUploadFilesRequest</p>
@@ -97,7 +98,10 @@ public class GetRumUploadFilesRequest extends Request {
         } 
 
         /**
-         * The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.
+         * <p>The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source-map</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -106,7 +110,11 @@ public class GetRumUploadFilesRequest extends Request {
         }
 
         /**
-         * The process ID (PID) of the application.
+         * <p>The process ID (PID) of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aoxxxxxly@741623b4e91****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -115,7 +123,11 @@ public class GetRumUploadFilesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +136,10 @@ public class GetRumUploadFilesRequest extends Request {
         }
 
         /**
-         * The version number of the files. If you do not specify this parameter, all versions of the files are returned by default.
+         * <p>The version number of the files. If you do not specify this parameter, all versions of the files are returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

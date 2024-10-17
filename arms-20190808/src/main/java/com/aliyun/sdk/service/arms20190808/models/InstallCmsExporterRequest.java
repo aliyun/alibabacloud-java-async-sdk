@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallCmsExporterRequest} extends {@link RequestModel}
  *
  * <p>InstallCmsExporterRequest</p>
@@ -111,7 +112,11 @@ public class InstallCmsExporterRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -120,7 +125,10 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * The cloud services that you want to monitor. The CmsArgs parameter is the startup parameter of the cms-exporter collector. Separate multiple cloud services with number signs (`#`).
+         * <p>The cloud services that you want to monitor. The CmsArgs parameter is the startup parameter of the cms-exporter collector. Separate multiple cloud services with number signs (<code>#</code>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hologres#cen</p>
          */
         public Builder cmsArgs(String cmsArgs) {
             this.putQueryParameter("CmsArgs", cmsArgs);
@@ -129,7 +137,10 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * The recently monitored cloud services. Separate multiple cloud services with number signs (`#`).
+         * <p>The recently monitored cloud services. Separate multiple cloud services with number signs (<code>#</code>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hologres#cen</p>
          */
         public Builder directArgs(String directArgs) {
             this.putQueryParameter("DirectArgs", directArgs);
@@ -138,7 +149,10 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * Specifies whether to collect the aliyun tags attached to each cloud service. Default value: false.
+         * <p>Specifies whether to collect the aliyun tags attached to each cloud service. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableTag(Boolean enableTag) {
             this.putQueryParameter("EnableTag", enableTag);
@@ -147,7 +161,11 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

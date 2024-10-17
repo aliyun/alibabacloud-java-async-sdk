@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAddonReleaseRequest} extends {@link RequestModel}
  *
  * <p>DeleteAddonReleaseRequest</p>
@@ -111,7 +112,10 @@ public class DeleteAddonReleaseRequest extends Request {
         } 
 
         /**
-         * The name of the add-on. If you assign a value to AddonName, the ReleaseName parameter is ignored and all AddonReleases that belong to the same add-on are deleted.
+         * <p>The name of the add-on. If you assign a value to AddonName, the ReleaseName parameter is ignored and all AddonReleases that belong to the same add-on are deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
@@ -120,7 +124,11 @@ public class DeleteAddonReleaseRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * <p>Environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -129,7 +137,10 @@ public class DeleteAddonReleaseRequest extends Request {
         }
 
         /**
-         * Whether to be forcibly deleted. The default value is false.
+         * <p>Whether to be forcibly deleted. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -138,7 +149,10 @@ public class DeleteAddonReleaseRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +161,11 @@ public class DeleteAddonReleaseRequest extends Request {
         }
 
         /**
-         * Name of Release.
+         * <p>Name of Release.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-822567d4-2449</p>
          */
         public Builder releaseName(String releaseName) {
             this.putQueryParameter("ReleaseName", releaseName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncRecordingRulesResponseBody} extends {@link TeaModel}
  *
  * <p>SyncRecordingRulesResponseBody</p>
@@ -73,7 +74,10 @@ public class SyncRecordingRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 状态码。200表示成功。
+         * <p>状态码。200表示成功。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class SyncRecordingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * <p>The struct returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;data&quot;:[ &quot;c06ca68cd16f14f52bb07772eda***&quot;, &quot;c33dd70a0ac184c1b879d807ab2***&quot;, &quot;c384cf7e4dcb543e6ac8c7d4dd3***&quot;, &quot;ce30f833bc4a04a56a06b070319***&quot; ], &quot;message&quot;:&quot;IDs of Clusters to which the aggregation rule failed to be synchronized&quot;, &quot;success&quot;:true }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class SyncRecordingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果的提示信息。
+         * <p>返回结果的提示信息。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class SyncRecordingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

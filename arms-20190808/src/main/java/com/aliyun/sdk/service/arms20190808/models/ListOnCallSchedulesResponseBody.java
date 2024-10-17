@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOnCallSchedulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListOnCallSchedulesResponseBody</p>
@@ -49,7 +50,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The objects that were returned.
+         * <p>The objects that were returned.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -57,7 +58,10 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOnCallSchedulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOnCallSchedulesResponseBody</p>
+     */
     public static class OnCallSchedules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -121,7 +131,10 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the scheduling policy.
+             * <p>The description of the scheduling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test scheduling policy</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -129,7 +142,10 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scheduling policy.
+             * <p>The ID of the scheduling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -137,7 +153,10 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scheduling policy.
+             * <p>The name of the scheduling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OnCallSchedule_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -151,6 +170,12 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOnCallSchedulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOnCallSchedulesResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OnCallSchedules")
         private java.util.List < OnCallSchedules> onCallSchedules;
@@ -214,7 +239,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The information about the scheduling policy.
+             * <p>The information about the scheduling policy.</p>
              */
             public Builder onCallSchedules(java.util.List < OnCallSchedules> onCallSchedules) {
                 this.onCallSchedules = onCallSchedules;
@@ -222,7 +247,10 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -230,7 +258,10 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -238,7 +269,10 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

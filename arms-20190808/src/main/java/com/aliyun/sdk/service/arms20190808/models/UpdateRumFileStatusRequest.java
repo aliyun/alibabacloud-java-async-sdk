@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRumFileStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateRumFileStatusRequest</p>
@@ -138,7 +139,10 @@ public class UpdateRumFileStatusRequest extends Request {
         } 
 
         /**
-         * The file name.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.js.map</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -147,7 +151,11 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atc8xxxx
+         * cf@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -156,7 +164,11 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -165,7 +177,10 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * The size of the file. Unit: bytes.
+         * <p>The size of the file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(String size) {
             this.putQueryParameter("Size", size);
@@ -174,7 +189,10 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * The status of the file. Valid values: SUCCESS and INIT.
+         * <p>The status of the file. Valid values: SUCCESS and INIT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -183,7 +201,10 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * The unique ID of the file. If you do not set this parameter, the system automatically sets a UUID for you.
+         * <p>The unique ID of the file. If you do not set this parameter, the system automatically sets a UUID for you.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MS4wLjAtbWFpbi4wZjM0NzRlOSxxxxxx</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -192,7 +213,10 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * The version number of the file.
+         * <p>The version number of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

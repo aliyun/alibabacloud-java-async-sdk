@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnvironmentFeatureRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnvironmentFeatureRequest</p>
@@ -97,7 +98,10 @@ public class DescribeEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: en and zh.
+         * <p>The language. Valid values: en and zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -106,7 +110,11 @@ public class DescribeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * The environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -115,14 +123,17 @@ public class DescribeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * The name of the feature.
-         * <p>
+         * <p>The name of the feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>app-agent-pilot: App Pilot agent</li>
+         * <li>arms-cmonitor: ARMS CMonitor agent</li>
+         * <li>metric-agent: Prometheus agent</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   app-agent-pilot: App Pilot agent
-         * *   arms-cmonitor: ARMS CMonitor agent
-         * *   metric-agent: Prometheus agent
+         * <strong>example:</strong>
+         * <p>metric-agent</p>
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);
@@ -131,7 +142,10 @@ public class DescribeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

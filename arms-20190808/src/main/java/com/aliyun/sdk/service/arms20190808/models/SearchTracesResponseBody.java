@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTracesResponseBody} extends {@link TeaModel}
  *
  * <p>SearchTracesResponseBody</p>
@@ -49,7 +50,10 @@ public class SearchTracesResponseBody extends TeaModel {
         private java.util.List < TraceInfos> traceInfos; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C518054-852F-4023-ABC1-4AF95FF7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class SearchTracesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the returned traces.
+         * <p>The details of the returned traces.</p>
          */
         public Builder traceInfos(java.util.List < TraceInfos> traceInfos) {
             this.traceInfos = traceInfos;
@@ -70,6 +74,12 @@ public class SearchTracesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTracesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTracesResponseBody</p>
+     */
     public static class TraceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
@@ -83,6 +93,9 @@ public class SearchTracesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
+        @com.aliyun.core.annotation.NameInMap("SpanID")
+        private String spanID;
+
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
@@ -94,6 +107,7 @@ public class SearchTracesResponseBody extends TeaModel {
             this.operationName = builder.operationName;
             this.serviceIp = builder.serviceIp;
             this.serviceName = builder.serviceName;
+            this.spanID = builder.spanID;
             this.timestamp = builder.timestamp;
             this.traceID = builder.traceID;
         }
@@ -135,6 +149,13 @@ public class SearchTracesResponseBody extends TeaModel {
         }
 
         /**
+         * @return spanID
+         */
+        public String getSpanID() {
+            return this.spanID;
+        }
+
+        /**
          * @return timestamp
          */
         public Long getTimestamp() {
@@ -153,11 +174,15 @@ public class SearchTracesResponseBody extends TeaModel {
             private String operationName; 
             private String serviceIp; 
             private String serviceName; 
+            private String spanID; 
             private Long timestamp; 
             private String traceID; 
 
             /**
-             * The amount of time consumed by the trace. Unit: milliseconds.
+             * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -165,7 +190,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the traced span.
+             * <p>The name of the traced span.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get***</p>
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -173,7 +201,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the host where the application resides.
+             * <p>The IP address of the host where the application resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>172.20.**.**</code></p>
              */
             public Builder serviceIp(String serviceIp) {
                 this.serviceIp = serviceIp;
@@ -181,7 +212,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-k8s-demo-subcomponent</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -189,7 +223,18 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp.
+             * SpanID.
+             */
+            public Builder spanID(String spanID) {
+                this.spanID = spanID;
+                return this;
+            }
+
+            /**
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1595174436993</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -197,7 +242,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The trace ID.
+             * <p>The trace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac1400a115951744369937024d****</p>
              */
             public Builder traceID(String traceID) {
                 this.traceID = traceID;

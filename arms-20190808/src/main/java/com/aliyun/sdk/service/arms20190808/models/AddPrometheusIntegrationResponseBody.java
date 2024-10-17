@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPrometheusIntegrationResponseBody} extends {@link TeaModel}
  *
  * <p>AddPrometheusIntegrationResponseBody</p>
@@ -73,7 +74,10 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code or error code.
+         * <p>The status code or error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * <p>The struct returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3703B98C-335E-5BA7-972E-F90E9E768A85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddPrometheusIntegrationResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddPrometheusIntegrationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
@@ -149,7 +165,10 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
             private String instanceName; 
 
             /**
-             * The ID of the exporter.
+             * <p>The ID of the exporter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2829</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -157,7 +176,10 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the exporter.
+             * <p>The name of the exporter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hw-cloud02</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

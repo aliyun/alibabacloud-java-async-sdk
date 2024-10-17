@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAlertResponseBody} extends {@link TeaModel}
  *
  * <p>StartAlertResponseBody</p>
@@ -49,11 +50,14 @@ public class StartAlertResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the call was successful.
-         * <p>
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><code>true</code>: The call was successful.</li>
+         * <li><code>false</code>: The call failed.</li>
+         * </ul>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -61,7 +65,10 @@ public class StartAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

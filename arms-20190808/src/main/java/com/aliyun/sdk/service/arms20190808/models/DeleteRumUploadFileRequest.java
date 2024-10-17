@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRumUploadFileRequest} extends {@link RequestModel}
  *
  * <p>DeleteRumUploadFileRequest</p>
@@ -125,7 +126,18 @@ public class DeleteRumUploadFileRequest extends Request {
         } 
 
         /**
-         * Information of files to be deleted in JSON array format. If a single file needs to be deleted, this field should be left empty. If multiple files need to be deleted, just fill in this field.
+         * <p>Information of files to be deleted in JSON array format. If a single file needs to be deleted, this field should be left empty. If multiple files need to be deleted, just fill in this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{
+         *     &quot;fileName&quot; : &quot;test.js.map&quot;,
+         *     &quot;version&quot; : &quot;1.0.0&quot;
+         *   },
+         *   {
+         *     &quot;fileName&quot; : &quot;test.dSYM&quot;,
+         *     &quot;version&quot; : &quot;1.20.1&quot;,
+         *     &quot;uuid&quot; : &quot;xxxx-xxxx-xxxx-xxxx&quot;
+         *   }]</p>
          */
         public Builder batchItems(String batchItems) {
             this.putQueryParameter("BatchItems", batchItems);
@@ -134,7 +146,10 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
-         * The file name, with the extension.
+         * <p>The file name, with the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.js.map</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -143,7 +158,11 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atc889zkcf@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -152,7 +171,11 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +184,10 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MS4wLjAtbWFpbi4wZjM0NzRlOSxxxxxx</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -170,7 +196,10 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
-         * The version number of the file.
+         * <p>The version number of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

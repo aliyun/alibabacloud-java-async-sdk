@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPrometheusGlobalViewResponseBody} extends {@link TeaModel}
  *
  * <p>GetPrometheusGlobalViewResponseBody</p>
@@ -73,7 +74,10 @@ public class GetPrometheusGlobalViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Status code. 200 is success, other status codes are exceptions.
+         * <p>Status code. 200 is success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class GetPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * <p>The struct returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;clusterId&quot;:&quot;The ID of the global aggregation instance.&quot;, &quot;groupName&quot;:&quot;The name of the global aggregation instance.&quot;, &quot;dataSources&quot;:[ { &quot;sourceName&quot;:&quot;The name of the data source.- ArmsPrometheus No.1&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;userId&quot;:&quot;UserID&quot;, &quot;clusterId&quot;:&quot;ClusterId&quot; }, // more datasources ] }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class GetPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * Returns a hint message for the result.
+         * <p>Returns a hint message for the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class GetPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>743AD493-D006-53BD-AAEC-DDCE7FB68EA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

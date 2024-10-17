@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDashboardsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDashboardsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the Grafana dashboard.
+         * <p>The information about the Grafana dashboard.</p>
          */
         public Builder dashboardVos(java.util.List < DashboardVos> dashboardVos) {
             this.dashboardVos = dashboardVos;
@@ -93,7 +94,10 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the environment instance.
+         * <p>The ID of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-ebd54733482581fc8c4237******</p>
          */
         public Builder environmentId(String environmentId) {
             this.environmentId = environmentId;
@@ -101,7 +105,10 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Managed Service for Grafana is activated.
+         * <p>Indicates whether Managed Service for Grafana is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder grafanaServiceOpened(String grafanaServiceOpened) {
             this.grafanaServiceOpened = grafanaServiceOpened;
@@ -109,7 +116,10 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Whether or not to turn on Prometheus service.
+         * <p>Whether or not to turn on Prometheus service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder prometheusServiceOpened(String prometheusServiceOpened) {
             this.prometheusServiceOpened = prometheusServiceOpened;
@@ -117,7 +127,10 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A0CEDF1-06FE-44AC-8E21-21A5BE65****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +143,12 @@ public class ListDashboardsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDashboardsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDashboardsResponseBody</p>
+     */
     public static class I18nChild extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DashboardType")
         private String dashboardType;
@@ -349,7 +368,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.
+             * <p>The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node</p>
              */
             public Builder dashboardType(String dashboardType) {
                 this.dashboardType = dashboardType;
@@ -357,25 +379,28 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the exporter access source. Valid values:
-             * <p>
+             * <p>The type of the exporter access source. Valid values:</p>
+             * <ul>
+             * <li>Prometheus</li>
+             * <li>Node</li>
+             * <li>GPU</li>
+             * <li>Redis</li>
+             * <li>MySQL</li>
+             * <li>Kafka</li>
+             * <li>NGINX V2</li>
+             * <li>Nginx</li>
+             * <li>ZooKeeper</li>
+             * <li>MongoDB</li>
+             * <li>RabbitMQ</li>
+             * <li>PostgreSQL</li>
+             * <li>Kubernetes</li>
+             * <li>Client Library</li>
+             * <li>Elasticsearch</li>
+             * <li>RocketMQ</li>
+             * </ul>
              * 
-             * *   Prometheus
-             * *   Node
-             * *   GPU
-             * *   Redis
-             * *   MySQL
-             * *   Kafka
-             * *   NGINX V2
-             * *   Nginx
-             * *   ZooKeeper
-             * *   MongoDB
-             * *   RabbitMQ
-             * *   PostgreSQL
-             * *   Kubernetes
-             * *   Client Library
-             * *   Elasticsearch
-             * *   RocketMQ
+             * <strong>example:</strong>
+             * <p>Nginx</p>
              */
             public Builder exporter(String exporter) {
                 this.exporter = exporter;
@@ -383,7 +408,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the Grafana dashboard.
+             * <p>The URL of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&refresh=60s">http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&amp;refresh=60s</a></p>
              */
             public Builder httpUrl(String httpUrl) {
                 this.httpUrl = httpUrl;
@@ -391,7 +419,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the Grafana dashboard.
+             * <p>The URL of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&refresh=60s">http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&amp;refresh=60s</a></p>
              */
             public Builder httpsUrl(String httpsUrl) {
                 this.httpsUrl = httpsUrl;
@@ -399,7 +430,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Grafana dashboard. The value is unique only when you install the Grafana dashboard.
+             * <p>The ID of the Grafana dashboard. The value is unique only when you install the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1100**</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -407,11 +441,14 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the exporter is provided by ARMS.
-             * <p>
+             * <p>Indicates whether the exporter is provided by ARMS.</p>
+             * <ul>
+             * <li><code>true:</code> The exporter is provided by ARMS.</li>
+             * <li><code>false:</code>: The exporter is not provided by ARMS.</li>
+             * </ul>
              * 
-             * *   `true:` The exporter is provided by ARMS.
-             * *   `false:`: The exporter is not provided by ARMS.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isArmsExporter(Boolean isArmsExporter) {
                 this.isArmsExporter = isArmsExporter;
@@ -419,7 +456,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the Grafana dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM.
+             * <p>The category of the Grafana dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -427,7 +467,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the Grafana dashboard.
+             * <p>The language of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -435,7 +478,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Grafana dashboard. This parameter is different from the **Title** parameter as this parameter cannot be changed.
+             * <p>The name of the Grafana dashboard. This parameter is different from the <strong>Title</strong> parameter as this parameter cannot be changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-node-overview</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -443,7 +489,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Grafana dashboard has a new version that is available for upgrade.
+             * <p>Indicates whether the Grafana dashboard has a new version that is available for upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needUpdate(Boolean needUpdate) {
                 this.needUpdate = needUpdate;
@@ -451,7 +500,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the Grafana dashboard.
+             * <p>The tags of the Grafana dashboard.</p>
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;
@@ -459,7 +508,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Grafana dashboard was created. The value is a timestamp.
+             * <p>The time when the Grafana dashboard was created. The value is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590136924</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -467,7 +519,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the Grafana dashboard.
+             * <p>The title of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApiServer</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -475,11 +530,14 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Grafana dashboard. Valid values:
-             * <p>
+             * <p>The type of the Grafana dashboard. Valid values:</p>
+             * <ul>
+             * <li><code>dash-db</code>: a dashboard</li>
+             * <li><code>dash-folder</code>: a folder that can include a dashboard</li>
+             * </ul>
              * 
-             * *   `dash-db`: a dashboard
-             * *   `dash-folder`: a folder that can include a dashboard
+             * <strong>example:</strong>
+             * <p>dash-db</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -487,7 +545,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the Grafana dashboard.
+             * <p>The unique identifier of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1131971649496228-*****-59</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -495,7 +556,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The complete URL of the Grafana dashboard.
+             * <p>The complete URL of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&refresh=60s">http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&amp;refresh=60s</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -503,7 +567,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the Grafana dashboard. The combination of version and name uniquely identifies a dashboard.
+             * <p>The version of the Grafana dashboard. The combination of version and name uniquely identifies a dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -517,6 +584,12 @@ public class ListDashboardsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDashboardsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDashboardsResponseBody</p>
+     */
     public static class DashboardVos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DashboardType")
         private String dashboardType;
@@ -748,7 +821,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.
+             * <p>The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node</p>
              */
             public Builder dashboardType(String dashboardType) {
                 this.dashboardType = dashboardType;
@@ -756,25 +832,28 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the exporter access source. Valid values:
-             * <p>
+             * <p>The type of the exporter access source. Valid values:</p>
+             * <ul>
+             * <li>Prometheus</li>
+             * <li>Node</li>
+             * <li>GPU</li>
+             * <li>Redis</li>
+             * <li>MySQL</li>
+             * <li>Kafka</li>
+             * <li>NGINX V2</li>
+             * <li>Nginx</li>
+             * <li>ZooKeeper</li>
+             * <li>MongoDB</li>
+             * <li>RabbitMQ</li>
+             * <li>PostgreSQL</li>
+             * <li>Kubernetes</li>
+             * <li>Client Library</li>
+             * <li>Elasticsearch</li>
+             * <li>RocketMQ</li>
+             * </ul>
              * 
-             * *   Prometheus
-             * *   Node
-             * *   GPU
-             * *   Redis
-             * *   MySQL
-             * *   Kafka
-             * *   NGINX V2
-             * *   Nginx
-             * *   ZooKeeper
-             * *   MongoDB
-             * *   RabbitMQ
-             * *   PostgreSQL
-             * *   Kubernetes
-             * *   Client Library
-             * *   Elasticsearch
-             * *   RocketMQ
+             * <strong>example:</strong>
+             * <p>Nginx</p>
              */
             public Builder exporter(String exporter) {
                 this.exporter = exporter;
@@ -782,7 +861,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the Grafana dashboard.
+             * <p>The URL of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&refresh=60s">http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&amp;refresh=60s</a></p>
              */
             public Builder httpUrl(String httpUrl) {
                 this.httpUrl = httpUrl;
@@ -790,7 +872,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the Grafana dashboard.
+             * <p>The URL of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&refresh=60s">http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&amp;refresh=60s</a></p>
              */
             public Builder httpsUrl(String httpsUrl) {
                 this.httpsUrl = httpsUrl;
@@ -798,7 +883,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Grafana dashboard.
+             * <p>The information about the Grafana dashboard.</p>
              */
             public Builder i18nChild(I18nChild i18nChild) {
                 this.i18nChild = i18nChild;
@@ -806,7 +891,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Grafana dashboard. The value is unique only when you install the Grafana dashboard.
+             * <p>The ID of the Grafana dashboard. The value is unique only when you install the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1100**</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -814,11 +902,14 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the exporter is provided by Application Real-Time Monitoring Service (ARMS).
-             * <p>
+             * <p>Indicates whether the exporter is provided by Application Real-Time Monitoring Service (ARMS).</p>
+             * <ul>
+             * <li><code>true:</code> The exporter is provided by ARMS.</li>
+             * <li><code>false:</code>: The exporter is not provided by ARMS.</li>
+             * </ul>
              * 
-             * *   `true:` The exporter is provided by ARMS.
-             * *   `false:`: The exporter is not provided by ARMS.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isArmsExporter(Boolean isArmsExporter) {
                 this.isArmsExporter = isArmsExporter;
@@ -826,7 +917,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the Grafana dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM.
+             * <p>The category of the Grafana dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -834,7 +928,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the Grafana dashboard.
+             * <p>The language of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -842,7 +939,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Grafana dashboard. This parameter is different from the **Title** parameter as this parameter cannot be changed.
+             * <p>The name of the Grafana dashboard. This parameter is different from the <strong>Title</strong> parameter as this parameter cannot be changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-node-overview</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -850,7 +950,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Grafana dashboard has a new version that is available for upgrade.
+             * <p>Indicates whether the Grafana dashboard has a new version that is available for upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needUpdate(Boolean needUpdate) {
                 this.needUpdate = needUpdate;
@@ -858,7 +961,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the Grafana dashboard.
+             * <p>The tags of the Grafana dashboard.</p>
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;
@@ -866,7 +969,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Grafana dashboard was created. The value is a timestamp. Unit: seconds.
+             * <p>The time when the Grafana dashboard was created. The value is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590136924</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -874,7 +980,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the Grafana dashboard.
+             * <p>The title of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApiServer</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -882,11 +991,14 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Grafana dashboard. Valid values:
-             * <p>
+             * <p>The type of the Grafana dashboard. Valid values:</p>
+             * <ul>
+             * <li><code>dash-db</code>: a dashboard</li>
+             * <li><code>dash-folder</code>: a folder that can include a dashboard</li>
+             * </ul>
              * 
-             * *   `dash-db`: a dashboard
-             * *   `dash-folder`: a folder that can include a dashboard
+             * <strong>example:</strong>
+             * <p>dash-db</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -894,7 +1006,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the Grafana dashboard.
+             * <p>The unique identifier of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1131971649496228-*****-59</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -902,7 +1017,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The complete URL of the Grafana dashboard.
+             * <p>The complete URL of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&refresh=60s">http://g.console.aliyun.com/d/1131971649496228-*****-59/ApiServer?orgId=3**&amp;refresh=60s</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -910,7 +1028,10 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the Grafana dashboard. The combination of version and name uniquely identifies a dashboard.
+             * <p>The version of the Grafana dashboard. The combination of version and name uniquely identifies a dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder version(String version) {
                 this.version = version;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetRetcodeShareStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetRetcodeShareStatusResponseBody</p>
@@ -49,11 +50,14 @@ public class SetRetcodeShareStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The call is successful.</li>
+         * <li><code>false</code>: The call fails.</li>
+         * </ul>
          * 
-         * *   `true`: The call is successful.
-         * *   `false`: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -61,7 +65,10 @@ public class SetRetcodeShareStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

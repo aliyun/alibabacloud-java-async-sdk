@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRumExceptionStackRequest} extends {@link RequestModel}
  *
  * <p>GetRumExceptionStackRequest</p>
@@ -124,7 +125,10 @@ public class GetRumExceptionStackRequest extends Request {
         } 
 
         /**
-         * The binary images, which represent all executable files loaded into the process address space when a crash occurs.
+         * <p>The binary images, which represent all executable files loaded into the process address space when a crash occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iOSDemo:arm64%3B1489F4D3-6DE2-300C-90E9-E1B869675351%3B0x0000000104064000\nAlibabaCloudRUM:arm64%3BAB7B3A8E-6CEE-325D-BCBB-8DA50E61804F%3B0x0000000106660000\nlibdispatch.dylib:arm</p>
          */
         public Builder exceptionBinaryImages(String exceptionBinaryImages) {
             this.putQueryParameter("ExceptionBinaryImages", exceptionBinaryImages);
@@ -133,7 +137,16 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * The exception stack information. Set the value to a JSON string. call_stack.info represents the stack information, call_stack.thread.name represents the thread name, and call_stack.thread.id represents the thread ID. This parameter is exactly the same as the exception.stack parameter in the logstore-rum Logstore of Simple Log Service.
+         * <p>The exception stack information. Set the value to a JSON string. call_stack.info represents the stack information, call_stack.thread.name represents the thread name, and call_stack.thread.id represents the thread ID. This parameter is exactly the same as the exception.stack parameter in the logstore-rum Logstore of Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         * {
+         *     &quot;call_stack.info&quot;: &quot;libsystem_kernel.dylib  0x00000001f1ce9178 0x00000001f1ce8000 + 4472\r\nlibsystem_kernel.dylib  0x00000001f1ce8f10 0x00000001f1ce8000 + 3856\r\nlibsystem_kernel.dylib  0x00000001f1ced718 0x00000001f1ce8000 + 22296\r\nAlibabaCloudRUM  0x0000000106711af4 0x0000000106660000 + 727796\r\nlibsystem_pthread.dylib  0x00000002146744d4 0x0000000214672000 + 9428&quot;,
+         *     &quot;call_stack.thread.name&quot;: &quot;#3 BRSCrash Exception Handler (Secondary)&quot;,
+         *     &quot;call_stack.thread.id&quot;: &quot;16643&quot;
+         *   }
+         * ]</p>
          */
         public Builder exceptionStack(String exceptionStack) {
             this.putQueryParameter("ExceptionStack", exceptionStack);
@@ -142,7 +155,10 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * The ID of the exception thread.
+         * <p>The ID of the exception thread.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16643</p>
          */
         public Builder exceptionThreadId(String exceptionThreadId) {
             this.putQueryParameter("ExceptionThreadId", exceptionThreadId);
@@ -151,7 +167,11 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atxxxxzkcf@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -160,7 +180,10 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,12 +192,15 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * The file type. Valid values:
-         * <p>
+         * <p>The file type. Valid values:</p>
+         * <ul>
+         * <li>source-map: SourceMap files</li>
+         * <li>mapping: symbol table files for Android</li>
+         * <li>dsym: dSYM files for iOS</li>
+         * </ul>
          * 
-         * - source-map: SourceMap files
-         * - mapping: symbol table files for Android
-         * - dsym: dSYM files for iOS
+         * <strong>example:</strong>
+         * <p>source-map</p>
          */
         public Builder sourcemapType(String sourcemapType) {
             this.putQueryParameter("SourcemapType", sourcemapType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSourceMapResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSourceMapResponseBody</p>
@@ -49,11 +50,14 @@ public class DeleteSourceMapResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the SourceMap files are deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the SourceMap files are deleted. Valid values:</p>
+         * <ul>
+         * <li>success: The SourceMap files are deleted.</li>
+         * <li>false: The SourceMap files fail to be deleted.</li>
+         * </ul>
          * 
-         * *   success: The SourceMap files are deleted.
-         * *   false: The SourceMap files fail to be deleted.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -61,7 +65,10 @@ public class DeleteSourceMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

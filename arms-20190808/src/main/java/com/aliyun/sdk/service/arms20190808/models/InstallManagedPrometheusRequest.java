@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallManagedPrometheusRequest} extends {@link RequestModel}
  *
  * <p>InstallManagedPrometheusRequest</p>
@@ -183,7 +184,10 @@ public class InstallManagedPrometheusRequest extends Request {
         } 
 
         /**
-         * The ID of the ASK cluster.
+         * <p>The ID of the ASK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -192,7 +196,10 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The name of the cluster. This parameter is required if the ClusterType parameter is set to ecs.
+         * <p>The name of the cluster. This parameter is required if the ClusterType parameter is set to ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prd-ecs</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -201,15 +208,18 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The cluster type.
-         * <p>
+         * <p>The cluster type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ecs: ECS</li>
+         * <li>one: ACK One</li>
+         * <li>ask: ASK</li>
+         * <li>pro: Container Monitoring Pro</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   ecs: ECS
-         * *   one: ACK One
-         * *   ask: ASK
-         * *   pro: Container Monitoring Pro
+         * <strong>example:</strong>
+         * <p>ask</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -218,7 +228,10 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the managed Grafana workspace that is associated with the cluster. If you set this parameter to free or leave this parameter empty, the cluster is associated with a shared Grafana workspace.
+         * <p>The ID of the managed Grafana workspace that is associated with the cluster. If you set this parameter to free or leave this parameter empty, the cluster is associated with a shared Grafana workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-bp1*****</p>
          */
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
@@ -227,7 +240,12 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * This parameter is not supported.
+         * <p>This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder kubeConfig(String kubeConfig) {
             this.putQueryParameter("KubeConfig", kubeConfig);
@@ -236,7 +254,10 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,7 +275,11 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the cluster belongs.
+         * <p>The ID of the security group to which the cluster belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1********</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -263,7 +288,11 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch that is used by the cluster.
+         * <p>The ID of the vSwitch that is used by the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1*********</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -272,7 +301,11 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) where the cluster resides.
+         * <p>The virtual private cloud (VPC) where the cluster resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

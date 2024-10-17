@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCmsInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCmsInstancesResponseBody</p>
@@ -70,6 +71,12 @@ public class ListCmsInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCmsInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCmsInstancesResponseBody</p>
+     */
     public static class Products extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Descr")
         private String descr;
@@ -291,6 +298,12 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCmsInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCmsInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableTag")
         private Boolean enableTag;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGrafanaWorkspaceResponseBody} extends {@link TeaModel}
  *
  * <p>ListGrafanaWorkspaceResponseBody</p>
@@ -97,7 +98,10 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List < GrafanaWorkspace > data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request parameters are invalid.
+         * <p>The error message returned if the request parameters are invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0080BE65-167F-5CB6-A691-14E2EFD474BC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +150,10 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eac0a8048716731735000007137d000b</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

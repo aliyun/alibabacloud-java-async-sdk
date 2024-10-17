@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusMonitoringRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrometheusMonitoringRequest</p>
@@ -114,7 +115,11 @@ public class UpdatePrometheusMonitoringRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance.
+         * <p>The ID of the Prometheus instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -123,7 +128,25 @@ public class UpdatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The monitoring configuration. The value is a YAML string.
+         * <p>The monitoring configuration. The value is a YAML string.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: monitoring.coreos.com/v1
+         * kind: ServiceMonitor
+         * metadata:
+         *   name: tomcat-demo
+         *   namespace: default
+         * spec:
+         *   endpoints:
+         *     - interval: 30s
+         *       path: /metrics
+         *       port: tomcat-monitor
+         *   namespaceSelector:
+         *     any: true
+         *   selector:
+         *     matchLabels:
+         *       app: tomcat</p>
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -132,7 +155,11 @@ public class UpdatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The name of the monitoring configuration.
+         * <p>The name of the monitoring configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>podMonitor1</p>
          */
         public Builder monitoringName(String monitoringName) {
             this.putQueryParameter("MonitoringName", monitoringName);
@@ -141,7 +168,11 @@ public class UpdatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,10 +181,13 @@ public class UpdatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The type of the monitoring configuration. 
-         * <p>
+         * <p>The type of the monitoring configuration. 
          * Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe. 
-         * Valid values for a Prometheus instance for ECS: customJob and probe.
+         * Valid values for a Prometheus instance for ECS: customJob and probe.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>podMonitor</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

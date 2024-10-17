@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchAlertContactGroupResponseBody} extends {@link TeaModel}
  *
  * <p>SearchAlertContactGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the alert contact groups.
+         * <p>The information about the alert contact groups.</p>
          */
         public Builder contactGroups(java.util.List < ContactGroups> contactGroups) {
             this.contactGroups = contactGroups;
@@ -57,7 +58,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D6C358A-A58B-4F4B-94CE-F5AAF023****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchAlertContactGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertContactGroupResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactId")
         private Long contactId;
@@ -193,7 +203,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The ID of the alert contact.
+             * <p>The ID of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -201,7 +214,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact.
+             * <p>The name of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Doe</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -209,7 +225,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572349025000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -217,7 +236,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f6">https://oapi.dingtalk.com/robot/send?access_token=91f2f6</a>****</p>
              */
             public Builder dingRobot(String dingRobot) {
                 this.dingRobot = dingRobot;
@@ -225,7 +247,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -233,7 +258,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the alert contact.
+             * <p>The mobile number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111*****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -241,11 +269,14 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert contact receives system notifications. Valid values:
-             * <p>
+             * <p>Indicates whether the alert contact receives system notifications. Valid values:</p>
+             * <ul>
+             * <li>true: receives system notifications.</li>
+             * <li>false: does not receive system notifications.</li>
+             * </ul>
              * 
-             * *   true: receives system notifications.
-             * *   false: does not receive system notifications.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder systemNoc(Boolean systemNoc) {
                 this.systemNoc = systemNoc;
@@ -253,7 +284,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1580258717000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -261,7 +295,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -275,6 +312,12 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchAlertContactGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertContactGroupResponseBody</p>
+     */
     public static class ContactGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroupId")
         private Long contactGroupId;
@@ -362,7 +405,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The ID of the alert contact group.
+             * <p>The ID of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>746</p>
              */
             public Builder contactGroupId(Long contactGroupId) {
                 this.contactGroupId = contactGroupId;
@@ -370,7 +416,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact group.
+             * <p>The name of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup</p>
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -378,7 +427,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact list.
+             * <p>The alert contact list.</p>
              */
             public Builder contacts(java.util.List < Contacts> contacts) {
                 this.contacts = contacts;
@@ -386,7 +435,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1529668855000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -394,7 +446,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1529668855000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -402,7 +457,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTraceAppConfigRequest} extends {@link RequestModel}
  *
  * <p>SaveTraceAppConfigRequest</p>
@@ -91,10 +92,12 @@ public class SaveTraceAppConfigRequest extends Request {
         }
 
         /**
-         * The process ID (PID) of the application.
-         * <p>
+         * <p>The process ID (PID) of the application.</p>
+         * <p>Log on to the ARMS console. In the left-side navigation pane, choose <strong>Application Monitoring</strong> &gt; <strong>Application List</strong>. On the Application List page, click the name of an application. The URL in the address bar contains the PID of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is xxx%4074xxx, you must replace %40 with an at sign (@) to obtain xxx@74xxx.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Log on to the ARMS console. In the left-side navigation pane, choose **Application Monitoring** > **Application List**. On the Application List page, click the name of an application. The URL in the address bar contains the PID of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is xxx%4074xxx, you must replace %40 with an at sign (@) to obtain xxx@74xxx.
+         * <strong>example:</strong>
+         * <p>a2n80plglh@745eddxxx</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -103,7 +106,7 @@ public class SaveTraceAppConfigRequest extends Request {
         }
 
         /**
-         * The settings of Application Monitoring.
+         * <p>The settings of Application Monitoring.</p>
          */
         public Builder settings(java.util.List < Settings> settings) {
             this.putQueryParameter("Settings", settings);
@@ -118,6 +121,12 @@ public class SaveTraceAppConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveTraceAppConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SaveTraceAppConfigRequest</p>
+     */
     public static class Settings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -157,17 +166,20 @@ public class SaveTraceAppConfigRequest extends Request {
             private String value; 
 
             /**
-             * The key of the settings that you want to modify. For more information about the supported settings, see the following sections.
-             * <p>
+             * <p>The key of the settings that you want to modify. For more information about the supported settings, see the following sections.</p>
+             * <ul>
+             * <li>Trace sampling settings</li>
+             * <li>Agent switch settings</li>
+             * <li>Threshold settings</li>
+             * <li>Advanced settings</li>
+             * <li>Thread settings</li>
+             * <li>Memory snapshot settings</li>
+             * <li>URL convergence settings</li>
+             * <li>Business log association settings</li>
+             * </ul>
              * 
-             * *   Trace sampling settings
-             * *   Agent switch settings
-             * *   Threshold settings
-             * *   Advanced settings
-             * *   Thread settings
-             * *   Memory snapshot settings
-             * *   URL convergence settings
-             * *   Business log association settings
+             * <strong>example:</strong>
+             * <p>sampling.enable</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -175,17 +187,20 @@ public class SaveTraceAppConfigRequest extends Request {
             }
 
             /**
-             * The value of the settings that you want to modify. For more information about the supported settings, see the following sections.
-             * <p>
+             * <p>The value of the settings that you want to modify. For more information about the supported settings, see the following sections.</p>
+             * <ul>
+             * <li>Trace sampling settings</li>
+             * <li>Agent switch settings</li>
+             * <li>Threshold settings</li>
+             * <li>Advanced settings</li>
+             * <li>Thread settings</li>
+             * <li>Memory snapshot settings</li>
+             * <li>URL convergence settings</li>
+             * <li>Business log association settings</li>
+             * </ul>
              * 
-             * *   Trace sampling settings
-             * *   Agent switch settings
-             * *   Threshold settings
-             * *   Advanced settings
-             * *   Thread settings
-             * *   Memory snapshot settings
-             * *   URL convergence settings
-             * *   Business log association settings
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;

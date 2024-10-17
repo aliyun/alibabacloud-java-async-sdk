@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTraceAppByPageRequest} extends {@link RequestModel}
  *
  * <p>SearchTraceAppByPageRequest</p>
@@ -124,7 +125,10 @@ public class SearchTraceAppByPageRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: `1`.
+         * <p>The number of the page to return. Default value: <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -133,7 +137,10 @@ public class SearchTraceAppByPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: `10`.
+         * <p>The number of entries to return on each page. Default value: <code>10</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -142,7 +149,11 @@ public class SearchTraceAppByPageRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +162,10 @@ public class SearchTraceAppByPageRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -160,7 +174,7 @@ public class SearchTraceAppByPageRequest extends Request {
         }
 
         /**
-         * A list of tags.
+         * <p>A list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -169,7 +183,10 @@ public class SearchTraceAppByPageRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder traceAppName(String traceAppName) {
             this.putQueryParameter("TraceAppName", traceAppName);
@@ -184,6 +201,12 @@ public class SearchTraceAppByPageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTraceAppByPageRequest} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByPageRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -223,7 +246,10 @@ public class SearchTraceAppByPageRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +257,10 @@ public class SearchTraceAppByPageRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

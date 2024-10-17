@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListActivatedAlertsRequest} extends {@link RequestModel}
  *
  * <p>ListActivatedAlertsRequest</p>
@@ -98,7 +99,11 @@ public class ListActivatedAlertsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: `1`.
+         * <p>The number of the page to return. Default value: <code>1</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -107,7 +112,10 @@ public class ListActivatedAlertsRequest extends Request {
         }
 
         /**
-         * The filter condition in the `{"key":"value"}`format. You must specify the `key` and `value` of the filter condition.
+         * <p>The filter condition in the <code>{&quot;key&quot;:&quot;value&quot;}</code>format. You must specify the <code>key</code> and <code>value</code> of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;alertname&quot;:&quot;Container CPU usage is greater than 80%&quot;}</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -116,7 +124,11 @@ public class ListActivatedAlertsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: `10`.
+         * <p>The number of entries to return on each page. Default value: <code>10</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +137,11 @@ public class ListActivatedAlertsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

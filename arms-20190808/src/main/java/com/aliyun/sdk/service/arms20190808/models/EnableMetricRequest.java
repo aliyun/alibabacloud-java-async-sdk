@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableMetricRequest} extends {@link RequestModel}
  *
  * <p>EnableMetricRequest</p>
@@ -83,7 +84,11 @@ public class EnableMetricRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccfa5e34a5c1f4ce6b916a40a12151d88</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -92,7 +97,10 @@ public class EnableMetricRequest extends Request {
         }
 
         /**
-         * The metric name.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube_pod_container_status_ready</p>
          */
         public Builder dropMetric(String dropMetric) {
             this.putQueryParameter("DropMetric", dropMetric);
@@ -101,7 +109,11 @@ public class EnableMetricRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

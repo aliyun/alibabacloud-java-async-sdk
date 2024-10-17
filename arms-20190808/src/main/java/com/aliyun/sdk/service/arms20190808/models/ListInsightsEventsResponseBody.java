@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInsightsEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ListInsightsEventsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the event.
+         * <p>The details of the event.</p>
          */
         public Builder insightsEvents(java.util.List < InsightsEvents> insightsEvents) {
             this.insightsEvents = insightsEvents;
@@ -57,7 +58,10 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F1174DC-6085-5353-AAE7-D4ADCD******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListInsightsEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInsightsEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInsightsEventsResponseBody</p>
+     */
     public static class InsightsEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private Long date;
@@ -169,7 +179,10 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The time when the event occurred. The value is a timestamp.
+             * <p>The time when the event occurred. The value is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1658890560</p>
              */
             public Builder date(Long date) {
                 this.date = date;
@@ -177,7 +190,10 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert event.
+             * <p>The description of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The overall response time of the [HTTP] service of the application [sd] spikes at [2022-07-27 10:57:00]</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -185,7 +201,10 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the event.
+             * <p>The severity of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P3</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -193,7 +212,10 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application associated with the event.
+             * <p>The ID of the application associated with the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsv9zcel92@7da413b******</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -201,7 +223,10 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The problem identifier.
+             * <p>The problem identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>erep3o9zue@01ebe697ab70566|@1499161100890550|@cn-hangzhou|@1701841800000|@1701842040000|@daa6c51a-3c44-4d57-9548-4e212c******</p>
              */
             public Builder problemId(String problemId) {
                 this.problemId = problemId;
@@ -209,7 +234,10 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the event.
+             * <p>The title of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Average response-time spikes of application services</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -217,7 +245,10 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event.
+             * <p>The type of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtIncrease</p>
              */
             public Builder type(String type) {
                 this.type = type;

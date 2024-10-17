@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIntegrationRequest} extends {@link RequestModel}
  *
  * <p>CreateIntegrationRequest</p>
@@ -125,11 +126,14 @@ public class CreateIntegrationRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically clear alert events. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically clear alert events. Default value: true. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRecover(Boolean autoRecover) {
             this.putBodyParameter("AutoRecover", autoRecover);
@@ -138,7 +142,10 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * The description of the alert integration.
+         * <p>The description of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -147,7 +154,11 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * The name of the alert integration.
+         * <p>The name of the alert integration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor integration</p>
          */
         public Builder integrationName(String integrationName) {
             this.putBodyParameter("IntegrationName", integrationName);
@@ -156,11 +167,15 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * The service of the alert integration. Valid values:
-         * <p>
+         * <p>The service of the alert integration. Valid values:</p>
+         * <ul>
+         * <li>CLOUD_MONITOR: CloudMonitor</li>
+         * <li>LOG_SERVICE: Log Service</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CLOUD_MONITOR: CloudMonitor
-         * *   LOG_SERVICE: Log Service
+         * <strong>example:</strong>
+         * <p>CLOUD_MONITOR</p>
          */
         public Builder integrationProductType(String integrationProductType) {
             this.putBodyParameter("IntegrationProductType", integrationProductType);
@@ -169,7 +184,10 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.
+         * <p>The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder recoverTime(Long recoverTime) {
             this.putBodyParameter("RecoverTime", recoverTime);
@@ -178,7 +196,10 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

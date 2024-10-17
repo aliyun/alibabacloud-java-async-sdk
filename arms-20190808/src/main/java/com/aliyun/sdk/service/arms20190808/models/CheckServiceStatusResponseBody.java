@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>CheckServiceStatusResponseBody</p>
@@ -49,11 +50,14 @@ public class CheckServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true.</li>
+         * <li>false.</li>
+         * </ul>
          * 
-         * *   true.
-         * *   false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -61,7 +65,10 @@ public class CheckServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to find logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to find logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5710C923-AD09-4293-9E11-DCBE3D15F8D4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

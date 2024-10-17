@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveSourcesFromPrometheusGlobalViewResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveSourcesFromPrometheusGlobalViewResponseBody</p>
@@ -73,7 +74,10 @@ public class RemoveSourcesFromPrometheusGlobalViewResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * Status code. 200 is success, other status codes are exceptions.
+         * <p>Status code. 200 is success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class RemoveSourcesFromPrometheusGlobalViewResponseBody extends TeaModel 
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class RemoveSourcesFromPrometheusGlobalViewResponseBody extends TeaModel 
         }
 
         /**
-         * Returns a hint message for the result.
+         * <p>Returns a hint message for the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class RemoveSourcesFromPrometheusGlobalViewResponseBody extends TeaModel 
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9319A57D-2D9E-472A-B69B-CF3CD16D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class RemoveSourcesFromPrometheusGlobalViewResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link RemoveSourcesFromPrometheusGlobalViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveSourcesFromPrometheusGlobalViewResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
@@ -161,7 +177,10 @@ public class RemoveSourcesFromPrometheusGlobalViewResponseBody extends TeaModel 
             private Boolean success; 
 
             /**
-             * The Info-level information.
+             * <p>The Info-level information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance.</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -169,7 +188,10 @@ public class RemoveSourcesFromPrometheusGlobalViewResponseBody extends TeaModel 
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -177,11 +199,14 @@ public class RemoveSourcesFromPrometheusGlobalViewResponseBody extends TeaModel 
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

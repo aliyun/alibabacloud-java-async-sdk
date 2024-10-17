@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ManageRecordingRuleRequest} extends {@link RequestModel}
  *
  * <p>ManageRecordingRuleRequest</p>
@@ -99,7 +100,11 @@ public class ManageRecordingRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf09705f5a82f454db0d50420b6b4e904</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +113,11 @@ public class ManageRecordingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the user.
+         * <p>The ID of the user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87348589207</p>
          */
         public Builder queryUserId(String queryUserId) {
             this.putQueryParameter("QueryUserId", queryUserId);
@@ -117,7 +126,11 @@ public class ManageRecordingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +139,11 @@ public class ManageRecordingRuleRequest extends Request {
         }
 
         /**
-         * The recording rule.
+         * <p>The recording rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>groups:\n- interval: 60s\n  name: auto_analyzer_recording_rule_60s\n  rules:\n  - expr: sum(node_cpu_seconds_total)\n    record: sum:node_cpu_seconds_total:recording_rule_hash_f341458c0f7d\n</p>
          */
         public Builder ruleYaml(String ruleYaml) {
             this.putQueryParameter("RuleYaml", ruleYaml);

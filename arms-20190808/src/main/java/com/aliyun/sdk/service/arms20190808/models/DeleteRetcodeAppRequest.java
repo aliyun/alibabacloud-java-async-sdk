@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRetcodeAppRequest} extends {@link RequestModel}
  *
  * <p>DeleteRetcodeAppRequest</p>
@@ -97,7 +98,10 @@ public class DeleteRetcodeAppRequest extends Request {
         } 
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -106,7 +110,10 @@ public class DeleteRetcodeAppRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -115,7 +122,11 @@ public class DeleteRetcodeAppRequest extends Request {
         }
 
         /**
-         * The process identifier (PID) of the application.
+         * <p>The process identifier (PID) of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aokcdqn3ly@741623b4e91****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -124,7 +135,11 @@ public class DeleteRetcodeAppRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

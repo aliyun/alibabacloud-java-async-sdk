@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncRecordingRulesRequest} extends {@link RequestModel}
  *
  * <p>SyncRecordingRulesRequest</p>
@@ -84,7 +85,11 @@ public class SyncRecordingRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster whose aggregation rule you want to synchronize.
+         * <p>The ID of the cluster whose aggregation rule you want to synchronize.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +98,11 @@ public class SyncRecordingRulesRequest extends Request {
         }
 
         /**
-         * The ID of the region. The destination region can be the same as the source region.
+         * <p>The ID of the region. The destination region can be the same as the source region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +111,11 @@ public class SyncRecordingRulesRequest extends Request {
         }
 
         /**
-         * The IDs of clusters to which you want to synchronize the aggregation rule.
+         * <p>The IDs of clusters to which you want to synchronize the aggregation rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;cn&quot;:[         &quot;c06ca68cd16f14f52bb07772eda***&quot;,         &quot;c33dd70a0ac184c1b879d807ab2***&quot;,         &quot;c384cf7e4dcb543e6ac8c7d4dd3***&quot;     ],     &quot;us&quot;:[         &quot;ce30f833bc4a04a56a06b070319***&quot;     ],     &quot;jp&quot;:[      ],     &quot;ap&quot;:[      ],     &quot;gov&quot;:[      ],     &quot;finance&quot;:[      ] }</p>
          */
         public Builder targetClusters(String targetClusters) {
             this.putQueryParameter("TargetClusters", targetClusters);

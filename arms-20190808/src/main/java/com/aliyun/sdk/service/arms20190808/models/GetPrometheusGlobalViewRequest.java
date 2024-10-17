@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPrometheusGlobalViewRequest} extends {@link RequestModel}
  *
  * <p>GetPrometheusGlobalViewRequest</p>
@@ -69,7 +70,11 @@ public class GetPrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * The ID of the global aggregation instance.
+         * <p>The ID of the global aggregation instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global-v2-cn-1478326682034601-vss8pd0i</p>
          */
         public Builder globalViewClusterId(String globalViewClusterId) {
             this.putQueryParameter("GlobalViewClusterId", globalViewClusterId);
@@ -78,7 +83,11 @@ public class GetPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

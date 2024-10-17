@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNotificationPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteNotificationPolicyRequest</p>
@@ -54,10 +55,12 @@ public class DeleteNotificationPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the notification policy.
-         * <p>
+         * <p>The ID of the notification policy.</p>
+         * <p>For more information about how to obtain the ID of a notification policy, see <a href="https://help.aliyun.com/document_detail/2612375.html">ListNotificationPolicies</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a notification policy, see [ListNotificationPolicies](~~2612375~~).
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

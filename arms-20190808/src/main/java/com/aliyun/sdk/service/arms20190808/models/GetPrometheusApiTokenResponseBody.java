@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPrometheusApiTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetPrometheusApiTokenResponseBody</p>
@@ -49,7 +50,10 @@ public class GetPrometheusApiTokenResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class GetPrometheusApiTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The token required for integrating Prometheus Service.
+         * <p>The token required for integrating Prometheus Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6dcbb77ef4ba6ef5466b5debf9e2****</p>
          */
         public Builder token(String token) {
             this.token = token;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEnvCustomJobRequest} extends {@link RequestModel}
  *
  * <p>UpdateEnvCustomJobRequest</p>
@@ -126,7 +127,10 @@ public class UpdateEnvCustomJobRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -135,7 +139,10 @@ public class UpdateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * The YAML configuration string.
+         * <p>The YAML configuration string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refer to supplementary instructions.</p>
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -144,7 +151,11 @@ public class UpdateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * The name of the custom job.
+         * <p>The name of the custom job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customJob1</p>
          */
         public Builder customJobName(String customJobName) {
             this.putQueryParameter("CustomJobName", customJobName);
@@ -153,7 +164,11 @@ public class UpdateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * The environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -162,7 +177,11 @@ public class UpdateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +190,10 @@ public class UpdateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * The status of the custom job. Valid values: run and stop.
+         * <p>The status of the custom job. Valid values: run and stop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

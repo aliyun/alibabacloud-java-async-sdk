@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlertEventsRequest} extends {@link RequestModel}
  *
  * <p>ListAlertEventsRequest</p>
@@ -153,7 +154,10 @@ public class ListAlertEventsRequest extends Request {
         } 
 
         /**
-         * The name of the alert.
+         * <p>The name of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-triggered alert</p>
          */
         public Builder alertName(String alertName) {
             this.putQueryParameter("AlertName", alertName);
@@ -162,7 +166,10 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * The end time of the alert events that you want to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
+         * <p>The end time of the alert events that you want to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-22 23:59:59</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -171,7 +178,10 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * The list of matching conditions.
+         * <p>The list of matching conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[         {           &quot;value&quot;: &quot;ARMS_NOTIFICATION&quot;,           &quot;key&quot;: &quot;clustername&quot;,           &quot;operator&quot;: &quot;eq&quot;         }       ]     },{       &quot;matchingConditions&quot;: [         {           &quot;value&quot;: &quot;test&quot;,           &quot;key&quot;: &quot;alertname&quot;,           &quot;operator&quot;: &quot;eq&quot;         }       ]</p>
          */
         public Builder matchingConditions(String matchingConditions) {
             this.putQueryParameter("MatchingConditions", matchingConditions);
@@ -180,7 +190,11 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -189,7 +203,10 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * Specifies whether to show the associated notification policy.
+         * <p>Specifies whether to show the associated notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showNotificationPolicies(Boolean showNotificationPolicies) {
             this.putQueryParameter("ShowNotificationPolicies", showNotificationPolicies);
@@ -198,7 +215,11 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -207,7 +228,10 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * The start time of the alert events that you want to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
+         * <p>The start time of the alert events that you want to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-19 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -216,12 +240,15 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * The status of the alert events. Valid values:
-         * <p>
+         * <p>The status of the alert events. Valid values:</p>
+         * <ul>
+         * <li>Active</li>
+         * <li>Silenced</li>
+         * <li>Resolved</li>
+         * </ul>
          * 
-         * *   Active
-         * *   Silenced
-         * *   Resolved
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

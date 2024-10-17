@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrometheusAlertRulesRequest} extends {@link RequestModel}
  *
  * <p>ListPrometheusAlertRulesRequest</p>
@@ -139,7 +140,11 @@ public class ListPrometheusAlertRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c0bad479465464e1d8c1e641b0afb****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -148,7 +153,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * The tag match conditions that are described in a JSON string. For more information about this parameter, see the **Additional description of the MatchExpressions parameter** section.
+         * <p>The tag match conditions that are described in a JSON string. For more information about this parameter, see the <strong>Additional description of the MatchExpressions parameter</strong> section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;severity&quot;,&quot;value&quot;:&quot;critical&quot;,&quot;operator&quot;:&quot;re&quot;}]</p>
          */
         public Builder matchExpressions(String matchExpressions) {
             this.putQueryParameter("MatchExpressions", matchExpressions);
@@ -157,7 +165,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * The name of the alert rule.
+         * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus_Alert</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -166,7 +177,11 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,11 +190,14 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * Specifies whether the alert rule is enabled. Valid values:
-         * <p>
+         * <p>Specifies whether the alert rule is enabled. Valid values:</p>
+         * <ul>
+         * <li>1: enables the alert rule.</li>
+         * <li>0: disables the alert rule.</li>
+         * </ul>
          * 
-         * - 1: enables the alert rule.
-         * - 0: disables the alert rule.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -188,7 +206,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -197,7 +215,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * The type of the alert rule.
+         * <p>The type of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -212,6 +233,12 @@ public class ListPrometheusAlertRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrometheusAlertRulesRequest} extends {@link TeaModel}
+     *
+     * <p>ListPrometheusAlertRulesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -251,7 +278,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -259,7 +289,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder value(String value) {
                 this.value = value;

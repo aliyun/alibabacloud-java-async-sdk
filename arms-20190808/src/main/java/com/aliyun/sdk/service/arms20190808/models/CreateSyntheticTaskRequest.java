@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSyntheticTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateSyntheticTaskRequest</p>
@@ -257,7 +258,7 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * The common parameters.
+         * <p>The common parameters.</p>
          */
         public Builder commonParam(CommonParam commonParam) {
             String commonParamShrink = shrink(commonParam, "CommonParam", "json");
@@ -267,7 +268,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The file download task.
+         * <p>The file download task.</p>
          */
         public Builder download(Download download) {
             String downloadShrink = shrink(download, "Download", "json");
@@ -277,7 +278,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The frequency.
+         * <p>The frequency.</p>
          */
         public Builder extendInterval(ExtendInterval extendInterval) {
             String extendIntervalShrink = shrink(extendInterval, "ExtendInterval", "json");
@@ -287,23 +288,27 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The interval at which synthetic monitoring is performed. Unit: minutes. Valid values:
-         * <p>
+         * <p>The interval at which synthetic monitoring is performed. Unit: minutes. Valid values:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>5</li>
+         * <li>10</li>
+         * <li>15</li>
+         * <li>20</li>
+         * <li>30</li>
+         * <li>60</li>
+         * <li>120</li>
+         * <li>180</li>
+         * <li>240</li>
+         * <li>360</li>
+         * <li>480</li>
+         * <li>720</li>
+         * <li>1440</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1
-         * *   5
-         * *   10
-         * *   15
-         * *   20
-         * *   30
-         * *   60
-         * *   120
-         * *   180
-         * *   240
-         * *   360
-         * *   480
-         * *   720
-         * *   1440
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder intervalTime(String intervalTime) {
             this.putQueryParameter("IntervalTime", intervalTime);
@@ -312,11 +317,15 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The interval type.
-         * <p>
+         * <p>The interval type.</p>
+         * <ul>
+         * <li>0: daily</li>
+         * <li>1: custom frequency</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: daily
-         * *   1: custom frequency
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder intervalType(String intervalType) {
             this.putQueryParameter("IntervalType", intervalType);
@@ -325,12 +334,16 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The IP address type:
-         * <p>
+         * <p>The IP address type:</p>
+         * <ul>
+         * <li>0: an automatic IP address</li>
+         * <li>1: IPv4</li>
+         * <li>2: IPv6</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: an automatic IP address
-         * *   1: IPv4
-         * *   2: IPv6
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ipType(Long ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -339,7 +352,8 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The list of monitoring points.
+         * <p>The list of monitoring points.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder monitorList(java.util.List < MonitorList> monitorList) {
             String monitorListShrink = shrink(monitorList, "MonitorList", "json");
@@ -349,7 +363,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The monitoring items that are associated with the browse tasks.
+         * <p>The monitoring items that are associated with the browse tasks.</p>
          */
         public Builder navigation(Navigation navigation) {
             String navigationShrink = shrink(navigation, "Navigation", "json");
@@ -359,7 +373,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The network synthetic monitoring task.
+         * <p>The network synthetic monitoring task.</p>
          */
         public Builder net(Net net) {
             String netShrink = shrink(net, "Net", "json");
@@ -369,7 +383,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The API performance synthetic monitoring task.
+         * <p>The API performance synthetic monitoring task.</p>
          */
         public Builder protocol(Protocol protocol) {
             String protocolShrink = shrink(protocol, "Protocol", "json");
@@ -379,7 +393,11 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the application is located.
+         * <p>The ID of the region in which the application is located.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -388,7 +406,11 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The name of the task. To update a synthetic monitoring task, enter the task name and set the **UpdateTask** parameter to **true**.
+         * <p>The name of the task. To update a synthetic monitoring task, enter the task name and set the <strong>UpdateTask</strong> parameter to <strong>true</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Network synthetic monitoring task</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -397,14 +419,18 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The type of the monitoring task. Valid values:
-         * <p>
+         * <p>The type of the monitoring task. Valid values:</p>
+         * <ol>
+         * <li>3: web page performance - IE</li>
+         * <li>34: web Page Performance - Chrome</li>
+         * <li>0: network quality</li>
+         * <li>40: file download</li>
+         * <li>7:API performance</li>
+         * </ol>
+         * <p>This parameter is required.</p>
          * 
-         * 1.  3: web page performance - IE
-         * 2.  34: web Page Performance - Chrome
-         * 3.  0: network quality
-         * 4.  40: file download
-         * 5.  7:API performance
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder taskType(Long taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -413,11 +439,14 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to update existing synthetic monitoring tasks.
-         * <p>
+         * <p>Specifies whether to update existing synthetic monitoring tasks.</p>
+         * <ul>
+         * <li>true: updates existing synthetic monitoring tasks.</li>
+         * <li>false: creates new synthetic monitoring tasks.</li>
+         * </ul>
          * 
-         * *   true: updates existing synthetic monitoring tasks.
-         * *   false: creates new synthetic monitoring tasks.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder updateTask(Boolean updateTask) {
             this.putQueryParameter("UpdateTask", updateTask);
@@ -426,7 +455,11 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The URL for synthetic monitoring.
+         * <p>The URL for synthetic monitoring.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -441,6 +474,12 @@ public class CreateSyntheticTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class AlertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsCritical")
         private Long isCritical;
@@ -492,7 +531,10 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long symbols; 
 
             /**
-             * Specifies whether the condition must be met.
+             * <p>Specifies whether the condition must be met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCritical(Long isCritical) {
                 this.isCritical = isCritical;
@@ -500,14 +542,16 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The name of the alert rule.
-             * <p>
+             * <p>The name of the alert rule.</p>
+             * <p>For network synthetic monitoring, use the following names:</p>
+             * <ul>
+             * <li>Latency: PING_SET</li>
+             * <li>Packet loss rate: PING_LOST_RATE</li>
+             * <li>Hijacking: HIJACKPER</li>
+             * </ul>
              * 
-             * For network synthetic monitoring, use the following names:
-             * 
-             * *   Latency: PING_SET
-             * *   Packet loss rate: PING_LOST_RATE
-             * *   Hijacking: HIJACKPER
+             * <strong>example:</strong>
+             * <p>PING_SET</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -515,11 +559,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies how the condition is evaluated. Valid values:
-             * <p>
+             * <p>Specifies how the condition is evaluated. Valid values:</p>
+             * <ul>
+             * <li>1: greater than</li>
+             * <li>0: less than</li>
+             * </ul>
              * 
-             * *   1: greater than
-             * *   0: less than
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder symbols(Long symbols) {
                 this.symbols = symbols;
@@ -533,6 +580,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class CommonParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmFlag")
         private String alarmFlag;
@@ -620,11 +673,14 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long startExecutionTime; 
 
             /**
-             * Specifies whether to create an alert rule.
-             * <p>
+             * <p>Specifies whether to create an alert rule.</p>
+             * <ul>
+             * <li>1: creates an alert.</li>
+             * <li>0: does not create an alert.</li>
+             * </ul>
              * 
-             * *   1: creates an alert.
-             * *   0: does not create an alert.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alarmFlag(String alarmFlag) {
                 this.alarmFlag = alarmFlag;
@@ -632,7 +688,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The alert parameters.
+             * <p>The alert parameters.</p>
              */
             public Builder alertList(java.util.List < AlertList> alertList) {
                 this.alertList = alertList;
@@ -640,7 +696,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The ID of the alert recipient. Separate multiple recipients with commas (,).
+             * <p>The ID of the alert recipient. Separate multiple recipients with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder alertNotifierId(String alertNotifierId) {
                 this.alertNotifierId = alertNotifierId;
@@ -648,7 +707,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The ID of the notification policy.
+             * <p>The ID of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder alertPolicyId(String alertPolicyId) {
                 this.alertPolicyId = alertPolicyId;
@@ -656,11 +718,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to evenly distribute monitoring samples. Valid values:
-             * <p>
+             * <p>Specifies whether to evenly distribute monitoring samples. Valid values:</p>
+             * <ul>
+             * <li>0: no</li>
+             * <li>1: yes</li>
+             * </ul>
              * 
-             * *   0: no
-             * *   1: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder monitorSamples(Long monitorSamples) {
                 this.monitorSamples = monitorSamples;
@@ -668,7 +733,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The time when execution starts.
+             * <p>The time when execution starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20 10</p>
              */
             public Builder startExecutionTime(Long startExecutionTime) {
                 this.startExecutionTime = startExecutionTime;
@@ -682,6 +750,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class Download extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionTimeout")
         private Double connectionTimeout;
@@ -853,7 +927,10 @@ public class CreateSyntheticTaskRequest extends Request {
             private String whiteList; 
 
             /**
-             * The connection timeout period.
+             * <p>The connection timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder connectionTimeout(Double connectionTimeout) {
                 this.connectionTimeout = connectionTimeout;
@@ -861,7 +938,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The items to be ignored in a certificate error. Pass the values of the check boxes that are separated with vertical bars (|).
+             * <p>The items to be ignored in a certificate error. Pass the values of the check boxes that are separated with vertical bars (|).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Host:<a href="http://www.example.com%7CReferer:www.example.com">www.example.com|Referer:www.example.com</a></p>
              */
             public Builder downloadCustomHeaderContent(String downloadCustomHeaderContent) {
                 this.downloadCustomHeaderContent = downloadCustomHeaderContent;
@@ -869,11 +949,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The custom host mode.
-             * <p>
+             * <p>The custom host mode.</p>
+             * <ul>
+             * <li>1: round robin</li>
+             * <li>0: random</li>
+             * </ul>
              * 
-             * *   1: round robin
-             * *   0: random
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder downloadCustomHost(Long downloadCustomHost) {
                 this.downloadCustomHost = downloadCustomHost;
@@ -881,7 +964,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The custom host IP address. You can enter multiple IP addresses. Separate the IP addresses with commas (,).
+             * <p>The custom host IP address. You can enter multiple IP addresses. Separate the IP addresses with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4:192.168.2.1,192.168.2.5:img.a.com|192.168.2.1[8080]:img.a.com</p>
              */
             public Builder downloadCustomHostIp(String downloadCustomHostIp) {
                 this.downloadCustomHostIp = downloadCustomHostIp;
@@ -889,7 +975,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The items to be ignored in a certificate error. Pass the values of the check boxes that are separated with vertical bars (|).
+             * <p>The items to be ignored in a certificate error. Pass the values of the check boxes that are separated with vertical bars (|).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1|2|4</p>
              */
             public Builder downloadIgnoreCertificateError(String downloadIgnoreCertificateError) {
                 this.downloadIgnoreCertificateError = downloadIgnoreCertificateError;
@@ -897,11 +986,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The kernel type.
-             * <p>
+             * <p>The kernel type.</p>
+             * <ul>
+             * <li>1: curl</li>
+             * <li>0: WinInet</li>
+             * </ul>
              * 
-             * *   1: curl
-             * *   0: WinInet
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder downloadKernel(Long downloadKernel) {
                 this.downloadKernel = downloadKernel;
@@ -909,7 +1001,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to support redirection.
+             * <p>Specifies whether to support redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder downloadRedirection(Long downloadRedirection) {
                 this.downloadRedirection = downloadRedirection;
@@ -917,7 +1012,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The size of the download file. Unit: KB.
+             * <p>The size of the download file. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder downloadTransmissionSize(Long downloadTransmissionSize) {
                 this.downloadTransmissionSize = downloadTransmissionSize;
@@ -925,7 +1023,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The monitoring duration.
+             * <p>The monitoring duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder monitorTimeout(Long monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -933,12 +1034,15 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The QUIC protocol type.
-             * <p>
+             * <p>The QUIC protocol type.</p>
+             * <ul>
+             * <li>1: http1</li>
+             * <li>2: http2</li>
+             * <li>3: http3</li>
+             * </ul>
              * 
-             * *   1: http1
-             * *   2: http2
-             * *   3: http3
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quickProtocol(String quickProtocol) {
                 this.quickProtocol = quickProtocol;
@@ -946,7 +1050,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The keyword that is used in verification.
+             * <p>The keyword that is used in verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>keyword</p>
              */
             public Builder validateKeywords(String validateKeywords) {
                 this.validateKeywords = validateKeywords;
@@ -954,12 +1061,15 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The verification method.
-             * <p>
+             * <p>The verification method.</p>
+             * <ul>
+             * <li>0: no verification</li>
+             * <li>1: string verification</li>
+             * <li>2: MD5 verification</li>
+             * </ul>
              * 
-             * *   0: no verification
-             * *   1: string verification
-             * *   2: MD5 verification
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder verifyWay(Long verifyWay) {
                 this.verifyWay = verifyWay;
@@ -967,7 +1077,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The whitelist for DNS hijacking.
+             * <p>The whitelist for DNS hijacking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;src&quot;:&quot;211.154.166.174&quot;}]</p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -981,6 +1094,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class ExtendInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Days")
         private java.util.List < Long > days;
@@ -1080,7 +1199,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private String startTime; 
 
             /**
-             * The day on which synthetic monitoring is performed.
+             * <p>The day on which synthetic monitoring is performed.</p>
              */
             public Builder days(java.util.List < Long > days) {
                 this.days = days;
@@ -1088,7 +1207,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The hour at which synthetic monitoring ends.
+             * <p>The hour at which synthetic monitoring ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder endHour(Long endHour) {
                 this.endHour = endHour;
@@ -1096,7 +1218,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The minute at which synthetic monitoring ends.
+             * <p>The minute at which synthetic monitoring ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00</p>
              */
             public Builder endMinute(Long endMinute) {
                 this.endMinute = endMinute;
@@ -1104,7 +1229,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The time when synthetic monitoring ends. The format is `yyyy-MM-dd HH`.
+             * <p>The time when synthetic monitoring ends. The format is <code>yyyy-MM-dd HH</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-20 10</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1112,7 +1240,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The hour at which synthetic monitoring starts.
+             * <p>The hour at which synthetic monitoring starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00</p>
              */
             public Builder startHour(Long startHour) {
                 this.startHour = startHour;
@@ -1120,7 +1251,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The minute at which synthetic monitoring starts.
+             * <p>The minute at which synthetic monitoring starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00</p>
              */
             public Builder startMinute(Long startMinute) {
                 this.startMinute = startMinute;
@@ -1128,7 +1262,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The time when synthetic monitoring starts. The format is `yyyy-MM-dd HH`.
+             * <p>The time when synthetic monitoring starts. The format is <code>yyyy-MM-dd HH</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20 10</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1142,6 +1279,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class MonitorList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1196,7 +1339,11 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long netServiceId; 
 
             /**
-             * The ID of the city to which the monitoring point belongs.
+             * <p>The ID of the city to which the monitoring point belongs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1100101</p>
              */
             public Builder cityCode(Long cityCode) {
                 this.cityCode = cityCode;
@@ -1204,11 +1351,15 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The carrier type:
-             * <p>
+             * <p>The carrier type:</p>
+             * <ul>
+             * <li>IDC</li>
+             * <li>LastMilie</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   IDC
-             * *   LastMilie
+             * <strong>example:</strong>
+             * <p>IDC</p>
              */
             public Builder monitorType(Long monitorType) {
                 this.monitorType = monitorType;
@@ -1216,7 +1367,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The ID of the carrier.
+             * <p>The ID of the carrier.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder netServiceId(Long netServiceId) {
                 this.netServiceId = netServiceId;
@@ -1230,6 +1385,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class Navigation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DNSHijackWhiteList")
         private String DNSHijackWhiteList;
@@ -1593,7 +1754,10 @@ public class CreateSyntheticTaskRequest extends Request {
             private Double waitCompletionTime; 
 
             /**
-             * The whitelist for DNS hijacking.
+             * <p>The whitelist for DNS hijacking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:202.0.3.55%7C203.3.44.67">www.aliyun.com:202.0.3.55|203.3.44.67</a></p>
              */
             public Builder DNSHijackWhiteList(String DNSHijackWhiteList) {
                 this.DNSHijackWhiteList = DNSHijackWhiteList;
@@ -1601,7 +1765,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The element blacklist.
+             * <p>The element blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.a.com</p>
              */
             public Builder elementBlacklist(String elementBlacklist) {
                 this.elementBlacklist = elementBlacklist;
@@ -1609,13 +1776,17 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to execute ActiveX.
-             * <p>
+             * <p>Specifies whether to execute ActiveX.</p>
+             * <ul>
+             * <li>3: yes</li>
+             * <li>0: no</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is supported only by IE Full Elements.</p>
+             * </blockquote>
              * 
-             * *   3: yes
-             * *   0: no
-             * 
-             * >  This parameter is supported only by IE Full Elements.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder executeActiveX(Long executeActiveX) {
                 this.executeActiveX = executeActiveX;
@@ -1623,13 +1794,17 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to run applets.
-             * <p>
+             * <p>Specifies whether to run applets.</p>
+             * <ul>
+             * <li>1: yes</li>
+             * <li>0: no</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is supported only by IE Full Elements.</p>
+             * </blockquote>
              * 
-             * *   1: yes
-             * *   0: no
-             * 
-             * >  This parameter is supported only by IE Full Elements.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executeApplication(Long executeApplication) {
                 this.executeApplication = executeApplication;
@@ -1637,13 +1812,17 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to execute scripts.
-             * <p>
+             * <p>Specifies whether to execute scripts.</p>
+             * <ul>
+             * <li>1: yes</li>
+             * <li>0: no</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is supported only by IE Full Elements.</p>
+             * </blockquote>
              * 
-             * *   1: yes
-             * *   0: no
-             * 
-             * >  This parameter is supported only by IE Full Elements.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executeScript(Long executeScript) {
                 this.executeScript = executeScript;
@@ -1651,11 +1830,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to filter invalid IP addresses.
-             * <p>
+             * <p>Specifies whether to filter invalid IP addresses.</p>
+             * <ul>
+             * <li>1: no</li>
+             * <li>0: yes</li>
+             * </ul>
              * 
-             * *   1: no
-             * *   0: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder filterInvalidIP(Long filterInvalidIP) {
                 this.filterInvalidIP = filterInvalidIP;
@@ -1663,7 +1845,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The element that is used in DNS hijacking.
+             * <p>The element that is used in DNS hijacking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder flowHijackJumpTimes(Long flowHijackJumpTimes) {
                 this.flowHijackJumpTimes = flowHijackJumpTimes;
@@ -1671,7 +1856,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The tag that is used in DNS hijacking.
+             * <p>The tag that is used in DNS hijacking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder flowHijackLogo(String flowHijackLogo) {
                 this.flowHijackLogo = flowHijackLogo;
@@ -1679,7 +1867,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period of monitoring. Unit: seconds.
+             * <p>The timeout period of monitoring. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder monitorTimeout(String monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -1687,11 +1878,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to automatically scroll up and down the screen to load a page.
-             * <p>
+             * <p>Specifies whether to automatically scroll up and down the screen to load a page.</p>
+             * <ul>
+             * <li>1: yes</li>
+             * <li>0: no</li>
+             * </ul>
              * 
-             * *   1: yes
-             * *   0: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder navAutomaticScrolling(String navAutomaticScrolling) {
                 this.navAutomaticScrolling = navAutomaticScrolling;
@@ -1699,12 +1893,15 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The method that is used to customize the header. Valid values:
-             * <p>
+             * <p>The method that is used to customize the header. Valid values:</p>
+             * <ul>
+             * <li>0: disables the customer header.</li>
+             * <li>1: modifies the first package.</li>
+             * <li>2: modifies all packages.</li>
+             * </ul>
              * 
-             * *   0: disables the customer header.
-             * *   1: modifies the first package.
-             * *   2: modifies all packages.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder navCustomHeader(String navCustomHeader) {
                 this.navCustomHeader = navCustomHeader;
@@ -1712,7 +1909,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The format of the custom header. You can specify multiple fields. Separate the fields with vertical bars (|).
+             * <p>The format of the custom header. You can specify multiple fields. Separate the fields with vertical bars (|).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Host:<a href="http://www.example.com%7CReferer:www.example.com">www.example.com|Referer:www.example.com</a></p>
              */
             public Builder navCustomHeaderContent(String navCustomHeaderContent) {
                 this.navCustomHeaderContent = navCustomHeaderContent;
@@ -1720,11 +1920,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The custom host mode.
-             * <p>
+             * <p>The custom host mode.</p>
+             * <ul>
+             * <li>1: round robin</li>
+             * <li>0: random</li>
+             * </ul>
              * 
-             * *   1: round robin
-             * *   0: random
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder navCustomHost(Long navCustomHost) {
                 this.navCustomHost = navCustomHost;
@@ -1732,7 +1935,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The custom host IP address. You can enter multiple IP addresses. Separate the IP addresses with commas (,).
+             * <p>The custom host IP address. You can enter multiple IP addresses. Separate the IP addresses with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4:192.168.2.1,192.168.2.5:img.a.com|192.168.2.1[8080]:img.a.com</p>
              */
             public Builder navCustomHostIp(String navCustomHostIp) {
                 this.navCustomHostIp = navCustomHostIp;
@@ -1740,11 +1946,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to disable caching.
-             * <p>
+             * <p>Specifies whether to disable caching.</p>
+             * <ul>
+             * <li>1: disable</li>
+             * <li>0: enable</li>
+             * </ul>
              * 
-             * *   1: disable
-             * *   0: enable
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder navDisableCache(Long navDisableCache) {
                 this.navDisableCache = navDisableCache;
@@ -1752,11 +1961,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the feature of using the Accept-Encoding field to determine whether to accept compressed files.
-             * <p>
+             * <p>Specifies whether to enable the feature of using the Accept-Encoding field to determine whether to accept compressed files.</p>
+             * <ul>
+             * <li>1: disable</li>
+             * <li>0: enable</li>
+             * </ul>
              * 
-             * *   1: disable
-             * *   0: enable
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder navDisableCompression(String navDisableCompression) {
                 this.navDisableCompression = navDisableCompression;
@@ -1764,11 +1976,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate errors during certificate verification in the SSL handshake and continue browsing.
-             * <p>
+             * <p>Specifies whether to ignore certificate errors during certificate verification in the SSL handshake and continue browsing.</p>
+             * <ul>
+             * <li>1: ignore</li>
+             * <li>0: does not ignore</li>
+             * </ul>
              * 
-             * *   1: ignore
-             * *   0: does not ignore
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder navIgnoreCertificateError(Long navIgnoreCertificateError) {
                 this.navIgnoreCertificateError = navIgnoreCertificateError;
@@ -1776,11 +1991,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to continue browsing after a redirection occurs.
-             * <p>
+             * <p>Specifies whether to continue browsing after a redirection occurs.</p>
+             * <ul>
+             * <li>1: yes</li>
+             * <li>0: no</li>
+             * </ul>
              * 
-             * *   1: yes
-             * *   0: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder navRedirection(Long navRedirection) {
                 this.navRedirection = navRedirection;
@@ -1788,11 +2006,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to return the elements on the page.
-             * <p>
+             * <p>Specifies whether to return the elements on the page.</p>
+             * <ul>
+             * <li>1: no. Returns the basic document data.</li>
+             * <li>2: yes. Returns all document data.</li>
+             * </ul>
              * 
-             * *   1: no. Returns the basic document data.
-             * *   2: yes. Returns all document data.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder navReturnElement(Long navReturnElement) {
                 this.navReturnElement = navReturnElement;
@@ -1800,7 +2021,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The web page defacement.
+             * <p>The web page defacement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com:202.0.3.55%7C203.3.44.67">www.example.com:202.0.3.55|203.3.44.67</a></p>
              */
             public Builder pageTamper(String pageTamper) {
                 this.pageTamper = pageTamper;
@@ -1808,7 +2032,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The process ID.
+             * <p>The process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -1816,10 +2043,13 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The domain name of the QUIC request element.
-             * <p>
+             * <p>The domain name of the QUIC request element.</p>
+             * <blockquote>
+             * <p> This parameter is supported by all elements of only Chrome</p>
+             * </blockquote>
              * 
-             * >  This parameter is supported by all elements of only Chrome
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder QUICDomain(String QUICDomain) {
                 this.QUICDomain = QUICDomain;
@@ -1827,16 +2057,20 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The Quick UDP Internet Connections (QUIC) protocol version. Default value: 0. Valid values:
-             * <p>
+             * <p>The Quick UDP Internet Connections (QUIC) protocol version. Default value: 0. Valid values:</p>
+             * <ul>
+             * <li></li>
+             * <li>35</li>
+             * <li>39</li>
+             * <li>43</li>
+             * <li>44</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is supported by all elements of only Chrome</p>
+             * </blockquote>
              * 
-             * *
-             * *   35
-             * *   39
-             * *   43
-             * *   44
-             * 
-             * >  This parameter is supported by all elements of only Chrome
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder QUICVersion(Long QUICVersion) {
                 this.QUICVersion = QUICVersion;
@@ -1844,12 +2078,15 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to return the request header.
-             * <p>
+             * <p>Specifies whether to return the request header.</p>
+             * <ul>
+             * <li>0: does not return the response header.</li>
+             * <li>1: returns the basic document header.</li>
+             * <li>2: returns all headers.</li>
+             * </ul>
              * 
-             * *   0: does not return the response header.
-             * *   1: returns the basic document header.
-             * *   2: returns all headers.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder requestHeader(Long requestHeader) {
                 this.requestHeader = requestHeader;
@@ -1857,12 +2094,15 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The method that is used to return the response header. Valid values:
-             * <p>
+             * <p>The method that is used to return the response header. Valid values:</p>
+             * <ul>
+             * <li>0: does not return the response header.</li>
+             * <li>1: returns the basic document header.</li>
+             * <li>2: returns all headers.</li>
+             * </ul>
              * 
-             * *   0: does not return the response header.
-             * *   1: returns the basic document header.
-             * *   2: returns all headers.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder responseHeader(Long responseHeader) {
                 this.responseHeader = responseHeader;
@@ -1870,7 +2110,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The time threshold that is used to define a slow element. Unit: seconds.
+             * <p>The time threshold that is used to define a slow element. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder slowElementThreshold(Double slowElementThreshold) {
                 this.slowElementThreshold = slowElementThreshold;
@@ -1878,7 +2121,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The blacklist for string verification.
+             * <p>The blacklist for string verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regex:*.example|expalme|</p>
              */
             public Builder verifyStringBlacklist(String verifyStringBlacklist) {
                 this.verifyStringBlacklist = verifyStringBlacklist;
@@ -1886,7 +2132,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The whitelist for string verification.
+             * <p>The whitelist for string verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Regex:*.example|expalme|</p>
              */
             public Builder verifyStringWhiteList(String verifyStringWhiteList) {
                 this.verifyStringWhiteList = verifyStringWhiteList;
@@ -1894,7 +2143,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period of waiting for the monitoring to complete.
+             * <p>The timeout period of waiting for the monitoring to complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder waitCompletionTime(Double waitCompletionTime) {
                 this.waitCompletionTime = waitCompletionTime;
@@ -1908,6 +2160,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class Net extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetDNSNs")
         private String netDNSNs;
@@ -2127,7 +2385,10 @@ public class CreateSyntheticTaskRequest extends Request {
             private String whiteList; 
 
             /**
-             * The DNS server.
+             * <p>The DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.114.XX.XX</p>
              */
             public Builder netDNSNs(String netDNSNs) {
                 this.netDNSNs = netDNSNs;
@@ -2135,11 +2396,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The DNS query method. Valid values:
-             * <p>
+             * <p>The DNS query method. Valid values:</p>
+             * <ul>
+             * <li>1: recursion</li>
+             * <li>2: iteration</li>
+             * </ul>
              * 
-             * *   1: recursion
-             * *   2: iteration
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netDNSQueryMethod(Long netDNSQueryMethod) {
                 this.netDNSQueryMethod = netDNSQueryMethod;
@@ -2147,12 +2411,15 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The IP address type of the DNS server.
-             * <p>
+             * <p>The IP address type of the DNS server.</p>
+             * <ul>
+             * <li>0: IPv4</li>
+             * <li>1: IPv6</li>
+             * <li>2: an automatic IP address</li>
+             * </ul>
              * 
-             * *   0: IPv4
-             * *   1: IPv6
-             * *   2: an automatic IP address
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder netDNSServer(Long netDNSServer) {
                 this.netDNSServer = netDNSServer;
@@ -2160,11 +2427,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable domain name system (DNS) monitoring.
-             * <p>
+             * <p>Specifies whether to enable domain name system (DNS) monitoring.</p>
+             * <ul>
+             * <li>0: Off.</li>
+             * <li>1: On. You must set DNS parameters if you want to enable DNS monitoring.</li>
+             * </ul>
              * 
-             * *   0: Off.
-             * *   1: On. You must set DNS parameters if you want to enable DNS monitoring.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netDNSSwitch(Long netDNSSwitch) {
                 this.netDNSSwitch = netDNSSwitch;
@@ -2172,7 +2442,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period of DNS monitoring. Default value: 5 seconds. Valid values: 0 to 45 seconds.
+             * <p>The timeout period of DNS monitoring. Default value: 5 seconds. Valid values: 0 to 45 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder netDNSTimeout(Long netDNSTimeout) {
                 this.netDNSTimeout = netDNSTimeout;
@@ -2180,11 +2453,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to display the data in the DIG format. Valid values:
-             * <p>
+             * <p>Specifies whether to display the data in the DIG format. Valid values:</p>
+             * <ul>
+             * <li>0: no</li>
+             * <li>1: yes</li>
+             * </ul>
              * 
-             * *   0: no
-             * *   1: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder netDigSwitch(Long netDigSwitch) {
                 this.netDigSwitch = netDigSwitch;
@@ -2192,11 +2468,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The protocol type. Valid values:
-             * <p>
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li>0: ICMP</li>
+             * <li>1: TCP</li>
+             * </ul>
              * 
-             * *   0: ICMP
-             * *   1: TCP
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder netICMPActive(Long netICMPActive) {
                 this.netICMPActive = netICMPActive;
@@ -2204,11 +2483,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to split packages.
-             * <p>
+             * <p>Specifies whether to split packages.</p>
+             * <ul>
+             * <li>0: no</li>
+             * <li>1: yes</li>
+             * </ul>
              * 
-             * *   0: no
-             * *   1: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder netICMPDataCut(Long netICMPDataCut) {
                 this.netICMPDataCut = netICMPDataCut;
@@ -2216,7 +2498,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The interval at which the network synthetic monitoring task is executed. Unit: seconds.
+             * <p>The interval at which the network synthetic monitoring task is executed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netICMPInterval(Long netICMPInterval) {
                 this.netICMPInterval = netICMPInterval;
@@ -2224,7 +2509,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The number of packages.
+             * <p>The number of packages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder netICMPNum(Long netICMPNum) {
                 this.netICMPNum = netICMPNum;
@@ -2232,7 +2520,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The package size.
+             * <p>The package size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder netICMPSize(Long netICMPSize) {
                 this.netICMPSize = netICMPSize;
@@ -2240,11 +2531,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable ping monitoring.
-             * <p>
+             * <p>Specifies whether to enable ping monitoring.</p>
+             * <ul>
+             * <li>0: Off.</li>
+             * <li>1: On. You must set Internet control message protocol (ICMP) parameters if you want to enable ping monitoring.</li>
+             * </ul>
              * 
-             * *   0: Off.
-             * *   1: On. You must set Internet control message protocol (ICMP) parameters if you want to enable ping monitoring.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netICMPSwitch(Long netICMPSwitch) {
                 this.netICMPSwitch = netICMPSwitch;
@@ -2252,7 +2546,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period of Ping monitoring.
+             * <p>The timeout period of Ping monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder netICMPTimeout(Long netICMPTimeout) {
                 this.netICMPTimeout = netICMPTimeout;
@@ -2260,7 +2557,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The maximum number of active monitoring points.
+             * <p>The maximum number of active monitoring points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder netTraceRouteNum(Long netTraceRouteNum) {
                 this.netTraceRouteNum = netTraceRouteNum;
@@ -2268,11 +2568,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable tracert monitoring.
-             * <p>
+             * <p>Specifies whether to enable tracert monitoring.</p>
+             * <ul>
+             * <li>0: Off.</li>
+             * <li>1: On. You must set the tracert parameters if you want to enable tracert monitoring.</li>
+             * </ul>
              * 
-             * *   0: Off.
-             * *   1: On. You must set the tracert parameters if you want to enable tracert monitoring.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netTraceRouteSwitch(Long netTraceRouteSwitch) {
                 this.netTraceRouteSwitch = netTraceRouteSwitch;
@@ -2280,7 +2583,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period of tracert monitoring. Valid values: 0 to 300 seconds.
+             * <p>The timeout period of tracert monitoring. Valid values: 0 to 300 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder netTraceRouteTimeout(Long netTraceRouteTimeout) {
                 this.netTraceRouteTimeout = netTraceRouteTimeout;
@@ -2288,10 +2594,13 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The whitelist for DNS hijacking. The format is `Domain name: Matching rule`.
-             * <p>
+             * <p>The whitelist for DNS hijacking. The format is <code>Domain name: Matching rule</code>.</p>
+             * <blockquote>
+             * <p> Wireless application protocol (WAP) networks do not support DNS hijacking.</p>
+             * </blockquote>
              * 
-             * >  Wireless application protocol (WAP) networks do not support DNS hijacking.
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:202.0.3.55%7C203.3.44.67">www.aliyun.com:202.0.3.55|203.3.44.67</a></p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -2305,6 +2614,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class FormData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -2344,7 +2659,10 @@ public class CreateSyntheticTaskRequest extends Request {
             private String value; 
 
             /**
-             * The key of **form-data**.
+             * <p>The key of <strong>form-data</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2352,7 +2670,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The value of **form-data**.
+             * <p>The value of <strong>form-data</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3425</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2366,6 +2687,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class UrlEncoding extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -2405,7 +2732,10 @@ public class CreateSyntheticTaskRequest extends Request {
             private String value; 
 
             /**
-             * The key of **x-www-form-urlencoded**.
+             * <p>The key of <strong>x-www-form-urlencoded</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2413,7 +2743,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The value of **x-www-form-urlencoded**.
+             * <p>The value of <strong>x-www-form-urlencoded</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11080</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2427,6 +2760,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class RequestContentBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FormData")
         private java.util.List < FormData> formData;
@@ -2502,7 +2841,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private java.util.List < UrlEncoding> urlEncoding; 
 
             /**
-             * The data that is passed when the **Mode** parameter is set to **form-data**.
+             * <p>The data that is passed when the <strong>Mode</strong> parameter is set to <strong>form-data</strong>.</p>
              */
             public Builder formData(java.util.List < FormData> formData) {
                 this.formData = formData;
@@ -2510,14 +2849,17 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The language that is selected when the Mode parameter is set to raw.
-             * <p>
+             * <p>The language that is selected when the Mode parameter is set to raw.</p>
+             * <ul>
+             * <li>json</li>
+             * <li>xml</li>
+             * <li>javascript</li>
+             * <li>html</li>
+             * <li>text</li>
+             * </ul>
              * 
-             * *   json
-             * *   xml
-             * *   javascript
-             * *   html
-             * *   text
+             * <strong>example:</strong>
+             * <p>json</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -2525,12 +2867,15 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The data type of the content.
-             * <p>
+             * <p>The data type of the content.</p>
+             * <ul>
+             * <li>form-data</li>
+             * <li>x-www-form-urlencoded</li>
+             * <li>raw</li>
+             * </ul>
              * 
-             * *   form-data
-             * *   x-www-form-urlencoded
-             * *   raw
+             * <strong>example:</strong>
+             * <p>form-data</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -2538,7 +2883,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The data that is passed when the **Mode** parameter is set to **raw**.
+             * <p>The data that is passed when the <strong>Mode</strong> parameter is set to <strong>raw</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content</p>
              */
             public Builder raw(String raw) {
                 this.raw = raw;
@@ -2546,7 +2894,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The data that is passed when the **Mode** parameter is set to **x-www-form-urlencoded**.
+             * <p>The data that is passed when the <strong>Mode</strong> parameter is set to <strong>x-www-form-urlencoded</strong>.</p>
              */
             public Builder urlEncoding(java.util.List < UrlEncoding> urlEncoding) {
                 this.urlEncoding = urlEncoding;
@@ -2560,6 +2908,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class RequestContentHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -2599,7 +2953,10 @@ public class CreateSyntheticTaskRequest extends Request {
             private String value; 
 
             /**
-             * The key of the request header.
+             * <p>The key of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2607,7 +2964,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The value of the request header.
+             * <p>The value of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2621,6 +2981,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class RequestContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Body")
         private RequestContentBody body;
@@ -2672,7 +3038,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private String method; 
 
             /**
-             * The custom body of a request to initiate an API performance synthetic monitoring task.
+             * <p>The custom body of a request to initiate an API performance synthetic monitoring task.</p>
              */
             public Builder body(RequestContentBody body) {
                 this.body = body;
@@ -2680,7 +3046,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The custom header of a request to initiate an API performance synthetic monitoring task.
+             * <p>The custom header of a request to initiate an API performance synthetic monitoring task.</p>
              */
             public Builder header(java.util.List < RequestContentHeader> header) {
                 this.header = header;
@@ -2688,11 +3054,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The request method.
-             * <p>
+             * <p>The request method.</p>
+             * <ul>
+             * <li>POST</li>
+             * <li>GET</li>
+             * </ul>
              * 
-             * *   POST
-             * *   GET
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -2706,6 +3075,12 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSyntheticTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskRequest</p>
+     */
     public static class Protocol extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CharacterEncoding")
         private Long characterEncoding;
@@ -2829,13 +3204,16 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long verifyWay; 
 
             /**
-             * The encoding format.
-             * <p>
+             * <p>The encoding format.</p>
+             * <ul>
+             * <li>0: UTF-8</li>
+             * <li>1: GBK</li>
+             * <li>2: GB2312</li>
+             * <li>3: Unicode</li>
+             * </ul>
              * 
-             * *   0: UTF-8
-             * *   1: GBK
-             * *   2: GB2312
-             * *   3: Unicode
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder characterEncoding(Long characterEncoding) {
                 this.characterEncoding = characterEncoding;
@@ -2843,11 +3221,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The custom host mode.
-             * <p>
+             * <p>The custom host mode.</p>
+             * <ul>
+             * <li>1: round robin</li>
+             * <li>0: random</li>
+             * </ul>
              * 
-             * *   1: round robin
-             * *   0: random
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder customHost(Long customHost) {
                 this.customHost = customHost;
@@ -2855,7 +3236,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The custom host IP address. You can enter multiple IP addresses. Separate the IP addresses with commas (,).
+             * <p>The custom host IP address. You can enter multiple IP addresses. Separate the IP addresses with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4:192.168.2.1,192.168.2.5:img.a.com|192.168.2.1[8080]:img.a.com</p>
              */
             public Builder customHostIp(String customHostIp) {
                 this.customHostIp = customHostIp;
@@ -2863,7 +3247,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The connection timeout period of the protocol. Unit: seconds.
+             * <p>The connection timeout period of the protocol. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder protocolConnectionTime(Long protocolConnectionTime) {
                 this.protocolConnectionTime = protocolConnectionTime;
@@ -2871,7 +3258,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period of API performance synthetic monitoring. Unit: seconds.
+             * <p>The timeout period of API performance synthetic monitoring. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder protocolMonitorTimeout(String protocolMonitorTimeout) {
                 this.protocolMonitorTimeout = protocolMonitorTimeout;
@@ -2879,7 +3269,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The size of the received data. This parameter is required when you set the value of the VerifyWay parameter to 2.
+             * <p>The size of the received data. This parameter is required when you set the value of the VerifyWay parameter to 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder receivedDataSize(Long receivedDataSize) {
                 this.receivedDataSize = receivedDataSize;
@@ -2887,7 +3280,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The request content, including the request header and request body.
+             * <p>The request content, including the request header and request body.</p>
              */
             public Builder requestContent(RequestContent requestContent) {
                 this.requestContent = requestContent;
@@ -2895,7 +3288,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The verification string.
+             * <p>The verification string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;code&quot;:200</p>
              */
             public Builder verifyContent(String verifyContent) {
                 this.verifyContent = verifyContent;
@@ -2903,13 +3299,16 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The method that is used to verify the response content.
-             * <p>
+             * <p>The method that is used to verify the response content.</p>
+             * <ul>
+             * <li>0: no verification.</li>
+             * <li>1: exact match with the verification string.</li>
+             * <li>2: partial match with the verification string.</li>
+             * <li>3: MD5 verification.</li>
+             * </ul>
              * 
-             * *   0: no verification.
-             * *   1: exact match with the verification string.
-             * *   2: partial match with the verification string.
-             * *   3: MD5 verification.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder verifyWay(Long verifyWay) {
                 this.verifyWay = verifyWay;

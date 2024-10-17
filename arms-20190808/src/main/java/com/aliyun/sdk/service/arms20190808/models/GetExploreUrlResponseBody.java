@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExploreUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetExploreUrlResponseBody</p>
@@ -85,7 +86,10 @@ public class GetExploreUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code. 200 means success, other status codes are exceptions.
+         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,12 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Response parameters
+         * <p>Response parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +110,10 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The prompt information of the returned result.
+         * <p>The prompt information of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,10 +132,14 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Whether the operation was successful:
-         * <p>
-         * - true: the operation was successful
-         * - false: the operation failed
+         * <p>Whether the operation was successful:</p>
+         * <ul>
+         * <li>true: the operation was successful</li>
+         * <li>false: the operation failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

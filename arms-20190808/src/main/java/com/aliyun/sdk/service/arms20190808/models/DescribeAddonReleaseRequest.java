@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAddonReleaseRequest} extends {@link RequestModel}
  *
  * <p>DescribeAddonReleaseRequest</p>
@@ -83,7 +84,11 @@ public class DescribeAddonReleaseRequest extends Request {
         } 
 
         /**
-         * The environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -92,7 +97,10 @@ public class DescribeAddonReleaseRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +109,11 @@ public class DescribeAddonReleaseRequest extends Request {
         }
 
         /**
-         * The name of the add-on release.
+         * <p>The name of the add-on release.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-822567d4-2449</p>
          */
         public Builder releaseName(String releaseName) {
             this.putQueryParameter("ReleaseName", releaseName);

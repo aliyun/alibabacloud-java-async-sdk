@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>DeleteEnvironmentRequest</p>
@@ -83,7 +84,10 @@ public class DeleteEnvironmentRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete the related Prometheus instance.
+         * <p>Specifies whether to delete the related Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deletePromInstance(Boolean deletePromInstance) {
             this.putQueryParameter("DeletePromInstance", deletePromInstance);
@@ -92,7 +96,11 @@ public class DeleteEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the environment instance.
+         * <p>The ID of the environment instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -101,7 +109,11 @@ public class DeleteEnvironmentRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

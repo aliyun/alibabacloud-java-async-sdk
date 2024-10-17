@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEnvCustomJobRequest} extends {@link RequestModel}
  *
  * <p>DeleteEnvCustomJobRequest</p>
@@ -84,7 +85,11 @@ public class DeleteEnvCustomJobRequest extends Request {
         } 
 
         /**
-         * The name of the custom job.
+         * <p>The name of the custom job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job1</p>
          */
         public Builder customJobName(String customJobName) {
             this.putQueryParameter("CustomJobName", customJobName);
@@ -93,7 +98,11 @@ public class DeleteEnvCustomJobRequest extends Request {
         }
 
         /**
-         * The ID of the environment instance.
+         * <p>The ID of the environment instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -102,7 +111,11 @@ public class DeleteEnvCustomJobRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

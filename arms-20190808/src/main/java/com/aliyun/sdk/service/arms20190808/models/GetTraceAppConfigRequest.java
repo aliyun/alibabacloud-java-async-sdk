@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTraceAppConfigRequest} extends {@link RequestModel}
  *
  * <p>GetTraceAppConfigRequest</p>
@@ -77,19 +78,24 @@ public class GetTraceAppConfigRequest extends Request {
         }
 
         /**
-         * The process ID (PID) of the application.
-         * <p>
+         * <p>The process ID (PID) of the application.</p>
+         * <p>You can use one of the following methods to obtain the PID:</p>
+         * <ul>
+         * <li>API: Call the <a href="https://help.aliyun.com/document_detail/2588008.html">ListTraceApps</a> operation</li>
+         * <li>Console: Log on to the Application Real-Time Monitoring Service (ARMS) console. In the left-side navigation pane, choose <strong>Application Monitoring</strong> &gt; <strong>Application List</strong>. On the Application List page, click the name of your application. The URL in the address bar contains the PID of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is xxx%4074xxx, you must replace %40 with an at sign (@) to obtain xxx@74xxx.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>To obtain the PID in the console, your application must be monitored by Application Monitoring rather than Managed Service for OpenTelemetry.</p>
+         * </li>
+         * <li><p>The GetTraceAppConfig operation can query only the custom settings of applications that are monitored by Application Monitoring.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * You can use one of the following methods to obtain the PID:
-         * 
-         * *   API: Call the [ListTraceApps](~~2588008~~) operation
-         * *   Console: Log on to the Application Real-Time Monitoring Service (ARMS) console. In the left-side navigation pane, choose **Application Monitoring** > **Application List**. On the Application List page, click the name of your application. The URL in the address bar contains the PID of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is xxx%4074xxx, you must replace %40 with an at sign (@) to obtain xxx@74xxx.
-         * 
-         * > 
-         * 
-         * *   To obtain the PID in the console, your application must be monitored by Application Monitoring rather than Managed Service for OpenTelemetry.
-         * 
-         * *   The GetTraceAppConfig operation can query only the custom settings of applications that are monitored by Application Monitoring.
+         * <strong>example:</strong>
+         * <p>a2n80plglh@745eddxxx</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);

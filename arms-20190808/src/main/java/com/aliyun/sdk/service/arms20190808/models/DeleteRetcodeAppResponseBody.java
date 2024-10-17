@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRetcodeAppResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteRetcodeAppResponseBody</p>
@@ -85,7 +86,10 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code. 200 means success, other status codes are exceptions.
+         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,11 +97,14 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Browser Monitoring task was deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the Browser Monitoring task was deleted. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -105,10 +112,14 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Additional information. The value description is as follows:
-         * <p>
-         * - If the request is normal, return success.
-         * - If the request is abnormal, return specific abnormal information.
+         * <p>Additional information. The value description is as follows:</p>
+         * <ul>
+         * <li>If the request is normal, return success.</li>
+         * <li>If the request is abnormal, return specific abnormal information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -116,7 +127,10 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01FF8DD9-A09C-47A1-895A-B6E321BE77B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,10 +138,14 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Whether the operation was successful:
-         * <p>
-         * - `true`: The operation was successful
-         * - `false`: The operation failed
+         * <p>Whether the operation was successful:</p>
+         * <ul>
+         * <li><code>true</code>: The operation was successful</li>
+         * <li><code>false</code>: The operation failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

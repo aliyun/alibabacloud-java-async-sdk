@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallAddonRequest} extends {@link RequestModel}
  *
  * <p>InstallAddonRequest</p>
@@ -154,7 +155,11 @@ public class InstallAddonRequest extends Request {
         } 
 
         /**
-         * The version of the add-on.
+         * <p>The version of the add-on.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         public Builder addonVersion(String addonVersion) {
             this.putQueryParameter("AddonVersion", addonVersion);
@@ -163,7 +168,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -172,7 +180,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -181,7 +192,11 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -190,7 +205,11 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The name of the add-on.
+         * <p>The name of the add-on.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +218,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +230,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The name of the add-on after it is installed. If you do not specify this parameter, a default rule name is generated.
+         * <p>The name of the add-on after it is installed. If you do not specify this parameter, a default rule name is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql-xxxxx</p>
          */
         public Builder releaseName(String releaseName) {
             this.putQueryParameter("ReleaseName", releaseName);
@@ -217,7 +242,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The metadata.
+         * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;host&quot;:&quot;mysql-service.default&quot;,&quot;port&quot;:3306,&quot;username&quot;:&quot;root&quot;,&quot;password&quot;:&quot;roots&quot;}</p>
          */
         public Builder values(String values) {
             this.putQueryParameter("Values", values);

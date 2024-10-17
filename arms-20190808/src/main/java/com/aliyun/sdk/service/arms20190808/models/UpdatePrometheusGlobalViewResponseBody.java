@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusGlobalViewResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePrometheusGlobalViewResponseBody</p>
@@ -73,7 +74,10 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code. The status code 200 indicates that the request was successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if the request failed.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePrometheusGlobalViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusGlobalViewResponseBody</p>
+     */
     public static class FailedInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -173,7 +189,10 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The ID of the Prometheus instance.
+             * <p>The ID of the Prometheus instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdb65ed2d527345*********</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -181,7 +200,10 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sourcename-test</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -189,7 +211,10 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. AlibabaPrometheus MetricStore CustomPrometheus
+             * <p>The type of the data source. AlibabaPrometheus MetricStore CustomPrometheus</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AlibabaPrometheus</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -197,7 +222,10 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23784673825*******</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -211,6 +239,12 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePrometheusGlobalViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusGlobalViewResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedInstances")
         private java.util.List < FailedInstances> failedInstances;
@@ -250,7 +284,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The data sources that failed to be updated.
+             * <p>The data sources that failed to be updated.</p>
              */
             public Builder failedInstances(java.util.List < FailedInstances> failedInstances) {
                 this.failedInstances = failedInstances;
@@ -258,11 +292,14 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenVClusterResponseBody} extends {@link TeaModel}
  *
  * <p>OpenVClusterResponseBody</p>
@@ -49,7 +50,10 @@ public class OpenVClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rre59xelcx</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class OpenVClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42E58E4D-ACAD-4400-8FAF-F762340AE5B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPrometheusInstanceResponse} extends {@link TeaModel}
  *
  * <p>GetPrometheusInstanceResponse</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrometheusInstanceByTagAndResourceGroupIdRequest} extends {@link RequestModel}
  *
  * <p>ListPrometheusInstanceByTagAndResourceGroupIdRequest</p>
@@ -82,7 +83,11 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
         } 
 
         /**
-         * The region ID of the Prometheus instance.
+         * <p>The region ID of the Prometheus instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -91,7 +96,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -100,7 +108,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -115,6 +123,12 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
 
     } 
 
+    /**
+     * 
+     * {@link ListPrometheusInstanceByTagAndResourceGroupIdRequest} extends {@link TeaModel}
+     *
+     * <p>ListPrometheusInstanceByTagAndResourceGroupIdRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -154,7 +168,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fpx-tag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -162,7 +179,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fvt-tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

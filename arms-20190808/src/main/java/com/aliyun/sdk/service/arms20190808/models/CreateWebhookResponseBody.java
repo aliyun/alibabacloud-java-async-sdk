@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWebhookResponseBody} extends {@link TeaModel}
  *
  * <p>CreateWebhookResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateWebhookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the contact for webhook alerts.
+         * <p>The ID of the contact for webhook alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48716</p>
          */
         public Builder contactId(String contactId) {
             this.contactId = contactId;
@@ -57,7 +61,10 @@ public class CreateWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16AF921B-8187-489F-9913-43C808B4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

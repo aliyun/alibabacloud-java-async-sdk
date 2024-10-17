@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartEnvironmentFeatureRequest} extends {@link RequestModel}
  *
  * <p>RestartEnvironmentFeatureRequest</p>
@@ -83,7 +84,11 @@ public class RestartEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * The ID of the environment.
+         * <p>The ID of the environment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -92,7 +97,11 @@ public class RestartEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * The feature name. Valid values: app-agent-pilot, metric-agent, ebpf-agent, and service-check.
+         * <p>The feature name. Valid values: app-agent-pilot, metric-agent, ebpf-agent, and service-check.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metric-agent</p>
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);
@@ -101,7 +110,10 @@ public class RestartEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: cn-hangzhou.
+         * <p>The region ID. Default value: cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

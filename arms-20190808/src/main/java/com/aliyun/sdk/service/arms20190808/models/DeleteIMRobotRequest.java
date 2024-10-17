@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIMRobotRequest} extends {@link RequestModel}
  *
  * <p>DeleteIMRobotRequest</p>
@@ -54,7 +55,11 @@ public class DeleteIMRobotRequest extends Request {
         } 
 
         /**
-         * The ID of the IM chatbot.
+         * <p>The ID of the IM chatbot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder robotId(Long robotId) {
             this.putQueryParameter("RobotId", robotId);

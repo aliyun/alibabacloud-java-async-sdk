@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeAddonReleaseRequest} extends {@link RequestModel}
  *
  * <p>UpgradeAddonReleaseRequest</p>
@@ -127,7 +128,11 @@ public class UpgradeAddonReleaseRequest extends Request {
         } 
 
         /**
-         * The version of the add-on.
+         * <p>The version of the add-on.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.2</p>
          */
         public Builder addonVersion(String addonVersion) {
             this.putQueryParameter("AddonVersion", addonVersion);
@@ -136,7 +141,10 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -145,7 +153,11 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * The environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -154,7 +166,10 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +178,11 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * The name of the release.
+         * <p>The name of the release.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql-1695372983039</p>
          */
         public Builder releaseName(String releaseName) {
             this.putQueryParameter("ReleaseName", releaseName);
@@ -172,7 +191,11 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * The metadata information.
+         * <p>The metadata information.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;host&quot;:&quot;mysql-service.default&quot;,&quot;port&quot;:3306,&quot;username&quot;:&quot;root&quot;,&quot;password&quot;:&quot;roots&quot;}</p>
          */
         public Builder values(String values) {
             this.putQueryParameter("Values", values);

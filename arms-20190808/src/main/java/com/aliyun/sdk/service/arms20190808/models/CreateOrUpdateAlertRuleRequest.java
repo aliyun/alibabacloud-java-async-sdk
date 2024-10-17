@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateAlertRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateAlertRuleRequest</p>
@@ -448,11 +449,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         } 
 
         /**
-         * The alert check type of the Prometheus alert rule. Valid values:
-         * <p>
+         * <p>The alert check type of the Prometheus alert rule. Valid values:</p>
+         * <ul>
+         * <li>STATIC: a static threshold value. If you set the parameter to STATIC, you must specify the <strong>MetricsKey</strong> parameter. For more information, see the <strong>Correspondence between AlertGroup and MetricsKey for Prometheus Service</strong> table.</li>
+         * <li>CUSTOM: a custom PromQL statement. If you set the parameter to CUSTOM, you must specify the <strong>PromQL</strong>, <strong>Duration</strong>, and <strong>Message</strong> parameters to create a Prometheus alert rule.</li>
+         * </ul>
          * 
-         * *   STATIC: a static threshold value. If you set the parameter to STATIC, you must specify the **MetricsKey** parameter. For more information, see the **Correspondence between AlertGroup and MetricsKey for Prometheus Service** table.
-         * *   CUSTOM: a custom PromQL statement. If you set the parameter to CUSTOM, you must specify the **PromQL**, **Duration**, and **Message** parameters to create a Prometheus alert rule.
+         * <strong>example:</strong>
+         * <p>STATIC</p>
          */
         public Builder alertCheckType(String alertCheckType) {
             this.putBodyParameter("AlertCheckType", alertCheckType);
@@ -461,12 +465,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The alert contact group ID of the Prometheus alert rule. Valid values:
-         * <p>
+         * <p>The alert contact group ID of the Prometheus alert rule. Valid values:</p>
+         * <ul>
+         * <li>-1: custom PromQL</li>
+         * <li>1: Kubernetes load</li>
+         * <li>15: Kubernetes node</li>
+         * </ul>
          * 
-         * *   \-1: custom PromQL
-         * *   1: Kubernetes load
-         * *   15: Kubernetes node
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder alertGroup(Long alertGroup) {
             this.putBodyParameter("AlertGroup", alertGroup);
@@ -475,11 +482,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
-         * <p>
+         * <p>The ID of the alert rule.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, a new alert rule is created.</li>
+         * <li>If you specify this parameter, the specified alert rule is modified.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, a new alert rule is created.
-         * *   If you specify this parameter, the specified alert rule is modified.
+         * <strong>example:</strong>
+         * <p>546xxx</p>
          */
         public Builder alertId(Long alertId) {
             this.putBodyParameter("AlertId", alertId);
@@ -488,7 +498,11 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The name of the alert rule.
+         * <p>The name of the alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert Rule Demo</p>
          */
         public Builder alertName(String alertName) {
             this.putBodyParameter("AlertName", alertName);
@@ -497,7 +511,12 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The configuration of the alert sending channel. This parameter is used to be compatible with the old version of the rule.
+         * <p>The configuration of the alert sending channel. This parameter is used to be compatible with the old version of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder alertPiplines(String alertPiplines) {
             this.putBodyParameter("AlertPiplines", alertPiplines);
@@ -506,25 +525,26 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The content of the Application Monitoring or Browser Monitoring alert rule. The following code provides an example of the **AlertRuleContent** parameter. For more information about the meaning of each field, see the supplementary description.
-         * <p>
-         * 
-         * ```json
-         * { 
-         *     "Condition": "OR",
-         *      "AlertRuleItems": [
-         *              { "Operator": "CURRENT_LTE",
-         *                  "MetricKey": "appstat.jvm.threadcount",
-         *                  "Value": 1000,
-         *                  "Aggregate": "AVG",
-         *                   "N": 10,
-         *                   "Tolerability": 169
+         * <p>The content of the Application Monitoring or Browser Monitoring alert rule. The following code provides an example of the <strong>AlertRuleContent</strong> parameter. For more information about the meaning of each field, see the supplementary description.</p>
+         * <pre><code class="language-json">{ 
+         *     &quot;Condition&quot;: &quot;OR&quot;,
+         *      &quot;AlertRuleItems&quot;: [
+         *              { &quot;Operator&quot;: &quot;CURRENT_LTE&quot;,
+         *                  &quot;MetricKey&quot;: &quot;appstat.jvm.threadcount&quot;,
+         *                  &quot;Value&quot;: 1000,
+         *                  &quot;Aggregate&quot;: &quot;AVG&quot;,
+         *                   &quot;N&quot;: 10,
+         *                   &quot;Tolerability&quot;: 169
          *             } 
          *        ]  
          *   }
-         * ```
+         * </code></pre>
+         * <blockquote>
+         * <p> The filter conditions specified by the <strong>AlertRuleItems.MetricKey</strong> field depends on the value of the <strong>MetricsType</strong> parameter. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.</p>
+         * </blockquote>
          * 
-         * >  The filter conditions specified by the **AlertRuleItems.MetricKey** field depends on the value of the **MetricsType** parameter. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.
+         * <strong>example:</strong>
+         * <p>{ &quot;Condition&quot;: &quot;OR&quot;, &quot;AlertRuleItems&quot;: [ { &quot;Operator&quot;: &quot;CURRENT_LTE&quot;,  &quot;MetricKey&quot;: &quot;appstat.jvm.threadcount&quot;,  &quot;Value&quot;: 1000,  &quot;Aggregate&quot;: &quot;AVG&quot;,   &quot;N&quot;: 1  }  ]  }</p>
          */
         public Builder alertRuleContent(String alertRuleContent) {
             this.putBodyParameter("AlertRuleContent", alertRuleContent);
@@ -533,11 +553,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The status of the alert rule. Valid values:
-         * <p>
+         * <p>The status of the alert rule. Valid values:</p>
+         * <ul>
+         * <li>RUNNING (default)</li>
+         * <li>STOPPED</li>
+         * </ul>
          * 
-         * *   RUNNING (default)
-         * *   STOPPED
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder alertStatus(String alertStatus) {
             this.putBodyParameter("AlertStatus", alertStatus);
@@ -546,15 +569,19 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The type of the alert rule. Valid values:
-         * <p>
+         * <p>The type of the alert rule. Valid values:</p>
+         * <ul>
+         * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
+         * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
+         * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
+         * <li>XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry</li>
+         * <li>EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition</li>
+         * <li>RUM_MONITORING_ALERT_RULE: alert rule for Real User Monitoring</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
-         * *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
-         * *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus
-         * *   XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry
-         * *   EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition
-         * *   RUM_MONITORING_ALERT_RULE: alert rule for Real User Monitoring
+         * <strong>example:</strong>
+         * <p>APPLICATION_MONITORING_ALERT_RULE</p>
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -563,7 +590,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The annotations of the Prometheus alert rule.
+         * <p>The annotations of the Prometheus alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;Value&quot;: &quot;PolarDB slow queries&quot;, &quot;Name&quot;: &quot;_aliyun_display_name&quot; }</p>
          */
         public Builder annotations(String annotations) {
             this.putBodyParameter("Annotations", annotations);
@@ -572,11 +602,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:
-         * <p>
+         * <p>Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the health check feature.</li>
+         * <li><code>false</code>: disables the automatic backup feature.</li>
+         * </ul>
          * 
-         * *   `true`: enables the health check feature.
-         * *   `false`: disables the automatic backup feature.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoAddNewApplication(Boolean autoAddNewApplication) {
             this.putBodyParameter("AutoAddNewApplication", autoAddNewApplication);
@@ -585,7 +618,17 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The configurations that are automatically appended to monitor the application based on the specified alert rule. autoAddMatchType: the matching mode. Valid values: REGULAR and NOT_REGULAR. autoAddMatchExp: the regular expression
+         * <p>The configurations that are automatically appended to monitor the application based on the specified alert rule.</p>
+         * <ul>
+         * <li><p>autoAddMatchType:</p>
+         * <p>the matching mode. Valid values: REGULAR and NOT_REGULAR.</p>
+         * </li>
+         * <li><p>autoAddMatchExp: the regular expression</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;autoAddMatchType&quot;:&quot;REGULAR&quot;,&quot;autoAddMatchExp&quot;:&quot;.<em>cbw.</em>&quot;}</p>
          */
         public Builder autoAddTargetConfig(String autoAddTargetConfig) {
             this.putBodyParameter("AutoAddTargetConfig", autoAddTargetConfig);
@@ -594,7 +637,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The ID of the monitored cluster.
+         * <p>The ID of the monitored cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceba9b9ea5b924dd0b6726d2de6******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -603,12 +649,17 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * Data Configuration. The dataRevision field specifies the data repair method when there is no data for the metric.
-         * <p>
+         * <p>Data Configuration. The dataRevision field specifies the data repair method when there is no data for the metric.</p>
+         * <ul>
+         * <li>Fill with zero: 0</li>
+         * <li>Fill with one: 1</li>
+         * <li>Fill with null: 2 (default, does not trigger an alarm)</li>
+         * </ul>
          * 
-         * - Fill with zero: 0
-         * - Fill with one: 1
-         * - Fill with null: 2 (default, does not trigger an alarm)
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;dataRevision&quot;: 2
+         * }</p>
          */
         public Builder dataConfig(String dataConfig) {
             this.putBodyParameter("DataConfig", dataConfig);
@@ -617,7 +668,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The duration of the Prometheus alert rule, in minutes, in the range of [0,1440].
+         * <p>The duration of the Prometheus alert rule, in minutes, in the range of [0,1440].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Long duration) {
             this.putBodyParameter("Duration", duration);
@@ -626,22 +680,24 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The filter conditions of the Application Monitoring or Browser Monitoring alert rule. Format:
-         * <p>
+         * <p>The filter conditions of the Application Monitoring or Browser Monitoring alert rule. Format:</p>
+         * <pre><code>&quot;DimFilters&quot;: [ 
+         * { 
+         *  &quot;FilterOpt&quot;: &quot;ALL&quot;,
+         * &quot;FilterValues&quot;: [],         //The value of the filter condition.
+         * &quot;FilterKey&quot;: &quot;rootIp&quot;     //The key of the filter condition.
+         * }
+         * ]
+         * </code></pre>
+         * <p>Valid values of <strong>FilterOpt</strong>:</p>
+         * <ul>
+         * <li>STATIC: matches the value of the specified dimension.</li>
+         * <li>ALL: traverses all dimension values. Dynamic thresholds do not support traversal.</li>
+         * <li>DISABLE: aggregates the values of all dimensions.</li>
+         * </ul>
          * 
-         *     "DimFilters": [ 
-         *     { 
-         *      "FilterOpt": "ALL",
-         *     "FilterValues": [],         //The value of the filter condition.
-         *     "FilterKey": "rootIp"     //The key of the filter condition.
-         *     }
-         *     ]
-         * 
-         * Valid values of **FilterOpt**:
-         * 
-         * *   STATIC: matches the value of the specified dimension.
-         * *   ALL: traverses all dimension values. Dynamic thresholds do not support traversal.
-         * *   DISABLE: aggregates the values of all dimensions.
+         * <strong>example:</strong>
+         * <p>{&quot;DimFilters&quot;: [             {               &quot;FilterOpt&quot;: &quot;ALL&quot;,               &quot;FilterValues&quot;: [],               &quot;FilterKey&quot;: &quot;rootIp&quot;             }           ]         }</p>
          */
         public Builder filters(String filters) {
             this.putBodyParameter("Filters", filters);
@@ -650,7 +706,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The tags of the Prometheus alert rule.
+         * <p>The tags of the Prometheus alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[  { &quot;Value&quot;: &quot;cms_polardb&quot;,             &quot;Name&quot;: &quot;_aliyun_cloud_product&quot;           }         ]</p>
          */
         public Builder labels(String labels) {
             this.putBodyParameter("Labels", labels);
@@ -659,14 +718,17 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The severity level of the Prometheus alert rule.
-         * <p>
+         * <p>The severity level of the Prometheus alert rule.</p>
+         * <ul>
+         * <li>P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</li>
+         * <li>P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</li>
+         * <li>P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</li>
+         * <li>P4: Alert notifications are sent for low-priority issues that do not affect your business.</li>
+         * <li>Default: Alert notifications are sent regardless of alert levels.</li>
+         * </ul>
          * 
-         * *   P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.
-         * *   P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.
-         * *   P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.
-         * *   P4: Alert notifications are sent for low-priority issues that do not affect your business.
-         * *   Default: Alert notifications are sent regardless of alert levels.
+         * <strong>example:</strong>
+         * <p>P2</p>
          */
         public Builder level(String level) {
             this.putBodyParameter("Level", level);
@@ -675,7 +737,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * Application Tags. Used for application monitoring alert rules, to filter applications associated with alert rules.
+         * <p>Application Tags. Used for application monitoring alert rules, to filter applications associated with alert rules.</p>
          */
         public Builder markTags(java.util.List < MarkTags> markTags) {
             this.putBodyParameter("MarkTags", markTags);
@@ -684,7 +746,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The alert message of the Prometheus alert rule.
+         * <p>The alert message of the Prometheus alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Namespace: {{$labels.namespace}} / Pod: {{$labels.pod_name}} / Container: {{$labels.container}} Memory usage exceeds 80%. Current value: {{ printf \\&quot;%.2f\\&quot; $value }}%</p>
          */
         public Builder message(String message) {
             this.putBodyParameter("Message", message);
@@ -693,10 +758,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The alert metrics. If you set the **AlertCheckType** parameter to **STATIC** when you create a Prometheus alert rule, you must specify the **MetricsKey** parameter.
-         * <p>
+         * <p>The alert metrics. If you set the <strong>AlertCheckType</strong> parameter to <strong>STATIC</strong> when you create a Prometheus alert rule, you must specify the <strong>MetricsKey</strong> parameter.</p>
+         * <blockquote>
+         * <p>Alert metrics vary depending on the value of the <strong>AlertGroup</strong> parameter. For more information about the correspondence between <strong>AlertGroup</strong> and <strong>MetricsKey</strong>, see the supplementary description.</p>
+         * </blockquote>
          * 
-         * > Alert metrics vary depending on the value of the **AlertGroup** parameter. For more information about the correspondence between **AlertGroup** and **MetricsKey**, see the supplementary description.
+         * <strong>example:</strong>
+         * <p>pop.status.error</p>
          */
         public Builder metricsKey(String metricsKey) {
             this.putBodyParameter("MetricsKey", metricsKey);
@@ -705,7 +773,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The metric type of the Application Monitoring or Browser Monitoring alert rule. For more information, see the following table.
+         * <p>The metric type of the Application Monitoring or Browser Monitoring alert rule. For more information, see the following table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jvm</p>
          */
         public Builder metricsType(String metricsType) {
             this.putBodyParameter("MetricsType", metricsType);
@@ -714,7 +785,12 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The effective time and notification time. This parameter is used to be compatible with the old version of the rule.
+         * <p>The effective time and notification time. This parameter is used to be compatible with the old version of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder notice(String notice) {
             this.putBodyParameter("Notice", notice);
@@ -723,13 +799,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The notification mode. You can specify the normal mode or simple mode.
-         * <p>
+         * <p>The notification mode. You can specify the normal mode or simple mode.</p>
+         * <ul>
+         * <li>DIRECTED_MODE</li>
+         * <li>NORMAL_MODE</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   DIRECTED_MODE
-         * *   NORMAL_MODE
+         * <strong>example:</strong>
+         * <p>NORMAL_MODE</p>
          */
         public Builder notifyMode(String notifyMode) {
             this.putBodyParameter("NotifyMode", notifyMode);
@@ -738,11 +815,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The notification policy.
-         * <p>
+         * <p>The notification policy.</p>
+         * <ul>
+         * <li>If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.</li>
+         * <li>To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.</li>
+         * </ul>
          * 
-         * *   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.
-         * *   To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.
+         * <strong>example:</strong>
+         * <p>569xxx</p>
          */
         public Builder notifyStrategy(String notifyStrategy) {
             this.putBodyParameter("NotifyStrategy", notifyStrategy);
@@ -751,7 +831,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The process ID (PID) that is associated with the Application Monitoring or Browser Monitoring alert rule.
+         * <p>The process ID (PID) that is associated with the Application Monitoring or Browser Monitoring alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;b590lhguqs@40d8deedfa9******&quot;]</p>
          */
         public Builder pids(String pids) {
             this.putBodyParameter("Pids", pids);
@@ -760,7 +843,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * When creating a Prometheus alert rule, the backend will verify whether this product exists, which is used to distinguish cloud product filtering queries.
+         * <p>The product code. If you specify this parameter when you create a Prometheus alert rule, the backend checks whether the product exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clickhouse</p>
          */
         public Builder product(String product) {
             this.putBodyParameter("Product", product);
@@ -769,7 +855,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The PromQL statement of the Prometheus alert rule.
+         * <p>The PromQL statement of the Prometheus alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_memory_MemAvailable_bytes{} / node_memory_MemTotal_bytes{} * 100</p>
          */
         public Builder promQL(String promQL) {
             this.putBodyParameter("PromQL", promQL);
@@ -778,7 +867,11 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -787,7 +880,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putBodyParameter("Tags", tags);
@@ -802,6 +895,12 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateAlertRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateAlertRuleRequest</p>
+     */
     public static class MarkTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -841,7 +940,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             private String value; 
 
             /**
-             * The Tag Key.
+             * <p>The Tag Key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -849,7 +951,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             }
 
             /**
-             * The Tag Value.
+             * <p>The Tag Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proudct</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -863,6 +968,12 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateAlertRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateAlertRuleRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -902,7 +1013,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -910,7 +1024,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder value(String value) {
                 this.value = value;

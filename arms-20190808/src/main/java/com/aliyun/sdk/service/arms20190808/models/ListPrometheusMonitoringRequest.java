@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrometheusMonitoringRequest} extends {@link RequestModel}
  *
  * <p>ListPrometheusMonitoringRequest</p>
@@ -83,7 +84,11 @@ public class ListPrometheusMonitoringRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance.
+         * <p>The ID of the Prometheus instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -92,7 +97,11 @@ public class ListPrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: `cn-hangzhou`.
+         * <p>The region ID. Default value: <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +110,10 @@ public class ListPrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. Valid values for a Prometheus instance for ECS: CustomJob and Probe.
+         * <p>The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. Valid values for a Prometheus instance for ECS: CustomJob and Probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serviceMonitor</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

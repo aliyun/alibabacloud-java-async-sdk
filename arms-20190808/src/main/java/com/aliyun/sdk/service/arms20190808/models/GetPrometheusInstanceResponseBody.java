@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPrometheusInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetPrometheusInstanceResponseBody</p>
@@ -73,7 +74,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52C422FD-6B43-524D-B8A1-A4693294318C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPrometheusInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPrometheusInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -149,7 +165,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -157,7 +176,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -171,6 +193,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPrometheusInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPrometheusInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;
@@ -606,7 +634,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The permission type. Valid values: readWrite, readOnly, and httpReadOnly
+             * <p>The permission type. Valid values: readWrite, readOnly, and httpReadOnly</p>
+             * 
+             * <strong>example:</strong>
+             * <p>readWrite</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -614,7 +645,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days for which data is automatically archived after the storage duration expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
+             * <p>The number of days for which data is automatically archived after the storage duration expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder archiveDuration(Integer archiveDuration) {
                 this.archiveDuration = archiveDuration;
@@ -622,7 +656,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Read the whitelist policy for password-free addresses.
+             * <p>The whitelist of IP addresses for which password-free read is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder authFreeReadPolicy(String authFreeReadPolicy) {
                 this.authFreeReadPolicy = authFreeReadPolicy;
@@ -630,7 +667,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Write exempt password address whitelist policy.
+             * <p>The whitelist of IP addresses for which password-free write is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder authFreeWritePolicy(String authFreeWritePolicy) {
                 this.authFreeWritePolicy = authFreeWritePolicy;
@@ -638,7 +678,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization token.
+             * <p>The authorization token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GciOiJIUzI1NiJ9***</p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -646,7 +689,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Prometheus instance.
+             * <p>The ID of the Prometheus instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -654,7 +700,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the monitoring object.
+             * <p>The name of the monitoring object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prom1</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -662,13 +711,17 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * *   remote-write: general-purpose Prometheus instance
-             * <p>
-             * *   ecs: Prometheus instances for ECS
-             * *   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland
-             * *   cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland
-             * *   global-view: global aggregation instance
-             * *   aliyun-cs: Prometheus instance for Container Service
+             * <ul>
+             * <li>remote-write: general-purpose Prometheus instance</li>
+             * <li>ecs: Prometheus instances for ECS</li>
+             * <li>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</li>
+             * <li>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</li>
+             * <li>global-view: global aggregation instance</li>
+             * <li>aliyun-cs: Prometheus instance for Container Service</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>remote-write</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -676,7 +729,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The data storage status at the backend.
+             * <p>The data storage status at the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder dbInstanceStatus(String dbInstanceStatus) {
                 this.dbInstanceStatus = dbInstanceStatus;
@@ -684,7 +740,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable password-free reading.
+             * <p>Indicates whether password-free read is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAuthFreeRead(Boolean enableAuthFreeRead) {
                 this.enableAuthFreeRead = enableAuthFreeRead;
@@ -692,7 +751,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable write access without password.
+             * <p>Indicates whether password-free write is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAuthFreeWrite(Boolean enableAuthFreeWrite) {
                 this.enableAuthFreeWrite = enableAuthFreeWrite;
@@ -700,7 +762,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether access token authentication is enabled.
+             * <p>Indicates whether access token authentication is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAuthToken(String enableAuthToken) {
                 this.enableAuthToken = enableAuthToken;
@@ -708,7 +773,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * <p>The extra information.</p>
              */
             public Builder extraInfo(java.util.Map < String, String > extraInfo) {
                 this.extraInfo = extraInfo;
@@ -716,7 +781,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Grafana workspace.
+             * <p>The ID of the Grafana workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>grafana-rnggfvhlcdl6m71***</p>
              */
             public Builder grafanaInstanceId(String grafanaInstanceId) {
                 this.grafanaInstanceId = grafanaInstanceId;
@@ -724,7 +792,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The public URL for the HTTP API.
+             * <p>The public URL for the HTTP API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx">https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx</a></p>
              */
             public Builder httpApiInterUrl(String httpApiInterUrl) {
                 this.httpApiInterUrl = httpApiInterUrl;
@@ -732,7 +803,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL for the HTTP API.
+             * <p>The internal URL for the HTTP API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx</a></p>
              */
             public Builder httpApiIntraUrl(String httpApiIntraUrl) {
                 this.httpApiIntraUrl = httpApiIntraUrl;
@@ -740,11 +814,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PREPAY: subscription</li>
+             * <li>POSTPAY: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   PREPAY: subscription
-             * *   POSTPAY: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -752,7 +829,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The product to which the Prometheus instance belongs. Valid values: arms and cms.
+             * <p>The product to which the Prometheus instance belongs. Valid values: arms and cms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -760,7 +840,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The public URL for Pushgateway.
+             * <p>The public URL for Pushgateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
              */
             public Builder pushGatewayInterUrl(String pushGatewayInterUrl) {
                 this.pushGatewayInterUrl = pushGatewayInterUrl;
@@ -768,7 +851,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL for Pushgateway.
+             * <p>The internal URL for Pushgateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
              */
             public Builder pushGatewayIntraUrl(String pushGatewayIntraUrl) {
                 this.pushGatewayIntraUrl = pushGatewayIntraUrl;
@@ -776,7 +862,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -784,7 +873,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The public URL for remote read.
+             * <p>The public URL for remote read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
              */
             public Builder remoteReadInterUrl(String remoteReadInterUrl) {
                 this.remoteReadInterUrl = remoteReadInterUrl;
@@ -792,7 +884,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL for remote read.
+             * <p>The internal URL for remote read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
              */
             public Builder remoteReadIntraUrl(String remoteReadIntraUrl) {
                 this.remoteReadIntraUrl = remoteReadIntraUrl;
@@ -800,7 +895,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The public URL for remote write.
+             * <p>The public URL for remote write.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
              */
             public Builder remoteWriteInterUrl(String remoteWriteInterUrl) {
                 this.remoteWriteInterUrl = remoteWriteInterUrl;
@@ -808,7 +906,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL for remote write.
+             * <p>The internal URL for remote write.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
              */
             public Builder remoteWriteIntraUrl(String remoteWriteIntraUrl) {
                 this.remoteWriteIntraUrl = remoteWriteIntraUrl;
@@ -816,7 +917,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the instance belongs.
+             * <p>The ID of the resource group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2vezare****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -824,7 +928,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Set the value to PROMETHEUS.
+             * <p>The type of the resource. Set the value to PROMETHEUS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROMETHEUS</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -832,7 +939,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group. This parameter is returned only for Prometheus instances for ECS.
+             * <p>The ID of the security group. This parameter is returned only for Prometheus instances for ECS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-8vbdgmf4nraiqa9bx0jo</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -840,7 +950,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The data storage duration. Unit: days.
+             * <p>The data storage duration. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder storageDuration(Integer storageDuration) {
                 this.storageDuration = storageDuration;
@@ -848,7 +961,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The child instances of the Prometheus instance for GlobalView. The value is a JSON string.
+             * <p>The child instances of the Prometheus instance for GlobalView. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c39a1048921e04fceb039db2fbb73***&quot;,&quot;sourceName&quot;:&quot;arms-luyao-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789***&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c6b6485496d5b400abde22cb47b5****&quot;,&quot;sourceName&quot;:&quot;agent-321-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;1672753017899***&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c261a4f3200c446659133f1ade789b15e&quot;,&quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789***&quot;}]</p>
              */
             public Builder subClustersJson(String subClustersJson) {
                 this.subClustersJson = subClustersJson;
@@ -856,7 +972,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Supported authentication types.
+             * <p>The supported authentication types.</p>
              */
             public Builder supportAuthTypes(java.util.List < String > supportAuthTypes) {
                 this.supportAuthTypes = supportAuthTypes;
@@ -864,7 +980,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the instance.
+             * <p>The tags of the instance.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -872,7 +988,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167275301789****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -880,7 +999,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID. This parameter is returned only for Prometheus instances for ECS.
+             * <p>The vSwitch ID. This parameter is returned only for Prometheus instances for ECS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-f8z73vcja1tqnw90aav5a</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -888,7 +1010,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID. This parameter is returned only for Prometheus instances for ECS.
+             * <p>The VPC ID. This parameter is returned only for Prometheus instances for ECS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vb02uk57qbcktqcvqqqj</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

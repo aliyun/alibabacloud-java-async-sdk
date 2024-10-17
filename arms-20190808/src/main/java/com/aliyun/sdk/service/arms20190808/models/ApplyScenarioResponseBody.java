@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyScenarioResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyScenarioResponseBody</p>
@@ -49,7 +50,10 @@ public class ApplyScenarioResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA24D522-AD35-47B8-8CB2-ADBC38******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ApplyScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * The code of the business monitoring job, which is the coloring sign.
+         * <p>The code of the business monitoring job, which is the coloring sign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2b97****</p>
          */
         public Builder result(String result) {
             this.result = result;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataBonreeSDKConfigModuleConfigDefaultConfigValue} extends {@link TeaModel}
  *
  * <p>DataBonreeSDKConfigModuleConfigDefaultConfigValue</p>
@@ -37,7 +38,10 @@ public class DataBonreeSDKConfigModuleConfigDefaultConfigValue extends TeaModel 
         private Boolean enable; 
 
         /**
-         * Indicates whether the configuration is enabled.
+         * <p>Indicates whether the configuration is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;

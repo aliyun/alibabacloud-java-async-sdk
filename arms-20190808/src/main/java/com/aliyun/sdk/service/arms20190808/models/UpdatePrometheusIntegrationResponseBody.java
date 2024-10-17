@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusIntegrationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePrometheusIntegrationResponseBody</p>
@@ -73,7 +74,10 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code or error code.
+         * <p>The status code or error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * <p>The struct returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DB771C3-D1BB-5363-8A5F-ADB2AF2948DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePrometheusIntegrationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusIntegrationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
@@ -149,7 +165,10 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
             private String instanceName; 
 
             /**
-             * The exporter ID.
+             * <p>The exporter ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2866</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -157,7 +176,10 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The exporter name.
+             * <p>The exporter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inet</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

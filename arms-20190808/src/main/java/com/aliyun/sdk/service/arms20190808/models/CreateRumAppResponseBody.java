@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRumAppResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRumAppResponseBody</p>
@@ -109,7 +110,10 @@ public class CreateRumAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. 2XX indicates that the request was successful. 3XX indicates that the request was redirected. 4XX indicates that a request error occurred. 5XX indicates that a server error occurred.
+         * <p>The HTTP status code. 2XX indicates that the request was successful. 3XX indicates that the request was redirected. 4XX indicates that a request error occurred. 5XX indicates that a server error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The application ID and domain names. This parameter is returned if the application is created. Multiple domain names are separated with commas (,).
+         * <p>The application ID and domain names. This parameter is returned if the application is created. Multiple domain names are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ggxxxnjuz@xxxx,xxxxxx-default-cn.rum.aliyuncs.com</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +132,10 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -133,7 +143,10 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +154,10 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +165,10 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -157,11 +176,14 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +196,12 @@ public class CreateRumAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRumAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRumAppResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CdnDomain")
         private String cdnDomain;
@@ -225,7 +253,10 @@ public class CreateRumAppResponseBody extends TeaModel {
             private String pid; 
 
             /**
-             * The SDK Domain.
+             * <p>The domain name of the SDK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bxxxxxxx-sdk.rum.aliyuncs.com/v2/browser-sdk.js</p>
              */
             public Builder cdnDomain(String cdnDomain) {
                 this.cdnDomain = cdnDomain;
@@ -233,7 +264,10 @@ public class CreateRumAppResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the event target.
+             * <p>The endpoint that is used to report application data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx-default-cn.rum.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -241,7 +275,10 @@ public class CreateRumAppResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * <p>The process ID (PID) of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>avccccxxxx@24cxxxxbf384dc6</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;

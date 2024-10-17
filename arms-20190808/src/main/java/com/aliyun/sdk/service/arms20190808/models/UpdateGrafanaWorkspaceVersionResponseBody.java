@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGrafanaWorkspaceVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateGrafanaWorkspaceVersionResponseBody</p>
@@ -97,13 +98,16 @@ public class UpdateGrafanaWorkspaceVersionResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code returned for the request. Valid values:
-         * <p>
+         * <p>The HTTP status code returned for the request. Valid values:</p>
+         * <ul>
+         * <li><code>2XX</code>: The request is successful.</li>
+         * <li><code>3XX</code>: A redirection message is returned.</li>
+         * <li><code>4XX</code>: The request is invalid.</li>
+         * <li><code>5XX</code>: A server error occurs.</li>
+         * </ul>
          * 
-         * *   `2XX`: The request is successful.
-         * *   `3XX`: A redirection message is returned.
-         * *   `4XX`: The request is invalid.
-         * *   `5XX`: A server error occurs.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -111,11 +115,14 @@ public class UpdateGrafanaWorkspaceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the update is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the update is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -123,7 +130,10 @@ public class UpdateGrafanaWorkspaceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned for the request.
+         * <p>The error message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -131,7 +141,10 @@ public class UpdateGrafanaWorkspaceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A0CEDF1-06FE-44AC-8E21-21A5BE65****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -139,11 +152,14 @@ public class UpdateGrafanaWorkspaceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,7 +167,10 @@ public class UpdateGrafanaWorkspaceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. The ID is used to query the details of a request.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eac0a8048716731735000007137d000b</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

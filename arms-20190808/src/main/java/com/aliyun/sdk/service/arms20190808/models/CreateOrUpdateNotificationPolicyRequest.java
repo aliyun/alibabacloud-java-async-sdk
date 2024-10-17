@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateNotificationPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateNotificationPolicyRequest</p>
@@ -237,7 +238,10 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable simple mode.
+         * <p>Specifies whether to enable simple mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder directedMode(Boolean directedMode) {
             this.putBodyParameter("DirectedMode", directedMode);
@@ -246,7 +250,10 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the escalation policy.
+         * <p>The ID of the escalation policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder escalationPolicyId(Long escalationPolicyId) {
             this.putBodyParameter("EscalationPolicyId", escalationPolicyId);
@@ -255,19 +262,21 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * An array of alert event group objects.
-         * <p>
+         * <p>An array of alert event group objects.</p>
+         * <ul>
+         * <li>If you do not specify the groupingFields field, all alerts will be sent to contacts based on <code>alertname</code>.</li>
+         * <li>If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.</li>
+         * </ul>
+         * <p>Sample statement:</p>
+         * <pre><code>{ 
+         * &quot;groupWait&quot;:5,    // The waiting time for grouping. 
+         * &quot;groupInterval&quot;:30,     // The time interval of grouping. 
+         * &quot;groupingFields&quot;:[&quot;alertname&quot;]       // The field that is used to group alert events. 
+         * }
+         * </code></pre>
          * 
-         * *   If you do not specify the groupingFields field, all alerts will be sent to contacts based on `alertname`.
-         * *   If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.
-         * 
-         * Sample statement:
-         * 
-         *     { 
-         *     "groupWait":5,    // The waiting time for grouping. 
-         *     "groupInterval":30,     // The time interval of grouping. 
-         *     "groupingFields":["alertname"]       // The field that is used to group alert events. 
-         *     }
+         * <strong>example:</strong>
+         * <p>{ 	&quot;groupWait&quot;:5, 	&quot;groupInterval&quot;:30, 	&quot;groupingFields&quot;:[&quot;alertname&quot;] }</p>
          */
         public Builder groupRule(String groupRule) {
             this.putBodyParameter("GroupRule", groupRule);
@@ -276,11 +285,14 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the notification policy.
-         * <p>
+         * <p>The ID of the notification policy.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, a new notification policy is created.</li>
+         * <li>If you specify this parameter, the specified notification policy is modified.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, a new notification policy is created.
-         * *   If you specify this parameter, the specified notification policy is modified.
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -289,7 +301,10 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * The integration ID of the ticket system to which alerts are pushed.
+         * <p>The integration ID of the ticket system to which alerts are pushed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         public Builder integrationId(Long integrationId) {
             this.putBodyParameter("IntegrationId", integrationId);
@@ -298,20 +313,22 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * The matching rules. Format:
-         * <p>
+         * <p>The matching rules. Format:</p>
+         * <pre><code>[
+         *  {
+         *  &quot;matchingConditions&quot;: [
+         *  { 
+         *  &quot;value&quot;: &quot;test&quot;,    // The value of the matching condition. 
+         *  &quot;key&quot;: &quot;alertname&quot;,     // The key of the matching condition. 
+         *  &quot;operator&quot;: &quot;eq&quot;   // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
+         *  }
+         *  ]
+         *  } 
+         *  ]
+         * </code></pre>
          * 
-         *     [
-         *      {
-         *      "matchingConditions": [
-         *      { 
-         *      "value": "test",    // The value of the matching condition. 
-         *      "key": "alertname",     // The key of the matching condition. 
-         *      "operator": "eq"   // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
-         *      }
-         *      ]
-         *      } 
-         *      ]
+         * <strong>example:</strong>
+         * <p>[ 		 { 		 &quot;matchingConditions&quot;: [          { 		 &quot;value&quot;: &quot;test&quot;, 		 &quot;key&quot;: &quot;alertname&quot;, 		 &quot;operator&quot;: &quot;eq&quot;         }       ]     }   ]</p>
          */
         public Builder matchingRules(String matchingRules) {
             this.putBodyParameter("MatchingRules", matchingRules);
@@ -320,7 +337,11 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * The name of the notification policy.
+         * <p>The name of the notification policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>notificationpolicy_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -329,18 +350,21 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * An array of notification rule objects. Format:
-         * <p>
+         * <p>An array of notification rule objects. Format:</p>
+         * <pre><code>{ 
+         *  &quot;notifyStartTime&quot;:&quot;00:00&quot;,      // The start time of the notification window. 
+         *  &quot;notifyEndTime&quot;:&quot;23:59&quot;,       // The end time of the notification window. 
+         *  &quot;notifyChannels&quot;:[&quot;dingTalk&quot;, &quot;email&quot;, &quot;sms&quot;, &quot;tts&quot;, &quot;webhook&quot;],       // The notification methods. Valid values: dingTalk, email, sms, tts, and webhook. 
+         *  &quot;notifyObjects&quot;:[{       // An array of notification objects. 
+         *  &quot;notifyObjectType&quot;:&quot;CONTACT&quot;,       // The type of the notification object. Valid values: CONTACT (contact), CONTACT_GROUP (contact group), ARMS_CONTACT (ARMS contact), ARMS_CONTACT_GROUP (ARMS contact group), DING_ROBOT_GROUP (DingTalk, Lark, WeCom, or IM robot), and CONTACT_SCHEDULE (user on duty defined by a schedule). 
+         *  &quot;notifyObjectId&quot;:123,       // The ID of the notification object. 
+         *  &quot;notifyObjectName&quot;:&quot;test&quot;       // The name of the notification object. 
+         *  }]
+         * </code></pre>
+         * <p>This parameter is required.</p>
          * 
-         *     { 
-         *      "notifyStartTime":"00:00",      // The start time of the notification window. 
-         *      "notifyEndTime":"23:59",       // The end time of the notification window. 
-         *      "notifyChannels":["dingTalk", "email", "sms", "tts", "webhook"],       // The notification methods. Valid values: dingTalk, email, sms, tts, and webhook. 
-         *      "notifyObjects":[{       // An array of notification objects. 
-         *      "notifyObjectType":"CONTACT",       // The type of the notification object. Valid values: CONTACT (contact), CONTACT_GROUP (contact group), ARMS_CONTACT (ARMS contact), ARMS_CONTACT_GROUP (ARMS contact group), DING_ROBOT_GROUP (DingTalk, Lark, WeCom, or IM robot), and CONTACT_SCHEDULE (user on duty defined by a schedule). 
-         *      "notifyObjectId":123,       // The ID of the notification object. 
-         *      "notifyObjectName":"test"       // The name of the notification object. 
-         *      }]
+         * <strong>example:</strong>
+         * <p>{     &quot;notifyStartTime&quot;:&quot;00:00&quot;,     &quot;notifyEndTime&quot;:&quot;23:59&quot;,     &quot;notifyChannels&quot;:[         &quot;dingTalk&quot;,         &quot;email&quot;,         &quot;sms&quot;,         &quot;tts&quot;,         &quot;webhook&quot;     ],     &quot;notifyObjects&quot;:[         {             &quot;notifyObjectType&quot;:&quot;CONTACT&quot;,             &quot;notifyObjectId&quot;:123,             &quot;notifyObjectName&quot;:&quot;test&quot;         }     ] }</p>
          */
         public Builder notifyRule(String notifyRule) {
             this.putBodyParameter("NotifyRule", notifyRule);
@@ -349,7 +373,10 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * The notification template. The default notification template is provided below the table.
+         * <p>The notification template. The default notification template is provided below the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;robotContent&quot;:&quot;{{if .commonLabels.clustername }} &gt; Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} &gt; Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}{{ for .alerts }} &gt; {{.annotations.message}} {{if .generatorURL }} [Link]({{.generatorURL}}) {{ end }} {{if eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} (Suspected noise) {{end}} {{end}}&quot;</p>
          */
         public Builder notifyTemplate(String notifyTemplate) {
             this.putBodyParameter("NotifyTemplate", notifyTemplate);
@@ -358,7 +385,10 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -367,11 +397,14 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to resend a notification for a long-lasting unresolved alert. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to resend a notification for a long-lasting unresolved alert. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: If you set this parameter to <code>true</code>, you must set <strong>RepeatInterval</strong>.</li>
+         * <li><code>false</code>: If you set this parameter to <code>false</code>, you must set <strong>EscalationPolicyId</strong>.</li>
+         * </ul>
          * 
-         * *   `true`: If you set this parameter to `true`, you must set **RepeatInterval**.
-         * *   `false`: If you set this parameter to `false`, you must set **EscalationPolicyId**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder repeat(Boolean repeat) {
             this.putBodyParameter("Repeat", repeat);
@@ -380,7 +413,10 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.
+         * <p>The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder repeatInterval(Long repeatInterval) {
             this.putBodyParameter("RepeatInterval", repeatInterval);
@@ -389,11 +425,14 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. ARMS notifies contacts when the alert status changes to Resolved.
-         * <p>
+         * <p>Specifies whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. ARMS notifies contacts when the alert status changes to Resolved.</p>
+         * <ul>
+         * <li><code>true</code>: The system sends a notification.</li>
+         * <li><code>false</code>: The system does not send a notification.</li>
+         * </ul>
          * 
-         * *   `true`: The system sends a notification.
-         * *   `false`: The system does not send a notification.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sendRecoverMessage(Boolean sendRecoverMessage) {
             this.putBodyParameter("SendRecoverMessage", sendRecoverMessage);
@@ -402,7 +441,10 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the notification policy. Valid values: enable and disable.
+         * <p>Specifies whether to enable the notification policy. Valid values: enable and disable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder state(String state) {
             this.putBodyParameter("State", state);

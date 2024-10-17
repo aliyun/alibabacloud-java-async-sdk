@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRumOcuStatisticDataRequest} extends {@link RequestModel}
  *
  * <p>GetRumOcuStatisticDataRequest</p>
@@ -155,7 +156,11 @@ public class GetRumOcuStatisticDataRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687849260000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -164,12 +169,12 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * The filter condition. Three types of filter conditions are provided:
-         * <p>
-         * 
-         * *   Application name: pid (Note that the application name is displayed, but the application ID is actually specified)
-         * *   Application type: siteType
-         * *   Data type: dataType
+         * <p>The filter condition. Three types of filter conditions are provided:</p>
+         * <ul>
+         * <li>Application name: pid (Note that the application name is displayed, but the application ID is actually specified)</li>
+         * <li>Application type: siteType</li>
+         * <li>Data type: dataType</li>
+         * </ul>
          */
         public Builder filter(java.util.List < Filter> filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -179,14 +184,14 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * The grouping fields. Valid values:
-         * <p>
-         * 
-         * *   siteType: The total number of OCUs is grouped by application type.
-         * *   dataType: The total number of OCUs is grouped by data type.
-         * *   pid: The total number of OCUs is grouped by application ID.
-         * *   appName: The total number of OCUs is grouped by application name.
-         * *   startTime: The total number of OCUs is grouped by start time.
+         * <p>The grouping fields. Valid values:</p>
+         * <ul>
+         * <li>siteType: The total number of OCUs is grouped by application type.</li>
+         * <li>dataType: The total number of OCUs is grouped by data type.</li>
+         * <li>pid: The total number of OCUs is grouped by application ID.</li>
+         * <li>appName: The total number of OCUs is grouped by application name.</li>
+         * <li>startTime: The total number of OCUs is grouped by start time.</li>
+         * </ul>
          */
         public Builder group(java.util.List < String > group) {
             String groupShrink = shrink(group, "Group", "json");
@@ -196,7 +201,11 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -205,7 +214,11 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,7 +227,10 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * The type of the query. To query non-time series data, set the value to INSTANT. To query time series data, set the value to TIME_SERIES.
+         * <p>The type of the query. To query non-time series data, set the value to INSTANT. To query time series data, set the value to TIME_SERIES.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TIME_SERIES</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -223,7 +239,10 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,7 +251,11 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600063200000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -247,6 +270,12 @@ public class GetRumOcuStatisticDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetRumOcuStatisticDataRequest} extends {@link TeaModel}
+     *
+     * <p>GetRumOcuStatisticDataRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -298,12 +327,15 @@ public class GetRumOcuStatisticDataRequest extends Request {
             private Object value; 
 
             /**
-             * The key of the filter condition. Three types of filter conditions are provided:
-             * <p>
+             * <p>The key of the filter condition. Three types of filter conditions are provided:</p>
+             * <ul>
+             * <li>Application name: pid (Note that the application name is displayed, but the application ID is actually specified)</li>
+             * <li>Application type: siteType</li>
+             * <li>Data type: dataType</li>
+             * </ul>
              * 
-             * *   Application name: pid (Note that the application name is displayed, but the application ID is actually specified)
-             * *   Application type: siteType
-             * *   Data type: dataType
+             * <strong>example:</strong>
+             * <p>pid</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -311,7 +343,10 @@ public class GetRumOcuStatisticDataRequest extends Request {
             }
 
             /**
-             * The type of the operator. Valid value: in.
+             * <p>The type of the operator. Valid value: in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>in</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -319,7 +354,10 @@ public class GetRumOcuStatisticDataRequest extends Request {
             }
 
             /**
-             * The value of the filter condition. The value is a JSON array of strings.
+             * <p>The value of the filter condition. The value is a JSON array of strings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;b590xxxxx@2dcbxxxxx9&quot;, &quot;b590xxxxx@2dcbxxxxx8&quot;]</p>
              */
             public Builder value(Object value) {
                 this.value = value;

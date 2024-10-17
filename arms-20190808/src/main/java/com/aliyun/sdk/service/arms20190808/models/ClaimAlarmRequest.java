@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClaimAlarmRequest} extends {@link RequestModel}
  *
  * <p>ClaimAlarmRequest</p>
@@ -83,10 +84,12 @@ public class ClaimAlarmRequest extends Request {
         } 
 
         /**
-         * The ID of the alert.
-         * <p>
+         * <p>The ID of the alert.</p>
+         * <p>For more information about how to obtain the ID of an alert, see <a href="https://help.aliyun.com/document_detail/2612346.html">ListAlertEvents</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an alert, see [ListAlertEvents](~~2612346~~).
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -95,7 +98,10 @@ public class ClaimAlarmRequest extends Request {
         }
 
         /**
-         * The ID of the handler.
+         * <p>The ID of the handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2046076</p>
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -104,7 +110,11 @@ public class ClaimAlarmRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

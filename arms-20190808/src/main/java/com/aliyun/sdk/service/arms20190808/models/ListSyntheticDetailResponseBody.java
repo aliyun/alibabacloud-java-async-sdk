@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSyntheticDetailResponseBody} extends {@link TeaModel}
  *
  * <p>ListSyntheticDetailResponseBody</p>
@@ -73,7 +74,10 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code returned. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70675725-8F11-4817-8106-CFE0AD71****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSyntheticDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSyntheticDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < java.util.Map<String, ?>> items;
@@ -185,7 +201,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * The list of results.
+             * <p>The list of results.</p>
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;
@@ -193,7 +209,10 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -201,7 +220,10 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -209,7 +231,10 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved field.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder taskCreateTime(Long taskCreateTime) {
                 this.taskCreateTime = taskCreateTime;
@@ -217,7 +242,10 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTimingSyntheticTaskResponse} extends {@link TeaModel}
  *
  * <p>UpdateTimingSyntheticTaskResponse</p>

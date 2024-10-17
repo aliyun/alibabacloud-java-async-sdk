@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>InitEnvironmentRequest</p>
@@ -111,7 +112,10 @@ public class InitEnvironmentRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -120,7 +124,10 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a token to improve data security.
+         * <p>Specifies whether to create a token to improve data security.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder createAuthToken(Boolean createAuthToken) {
             this.putQueryParameter("CreateAuthToken", createAuthToken);
@@ -129,7 +136,11 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the environment instance.
+         * <p>The ID of the environment instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -138,12 +149,15 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * Whether agents or exporters are managed. Valid values:
-         * <p>
+         * <p>Whether agents or exporters are managed. Valid values:</p>
+         * <ul>
+         * <li>none: No. By default, no managed agents or exporters are provided for ACK clusters.</li>
+         * <li>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</li>
+         * <li>agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</li>
+         * </ul>
          * 
-         * *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
-         * *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
-         * *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
+         * <strong>example:</strong>
+         * <p>agent</p>
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("ManagedType", managedType);
@@ -152,7 +166,11 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -73,6 +73,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddAliClusterIdsToPrometheusGlobalView  AddAliClusterIdsToPrometheusGlobalViewRequest
+     * @return AddAliClusterIdsToPrometheusGlobalViewResponse
+     */
     @Override
     public CompletableFuture<AddAliClusterIdsToPrometheusGlobalViewResponse> addAliClusterIdsToPrometheusGlobalView(AddAliClusterIdsToPrometheusGlobalViewRequest request) {
         try {
@@ -87,6 +91,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddGrafana  AddGrafanaRequest
+     * @return AddGrafanaResponse
+     */
     @Override
     public CompletableFuture<AddGrafanaResponse> addGrafana(AddGrafanaRequest request) {
         try {
@@ -102,9 +110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.  * @param request  the request parameters of AddIntegration  AddIntegrationRequest
+     * @return AddIntegrationResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddIntegrationResponse> addIntegration(AddIntegrationRequest request) {
         try {
@@ -119,6 +128,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddPrometheusGlobalView  AddPrometheusGlobalViewRequest
+     * @return AddPrometheusGlobalViewResponse
+     */
     @Override
     public CompletableFuture<AddPrometheusGlobalViewResponse> addPrometheusGlobalView(AddPrometheusGlobalViewRequest request) {
         try {
@@ -133,6 +146,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddPrometheusGlobalViewByAliClusterIds  AddPrometheusGlobalViewByAliClusterIdsRequest
+     * @return AddPrometheusGlobalViewByAliClusterIdsResponse
+     */
     @Override
     public CompletableFuture<AddPrometheusGlobalViewByAliClusterIdsResponse> addPrometheusGlobalViewByAliClusterIds(AddPrometheusGlobalViewByAliClusterIdsRequest request) {
         try {
@@ -148,9 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.  * @param request  the request parameters of AddPrometheusInstance  AddPrometheusInstanceRequest
+     * @return AddPrometheusInstanceResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddPrometheusInstanceResponse> addPrometheusInstance(AddPrometheusInstanceRequest request) {
         try {
@@ -165,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddPrometheusIntegration  AddPrometheusIntegrationRequest
+     * @return AddPrometheusIntegrationResponse
+     */
     @Override
     public CompletableFuture<AddPrometheusIntegrationResponse> addPrometheusIntegration(AddPrometheusIntegrationRequest request) {
         try {
@@ -179,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddRecordingRule  AddRecordingRuleRequest
+     * @return AddRecordingRuleResponse
+     */
     @Override
     public CompletableFuture<AddRecordingRuleResponse> addRecordingRule(AddRecordingRuleRequest request) {
         try {
@@ -193,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddTagToFlinkCluster  AddTagToFlinkClusterRequest
+     * @return AddTagToFlinkClusterResponse
+     */
     @Override
     public CompletableFuture<AddTagToFlinkClusterResponse> addTagToFlinkCluster(AddTagToFlinkClusterRequest request) {
         try {
@@ -207,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AppendInstancesToPrometheusGlobalView  AppendInstancesToPrometheusGlobalViewRequest
+     * @return AppendInstancesToPrometheusGlobalViewResponse
+     */
     @Override
     public CompletableFuture<AppendInstancesToPrometheusGlobalViewResponse> appendInstancesToPrometheusGlobalView(AppendInstancesToPrometheusGlobalViewRequest request) {
         try {
@@ -221,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyScenario  ApplyScenarioRequest
+     * @return ApplyScenarioResponse
+     */
     @Override
     public CompletableFuture<ApplyScenarioResponse> applyScenario(ApplyScenarioRequest request) {
         try {
@@ -235,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindPrometheusGrafanaInstance  BindPrometheusGrafanaInstanceRequest
+     * @return BindPrometheusGrafanaInstanceResponse
+     */
     @Override
     public CompletableFuture<BindPrometheusGrafanaInstanceResponse> bindPrometheusGrafanaInstance(BindPrometheusGrafanaInstanceRequest request) {
         try {
@@ -249,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BlockAlarmNotification  BlockAlarmNotificationRequest
+     * @return BlockAlarmNotificationResponse
+     */
     @Override
     public CompletableFuture<BlockAlarmNotificationResponse> blockAlarmNotification(BlockAlarmNotificationRequest request) {
         try {
@@ -263,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeAlarmSeverity  ChangeAlarmSeverityRequest
+     * @return ChangeAlarmSeverityResponse
+     */
     @Override
     public CompletableFuture<ChangeAlarmSeverityResponse> changeAlarmSeverity(ChangeAlarmSeverityRequest request) {
         try {
@@ -277,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -292,8 +346,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to check whether ARMS is available for commercial use in a region.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to check whether ARMS is available for commercial use in a region.</p>
+     * 
+     * @param request the request parameters of CheckCommercialStatus  CheckCommercialStatusRequest
+     * @return CheckCommercialStatusResponse
      */
     @Override
     public CompletableFuture<CheckCommercialStatusResponse> checkCommercialStatus(CheckCommercialStatusRequest request) {
@@ -309,6 +366,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckServiceStatus  CheckServiceStatusRequest
+     * @return CheckServiceStatusResponse
+     */
     @Override
     public CompletableFuture<CheckServiceStatusResponse> checkServiceStatus(CheckServiceStatusRequest request) {
         try {
@@ -323,6 +384,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ClaimAlarm  ClaimAlarmRequest
+     * @return ClaimAlarmResponse
+     */
     @Override
     public CompletableFuture<ClaimAlarmResponse> claimAlarm(ClaimAlarmRequest request) {
         try {
@@ -337,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseAlarm  CloseAlarmRequest
+     * @return CloseAlarmResponse
+     */
     @Override
     public CompletableFuture<CloseAlarmResponse> closeAlarm(CloseAlarmRequest request) {
         try {
@@ -352,8 +421,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ****
-      *
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ConfigApp  ConfigAppRequest
+     * @return ConfigAppResponse
      */
     @Override
     public CompletableFuture<ConfigAppResponse> configApp(ConfigAppRequest request) {
@@ -370,8 +442,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of the Alert Management module.
-      *
+     * <b>description</b> :
+     * <p>This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of the Alert Management module.</p>
+     * 
+     * @param request the request parameters of CreateAlertContact  CreateAlertContactRequest
+     * @return CreateAlertContactResponse
      */
     @Override
     public CompletableFuture<CreateAlertContactResponse> createAlertContact(CreateAlertContactRequest request) {
@@ -388,8 +463,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The current API operation is no longer maintained. Call the CreateOrUpdateContactGroup operation of the new Alert Management module to create or modify alert contact groups.
-      *
+     * <b>description</b> :
+     * <p>The current API operation is no longer maintained. Call the CreateOrUpdateContactGroup operation of the new Alert Management module to create or modify alert contact groups.</p>
+     * 
+     * @param request the request parameters of CreateAlertContactGroup  CreateAlertContactGroupRequest
+     * @return CreateAlertContactGroupResponse
      */
     @Override
     public CompletableFuture<CreateAlertContactGroupResponse> createAlertContactGroup(CreateAlertContactGroupRequest request) {
@@ -405,6 +483,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDispatchRule  CreateDispatchRuleRequest
+     * @return CreateDispatchRuleResponse
+     */
     @Override
     public CompletableFuture<CreateDispatchRuleResponse> createDispatchRule(CreateDispatchRuleRequest request) {
         try {
@@ -419,6 +501,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEnvCustomJob  CreateEnvCustomJobRequest
+     * @return CreateEnvCustomJobResponse
+     */
     @Override
     public CompletableFuture<CreateEnvCustomJobResponse> createEnvCustomJob(CreateEnvCustomJobRequest request) {
         try {
@@ -433,6 +519,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEnvPodMonitor  CreateEnvPodMonitorRequest
+     * @return CreateEnvPodMonitorResponse
+     */
     @Override
     public CompletableFuture<CreateEnvPodMonitorResponse> createEnvPodMonitor(CreateEnvPodMonitorRequest request) {
         try {
@@ -447,6 +537,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEnvServiceMonitor  CreateEnvServiceMonitorRequest
+     * @return CreateEnvServiceMonitorResponse
+     */
     @Override
     public CompletableFuture<CreateEnvServiceMonitorResponse> createEnvServiceMonitor(CreateEnvServiceMonitorRequest request) {
         try {
@@ -461,6 +555,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEnvironment  CreateEnvironmentRequest
+     * @return CreateEnvironmentResponse
+     */
     @Override
     public CompletableFuture<CreateEnvironmentResponse> createEnvironment(CreateEnvironmentRequest request) {
         try {
@@ -476,12 +574,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the operation, make sure that you have learned about the billing methods and [pricing](https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt) of Managed Service for Grafana.
-      * > 
-      * *   To create workspaces, you must complete real-name verification.
-      * *   Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. `These editions charge fees.`
-      * *   Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. `These editions do not charge fees.`
-      *
+     * <b>description</b> :
+     * <p>Before you call the operation, make sure that you have learned about the billing methods and <a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of Managed Service for Grafana.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To create workspaces, you must complete real-name verification.</li>
+     * <li>Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. <code>These editions charge fees.</code></li>
+     * <li>Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. <code>These editions do not charge fees.</code></li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateGrafanaWorkspace  CreateGrafanaWorkspaceRequest
+     * @return CreateGrafanaWorkspaceResponse
      */
     @Override
     public CompletableFuture<CreateGrafanaWorkspaceResponse> createGrafanaWorkspace(CreateGrafanaWorkspaceRequest request) {
@@ -497,6 +601,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIntegration  CreateIntegrationRequest
+     * @return CreateIntegrationResponse
+     */
     @Override
     public CompletableFuture<CreateIntegrationResponse> createIntegration(CreateIntegrationRequest request) {
         try {
@@ -511,6 +619,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateAlertRule  CreateOrUpdateAlertRuleRequest
+     * @return CreateOrUpdateAlertRuleResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateAlertRuleResponse> createOrUpdateAlertRule(CreateOrUpdateAlertRuleRequest request) {
         try {
@@ -525,6 +637,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateContact  CreateOrUpdateContactRequest
+     * @return CreateOrUpdateContactResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateContactResponse> createOrUpdateContact(CreateOrUpdateContactRequest request) {
         try {
@@ -539,6 +655,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateContactGroup  CreateOrUpdateContactGroupRequest
+     * @return CreateOrUpdateContactGroupResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateContactGroupResponse> createOrUpdateContactGroup(CreateOrUpdateContactGroupRequest request) {
         try {
@@ -553,6 +673,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateEventBridgeIntegration  CreateOrUpdateEventBridgeIntegrationRequest
+     * @return CreateOrUpdateEventBridgeIntegrationResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateEventBridgeIntegrationResponse> createOrUpdateEventBridgeIntegration(CreateOrUpdateEventBridgeIntegrationRequest request) {
         try {
@@ -567,6 +691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateIMRobot  CreateOrUpdateIMRobotRequest
+     * @return CreateOrUpdateIMRobotResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateIMRobotResponse> createOrUpdateIMRobot(CreateOrUpdateIMRobotRequest request) {
         try {
@@ -581,6 +709,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateNotificationPolicy  CreateOrUpdateNotificationPolicyRequest
+     * @return CreateOrUpdateNotificationPolicyResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateNotificationPolicyResponse> createOrUpdateNotificationPolicy(CreateOrUpdateNotificationPolicyRequest request) {
         try {
@@ -595,6 +727,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateSilencePolicy  CreateOrUpdateSilencePolicyRequest
+     * @return CreateOrUpdateSilencePolicyResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateSilencePolicyResponse> createOrUpdateSilencePolicy(CreateOrUpdateSilencePolicyRequest request) {
         try {
@@ -609,6 +745,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateWebhookContact  CreateOrUpdateWebhookContactRequest
+     * @return CreateOrUpdateWebhookContactResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateWebhookContactResponse> createOrUpdateWebhookContact(CreateOrUpdateWebhookContactRequest request) {
         try {
@@ -623,6 +763,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePrometheusAlertRule  CreatePrometheusAlertRuleRequest
+     * @return CreatePrometheusAlertRuleResponse
+     */
     @Override
     public CompletableFuture<CreatePrometheusAlertRuleResponse> createPrometheusAlertRule(CreatePrometheusAlertRuleRequest request) {
         try {
@@ -637,6 +781,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePrometheusInstance  CreatePrometheusInstanceRequest
+     * @return CreatePrometheusInstanceResponse
+     */
     @Override
     public CompletableFuture<CreatePrometheusInstanceResponse> createPrometheusInstance(CreatePrometheusInstanceRequest request) {
         try {
@@ -651,6 +799,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePrometheusMonitoring  CreatePrometheusMonitoringRequest
+     * @return CreatePrometheusMonitoringResponse
+     */
     @Override
     public CompletableFuture<CreatePrometheusMonitoringResponse> createPrometheusMonitoring(CreatePrometheusMonitoringRequest request) {
         try {
@@ -665,6 +817,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRetcodeApp  CreateRetcodeAppRequest
+     * @return CreateRetcodeAppResponse
+     */
     @Override
     public CompletableFuture<CreateRetcodeAppResponse> createRetcodeApp(CreateRetcodeAppRequest request) {
         try {
@@ -679,6 +835,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRumApp  CreateRumAppRequest
+     * @return CreateRumAppResponse
+     */
     @Override
     public CompletableFuture<CreateRumAppResponse> createRumApp(CreateRumAppRequest request) {
         try {
@@ -694,8 +854,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](~~2579659~~).
-      *
+     * <b>description</b> :
+     * <p>This operation returns a URL. You can upload files to the URL. For more information, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload local files with signed URLs</a>.</p>
+     * 
+     * @param request the request parameters of CreateRumUploadFileUrl  CreateRumUploadFileUrlRequest
+     * @return CreateRumUploadFileUrlResponse
      */
     @Override
     public CompletableFuture<CreateRumUploadFileUrlResponse> createRumUploadFileUrl(CreateRumUploadFileUrlRequest request) {
@@ -711,6 +874,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSyntheticTask  CreateSyntheticTaskRequest
+     * @return CreateSyntheticTaskResponse
+     */
     @Override
     public CompletableFuture<CreateSyntheticTaskResponse> createSyntheticTask(CreateSyntheticTaskRequest request) {
         try {
@@ -725,6 +892,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTimingSyntheticTask  CreateTimingSyntheticTaskRequest
+     * @return CreateTimingSyntheticTaskResponse
+     */
     @Override
     public CompletableFuture<CreateTimingSyntheticTaskResponse> createTimingSyntheticTask(CreateTimingSyntheticTaskRequest request) {
         try {
@@ -739,6 +910,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateWebhook  CreateWebhookRequest
+     * @return CreateWebhookResponse
+     */
     @Override
     public CompletableFuture<CreateWebhookResponse> createWebhook(CreateWebhookRequest request) {
         try {
@@ -753,6 +928,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DelAuthToken  DelAuthTokenRequest
+     * @return DelAuthTokenResponse
+     */
     @Override
     public CompletableFuture<DelAuthTokenResponse> delAuthToken(DelAuthTokenRequest request) {
         try {
@@ -767,6 +946,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAddonRelease  DeleteAddonReleaseRequest
+     * @return DeleteAddonReleaseResponse
+     */
     @Override
     public CompletableFuture<DeleteAddonReleaseResponse> deleteAddonRelease(DeleteAddonReleaseRequest request) {
         try {
@@ -782,8 +965,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ********
-      *
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of DeleteAlertContact  DeleteAlertContactRequest
+     * @return DeleteAlertContactResponse
      */
     @Override
     public CompletableFuture<DeleteAlertContactResponse> deleteAlertContact(DeleteAlertContactRequest request) {
@@ -799,6 +985,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAlertContactGroup  DeleteAlertContactGroupRequest
+     * @return DeleteAlertContactGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteAlertContactGroupResponse> deleteAlertContactGroup(DeleteAlertContactGroupRequest request) {
         try {
@@ -813,6 +1003,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAlertRule  DeleteAlertRuleRequest
+     * @return DeleteAlertRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteAlertRuleResponse> deleteAlertRule(DeleteAlertRuleRequest request) {
         try {
@@ -828,8 +1022,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.
-      *
+     * <b>description</b> :
+     * <p>The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.</p>
+     * 
+     * @param request the request parameters of DeleteAlertRules  DeleteAlertRulesRequest
+     * @return DeleteAlertRulesResponse
      */
     @Override
     public CompletableFuture<DeleteAlertRulesResponse> deleteAlertRules(DeleteAlertRulesRequest request) {
@@ -845,6 +1042,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAppList  DeleteAppListRequest
+     * @return DeleteAppListResponse
+     */
     @Override
     public CompletableFuture<DeleteAppListResponse> deleteAppList(DeleteAppListRequest request) {
         try {
@@ -860,9 +1061,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.  * @param request  the request parameters of DeleteCmsExporter  DeleteCmsExporterRequest
+     * @return DeleteCmsExporterResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteCmsExporterResponse> deleteCmsExporter(DeleteCmsExporterRequest request) {
         try {
@@ -877,6 +1079,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteContact  DeleteContactRequest
+     * @return DeleteContactResponse
+     */
     @Override
     public CompletableFuture<DeleteContactResponse> deleteContact(DeleteContactRequest request) {
         try {
@@ -891,6 +1097,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteContactGroup  DeleteContactGroupRequest
+     * @return DeleteContactGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteContactGroupResponse> deleteContactGroup(DeleteContactGroupRequest request) {
         try {
@@ -905,6 +1115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDispatchRule  DeleteDispatchRuleRequest
+     * @return DeleteDispatchRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteDispatchRuleResponse> deleteDispatchRule(DeleteDispatchRuleRequest request) {
         try {
@@ -919,6 +1133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEnvCustomJob  DeleteEnvCustomJobRequest
+     * @return DeleteEnvCustomJobResponse
+     */
     @Override
     public CompletableFuture<DeleteEnvCustomJobResponse> deleteEnvCustomJob(DeleteEnvCustomJobRequest request) {
         try {
@@ -933,6 +1151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEnvPodMonitor  DeleteEnvPodMonitorRequest
+     * @return DeleteEnvPodMonitorResponse
+     */
     @Override
     public CompletableFuture<DeleteEnvPodMonitorResponse> deleteEnvPodMonitor(DeleteEnvPodMonitorRequest request) {
         try {
@@ -947,6 +1169,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEnvServiceMonitor  DeleteEnvServiceMonitorRequest
+     * @return DeleteEnvServiceMonitorResponse
+     */
     @Override
     public CompletableFuture<DeleteEnvServiceMonitorResponse> deleteEnvServiceMonitor(DeleteEnvServiceMonitorRequest request) {
         try {
@@ -961,6 +1187,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEnvironment  DeleteEnvironmentRequest
+     * @return DeleteEnvironmentResponse
+     */
     @Override
     public CompletableFuture<DeleteEnvironmentResponse> deleteEnvironment(DeleteEnvironmentRequest request) {
         try {
@@ -975,6 +1205,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEnvironmentFeature  DeleteEnvironmentFeatureRequest
+     * @return DeleteEnvironmentFeatureResponse
+     */
     @Override
     public CompletableFuture<DeleteEnvironmentFeatureResponse> deleteEnvironmentFeature(DeleteEnvironmentFeatureRequest request) {
         try {
@@ -989,6 +1223,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEventBridgeIntegration  DeleteEventBridgeIntegrationRequest
+     * @return DeleteEventBridgeIntegrationResponse
+     */
     @Override
     public CompletableFuture<DeleteEventBridgeIntegrationResponse> deleteEventBridgeIntegration(DeleteEventBridgeIntegrationRequest request) {
         try {
@@ -1003,6 +1241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGrafanaResource  DeleteGrafanaResourceRequest
+     * @return DeleteGrafanaResourceResponse
+     */
     @Override
     public CompletableFuture<DeleteGrafanaResourceResponse> deleteGrafanaResource(DeleteGrafanaResourceRequest request) {
         try {
@@ -1018,9 +1260,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
-      * *   You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the [User Center](https://usercenter2.aliyun.com/refund/refund) to unsubscribe from workspaces.
-      *
+     * <b>description</b> :
+     * <p>  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is <code>free of charge</code>.</p>
+     * <ul>
+     * <li>You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the <a href="https://usercenter2.aliyun.com/refund/refund">User Center</a> to unsubscribe from workspaces.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteGrafanaWorkspace  DeleteGrafanaWorkspaceRequest
+     * @return DeleteGrafanaWorkspaceResponse
      */
     @Override
     public CompletableFuture<DeleteGrafanaWorkspaceResponse> deleteGrafanaWorkspace(DeleteGrafanaWorkspaceRequest request) {
@@ -1036,6 +1283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIMRobot  DeleteIMRobotRequest
+     * @return DeleteIMRobotResponse
+     */
     @Override
     public CompletableFuture<DeleteIMRobotResponse> deleteIMRobot(DeleteIMRobotRequest request) {
         try {
@@ -1051,9 +1302,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.  * @param request  the request parameters of DeleteIntegration  DeleteIntegrationRequest
+     * @return DeleteIntegrationResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteIntegrationResponse> deleteIntegration(DeleteIntegrationRequest request) {
         try {
@@ -1068,6 +1320,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIntegrations  DeleteIntegrationsRequest
+     * @return DeleteIntegrationsResponse
+     */
     @Override
     public CompletableFuture<DeleteIntegrationsResponse> deleteIntegrations(DeleteIntegrationsRequest request) {
         try {
@@ -1082,6 +1338,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNotificationPolicy  DeleteNotificationPolicyRequest
+     * @return DeleteNotificationPolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteNotificationPolicyResponse> deleteNotificationPolicy(DeleteNotificationPolicyRequest request) {
         try {
@@ -1096,6 +1356,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePrometheusAlertRule  DeletePrometheusAlertRuleRequest
+     * @return DeletePrometheusAlertRuleResponse
+     */
     @Override
     public CompletableFuture<DeletePrometheusAlertRuleResponse> deletePrometheusAlertRule(DeletePrometheusAlertRuleRequest request) {
         try {
@@ -1110,6 +1374,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePrometheusGlobalView  DeletePrometheusGlobalViewRequest
+     * @return DeletePrometheusGlobalViewResponse
+     */
     @Override
     public CompletableFuture<DeletePrometheusGlobalViewResponse> deletePrometheusGlobalView(DeletePrometheusGlobalViewRequest request) {
         try {
@@ -1124,6 +1392,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePrometheusIntegration  DeletePrometheusIntegrationRequest
+     * @return DeletePrometheusIntegrationResponse
+     */
     @Override
     public CompletableFuture<DeletePrometheusIntegrationResponse> deletePrometheusIntegration(DeletePrometheusIntegrationRequest request) {
         try {
@@ -1138,6 +1410,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePrometheusMonitoring  DeletePrometheusMonitoringRequest
+     * @return DeletePrometheusMonitoringResponse
+     */
     @Override
     public CompletableFuture<DeletePrometheusMonitoringResponse> deletePrometheusMonitoring(DeletePrometheusMonitoringRequest request) {
         try {
@@ -1152,6 +1428,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRetcodeApp  DeleteRetcodeAppRequest
+     * @return DeleteRetcodeAppResponse
+     */
     @Override
     public CompletableFuture<DeleteRetcodeAppResponse> deleteRetcodeApp(DeleteRetcodeAppRequest request) {
         try {
@@ -1166,6 +1446,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRumApp  DeleteRumAppRequest
+     * @return DeleteRumAppResponse
+     */
     @Override
     public CompletableFuture<DeleteRumAppResponse> deleteRumApp(DeleteRumAppRequest request) {
         try {
@@ -1181,8 +1465,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
-      *
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
+     * @param request the request parameters of DeleteRumUploadFile  DeleteRumUploadFileRequest
+     * @return DeleteRumUploadFileResponse
      */
     @Override
     public CompletableFuture<DeleteRumUploadFileResponse> deleteRumUploadFile(DeleteRumUploadFileRequest request) {
@@ -1198,6 +1485,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteScenario  DeleteScenarioRequest
+     * @return DeleteScenarioResponse
+     */
     @Override
     public CompletableFuture<DeleteScenarioResponse> deleteScenario(DeleteScenarioRequest request) {
         try {
@@ -1212,6 +1503,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSilencePolicy  DeleteSilencePolicyRequest
+     * @return DeleteSilencePolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteSilencePolicyResponse> deleteSilencePolicy(DeleteSilencePolicyRequest request) {
         try {
@@ -1226,6 +1521,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSourceMap  DeleteSourceMapRequest
+     * @return DeleteSourceMapResponse
+     */
     @Override
     public CompletableFuture<DeleteSourceMapResponse> deleteSourceMap(DeleteSourceMapRequest request) {
         try {
@@ -1240,6 +1539,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSyntheticTask  DeleteSyntheticTaskRequest
+     * @return DeleteSyntheticTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteSyntheticTaskResponse> deleteSyntheticTask(DeleteSyntheticTaskRequest request) {
         try {
@@ -1254,6 +1557,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTimingSyntheticTask  DeleteTimingSyntheticTaskRequest
+     * @return DeleteTimingSyntheticTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteTimingSyntheticTaskResponse> deleteTimingSyntheticTask(DeleteTimingSyntheticTaskRequest request) {
         try {
@@ -1268,6 +1575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTraceApp  DeleteTraceAppRequest
+     * @return DeleteTraceAppResponse
+     */
     @Override
     public CompletableFuture<DeleteTraceAppResponse> deleteTraceApp(DeleteTraceAppRequest request) {
         try {
@@ -1282,6 +1593,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWebhookContact  DeleteWebhookContactRequest
+     * @return DeleteWebhookContactResponse
+     */
     @Override
     public CompletableFuture<DeleteWebhookContactResponse> deleteWebhookContact(DeleteWebhookContactRequest request) {
         try {
@@ -1296,6 +1611,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAddonRelease  DescribeAddonReleaseRequest
+     * @return DescribeAddonReleaseResponse
+     */
     @Override
     public CompletableFuture<DescribeAddonReleaseResponse> describeAddonRelease(DescribeAddonReleaseRequest request) {
         try {
@@ -1310,6 +1629,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContactGroups  DescribeContactGroupsRequest
+     * @return DescribeContactGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeContactGroupsResponse> describeContactGroups(DescribeContactGroupsRequest request) {
         try {
@@ -1324,6 +1647,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContacts  DescribeContactsRequest
+     * @return DescribeContactsResponse
+     */
     @Override
     public CompletableFuture<DescribeContactsResponse> describeContacts(DescribeContactsRequest request) {
         try {
@@ -1338,6 +1665,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDispatchRule  DescribeDispatchRuleRequest
+     * @return DescribeDispatchRuleResponse
+     */
     @Override
     public CompletableFuture<DescribeDispatchRuleResponse> describeDispatchRule(DescribeDispatchRuleRequest request) {
         try {
@@ -1352,6 +1683,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnvCustomJob  DescribeEnvCustomJobRequest
+     * @return DescribeEnvCustomJobResponse
+     */
     @Override
     public CompletableFuture<DescribeEnvCustomJobResponse> describeEnvCustomJob(DescribeEnvCustomJobRequest request) {
         try {
@@ -1366,6 +1701,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnvPodMonitor  DescribeEnvPodMonitorRequest
+     * @return DescribeEnvPodMonitorResponse
+     */
     @Override
     public CompletableFuture<DescribeEnvPodMonitorResponse> describeEnvPodMonitor(DescribeEnvPodMonitorRequest request) {
         try {
@@ -1380,6 +1719,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnvServiceMonitor  DescribeEnvServiceMonitorRequest
+     * @return DescribeEnvServiceMonitorResponse
+     */
     @Override
     public CompletableFuture<DescribeEnvServiceMonitorResponse> describeEnvServiceMonitor(DescribeEnvServiceMonitorRequest request) {
         try {
@@ -1394,6 +1737,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnvironment  DescribeEnvironmentRequest
+     * @return DescribeEnvironmentResponse
+     */
     @Override
     public CompletableFuture<DescribeEnvironmentResponse> describeEnvironment(DescribeEnvironmentRequest request) {
         try {
@@ -1408,6 +1755,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnvironmentFeature  DescribeEnvironmentFeatureRequest
+     * @return DescribeEnvironmentFeatureResponse
+     */
     @Override
     public CompletableFuture<DescribeEnvironmentFeatureResponse> describeEnvironmentFeature(DescribeEnvironmentFeatureRequest request) {
         try {
@@ -1422,6 +1773,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIMRobots  DescribeIMRobotsRequest
+     * @return DescribeIMRobotsResponse
+     */
     @Override
     public CompletableFuture<DescribeIMRobotsResponse> describeIMRobots(DescribeIMRobotsRequest request) {
         try {
@@ -1436,6 +1791,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePrometheusAlertRule  DescribePrometheusAlertRuleRequest
+     * @return DescribePrometheusAlertRuleResponse
+     */
     @Override
     public CompletableFuture<DescribePrometheusAlertRuleResponse> describePrometheusAlertRule(DescribePrometheusAlertRuleRequest request) {
         try {
@@ -1450,6 +1809,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTraceLicenseKey  DescribeTraceLicenseKeyRequest
+     * @return DescribeTraceLicenseKeyResponse
+     */
     @Override
     public CompletableFuture<DescribeTraceLicenseKeyResponse> describeTraceLicenseKey(DescribeTraceLicenseKeyRequest request) {
         try {
@@ -1464,6 +1827,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebhookContacts  DescribeWebhookContactsRequest
+     * @return DescribeWebhookContactsResponse
+     */
     @Override
     public CompletableFuture<DescribeWebhookContactsResponse> describeWebhookContacts(DescribeWebhookContactsRequest request) {
         try {
@@ -1478,6 +1845,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DoInsightsAction  DoInsightsActionRequest
+     * @return DoInsightsActionResponse
+     */
     @Override
     public CompletableFuture<DoInsightsActionResponse> doInsightsAction(DoInsightsActionRequest request) {
         try {
@@ -1492,6 +1863,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableMetric  EnableMetricRequest
+     * @return EnableMetricResponse
+     */
     @Override
     public CompletableFuture<EnableMetricResponse> enableMetric(EnableMetricRequest request) {
         try {
@@ -1506,6 +1881,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAgentDownloadUrl  GetAgentDownloadUrlRequest
+     * @return GetAgentDownloadUrlResponse
+     */
     @Override
     public CompletableFuture<GetAgentDownloadUrlResponse> getAgentDownloadUrl(GetAgentDownloadUrlRequest request) {
         try {
@@ -1520,6 +1899,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAgentDownloadUrlV2  GetAgentDownloadUrlV2Request
+     * @return GetAgentDownloadUrlV2Response
+     */
     @Override
     public CompletableFuture<GetAgentDownloadUrlV2Response> getAgentDownloadUrlV2(GetAgentDownloadUrlV2Request request) {
         try {
@@ -1534,6 +1917,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAlertRules  GetAlertRulesRequest
+     * @return GetAlertRulesResponse
+     */
     @Override
     public CompletableFuture<GetAlertRulesResponse> getAlertRules(GetAlertRulesRequest request) {
         try {
@@ -1548,6 +1935,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAppApiByPage  GetAppApiByPageRequest
+     * @return GetAppApiByPageResponse
+     */
     @Override
     public CompletableFuture<GetAppApiByPageResponse> getAppApiByPage(GetAppApiByPageRequest request) {
         try {
@@ -1562,6 +1953,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAppJVMConfig  GetAppJVMConfigRequest
+     * @return GetAppJVMConfigResponse
+     */
     @Override
     public CompletableFuture<GetAppJVMConfigResponse> getAppJVMConfig(GetAppJVMConfigRequest request) {
         try {
@@ -1576,6 +1971,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAuthToken  GetAuthTokenRequest
+     * @return GetAuthTokenResponse
+     */
     @Override
     public CompletableFuture<GetAuthTokenResponse> getAuthToken(GetAuthTokenRequest request) {
         try {
@@ -1591,9 +1990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.  * @param request  the request parameters of GetCloudClusterAllUrl  GetCloudClusterAllUrlRequest
+     * @return GetCloudClusterAllUrlResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetCloudClusterAllUrlResponse> getCloudClusterAllUrl(GetCloudClusterAllUrlRequest request) {
         try {
@@ -1609,9 +2009,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.  * @param request  the request parameters of GetClusterAllUrl  GetClusterAllUrlRequest
+     * @return GetClusterAllUrlResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetClusterAllUrlResponse> getClusterAllUrl(GetClusterAllUrlRequest request) {
         try {
@@ -1626,6 +2027,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCommercialStatus  GetCommercialStatusRequest
+     * @return GetCommercialStatusResponse
+     */
     @Override
     public CompletableFuture<GetCommercialStatusResponse> getCommercialStatus(GetCommercialStatusRequest request) {
         try {
@@ -1640,6 +2045,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetExploreUrl  GetExploreUrlRequest
+     * @return GetExploreUrlResponse
+     */
     @Override
     public CompletableFuture<GetExploreUrlResponse> getExploreUrl(GetExploreUrlRequest request) {
         try {
@@ -1655,8 +2064,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
-      *
+     * <b>description</b> :
+     * <p>Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.</p>
+     * 
+     * @param request the request parameters of GetGrafanaWorkspace  GetGrafanaWorkspaceRequest
+     * @return GetGrafanaWorkspaceResponse
      */
     @Override
     public CompletableFuture<GetGrafanaWorkspaceResponse> getGrafanaWorkspace(GetGrafanaWorkspaceRequest request) {
@@ -1673,9 +2085,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.  * @param request  the request parameters of GetIntegrationState  GetIntegrationStateRequest
+     * @return GetIntegrationStateResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetIntegrationStateResponse> getIntegrationState(GetIntegrationStateRequest request) {
         try {
@@ -1691,9 +2104,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetManagedPrometheusStatus is deprecated  * @param request  the request parameters of GetManagedPrometheusStatus  GetManagedPrometheusStatusRequest
+     * @return GetManagedPrometheusStatusResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetManagedPrometheusStatusResponse> getManagedPrometheusStatus(GetManagedPrometheusStatusRequest request) {
         try {
@@ -1708,6 +2122,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMultipleTrace  GetMultipleTraceRequest
+     * @return GetMultipleTraceResponse
+     */
     @Override
     public CompletableFuture<GetMultipleTraceResponse> getMultipleTrace(GetMultipleTraceRequest request) {
         try {
@@ -1722,6 +2140,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOnCallSchedulesDetail  GetOnCallSchedulesDetailRequest
+     * @return GetOnCallSchedulesDetailResponse
+     */
     @Override
     public CompletableFuture<GetOnCallSchedulesDetailResponse> getOnCallSchedulesDetail(GetOnCallSchedulesDetailRequest request) {
         try {
@@ -1737,8 +2159,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * None.
-      *
+     * <b>description</b> :
+     * <p>None.</p>
+     * 
+     * @param request the request parameters of GetPrometheusApiToken  GetPrometheusApiTokenRequest
+     * @return GetPrometheusApiTokenResponse
      */
     @Override
     public CompletableFuture<GetPrometheusApiTokenResponse> getPrometheusApiToken(GetPrometheusApiTokenRequest request) {
@@ -1754,6 +2179,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPrometheusGlobalView  GetPrometheusGlobalViewRequest
+     * @return GetPrometheusGlobalViewResponse
+     */
     @Override
     public CompletableFuture<GetPrometheusGlobalViewResponse> getPrometheusGlobalView(GetPrometheusGlobalViewRequest request) {
         try {
@@ -1768,6 +2197,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPrometheusInstance  GetPrometheusInstanceRequest
+     * @return GetPrometheusInstanceResponse
+     */
     @Override
     public CompletableFuture<GetPrometheusInstanceResponse> getPrometheusInstance(GetPrometheusInstanceRequest request) {
         try {
@@ -1782,6 +2215,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPrometheusIntegration  GetPrometheusIntegrationRequest
+     * @return GetPrometheusIntegrationResponse
+     */
     @Override
     public CompletableFuture<GetPrometheusIntegrationResponse> getPrometheusIntegration(GetPrometheusIntegrationRequest request) {
         try {
@@ -1796,6 +2233,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPrometheusMonitoring  GetPrometheusMonitoringRequest
+     * @return GetPrometheusMonitoringResponse
+     */
     @Override
     public CompletableFuture<GetPrometheusMonitoringResponse> getPrometheusMonitoring(GetPrometheusMonitoringRequest request) {
         try {
@@ -1810,6 +2251,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRecordingRule  GetRecordingRuleRequest
+     * @return GetRecordingRuleResponse
+     */
     @Override
     public CompletableFuture<GetRecordingRuleResponse> getRecordingRule(GetRecordingRuleRequest request) {
         try {
@@ -1824,6 +2269,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRetcodeAppByPid  GetRetcodeAppByPidRequest
+     * @return GetRetcodeAppByPidResponse
+     */
     @Override
     public CompletableFuture<GetRetcodeAppByPidResponse> getRetcodeAppByPid(GetRetcodeAppByPidRequest request) {
         try {
@@ -1838,6 +2287,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRetcodeDataByQuery  GetRetcodeDataByQueryRequest
+     * @return GetRetcodeDataByQueryResponse
+     */
     @Override
     public CompletableFuture<GetRetcodeDataByQueryResponse> getRetcodeDataByQuery(GetRetcodeDataByQueryRequest request) {
         try {
@@ -1852,6 +2305,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRetcodeLogstore  GetRetcodeLogstoreRequest
+     * @return GetRetcodeLogstoreResponse
+     */
     @Override
     public CompletableFuture<GetRetcodeLogstoreResponse> getRetcodeLogstore(GetRetcodeLogstoreRequest request) {
         try {
@@ -1866,6 +2323,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRetcodeShareUrl  GetRetcodeShareUrlRequest
+     * @return GetRetcodeShareUrlResponse
+     */
     @Override
     public CompletableFuture<GetRetcodeShareUrlResponse> getRetcodeShareUrl(GetRetcodeShareUrlRequest request) {
         try {
@@ -1881,8 +2342,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
-      *
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
+     * @param request the request parameters of GetRumAppInfo  GetRumAppInfoRequest
+     * @return GetRumAppInfoResponse
      */
     @Override
     public CompletableFuture<GetRumAppInfoResponse> getRumAppInfo(GetRumAppInfoRequest request) {
@@ -1899,8 +2363,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
-      *
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
+     * @param request the request parameters of GetRumApps  GetRumAppsRequest
+     * @return GetRumAppsResponse
      */
     @Override
     public CompletableFuture<GetRumAppsResponse> getRumApps(GetRumAppsRequest request) {
@@ -1917,8 +2384,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
-      *
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
+     * @param request the request parameters of GetRumDataForPage  GetRumDataForPageRequest
+     * @return GetRumDataForPageResponse
      */
     @Override
     public CompletableFuture<GetRumDataForPageResponse> getRumDataForPage(GetRumDataForPageRequest request) {
@@ -1935,8 +2405,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
-      *
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
+     * @param request the request parameters of GetRumExceptionStack  GetRumExceptionStackRequest
+     * @return GetRumExceptionStackResponse
      */
     @Override
     public CompletableFuture<GetRumExceptionStackResponse> getRumExceptionStack(GetRumExceptionStackRequest request) {
@@ -1953,8 +2426,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.
-      *
+     * <b>description</b> :
+     * <p>You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.</p>
+     * 
+     * @param request the request parameters of GetRumOcuStatisticData  GetRumOcuStatisticDataRequest
+     * @return GetRumOcuStatisticDataResponse
      */
     @Override
     public CompletableFuture<GetRumOcuStatisticDataResponse> getRumOcuStatisticData(GetRumOcuStatisticDataRequest request) {
@@ -1971,8 +2447,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
-      *
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
+     * @param request the request parameters of GetRumUploadFiles  GetRumUploadFilesRequest
+     * @return GetRumUploadFilesResponse
      */
     @Override
     public CompletableFuture<GetRumUploadFilesResponse> getRumUploadFiles(GetRumUploadFilesRequest request) {
@@ -1988,6 +2467,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSourceMapInfo  GetSourceMapInfoRequest
+     * @return GetSourceMapInfoResponse
+     */
     @Override
     public CompletableFuture<GetSourceMapInfoResponse> getSourceMapInfo(GetSourceMapInfoRequest request) {
         try {
@@ -2002,6 +2485,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStack  GetStackRequest
+     * @return GetStackResponse
+     */
     @Override
     public CompletableFuture<GetStackResponse> getStack(GetStackRequest request) {
         try {
@@ -2016,6 +2503,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSyntheticMonitors  GetSyntheticMonitorsRequest
+     * @return GetSyntheticMonitorsResponse
+     */
     @Override
     public CompletableFuture<GetSyntheticMonitorsResponse> getSyntheticMonitors(GetSyntheticMonitorsRequest request) {
         try {
@@ -2030,6 +2521,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSyntheticTaskDetail  GetSyntheticTaskDetailRequest
+     * @return GetSyntheticTaskDetailResponse
+     */
     @Override
     public CompletableFuture<GetSyntheticTaskDetailResponse> getSyntheticTaskDetail(GetSyntheticTaskDetailRequest request) {
         try {
@@ -2044,6 +2539,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSyntheticTaskList  GetSyntheticTaskListRequest
+     * @return GetSyntheticTaskListResponse
+     */
     @Override
     public CompletableFuture<GetSyntheticTaskListResponse> getSyntheticTaskList(GetSyntheticTaskListRequest request) {
         try {
@@ -2058,6 +2557,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSyntheticTaskMonitors  GetSyntheticTaskMonitorsRequest
+     * @return GetSyntheticTaskMonitorsResponse
+     */
     @Override
     public CompletableFuture<GetSyntheticTaskMonitorsResponse> getSyntheticTaskMonitors(GetSyntheticTaskMonitorsRequest request) {
         try {
@@ -2072,6 +2575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTimingSyntheticTask  GetTimingSyntheticTaskRequest
+     * @return GetTimingSyntheticTaskResponse
+     */
     @Override
     public CompletableFuture<GetTimingSyntheticTaskResponse> getTimingSyntheticTask(GetTimingSyntheticTaskRequest request) {
         try {
@@ -2087,8 +2594,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You must use Application Real-Time Monitoring Service (ARMS) SDK for Java V2.7.24.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You must use Application Real-Time Monitoring Service (ARMS) SDK for Java V2.7.24.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of GetTrace  GetTraceRequest
+     * @return GetTraceResponse
      */
     @Override
     public CompletableFuture<GetTraceResponse> getTrace(GetTraceRequest request) {
@@ -2104,6 +2616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTraceApp  GetTraceAppRequest
+     * @return GetTraceAppResponse
+     */
     @Override
     public CompletableFuture<GetTraceAppResponse> getTraceApp(GetTraceAppRequest request) {
         try {
@@ -2118,6 +2634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTraceAppConfig  GetTraceAppConfigRequest
+     * @return GetTraceAppConfigResponse
+     */
     @Override
     public CompletableFuture<GetTraceAppConfigResponse> getTraceAppConfig(GetTraceAppConfigRequest request) {
         try {
@@ -2133,8 +2653,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call the **ImportAppAlertRules** operation to import only the alert rules that are generated by Application Real-Time Monitoring Service (ARMS) for application monitoring and browser monitoring. This operation cannot be used to import custom alert rules, alert rules for Prometheus monitoring, or default emergency alert rules.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call the <strong>ImportAppAlertRules</strong> operation to import only the alert rules that are generated by Application Real-Time Monitoring Service (ARMS) for application monitoring and browser monitoring. This operation cannot be used to import custom alert rules, alert rules for Prometheus monitoring, or default emergency alert rules.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ImportAppAlertRules  ImportAppAlertRulesRequest
+     * @return ImportAppAlertRulesResponse
      */
     @Override
     public CompletableFuture<ImportAppAlertRulesResponse> importAppAlertRules(ImportAppAlertRulesRequest request) {
@@ -2150,6 +2675,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InitEnvironment  InitEnvironmentRequest
+     * @return InitEnvironmentResponse
+     */
     @Override
     public CompletableFuture<InitEnvironmentResponse> initEnvironment(InitEnvironmentRequest request) {
         try {
@@ -2164,6 +2693,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallAddon  InstallAddonRequest
+     * @return InstallAddonResponse
+     */
     @Override
     public CompletableFuture<InstallAddonResponse> installAddon(InstallAddonRequest request) {
         try {
@@ -2179,9 +2712,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.  * @param request  the request parameters of InstallCmsExporter  InstallCmsExporterRequest
+     * @return InstallCmsExporterResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<InstallCmsExporterResponse> installCmsExporter(InstallCmsExporterRequest request) {
         try {
@@ -2196,6 +2730,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallEnvironmentFeature  InstallEnvironmentFeatureRequest
+     * @return InstallEnvironmentFeatureResponse
+     */
     @Override
     public CompletableFuture<InstallEnvironmentFeatureResponse> installEnvironmentFeature(InstallEnvironmentFeatureRequest request) {
         try {
@@ -2211,10 +2749,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
-      *
+     * @deprecated OpenAPI InstallManagedPrometheus is deprecated  * @description You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
+     * 
+     * @param request the request parameters of InstallManagedPrometheus  InstallManagedPrometheusRequest
+     * @return InstallManagedPrometheusResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<InstallManagedPrometheusResponse> installManagedPrometheus(InstallManagedPrometheusRequest request) {
         try {
@@ -2229,6 +2769,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListActivatedAlerts  ListActivatedAlertsRequest
+     * @return ListActivatedAlertsResponse
+     */
     @Override
     public CompletableFuture<ListActivatedAlertsResponse> listActivatedAlerts(ListActivatedAlertsRequest request) {
         try {
@@ -2243,6 +2787,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAddonReleases  ListAddonReleasesRequest
+     * @return ListAddonReleasesResponse
+     */
     @Override
     public CompletableFuture<ListAddonReleasesResponse> listAddonReleases(ListAddonReleasesRequest request) {
         try {
@@ -2257,6 +2805,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAddons  ListAddonsRequest
+     * @return ListAddonsResponse
+     */
     @Override
     public CompletableFuture<ListAddonsResponse> listAddons(ListAddonsRequest request) {
         try {
@@ -2271,6 +2823,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAlertEvents  ListAlertEventsRequest
+     * @return ListAlertEventsResponse
+     */
     @Override
     public CompletableFuture<ListAlertEventsResponse> listAlertEvents(ListAlertEventsRequest request) {
         try {
@@ -2285,6 +2841,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAlerts  ListAlertsRequest
+     * @return ListAlertsResponse
+     */
     @Override
     public CompletableFuture<ListAlertsResponse> listAlerts(ListAlertsRequest request) {
         try {
@@ -2299,6 +2859,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusterFromGrafana  ListClusterFromGrafanaRequest
+     * @return ListClusterFromGrafanaResponse
+     */
     @Override
     public CompletableFuture<ListClusterFromGrafanaResponse> listClusterFromGrafana(ListClusterFromGrafanaRequest request) {
         try {
@@ -2314,9 +2878,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.  * @param request  the request parameters of ListCmsInstances  ListCmsInstancesRequest
+     * @return ListCmsInstancesResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListCmsInstancesResponse> listCmsInstances(ListCmsInstancesRequest request) {
         try {
@@ -2332,8 +2897,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * None.
-      *
+     * <b>description</b> :
+     * <p>None.</p>
+     * 
+     * @param request the request parameters of ListDashboards  ListDashboardsRequest
+     * @return ListDashboardsResponse
      */
     @Override
     public CompletableFuture<ListDashboardsResponse> listDashboards(ListDashboardsRequest request) {
@@ -2349,6 +2917,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDashboardsByName  ListDashboardsByNameRequest
+     * @return ListDashboardsByNameResponse
+     */
     @Override
     public CompletableFuture<ListDashboardsByNameResponse> listDashboardsByName(ListDashboardsByNameRequest request) {
         try {
@@ -2364,8 +2936,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The current API operation is no longer maintained. To query the notification policy information, call the ListNotificationPolicies operation instead.
-      *
+     * <b>description</b> :
+     * <p>The current API operation is no longer maintained. To query the notification policy information, call the ListNotificationPolicies operation instead.</p>
+     * 
+     * @param request the request parameters of ListDispatchRule  ListDispatchRuleRequest
+     * @return ListDispatchRuleResponse
      */
     @Override
     public CompletableFuture<ListDispatchRuleResponse> listDispatchRule(ListDispatchRuleRequest request) {
@@ -2381,6 +2956,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEnvCustomJobs  ListEnvCustomJobsRequest
+     * @return ListEnvCustomJobsResponse
+     */
     @Override
     public CompletableFuture<ListEnvCustomJobsResponse> listEnvCustomJobs(ListEnvCustomJobsRequest request) {
         try {
@@ -2395,6 +2974,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEnvPodMonitors  ListEnvPodMonitorsRequest
+     * @return ListEnvPodMonitorsResponse
+     */
     @Override
     public CompletableFuture<ListEnvPodMonitorsResponse> listEnvPodMonitors(ListEnvPodMonitorsRequest request) {
         try {
@@ -2409,6 +2992,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEnvServiceMonitors  ListEnvServiceMonitorsRequest
+     * @return ListEnvServiceMonitorsResponse
+     */
     @Override
     public CompletableFuture<ListEnvServiceMonitorsResponse> listEnvServiceMonitors(ListEnvServiceMonitorsRequest request) {
         try {
@@ -2423,6 +3010,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEnvironmentDashboards  ListEnvironmentDashboardsRequest
+     * @return ListEnvironmentDashboardsResponse
+     */
     @Override
     public CompletableFuture<ListEnvironmentDashboardsResponse> listEnvironmentDashboards(ListEnvironmentDashboardsRequest request) {
         try {
@@ -2437,6 +3028,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEnvironmentFeatures  ListEnvironmentFeaturesRequest
+     * @return ListEnvironmentFeaturesResponse
+     */
     @Override
     public CompletableFuture<ListEnvironmentFeaturesResponse> listEnvironmentFeatures(ListEnvironmentFeaturesRequest request) {
         try {
@@ -2451,6 +3046,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEnvironments  ListEnvironmentsRequest
+     * @return ListEnvironmentsResponse
+     */
     @Override
     public CompletableFuture<ListEnvironmentsResponse> listEnvironments(ListEnvironmentsRequest request) {
         try {
@@ -2465,6 +3064,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEscalationPolicies  ListEscalationPoliciesRequest
+     * @return ListEscalationPoliciesResponse
+     */
     @Override
     public CompletableFuture<ListEscalationPoliciesResponse> listEscalationPolicies(ListEscalationPoliciesRequest request) {
         try {
@@ -2479,6 +3082,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEventBridgeIntegrations  ListEventBridgeIntegrationsRequest
+     * @return ListEventBridgeIntegrationsResponse
+     */
     @Override
     public CompletableFuture<ListEventBridgeIntegrationsResponse> listEventBridgeIntegrations(ListEventBridgeIntegrationsRequest request) {
         try {
@@ -2494,8 +3101,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ListGrafanaWorkspace  ListGrafanaWorkspaceRequest
+     * @return ListGrafanaWorkspaceResponse
      */
     @Override
     public CompletableFuture<ListGrafanaWorkspaceResponse> listGrafanaWorkspace(ListGrafanaWorkspaceRequest request) {
@@ -2511,6 +3123,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInsightsEvents  ListInsightsEventsRequest
+     * @return ListInsightsEventsResponse
+     */
     @Override
     public CompletableFuture<ListInsightsEventsResponse> listInsightsEvents(ListInsightsEventsRequest request) {
         try {
@@ -2525,6 +3141,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIntegration  ListIntegrationRequest
+     * @return ListIntegrationResponse
+     */
     @Override
     public CompletableFuture<ListIntegrationResponse> listIntegration(ListIntegrationRequest request) {
         try {
@@ -2539,6 +3159,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNotificationPolicies  ListNotificationPoliciesRequest
+     * @return ListNotificationPoliciesResponse
+     */
     @Override
     public CompletableFuture<ListNotificationPoliciesResponse> listNotificationPolicies(ListNotificationPoliciesRequest request) {
         try {
@@ -2553,6 +3177,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOnCallSchedules  ListOnCallSchedulesRequest
+     * @return ListOnCallSchedulesResponse
+     */
     @Override
     public CompletableFuture<ListOnCallSchedulesResponse> listOnCallSchedules(ListOnCallSchedulesRequest request) {
         try {
@@ -2567,6 +3195,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrometheusAlertRules  ListPrometheusAlertRulesRequest
+     * @return ListPrometheusAlertRulesResponse
+     */
     @Override
     public CompletableFuture<ListPrometheusAlertRulesResponse> listPrometheusAlertRules(ListPrometheusAlertRulesRequest request) {
         try {
@@ -2581,6 +3213,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrometheusAlertTemplates  ListPrometheusAlertTemplatesRequest
+     * @return ListPrometheusAlertTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListPrometheusAlertTemplatesResponse> listPrometheusAlertTemplates(ListPrometheusAlertTemplatesRequest request) {
         try {
@@ -2595,6 +3231,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrometheusGlobalView  ListPrometheusGlobalViewRequest
+     * @return ListPrometheusGlobalViewResponse
+     */
     @Override
     public CompletableFuture<ListPrometheusGlobalViewResponse> listPrometheusGlobalView(ListPrometheusGlobalViewRequest request) {
         try {
@@ -2609,6 +3249,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrometheusInstanceByTagAndResourceGroupId  ListPrometheusInstanceByTagAndResourceGroupIdRequest
+     * @return ListPrometheusInstanceByTagAndResourceGroupIdResponse
+     */
     @Override
     public CompletableFuture<ListPrometheusInstanceByTagAndResourceGroupIdResponse> listPrometheusInstanceByTagAndResourceGroupId(ListPrometheusInstanceByTagAndResourceGroupIdRequest request) {
         try {
@@ -2623,6 +3267,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrometheusInstances  ListPrometheusInstancesRequest
+     * @return ListPrometheusInstancesResponse
+     */
     @Override
     public CompletableFuture<ListPrometheusInstancesResponse> listPrometheusInstances(ListPrometheusInstancesRequest request) {
         try {
@@ -2637,6 +3285,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrometheusIntegration  ListPrometheusIntegrationRequest
+     * @return ListPrometheusIntegrationResponse
+     */
     @Override
     public CompletableFuture<ListPrometheusIntegrationResponse> listPrometheusIntegration(ListPrometheusIntegrationRequest request) {
         try {
@@ -2651,6 +3303,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrometheusMonitoring  ListPrometheusMonitoringRequest
+     * @return ListPrometheusMonitoringResponse
+     */
     @Override
     public CompletableFuture<ListPrometheusMonitoringResponse> listPrometheusMonitoring(ListPrometheusMonitoringRequest request) {
         try {
@@ -2666,8 +3322,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ****
-      *
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ListRetcodeApps  ListRetcodeAppsRequest
+     * @return ListRetcodeAppsResponse
      */
     @Override
     public CompletableFuture<ListRetcodeAppsResponse> listRetcodeApps(ListRetcodeAppsRequest request) {
@@ -2683,6 +3342,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListScenario  ListScenarioRequest
+     * @return ListScenarioResponse
+     */
     @Override
     public CompletableFuture<ListScenarioResponse> listScenario(ListScenarioRequest request) {
         try {
@@ -2697,6 +3360,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSilencePolicies  ListSilencePoliciesRequest
+     * @return ListSilencePoliciesResponse
+     */
     @Override
     public CompletableFuture<ListSilencePoliciesResponse> listSilencePolicies(ListSilencePoliciesRequest request) {
         try {
@@ -2711,6 +3378,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSyntheticDetail  ListSyntheticDetailRequest
+     * @return ListSyntheticDetailResponse
+     */
     @Override
     public CompletableFuture<ListSyntheticDetailResponse> listSyntheticDetail(ListSyntheticDetailRequest request) {
         try {
@@ -2725,6 +3396,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTimingSyntheticTasks  ListTimingSyntheticTasksRequest
+     * @return ListTimingSyntheticTasksResponse
+     */
     @Override
     public CompletableFuture<ListTimingSyntheticTasksResponse> listTimingSyntheticTasks(ListTimingSyntheticTasksRequest request) {
         try {
@@ -2739,6 +3414,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTraceApps  ListTraceAppsRequest
+     * @return ListTraceAppsResponse
+     */
     @Override
     public CompletableFuture<ListTraceAppsResponse> listTraceApps(ListTraceAppsRequest request) {
         try {
@@ -2753,6 +3432,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ManageGetRecordingRule  ManageGetRecordingRuleRequest
+     * @return ManageGetRecordingRuleResponse
+     */
     @Override
     public CompletableFuture<ManageGetRecordingRuleResponse> manageGetRecordingRule(ManageGetRecordingRuleRequest request) {
         try {
@@ -2767,6 +3450,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ManageRecordingRule  ManageRecordingRuleRequest
+     * @return ManageRecordingRuleResponse
+     */
     @Override
     public CompletableFuture<ManageRecordingRuleResponse> manageRecordingRule(ManageRecordingRuleRequest request) {
         try {
@@ -2781,6 +3468,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenArmsDefaultSLR  OpenArmsDefaultSLRRequest
+     * @return OpenArmsDefaultSLRResponse
+     */
     @Override
     public CompletableFuture<OpenArmsDefaultSLRResponse> openArmsDefaultSLR(OpenArmsDefaultSLRRequest request) {
         try {
@@ -2796,12 +3487,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
-      * *   Application Monitoring: Basic Edition
-      * *   Browser Monitoring: Basic Edition
-      * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
-      * *   Prometheus Service: Pro Edition
-      *
+     * <b>description</b> :
+     * <p>The <strong>OpenArmsServiceSecondVersion</strong> operation supports the following sub-service editions:</p>
+     * <ul>
+     * <li>Application Monitoring: Basic Edition</li>
+     * <li>Browser Monitoring: Basic Edition</li>
+     * <li>Synthetic Monitoring: Pro Edition (pay-as-you-go)</li>
+     * <li>Prometheus Service: Pro Edition</li>
+     * </ul>
+     * 
+     * @param request the request parameters of OpenArmsServiceSecondVersion  OpenArmsServiceSecondVersionRequest
+     * @return OpenArmsServiceSecondVersionResponse
      */
     @Override
     public CompletableFuture<OpenArmsServiceSecondVersionResponse> openArmsServiceSecondVersion(OpenArmsServiceSecondVersionRequest request) {
@@ -2817,6 +3513,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenVCluster  OpenVClusterRequest
+     * @return OpenVClusterResponse
+     */
     @Override
     public CompletableFuture<OpenVClusterResponse> openVCluster(OpenVClusterRequest request) {
         try {
@@ -2831,6 +3531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenXtraceDefaultSLR  OpenXtraceDefaultSLRRequest
+     * @return OpenXtraceDefaultSLRResponse
+     */
     @Override
     public CompletableFuture<OpenXtraceDefaultSLRResponse> openXtraceDefaultSLR(OpenXtraceDefaultSLRRequest request) {
         try {
@@ -2845,6 +3549,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAppMetadata  QueryAppMetadataRequest
+     * @return QueryAppMetadataResponse
+     */
     @Override
     public CompletableFuture<QueryAppMetadataResponse> queryAppMetadata(QueryAppMetadataRequest request) {
         try {
@@ -2859,6 +3567,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAppTopology  QueryAppTopologyRequest
+     * @return QueryAppTopologyResponse
+     */
     @Override
     public CompletableFuture<QueryAppTopologyResponse> queryAppTopology(QueryAppTopologyRequest request) {
         try {
@@ -2873,6 +3585,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCommercialUsage  QueryCommercialUsageRequest
+     * @return QueryCommercialUsageResponse
+     */
     @Override
     public CompletableFuture<QueryCommercialUsageResponse> queryCommercialUsage(QueryCommercialUsageRequest request) {
         try {
@@ -2887,6 +3603,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMetricByPage  QueryMetricByPageRequest
+     * @return QueryMetricByPageResponse
+     */
     @Override
     public CompletableFuture<QueryMetricByPageResponse> queryMetricByPage(QueryMetricByPageRequest request) {
         try {
@@ -2901,6 +3621,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPromInstallStatus  QueryPromInstallStatusRequest
+     * @return QueryPromInstallStatusResponse
+     */
     @Override
     public CompletableFuture<QueryPromInstallStatusResponse> queryPromInstallStatus(QueryPromInstallStatusRequest request) {
         try {
@@ -2915,6 +3639,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryReleaseMetric  QueryReleaseMetricRequest
+     * @return QueryReleaseMetricResponse
+     */
     @Override
     public CompletableFuture<QueryReleaseMetricResponse> queryReleaseMetric(QueryReleaseMetricRequest request) {
         try {
@@ -2929,6 +3657,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveAliClusterIdsFromPrometheusGlobalView  RemoveAliClusterIdsFromPrometheusGlobalViewRequest
+     * @return RemoveAliClusterIdsFromPrometheusGlobalViewResponse
+     */
     @Override
     public CompletableFuture<RemoveAliClusterIdsFromPrometheusGlobalViewResponse> removeAliClusterIdsFromPrometheusGlobalView(RemoveAliClusterIdsFromPrometheusGlobalViewRequest request) {
         try {
@@ -2943,6 +3675,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveSourcesFromPrometheusGlobalView  RemoveSourcesFromPrometheusGlobalViewRequest
+     * @return RemoveSourcesFromPrometheusGlobalViewResponse
+     */
     @Override
     public CompletableFuture<RemoveSourcesFromPrometheusGlobalViewResponse> removeSourcesFromPrometheusGlobalView(RemoveSourcesFromPrometheusGlobalViewRequest request) {
         try {
@@ -2957,6 +3693,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartEnvironmentFeature  RestartEnvironmentFeatureRequest
+     * @return RestartEnvironmentFeatureResponse
+     */
     @Override
     public CompletableFuture<RestartEnvironmentFeatureResponse> restartEnvironmentFeature(RestartEnvironmentFeatureRequest request) {
         try {
@@ -2971,6 +3711,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveTraceAppConfig  SaveTraceAppConfigRequest
+     * @return SaveTraceAppConfigResponse
+     */
     @Override
     public CompletableFuture<SaveTraceAppConfigResponse> saveTraceAppConfig(SaveTraceAppConfigRequest request) {
         try {
@@ -2986,8 +3730,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is no longer maintained. To query alert contacts, call the DescribeContacts operation provided by the new version of Alert Management.
-      *
+     * <b>description</b> :
+     * <p>This operation is no longer maintained. To query alert contacts, call the DescribeContacts operation provided by the new version of Alert Management.</p>
+     * 
+     * @param request the request parameters of SearchAlertContact  SearchAlertContactRequest
+     * @return SearchAlertContactResponse
      */
     @Override
     public CompletableFuture<SearchAlertContactResponse> searchAlertContact(SearchAlertContactRequest request) {
@@ -3004,8 +3751,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation is no longer maintained. Call the DescribeContactGroups operation in the alert management module to query alert contact groups.
-      *
+     * <b>description</b> :
+     * <p>The operation is no longer maintained. Call the DescribeContactGroups operation in the alert management module to query alert contact groups.</p>
+     * 
+     * @param request the request parameters of SearchAlertContactGroup  SearchAlertContactGroupRequest
+     * @return SearchAlertContactGroupResponse
      */
     @Override
     public CompletableFuture<SearchAlertContactGroupResponse> searchAlertContactGroup(SearchAlertContactGroupRequest request) {
@@ -3022,8 +3772,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is no longer maintained. To query alert records, call the ListAlerts operation provided by the new version of Alert Management.
-      *
+     * <b>description</b> :
+     * <p>This operation is no longer maintained. To query alert records, call the ListAlerts operation provided by the new version of Alert Management.</p>
+     * 
+     * @param request the request parameters of SearchAlertHistories  SearchAlertHistoriesRequest
+     * @return SearchAlertHistoriesResponse
      */
     @Override
     public CompletableFuture<SearchAlertHistoriesResponse> searchAlertHistories(SearchAlertHistoriesRequest request) {
@@ -3040,8 +3793,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.
-      *
+     * <b>description</b> :
+     * <p>The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.</p>
+     * 
+     * @param request the request parameters of SearchAlertRules  SearchAlertRulesRequest
+     * @return SearchAlertRulesResponse
      */
     @Override
     public CompletableFuture<SearchAlertRulesResponse> searchAlertRules(SearchAlertRulesRequest request) {
@@ -3058,8 +3814,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Alert event records are different from alert notification records. Alert events are recorded every minute after an alert rule filters data. Alert events can be classified based on whether they are triggered or not. If a triggered event is not in the silence period, an alert notification is sent.
-      *
+     * <b>description</b> :
+     * <p>Alert event records are different from alert notification records. Alert events are recorded every minute after an alert rule filters data. Alert events can be classified based on whether they are triggered or not. If a triggered event is not in the silence period, an alert notification is sent.</p>
+     * 
+     * @param request the request parameters of SearchEvents  SearchEventsRequest
+     * @return SearchEventsResponse
      */
     @Override
     public CompletableFuture<SearchEventsResponse> searchEvents(SearchEventsRequest request) {
@@ -3075,6 +3834,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchRetcodeAppByPage  SearchRetcodeAppByPageRequest
+     * @return SearchRetcodeAppByPageResponse
+     */
     @Override
     public CompletableFuture<SearchRetcodeAppByPageResponse> searchRetcodeAppByPage(SearchRetcodeAppByPageRequest request) {
         try {
@@ -3089,6 +3852,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchTraceAppByName  SearchTraceAppByNameRequest
+     * @return SearchTraceAppByNameResponse
+     */
     @Override
     public CompletableFuture<SearchTraceAppByNameResponse> searchTraceAppByName(SearchTraceAppByNameRequest request) {
         try {
@@ -3103,6 +3870,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchTraceAppByPage  SearchTraceAppByPageRequest
+     * @return SearchTraceAppByPageResponse
+     */
     @Override
     public CompletableFuture<SearchTraceAppByPageResponse> searchTraceAppByPage(SearchTraceAppByPageRequest request) {
         try {
@@ -3118,8 +3889,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > A maximum of 100 data entries can be returned each time this operation is called. If you want to query all existing traces, we recommend that you call the SearchTracesByPage operation. For more information, see [SearchTracesByPage](~~175866~~).
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>A maximum of 100 data entries can be returned each time this operation is called. If you want to query all existing traces, we recommend that you call the SearchTracesByPage operation. For more information, see <a href="https://help.aliyun.com/document_detail/175866.html">SearchTracesByPage</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of SearchTraces  SearchTracesRequest
+     * @return SearchTracesResponse
      */
     @Override
     public CompletableFuture<SearchTracesResponse> searchTraces(SearchTracesRequest request) {
@@ -3135,6 +3911,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchTracesByPage  SearchTracesByPageRequest
+     * @return SearchTracesByPageResponse
+     */
     @Override
     public CompletableFuture<SearchTracesByPageResponse> searchTracesByPage(SearchTracesByPageRequest request) {
         try {
@@ -3150,8 +3930,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you receive the text message, verify the mobile number as prompted. Before you can specify a mobile phone number in a notification policy, you must verify the mobile phone number.
-      *
+     * <b>description</b> :
+     * <p>After you receive the text message, verify the mobile number as prompted. Before you can specify a mobile phone number in a notification policy, you must verify the mobile phone number.</p>
+     * 
+     * @param request the request parameters of SendTTSVerifyLink  SendTTSVerifyLinkRequest
+     * @return SendTTSVerifyLinkResponse
      */
     @Override
     public CompletableFuture<SendTTSVerifyLinkResponse> sendTTSVerifyLink(SendTTSVerifyLinkRequest request) {
@@ -3167,6 +3950,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetRetcodeShareStatus  SetRetcodeShareStatusRequest
+     * @return SetRetcodeShareStatusResponse
+     */
     @Override
     public CompletableFuture<SetRetcodeShareStatusResponse> setRetcodeShareStatus(SetRetcodeShareStatusRequest request) {
         try {
@@ -3181,6 +3968,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartAlert  StartAlertRequest
+     * @return StartAlertResponse
+     */
     @Override
     public CompletableFuture<StartAlertResponse> startAlert(StartAlertRequest request) {
         try {
@@ -3195,6 +3986,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartTimingSyntheticTask  StartTimingSyntheticTaskRequest
+     * @return StartTimingSyntheticTaskResponse
+     */
     @Override
     public CompletableFuture<StartTimingSyntheticTaskResponse> startTimingSyntheticTask(StartTimingSyntheticTaskRequest request) {
         try {
@@ -3209,6 +4004,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopAlert  StopAlertRequest
+     * @return StopAlertResponse
+     */
     @Override
     public CompletableFuture<StopAlertResponse> stopAlert(StopAlertRequest request) {
         try {
@@ -3223,6 +4022,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopTimingSyntheticTask  StopTimingSyntheticTaskRequest
+     * @return StopTimingSyntheticTaskResponse
+     */
     @Override
     public CompletableFuture<StopTimingSyntheticTaskResponse> stopTimingSyntheticTask(StopTimingSyntheticTaskRequest request) {
         try {
@@ -3237,6 +4040,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SwitchSyntheticTaskStatus  SwitchSyntheticTaskStatusRequest
+     * @return SwitchSyntheticTaskStatusResponse
+     */
     @Override
     public CompletableFuture<SwitchSyntheticTaskStatusResponse> switchSyntheticTaskStatus(SwitchSyntheticTaskStatusRequest request) {
         try {
@@ -3251,6 +4058,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SyncRecordingRules  SyncRecordingRulesRequest
+     * @return SyncRecordingRulesResponse
+     */
     @Override
     public CompletableFuture<SyncRecordingRulesResponse> syncRecordingRules(SyncRecordingRulesRequest request) {
         try {
@@ -3265,6 +4076,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -3280,10 +4095,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * This operation is available only for ASK, ECS, and ACK One clusters. Before you call this operation, make sure that a managed Prometheus agent is installed for your cluster.
-      *
+     * @deprecated OpenAPI UninstallManagedPrometheus is deprecated  * @description This operation is available only for ASK, ECS, and ACK One clusters. Before you call this operation, make sure that a managed Prometheus agent is installed for your cluster.
+     * 
+     * @param request the request parameters of UninstallManagedPrometheus  UninstallManagedPrometheusRequest
+     * @return UninstallManagedPrometheusResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UninstallManagedPrometheusResponse> uninstallManagedPrometheus(UninstallManagedPrometheusRequest request) {
         try {
@@ -3298,6 +4115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallPromCluster  UninstallPromClusterRequest
+     * @return UninstallPromClusterResponse
+     */
     @Override
     public CompletableFuture<UninstallPromClusterResponse> uninstallPromCluster(UninstallPromClusterRequest request) {
         try {
@@ -3312,6 +4133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -3327,8 +4152,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of Alert Management.
-      *
+     * <b>description</b> :
+     * <p>This operation is no longer maintained. To create or modify an alert contact, call the CreateOrUpdateContact operation provided by the new version of Alert Management.</p>
+     * 
+     * @param request the request parameters of UpdateAlertContact  UpdateAlertContactRequest
+     * @return UpdateAlertContactResponse
      */
     @Override
     public CompletableFuture<UpdateAlertContactResponse> updateAlertContact(UpdateAlertContactRequest request) {
@@ -3344,6 +4172,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAlertContactGroup  UpdateAlertContactGroupRequest
+     * @return UpdateAlertContactGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateAlertContactGroupResponse> updateAlertContactGroup(UpdateAlertContactGroupRequest request) {
         try {
@@ -3358,6 +4190,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAlertRule  UpdateAlertRuleRequest
+     * @return UpdateAlertRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateAlertRuleResponse> updateAlertRule(UpdateAlertRuleRequest request) {
         try {
@@ -3372,6 +4208,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDispatchRule  UpdateDispatchRuleRequest
+     * @return UpdateDispatchRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateDispatchRuleResponse> updateDispatchRule(UpdateDispatchRuleRequest request) {
         try {
@@ -3386,6 +4226,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEnvCustomJob  UpdateEnvCustomJobRequest
+     * @return UpdateEnvCustomJobResponse
+     */
     @Override
     public CompletableFuture<UpdateEnvCustomJobResponse> updateEnvCustomJob(UpdateEnvCustomJobRequest request) {
         try {
@@ -3400,6 +4244,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEnvPodMonitor  UpdateEnvPodMonitorRequest
+     * @return UpdateEnvPodMonitorResponse
+     */
     @Override
     public CompletableFuture<UpdateEnvPodMonitorResponse> updateEnvPodMonitor(UpdateEnvPodMonitorRequest request) {
         try {
@@ -3414,6 +4262,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEnvServiceMonitor  UpdateEnvServiceMonitorRequest
+     * @return UpdateEnvServiceMonitorResponse
+     */
     @Override
     public CompletableFuture<UpdateEnvServiceMonitorResponse> updateEnvServiceMonitor(UpdateEnvServiceMonitorRequest request) {
         try {
@@ -3428,6 +4280,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEnvironment  UpdateEnvironmentRequest
+     * @return UpdateEnvironmentResponse
+     */
     @Override
     public CompletableFuture<UpdateEnvironmentResponse> updateEnvironment(UpdateEnvironmentRequest request) {
         try {
@@ -3442,6 +4298,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGrafanaWorkspace  UpdateGrafanaWorkspaceRequest
+     * @return UpdateGrafanaWorkspaceResponse
+     */
     @Override
     public CompletableFuture<UpdateGrafanaWorkspaceResponse> updateGrafanaWorkspace(UpdateGrafanaWorkspaceRequest request) {
         try {
@@ -3457,8 +4317,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
-      *
+     * <b>description</b> :
+     * <p>Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.</p>
+     * 
+     * @param request the request parameters of UpdateGrafanaWorkspaceVersion  UpdateGrafanaWorkspaceVersionRequest
+     * @return UpdateGrafanaWorkspaceVersionResponse
      */
     @Override
     public CompletableFuture<UpdateGrafanaWorkspaceVersionResponse> updateGrafanaWorkspaceVersion(UpdateGrafanaWorkspaceVersionRequest request) {
@@ -3474,6 +4337,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIntegration  UpdateIntegrationRequest
+     * @return UpdateIntegrationResponse
+     */
     @Override
     public CompletableFuture<UpdateIntegrationResponse> updateIntegration(UpdateIntegrationRequest request) {
         try {
@@ -3488,6 +4355,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMetricDrop  UpdateMetricDropRequest
+     * @return UpdateMetricDropResponse
+     */
     @Override
     public CompletableFuture<UpdateMetricDropResponse> updateMetricDrop(UpdateMetricDropRequest request) {
         try {
@@ -3502,6 +4373,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePrometheusAlertRule  UpdatePrometheusAlertRuleRequest
+     * @return UpdatePrometheusAlertRuleResponse
+     */
     @Override
     public CompletableFuture<UpdatePrometheusAlertRuleResponse> updatePrometheusAlertRule(UpdatePrometheusAlertRuleRequest request) {
         try {
@@ -3516,6 +4391,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePrometheusGlobalView  UpdatePrometheusGlobalViewRequest
+     * @return UpdatePrometheusGlobalViewResponse
+     */
     @Override
     public CompletableFuture<UpdatePrometheusGlobalViewResponse> updatePrometheusGlobalView(UpdatePrometheusGlobalViewRequest request) {
         try {
@@ -3530,6 +4409,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePrometheusInstance  UpdatePrometheusInstanceRequest
+     * @return UpdatePrometheusInstanceResponse
+     */
     @Override
     public CompletableFuture<UpdatePrometheusInstanceResponse> updatePrometheusInstance(UpdatePrometheusInstanceRequest request) {
         try {
@@ -3544,6 +4427,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePrometheusIntegration  UpdatePrometheusIntegrationRequest
+     * @return UpdatePrometheusIntegrationResponse
+     */
     @Override
     public CompletableFuture<UpdatePrometheusIntegrationResponse> updatePrometheusIntegration(UpdatePrometheusIntegrationRequest request) {
         try {
@@ -3558,6 +4445,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePrometheusMonitoring  UpdatePrometheusMonitoringRequest
+     * @return UpdatePrometheusMonitoringResponse
+     */
     @Override
     public CompletableFuture<UpdatePrometheusMonitoringResponse> updatePrometheusMonitoring(UpdatePrometheusMonitoringRequest request) {
         try {
@@ -3572,6 +4463,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePrometheusMonitoringStatus  UpdatePrometheusMonitoringStatusRequest
+     * @return UpdatePrometheusMonitoringStatusResponse
+     */
     @Override
     public CompletableFuture<UpdatePrometheusMonitoringStatusResponse> updatePrometheusMonitoringStatus(UpdatePrometheusMonitoringStatusRequest request) {
         try {
@@ -3587,8 +4482,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
-      *
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
+     * @param request the request parameters of UpdateRumApp  UpdateRumAppRequest
+     * @return UpdateRumAppResponse
      */
     @Override
     public CompletableFuture<UpdateRumAppResponse> updateRumApp(UpdateRumAppRequest request) {
@@ -3605,8 +4503,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
-      *
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
+     * @param request the request parameters of UpdateRumFileStatus  UpdateRumFileStatusRequest
+     * @return UpdateRumFileStatusResponse
      */
     @Override
     public CompletableFuture<UpdateRumFileStatusResponse> updateRumFileStatus(UpdateRumFileStatusRequest request) {
@@ -3622,6 +4523,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTimingSyntheticTask  UpdateTimingSyntheticTaskRequest
+     * @return UpdateTimingSyntheticTaskResponse
+     */
     @Override
     public CompletableFuture<UpdateTimingSyntheticTaskResponse> updateTimingSyntheticTask(UpdateTimingSyntheticTaskRequest request) {
         try {
@@ -3637,8 +4542,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is no longer maintained. Call the CreateOrUpdateWebhookContact operation in the new alter management module to create or modify a webhook alert contact.
-      *
+     * <b>description</b> :
+     * <p>This operation is no longer maintained. Call the CreateOrUpdateWebhookContact operation in the new alter management module to create or modify a webhook alert contact.</p>
+     * 
+     * @param request the request parameters of UpdateWebhook  UpdateWebhookRequest
+     * @return UpdateWebhookResponse
      */
     @Override
     public CompletableFuture<UpdateWebhookResponse> updateWebhook(UpdateWebhookRequest request) {
@@ -3654,6 +4562,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeAddonRelease  UpgradeAddonReleaseRequest
+     * @return UpgradeAddonReleaseResponse
+     */
     @Override
     public CompletableFuture<UpgradeAddonReleaseResponse> upgradeAddonRelease(UpgradeAddonReleaseRequest request) {
         try {
@@ -3668,6 +4580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeEnvironmentFeature  UpgradeEnvironmentFeatureRequest
+     * @return UpgradeEnvironmentFeatureResponse
+     */
     @Override
     public CompletableFuture<UpgradeEnvironmentFeatureResponse> upgradeEnvironmentFeature(UpgradeEnvironmentFeatureRequest request) {
         try {
@@ -3682,6 +4598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Upload  UploadRequest
+     * @return UploadResponse
+     */
     @Override
     public CompletableFuture<UploadResponse> upload(UploadRequest request) {
         try {

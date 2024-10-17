@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateSilencePolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateSilencePolicyRequest</p>
@@ -152,7 +153,10 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         } 
 
         /**
-         * The effective duration of the silence policy. Valid values: PERMANENT, CUSTOM_TIME, and CYCLE_EFFECT.
+         * <p>The effective duration of the silence policy. Valid values: PERMANENT, CUSTOM_TIME, and CYCLE_EFFECT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PERMANENT</p>
          */
         public Builder effectiveTimeType(String effectiveTimeType) {
             this.putQueryParameter("EffectiveTimeType", effectiveTimeType);
@@ -161,11 +165,14 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * The ID of the silence policy.
-         * <p>
+         * <p>The ID of the silence policy.</p>
+         * <ul>
+         * <li>If you do not configure this parameter, a new silence policy is created.</li>
+         * <li>If you configure this parameter, the specified silence policy is modified.</li>
+         * </ul>
          * 
-         * *   If you do not configure this parameter, a new silence policy is created.
-         * *   If you configure this parameter, the specified silence policy is modified.
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -174,20 +181,22 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * The matching rules. The following code shows the format of matching rules:
-         * <p>
+         * <p>The matching rules. The following code shows the format of matching rules:</p>
+         * <pre><code>[
+         *      {
+         *      &quot;matchingConditions&quot;: [
+         *      {
+         *      &quot;value&quot;: &quot;test&quot;, // The value of the matching condition. 
+         *      &quot;key&quot;: &quot;altertname&quot;, // The key of the matching condition. 
+         *      &quot;operator&quot;: &quot;eq&quot; // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
+         *      }
+         *      ]
+         *      }
+         *      ]
+         * </code></pre>
          * 
-         *     [
-         *          {
-         *     	 "matchingConditions": [
-         *     	 {
-         *     	 "value": "test", // The value of the matching condition. 
-         *     	 "key": "altertname", // The key of the matching condition. 
-         *     	 "operator": "eq" // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
-         *     	 }
-         *     	 ]
-         *          }
-         *     	 ]
+         * <strong>example:</strong>
+         * <p>[ 	 { 	 &quot;matchingConditions&quot;: [ 	 { 	 &quot;value&quot;: &quot;test&quot;, 	 &quot;key&quot;: &quot;altertname&quot;, 	 &quot;operator&quot;: &quot;eq&quot; 	 } 	 ]      } 	 ]</p>
          */
         public Builder matchingRules(String matchingRules) {
             this.putBodyParameter("MatchingRules", matchingRules);
@@ -196,7 +205,11 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * The name of the silence policy.
+         * <p>The name of the silence policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>silencepolicy_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -205,7 +218,10 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -214,7 +230,10 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the silence policy. Valid values: enable and disable.
+         * <p>Specifies whether to enable the silence policy. Valid values: enable and disable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder state(String state) {
             this.putBodyParameter("State", state);
@@ -223,7 +242,10 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * The recurring period. This parameter is required when EffectiveTimeType is set to CYCLE_EFFECT. DAY: The silence policy is effective by day. WEEK: The silence policy is effective by week.
+         * <p>The recurring period. This parameter is required when EffectiveTimeType is set to CYCLE_EFFECT. DAY: The silence policy is effective by day. WEEK: The silence policy is effective by week.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder timePeriod(String timePeriod) {
             this.putQueryParameter("TimePeriod", timePeriod);
@@ -232,7 +254,10 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * The time period during which the silence policy is effective. If you set EffectiveTimeType to CUSTOM_TIME, specify a custom time period in the following format: \[{"startTime":"2024-08-04 22:13","endTime":"2024-08-04 22:21"}] If you set EffectiveTimeType to CYCLE_EFFECT and TimePeriod to DAY, specify a custom time period in the following format: \[{"startTime":"22:13","endTime":"22:21"}]. The start time cannot be later than the end time. If you set EffectiveTimeType to CYCLE_EFFECT and TimePeriod to WEEK, specify a custom time period in the following format: \[{"startWeek":"1", "endWeek":"2" "startTime":"22:13","endTime":"22:21"}]. Valid values of startWeek and endWeek: 1 to 7. The start time cannot be later than the end time.
+         * <p>The time period during which the silence policy is effective. If you set EffectiveTimeType to CUSTOM_TIME, specify a custom time period in the following format: [{&quot;startTime&quot;:&quot;2024-08-04 22:13&quot;,&quot;endTime&quot;:&quot;2024-08-04 22:21&quot;}] If you set EffectiveTimeType to CYCLE_EFFECT and TimePeriod to DAY, specify a custom time period in the following format: [{&quot;startTime&quot;:&quot;22:13&quot;,&quot;endTime&quot;:&quot;22:21&quot;}]. The start time cannot be later than the end time. If you set EffectiveTimeType to CYCLE_EFFECT and TimePeriod to WEEK, specify a custom time period in the following format: [{&quot;startWeek&quot;:&quot;1&quot;, &quot;endWeek&quot;:&quot;2&quot; &quot;startTime&quot;:&quot;22:13&quot;,&quot;endTime&quot;:&quot;22:21&quot;}]. Valid values of startWeek and endWeek: 1 to 7. The start time cannot be later than the end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;startTime&quot;:&quot;2024-08-04 22:13&quot;,&quot;endTime&quot;:&quot;2024-08-04 22:21&quot;}]</p>
          */
         public Builder timeSlots(String timeSlots) {
             this.putQueryParameter("TimeSlots", timeSlots);

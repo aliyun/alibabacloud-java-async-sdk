@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePrometheusAlertRuleResponseBody</p>
@@ -85,7 +86,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,11 +124,14 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +144,12 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusAlertRuleResponseBody</p>
+     */
     public static class Annotations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -195,6 +211,12 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusAlertRuleResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -256,6 +278,12 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusAlertRuleResponseBody</p>
+     */
     public static class PrometheusAlertRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertId")
         private Long alertId;
@@ -479,7 +507,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;

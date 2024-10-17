@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGrafanaWorkspaceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGrafanaWorkspaceResponseBody</p>
@@ -97,7 +98,10 @@ public class CreateGrafanaWorkspaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class CreateGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information about the Grafana workspace.</p>
          */
         public Builder data(GrafanaWorkspace data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class CreateGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class CreateGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D80ADAAC-8C32-5479-BD14-C28CF832****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +139,14 @@ public class CreateGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +154,10 @@ public class CreateGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace.
+         * <p>The ID of the trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eac0a8048716731735000007137d000b</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

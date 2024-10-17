@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCommercialStatusResponseBody} extends {@link TeaModel}
  *
  * <p>CheckCommercialStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class CheckCommercialStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class CheckCommercialStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

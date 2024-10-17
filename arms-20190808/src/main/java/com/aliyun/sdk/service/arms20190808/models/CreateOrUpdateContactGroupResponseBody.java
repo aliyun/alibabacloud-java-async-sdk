@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateContactGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateContactGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the alert contact group.
+         * <p>The information about the alert contact group.</p>
          */
         public Builder alertContactGroup(AlertContactGroup alertContactGroup) {
             this.alertContactGroup = alertContactGroup;
@@ -57,7 +58,10 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9319A57D-2D9E-472A-B69B-CF3CD16D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateContactGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateContactGroupResponseBody</p>
+     */
     public static class AlertContactGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroupId")
         private Float contactGroupId;
@@ -121,7 +131,10 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
             private String contactIds; 
 
             /**
-             * The ID of the alert contact group.
+             * <p>The ID of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder contactGroupId(Float contactGroupId) {
                 this.contactGroupId = contactGroupId;
@@ -129,7 +142,10 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact group.
+             * <p>The name of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup</p>
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -137,7 +153,10 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the contacts that are included in the alert contact group.
+             * <p>The IDs of the contacts that are included in the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1,2,3]</p>
              */
             public Builder contactIds(String contactIds) {
                 this.contactIds = contactIds;

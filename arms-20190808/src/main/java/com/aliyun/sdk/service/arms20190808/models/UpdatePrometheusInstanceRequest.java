@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrometheusInstanceRequest</p>
@@ -181,7 +182,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
+         * <p>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder archiveDuration(Integer archiveDuration) {
             this.putQueryParameter("ArchiveDuration", archiveDuration);
@@ -190,7 +194,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * AuthFreeReadPolicy.
+         * <p>The IP addresses or CIDR blocks for which password-free read is enabled. Separate multiple IP addresses with line breaks.</p>
          */
         public Builder authFreeReadPolicy(String authFreeReadPolicy) {
             this.putQueryParameter("AuthFreeReadPolicy", authFreeReadPolicy);
@@ -199,7 +203,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * AuthFreeWritePolicy.
+         * <p>The IP addresses or CIDR blocks for which password-free write is enabled. Separate multiple IP addresses with line breaks.</p>
          */
         public Builder authFreeWritePolicy(String authFreeWritePolicy) {
             this.putQueryParameter("AuthFreeWritePolicy", authFreeWritePolicy);
@@ -208,7 +212,11 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the Prometheus instance.
+         * <p>The ID of the Prometheus instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -217,7 +225,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * EnableAuthFreeRead.
+         * <p>Specifies whether to enable password-free read.</p>
          */
         public Builder enableAuthFreeRead(Boolean enableAuthFreeRead) {
             this.putQueryParameter("EnableAuthFreeRead", enableAuthFreeRead);
@@ -226,7 +234,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * EnableAuthFreeWrite.
+         * <p>Specifies whether to enable password-free write.</p>
          */
         public Builder enableAuthFreeWrite(Boolean enableAuthFreeWrite) {
             this.putQueryParameter("EnableAuthFreeWrite", enableAuthFreeWrite);
@@ -235,7 +243,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * EnableAuthToken.
+         * <p>Specifies whether to enable access token authentication.</p>
          */
         public Builder enableAuthToken(Boolean enableAuthToken) {
             this.putQueryParameter("EnableAuthToken", enableAuthToken);
@@ -244,7 +252,11 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +265,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -262,7 +277,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The data storage duration. Unit: days.
+         * <p>The data storage duration. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder storageDuration(Integer storageDuration) {
             this.putQueryParameter("StorageDuration", storageDuration);

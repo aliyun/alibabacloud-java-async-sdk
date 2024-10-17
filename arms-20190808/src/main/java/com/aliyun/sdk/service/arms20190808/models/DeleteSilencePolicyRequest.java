@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSilencePolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteSilencePolicyRequest</p>
@@ -54,10 +55,12 @@ public class DeleteSilencePolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the silence policy.
-         * <p>
+         * <p>The ID of the silence policy.</p>
+         * <p>For more information about how to obtain the ID of a silence policy, see <a href="https://help.aliyun.com/document_detail/2612383.html">ListSilencePolicies</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a silence policy, see [ListSilencePolicies](~~2612383~~).
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

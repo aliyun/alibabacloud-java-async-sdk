@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlertsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAlertsResponseBody</p>
@@ -69,7 +70,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the array object.
+         * <p>The information about the array object.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -77,7 +78,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FC13182-B9AF-4E6B-BE51-72669B7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListAlertsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertsResponseBody</p>
+     */
     public static class Activities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -165,7 +175,10 @@ public class ListAlertsResponseBody extends TeaModel {
             private Long type; 
 
             /**
-             * The content of the alert notification.
+             * <p>The content of the alert notification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[Notification policy: Send notifications to DingTalk groups] Host monitoring. Host IP address: 10.76.XX.XX. Average memory usage of the host in the last 1 minute ≥ 1.0%. Current value: 84.7454%.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -173,7 +186,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the activity.
+             * <p>The description of the activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[Alert Claimed] The alert is claimed</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -181,7 +197,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the handler.
+             * <p>The name of the handler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>O&amp;M Engineer A</p>
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -189,7 +208,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation time of the activity.
+             * <p>The operation time of the activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-20 19:08:57</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -197,14 +219,17 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the activity. Valid values:
-             * <p>
+             * <p>The type of the activity. Valid values:</p>
+             * <ul>
+             * <li>1: The alert is claimed.</li>
+             * <li>2: The alert is disclaimed.</li>
+             * <li>3: A comment is added for the alert.</li>
+             * <li>4: The alert is disabled.</li>
+             * <li>5: An alert notification is sent.</li>
+             * </ul>
              * 
-             * *   1: The alert is claimed.
-             * *   2: The alert is disclaimed.
-             * *   3: A comment is added for the alert.
-             * *   4: The alert is disabled.
-             * *   5: An alert notification is sent.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -218,6 +243,12 @@ public class ListAlertsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertsResponseBody</p>
+     */
     public static class AlertEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
@@ -377,7 +408,10 @@ public class ListAlertsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The name of the event.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test-triggered alert</p>
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -385,7 +419,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The annotations.
+             * <p>The annotations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;_aliyun_arms_alert_value&quot;:&quot;4.0&quot; &quot;_aliyun_arms_alert_traceId&quot;:&quot;ac10c43116421327442277073d5461-105075299&quot;}</p>
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -393,7 +430,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the event.
+             * <p>The description of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Host monitoring. Host IP address: 10.76.XX.XX. Average memory usage of the host in the last 1 minute ≥ 1.0%. Current value: 84.7454%.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -401,7 +441,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event ended.
+             * <p>The time when the event ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-19 17:10:31</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -409,7 +452,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the event.
+             * <p>The URL of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://arms.console.aliyun.com">http://arms.console.aliyun.com</a></p>
              */
             public Builder generatorURL(String generatorURL) {
                 this.generatorURL = generatorURL;
@@ -417,7 +463,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the integration that corresponds to the alert event.
+             * <p>The name of the integration that corresponds to the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ARMS</p>
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -425,28 +474,31 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the integration that corresponds to the alert event. Valid values:
-             * <p>
+             * <p>The type of the integration that corresponds to the alert event. Valid values:</p>
+             * <ul>
+             * <li>ARMS</li>
+             * <li>CLOUD_MONITOR</li>
+             * <li>MSE</li>
+             * <li>ARMS_CLOUD_DIALTEST</li>
+             * <li>PROMETHEUS</li>
+             * <li>LOG_SERVICE</li>
+             * <li>CUSTOM</li>
+             * <li>ARMS_PROMETHEUS</li>
+             * <li>ARMS_APP_MON</li>
+             * <li>ARMS_FRONT_MON</li>
+             * <li>ARMS_CUSTOM</li>
+             * <li>XTRACE</li>
+             * <li>GRAFANA</li>
+             * <li>ZABBIX</li>
+             * <li>SKYWALKING</li>
+             * <li>EVENT_BRIDGE</li>
+             * <li>NAGIOS</li>
+             * <li>OPENFALCON</li>
+             * <li>ARMS_INSIGHTS</li>
+             * </ul>
              * 
-             * *   ARMS
-             * *   CLOUD_MONITOR
-             * *   MSE
-             * *   ARMS_CLOUD_DIALTEST
-             * *   PROMETHEUS
-             * *   LOG_SERVICE
-             * *   CUSTOM
-             * *   ARMS_PROMETHEUS
-             * *   ARMS_APP_MON
-             * *   ARMS_FRONT_MON
-             * *   ARMS_CUSTOM
-             * *   XTRACE
-             * *   GRAFANA
-             * *   ZABBIX
-             * *   SKYWALKING
-             * *   EVENT_BRIDGE
-             * *   NAGIOS
-             * *   OPENFALCON
-             * *   ARMS_INSIGHTS
+             * <strong>example:</strong>
+             * <p>ARMS_APP_MON</p>
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -454,7 +506,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;severity&quot;:&quot;warning&quot; &quot;_aliyun_arms_alert_level&quot;:&quot;ERROR&quot; &quot;_aliyun_arms_entropy&quot;:&quot;0.30170457417889235&quot;}</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -462,7 +517,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event was created.
+             * <p>The time when the event was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-19 17:05:42</p>
              */
             public Builder receiveTime(String receiveTime) {
                 this.receiveTime = receiveTime;
@@ -470,13 +528,16 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the event. Valid values:
-             * <p>
+             * <p>The severity level of the event. Valid values:</p>
+             * <ul>
+             * <li>critical</li>
+             * <li>error</li>
+             * <li>warning</li>
+             * <li>info</li>
+             * </ul>
              * 
-             * *   critical
-             * *   error
-             * *   warning
-             * *   info
+             * <strong>example:</strong>
+             * <p>warning</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -484,7 +545,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event started.
+             * <p>The time when the event started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-18 00:14:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -492,12 +556,15 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. Valid values:
-             * <p>
+             * <p>The status of the event. Valid values:</p>
+             * <ul>
+             * <li>Active: The event is not cleared.</li>
+             * <li>Silenced: The event is silenced.</li>
+             * <li>Resolved: The event is cleared.</li>
+             * </ul>
              * 
-             * *   Active: The event is not cleared.
-             * *   Silenced: The event is silenced.
-             * *   Resolved: The event is cleared.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -511,6 +578,12 @@ public class ListAlertsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertsResponseBody</p>
+     */
     public static class ListAlerts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcknowledgeTime")
         private Long acknowledgeTime;
@@ -726,7 +799,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of activities.
+             * <p>The list of activities.</p>
              */
             public Builder activities(java.util.List < Activities> activities) {
                 this.activities = activities;
@@ -734,7 +807,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of events.
+             * <p>The list of events.</p>
              */
             public Builder alertEvents(java.util.List < AlertEvents> alertEvents) {
                 this.alertEvents = alertEvents;
@@ -742,7 +815,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert ID.
+             * <p>The alert ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2279</p>
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -750,7 +826,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert rule.
+             * <p>The name of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test alert</p>
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -758,7 +837,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert was created.
+             * <p>The time when the alert was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-18 00:21:35</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -774,7 +856,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the notification policy.
+             * <p>The ID of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder dispatchRuleId(Float dispatchRuleId) {
                 this.dispatchRuleId = dispatchRuleId;
@@ -782,7 +867,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the notification policy.
+             * <p>The name of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk Notification</p>
              */
             public Builder dispatchRuleName(String dispatchRuleName) {
                 this.dispatchRuleName = dispatchRuleName;
@@ -822,7 +910,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.
+             * <p>The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P6</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -830,7 +921,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alert solution.
+             * <p>The Alert solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--</p>
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -838,12 +932,15 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the alert. Valid values:
-             * <p>
+             * <p>The status of the alert. Valid values:</p>
+             * <ul>
+             * <li>0: The alert is pending.</li>
+             * <li>1: The alert is being handled.</li>
+             * <li>2: The alert is handled.</li>
+             * </ul>
              * 
-             * *   0: The alert is pending.
-             * *   1: The alert is being handled.
-             * *   2: The alert is handled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder state(Long state) {
                 this.state = state;
@@ -857,6 +954,12 @@ public class ListAlertsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertsResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ListAlerts")
         private java.util.List < ListAlerts> listAlerts;
@@ -920,7 +1023,7 @@ public class ListAlertsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The alerts for which the alert sending history is queried.
+             * <p>The alerts for which the alert sending history is queried.</p>
              */
             public Builder listAlerts(java.util.List < ListAlerts> listAlerts) {
                 this.listAlerts = listAlerts;
@@ -928,7 +1031,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -936,7 +1042,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts returned per page.
+             * <p>The number of alerts returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -944,7 +1053,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of queried alerts.
+             * <p>The total number of queried alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

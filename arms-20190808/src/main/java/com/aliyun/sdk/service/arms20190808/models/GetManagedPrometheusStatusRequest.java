@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetManagedPrometheusStatusRequest} extends {@link RequestModel}
  *
  * <p>GetManagedPrometheusStatusRequest</p>
@@ -112,7 +113,11 @@ public class GetManagedPrometheusStatusRequest extends Request {
         } 
 
         /**
-         * The cluster ID. This parameter is required if the ClusterType parameter is set to ask.
+         * <p>The cluster ID. This parameter is required if the ClusterType parameter is set to ask.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -121,7 +126,11 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * The type of the cluster. Valid values: ask and ecs.
+         * <p>The type of the cluster. Valid values: ask and ecs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ask</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -130,7 +139,11 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +152,10 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * The resource group id of the Prometheus instance.
+         * <p>The resource group id of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -148,7 +164,10 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC). This parameter is required if the ClusterType parameter is set to ecs.
+         * <p>The ID of the virtual private cloud (VPC). This parameter is required if the ClusterType parameter is set to ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-***</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDispatchRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListDispatchRuleResponseBody</p>
@@ -49,7 +50,7 @@ public class ListDispatchRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
             this.dispatchRules = dispatchRules;
@@ -57,7 +58,10 @@ public class ListDispatchRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListDispatchRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDispatchRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDispatchRuleResponseBody</p>
+     */
     public static class DispatchRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -121,7 +131,10 @@ public class ListDispatchRuleResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The name of the notification policy.
+             * <p>The name of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -129,7 +142,10 @@ public class ListDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the notification policy.
+             * <p>The ID of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10282</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -137,11 +153,14 @@ public class ListDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the notification policy is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the notification policy is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder state(String state) {
                 this.state = state;

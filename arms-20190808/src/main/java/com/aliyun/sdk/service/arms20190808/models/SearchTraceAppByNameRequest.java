@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTraceAppByNameRequest} extends {@link RequestModel}
  *
  * <p>SearchTraceAppByNameRequest</p>
@@ -81,7 +82,10 @@ public class SearchTraceAppByNameRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -90,7 +94,7 @@ public class SearchTraceAppByNameRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -99,10 +103,13 @@ public class SearchTraceAppByNameRequest extends Request {
         }
 
         /**
-         * The name of the application.
-         * <p>
+         * <p>The name of the application.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all application monitoring tasks in the specified region are queried.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, all application monitoring tasks in the specified region are queried.
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder traceAppName(String traceAppName) {
             this.putQueryParameter("TraceAppName", traceAppName);
@@ -117,6 +124,12 @@ public class SearchTraceAppByNameRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTraceAppByNameRequest} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByNameRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -156,7 +169,10 @@ public class SearchTraceAppByNameRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -164,7 +180,10 @@ public class SearchTraceAppByNameRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppApiByPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppApiByPageResponseBody</p>
@@ -85,13 +86,16 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned for the request. Valid values:
-         * <p>
+         * <p>The HTTP status code returned for the request. Valid values:</p>
+         * <ul>
+         * <li>2XX: The request was successful.</li>
+         * <li>3XX: A redirection message was returned.</li>
+         * <li>4XX: The request was invalid.</li>
+         * <li>5XX: A server error occurred.</li>
+         * </ul>
          * 
-         * *   2XX: The request was successful.
-         * *   3XX: A redirection message was returned.
-         * *   4XX: The request was invalid.
-         * *   5XX: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -99,7 +103,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * <p>The struct returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -107,7 +111,10 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +122,10 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6A00968-82A8-4F14-9D1B-B53827DB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,11 +133,14 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The call was successful.</li>
+         * <li><code>false</code>: The call failed.</li>
+         * </ul>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -140,6 +153,12 @@ public class GetAppApiByPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppApiByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppApiByPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Completed")
         private Boolean completed;
@@ -215,7 +234,10 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             private String total; 
 
             /**
-             * Is completed.
+             * <p>Is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -223,7 +245,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The data entries.
+             * <p>The data entries.</p>
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;
@@ -231,7 +253,10 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -239,7 +264,10 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -247,7 +275,10 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder total(String total) {
                 this.total = total;

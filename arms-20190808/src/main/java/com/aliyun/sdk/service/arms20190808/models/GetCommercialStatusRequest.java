@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCommercialStatusRequest} extends {@link RequestModel}
  *
  * <p>GetCommercialStatusRequest</p>
@@ -68,18 +69,22 @@ public class GetCommercialStatusRequest extends Request {
         } 
 
         /**
-         * The product code.
-         * <p>
+         * <p>The product code.</p>
+         * <ul>
+         * <li>arms_app_post</li>
+         * <li>arms_web_post</li>
+         * <li>arms_promethues_public_cn</li>
+         * <li>prometheus_pay_public_cn</li>
+         * <li>xtrace</li>
+         * <li>arms_serverless_public_cn</li>
+         * <li>arms_rumserverless_public_cn</li>
+         * <li>prometheus_serverless_public_cn</li>
+         * <li>xtrace_serverless_public_cn</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   arms_app_post
-         * *   arms_web_post
-         * *   arms_promethues_public_cn
-         * *   prometheus_pay_public_cn
-         * *   xtrace
-         * *   arms_serverless_public_cn
-         * *   arms_rumserverless_public_cn
-         * *   prometheus_serverless_public_cn
-         * *   xtrace_serverless_public_cn
+         * <strong>example:</strong>
+         * <p>arms_app_post</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -88,7 +93,10 @@ public class GetCommercialStatusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

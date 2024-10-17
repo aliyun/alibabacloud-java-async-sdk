@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTagToFlinkClusterResponseBody} extends {@link TeaModel}
  *
  * <p>AddTagToFlinkClusterResponseBody</p>
@@ -73,7 +74,10 @@ public class AddTagToFlinkClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,11 +85,14 @@ public class AddTagToFlinkClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the business logic was executed. Valid values:
-         * <p>
+         * <p>Indicates whether the business logic was executed. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -93,7 +100,10 @@ public class AddTagToFlinkClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FC13182-B9AF-4E6B-BE51-72669B7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +111,14 @@ public class AddTagToFlinkClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

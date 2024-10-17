@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAppMetadataRequest} extends {@link RequestModel}
  *
  * <p>QueryAppMetadataRequest</p>
@@ -99,10 +100,12 @@ public class QueryAppMetadataRequest extends Request {
         } 
 
         /**
-         * The metadata IDs. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The metadata IDs. Separate multiple IDs with commas (,).</p>
+         * <p>You can obtain the exception ID on the <strong>Exception Analysis</strong> page of your application in the ARMS console.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can obtain the exception ID on the **Exception Analysis** page of your application in the ARMS console.
+         * <strong>example:</strong>
+         * <p>4c9dd447,3c76c565</p>
          */
         public Builder metaIds(String metaIds) {
             this.putQueryParameter("MetaIds", metaIds);
@@ -111,11 +114,15 @@ public class QueryAppMetadataRequest extends Request {
         }
 
         /**
-         * The metadata type. Valid values:
-         * <p>
+         * <p>The metadata type. Valid values:</p>
+         * <ul>
+         * <li>sql: obtains an SQL statement based on sqlId.</li>
+         * <li>exception: obtains the exception stack based on exceptionId.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   sql: obtains an SQL statement based on sqlId.
-         * *   exception: obtains the exception stack based on exceptionId.
+         * <strong>example:</strong>
+         * <p>sql</p>
          */
         public Builder metaType(String metaType) {
             this.putQueryParameter("MetaType", metaType);
@@ -124,7 +131,11 @@ public class QueryAppMetadataRequest extends Request {
         }
 
         /**
-         * The process identifier (PID) of the application. You can obtain the PID of an application by calling the **ListTraceApps** operation.
+         * <p>The process identifier (PID) of the application. You can obtain the PID of an application by calling the <strong>ListTraceApps</strong> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ggxw4lnjuz@54364d85b97dc56</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -133,7 +144,11 @@ public class QueryAppMetadataRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

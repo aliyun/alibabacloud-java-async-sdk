@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOnCallSchedulesRequest} extends {@link RequestModel}
  *
  * <p>ListOnCallSchedulesRequest</p>
@@ -83,7 +84,10 @@ public class ListOnCallSchedulesRequest extends Request {
         } 
 
         /**
-         * The name of the scheduling policy.
+         * <p>The name of the scheduling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OnCallSchedule_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -92,7 +96,11 @@ public class ListOnCallSchedulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -101,7 +109,11 @@ public class ListOnCallSchedulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDashboardsByNameResponseBody} extends {@link TeaModel}
  *
  * <p>ListDashboardsByNameResponseBody</p>
@@ -73,7 +74,10 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Status Code. Description 200 indicates success.
+         * <p>Status Code. Description 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;Edas Ingress Url Analysis&quot;,&quot;type&quot;:&quot;edas-ingress-url-analysis&quot;,&quot;url&quot;:&quot;<a href="https://g.console.aliyun.com/d/1036052989950239-11040375-66-3/edas-ingress-url-analysis?var-clusterId=29ksa&var-regionId=cn-hangzhou%22%7D%5D">https://g.console.aliyun.com/d/1036052989950239-11040375-66-3/edas-ingress-url-analysis?var-clusterId=29ksa&amp;var-regionId=cn-hangzhou&quot;}]</a></p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Returns a hint message for the result.
+         * <p>Returns a hint message for the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, You can use the ID to locate logs and troubleshoot issues.
+         * <p>The ID of the request, You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2983BEF7-4A0D-47A2-94A2-8E9C5E63****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

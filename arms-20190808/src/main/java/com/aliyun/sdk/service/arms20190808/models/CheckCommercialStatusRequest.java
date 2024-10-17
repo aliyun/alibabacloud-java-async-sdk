@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCommercialStatusRequest} extends {@link RequestModel}
  *
  * <p>CheckCommercialStatusRequest</p>
@@ -68,7 +69,10 @@ public class CheckCommercialStatusRequest extends Request {
         } 
 
         /**
-         * The region ID. Default value: cn-hangzhou.
+         * <p>The region ID. Default value: cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,13 +81,17 @@ public class CheckCommercialStatusRequest extends Request {
         }
 
         /**
-         * The ARMS sub-service. Valid values:
-         * <p>
+         * <p>The ARMS sub-service. Valid values:</p>
+         * <ul>
+         * <li>apm: Application Monitoring</li>
+         * <li>rum: RUM</li>
+         * <li>prometheus: Managed Service for Prometheus</li>
+         * <li>xtrace: Managed Service for OpenTelemetry</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   apm: Application Monitoring
-         * *   rum: RUM
-         * *   prometheus: Managed Service for Prometheus
-         * *   xtrace: Managed Service for OpenTelemetry
+         * <strong>example:</strong>
+         * <p>apm</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIntegrationRequest} extends {@link RequestModel}
  *
  * <p>ListIntegrationRequest</p>
@@ -112,7 +113,10 @@ public class ListIntegrationRequest extends Request {
         } 
 
         /**
-         * The name of the alert integration.
+         * <p>The name of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor integration</p>
          */
         public Builder integrationName(String integrationName) {
             this.putQueryParameter("IntegrationName", integrationName);
@@ -121,11 +125,15 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * The type of the alert integration. Valid values:
-         * <p>
+         * <p>The type of the alert integration. Valid values:</p>
+         * <ul>
+         * <li>CLOUD_MONITOR: CloudMonitor</li>
+         * <li>LOG_SERVICE: Log Service</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CLOUD_MONITOR: CloudMonitor
-         * *   LOG_SERVICE: Log Service
+         * <strong>example:</strong>
+         * <p>CLOUD_MONITOR</p>
          */
         public Builder integrationProductType(String integrationProductType) {
             this.putQueryParameter("IntegrationProductType", integrationProductType);
@@ -134,11 +142,14 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * Specifies whether to display the details of each alert integration:
-         * <p>
+         * <p>Specifies whether to display the details of each alert integration:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -147,7 +158,11 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -156,7 +171,11 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * The number of alert integrations to return on each page.
+         * <p>The number of alert integrations to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

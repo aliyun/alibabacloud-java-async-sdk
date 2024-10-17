@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DelAuthTokenResponseBody} extends {@link TeaModel}
  *
  * <p>DelAuthTokenResponseBody</p>
@@ -49,7 +50,10 @@ public class DelAuthTokenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class DelAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C647A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

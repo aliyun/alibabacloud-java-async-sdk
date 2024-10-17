@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEventBridgeIntegrationRequest} extends {@link RequestModel}
  *
  * <p>DeleteEventBridgeIntegrationRequest</p>
@@ -54,7 +55,11 @@ public class DeleteEventBridgeIntegrationRequest extends Request {
         } 
 
         /**
-         * Required. The ID of the EventBridge notification integration. You can call the **ListEventBridgeIntegrations** operation to query the ID.
+         * <p>Required. The ID of the EventBridge notification integration. You can call the <strong>ListEventBridgeIntegrations</strong> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

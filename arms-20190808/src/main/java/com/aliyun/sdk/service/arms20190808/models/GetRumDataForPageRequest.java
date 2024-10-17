@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRumDataForPageRequest} extends {@link RequestModel}
  *
  * <p>GetRumDataForPageRequest</p>
@@ -155,7 +156,10 @@ public class GetRumDataForPageRequest extends Request {
         } 
 
         /**
-         * The group to which the application belongs.
+         * <p>The group to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder appGroup(String appGroup) {
             this.putQueryParameter("AppGroup", appGroup);
@@ -164,7 +168,10 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -173,7 +180,11 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The time is accurate to seconds.
+         * <p>The beginning of the time range to query. The time is accurate to seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1713774233</p>
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -182,7 +193,10 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -191,7 +205,10 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iixxxjcnuk@582846f37******</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -200,7 +217,13 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * A query statement that complies with the query syntax of Simple Log Service Logstore. For more information, see the parameters corresponding to this operation on the console page.
+         * <p>A query statement that complies with the query syntax of Simple Log Service Logstore. For more information, see the parameters corresponding to this operation on the console page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li>and app.id: xxxx@586810fbxxxx19f</li>
+         * </ul>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -209,7 +232,11 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +245,11 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The time is accurate to seconds.
+         * <p>The beginning of the time range to query. The time is accurate to seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1713687833</p>
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

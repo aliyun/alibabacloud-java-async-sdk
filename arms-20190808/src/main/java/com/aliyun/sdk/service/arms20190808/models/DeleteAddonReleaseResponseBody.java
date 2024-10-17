@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAddonReleaseResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAddonReleaseResponseBody</p>
@@ -85,7 +86,10 @@ public class DeleteAddonReleaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code: 200 indicates success.
+         * <p>Status code: 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class DeleteAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Return a message.
+         * <p>Return a message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +108,10 @@ public class DeleteAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class DeleteAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +130,14 @@ public class DeleteAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the alert rule was deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the alert rule was deleted. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The alert rule was deleted.</li>
+         * <li><code>false</code>: The alert rule failed to be deleted.</li>
+         * </ul>
          * 
-         * *   `true`: The alert rule was deleted.
-         * *   `false`: The alert rule failed to be deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateContactResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateContactResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The object of the alert contact.
+         * <p>The object of the alert contact.</p>
          */
         public Builder alertContact(AlertContact alertContact) {
             this.alertContact = alertContact;
@@ -57,7 +58,10 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateContactResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateContactResponseBody</p>
+     */
     public static class AlertContact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactId")
         private Float contactId;
@@ -181,7 +191,10 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             private Boolean isEmailVerify; 
 
             /**
-             * The ID of the alert contact.
+             * <p>The ID of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder contactId(Float contactId) {
                 this.contactId = contactId;
@@ -189,7 +202,10 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact.
+             * <p>The name of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JohnDoe</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -197,7 +213,10 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test1.com">https://test1.com</a></p>
              */
             public Builder dingRobotUrl(String dingRobotUrl) {
                 this.dingRobotUrl = dingRobotUrl;
@@ -205,7 +224,10 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -213,13 +235,15 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the mobile number was verified. Valid values:
-             * <p>
+             * <p>Indicates whether the mobile number was verified. Valid values:</p>
+             * <ul>
+             * <li><code>false</code> (default value): No</li>
+             * <li><code>true</code>: Yes</li>
+             * </ul>
+             * <p>You can call the <strong>SendTTSVerifyLink</strong> operation to verify the mobile number of an alert contact. Only verified mobile numbers can be specified in a notification policy to receive phone calls.</p>
              * 
-             * *   `false` (default value): No
-             * *   `true`: Yes
-             * 
-             * You can call the **SendTTSVerifyLink** operation to verify the mobile number of an alert contact. Only verified mobile numbers can be specified in a notification policy to receive phone calls.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isVerify(Boolean isVerify) {
                 this.isVerify = isVerify;
@@ -227,7 +251,10 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the alert contact.
+             * <p>The mobile number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -235,7 +262,10 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform if phone calls fail to be answered. Valid values: 0: No operation is performed. 1: A phone call is made again. 2: A text message is sent. 3 (default value): The global default value is used.
+             * <p>The operation that you want to perform if phone calls fail to be answered. Valid values: 0: No operation is performed. 1: A phone call is made again. 2: A text message is sent. 3 (default value): The global default value is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder reissueSendNotice(Long reissueSendNotice) {
                 this.reissueSendNotice = reissueSendNotice;
@@ -243,7 +273,10 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the email address was verified.
+             * <p>Indicates whether the email address was verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isEmailVerify(Boolean isEmailVerify) {
                 this.isEmailVerify = isEmailVerify;

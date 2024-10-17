@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPrometheusInstanceRequest} extends {@link RequestModel}
  *
  * <p>AddPrometheusInstanceRequest</p>
@@ -84,7 +85,11 @@ public class AddPrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * The name of the Prometheus instance for Remote Write.
+         * <p>The name of the Prometheus instance for Remote Write.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>notificationpolicy_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -93,7 +98,11 @@ public class AddPrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +111,11 @@ public class AddPrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The type of the Prometheus instance. Only Prometheus instances for Remote Write is supported. Set the value to RW.
+         * <p>The type of the Prometheus instance. Only Prometheus instances for Remote Write is supported. Set the value to RW.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RW</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

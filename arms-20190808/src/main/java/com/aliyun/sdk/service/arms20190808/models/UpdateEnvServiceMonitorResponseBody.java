@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEnvServiceMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateEnvServiceMonitorResponseBody</p>
@@ -73,7 +74,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateEnvServiceMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateEnvServiceMonitorResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchedMsg")
         private String matchedMsg;
@@ -149,7 +165,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
             private String matchedTargetCount; 
 
             /**
-             * Indicates whether targets are matched.
+             * <p>Indicates whether targets are matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Match successful.</p>
              */
             public Builder matchedMsg(String matchedMsg) {
                 this.matchedMsg = matchedMsg;
@@ -157,7 +176,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The number of matched targets.
+             * <p>The number of matched targets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchedTargetCount(String matchedTargetCount) {
                 this.matchedTargetCount = matchedTargetCount;

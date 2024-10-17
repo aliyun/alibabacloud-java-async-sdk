@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchAlertContactRequest} extends {@link RequestModel}
  *
  * <p>SearchAlertContactRequest</p>
@@ -138,7 +139,10 @@ public class SearchAlertContactRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact.
+         * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[12345]</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -147,7 +151,10 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * The name of the alert contact.
+         * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -156,7 +163,10 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -165,7 +175,10 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * The email address of the alert contact.
+         * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -174,7 +187,10 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +199,10 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * The mobile number of the alert contact.
+         * <p>The mobile number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111*****</p>
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);
@@ -192,7 +211,11 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * The ID of the region. Set the value to `cn-hangzhou`.
+         * <p>The ID of the region. Set the value to <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

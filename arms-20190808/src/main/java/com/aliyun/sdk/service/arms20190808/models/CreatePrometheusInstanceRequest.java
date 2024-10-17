@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePrometheusInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreatePrometheusInstanceRequest</p>
@@ -237,7 +238,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * Does it require all child instances to be verified successfully before creating a GlobalView instance. The default is false, which means partial success is possible.
+         * <p>Does it require all child instances to be verified successfully before creating a GlobalView instance. The default is false, which means partial success is possible.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allSubClustersSuccess(Boolean allSubClustersSuccess) {
             this.putQueryParameter("AllSubClustersSuccess", allSubClustersSuccess);
@@ -246,7 +250,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
+         * <p>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder archiveDuration(Integer archiveDuration) {
             this.putQueryParameter("ArchiveDuration", archiveDuration);
@@ -255,7 +262,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the ACK cluster. This parameter is required if you set the ClusterType parameter to aliyun-cs.
+         * <p>The ID of the ACK cluster. This parameter is required if you set the ClusterType parameter to aliyun-cs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -264,7 +274,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The name of the created cluster. This parameter is required if you set the ClusterType parameter to remote-write or ecs.
+         * <p>The name of the created cluster. This parameter is required if you set the ClusterType parameter to remote-write or ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clusterNameOfTest</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -273,16 +286,20 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The type of the Prometheus instance. Valid values:
-         * <p>
+         * <p>The type of the Prometheus instance. Valid values:</p>
+         * <ul>
+         * <li>remote-write: Prometheus instance for Remote Write</li>
+         * <li>ecs (unavailable): Prometheus instance for ECS</li>
+         * <li>global-view: Prometheus instance for GlobalView</li>
+         * <li>aliyun-cs: Prometheus instance for Container Service</li>
+         * <li>cloud-product (unavailable): Prometheus instance for Alibaba Cloud services</li>
+         * <li>cloud-monitor (unavailable): Prometheus instance for Hybrid Cloud Monitoring</li>
+         * <li>flink (unavailable): Prometheus instance for Flink</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   remote-write: Prometheus instance for Remote Write
-         * *   ecs (unavailable): Prometheus instance for ECS
-         * *   global-view: Prometheus instance for GlobalView
-         * *   aliyun-cs: Prometheus instance for Container Service
-         * *   cloud-product (unavailable): Prometheus instance for Alibaba Cloud services
-         * *   cloud-monitor (unavailable): Prometheus instance for Hybrid Cloud Monitoring
-         * *   flink (unavailable): Prometheus instance for Flink
+         * <strong>example:</strong>
+         * <p>remote-write</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -291,7 +308,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The data storage duration. Unit: days.
+         * <p>The data storage duration. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -300,7 +320,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the Grafana dedicated instance. This parameter is available if you set the ClusterType parameter to ecs.
+         * <p>The ID of the Grafana dedicated instance. This parameter is available if you set the ClusterType parameter to ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-bp1*****</p>
          */
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
@@ -309,7 +332,11 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region. If you use a Prometheus instance to monitor an Alibaba Cloud service in China, this parameter must be set to cn-shanghai.
+         * <p>The ID of the region. If you use a Prometheus instance to monitor an Alibaba Cloud service in China, this parameter must be set to cn-shanghai.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -318,7 +345,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the custom resource group. You can configure this parameter to bind the instance to the resource group.
+         * <p>The ID of the custom resource group. You can configure this parameter to bind the instance to the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -327,7 +357,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the security group. This parameter is required if you set the ClusterType parameter to ecs.
+         * <p>The ID of the security group. This parameter is required if you set the ClusterType parameter to ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1********</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -336,7 +369,55 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * JSON string for child instances of the globalView instance.
+         * <p>JSON string for child instances of the globalView instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>When the clusterType is global view, this parameter needs to be passed: a list of information about the clusters that need to be aggregated.
+         * Example:
+         * [
+         *   {
+         *     &quot;Headers&quot;:{</p>
+         * <pre><code>},
+         * &quot;RegionId&quot;: &quot;cn hangzhou&quot;,
+         * &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
+         * &quot;Extras&quot;:{
+         * 
+         * },
+         * &quot;ClusterId&quot;: &quot;c39a1048921e04f ****************&quot;,
+         * &quot;SourceName&quot;: &quot;test1&quot;,
+         * &quot;DataSource&quot;: &quot;&quot;,
+         * &quot;UserId&quot;: &quot;1672753 ******************&quot;
+         * </code></pre>
+         * <p>  },
+         *   {
+         *     &quot;Headers&quot;:{</p>
+         * <pre><code>},
+         * &quot;RegionId&quot;: &quot;cn beijing&quot;,
+         * &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
+         * &quot;Extras&quot;:{
+         * 
+         * },
+         * &quot;ClusterId&quot;: &quot;c6b6485496d5b40 ****************&quot;,
+         * &quot;SourceName&quot;: &quot;test2&quot;,
+         * &quot;DataSource&quot;: &quot;&quot;,
+         * &quot;UserId&quot;: &quot;1672753 ******************&quot;
+         * </code></pre>
+         * <p>  },
+         *   {
+         *     &quot;Headers&quot;:{</p>
+         * <pre><code>},
+         * &quot;RegionId&quot;: &quot;cn zhangjiakou&quot;,
+         * &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
+         * &quot;Extras&quot;:{
+         * 
+         * },
+         * &quot;ClusterId&quot;: &quot;c261a4f3200c446 ****************&quot;,
+         * &quot;SourceName&quot;: &quot;test3&quot;,
+         * &quot;DataSource&quot;: &quot;&quot;,
+         * &quot;UserId&quot;: &quot;1672753 ******************&quot;
+         * </code></pre>
+         * <p>  }
+         * ]</p>
          */
         public Builder subClustersJson(String subClustersJson) {
             this.putQueryParameter("SubClustersJson", subClustersJson);
@@ -345,7 +426,17 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The tags of the instance. You can configure this parameter to manage tags for the instance.
+         * <p>The tags of the instance. You can configure this parameter to manage tags for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;labelName&quot;:&quot;labelValue&quot;
+         *     },
+         *     {
+         *         &quot;testName&quot;:&quot;clusterA&quot;
+         *     }
+         * ]</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -354,7 +445,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch. This parameter is required if you set the ClusterType parameter to ecs.
+         * <p>The ID of the vSwitch. This parameter is required if you set the ClusterType parameter to ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1*********</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -363,7 +457,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of virtual private cloud (VPC). This parameter is required if you set the ClusterType parameter to ecs.
+         * <p>The ID of virtual private cloud (VPC). This parameter is required if you set the ClusterType parameter to ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-rpn**********</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -378,6 +475,12 @@ public class CreatePrometheusInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePrometheusInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePrometheusInstanceRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

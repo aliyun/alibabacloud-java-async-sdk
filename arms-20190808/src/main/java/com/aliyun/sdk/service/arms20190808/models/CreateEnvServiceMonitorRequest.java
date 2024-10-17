@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnvServiceMonitorRequest} extends {@link RequestModel}
  *
  * <p>CreateEnvServiceMonitorRequest</p>
@@ -112,11 +113,14 @@ public class CreateEnvServiceMonitorRequest extends Request {
         } 
 
         /**
-         * The language. Valid values:
-         * <p>
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>zh (default): Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh (default): Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -125,7 +129,11 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The YAML configuration file of the ServiceMonitor.
+         * <p>The YAML configuration file of the ServiceMonitor.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refer to supplementary instructions.</p>
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -134,7 +142,10 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. The system checks whether the format is valid and whether targets are matched.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. The system checks whether the format is valid and whether targets are matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -143,7 +154,11 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the environment instance.
+         * <p>The ID of the environment instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -152,7 +167,11 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

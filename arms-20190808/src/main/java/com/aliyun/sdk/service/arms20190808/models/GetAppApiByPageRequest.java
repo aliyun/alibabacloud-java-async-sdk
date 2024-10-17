@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppApiByPageRequest} extends {@link RequestModel}
  *
  * <p>GetAppApiByPageRequest</p>
@@ -144,7 +145,10 @@ public class GetAppApiByPageRequest extends Request {
         } 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -153,7 +157,10 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600066800000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -162,7 +169,10 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The time interval between the data shards to be queried. Unit: milliseconds. Minimum value: 60000. Maximum value: 2147483647.
+         * <p>The time interval between the data shards to be queried. Unit: milliseconds. Minimum value: 60000. Maximum value: 2147483647.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60000</p>
          */
         public Builder intervalMills(Integer intervalMills) {
             this.putQueryParameter("IntervalMills", intervalMills);
@@ -171,7 +181,11 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The process identifier (PID) of the application. For information about how to obtain a PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
+         * <p>The process identifier (PID) of the application. For information about how to obtain a PID, see <a href="https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr">Obtain the PID of an application</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2n80plglh@745eddxxx</p>
          */
         public Builder pId(String pId) {
             this.putQueryParameter("PId", pId);
@@ -180,7 +194,10 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,7 +206,11 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +219,10 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600063200000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvironmentDashboardsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnvironmentDashboardsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation.
+         * <p>The result of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C647A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnvironmentDashboardsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentDashboardsResponseBody</p>
+     */
     public static class Dashboards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FolderUid")
         private String folderUid;
@@ -221,7 +240,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The UID of the folder.
+             * <p>The UID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1374923841627893</p>
              */
             public Builder folderUid(String folderUid) {
                 this.folderUid = folderUid;
@@ -229,7 +251,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -237,7 +262,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword.
+             * <p>The keyword.</p>
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;
@@ -245,7 +270,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the Grafana dashboard.
+             * <p>The title of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kafka-instance</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -253,7 +281,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the dashboard.
+             * <p>The unique identifier of the dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1537863211936042</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -261,7 +292,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The complete URL of the dashboard.
+             * <p>The complete URL of the dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx">http://xxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -275,6 +309,12 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnvironmentDashboardsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentDashboardsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dashboards")
         private java.util.List < Dashboards> dashboards;
@@ -314,7 +354,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The dashboards.
+             * <p>The dashboards.</p>
              */
             public Builder dashboards(java.util.List < Dashboards> dashboards) {
                 this.dashboards = dashboards;
@@ -322,7 +362,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

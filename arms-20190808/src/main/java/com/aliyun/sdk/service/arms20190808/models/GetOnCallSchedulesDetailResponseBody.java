@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetOnCallSchedulesDetailResponseBody</p>
@@ -49,7 +50,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the scheduling policy.
+         * <p>The information about the scheduling policy.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnCallSchedulesDetailResponseBody</p>
+     */
     public static class SimpleContact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -109,7 +119,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the user on duty.
+             * <p>The ID of the user on duty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -117,7 +130,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user on duty.
+             * <p>The name of the user on duty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Employee 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -131,6 +147,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnCallSchedulesDetailResponseBody</p>
+     */
     public static class RenderedFinnalEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private String end;
@@ -182,7 +204,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * The date on which the user completed shift work.
+             * <p>The date on which the user completed shift work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-30</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -190,7 +215,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the user on duty.
+             * <p>The information about the user on duty.</p>
              */
             public Builder simpleContact(SimpleContact simpleContact) {
                 this.simpleContact = simpleContact;
@@ -198,7 +223,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The date from which the user started shift work.
+             * <p>The date from which the user started shift work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-01</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -212,6 +240,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnCallSchedulesDetailResponseBody</p>
+     */
     public static class RenderedLayerEntriesSimpleContact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -251,7 +285,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the scheduled user.
+             * <p>The ID of the scheduled user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -259,7 +296,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scheduled user.
+             * <p>The name of the scheduled user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Employee 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -273,6 +313,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnCallSchedulesDetailResponseBody</p>
+     */
     public static class RenderedLayerEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
@@ -324,7 +370,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private RenderedLayerEntriesSimpleContact simpleContact; 
 
             /**
-             * The date from which the scheduled user was supposed to start shift work.
+             * <p>The date from which the scheduled user was supposed to start shift work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-01</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -332,7 +381,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The date on which the scheduled user was supposed to complete shift work.
+             * <p>The date on which the scheduled user was supposed to complete shift work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-30</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -340,7 +392,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the scheduled user.
+             * <p>The information about the scheduled user.</p>
              */
             public Builder simpleContact(RenderedLayerEntriesSimpleContact simpleContact) {
                 this.simpleContact = simpleContact;
@@ -354,6 +406,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnCallSchedulesDetailResponseBody</p>
+     */
     public static class RenderedSubstitudeEntriesSimpleContact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -393,7 +451,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the substitute.
+             * <p>The ID of the substitute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -401,7 +462,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the substitute.
+             * <p>The name of the substitute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Employee 2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -415,6 +479,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnCallSchedulesDetailResponseBody</p>
+     */
     public static class RenderedSubstitudeEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private String end;
@@ -466,7 +536,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * The date on which the substitute was supposed to complete shift work.
+             * <p>The date on which the substitute was supposed to complete shift work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-30</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -474,7 +547,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the substitute.
+             * <p>The information about the substitute.</p>
              */
             public Builder simpleContact(RenderedSubstitudeEntriesSimpleContact simpleContact) {
                 this.simpleContact = simpleContact;
@@ -482,7 +555,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The date from which the substitute was supposed to start shift work.
+             * <p>The date from which the substitute was supposed to start shift work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-01</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -496,6 +572,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnCallSchedulesDetailResponseBody</p>
+     */
     public static class Restrictions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTimeOfDay")
         private String endTimeOfDay;
@@ -547,7 +629,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String startTimeOfDay; 
 
             /**
-             * The end time of the shift per day.
+             * <p>The end time of the shift per day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00</p>
              */
             public Builder endTimeOfDay(String endTimeOfDay) {
                 this.endTimeOfDay = endTimeOfDay;
@@ -555,11 +640,14 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the limit. Valid values:
-             * <p>
+             * <p>The type of the limit. Valid values:</p>
+             * <ul>
+             * <li>daily_restriction</li>
+             * <li>weekly_restriction</li>
+             * </ul>
              * 
-             * *   daily_restriction
-             * *   weekly_restriction
+             * <strong>example:</strong>
+             * <p>daily_restriction</p>
              */
             public Builder restrictionType(String restrictionType) {
                 this.restrictionType = restrictionType;
@@ -567,7 +655,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the shift per day.
+             * <p>The start time of the shift per day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00</p>
              */
             public Builder startTimeOfDay(String startTimeOfDay) {
                 this.startTimeOfDay = startTimeOfDay;
@@ -581,6 +672,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnCallSchedulesDetailResponseBody</p>
+     */
     public static class ScheduleLayers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactIds")
         private java.util.List < Long > contactIds;
@@ -656,7 +753,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The ID list of users on duty.
+             * <p>The ID list of users on duty.</p>
              */
             public Builder contactIds(java.util.List < Long > contactIds) {
                 this.contactIds = contactIds;
@@ -664,7 +761,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The limit on the time of the shift.
+             * <p>The limit on the time of the shift.</p>
              */
             public Builder restrictions(java.util.List < Restrictions> restrictions) {
                 this.restrictions = restrictions;
@@ -672,12 +769,15 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the shift. Valid values:
-             * <p>
+             * <p>The type of the shift. Valid values:</p>
+             * <ul>
+             * <li>DAY</li>
+             * <li>WEEK</li>
+             * <li>CUSTOM</li>
+             * </ul>
              * 
-             * *   DAY
-             * *   WEEK
-             * *   CUSTOM
+             * <strong>example:</strong>
+             * <p>DAY</p>
              */
             public Builder rotationType(String rotationType) {
                 this.rotationType = rotationType;
@@ -685,7 +785,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The shift cycle. Unit: hours.
+             * <p>The shift cycle. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder shiftLength(Long shiftLength) {
                 this.shiftLength = shiftLength;
@@ -693,7 +796,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The date on which the shift change took effect.
+             * <p>The date on which the shift change took effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-01</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -707,6 +813,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOnCallSchedulesDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOnCallSchedulesDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertRobotId")
         private Long alertRobotId;
@@ -818,7 +930,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private java.util.List < ScheduleLayers> scheduleLayers; 
 
             /**
-             * The URL of the DingTalk chatbot, which is used to receive notifications about shift changes.
+             * <p>The URL of the DingTalk chatbot, which is used to receive notifications about shift changes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=69d4e009547e11069c6513309414937b7bf0482fb9284125b5">https://oapi.dingtalk.com/robot/send?access_token=69d4e009547e11069c6513309414937b7bf0482fb9284125b5</a>******</p>
              */
             public Builder alertRobotId(Long alertRobotId) {
                 this.alertRobotId = alertRobotId;
@@ -826,7 +941,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the scheduling policy.
+             * <p>The description of the scheduling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -834,7 +952,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scheduling policy.
+             * <p>The ID of the scheduling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -842,7 +963,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scheduling policy.
+             * <p>The name of the scheduling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduling policy test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -850,7 +974,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the final user on duty.
+             * <p>The information about the final user on duty.</p>
              */
             public Builder renderedFinnalEntries(java.util.List < RenderedFinnalEntries> renderedFinnalEntries) {
                 this.renderedFinnalEntries = renderedFinnalEntries;
@@ -858,7 +982,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled users on duty within a time range.
+             * <p>The scheduled users on duty within a time range.</p>
              */
             public Builder renderedLayerEntries(java.util.List < java.util.List < RenderedLayerEntries> > renderedLayerEntries) {
                 this.renderedLayerEntries = renderedLayerEntries;
@@ -866,7 +990,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the substitutes within a time range.
+             * <p>The information about the substitutes within a time range.</p>
              */
             public Builder renderedSubstitudeEntries(java.util.List < RenderedSubstitudeEntries> renderedSubstitudeEntries) {
                 this.renderedSubstitudeEntries = renderedSubstitudeEntries;
@@ -874,7 +998,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the shift.
+             * <p>The information about the shift.</p>
              */
             public Builder scheduleLayers(java.util.List < ScheduleLayers> scheduleLayers) {
                 this.scheduleLayers = scheduleLayers;

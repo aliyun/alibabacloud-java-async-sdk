@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSyntheticMonitorsRequest} extends {@link RequestModel}
  *
  * <p>GetSyntheticMonitorsRequest</p>
@@ -68,7 +69,8 @@ public class GetSyntheticMonitorsRequest extends Request {
         } 
 
         /**
-         * The query conditions.
+         * <p>The query conditions.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -78,7 +80,10 @@ public class GetSyntheticMonitorsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -93,6 +98,12 @@ public class GetSyntheticMonitorsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetSyntheticMonitorsRequest} extends {@link TeaModel}
+     *
+     * <p>GetSyntheticMonitorsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorCategory")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -147,7 +158,11 @@ public class GetSyntheticMonitorsRequest extends Request {
             private Integer taskType; 
 
             /**
-             * The type of the monitoring point. Valid values: 1: PC. 2: mobile device.
+             * <p>The type of the monitoring point. Valid values: 1: PC. 2: mobile device.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder monitorCategory(Integer monitorCategory) {
                 this.monitorCategory = monitorCategory;
@@ -155,7 +170,11 @@ public class GetSyntheticMonitorsRequest extends Request {
             }
 
             /**
-             * The network type. Valid values: 1: private network. 2: Internet.
+             * <p>The network type. Valid values: 1: private network. 2: Internet.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder network(Integer network) {
                 this.network = network;
@@ -163,10 +182,12 @@ public class GetSyntheticMonitorsRequest extends Request {
             }
 
             /**
-             * The type of the monitoring task. Valid values:
-             * <p>
+             * <p>The type of the monitoring task. Valid values:</p>
+             * <p>1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.</p>
+             * <p>This parameter is required.</p>
              * 
-             * 1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetRetcodeShareStatusRequest} extends {@link RequestModel}
  *
  * <p>SetRetcodeShareStatusRequest</p>
@@ -82,7 +83,10 @@ public class SetRetcodeShareStatusRequest extends Request {
         } 
 
         /**
-         * The name of the application that is monitored by Browser Monitoring.
+         * <p>The name of the application that is monitored by Browser Monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -91,10 +95,11 @@ public class SetRetcodeShareStatusRequest extends Request {
         }
 
         /**
-         * The process identifier (PID) of the application. 
-         * <p>
+         * <p>The process identifier (PID) of the application. </p>
+         * <p>Log on to the <strong>ARMS console</strong>. In the left-side navigation pane, choose <strong>Browser Monitoring</strong> &gt; <strong>Browser Monitoring</strong>. On the Browser Monitoring page, click the name of an application. The URL in the address bar contains the process ID (PID) of the application. The PID is indicated in the <code>pid=xxx</code> format. The PID is usually percent encoded as <code>xxx%40xxx</code>. You must modify this value to remove the percent encoding. For example, if the PID in the URL is <code>eb4zdose6v%409781be0f44d****</code>, you must replace <code>%40</code> with @ to obtain <code>eb4zdose6v@9781be0f44d****</code>.</p>
          * 
-         * Log on to the **ARMS console**. In the left-side navigation pane, choose **Browser Monitoring** > **Browser Monitoring**. On the Browser Monitoring page, click the name of an application. The URL in the address bar contains the process ID (PID) of the application. The PID is indicated in the `pid=xxx` format. The PID is usually percent encoded as `xxx%40xxx`. You must modify this value to remove the percent encoding. For example, if the PID in the URL is `eb4zdose6v%409781be0f44d****`, you must replace `%40` with @ to obtain `eb4zdose6v@9781be0f44d****`.
+         * <strong>example:</strong>
+         * <p>atc889zkcf@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -103,11 +108,15 @@ public class SetRetcodeShareStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to turn on or turn off the logon-free sharing switch. Valid values:
-         * <p>
+         * <p>Specifies whether to turn on or turn off the logon-free sharing switch. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Turn on the switch.</li>
+         * <li><code>false</code>: Turn off the switch.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `true`: Turn on the switch.
-         * *   `false`: Turn off the switch.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReleaseMetricRequest} extends {@link RequestModel}
  *
  * <p>QueryReleaseMetricRequest</p>
@@ -169,7 +170,7 @@ public class QueryReleaseMetricRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -178,7 +179,11 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * The ID of the change order.
+         * <p>The ID of the change order.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a341a2f2-ed07-4257-aae9-dfb1be******</p>
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);
@@ -187,7 +192,10 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * The time when the change order was created.
+         * <p>The time when the change order was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634005438000</p>
          */
         public Builder createTime(Long createTime) {
             this.putQueryParameter("CreateTime", createTime);
@@ -196,7 +204,10 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * The type of the metric that you want to query.
+         * <p>The type of the metric that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemContrast</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -205,7 +216,11 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * The ID of the Enterprise Distributed Application Service (EDAS) or Kubernetes application.
+         * <p>The ID of the Enterprise Distributed Application Service (EDAS) or Kubernetes application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8b46d03f-5947-449d-90fd-3a96c2******</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -214,7 +229,10 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * This parameter is not in use.
+         * <p>This parameter is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder proxyUserId(String proxyUserId) {
             this.putQueryParameter("ProxyUserId", proxyUserId);
@@ -223,7 +241,11 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * The end time of the version release.
+         * <p>The end time of the version release.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632798718632</p>
          */
         public Builder releaseEndTime(Long releaseEndTime) {
             this.putQueryParameter("ReleaseEndTime", releaseEndTime);
@@ -232,7 +254,11 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * The start time of the version release.
+         * <p>The start time of the version release.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632798686692</p>
          */
         public Builder releaseStartTime(Long releaseStartTime) {
             this.putQueryParameter("ReleaseStartTime", releaseStartTime);
@@ -241,7 +267,10 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * The service that you want to query.
+         * <p>The service that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clothservice</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);

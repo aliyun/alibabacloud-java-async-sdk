@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEnvPodMonitorRequest} extends {@link RequestModel}
  *
  * <p>DeleteEnvPodMonitorRequest</p>
@@ -99,7 +100,11 @@ public class DeleteEnvPodMonitorRequest extends Request {
         } 
 
         /**
-         * The ID of the environment instance.
+         * <p>The ID of the environment instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -108,7 +113,11 @@ public class DeleteEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The namespace where the PodMonitor is located.
+         * <p>The namespace where the PodMonitor is located.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -117,7 +126,11 @@ public class DeleteEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The name of the PodMonitor.
+         * <p>The name of the PodMonitor.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-admin-pm1</p>
          */
         public Builder podMonitorName(String podMonitorName) {
             this.putQueryParameter("PodMonitorName", podMonitorName);
@@ -126,7 +139,11 @@ public class DeleteEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

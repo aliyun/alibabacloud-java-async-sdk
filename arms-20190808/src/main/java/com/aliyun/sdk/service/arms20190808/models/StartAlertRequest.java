@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAlertRequest} extends {@link RequestModel}
  *
  * <p>StartAlertRequest</p>
@@ -69,7 +70,11 @@ public class StartAlertRequest extends Request {
         } 
 
         /**
-         * The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
+         * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the <code>Id</code> parameter in the response. For more information, see <a href="https://help.aliyun.com/document_detail/175825.html">SearchAlertRules</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1610***</p>
          */
         public Builder alertId(String alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -78,7 +83,11 @@ public class StartAlertRequest extends Request {
         }
 
         /**
-         * The ID of the region. Set the value to `cn-hangzhou`.
+         * <p>The ID of the region. Set the value to <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

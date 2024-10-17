@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRumOcuStatisticDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetRumOcuStatisticDataResponseBody</p>
@@ -73,7 +74,10 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>626037F5-FDEB-45B0-804C-B3C92797****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRumOcuStatisticDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumOcuStatisticDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Complete")
         private Boolean complete;
@@ -185,7 +201,10 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Indicates whether the next page exists.
+             * <p>Indicates whether the next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder complete(Boolean complete) {
                 this.complete = complete;
@@ -193,7 +212,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             }
 
             /**
-             * The queried data.
+             * <p>The queried data.</p>
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;
@@ -201,7 +220,10 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -209,7 +231,10 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -217,7 +242,10 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

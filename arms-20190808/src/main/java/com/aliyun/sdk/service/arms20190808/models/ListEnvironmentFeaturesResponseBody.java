@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvironmentFeaturesResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnvironmentFeaturesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status Code. Description 200 indicates success.
+         * <p>Status Code. Description 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the alert rule was deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the alert rule was deleted. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The alert rule was deleted.</li>
+         * <li><code>false</code>: The alert rule failed to be deleted.</li>
+         * </ul>
          * 
-         * *   `true`: The alert rule was deleted.
-         * *   `false`: The alert rule failed to be deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnvironmentFeaturesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentFeaturesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -281,7 +300,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The alias of the feature.
+             * <p>The alias of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus Agent</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -289,7 +311,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The feature configuration.
+             * <p>The feature configuration.</p>
              */
             public Builder config(java.util.Map < String, String > config) {
                 this.config = config;
@@ -297,7 +319,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the feature.
+             * <p>The description of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Collect Metric data using the Prometheus collection specification.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -305,7 +330,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the environment instance.
+             * <p>The ID of the environment instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -313,7 +341,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the icon.
+             * <p>The URL of the icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx">http://xxx</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -321,11 +352,14 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The language. Valid values:
-             * <p>
+             * <p>The language. Valid values:</p>
+             * <ul>
+             * <li>zh: Chinese</li>
+             * <li>en: English</li>
+             * </ul>
              * 
-             * *   zh: Chinese
-             * *   en: English
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -333,7 +367,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version number.
+             * <p>The latest version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.17</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -341,7 +378,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the component is fully managed.
+             * <p>Indicates whether the component is fully managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -349,7 +389,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>metric-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -357,15 +400,18 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the feature. Valid values:
-             * <p>
+             * <p>The status of the feature. Valid values:</p>
+             * <ul>
+             * <li>Installing: The agent is being installed.</li>
+             * <li>Success: The agent is installed.</li>
+             * <li>Failed: The agent failed to be installed.</li>
+             * <li>UnInstall: The agent is uninstalled.</li>
+             * <li>Uninstalling: The agent is being uninstalled.</li>
+             * <li>UnInstallFailed: The agent failed to be uninstalled.</li>
+             * </ul>
              * 
-             * *   Installing: The agent is being installed.
-             * *   Success: The agent is installed.
-             * *   Failed: The agent failed to be installed.
-             * *   UnInstall: The agent is uninstalled.
-             * *   Uninstalling: The agent is being uninstalled.
-             * *   UnInstallFailed: The agent failed to be uninstalled.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -373,7 +419,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the feature.
+             * <p>The version of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.17</p>
              */
             public Builder version(String version) {
                 this.version = version;

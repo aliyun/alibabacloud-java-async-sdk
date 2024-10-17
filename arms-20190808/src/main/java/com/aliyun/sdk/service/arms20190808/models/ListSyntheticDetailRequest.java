@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSyntheticDetailRequest} extends {@link RequestModel}
  *
  * <p>ListSyntheticDetailRequest</p>
@@ -221,11 +222,11 @@ public class ListSyntheticDetailRequest extends Request {
         } 
 
         /**
-         * An array of filter conditions. This parameter is required.
-         * <p>
-         * 
-         * *   To query the list of synthetic test results, set this parameter in the following format: \[{"Key":"taskType","OpType":"in","Value":\[Task type]}].
-         * *   To query the result details of a synthetic monitoring task, set this parameter in the following format: \[{"Key":"dataId","OpType":"eq","Value":"dataId"}]. dataId is returned when you query the list of synthetic test results.
+         * <p>An array of filter conditions. This parameter is required.</p>
+         * <ul>
+         * <li>To query the list of synthetic test results, set this parameter in the following format: [{&quot;Key&quot;:&quot;taskType&quot;,&quot;OpType&quot;:&quot;in&quot;,&quot;Value&quot;:[Task type]}].</li>
+         * <li>To query the result details of a synthetic monitoring task, set this parameter in the following format: [{&quot;Key&quot;:&quot;dataId&quot;,&quot;OpType&quot;:&quot;eq&quot;,&quot;Value&quot;:&quot;dataId&quot;}]. dataId is returned when you query the list of synthetic test results.</li>
+         * </ul>
          */
         public Builder advancedFilters(java.util.List < AdvancedFilters> advancedFilters) {
             String advancedFiltersShrink = shrink(advancedFilters, "AdvancedFilters", "json");
@@ -235,7 +236,10 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The type of the results. Set the value to SYNTHETIC.
+         * <p>The type of the results. Set the value to SYNTHETIC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNTHETIC</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -244,16 +248,19 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The type of the list that contains the results. This parameter is required. Valid values:
-         * <p>
+         * <p>The type of the list that contains the results. This parameter is required. Valid values:</p>
+         * <ul>
+         * <li>ICMP_LIST</li>
+         * <li>TCP_LIST</li>
+         * <li>DNS_LIST</li>
+         * <li>HTTP_LIST</li>
+         * <li>WEBSITE_LIST</li>
+         * <li>DOWNLOAD_LIST</li>
+         * <li>ALL</li>
+         * </ul>
          * 
-         * *   ICMP_LIST
-         * *   TCP_LIST
-         * *   DNS_LIST
-         * *   HTTP_LIST
-         * *   WEBSITE_LIST
-         * *   DOWNLOAD_LIST
-         * *   ALL
+         * <strong>example:</strong>
+         * <p>ICMP_LIST</p>
          */
         public Builder detail(String detail) {
             this.putQueryParameter("Detail", detail);
@@ -262,7 +269,10 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The timestamp of the end time of the query. Unit: milliseconds.
+         * <p>The timestamp of the end time of the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684480557772</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -271,7 +281,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * A reserved field.
+         * <p>A reserved field.</p>
          */
         public Builder exactFilters(java.util.List < ExactFilters> exactFilters) {
             String exactFiltersShrink = shrink(exactFilters, "ExactFilters", "json");
@@ -281,11 +291,11 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The filter condition. This parameter is required.
-         * <p>
-         * 
-         * *   To query the result of a synthetic monitoring task, set this parameter in the following format: {"taskId":"${taskId}"}.
-         * *   To query the result details of a synthetic monitoring task, set this parameter in the following format: {"taskId":"${taskId}","dataId":"${dataId}"}.
+         * <p>The filter condition. This parameter is required.</p>
+         * <ul>
+         * <li>To query the result of a synthetic monitoring task, set this parameter in the following format: {&quot;taskId&quot;:&quot;${taskId}&quot;}.</li>
+         * <li>To query the result details of a synthetic monitoring task, set this parameter in the following format: {&quot;taskId&quot;:&quot;${taskId}&quot;,&quot;dataId&quot;:&quot;${dataId}&quot;}.</li>
+         * </ul>
          */
         public Builder filters(java.util.Map < String, String > filters) {
             String filtersShrink = shrink(filters, "Filters", "json");
@@ -295,11 +305,14 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The order in which results are sorted. Valid values:
-         * <p>
+         * <p>The order in which results are sorted. Valid values:</p>
+         * <ul>
+         * <li><code>ASC</code>: ascending order</li>
+         * <li><code>DESC</code>: descending order</li>
+         * </ul>
          * 
-         * - `ASC`: ascending order
-         * - `DESC`: descending order
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -308,7 +321,10 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The field based on which results are sorted. Set the value to timestamp.
+         * <p>The field based on which results are sorted. Set the value to timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timestamp</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -317,7 +333,10 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -326,7 +345,10 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -335,7 +357,10 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The ID of the region. Set the value to cn-hangzhou.
+         * <p>The ID of the region. Set the value to cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -344,7 +369,10 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The timestamp of the start time of the query. Unit: milliseconds.
+         * <p>The timestamp of the start time of the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684110343127</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -353,7 +381,10 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * The type of the synthetic test. Valid values: 1 and 2. 1 represents an immediate test, and 2 represents a scheduled test.
+         * <p>The type of the synthetic test. Valid values: 1 and 2. 1 represents an immediate test, and 2 represents a scheduled test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder syntheticType(Integer syntheticType) {
             this.putQueryParameter("SyntheticType", syntheticType);
@@ -368,6 +399,12 @@ public class ListSyntheticDetailRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListSyntheticDetailRequest} extends {@link TeaModel}
+     *
+     * <p>ListSyntheticDetailRequest</p>
+     */
     public static class AdvancedFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -419,11 +456,14 @@ public class ListSyntheticDetailRequest extends Request {
             private Object value; 
 
             /**
-             * The filter condition. The taskType and dataId fields are supported.
-             * <p>
+             * <p>The filter condition. The taskType and dataId fields are supported.</p>
+             * <ul>
+             * <li>To query the list of synthetic test results, set the key to taskType.</li>
+             * <li>To query the result details of a synthetic monitoring task, set the key to dataId.</li>
+             * </ul>
              * 
-             * *   To query the list of synthetic test results, set the key to taskType.
-             * *   To query the result details of a synthetic monitoring task, set the key to dataId.
+             * <strong>example:</strong>
+             * <p>taskType</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -431,7 +471,10 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * The type of the filter condition. Valid values: eq and in. eq: equal to. in: include.
+             * <p>The type of the filter condition. Valid values: eq and in. eq: equal to. in: include.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -439,7 +482,10 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * The value of the filter condition. The type of the task. Valid values: 1: ICMP 2: TCP 3: DNS 4: HTTP 5: website speed measurement 6: file download
+             * <p>The value of the filter condition. The type of the task. Valid values: 1: ICMP 2: TCP 3: DNS 4: HTTP 5: website speed measurement 6: file download</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -453,6 +499,12 @@ public class ListSyntheticDetailRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSyntheticDetailRequest} extends {@link TeaModel}
+     *
+     * <p>ListSyntheticDetailRequest</p>
+     */
     public static class ExactFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -504,7 +556,10 @@ public class ListSyntheticDetailRequest extends Request {
             private Object value; 
 
             /**
-             * A reserved field.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -512,7 +567,10 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * A reserved field.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -520,7 +578,10 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * A reserved field.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder value(Object value) {
                 this.value = value;

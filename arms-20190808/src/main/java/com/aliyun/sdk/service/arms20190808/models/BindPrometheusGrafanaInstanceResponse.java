@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindPrometheusGrafanaInstanceResponse} extends {@link TeaModel}
  *
  * <p>BindPrometheusGrafanaInstanceResponse</p>

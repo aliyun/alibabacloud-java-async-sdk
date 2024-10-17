@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTraceAppRequest} extends {@link RequestModel}
  *
  * <p>GetTraceAppRequest</p>
@@ -83,7 +84,11 @@ public class GetTraceAppRequest extends Request {
         } 
 
         /**
-         * The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
+         * <p>The process identifier (PID) of the application. For more information about how to obtain the PID, see <a href="https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr">Obtain the PID of an application</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -92,7 +97,11 @@ public class GetTraceAppRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +110,7 @@ public class GetTraceAppRequest extends Request {
         }
 
         /**
-         * 标签。
+         * <p>标签。</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -116,6 +125,12 @@ public class GetTraceAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetTraceAppRequest} extends {@link TeaModel}
+     *
+     * <p>GetTraceAppRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -155,7 +170,10 @@ public class GetTraceAppRequest extends Request {
             private String value; 
 
             /**
-             * 标签的键（key）。
+             * <p>标签的键（key）。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -163,7 +181,10 @@ public class GetTraceAppRequest extends Request {
             }
 
             /**
-             * 标签的值（value）。
+             * <p>标签的值（value）。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

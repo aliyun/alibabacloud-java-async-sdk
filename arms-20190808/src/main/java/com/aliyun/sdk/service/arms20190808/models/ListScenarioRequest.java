@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScenarioRequest} extends {@link RequestModel}
  *
  * <p>ListScenarioRequest</p>
@@ -111,7 +112,11 @@ public class ListScenarioRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@28f515462******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -120,7 +125,11 @@ public class ListScenarioRequest extends Request {
         }
 
         /**
-         * The name of the business monitoring job.
+         * <p>The name of the business monitoring job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pro-content</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -129,7 +138,10 @@ public class ListScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjaikou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,13 +150,16 @@ public class ListScenarioRequest extends Request {
         }
 
         /**
-         * The scenario where the business monitoring job is used. Valid values:
-         * <p>
+         * <p>The scenario where the business monitoring job is used. Valid values:</p>
+         * <ul>
+         * <li><code>USER-DEFINED</code>: user-defined. This is the default value.</li>
+         * <li><code>EDAS-ROLLOUT</code>: application release in Enterprise Distributed Application Service (EDAS)</li>
+         * <li><code>OAM-ROLLOUT</code>: application release based on Open Application Model (OAM)</li>
+         * <li><code>MSC-CANARY</code>: canary release based on Microservice Engine (MSE)</li>
+         * </ul>
          * 
-         * *   `USER-DEFINED`: user-defined. This is the default value.
-         * *   `EDAS-ROLLOUT`: application release in Enterprise Distributed Application Service (EDAS)
-         * *   `OAM-ROLLOUT`: application release based on Open Application Model (OAM)
-         * *   `MSC-CANARY`: canary release based on Microservice Engine (MSE)
+         * <strong>example:</strong>
+         * <p>USER-DEFINED</p>
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);
@@ -153,7 +168,10 @@ public class ListScenarioRequest extends Request {
         }
 
         /**
-         * The code of the business monitoring job. Set this parameter when you know the code of the business monitoring job you want to query.
+         * <p>The code of the business monitoring job. Set this parameter when you know the code of the business monitoring job you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a9f8****</p>
          */
         public Builder sign(String sign) {
             this.putQueryParameter("Sign", sign);

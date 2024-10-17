@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddIntegrationRequest} extends {@link RequestModel}
  *
  * <p>AddIntegrationRequest</p>
@@ -84,7 +85,11 @@ public class AddIntegrationRequest extends Request {
         } 
 
         /**
-         * The ID of the Container Service for Kubernetes (ACK) cluster.
+         * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +98,11 @@ public class AddIntegrationRequest extends Request {
         }
 
         /**
-         * The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
+         * <p>The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): <code>ASM</code>, <code>IoT</code>, and <code>Flink</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asm</p>
          */
         public Builder integration(String integration) {
             this.putQueryParameter("Integration", integration);
@@ -102,7 +111,11 @@ public class AddIntegrationRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

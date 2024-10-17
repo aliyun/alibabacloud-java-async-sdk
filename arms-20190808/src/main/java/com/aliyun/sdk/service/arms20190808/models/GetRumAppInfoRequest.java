@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRumAppInfoRequest} extends {@link RequestModel}
  *
  * <p>GetRumAppInfoRequest</p>
@@ -83,7 +84,10 @@ public class GetRumAppInfoRequest extends Request {
         } 
 
         /**
-         * The group to which the application belongs.
+         * <p>The group to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder appGroup(String appGroup) {
             this.putQueryParameter("AppGroup", appGroup);
@@ -92,7 +96,11 @@ public class GetRumAppInfoRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The process ID (PID) of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atc889zkcf@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -101,7 +109,11 @@ public class GetRumAppInfoRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

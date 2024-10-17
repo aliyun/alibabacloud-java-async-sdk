@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSilencePoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListSilencePoliciesRequest</p>
@@ -111,11 +112,14 @@ public class ListSilencePoliciesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the details of a silence policy. Valid values:
-         * <p>
+         * <p>Specifies whether to query the details of a silence policy. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Details of the silence policy are queried.</li>
+         * <li><code>false</code>: Details about notification policies are not queried.</li>
+         * </ul>
          * 
-         * *   `true`: Details of the silence policy are queried.
-         * *   `false`: Details about notification policies are not queried.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -124,7 +128,10 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * The name of the silence policy.
+         * <p>The name of the silence policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>silencepolicy_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -133,7 +140,11 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -142,7 +153,10 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +165,11 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

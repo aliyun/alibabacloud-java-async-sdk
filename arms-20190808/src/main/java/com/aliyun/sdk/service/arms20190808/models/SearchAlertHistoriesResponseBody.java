@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchAlertHistoriesResponseBody} extends {@link TeaModel}
  *
  * <p>SearchAlertHistoriesResponseBody</p>
@@ -49,7 +50,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -57,7 +58,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FC13182-B9AF-4E6B-BE51-72669B7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchAlertHistoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertHistoriesResponseBody</p>
+     */
     public static class AlarmHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmContent")
         private String alarmContent;
@@ -217,7 +227,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The content of the alert notification.
+             * <p>The content of the alert notification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;Alert name: Alert1\nAlert time: 2020-07-24 12:14:00\nAlert content: A total of four alerts are triggered: ****&quot;</p>
              */
             public Builder alarmContent(String alarmContent) {
                 this.alarmContent = alarmContent;
@@ -225,7 +238,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The response code returned after the alert notification was sent.
+             * <p>The response code returned after the alert notification was sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder alarmResponseCode(Integer alarmResponseCode) {
                 this.alarmResponseCode = alarmResponseCode;
@@ -233,7 +249,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL, such as the webhook URL of a DingTalk chatbot.
+             * <p>The webhook URL, such as the webhook URL of a DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f65002fefe0ab9b71e6590c5ca504348cad742ff01e9c8ab204439ca">https://oapi.dingtalk.com/robot/send?access_token=91f2f65002fefe0ab9b71e6590c5ca504348cad742ff01e9c8ab204439ca</a>****</p>
              */
             public Builder alarmSources(String alarmSources) {
                 this.alarmSources = alarmSources;
@@ -241,7 +260,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert notification was sent.
+             * <p>The time when the alert notification was sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1595564179000</p>
              */
             public Builder alarmTime(Long alarmTime) {
                 this.alarmTime = alarmTime;
@@ -249,17 +271,20 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert rule. Default value: 4. Valid values:
-             * <p>
+             * <p>The type of the alert rule. Default value: 4. Valid values:</p>
+             * <ul>
+             * <li><code>1</code>: a custom alert rule that is used to monitor drill-down data sets</li>
+             * <li><code>3</code>: a custom alert rule that is used to monitor tiled data sets</li>
+             * <li><code>4</code>: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring</li>
+             * <li><code>5</code>: an alert rule that is used to monitor applications, including the default alert rule for application monitoring</li>
+             * <li><code>6</code>: the default alert rule for browser monitoring</li>
+             * <li><code>7</code>: the default alert rule for application monitoring</li>
+             * <li><code>8</code>: a Tracing Analysis alert rule</li>
+             * <li><code>101</code>: a Prometheus alert rule</li>
+             * </ul>
              * 
-             * *   `1`: a custom alert rule that is used to monitor drill-down data sets
-             * *   `3`: a custom alert rule that is used to monitor tiled data sets
-             * *   `4`: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring
-             * *   `5`: an alert rule that is used to monitor applications, including the default alert rule for application monitoring
-             * *   `6`: the default alert rule for browser monitoring
-             * *   `7`: the default alert rule for application monitoring
-             * *   `8`: a Tracing Analysis alert rule
-             * *   `101`: a Prometheus alert rule
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder alarmType(Integer alarmType) {
                 this.alarmType = alarmType;
@@ -267,7 +292,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
              */
             public Builder emails(String emails) {
                 this.emails = emails;
@@ -275,7 +303,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert notification.
+             * <p>The ID of the alert notification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -283,7 +314,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone number of the alert contact.
+             * <p>The mobile phone number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phones(String phones) {
                 this.phones = phones;
@@ -291,7 +325,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal fields.
+             * <p>The internal fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -299,7 +336,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal fields.
+             * <p>The internal fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -307,7 +347,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -321,6 +364,12 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchAlertHistoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertHistoriesResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmHistories")
         private java.util.List < AlarmHistories> alarmHistories;
@@ -384,7 +433,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The information about alert records.
+             * <p>The information about alert records.</p>
              */
             public Builder alarmHistories(java.util.List < AlarmHistories> alarmHistories) {
                 this.alarmHistories = alarmHistories;
@@ -392,7 +441,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -400,7 +452,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -408,7 +463,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

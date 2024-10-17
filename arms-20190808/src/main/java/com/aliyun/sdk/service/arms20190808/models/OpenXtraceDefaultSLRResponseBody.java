@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenXtraceDefaultSLRResponseBody} extends {@link TeaModel}
  *
  * <p>OpenXtraceDefaultSLRResponseBody</p>
@@ -49,11 +50,14 @@ public class OpenXtraceDefaultSLRResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         *  
-         * *   `true`
-         * *   `false`
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -61,7 +65,10 @@ public class OpenXtraceDefaultSLRResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53CACA70-2CF7-490C-BD06-1A2AE4EB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

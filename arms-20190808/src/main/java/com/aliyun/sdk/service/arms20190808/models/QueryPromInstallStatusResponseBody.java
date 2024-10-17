@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPromInstallStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPromInstallStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPromInstallStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPromInstallStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("isControllerInstalled")
         private Boolean isControllerInstalled;
@@ -97,10 +107,11 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
             private Boolean isControllerInstalled; 
 
             /**
-             * Indicates whether the call was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the call was successful. Valid values:</p>
+             * <p>true: The call was successful. false: The call fails.</p>
              * 
-             * true: The call was successful. false: The call fails.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isControllerInstalled(Boolean isControllerInstalled) {
                 this.isControllerInstalled = isControllerInstalled;

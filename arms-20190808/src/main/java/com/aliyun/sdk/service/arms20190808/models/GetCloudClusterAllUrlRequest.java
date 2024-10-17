@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCloudClusterAllUrlRequest} extends {@link RequestModel}
  *
  * <p>GetCloudClusterAllUrlRequest</p>
@@ -67,7 +68,10 @@ public class GetCloudClusterAllUrlRequest extends Request {
         } 
 
         /**
-         * The ID of the CloudMonitor instance.
+         * <p>The ID of the CloudMonitor instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca9676014babd4</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -76,7 +80,10 @@ public class GetCloudClusterAllUrlRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

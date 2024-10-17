@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrafanaWorkspace} extends {@link TeaModel}
  *
  * <p>GrafanaWorkspace</p>
@@ -570,6 +571,12 @@ public class GrafanaWorkspace extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GrafanaWorkspace} extends {@link TeaModel}
+     *
+     * <p>GrafanaWorkspace</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;

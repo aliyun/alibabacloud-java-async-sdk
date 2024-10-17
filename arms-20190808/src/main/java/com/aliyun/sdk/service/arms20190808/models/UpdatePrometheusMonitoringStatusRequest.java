@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusMonitoringStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrometheusMonitoringStatusRequest</p>
@@ -114,7 +115,11 @@ public class UpdatePrometheusMonitoringStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance.
+         * <p>The ID of the Prometheus instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -123,7 +128,11 @@ public class UpdatePrometheusMonitoringStatusRequest extends Request {
         }
 
         /**
-         * The name of the monitoring configuration.
+         * <p>The name of the monitoring configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customJob1</p>
          */
         public Builder monitoringName(String monitoringName) {
             this.putQueryParameter("MonitoringName", monitoringName);
@@ -132,7 +141,11 @@ public class UpdatePrometheusMonitoringStatusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +154,11 @@ public class UpdatePrometheusMonitoringStatusRequest extends Request {
         }
 
         /**
-         * The status of the monitoring configuration. Valid values: run and stop. The status of Probe cannot be modified.
+         * <p>The status of the monitoring configuration. Valid values: run and stop. The status of Probe cannot be modified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -150,11 +167,14 @@ public class UpdatePrometheusMonitoringStatusRequest extends Request {
         }
 
         /**
-         * The type of the monitoring configuration. 
-         * <p>
+         * <p>The type of the monitoring configuration. 
          * Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, and customJob. 
          * Valid value for a Prometheus instance for ECS: customJob. 
-         * The status of probe cannot be modified.
+         * The status of probe cannot be modified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customJob</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

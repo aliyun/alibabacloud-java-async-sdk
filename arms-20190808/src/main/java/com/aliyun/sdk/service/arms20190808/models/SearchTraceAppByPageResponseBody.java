@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTraceAppByPageResponseBody} extends {@link TeaModel}
  *
  * <p>SearchTraceAppByPageResponseBody</p>
@@ -49,7 +50,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the array object.
+         * <p>The information about the array object.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -57,7 +58,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B446DF2-3DDD-4B5B-8E3F-D5225120****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTraceAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByPageResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -109,7 +119,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +130,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +147,12 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTraceAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByPageResponseBody</p>
+     */
     public static class TraceApps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
@@ -290,7 +312,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -298,7 +323,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -306,7 +334,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the task was created.
+             * <p>The timestamp generated when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1531291867000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -314,7 +345,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The aliases of the application.
+             * <p>The aliases of the application.</p>
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
@@ -322,7 +353,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The process identifier (PID) of the application.
+             * <p>The process identifier (PID) of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>atc889zkcf@d8deedfa9bf****</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -330,7 +364,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -338,7 +375,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxyexli2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -346,11 +386,14 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
-             * <p>
+             * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: yes</li>
+             * <li><code>false</code>: no</li>
+             * </ul>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -358,7 +401,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * A list of tags.
+             * <p>A list of tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -366,11 +409,14 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the monitoring task. Valid values:
-             * <p>
+             * <p>The type of the monitoring task. Valid values:</p>
+             * <ul>
+             * <li><code>TRACE</code>: Application Monitoring</li>
+             * <li><code>RETCODE</code>: Browser Monitoring</li>
+             * </ul>
              * 
-             * *   `TRACE`: Application Monitoring
-             * *   `RETCODE`: Browser Monitoring
+             * <strong>example:</strong>
+             * <p>TRACE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -378,7 +424,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the task information was updated.
+             * <p>The timestamp generated when the task information was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1531291867000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -386,7 +435,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -400,6 +452,12 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTraceAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByPageResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -463,7 +521,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private java.util.List < TraceApps> traceApps; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -471,7 +532,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -479,7 +543,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -487,7 +554,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the monitoring task.
+             * <p>The information about the monitoring task.</p>
              */
             public Builder traceApps(java.util.List < TraceApps> traceApps) {
                 this.traceApps = traceApps;

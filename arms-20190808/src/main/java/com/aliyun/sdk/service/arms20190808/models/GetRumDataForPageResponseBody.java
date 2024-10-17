@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRumDataForPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetRumDataForPageResponseBody</p>
@@ -97,7 +98,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The responses code. The status code 200 indicates that the request was successful.
+         * <p>The responses code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation.
+         * <p>The result of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StartTime is mandatory for this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetRumDataForPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRumDataForPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumDataForPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Authentication")
         private String authentication;
@@ -253,7 +275,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             private String total; 
 
             /**
-             * A reserved parameter. Ignore this parameter.
+             * <p>A reserved parameter. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder authentication(String authentication) {
                 this.authentication = authentication;
@@ -261,7 +286,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the query ends. Valid values: true and false.
+             * <p>Indicates whether the query ends. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder completion(String completion) {
                 this.completion = completion;
@@ -269,7 +297,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * The queried data.
+             * <p>The queried data.</p>
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;
@@ -277,7 +305,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(String page) {
                 this.page = page;
@@ -285,7 +316,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -293,7 +327,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter. Ignore this parameter.
+             * <p>A reserved parameter. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder preference(String preference) {
                 this.preference = preference;
@@ -301,7 +338,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder total(String total) {
                 this.total = total;

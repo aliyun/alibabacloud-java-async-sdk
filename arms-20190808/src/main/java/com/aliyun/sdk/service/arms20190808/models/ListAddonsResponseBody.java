@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAddonsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAddonsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListAddonsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code: 200 indicates success.
+         * <p>Status code: 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried add-ons.
+         * <p>The queried add-ons.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the alert rule was deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the alert rule was deleted. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The alert rule was deleted.</li>
+         * <li><code>false</code>: The alert rule failed to be deleted.</li>
+         * </ul>
          * 
-         * *   `true`: The alert rule was deleted.
-         * *   `false`: The alert rule failed to be deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListAddonsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonsResponseBody</p>
+     */
     public static class Dashboards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -185,7 +204,10 @@ public class ListAddonsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The description of the dashboard.
+             * <p>The description of the dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL monitors the market information, monitoring the connection information, usage information and other indicators</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -193,7 +215,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dashboard.
+             * <p>The name of the dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql-overview</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -201,7 +226,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the dashboard.
+             * <p>The URL of the dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx">http://xxxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -215,6 +243,12 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonsResponseBody</p>
+     */
     public static class Dependencies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterTypes")
         private java.util.List < String > clusterTypes;
@@ -266,7 +300,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private java.util.List < String > services; 
 
             /**
-             * The supported cluster types.
+             * <p>The supported cluster types.</p>
              */
             public Builder clusterTypes(java.util.List < String > clusterTypes) {
                 this.clusterTypes = clusterTypes;
@@ -274,7 +308,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The feature on which the environment depends.
+             * <p>The feature on which the environment depends.</p>
              */
             public Builder features(java.util.Map < String, Boolean > features) {
                 this.features = features;
@@ -282,7 +316,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The services.
+             * <p>The services.</p>
              */
             public Builder services(java.util.List < String > services) {
                 this.services = services;
@@ -296,6 +330,12 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonsResponseBody</p>
+     */
     public static class MetricCheckRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PromQL")
         private java.util.List < String > promQL;
@@ -323,7 +363,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private java.util.List < String > promQL; 
 
             /**
-             * The PromQL statements.
+             * <p>The PromQL statements.</p>
              */
             public Builder promQL(java.util.List < String > promQL) {
                 this.promQL = promQL;
@@ -337,6 +377,12 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonsResponseBody</p>
+     */
     public static class Protocols extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -400,7 +446,10 @@ public class ListAddonsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the protocol.
+             * <p>The description of the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ARMS</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -408,7 +457,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the protocol icon.
+             * <p>The URL of the protocol icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -416,7 +468,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the protocol.
+             * <p>The tag of the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ARMS</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -424,7 +479,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protocol.
+             * <p>The name of the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -438,6 +496,12 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonsResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertDefaultStatus")
         private String alertDefaultStatus;
@@ -537,7 +601,10 @@ public class ListAddonsResponseBody extends TeaModel {
             private String targetAddonName; 
 
             /**
-             * The default alert status.
+             * <p>The default alert status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder alertDefaultStatus(String alertDefaultStatus) {
                 this.alertDefaultStatus = alertDefaultStatus;
@@ -545,7 +612,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The default installation status.
+             * <p>The default installation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultInstall(Boolean defaultInstall) {
                 this.defaultInstall = defaultInstall;
@@ -553,7 +623,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a service account is enabled.
+             * <p>Indicates whether a service account is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false.</p>
              */
             public Builder enableServiceAccount(Boolean enableServiceAccount) {
                 this.enableServiceAccount = enableServiceAccount;
@@ -561,7 +634,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The metric check rule.
+             * <p>The metric check rule.</p>
              */
             public Builder metricCheckRule(MetricCheckRule metricCheckRule) {
                 this.metricCheckRule = metricCheckRule;
@@ -569,7 +642,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a restart is required after the installation.
+             * <p>Indicates whether a restart is required after the installation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needRestartAfterIntegration(Boolean needRestartAfterIntegration) {
                 this.needRestartAfterIntegration = needRestartAfterIntegration;
@@ -577,7 +653,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The supported protocols.
+             * <p>The supported protocols.</p>
              */
             public Builder protocols(java.util.List < Protocols> protocols) {
                 this.protocols = protocols;
@@ -585,7 +661,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The target name of the add-on.
+             * <p>The target name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud-rds-mysql</p>
              */
             public Builder targetAddonName(String targetAddonName) {
                 this.targetAddonName = targetAddonName;
@@ -599,6 +678,12 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonsResponseBody</p>
+     */
     public static class Environments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dependencies")
         private Dependencies dependencies;
@@ -686,7 +771,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private Policies policies; 
 
             /**
-             * The dependencies of the environment.
+             * <p>The dependencies of the environment.</p>
              */
             public Builder dependencies(Dependencies dependencies) {
                 this.dependencies = dependencies;
@@ -694,7 +779,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the environment.
+             * <p>The description of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The MySQL service is deployed in a Kubernetes cluster.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -702,7 +790,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the feature is enabled.
+             * <p>Indicates whether the feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -710,7 +801,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the environment.
+             * <p>The tag of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Container</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -718,7 +812,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the environment.
+             * <p>The name of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CS</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -726,7 +823,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The control policies in the environment.
+             * <p>The control policies in the environment.</p>
              */
             public Builder policies(Policies policies) {
                 this.policies = policies;
@@ -740,6 +837,12 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -923,7 +1026,10 @@ public class ListAddonsResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * The alias of the add-on.
+             * <p>The alias of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -931,7 +1037,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the add-on.
+             * <p>The tags of the add-on.</p>
              */
             public Builder categories(java.util.List < String > categories) {
                 this.categories = categories;
@@ -939,7 +1045,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The dashboards.
+             * <p>The dashboards.</p>
              */
             public Builder dashboards(java.util.List < Dashboards> dashboards) {
                 this.dashboards = dashboards;
@@ -947,7 +1053,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the add-on.
+             * <p>The description of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Monitor database indicators with MySQL Exporter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -955,7 +1064,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The supported environments.
+             * <p>The supported environments.</p>
              */
             public Builder environments(java.util.List < Environments> environments) {
                 this.environments = environments;
@@ -963,7 +1072,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the icon.
+             * <p>The URL of the icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx">http://xxxx</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -971,7 +1083,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The collection of keywords.
+             * <p>The collection of keywords.</p>
              */
             public Builder keywords(java.util.List < String > keywords) {
                 this.keywords = keywords;
@@ -979,7 +1091,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The language.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -987,7 +1102,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last created.
+             * <p>The time when the instance was last created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-22T16:56:29+08:00</p>
              */
             public Builder latestReleaseCreateTime(String latestReleaseCreateTime) {
                 this.latestReleaseCreateTime = latestReleaseCreateTime;
@@ -995,7 +1113,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the add-on.
+             * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1003,7 +1124,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the add-on can be installed only once.
+             * <p>Indicates whether the add-on can be installed only once.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder once(Boolean once) {
                 this.once = once;
@@ -1011,7 +1135,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario.
+             * <p>The scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -1019,7 +1146,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the agent.
+             * <p>The version of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1027,7 +1157,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>857</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;

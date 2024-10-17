@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRumAppRequest} extends {@link RequestModel}
  *
  * <p>UpdateRumAppRequest</p>
@@ -14,6 +15,10 @@ public class UpdateRumAppRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRestart")
     private Boolean autoRestart;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendServiceTraceRegion")
+    private String backendServiceTraceRegion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BonreeSDKConfigJson")
@@ -60,6 +65,7 @@ public class UpdateRumAppRequest extends Request {
     private UpdateRumAppRequest(Builder builder) {
         super(builder);
         this.autoRestart = builder.autoRestart;
+        this.backendServiceTraceRegion = builder.backendServiceTraceRegion;
         this.bonreeSDKConfigJson = builder.bonreeSDKConfigJson;
         this.description = builder.description;
         this.isSubscribe = builder.isSubscribe;
@@ -90,6 +96,13 @@ public class UpdateRumAppRequest extends Request {
      */
     public Boolean getAutoRestart() {
         return this.autoRestart;
+    }
+
+    /**
+     * @return backendServiceTraceRegion
+     */
+    public String getBackendServiceTraceRegion() {
+        return this.backendServiceTraceRegion;
     }
 
     /**
@@ -164,6 +177,7 @@ public class UpdateRumAppRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateRumAppRequest, Builder> {
         private Boolean autoRestart; 
+        private String backendServiceTraceRegion; 
         private String bonreeSDKConfigJson; 
         private String description; 
         private Boolean isSubscribe; 
@@ -182,6 +196,7 @@ public class UpdateRumAppRequest extends Request {
         private Builder(UpdateRumAppRequest request) {
             super(request);
             this.autoRestart = request.autoRestart;
+            this.backendServiceTraceRegion = request.backendServiceTraceRegion;
             this.bonreeSDKConfigJson = request.bonreeSDKConfigJson;
             this.description = request.description;
             this.isSubscribe = request.isSubscribe;
@@ -195,7 +210,10 @@ public class UpdateRumAppRequest extends Request {
         } 
 
         /**
-         * Specifies whether to restart the application the next day. Valid values: true and false.
+         * <p>Specifies whether to restart the application the next day. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRestart(Boolean autoRestart) {
             this.putQueryParameter("AutoRestart", autoRestart);
@@ -204,7 +222,22 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * The collection configurations of the mobile SDK. You can enable or disable collection configurations based on the app version.
+         * <p>The collection configurations of the mobile SDK. You can enable or disable collection configurations based on the app version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;moduleConfig&quot;:{&quot;enable&quot;:true,&quot;defaultConfig&quot;:{&quot;network&quot;:{&quot;enable&quot;:true},&quot;h5&quot;:{&quot;enable&quot;:true},&quot;routechange&quot;:{&quot;enable&quot;:true},&quot;crash&quot;:{&quot;enable&quot;:true},&quot;view&quot;:{&quot;enable&quot;:true},&quot;coollaunch&quot;:{&quot;enable&quot;:true},&quot;hotlaunch&quot;:{&quot;enable&quot;:true},&quot;action&quot;:{&quot;enable&quot;:true},&quot;lagstuck&quot;:{&quot;enable&quot;:true},&quot;lagfps&quot;:{&quot;enable&quot;:true},&quot;statechange&quot;:{&quot;enable&quot;:true},&quot;anr&quot;:{&quot;enable&quot;:true},&quot;customlog&quot;:{&quot;enable&quot;:true},&quot;customevent&quot;:{&quot;enable&quot;:true},&quot;custommetric&quot;:{&quot;enable&quot;:true}},&quot;versionConfigs&quot;:{&quot;1.1.0&quot;:{&quot;useCustom&quot;:true,&quot;customConfig&quot;:{&quot;network&quot;:{&quot;enable&quot;:true},&quot;h5&quot;:{&quot;enable&quot;:true},&quot;routechange&quot;:{&quot;enable&quot;:true},&quot;crash&quot;:{&quot;enable&quot;:true},&quot;view&quot;:{&quot;enable&quot;:true},&quot;coollaunch&quot;:{&quot;enable&quot;:true},&quot;hotlaunch&quot;:{&quot;enable&quot;:true},&quot;action&quot;:{&quot;enable&quot;:true},&quot;lagstuck&quot;:{&quot;enable&quot;:false},&quot;lagfps&quot;:{&quot;enable&quot;:false},&quot;statechange&quot;:{&quot;enable&quot;:true},&quot;anr&quot;:{&quot;enable&quot;:true},&quot;customlog&quot;:{&quot;enable&quot;:true},&quot;customevent&quot;:{&quot;enable&quot;:true},&quot;custommetric&quot;:{&quot;enable&quot;:true}}},&quot;1.2.0&quot;:{&quot;useCustom&quot;:false,&quot;customConfig&quot;:{}}}}}</p>
+         */
+        public Builder backendServiceTraceRegion(String backendServiceTraceRegion) {
+            this.putQueryParameter("BackendServiceTraceRegion", backendServiceTraceRegion);
+            this.backendServiceTraceRegion = backendServiceTraceRegion;
+            return this;
+        }
+
+        /**
+         * <p>The collection configurations of the mobile SDK. You can enable or disable collection configurations based on the app version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;moduleConfig&quot;:{&quot;enable&quot;:true,&quot;defaultConfig&quot;:{&quot;network&quot;:{&quot;enable&quot;:true},&quot;h5&quot;:{&quot;enable&quot;:true},&quot;routechange&quot;:{&quot;enable&quot;:true},&quot;crash&quot;:{&quot;enable&quot;:true},&quot;view&quot;:{&quot;enable&quot;:true},&quot;coollaunch&quot;:{&quot;enable&quot;:true},&quot;hotlaunch&quot;:{&quot;enable&quot;:true},&quot;action&quot;:{&quot;enable&quot;:true},&quot;lagstuck&quot;:{&quot;enable&quot;:true},&quot;lagfps&quot;:{&quot;enable&quot;:true},&quot;statechange&quot;:{&quot;enable&quot;:true},&quot;anr&quot;:{&quot;enable&quot;:true},&quot;customlog&quot;:{&quot;enable&quot;:true},&quot;customevent&quot;:{&quot;enable&quot;:true},&quot;custommetric&quot;:{&quot;enable&quot;:true}},&quot;versionConfigs&quot;:{&quot;1.1.0&quot;:{&quot;useCustom&quot;:true,&quot;customConfig&quot;:{&quot;network&quot;:{&quot;enable&quot;:true},&quot;h5&quot;:{&quot;enable&quot;:true},&quot;routechange&quot;:{&quot;enable&quot;:true},&quot;crash&quot;:{&quot;enable&quot;:true},&quot;view&quot;:{&quot;enable&quot;:true},&quot;coollaunch&quot;:{&quot;enable&quot;:true},&quot;hotlaunch&quot;:{&quot;enable&quot;:true},&quot;action&quot;:{&quot;enable&quot;:true},&quot;lagstuck&quot;:{&quot;enable&quot;:false},&quot;lagfps&quot;:{&quot;enable&quot;:false},&quot;statechange&quot;:{&quot;enable&quot;:true},&quot;anr&quot;:{&quot;enable&quot;:true},&quot;customlog&quot;:{&quot;enable&quot;:true},&quot;customevent&quot;:{&quot;enable&quot;:true},&quot;custommetric&quot;:{&quot;enable&quot;:true}}},&quot;1.2.0&quot;:{&quot;useCustom&quot;:false,&quot;customConfig&quot;:{}}}}}</p>
          */
         public Builder bonreeSDKConfigJson(String bonreeSDKConfigJson) {
             this.putQueryParameter("BonreeSDKConfigJson", bonreeSDKConfigJson);
@@ -213,7 +246,10 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * The description of the application.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -222,7 +258,10 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * Specifies whether you want to subscribe to the application. Valid values: true and false.
+         * <p>Specifies whether you want to subscribe to the application. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSubscribe(Boolean isSubscribe) {
             this.putQueryParameter("IsSubscribe", isSubscribe);
@@ -231,7 +270,10 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * The alias of the application.
+         * <p>The alias of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Android Test</p>
          */
         public Builder nickname(String nickname) {
             this.putQueryParameter("Nickname", nickname);
@@ -240,7 +282,11 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b5xxxxs@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -249,7 +295,10 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * RealRegionId.
+         * <p>Backend application deployment area (used in end-to-end link scenarios).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder realRegionId(String realRegionId) {
             this.putQueryParameter("RealRegionId", realRegionId);
@@ -258,7 +307,11 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -267,7 +320,10 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * Specifies whether to restart the application. Valid values: true and false.
+         * <p>Specifies whether to restart the application. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);
@@ -276,7 +332,10 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * The service domain name of the application. You can create, modify, and delete service domain name configurations.
+         * <p>The service domain name of the application. You can create, modify, and delete service domain name configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Op&quot;:&quot;Update&quot;,&quot;Domain&quot;:&quot;example.com&quot;,&quot;Config&quot;:{&quot;Description&quot;:&quot;message&quot;,&quot;Tracing&quot;:&quot;true&quot;,&quot;PropagatorTypes&quot;:[&quot;sw8&quot;]}}</p>
          */
         public Builder serviceDomainOperationJson(String serviceDomainOperationJson) {
             this.putQueryParameter("ServiceDomainOperationJson", serviceDomainOperationJson);
@@ -285,7 +344,10 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * Specifies whether to stop the application. Valid values: true and false.
+         * <p>Specifies whether to stop the application. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stop(Boolean stop) {
             this.putQueryParameter("Stop", stop);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIntegrationsRequest} extends {@link RequestModel}
  *
  * <p>DeleteIntegrationsRequest</p>
@@ -54,7 +55,11 @@ public class DeleteIntegrationsRequest extends Request {
         } 
 
         /**
-         * The ID of the alert integration.
+         * <p>The ID of the alert integration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder integrationId(Long integrationId) {
             this.putQueryParameter("IntegrationId", integrationId);

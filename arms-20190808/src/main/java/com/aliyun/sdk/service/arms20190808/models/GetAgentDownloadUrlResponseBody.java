@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentDownloadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetAgentDownloadUrlResponseBody</p>
@@ -49,7 +50,10 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The download URL of the ARMS agent.
+         * <p>The download URL of the ARMS agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://arms-apm-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/2.7.1.1/">http://arms-apm-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/2.7.1.1/</a></p>
          */
         public Builder armsAgentDownloadUrl(String armsAgentDownloadUrl) {
             this.armsAgentDownloadUrl = armsAgentDownloadUrl;
@@ -57,7 +61,10 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14043452-D486-4EA1-80C9-BA73FB81****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

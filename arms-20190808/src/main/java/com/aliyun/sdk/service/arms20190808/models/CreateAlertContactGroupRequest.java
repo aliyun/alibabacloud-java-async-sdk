@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAlertContactGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateAlertContactGroupRequest</p>
@@ -83,7 +84,11 @@ public class CreateAlertContactGroupRequest extends Request {
         } 
 
         /**
-         * The name of the alert contact group.
+         * <p>The name of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -92,7 +97,10 @@ public class CreateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The IDs of contacts in the contact group. Separate multiple contact IDs with spaces. You can call the SearchAlertContact operation to query the contact IDs. For more information, see [SearchAlertContact](~~130703~~).
+         * <p>The IDs of contacts in the contact group. Separate multiple contact IDs with spaces. You can call the SearchAlertContact operation to query the contact IDs. For more information, see <a href="https://help.aliyun.com/document_detail/130703.html">SearchAlertContact</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12* 23* 34*</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -101,7 +109,11 @@ public class CreateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: `cn-hangzhou`.
+         * <p>The region ID. Default value: <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrometheusInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListPrometheusInstancesRequest</p>
@@ -83,19 +84,22 @@ public class ListPrometheusInstancesRequest extends Request {
         } 
 
         /**
-         * The cluster type. If you do not specify this parameter, all cluster types are queried. Valid values:
-         * <p>
+         * <p>The cluster type. If you do not specify this parameter, all cluster types are queried. Valid values:</p>
+         * <ul>
+         * <li>cloud-product-prometheus: Prometheus instance for cloud services</li>
+         * <li>ManagedKubernetes: ACK managed cluster</li>
+         * <li>satellite: Prometheus instance for ARMS OpenTelemetry</li>
+         * <li>Ask: ACK Serverless cluster</li>
+         * <li>remote-write-prometheus: general-purpose Prometheus instance</li>
+         * <li>cloud-monitor-cmee: Hybrid Cloud Monitoring</li>
+         * <li>ExternalKubernetes: external Kubernetes cluster registered in ACK</li>
+         * <li>vpc-prometheus: Prometheus instance for ECS</li>
+         * <li>cloud-monitor-direct: cloud service self-monitoring</li>
+         * <li>Edge Kubernetes: ACK Edge cluster</li>
+         * </ul>
          * 
-         * *   cloud-product-prometheus: Prometheus instance for cloud services
-         * *   ManagedKubernetes: ACK managed cluster
-         * *   satellite: Prometheus instance for ARMS OpenTelemetry
-         * *   Ask: ACK Serverless cluster
-         * *   remote-write-prometheus: general-purpose Prometheus instance
-         * *   cloud-monitor-cmee: Hybrid Cloud Monitoring
-         * *   ExternalKubernetes: external Kubernetes cluster registered in ACK
-         * *   vpc-prometheus: Prometheus instance for ECS
-         * *   cloud-monitor-direct: cloud service self-monitoring
-         * *   Edge Kubernetes: ACK Edge cluster
+         * <strong>example:</strong>
+         * <p>cloud-product-prometheus</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -104,7 +108,11 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -113,11 +121,15 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain global aggregation instances. Valid values:
-         * <p>
+         * <p>Specifies whether to obtain global aggregation instances. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showGlobalView(Boolean showGlobalView) {
             this.putQueryParameter("ShowGlobalView", showGlobalView);

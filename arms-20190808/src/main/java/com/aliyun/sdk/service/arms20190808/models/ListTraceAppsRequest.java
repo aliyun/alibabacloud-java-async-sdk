@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTraceAppsRequest} extends {@link RequestModel}
  *
  * <p>ListTraceAppsRequest</p>
@@ -110,11 +111,14 @@ public class ListTraceAppsRequest extends Request {
         } 
 
         /**
-         * The type of the application that is associated with the alert rule. Valid values:
-         * <p>
+         * <p>The type of the application that is associated with the alert rule. Valid values:</p>
+         * <ul>
+         * <li>TRACE: Application Monitoring</li>
+         * <li>EBPF: Application Monitoring eBPF Edition</li>
+         * </ul>
          * 
-         * - TRACE: Application Monitoring
-         * - EBPF: Application Monitoring eBPF Edition
+         * <strong>example:</strong>
+         * <p>TRACE</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -123,7 +127,10 @@ public class ListTraceAppsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -132,7 +139,11 @@ public class ListTraceAppsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +152,10 @@ public class ListTraceAppsRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -150,7 +164,7 @@ public class ListTraceAppsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -165,6 +179,12 @@ public class ListTraceAppsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTraceAppsRequest} extends {@link TeaModel}
+     *
+     * <p>ListTraceAppsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -204,7 +224,10 @@ public class ListTraceAppsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +235,10 @@ public class ListTraceAppsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

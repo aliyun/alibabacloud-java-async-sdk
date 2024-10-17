@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteScenarioResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteScenarioResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteScenarioResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA24D522-AD35-47B8-8CB2-ADBC382B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class DeleteScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
-         * <p>
+         * <p>Indicates whether the request is successful.</p>
+         * <ul>
+         * <li><code>true</code>: successful</li>
+         * <li><code>false</code>: failed</li>
+         * </ul>
          * 
-         * *   `true`: successful
-         * *   `false`: failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

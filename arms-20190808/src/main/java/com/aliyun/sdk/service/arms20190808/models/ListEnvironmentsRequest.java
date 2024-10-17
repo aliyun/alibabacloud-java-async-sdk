@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvironmentsRequest} extends {@link RequestModel}
  *
  * <p>ListEnvironmentsRequest</p>
@@ -151,7 +152,10 @@ public class ListEnvironmentsRequest extends Request {
         } 
 
         /**
-         * The add-on name. You must specify at least one of the AddonName and EnvironmentType parameters.
+         * <p>The add-on name. You must specify at least one of the AddonName and EnvironmentType parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace-java</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
@@ -160,7 +164,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cff30f0d67d7542dfb05bd114b4b1d7af</p>
          */
         public Builder bindResourceId(String bindResourceId) {
             this.putQueryParameter("BindResourceId", bindResourceId);
@@ -169,46 +176,39 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * The environment type. You must specify at least one of the AddonName and EnvironmentType parameters.
-         * <p>
+         * <p>The environment type. You must specify at least one of the AddonName and EnvironmentType parameters.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>CS</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   CS
+         * <p>Container Service for Kubernetes (ACK)</p>
+         * <!-- -->
+         * </li>
+         * <li><p>ECS</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>Elastic Compute Service (ECS)</p>
+         * <!-- -->
+         * </li>
+         * <li><p>Cloud</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     Container Service for Kubernetes (ACK)
+         * <p>cloud service</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   ECS
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     Elastic Compute Service (ECS)
-         * 
-         *     <!-- -->
-         * 
-         * *   Cloud
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     cloud service
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>CS</p>
          */
         public Builder environmentType(String environmentType) {
             this.putQueryParameter("EnvironmentType", environmentType);
@@ -217,16 +217,19 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * The payable resource plan.
-         * <p>
+         * <p>The payable resource plan.</p>
+         * <ul>
+         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+         * <li>Otherwise, leave the parameter empty.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CS_Pro: Container Monitoring Pro</li>
+         * <li>CS_Basic: Container Monitoring Basic</li>
+         * </ul>
          * 
-         * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
-         * *   Otherwise, leave the parameter empty.
-         * 
-         * Valid values:
-         * 
-         * *   CS_Pro: Container Monitoring Pro
-         * *   CS_Basic: Container Monitoring Basic
+         * <strong>example:</strong>
+         * <p>CS_Pro</p>
          */
         public Builder feePackage(String feePackage) {
             this.putQueryParameter("FeePackage", feePackage);
@@ -235,7 +238,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * The region IDs.
+         * <p>The region IDs.</p>
          */
         public Builder filterRegionIds(String filterRegionIds) {
             this.putQueryParameter("FilterRegionIds", filterRegionIds);
@@ -244,7 +247,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +259,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzfurdatohtka</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -262,7 +271,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -278,6 +287,12 @@ public class ListEnvironmentsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnvironmentsRequest} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -317,7 +332,10 @@ public class ListEnvironmentsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -325,7 +343,10 @@ public class ListEnvironmentsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gfn_web_outbound_add</p>
              */
             public Builder value(String value) {
                 this.value = value;

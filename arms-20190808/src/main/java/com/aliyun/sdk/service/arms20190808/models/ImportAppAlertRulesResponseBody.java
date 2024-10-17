@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportAppAlertRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ImportAppAlertRulesResponseBody</p>
@@ -49,7 +50,10 @@ public class ImportAppAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the alert rule.
+         * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[12174**]</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class ImportAppAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

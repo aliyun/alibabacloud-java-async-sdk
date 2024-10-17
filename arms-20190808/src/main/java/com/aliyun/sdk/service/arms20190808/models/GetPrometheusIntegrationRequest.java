@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPrometheusIntegrationRequest} extends {@link RequestModel}
  *
  * <p>GetPrometheusIntegrationRequest</p>
@@ -99,7 +100,11 @@ public class GetPrometheusIntegrationRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance. Valid values: aliyun-cs and ecs.
+         * <p>The ID of the Prometheus instance. Valid values: aliyun-cs and ecs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +113,11 @@ public class GetPrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The ID of the exporter.
+         * <p>The ID of the exporter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2893</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +126,11 @@ public class GetPrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
+         * <p>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);
@@ -126,7 +139,11 @@ public class GetPrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSyntheticTaskMonitorsResponseBody} extends {@link TeaModel}
  *
  * <p>GetSyntheticTaskMonitorsResponseBody</p>
@@ -73,15 +74,18 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code returned.
-         * <p>
+         * <p>The status code returned.</p>
+         * <ul>
+         * <li>1001: The request was successful.</li>
+         * <li>1002: The request failed.</li>
+         * <li>1003: Parameter errors occurred.</li>
+         * <li>1004: Authentication failed.</li>
+         * <li>1006: The task does not exist.</li>
+         * <li>1099: Internal errors occurred.</li>
+         * </ul>
          * 
-         * *   1001: The request was successful.
-         * *   1002: The request failed.
-         * *   1003: Parameter errors occurred.
-         * *   1004: Authentication failed.
-         * *   1006: The task does not exist.
-         * *   1099: Internal errors occurred.
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -89,7 +93,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the monitoring point.
+         * <p>The details of the monitoring point.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -97,7 +101,10 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned when the request failed.
+         * <p>The message that is returned when the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -105,7 +112,10 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,6 +128,12 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSyntheticTaskMonitorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyntheticTaskMonitorsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Busy")
         private Long busy;
@@ -217,11 +233,14 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             private String netServiceName; 
 
             /**
-             * The task status.
-             * <p>
+             * <p>The task status.</p>
+             * <ul>
+             * <li>0: active</li>
+             * <li>1: busy</li>
+             * </ul>
              * 
-             * *   0: active
-             * *   1: busy
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder busy(Long busy) {
                 this.busy = busy;
@@ -229,7 +248,10 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the city to which the monitoring point belongs.
+             * <p>The name of the city to which the monitoring point belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -237,7 +259,10 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the city to which the monitoring point belongs.
+             * <p>The ID of the city to which the monitoring point belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1100101</p>
              */
             public Builder cityCode(Long cityCode) {
                 this.cityCode = cityCode;
@@ -245,11 +270,14 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The client type:
-             * <p>
+             * <p>The client type:</p>
+             * <ul>
+             * <li>1: IDC</li>
+             * <li>2: Last mile</li>
+             * </ul>
              * 
-             * *   1: IDC
-             * *   2: Last mile
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clientType(Long clientType) {
                 this.clientType = clientType;
@@ -257,7 +285,10 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the monitoring point belongs.
+             * <p>The region to which the monitoring point belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder district(String district) {
                 this.district = district;
@@ -265,7 +296,10 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the carrier.
+             * <p>The ID of the carrier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder netServiceId(Long netServiceId) {
                 this.netServiceId = netServiceId;
@@ -273,7 +307,10 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the carrier.
+             * <p>The name of the carrier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX</p>
              */
             public Builder netServiceName(String netServiceName) {
                 this.netServiceName = netServiceName;

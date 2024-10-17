@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPrometheusGlobalViewResponseBody} extends {@link TeaModel}
  *
  * <p>AddPrometheusGlobalViewResponseBody</p>
@@ -73,7 +74,10 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 状态码。说明 200表示成功。
+         * <p>状态码。说明 200表示成功。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the array object.
+         * <p>The information about the array object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果的提示信息。
+         * <p>返回结果的提示信息。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddPrometheusGlobalViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddPrometheusGlobalViewResponseBody</p>
+     */
     public static class Info extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedInstances")
         private String failedInstances;
@@ -161,7 +177,10 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The list of instances that failed to be added.
+             * <p>The list of instances that failed to be added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;sourceName&quot;: &quot;Data source name- ArmsPrometheus&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;userId&quot;:&quot;UserID&quot;,&quot;clusterId&quot;:&quot;ClusterId&quot;,}]</p>
              */
             public Builder failedInstances(String failedInstances) {
                 this.failedInstances = failedInstances;
@@ -169,7 +188,10 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the global aggregation instance.
+             * <p>The ID of the global aggregation instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global-v2-cn-1483223059272121-jmjjfznz</p>
              */
             public Builder globalViewClusterId(String globalViewClusterId) {
                 this.globalViewClusterId = globalViewClusterId;
@@ -177,7 +199,10 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -191,6 +216,12 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddPrometheusGlobalViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddPrometheusGlobalViewResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Info")
         private Info info;
@@ -242,7 +273,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The Info-level information.
+             * <p>The Info-level information.</p>
              */
             public Builder info(Info info) {
                 this.info = info;
@@ -250,7 +281,10 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -258,11 +292,14 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallManagedPrometheusResponseBody} extends {@link TeaModel}
  *
  * <p>InstallManagedPrometheusResponseBody</p>
@@ -85,7 +86,10 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * The response content. In most cases, the installation status of the Prometheus agent is returned.
+         * <p>The response content. In most cases, the installation status of the Prometheus agent is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +108,10 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the Prometheus agent failed to be installed.
+         * <p>The error message returned if the Prometheus agent failed to be installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcId is blank</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String	2A0CEDF1-06FE-44AC-8E21-21A5BE65****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Prometheus agent was installed.
+         * <p>Indicates whether the Prometheus agent was installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

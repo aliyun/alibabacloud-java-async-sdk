@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenArmsDefaultSLRResponseBody} extends {@link TeaModel}
  *
  * <p>OpenArmsDefaultSLRResponseBody</p>
@@ -49,11 +50,14 @@ public class OpenArmsDefaultSLRResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The call was successful.</li>
+         * <li><code>false</code>: The call failed.</li>
+         * </ul>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -61,7 +65,10 @@ public class OpenArmsDefaultSLRResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53CACA70-2CF7-490C-BD06-1A2AE4EB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

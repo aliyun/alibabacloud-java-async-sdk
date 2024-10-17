@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRetcodeAppsRequest} extends {@link RequestModel}
  *
  * <p>ListRetcodeAppsRequest</p>
@@ -82,7 +83,11 @@ public class ListRetcodeAppsRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -91,7 +96,10 @@ public class ListRetcodeAppsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
+         * <p>The ID of the resource group. You can obtain the resource group ID in the <strong>Resource Management</strong> console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -100,7 +108,7 @@ public class ListRetcodeAppsRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the task.
+         * <p>The tags that you want to add to the task.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -115,6 +123,12 @@ public class ListRetcodeAppsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListRetcodeAppsRequest} extends {@link TeaModel}
+     *
+     * <p>ListRetcodeAppsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -154,7 +168,10 @@ public class ListRetcodeAppsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -162,7 +179,10 @@ public class ListRetcodeAppsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

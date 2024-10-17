@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrometheusAlertRuleRequest} extends {@link RequestModel}
  *
  * <p>DescribePrometheusAlertRuleRequest</p>
@@ -68,7 +69,11 @@ public class DescribePrometheusAlertRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.
+         * <p>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3888704</p>
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -77,7 +82,10 @@ public class DescribePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * The ID of the Prometheus instance.
+         * <p>The ID of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

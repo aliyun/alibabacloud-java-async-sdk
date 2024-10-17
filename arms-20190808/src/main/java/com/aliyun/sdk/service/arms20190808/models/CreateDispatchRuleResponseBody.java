@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDispatchRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDispatchRuleResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the dispatch policy.
+         * <p>The ID of the dispatch policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10413</p>
          */
         public Builder dispatchRuleId(Long dispatchRuleId) {
             this.dispatchRuleId = dispatchRuleId;
@@ -57,7 +61,10 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

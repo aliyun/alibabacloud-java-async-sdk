@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWebhookContactRequest} extends {@link RequestModel}
  *
  * <p>DeleteWebhookContactRequest</p>
@@ -54,7 +55,11 @@ public class DeleteWebhookContactRequest extends Request {
         } 
 
         /**
-         * The ID of the webhook alert contact.
+         * <p>The ID of the webhook alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder webhookId(Long webhookId) {
             this.putQueryParameter("WebhookId", webhookId);

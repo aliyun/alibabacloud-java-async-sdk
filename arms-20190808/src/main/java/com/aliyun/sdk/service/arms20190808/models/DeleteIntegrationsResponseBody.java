@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIntegrationsResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteIntegrationsResponseBody</p>
@@ -49,11 +50,14 @@ public class DeleteIntegrationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the alert integration is deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the alert integration is deleted. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -61,7 +65,10 @@ public class DeleteIntegrationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

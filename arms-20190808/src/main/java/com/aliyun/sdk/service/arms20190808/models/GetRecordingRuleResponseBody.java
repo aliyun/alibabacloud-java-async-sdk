@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRecordingRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetRecordingRuleResponseBody</p>
@@ -73,7 +74,10 @@ public class GetRecordingRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Status code. 200 is success, other status codes are exceptions.
+         * <p>Status code. 200 is success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class GetRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The recording rule.
+         * <p>The recording rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--- groups: - name: &quot;recording_demo&quot;   rules:   - expr: &quot;sum(jvm_memory_max_bytes)&quot;     record: &quot;rate_coredns_demo&quot;</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class GetRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Returns a hint message for the result.
+         * <p>Returns a hint message for the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class GetRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FEA6D00-317F-45E3-9004-7FB8B0B7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataBonreeSDKConfigModuleConfigVersionConfigsValue} extends {@link TeaModel}
  *
  * <p>DataBonreeSDKConfigModuleConfigVersionConfigsValue</p>
@@ -73,7 +74,10 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         private Long updateTime; 
 
         /**
-         * Indicates whether the custom configuration is used.
+         * <p>Indicates whether the custom configuration is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useCustom(Boolean useCustom) {
             this.useCustom = useCustom;
@@ -81,7 +85,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         }
 
         /**
-         * The custom configuration.
+         * <p>The custom configuration.</p>
          */
         public Builder customConfig(java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue > customConfig) {
             this.customConfig = customConfig;
@@ -89,7 +93,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         }
 
         /**
-         * The description of the version configuration.
+         * <p>The description of the version configuration.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -97,7 +101,10 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         }
 
         /**
-         * The time when the version configuration was updated.
+         * <p>The time when the version configuration was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721112372055</p>
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;

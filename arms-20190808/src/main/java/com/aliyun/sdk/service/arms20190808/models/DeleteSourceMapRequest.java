@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSourceMapRequest} extends {@link RequestModel}
  *
  * <p>DeleteSourceMapRequest</p>
@@ -84,7 +85,8 @@ public class DeleteSourceMapRequest extends Request {
         } 
 
         /**
-         * The IDs of the SourceMap files.
+         * <p>The IDs of the SourceMap files.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder fidList(java.util.List < String > fidList) {
             String fidListShrink = shrink(fidList, "FidList", "json");
@@ -94,7 +96,11 @@ public class DeleteSourceMapRequest extends Request {
         }
 
         /**
-         * The process identifier (PID) of the application.
+         * <p>The process identifier (PID) of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atc889zkcf@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -103,7 +109,11 @@ public class DeleteSourceMapRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

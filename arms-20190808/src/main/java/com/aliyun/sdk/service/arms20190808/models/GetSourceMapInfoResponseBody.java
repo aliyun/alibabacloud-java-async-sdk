@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSourceMapInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetSourceMapInfoResponseBody</p>
@@ -49,7 +50,10 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         private java.util.List < SourceMapList> sourceMapList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the SourceMap file.
+         * <p>The details of the SourceMap file.</p>
          */
         public Builder sourceMapList(java.util.List < SourceMapList> sourceMapList) {
             this.sourceMapList = sourceMapList;
@@ -70,6 +74,12 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSourceMapInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSourceMapInfoResponseBody</p>
+     */
     public static class SourceMapList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fid")
         private String fid;
@@ -145,7 +155,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The ID of the SourceMap file.
+             * <p>The ID of the SourceMap file.</p>
              */
             public Builder fid(String fid) {
                 this.fid = fid;
@@ -153,7 +163,10 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SourceMap file.
+             * <p>The name of the SourceMap file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.sourcemap.js</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -161,7 +174,10 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the file. Unit: KB.
+             * <p>The size of the file. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>201223</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -169,7 +185,10 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the file was uploaded.
+             * <p>The timestamp that indicates when the file was uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590657842000</p>
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;
@@ -177,7 +196,10 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the file.
+             * <p>The version of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

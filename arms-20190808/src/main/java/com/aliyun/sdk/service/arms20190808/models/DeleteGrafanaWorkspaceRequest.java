@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGrafanaWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>DeleteGrafanaWorkspaceRequest</p>
@@ -69,7 +70,11 @@ public class DeleteGrafanaWorkspaceRequest extends Request {
         } 
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-rnglkcdrntlhk0****</p>
          */
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
@@ -78,7 +83,11 @@ public class DeleteGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: cn-hangzhou.
+         * <p>The region ID. Default value: cn-hangzhou.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

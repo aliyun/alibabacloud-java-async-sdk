@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSyntheticTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteSyntheticTaskRequest</p>
@@ -69,7 +70,11 @@ public class DeleteSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * The region ID. Default value: cn-hangzhou.
+         * <p>The region ID. Default value: cn-hangzhou.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +83,8 @@ public class DeleteSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The task IDs.
+         * <p>The task IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder taskIds(java.util.List < String > taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

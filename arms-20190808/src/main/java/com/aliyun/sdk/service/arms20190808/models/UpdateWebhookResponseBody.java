@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWebhookResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateWebhookResponseBody</p>
@@ -49,11 +50,14 @@ public class UpdateWebhookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result returned. Valid values:
-         * <p>
+         * <p>The result returned. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The modification is successful.</li>
+         * <li><code>false</code>: The modification fails.</li>
+         * </ul>
          * 
-         * *   `true`: The modification is successful.
-         * *   `false`: The modification fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -61,7 +65,10 @@ public class UpdateWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16AF921B-8187-489F-9913-43C808B4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

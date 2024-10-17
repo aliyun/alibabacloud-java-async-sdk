@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlertRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAlertRulesResponseBody</p>
@@ -49,11 +50,14 @@ public class DeleteAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the alert rule was deleted.
-         * <p>
+         * <p>Indicates whether the alert rule was deleted.</p>
+         * <ul>
+         * <li><code>true</code>: The alert rule was deleted.</li>
+         * <li><code>false</code>: The alert rule failed to be deleted.</li>
+         * </ul>
          * 
-         * *   `true`: The alert rule was deleted.
-         * *   `false`: The alert rule failed to be deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -61,7 +65,10 @@ public class DeleteAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

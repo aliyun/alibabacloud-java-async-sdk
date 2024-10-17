@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlertContactResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAlertContactResponseBody</p>
@@ -49,11 +50,14 @@ public class UpdateAlertContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the alert contact was updated. Valid values:
-         * <p>
+         * <p>Indicates whether the alert contact was updated. Valid values:</p>
+         * <ul>
+         * <li>true: The alert contact was updated.</li>
+         * <li>false: The alert contact failed to be updated.</li>
+         * </ul>
          * 
-         * *   true: The alert contact was updated.
-         * *   false: The alert contact failed to be updated.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -61,7 +65,10 @@ public class UpdateAlertContactResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

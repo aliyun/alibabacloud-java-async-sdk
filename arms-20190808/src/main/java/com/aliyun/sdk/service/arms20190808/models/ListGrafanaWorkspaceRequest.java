@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGrafanaWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>ListGrafanaWorkspaceRequest</p>
@@ -96,7 +97,10 @@ public class ListGrafanaWorkspaceRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -105,7 +109,11 @@ public class ListGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: cn-hangzhou.
+         * <p>The region ID. Default value: cn-hangzhou.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -114,7 +122,10 @@ public class ListGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Prometheus instance belongs.
+         * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -123,7 +134,7 @@ public class ListGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -139,6 +150,12 @@ public class ListGrafanaWorkspaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListGrafanaWorkspaceRequest} extends {@link TeaModel}
+     *
+     * <p>ListGrafanaWorkspaceRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -178,7 +195,10 @@ public class ListGrafanaWorkspaceRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -186,7 +206,10 @@ public class ListGrafanaWorkspaceRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

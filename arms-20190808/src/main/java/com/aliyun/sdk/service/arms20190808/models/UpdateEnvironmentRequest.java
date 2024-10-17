@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>UpdateEnvironmentRequest</p>
@@ -111,7 +112,10 @@ public class UpdateEnvironmentRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -120,7 +124,11 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * The environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -129,7 +137,10 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * The name of the environment instance.
+         * <p>The name of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env1</p>
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -138,11 +149,14 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * The payable resource plan. Valid values:
-         * <p>
+         * <p>The payable resource plan. Valid values:</p>
+         * <ul>
+         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+         * <li>Otherwise, leave the parameter empty.</li>
+         * </ul>
          * 
-         * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
-         * *   Otherwise, leave the parameter empty.
+         * <strong>example:</strong>
+         * <p>CS_Basic</p>
          */
         public Builder feePackage(String feePackage) {
             this.putQueryParameter("FeePackage", feePackage);
@@ -151,7 +165,11 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAppListRequest} extends {@link RequestModel}
  *
  * <p>DeleteAppListRequest</p>
@@ -67,7 +68,7 @@ public class DeleteAppListRequest extends Request {
         } 
 
         /**
-         * The PIDs of the applications monitored by ARMS Application Monitoring.
+         * <p>The PIDs of the applications monitored by ARMS Application Monitoring.</p>
          */
         public Builder pids(java.util.List < String > pids) {
             this.putQueryParameter("Pids", pids);
@@ -76,7 +77,10 @@ public class DeleteAppListRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

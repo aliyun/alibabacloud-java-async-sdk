@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlertsRequest} extends {@link RequestModel}
  *
  * <p>ListAlertsRequest</p>
@@ -223,7 +224,10 @@ public class ListAlertsRequest extends Request {
         } 
 
         /**
-         * The name of the alert rule.
+         * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test alert</p>
          */
         public Builder alertName(String alertName) {
             this.putQueryParameter("AlertName", alertName);
@@ -232,7 +236,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * The ID of the notification policy.
+         * <p>The ID of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder dispatchRuleId(Long dispatchRuleId) {
             this.putQueryParameter("DispatchRuleId", dispatchRuleId);
@@ -241,7 +248,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * The end time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.
+         * <p>The end time of the alert sending history that you want to query. Specify the time in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-22 23:59:59</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -250,28 +260,31 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * The integration type.
-         * <p>
+         * <p>The integration type.</p>
+         * <ul>
+         * <li>ARMS</li>
+         * <li>CLOUD_MONITOR</li>
+         * <li>MSE</li>
+         * <li>ARMS_CLOUD_DIALTEST</li>
+         * <li>PROMETHEUS</li>
+         * <li>LOG_SERVICE</li>
+         * <li>CUSTOM</li>
+         * <li>ARMS_PROMETHEUS</li>
+         * <li>ARMS_APP_MON</li>
+         * <li>ARMS_FRONT_MON</li>
+         * <li>ARMS_CUSTOM</li>
+         * <li>XTRACE</li>
+         * <li>GRAFANA</li>
+         * <li>ZABBIX</li>
+         * <li>SKYWALKING</li>
+         * <li>EVENT_BRIDGE</li>
+         * <li>NAGIOS</li>
+         * <li>OPENFALCON</li>
+         * <li>ARMS_INSIGHTS</li>
+         * </ul>
          * 
-         * *   ARMS
-         * *   CLOUD_MONITOR
-         * *   MSE
-         * *   ARMS_CLOUD_DIALTEST
-         * *   PROMETHEUS
-         * *   LOG_SERVICE
-         * *   CUSTOM
-         * *   ARMS_PROMETHEUS
-         * *   ARMS_APP_MON
-         * *   ARMS_FRONT_MON
-         * *   ARMS_CUSTOM
-         * *   XTRACE
-         * *   GRAFANA
-         * *   ZABBIX
-         * *   SKYWALKING
-         * *   EVENT_BRIDGE
-         * *   NAGIOS
-         * *   OPENFALCON
-         * *   ARMS_INSIGHTS
+         * <strong>example:</strong>
+         * <p>ARMS_APP_MON</p>
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);
@@ -289,7 +302,11 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -298,7 +315,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -307,7 +327,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.
+         * <p>The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P6</p>
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -316,11 +339,14 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the activities that correspond to alerts. Valid values:
-         * <p>
+         * <p>Specifies whether to query the activities that correspond to alerts. Valid values:</p>
+         * <ul>
+         * <li><code>false</code> (default value): The activities are not queried.</li>
+         * <li><code>true</code>: The activities in the last three days are queried.</li>
+         * </ul>
          * 
-         * *   `false` (default value): The activities are not queried.
-         * *   `true`: The activities in the last three days are queried.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showActivities(Boolean showActivities) {
             this.putQueryParameter("ShowActivities", showActivities);
@@ -329,11 +355,14 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the events that correspond to alerts. Valid values:
-         * <p>
+         * <p>Specifies whether to query the events that correspond to alerts. Valid values:</p>
+         * <ul>
+         * <li><code>false</code> (default value): The events are not queried.</li>
+         * <li><code>true</code>: The events are queried.</li>
+         * </ul>
          * 
-         * *   `false` (default value): The events are not queried.
-         * *   `true`: The events are queried.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showEvents(Boolean showEvents) {
             this.putQueryParameter("ShowEvents", showEvents);
@@ -342,7 +371,11 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * The number of alerts to return on each page.
+         * <p>The number of alerts to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -351,7 +384,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * The start time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.
+         * <p>The start time of the alert sending history that you want to query. Specify the time in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -360,12 +396,15 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * The status of the alert. Valid values:
-         * <p>
+         * <p>The status of the alert. Valid values:</p>
+         * <ul>
+         * <li>0: The alert is pending.</li>
+         * <li>1: The alert is being handled.</li>
+         * <li>2: The alert is handled.</li>
+         * </ul>
          * 
-         * *   0: The alert is pending.
-         * *   1: The alert is being handled.
-         * *   2: The alert is handled.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder state(Long state) {
             this.putQueryParameter("State", state);

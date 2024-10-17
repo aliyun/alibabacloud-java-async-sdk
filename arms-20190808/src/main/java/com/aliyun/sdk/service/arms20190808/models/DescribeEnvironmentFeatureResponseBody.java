@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnvironmentFeatureResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnvironmentFeatureResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01FF8DD9-A09C-47A1-895A-B6E321BE77B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnvironmentFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnvironmentFeatureResponseBody</p>
+     */
     public static class Feature extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -277,7 +296,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The alias of the feature.
+             * <p>The alias of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus agent.</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -285,7 +307,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the feature.
+             * <p>The configuration of the feature.</p>
              */
             public Builder config(java.util.Map < String, String > config) {
                 this.config = config;
@@ -293,7 +315,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the feature.
+             * <p>The description of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Collect Metric data using the Prometheus collection specification.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -301,7 +326,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The environment ID.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -309,7 +337,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the icon.
+             * <p>The URL of the icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx">http://xxx</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -317,7 +348,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The language.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -325,7 +359,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version number.
+             * <p>The latest version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.17</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -333,7 +370,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the component is fully managed.
+             * <p>Indicates whether the component is fully managed.</p>
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -341,7 +378,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>metric-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -349,15 +389,18 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The installation status of the agent.
-             * <p>
+             * <p>The installation status of the agent.</p>
+             * <ul>
+             * <li>Installing: The agent is being installed.</li>
+             * <li>Success: The agent is installed.</li>
+             * <li>Failed: The agent failed to be installed.</li>
+             * <li>UnInstall: The agent is uninstalled or has not been installed.</li>
+             * <li>Uninstalling: The agent is being uninstalled.</li>
+             * <li>UnInstallFailed: The agent failed to be uninstalled.</li>
+             * </ul>
              * 
-             * *   Installing: The agent is being installed.
-             * *   Success: The agent is installed.
-             * *   Failed: The agent failed to be installed.
-             * *   UnInstall: The agent is uninstalled or has not been installed.
-             * *   Uninstalling: The agent is being uninstalled.
-             * *   UnInstallFailed: The agent failed to be uninstalled.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -365,7 +408,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.17</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -379,6 +425,12 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnvironmentFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnvironmentFeatureResponseBody</p>
+     */
     public static class FeatureContainers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
         private java.util.List < String > args;
@@ -430,7 +482,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The container parameters.
+             * <p>The container parameters.</p>
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -438,7 +490,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The container image.
+             * <p>The container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-cn-hangzhou-vpc.ack.aliyuncs.com/acs/arms-prometheus-agent:v4.0.0</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -446,7 +501,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The container name.
+             * <p>The container name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prometheus-operator</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -460,6 +518,12 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnvironmentFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnvironmentFeatureResponseBody</p>
+     */
     public static class FeatureStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindResourceId")
         private String bindResourceId;
@@ -571,7 +635,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c013823b55e4b4d6bb6b6f28682bd38a7</p>
              */
             public Builder bindResourceId(String bindResourceId) {
                 this.bindResourceId = bindResourceId;
@@ -579,7 +646,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The containers of the feature.
+             * <p>The containers of the feature.</p>
              */
             public Builder featureContainers(java.util.List < FeatureContainers> featureContainers) {
                 this.featureContainers = featureContainers;
@@ -587,7 +654,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the pod.
+             * <p>The IP address of the pod.</p>
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -595,7 +662,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The Kubernetes resource name of the feature.
+             * <p>The Kubernetes resource name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prometheus-ack-arms-prometheus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -603,7 +673,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -611,7 +684,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1c9fcexoalq9po6cp8</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -619,12 +695,15 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the agent. Valid values:
-             * <p>
+             * <p>The status of the agent. Valid values:</p>
+             * <ul>
+             * <li>Success: The agent is running.</li>
+             * <li>Failed: The agent failed to run.</li>
+             * <li>Not Found: The agent is not installed.</li>
+             * </ul>
              * 
-             * *   Success: The agent is running.
-             * *   Failed: The agent failed to run.
-             * *   Not Found: The agent is not installed.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -632,7 +711,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1qt6ict0dbxgv4wer8l</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -646,6 +728,12 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnvironmentFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnvironmentFeatureResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Feature")
         private Feature feature;
@@ -685,7 +773,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private FeatureStatus featureStatus; 
 
             /**
-             * The installation information about the feature.
+             * <p>The installation information about the feature.</p>
              */
             public Builder feature(Feature feature) {
                 this.feature = feature;
@@ -693,7 +781,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the feature.
+             * <p>The status of the feature.</p>
              */
             public Builder featureStatus(FeatureStatus featureStatus) {
                 this.featureStatus = featureStatus;

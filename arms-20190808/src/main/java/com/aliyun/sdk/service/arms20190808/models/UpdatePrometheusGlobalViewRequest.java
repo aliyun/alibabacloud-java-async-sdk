@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusGlobalViewRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrometheusGlobalViewRequest</p>
@@ -140,10 +141,14 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):
-         * <p>
-         * - true
-         * - false
+         * <p>To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allSubClustersSuccess(Boolean allSubClustersSuccess) {
             this.putQueryParameter("AllSubClustersSuccess", allSubClustersSuccess);
@@ -152,7 +157,11 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The ID of the Prometheus instance.
+         * <p>The ID of the Prometheus instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -161,7 +170,10 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The name of the global aggregation instance.
+         * <p>The name of the global aggregation instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zyGlobalView</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -170,7 +182,10 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The region ID of the global aggregation instance.
+         * <p>The region ID of the global aggregation instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder mostRegionId(String mostRegionId) {
             this.putQueryParameter("MostRegionId", mostRegionId);
@@ -179,7 +194,11 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the Prometheus instance resides.
+         * <p>The ID of the region in which the Prometheus instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -188,7 +207,10 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Prometheus instance belongs.
+         * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -197,7 +219,11 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The data sources of the Prometheus instance for GlobalView.
+         * <p>The data sources of the Prometheus instance for GlobalView.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;headers&quot;:{ }, &quot;regionId&quot;:&quot;cn-hangzhou&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;extras&quot;:{ }, &quot;clusterId&quot;:&quot;c39a1048921e04f***********&quot;, &quot;sourceName&quot;:&quot;arms-luyao-test&quot;, &quot;dataSource&quot;:&quot;&quot;, &quot;userId&quot;:&quot;1672753***********&quot; }, { &quot;headers&quot;:{ }, &quot;regionId&quot;:&quot;cn-beijing&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;extras&quot;:{ }, &quot;clusterId&quot;:&quot;c6b6485496d5b40***********&quot;, &quot;sourceName&quot;:&quot;agent-321-test&quot;, &quot;dataSource&quot;:&quot;&quot;, &quot;userId&quot;:&quot;1672753***********&quot; }, { &quot;headers&quot;:{ }, &quot;regionId&quot;:&quot;cn-zhangjiakou&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;extras&quot;:{ }, &quot;clusterId&quot;:&quot;c261a4f3200c446***********&quot;, &quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;, &quot;dataSource&quot;:&quot;&quot;, &quot;userId&quot;:&quot;1672753***********&quot; } ]</p>
          */
         public Builder subClustersJson(String subClustersJson) {
             this.putQueryParameter("SubClustersJson", subClustersJson);

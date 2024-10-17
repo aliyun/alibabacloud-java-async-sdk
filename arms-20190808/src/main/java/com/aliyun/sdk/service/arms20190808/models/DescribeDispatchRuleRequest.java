@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDispatchRuleRequest} extends {@link RequestModel}
  *
  * <p>DescribeDispatchRuleRequest</p>
@@ -69,7 +70,11 @@ public class DescribeDispatchRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the dispatch policy.
+         * <p>The ID of the dispatch policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -78,7 +83,11 @@ public class DescribeDispatchRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

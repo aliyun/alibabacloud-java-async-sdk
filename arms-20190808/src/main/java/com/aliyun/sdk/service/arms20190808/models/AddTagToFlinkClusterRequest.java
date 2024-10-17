@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTagToFlinkClusterRequest} extends {@link RequestModel}
  *
  * <p>AddTagToFlinkClusterRequest</p>
@@ -128,7 +129,11 @@ public class AddTagToFlinkClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance.
+         * <p>The ID of the Prometheus instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5defa51f******c92bd2ef5fb093269</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -137,7 +142,11 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * The ID of the Flink workspace.
+         * <p>The ID of the Flink workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab18f***93744d</p>
          */
         public Builder flinkWorkSpaceId(String flinkWorkSpaceId) {
             this.putQueryParameter("FlinkWorkSpaceId", flinkWorkSpaceId);
@@ -146,7 +155,11 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * The name of the Flink workspace.
+         * <p>The name of the Flink workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flink-demo</p>
          */
         public Builder flinkWorkSpaceName(String flinkWorkSpaceName) {
             this.putQueryParameter("FlinkWorkSpaceName", flinkWorkSpaceName);
@@ -155,7 +168,11 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,7 +181,10 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -173,7 +193,11 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the Flink workspace belongs.
+         * <p>The ID of the Alibaba Cloud account to which the Flink workspace belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>198608******7619</p>
          */
         public Builder targetUserId(String targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);

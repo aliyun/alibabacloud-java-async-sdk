@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>CreateEnvironmentRequest</p>
@@ -226,12 +227,15 @@ public class CreateEnvironmentRequest extends Request {
         } 
 
         /**
-         * The language. Default value: zh.
-         * <p>
+         * <p>The language. Default value: zh.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh: Chinese</li>
+         * </ul>
          * 
-         * Valid values:
-         * *   en: English
-         * *   zh: Chinese
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -240,7 +244,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the resource bound to the environment, such as the container ID or VPC ID. For a Cloud environment, specify the region ID.
+         * <p>The ID of the resource bound to the environment, such as the container ID or VPC ID. For a Cloud environment, specify the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6e9dec475dca4a50a188411d8cbxxx</p>
          */
         public Builder bindResourceId(String bindResourceId) {
             this.putQueryParameter("BindResourceId", bindResourceId);
@@ -249,7 +257,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The name of the environment.
+         * <p>The name of the environment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env1</p>
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -258,12 +270,16 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The subtype of the environment. Valid values:
-         * <p>
+         * <p>The subtype of the environment. Valid values:</p>
+         * <ul>
+         * <li>CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)</li>
+         * <li>ECS: ECS</li>
+         * <li>Cloud: cloud service</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)
-         * *   ECS: ECS
-         * *   Cloud: cloud service
+         * <strong>example:</strong>
+         * <p>ECS, ACK, etc.</p>
          */
         public Builder environmentSubType(String environmentSubType) {
             this.putQueryParameter("EnvironmentSubType", environmentSubType);
@@ -272,12 +288,16 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The type of the environment. Valid values:
-         * <p>
+         * <p>The type of the environment. Valid values:</p>
+         * <ul>
+         * <li>CS: Container Service</li>
+         * <li>ECS: Elastic Compute Service</li>
+         * <li>Cloud: cloud service</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CS: Container Service
-         * *   ECS: Elastic Compute Service
-         * *   Cloud: cloud service
+         * <strong>example:</strong>
+         * <p>CS</p>
          */
         public Builder environmentType(String environmentType) {
             this.putQueryParameter("EnvironmentType", environmentType);
@@ -286,11 +306,14 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The payable resource plan.
-         * <p>
+         * <p>The payable resource plan.</p>
+         * <ul>
+         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+         * <li>Otherwise, leave the parameter empty.</li>
+         * </ul>
          * 
-         * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
-         * *   Otherwise, leave the parameter empty.
+         * <strong>example:</strong>
+         * <p>CS_Basic</p>
          */
         public Builder feePackage(String feePackage) {
             this.putQueryParameter("FeePackage", feePackage);
@@ -299,7 +322,10 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the Grafana workspace associated with the environment. If this parameter is left empty, the default shared Grafana workspace is used.
+         * <p>The ID of the Grafana workspace associated with the environment. If this parameter is left empty, the default shared Grafana workspace is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-rnglkcdrntlhk0****</p>
          */
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
@@ -308,7 +334,10 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to initialize the environment.
+         * <p>Specifies whether to initialize the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder initEnvironment(Boolean initEnvironment) {
             this.putQueryParameter("InitEnvironment", initEnvironment);
@@ -317,12 +346,15 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * Specifies whether agents or exporters are managed. Valid values:
-         * <p>
+         * <p>Specifies whether agents or exporters are managed. Valid values:</p>
+         * <ul>
+         * <li>none: No. By default, no managed agents or exporters are provided for ACK clusters.</li>
+         * <li>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</li>
+         * <li>agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</li>
+         * </ul>
          * 
-         * *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
-         * *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
-         * *   agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("ManagedType", managedType);
@@ -331,7 +363,10 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation.
+         * <p>The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6e9dec475dca4a50a188411d8cbxxx</p>
          */
         public Builder prometheusInstanceId(String prometheusInstanceId) {
             this.putQueryParameter("PrometheusInstanceId", prometheusInstanceId);
@@ -340,7 +375,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -349,7 +388,10 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -358,7 +400,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The tags of the instance. You can specify this parameter to manage tags for the instance.
+         * <p>The tags of the instance. You can specify this parameter to manage tags for the instance.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -373,6 +415,12 @@ public class CreateEnvironmentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEnvironmentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnvironmentRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -412,7 +460,10 @@ public class CreateEnvironmentRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -420,7 +471,10 @@ public class CreateEnvironmentRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

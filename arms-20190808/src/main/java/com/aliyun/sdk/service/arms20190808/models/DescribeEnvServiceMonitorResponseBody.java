@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnvServiceMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnvServiceMonitorResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnvServiceMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnvServiceMonitorResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigYaml")
         private String configYaml;
@@ -197,7 +213,10 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The YAML configuration file of the ServiceMonitor.
+             * <p>The YAML configuration file of the ServiceMonitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refer to supplementary instructions.</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -205,7 +224,10 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the environment instance.
+             * <p>The ID of the environment instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -213,7 +235,10 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -221,7 +246,10 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -229,7 +257,10 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ServiceMonitor.
+             * <p>The name of the ServiceMonitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serviceMonitor1</p>
              */
             public Builder serviceMonitorName(String serviceMonitorName) {
                 this.serviceMonitorName = serviceMonitorName;
@@ -237,11 +268,14 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The status. Valid values:
-             * <p>
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>run</li>
+             * <li>stop</li>
+             * </ul>
              * 
-             * *   run
-             * *   stop
+             * <strong>example:</strong>
+             * <p>run</p>
              */
             public Builder status(String status) {
                 this.status = status;

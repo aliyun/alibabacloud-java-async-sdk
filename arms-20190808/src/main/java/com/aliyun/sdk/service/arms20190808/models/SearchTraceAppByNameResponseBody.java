@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTraceAppByNameResponseBody} extends {@link TeaModel}
  *
  * <p>SearchTraceAppByNameResponseBody</p>
@@ -49,7 +50,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         private java.util.List < TraceApps> traceApps; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the monitoring task.
+         * <p>The information about the monitoring task.</p>
          */
         public Builder traceApps(java.util.List < TraceApps> traceApps) {
             this.traceApps = traceApps;
@@ -70,6 +74,12 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTraceAppByNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByNameResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -109,7 +119,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +130,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +147,12 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTraceAppByNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByNameResponseBody</p>
+     */
     public static class TraceApps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
@@ -290,7 +312,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -298,7 +323,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -306,7 +334,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the task was created.
+             * <p>The timestamp generated when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593486786000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -314,7 +345,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The aliases of the application.
+             * <p>The aliases of the application.</p>
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
@@ -322,7 +353,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The process identifier (PID) of the application.
+             * <p>The process identifier (PID) of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a5f9bdeb-2627-4dbe-9247-****</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -330,7 +364,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -338,7 +375,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxyexli2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -346,11 +386,14 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
-             * <p>
+             * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: yes</li>
+             * <li><code>false</code>: no</li>
+             * </ul>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -358,7 +401,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * A list of tags.
+             * <p>A list of tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -366,11 +409,14 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the monitoring task. Valid values:
-             * <p>
+             * <p>The type of the monitoring task. Valid values:</p>
+             * <ul>
+             * <li><code>TRACE</code>: Application Monitoring</li>
+             * <li><code>RETCODE</code>: Browser Monitoring</li>
+             * </ul>
              * 
-             * *   `TRACE`: Application Monitoring
-             * *   `RETCODE`: Browser Monitoring
+             * <strong>example:</strong>
+             * <p>TRACE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -378,7 +424,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the task information was updated.
+             * <p>The timestamp generated when the task information was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593486786000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -386,7 +435,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

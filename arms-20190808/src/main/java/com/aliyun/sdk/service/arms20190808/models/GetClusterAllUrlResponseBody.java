@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterAllUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterAllUrlResponseBody</p>
@@ -85,7 +86,10 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code. 200 means success, other status codes are exceptions.
+         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,12 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters in the JSON format.
+         * <p>The response parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;RequestId&quot;: &quot;41877338-646B-5DD6-BFBE-F89F1E7245AD&quot;,
+         *   &quot;Data&quot;: &quot;{&quot;clusterType&quot;:&quot;ManagedKubernetes&quot;,&quot;remoteWriteUrl&quot;:&quot;http:/&quot; }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +110,10 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The prompt information of the returned result.
+         * <p>The prompt information of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,10 +132,14 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Whether the query is successful:
-         * <p>
-         * - true: success
-         * - false: failure
+         * <p>Whether the query is successful:</p>
+         * <ul>
+         * <li>true: success</li>
+         * <li>false: failure</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

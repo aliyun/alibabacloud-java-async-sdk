@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvironmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnvironmentsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnvironmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentsResponseBody</p>
+     */
     public static class Addons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -193,7 +212,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The alias of the add-on.
+             * <p>The alias of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL Exporter</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -201,7 +223,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the add-on.
+             * <p>The description of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Collect mysql indicator information</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -209,7 +234,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the icon.
+             * <p>The URL of the icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx">http://xxxx</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -217,7 +245,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the add-on.
+             * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>metric-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,6 +262,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnvironmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentsResponseBody</p>
+     */
     public static class Features extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -294,7 +331,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The alias of the feature.
+             * <p>The alias of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus Agent</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -302,7 +342,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the feature.
+             * <p>The description of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Collect Metric data using the Prometheus collection specification</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -310,7 +353,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the icon.
+             * <p>The URL of the icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx">http://xxx</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -318,7 +364,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>metirc-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -332,6 +381,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnvironmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -371,7 +426,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fpx-tag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -379,7 +437,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -393,6 +454,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnvironmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentsResponseBody</p>
+     */
     public static class Environments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addons")
         private java.util.List < Addons> addons;
@@ -696,7 +763,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The add-ons.
+             * <p>The add-ons.</p>
              */
             public Builder addons(java.util.List < Addons> addons) {
                 this.addons = addons;
@@ -704,7 +771,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource bound to the environment instance. The resource can be a Kubernetes cluster or a VPC.
+             * <p>The ID of the resource bound to the environment instance. The resource can be a Kubernetes cluster or a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1bgo8ronn</p>
              */
             public Builder bindResourceId(String bindResourceId) {
                 this.bindResourceId = bindResourceId;
@@ -712,7 +782,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The profile that is bound to the resource.
+             * <p>The profile that is bound to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder bindResourceProfile(String bindResourceProfile) {
                 this.bindResourceProfile = bindResourceProfile;
@@ -720,7 +793,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder bindResourceType(String bindResourceType) {
                 this.bindResourceType = bindResourceType;
@@ -728,7 +804,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block that is bound to the VPC.
+             * <p>The CIDR block that is bound to the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.0.0/12</p>
              */
             public Builder bindVpcCidr(String bindVpcCidr) {
                 this.bindVpcCidr = bindVpcCidr;
@@ -736,7 +815,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the environment instance was created.
+             * <p>The time when the environment instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-24 11:58:35 +0800</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -744,7 +826,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12378523784982</p>
              */
             public Builder createdUserId(String createdUserId) {
                 this.createdUserId = createdUserId;
@@ -752,7 +837,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the environment instance.
+             * <p>The ID of the environment instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -760,7 +848,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the environment instance.
+             * <p>The name of the environment instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feiliks-biz-prod-edas</p>
              */
             public Builder environmentName(String environmentName) {
                 this.environmentName = environmentName;
@@ -768,12 +859,15 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment instance. Valid values:
-             * <p>
+             * <p>The type of the environment instance. Valid values:</p>
+             * <ul>
+             * <li>CS: Container Service</li>
+             * <li>ECS: Elastic Compute Service</li>
+             * <li>Cloud: cloud service</li>
+             * </ul>
              * 
-             * *   CS: Container Service
-             * *   ECS: Elastic Compute Service
-             * *   Cloud: cloud service
+             * <strong>example:</strong>
+             * <p>CS</p>
              */
             public Builder environmentType(String environmentType) {
                 this.environmentType = environmentType;
@@ -781,7 +875,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the feature.
+             * <p>The parameters of the feature.</p>
              */
             public Builder features(java.util.List < Features> features) {
                 this.features = features;
@@ -789,11 +883,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The payable resource plan.
-             * <p>
+             * <p>The payable resource plan.</p>
+             * <ul>
+             * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.</li>
+             * <li>Otherwise, leave the parameter empty.</li>
+             * </ul>
              * 
-             * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.
-             * *   Otherwise, leave the parameter empty.
+             * <strong>example:</strong>
+             * <p>CS_Pro</p>
              */
             public Builder feePackage(String feePackage) {
                 this.feePackage = feePackage;
@@ -801,7 +898,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the Grafana data source.
+             * <p>The unique ID of the Grafana data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12374890</p>
              */
             public Builder grafanaDatasourceUid(String grafanaDatasourceUid) {
                 this.grafanaDatasourceUid = grafanaDatasourceUid;
@@ -809,7 +909,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Grafana directory.
+             * <p>The name of the Grafana directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filepath</p>
              */
             public Builder grafanaFolderTitle(String grafanaFolderTitle) {
                 this.grafanaFolderTitle = grafanaFolderTitle;
@@ -817,7 +920,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the Grafana directory.
+             * <p>The unique ID of the Grafana directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1798319482935</p>
              */
             public Builder grafanaFolderUid(String grafanaFolderUid) {
                 this.grafanaFolderUid = grafanaFolderUid;
@@ -825,7 +931,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last add-on was created.
+             * <p>The time when the last add-on was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-22T16:56:29+08:00</p>
              */
             public Builder latestReleaseCreateTime(String latestReleaseCreateTime) {
                 this.latestReleaseCreateTime = latestReleaseCreateTime;
@@ -833,12 +942,15 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether agents or exporters are managed. Valid values:
-             * <p>
+             * <p>Indicates whether agents or exporters are managed. Valid values:</p>
+             * <ul>
+             * <li>none: No. By default, no managed agents or exporters are provided for ACK clusters.</li>
+             * <li>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</li>
+             * <li>agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</li>
+             * </ul>
              * 
-             * *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
-             * *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
-             * *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder managedType(String managedType) {
                 this.managedType = managedType;
@@ -846,7 +958,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The Prometheus ID.
+             * <p>The Prometheus ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>124769812</p>
              */
             public Builder prometheusId(Long prometheusId) {
                 this.prometheusId = prometheusId;
@@ -854,7 +969,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Prometheus instance.
+             * <p>The ID of the Prometheus instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m5e4alj2i24ndbn</p>
              */
             public Builder prometheusInstanceId(String prometheusInstanceId) {
                 this.prometheusInstanceId = prometheusInstanceId;
@@ -862,7 +980,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -870,7 +991,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of installed add-ons.
+             * <p>The number of installed add-ons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder releaseCount(Integer releaseCount) {
                 this.releaseCount = releaseCount;
@@ -878,7 +1002,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmvt3xpr5aema</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -886,7 +1013,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the environment resource.
+             * <p>The tags of the environment resource.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -894,7 +1021,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13990957477389</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -908,6 +1038,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnvironmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Environments")
         private java.util.List < Environments> environments;
@@ -947,7 +1083,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The queried environments.
+             * <p>The queried environments.</p>
              */
             public Builder environments(java.util.List < Environments> environments) {
                 this.environments = environments;
@@ -955,7 +1091,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder total(Long total) {
                 this.total = total;

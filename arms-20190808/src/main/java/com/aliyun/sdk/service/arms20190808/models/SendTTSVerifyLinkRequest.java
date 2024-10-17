@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendTTSVerifyLinkRequest} extends {@link RequestModel}
  *
  * <p>SendTTSVerifyLinkRequest</p>
@@ -69,7 +70,11 @@ public class SendTTSVerifyLinkRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact.
+         * <p>The ID of the alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder contactId(Long contactId) {
             this.putBodyParameter("ContactId", contactId);
@@ -78,7 +83,11 @@ public class SendTTSVerifyLinkRequest extends Request {
         }
 
         /**
-         * The mobile number of the alert contact.
+         * <p>The mobile number of the alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         public Builder phone(String phone) {
             this.putBodyParameter("Phone", phone);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRumAppResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateRumAppResponseBody</p>
@@ -97,7 +98,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the returned results.
+         * <p>The details of the returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class UpdateRumAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRumAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateRumAppResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -217,7 +239,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
             private Integer usage; 
 
             /**
-             * The user configurations. This is a reserved parameter.
+             * <p>The user configurations. This is a reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -225,7 +250,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS limit. Unit: bytes.
+             * <p>The QPS limit. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -233,7 +261,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request is throttled due to the QPS limit. Valid values: true and false.
+             * <p>Indicates whether the request is throttled due to the QPS limit. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder limited(Boolean limited) {
                 this.limited = limited;
@@ -241,7 +272,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
             }
 
             /**
-             * The usage. Unit: bytes.
+             * <p>The usage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder usage(Integer usage) {
                 this.usage = usage;

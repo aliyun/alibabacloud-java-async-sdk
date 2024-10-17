@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPrometheusGlobalViewByAliClusterIdsResponseBody} extends {@link TeaModel}
  *
  * <p>AddPrometheusGlobalViewByAliClusterIdsResponseBody</p>
@@ -73,7 +74,10 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * Status code. 200 is success, other status codes are exceptions.
+         * <p>Status code. 200 is success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
         }
 
         /**
-         * The struct returned.
+         * <p>The struct returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
         }
 
         /**
-         * Returns a hint message for the result.
+         * <p>Returns a hint message for the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A0EA2AF-C9B3-555C-B9D5-5DD8F5EF98A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link AddPrometheusGlobalViewByAliClusterIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddPrometheusGlobalViewByAliClusterIdsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
@@ -161,7 +177,10 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
             private Boolean success; 
 
             /**
-             * The Info-level information.
+             * <p>The Info-level information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance. failedClusterIds: the ID of the cluster that failed to be added. A cluster may fail to be added because the specified cluster ID is invalid or the cluster is added across continents.}</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -169,7 +188,10 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -177,11 +199,14 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

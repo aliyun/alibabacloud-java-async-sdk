@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveSourcesFromPrometheusGlobalViewRequest} extends {@link RequestModel}
  *
  * <p>RemoveSourcesFromPrometheusGlobalViewRequest</p>
@@ -99,7 +100,11 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * The ID of the global aggregation instance.
+         * <p>The ID of the global aggregation instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global-v2-cn-1478326682034601-vss8pd0i</p>
          */
         public Builder globalViewClusterId(String globalViewClusterId) {
             this.putQueryParameter("GlobalViewClusterId", globalViewClusterId);
@@ -108,7 +113,11 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The name of the global aggregation instance.
+         * <p>The name of the global aggregation instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zyGlobalView</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -117,7 +126,11 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +139,11 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The list of custom data sources. You can specify multiple data sources and separate them with commas (,).
+         * <p>The list of custom data sources. You can specify multiple data sources and separate them with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>localPrometheusClusterName,testCumterPrometheusName</p>
          */
         public Builder sourceNames(String sourceNames) {
             this.putQueryParameter("SourceNames", sourceNames);

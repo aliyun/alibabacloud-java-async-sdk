@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGrafanaWorkspaceVersionRequest} extends {@link RequestModel}
  *
  * <p>UpdateGrafanaWorkspaceVersionRequest</p>
@@ -98,7 +99,10 @@ public class UpdateGrafanaWorkspaceVersionRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -107,7 +111,11 @@ public class UpdateGrafanaWorkspaceVersionRequest extends Request {
         }
 
         /**
-         * The Grafana version.
+         * <p>The Grafana version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.x</p>
          */
         public Builder grafanaVersion(String grafanaVersion) {
             this.putQueryParameter("GrafanaVersion", grafanaVersion);
@@ -116,7 +124,11 @@ public class UpdateGrafanaWorkspaceVersionRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-cn-4xl3g******</p>
          */
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
@@ -125,7 +137,11 @@ public class UpdateGrafanaWorkspaceVersionRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: cn-hangzhou.
+         * <p>The region ID. Default value: cn-hangzhou.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

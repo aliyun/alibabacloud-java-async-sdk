@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlertRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteAlertRuleRequest</p>
@@ -54,10 +55,12 @@ public class DeleteAlertRuleRequest extends Request {
         } 
 
         /**
-         * The alert rule ID.
-         * <p>
+         * <p>The alert rule ID.</p>
+         * <p>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/2612348.html">GetAlertRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an alert rule, see [GetAlertRules](~~2612348~~).
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackResponseBody} extends {@link TeaModel}
  *
  * <p>GetStackResponseBody</p>
@@ -49,7 +50,10 @@ public class GetStackResponseBody extends TeaModel {
         private java.util.List < StackInfo> stackInfo; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B34C3A43-A901-5F94-9DAD-758CE4******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetStackResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the method stack.
+         * <p>The information of the method stack.</p>
          */
         public Builder stackInfo(java.util.List < StackInfo> stackInfo) {
             this.stackInfo = stackInfo;
@@ -70,6 +74,12 @@ public class GetStackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackResponseBody</p>
+     */
     public static class ExtInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
@@ -109,7 +119,10 @@ public class GetStackResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The content of the custom parameter.
+             * <p>The content of the custom parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input=254275&amp;</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -117,7 +130,10 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the custom parameter.
+             * <p>The type of the custom parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -131,9 +147,18 @@ public class GetStackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackResponseBody</p>
+     */
     public static class StackInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Api")
         private String api;
+
+        @com.aliyun.core.annotation.NameInMap("CallCount")
+        private String callCount;
 
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
@@ -158,6 +183,7 @@ public class GetStackResponseBody extends TeaModel {
 
         private StackInfo(Builder builder) {
             this.api = builder.api;
+            this.callCount = builder.callCount;
             this.duration = builder.duration;
             this.exception = builder.exception;
             this.extInfo = builder.extInfo;
@@ -180,6 +206,13 @@ public class GetStackResponseBody extends TeaModel {
          */
         public String getApi() {
             return this.api;
+        }
+
+        /**
+         * @return callCount
+         */
+        public String getCallCount() {
+            return this.callCount;
         }
 
         /**
@@ -233,6 +266,7 @@ public class GetStackResponseBody extends TeaModel {
 
         public static final class Builder {
             private String api; 
+            private String callCount; 
             private Long duration; 
             private String exception; 
             private ExtInfo extInfo; 
@@ -242,7 +276,10 @@ public class GetStackResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The name of the operation.
+             * <p>The name of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tomcat Servlet Process</p>
              */
             public Builder api(String api) {
                 this.api = api;
@@ -250,7 +287,18 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The duration. Unit: milliseconds.
+             * CallCount.
+             */
+            public Builder callCount(String callCount) {
+                this.callCount = callCount;
+                return this;
+            }
+
+            /**
+             * <p>The duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -258,7 +306,10 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NullPointerException</p>
              */
             public Builder exception(String exception) {
                 this.exception = exception;
@@ -266,7 +317,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the array object.
+             * <p>The information about the array object.</p>
              */
             public Builder extInfo(ExtInfo extInfo) {
                 this.extInfo = extInfo;
@@ -274,7 +325,10 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows in the method stack information.
+             * <p>The number of rows in the method stack information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder line(String line) {
                 this.line = line;
@@ -282,7 +336,10 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RPC mode.
+             * <p>The ID of the RPC mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder rpcId(String rpcId) {
                 this.rpcId = rpcId;
@@ -290,7 +347,10 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/com/test</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -298,7 +358,10 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the call method.
+             * <p>The start time of the call method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1653555396</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

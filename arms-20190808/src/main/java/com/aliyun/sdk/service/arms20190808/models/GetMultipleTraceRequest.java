@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMultipleTraceRequest} extends {@link RequestModel}
  *
  * <p>GetMultipleTraceRequest</p>
@@ -99,7 +100,11 @@ public class GetMultipleTraceRequest extends Request {
         } 
 
         /**
-         * The time when the trace ends. The value is a timestamp. Unit: milliseconds.
+         * <p>The time when the trace ends. The value is a timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663999380000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -108,7 +113,11 @@ public class GetMultipleTraceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,7 +126,11 @@ public class GetMultipleTraceRequest extends Request {
         }
 
         /**
-         * The start time of the trace. The value is a timestamp. Unit: milliseconds.
+         * <p>The start time of the trace. The value is a timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657692507000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -126,7 +139,11 @@ public class GetMultipleTraceRequest extends Request {
         }
 
         /**
-         * The trace IDs.
+         * <p>The trace IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1400a115951745017447033d****</p>
          */
         public Builder traceIDs(java.util.List < String > traceIDs) {
             this.putQueryParameter("TraceIDs", traceIDs);

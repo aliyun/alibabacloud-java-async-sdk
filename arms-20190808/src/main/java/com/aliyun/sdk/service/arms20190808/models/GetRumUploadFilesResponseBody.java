@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRumUploadFilesResponseBody} extends {@link TeaModel}
  *
  * <p>GetRumUploadFilesResponseBody</p>
@@ -97,7 +98,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried files.
+         * <p>The queried files.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2983BEF7-4A0D-47A2-94A2-8E9C5E63****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRumUploadFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumUploadFilesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
@@ -229,7 +251,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The file name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.js.map</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -237,7 +262,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file was last modified. The value is a timestamp.
+             * <p>The time when the file was last modified. The value is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682863151000</p>
              */
             public Builder lastModifiedTime(Object lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -245,7 +273,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the file. Unit: bytes.
+             * <p>The size of the file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -253,7 +284,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The file ID.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cxxxerfewrfwerfwerffvrt</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -261,7 +295,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the file.
+             * <p>The version number of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

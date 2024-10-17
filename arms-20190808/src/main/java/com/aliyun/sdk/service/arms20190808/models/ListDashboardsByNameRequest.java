@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDashboardsByNameRequest} extends {@link RequestModel}
  *
  * <p>ListDashboardsByNameRequest</p>
@@ -166,7 +167,10 @@ public class ListDashboardsByNameRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster. If the ClusterType parameter is not set to `cloud-product-prometheus` or `cms-enterprise-prometheus`, you must specify the ClusterId parameter.
+         * <p>The ID of the cluster. If the ClusterType parameter is not set to <code>cloud-product-prometheus</code> or <code>cms-enterprise-prometheus</code>, you must specify the ClusterId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -175,18 +179,21 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * The cluster type. Valid values:
-         * <p>
+         * <p>The cluster type. Valid values:</p>
+         * <ul>
+         * <li>vpc-prometheus</li>
+         * <li>cloud-product-prometheus</li>
+         * <li>cms-enterprise-prometheus</li>
+         * <li>ExternalKubernetes</li>
+         * <li>Ask</li>
+         * <li>Kubernetes</li>
+         * <li>ManagedKubernetes</li>
+         * <li>remote-write-prometheus</li>
+         * <li>GlobalViewV2</li>
+         * </ul>
          * 
-         * *   vpc-prometheus
-         * *   cloud-product-prometheus
-         * *   cms-enterprise-prometheus
-         * *   ExternalKubernetes
-         * *   Ask
-         * *   Kubernetes
-         * *   ManagedKubernetes
-         * *   remote-write-prometheus
-         * *   GlobalViewV2
+         * <strong>example:</strong>
+         * <p>cloud-product-prometheus</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -195,7 +202,10 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * The name of the dashboard.
+         * <p>The name of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas-ingress-url</p>
          */
         public Builder dashBoardName(String dashBoardName) {
             this.putQueryParameter("DashBoardName", dashBoardName);
@@ -204,7 +214,10 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * The version of the dashboard.
+         * <p>The version of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
          */
         public Builder dashBoardVersion(String dashBoardVersion) {
             this.putQueryParameter("DashBoardVersion", dashBoardVersion);
@@ -213,11 +226,14 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>loki</li>
+         * <li>prometheus</li>
+         * </ul>
          * 
-         * *   loki
-         * *   prometheus
+         * <strong>example:</strong>
+         * <p>loki</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -226,7 +242,10 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * The name of the dashboard group.
+         * <p>The name of the dashboard group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDAS</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -235,7 +254,10 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * Specifies whether to display the Grafana dashboard only in the Application Real-Time Monitoring Service (ARMS) console.
+         * <p>Specifies whether to display the Grafana dashboard only in the Application Real-Time Monitoring Service (ARMS) console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onlyQuery(Boolean onlyQuery) {
             this.putQueryParameter("OnlyQuery", onlyQuery);
@@ -244,7 +266,10 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -253,7 +278,11 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

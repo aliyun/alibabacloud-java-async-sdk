@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallCmsExporterResponseBody} extends {@link TeaModel}
  *
  * <p>InstallCmsExporterResponseBody</p>
@@ -49,7 +50,10 @@ public class InstallCmsExporterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class InstallCmsExporterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7A04B0D-E2CA-59BB-8A9D-D5D349C22BF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

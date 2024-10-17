@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvCustomJobsRequest} extends {@link RequestModel}
  *
  * <p>ListEnvCustomJobsRequest</p>
@@ -83,7 +84,10 @@ public class ListEnvCustomJobsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the encrypted YAML string.
+         * <p>Specifies whether to return the encrypted YAML string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder encryptYaml(Boolean encryptYaml) {
             this.putQueryParameter("EncryptYaml", encryptYaml);
@@ -92,7 +96,11 @@ public class ListEnvCustomJobsRequest extends Request {
         }
 
         /**
-         * The ID of the environment instance.
+         * <p>The ID of the environment instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -101,7 +109,11 @@ public class ListEnvCustomJobsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

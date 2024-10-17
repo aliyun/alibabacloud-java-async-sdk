@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMetricByPageRequest} extends {@link RequestModel}
  *
  * <p>QueryMetricByPageRequest</p>
@@ -227,7 +228,7 @@ public class QueryMetricByPageRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -236,7 +237,10 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The page number. Default value: `1`.
+         * <p>The page number. Default value: <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -245,7 +249,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * Custom filter conditions.
+         * <p>Custom filter conditions.</p>
          */
         public Builder customFilters(java.util.List < String > customFilters) {
             this.putQueryParameter("CustomFilters", customFilters);
@@ -254,7 +258,10 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The dimensions of the metric that you want to query.
+         * <p>The dimensions of the metric that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;detector_browser&quot;,&quot;detector_device&quot;]</p>
          */
         public Builder dimensions(java.util.List < String > dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -263,7 +270,11 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667546895000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -272,7 +283,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -281,7 +292,10 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000.
+         * <p>The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder intervalInSec(Integer intervalInSec) {
             this.putQueryParameter("IntervalInSec", intervalInSec);
@@ -290,7 +304,10 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The measures of the metric that you want to query.
+         * <p>The measures of the metric that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv</p>
          */
         public Builder measures(java.util.List < String > measures) {
             this.putQueryParameter("Measures", measures);
@@ -299,7 +316,11 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The metric that you want to query. You cannot specify a custom metric. For more information, see the "Application monitoring metrics that can be queried" section.
+         * <p>The metric that you want to query. You cannot specify a custom metric. For more information, see the &quot;Application monitoring metrics that can be queried&quot; section.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstat.host</p>
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -308,13 +329,17 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The order in which measures are sorted. Valid values:
-         * <p>
+         * <p>The order in which measures are sorted. Valid values:</p>
+         * <ul>
+         * <li><code>ASC</code>: ascending order</li>
+         * <li><code>DESC</code>: descending order</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify the parameter, data is not sorted.</p>
+         * </blockquote>
          * 
-         * *   `ASC`: ascending order
-         * *   `DESC`: descending order
-         * 
-         * > If you do not specify the parameter, data is not sorted.
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -323,7 +348,10 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The dimension from which metrics are sorted. You can set this parameter to a supported dimension.
+         * <p>The dimension from which metrics are sorted. You can set this parameter to a supported dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pid</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -332,7 +360,10 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * This parameter is no longer supported. The number of entries per page.
+         * <p>This parameter is no longer supported. The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -341,7 +372,11 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The start of the time range to query. Unit: milliseconds.
+         * <p>The start of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667287695000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -356,6 +391,12 @@ public class QueryMetricByPageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMetricByPageRequest} extends {@link TeaModel}
+     *
+     * <p>QueryMetricByPageRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -395,7 +436,10 @@ public class QueryMetricByPageRequest extends Request {
             private String value; 
 
             /**
-             * The key of the filter condition. You must set the key to `pid` or `regionId`.
+             * <p>The key of the filter condition. You must set the key to <code>pid</code> or <code>regionId</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pid</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -403,7 +447,10 @@ public class QueryMetricByPageRequest extends Request {
             }
 
             /**
-             * The value of the filter condition. You must set the value of the `pid` or `regionId` condition. For information about how to obtain the `pid`, see the "Obtain the PID of an application" section.
+             * <p>The value of the filter condition. You must set the value of the <code>pid</code> or <code>regionId</code> condition. For information about how to obtain the <code>pid</code>, see the &quot;Obtain the PID of an application&quot; section.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx@74xxx</p>
              */
             public Builder value(String value) {
                 this.value = value;

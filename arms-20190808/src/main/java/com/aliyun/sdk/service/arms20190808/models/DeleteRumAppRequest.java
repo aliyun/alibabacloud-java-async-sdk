@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRumAppRequest} extends {@link RequestModel}
  *
  * <p>DeleteRumAppRequest</p>
@@ -97,7 +98,10 @@ public class DeleteRumAppRequest extends Request {
         } 
 
         /**
-         * The group where the application resides.
+         * <p>The group where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder appGroup(String appGroup) {
             this.putQueryParameter("AppGroup", appGroup);
@@ -106,7 +110,11 @@ public class DeleteRumAppRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@28f515462******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -124,7 +132,11 @@ public class DeleteRumAppRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

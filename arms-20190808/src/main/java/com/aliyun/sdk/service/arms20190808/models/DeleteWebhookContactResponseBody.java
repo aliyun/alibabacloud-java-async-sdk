@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWebhookContactResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteWebhookContactResponseBody</p>
@@ -49,11 +50,14 @@ public class DeleteWebhookContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the webhook alert contact was deleted.
-         * <p>
+         * <p>Indicates whether the webhook alert contact was deleted.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -61,7 +65,10 @@ public class DeleteWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

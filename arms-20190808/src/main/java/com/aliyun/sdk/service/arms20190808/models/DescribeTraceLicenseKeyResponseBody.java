@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTraceLicenseKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTraceLicenseKeyResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The license key for the application.
+         * <p>The license key for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@3a75d95f218****</p>
          */
         public Builder licenseKey(String licenseKey) {
             this.licenseKey = licenseKey;
@@ -57,7 +61,10 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29053944-6FE5-4240-8927-10095ECE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

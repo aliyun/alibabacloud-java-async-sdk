@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIMRobotsRequest} extends {@link RequestModel}
  *
  * <p>DescribeIMRobotsRequest</p>
@@ -97,7 +98,11 @@ public class DescribeIMRobotsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -106,7 +111,10 @@ public class DescribeIMRobotsRequest extends Request {
         }
 
         /**
-         * The chatbot IDs.
+         * <p>The chatbot IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder robotIds(String robotIds) {
             this.putQueryParameter("RobotIds", robotIds);
@@ -115,7 +123,10 @@ public class DescribeIMRobotsRequest extends Request {
         }
 
         /**
-         * The name of the IM chatbot.
+         * <p>The name of the IM chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chatbot name</p>
          */
         public Builder robotName(String robotName) {
             this.putQueryParameter("RobotName", robotName);
@@ -124,7 +135,11 @@ public class DescribeIMRobotsRequest extends Request {
         }
 
         /**
-         * The number of IM chatbots to return on each page.
+         * <p>The number of IM chatbots to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

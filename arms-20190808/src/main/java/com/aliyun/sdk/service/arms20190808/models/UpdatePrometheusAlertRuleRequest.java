@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusAlertRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrometheusAlertRuleRequest</p>
@@ -228,7 +229,10 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         } 
 
         /**
-         * AlertId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3888704</p>
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -237,7 +241,10 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * AlertName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus_Alert</p>
          */
         public Builder alertName(String alertName) {
             this.putQueryParameter("AlertName", alertName);
@@ -255,7 +262,10 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c0bad479465464e1d8c1e641b0afb****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -273,7 +283,10 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -282,7 +295,10 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Expression.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100 * (sum(rate(container_cpu_usage_seconds_total[1m])) by (pod_name) / sum(label_replace(kube_pod_container_resource_limits_cpu_cores, &quot;pod_name&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (pod_name))&gt;75</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -300,7 +316,7 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);
@@ -318,7 +334,10 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -327,7 +346,7 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -351,6 +370,12 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePrometheusAlertRuleRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusAlertRuleRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -390,7 +415,10 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -398,7 +426,10 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

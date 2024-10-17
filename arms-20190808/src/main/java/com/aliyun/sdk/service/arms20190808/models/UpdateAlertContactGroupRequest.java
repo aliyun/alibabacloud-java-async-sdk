@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlertContactGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateAlertContactGroupRequest</p>
@@ -98,7 +99,11 @@ public class UpdateAlertContactGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact group.
+         * <p>The ID of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder contactGroupId(Long contactGroupId) {
             this.putQueryParameter("ContactGroupId", contactGroupId);
@@ -107,7 +112,11 @@ public class UpdateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The name of the alert contact group.
+         * <p>The name of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -116,7 +125,10 @@ public class UpdateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The ID of the alert contact.
+         * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123 234 345</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -125,7 +137,11 @@ public class UpdateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

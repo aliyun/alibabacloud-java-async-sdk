@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSilencePoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSilencePoliciesResponseBody</p>
@@ -49,7 +50,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned pages.
+         * <p>The returned pages.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -57,7 +58,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSilencePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSilencePoliciesResponseBody</p>
+     */
     public static class MatchingConditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -121,7 +131,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the matching condition.
+             * <p>The key of the matching condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>altertname</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -129,15 +142,18 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator of the matching condition. Valid values:
-             * <p>
+             * <p>The logical operator of the matching condition. Valid values:</p>
+             * <ul>
+             * <li><code>eq</code>: equal to</li>
+             * <li><code>neq</code>: not equal to</li>
+             * <li><code>in</code>: contains</li>
+             * <li><code>nin</code>: does not contain</li>
+             * <li><code>re</code>: regular expression match</li>
+             * <li><code>nre</code>: regular expression mismatch</li>
+             * </ul>
              * 
-             * *   `eq`: equal to
-             * *   `neq`: not equal to
-             * *   `in`: contains
-             * *   `nin`: does not contain
-             * *   `re`: regular expression match
-             * *   `nre`: regular expression mismatch
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -145,7 +161,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the matching condition.
+             * <p>The value of the matching condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -159,6 +178,12 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSilencePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSilencePoliciesResponseBody</p>
+     */
     public static class MatchingRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchingConditions")
         private java.util.List < MatchingConditions> matchingConditions;
@@ -186,7 +211,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private java.util.List < MatchingConditions> matchingConditions; 
 
             /**
-             * The matching conditions.
+             * <p>The matching conditions.</p>
              */
             public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
@@ -200,6 +225,12 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSilencePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSilencePoliciesResponseBody</p>
+     */
     public static class SilencePolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EffectiveTimeType")
         private String effectiveTimeType;
@@ -307,7 +338,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the silence policy.
+             * <p>The ID of the silence policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -315,7 +349,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The matching rules.
+             * <p>The matching rules.</p>
              */
             public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
@@ -323,7 +357,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the silence policy.
+             * <p>The name of the silence policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>silencepolicy_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -331,7 +368,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the silence policy is enabled. Valid values: enable and disable.
+             * <p>Indicates whether the silence policy is enabled. Valid values: enable and disable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -361,6 +401,12 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSilencePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSilencePoliciesResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
@@ -424,7 +470,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The number of the page returned.
+             * <p>The number of the page returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -432,7 +481,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The queried silence policies.
+             * <p>The queried silence policies.</p>
              */
             public Builder silencePolicies(java.util.List < SilencePolicies> silencePolicies) {
                 this.silencePolicies = silencePolicies;
@@ -440,7 +489,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -448,7 +500,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of silence policies that were returned.
+             * <p>The number of silence policies that were returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UninstallManagedPrometheusResponse} extends {@link TeaModel}
  *
  * <p>UninstallManagedPrometheusResponse</p>

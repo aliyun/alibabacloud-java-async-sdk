@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigAppResponseBody} extends {@link TeaModel}
  *
  * <p>ConfigAppResponseBody</p>
@@ -49,7 +50,19 @@ public class ConfigAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of turning on or off the main switch of the ARMS agent or the main switch status of the ARMS agent. Indicates whether the request was successful. Valid values: success failed The main switch status of the ARMS agent. Valid values: true false
+         * <p>The result of turning on or off the main switch of the agent or the main switch status of the agent. Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>success</li>
+         * <li>failed</li>
+         * </ul>
+         * <p>The main switch status of the agent. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>abc@def success\nghi@jkl success\n</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +70,10 @@ public class ConfigAppResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16AF921B-8187-489F-9913-43C808B4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

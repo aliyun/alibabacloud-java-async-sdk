@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDispatchRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDispatchRuleResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The struct returned.
+         * <p>The struct returned.</p>
          */
         public Builder dispatchRule(DispatchRule dispatchRule) {
             this.dispatchRule = dispatchRule;
@@ -57,7 +58,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDispatchRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDispatchRuleResponseBody</p>
+     */
     public static class GroupRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
@@ -145,7 +155,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private Long repeatInterval; 
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -153,7 +166,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The grouping interval.
+             * <p>The grouping interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder groupInterval(Long groupInterval) {
                 this.groupInterval = groupInterval;
@@ -161,7 +177,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The waiting time for grouping.
+             * <p>The waiting time for grouping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder groupWaitTime(Long groupWaitTime) {
                 this.groupWaitTime = groupWaitTime;
@@ -169,7 +188,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The grouping fields.
+             * <p>The grouping fields.</p>
              */
             public Builder groupingFields(java.util.List < String > groupingFields) {
                 this.groupingFields = groupingFields;
@@ -177,7 +196,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.
+             * <p>The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -191,6 +213,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDispatchRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDispatchRuleResponseBody</p>
+     */
     public static class LabelMatchExpressions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -242,17 +270,20 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag of the dispatch rule. Valid values:
-             * <p>
+             * <p>The key of the tag of the dispatch rule. Valid values:</p>
+             * <ul>
+             * <li><code>_aliyun_arms_userid</code>: user ID</li>
+             * <li><code>_aliyun_arms_involvedObject_kind</code>: type of the associated object</li>
+             * <li><code>_aliyun_arms_involvedObject_id</code>: ID of the associated object</li>
+             * <li><code>_aliyun_arms_involvedObject_name</code>: name of the associated object</li>
+             * <li><code>_aliyun_arms_alert_name</code>: alert name</li>
+             * <li><code>_aliyun_arms_alert_rule_id</code>: alert rule ID</li>
+             * <li><code>_aliyun_arms_alert_type</code>: alert type</li>
+             * <li><code>_aliyun_arms_alert_level</code>: alert severity</li>
+             * </ul>
              * 
-             * *   `_aliyun_arms_userid`: user ID
-             * *   `_aliyun_arms_involvedObject_kind`: type of the associated object
-             * *   `_aliyun_arms_involvedObject_id`: ID of the associated object
-             * *   `_aliyun_arms_involvedObject_name`: name of the associated object
-             * *   `_aliyun_arms_alert_name`: alert name
-             * *   `_aliyun_arms_alert_rule_id`: alert rule ID
-             * *   `_aliyun_arms_alert_type`: alert type
-             * *   `_aliyun_arms_alert_level`: alert severity
+             * <strong>example:</strong>
+             * <p>_aliyun_arms_involvedObject_kind</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -260,11 +291,14 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The operator used in the dispatch rule. Valid values:
-             * <p>
+             * <p>The operator used in the dispatch rule. Valid values:</p>
+             * <ul>
+             * <li><code>eq</code>: equals to.</li>
+             * <li><code>re</code>: matches a regular expression.</li>
+             * </ul>
              * 
-             * *   `eq`: equals to.
-             * *   `re`: matches a regular expression.
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -272,7 +306,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -286,6 +323,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDispatchRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDispatchRuleResponseBody</p>
+     */
     public static class LabelMatchExpressionGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelMatchExpressions")
         private java.util.List < LabelMatchExpressions> labelMatchExpressions;
@@ -313,7 +356,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private java.util.List < LabelMatchExpressions> labelMatchExpressions; 
 
             /**
-             * The collection of conditions of the dispatch rule.
+             * <p>The collection of conditions of the dispatch rule.</p>
              */
             public Builder labelMatchExpressions(java.util.List < LabelMatchExpressions> labelMatchExpressions) {
                 this.labelMatchExpressions = labelMatchExpressions;
@@ -327,6 +370,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDispatchRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDispatchRuleResponseBody</p>
+     */
     public static class LabelMatchExpressionGrid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelMatchExpressionGroups")
         private java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups;
@@ -354,7 +403,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups; 
 
             /**
-             * The collection of dispatch rules.
+             * <p>The collection of dispatch rules.</p>
              */
             public Builder labelMatchExpressionGroups(java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups) {
                 this.labelMatchExpressionGroups = labelMatchExpressionGroups;
@@ -368,6 +417,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDispatchRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDispatchRuleResponseBody</p>
+     */
     public static class NotifyObjects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -419,7 +474,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private String notifyType; 
 
             /**
-             * The name of the contact or contact group.
+             * <p>The name of the contact or contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JohnDoe</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -427,7 +485,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the contact or contact group.
+             * <p>The ID of the contact or contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notifyObjectId(String notifyObjectId) {
                 this.notifyObjectId = notifyObjectId;
@@ -435,11 +496,14 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert contact. Valid values:
-             * <p>
+             * <p>The type of the alert contact. Valid values:</p>
+             * <ul>
+             * <li><code>CONTACT</code>: contact</li>
+             * <li><code>CONTACT_GROUP</code>: contact group</li>
+             * </ul>
              * 
-             * - `CONTACT`: contact
-             * - `CONTACT_GROUP`: contact group
+             * <strong>example:</strong>
+             * <p>CONTACT</p>
              */
             public Builder notifyType(String notifyType) {
                 this.notifyType = notifyType;
@@ -453,6 +517,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDispatchRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDispatchRuleResponseBody</p>
+     */
     public static class NotifyRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyChannels")
         private java.util.List < String > notifyChannels;
@@ -492,7 +562,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private java.util.List < NotifyObjects> notifyObjects; 
 
             /**
-             * The notification method Array.
+             * <p>The notification method Array.</p>
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -500,7 +570,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The collection of alert contacts.
+             * <p>The collection of alert contacts.</p>
              */
             public Builder notifyObjects(java.util.List < NotifyObjects> notifyObjects) {
                 this.notifyObjects = notifyObjects;
@@ -514,6 +584,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDispatchRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDispatchRuleResponseBody</p>
+     */
     public static class DispatchRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DispatchType")
         private String dispatchType;
@@ -625,12 +701,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * Alarm handling method.
-             * <p>
+             * <p>Alarm handling method.</p>
+             * <p>CREATE_ALERT: Generate an alert.</p>
+             * <p>DISCARD_ALERT: Discard the alarm event, that is, no alarm.</p>
              * 
-             * CREATE_ALERT: Generate an alert.
-             * 
-             * DISCARD_ALERT: Discard the alarm event, that is, no alarm.
+             * <strong>example:</strong>
+             * <p>CREATE_ALERT</p>
              */
             public Builder dispatchType(String dispatchType) {
                 this.dispatchType = dispatchType;
@@ -638,7 +714,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The information about groups.
+             * <p>The information about groups.</p>
              */
             public Builder groupRules(java.util.List < GroupRules> groupRules) {
                 this.groupRules = groupRules;
@@ -646,10 +722,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to send recovered alerts.
-             * <p>
+             * <p>Whether to send recovered alerts.
              * true: send.
-             * false: do not send.
+             * false: do not send.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRecover(Boolean isRecover) {
                 this.isRecover = isRecover;
@@ -657,7 +735,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the dispatch rule.
+             * <p>The information about the dispatch rule.</p>
              */
             public Builder labelMatchExpressionGrid(LabelMatchExpressionGrid labelMatchExpressionGrid) {
                 this.labelMatchExpressionGrid = labelMatchExpressionGrid;
@@ -665,7 +743,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dispatch policy.
+             * <p>The name of the dispatch policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus Alert</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -673,7 +754,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The collection of notification methods.
+             * <p>The collection of notification methods.</p>
              */
             public Builder notifyRules(java.util.List < NotifyRules> notifyRules) {
                 this.notifyRules = notifyRules;
@@ -681,7 +762,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dispatch rule.
+             * <p>The ID of the dispatch rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10282</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -689,11 +773,14 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the dispatch policy is enabled. Valid values: 
-             * <p>
+             * <p>Indicates whether the dispatch policy is enabled. Valid values: </p>
+             * <ul>
+             * <li><code>true</code>: enabled</li>
+             * <li><code>false</code>: disabled</li>
+             * </ul>
              * 
-             * - `true`: enabled
-             * - `false`: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder state(String state) {
                 this.state = state;

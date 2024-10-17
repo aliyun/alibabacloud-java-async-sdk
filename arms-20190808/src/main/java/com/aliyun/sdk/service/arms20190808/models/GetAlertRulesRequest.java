@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAlertRulesRequest} extends {@link RequestModel}
  *
  * <p>GetAlertRulesRequest</p>
@@ -182,13 +183,17 @@ public class GetAlertRulesRequest extends Request {
         } 
 
         /**
-         * The unique IDs of alert rules.
-         * <p>
+         * <p>The unique IDs of alert rules.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.</li>
+         * <li>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</li>
+         * </ul>
+         * <blockquote>
+         * <p>When you call the GetAlertRules operation, you can specify other request parameters to obtain the AlertIds parameter from the response. Then, you can specify the AlertIds parameter to query the specified alert rules.</p>
+         * </blockquote>
          * 
-         * *   If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.
-         * *   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.
-         * 
-         * > When you call the GetAlertRules operation, you can specify other request parameters to obtain the AlertIds parameter from the response. Then, you can specify the AlertIds parameter to query the specified alert rules.
+         * <strong>example:</strong>
+         * <p>[&quot;12345&quot;]</p>
          */
         public Builder alertIds(String alertIds) {
             this.putQueryParameter("AlertIds", alertIds);
@@ -197,11 +202,14 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * The names of alert rules. When you create alert rules of the new version, you cannot specify duplicate names. However, existing alert rules may have duplicate names. Therefore, the **AlertName** parameter does not uniquely identify an alert rule.
-         * <p>
+         * <p>The names of alert rules. When you create alert rules of the new version, you cannot specify duplicate names. However, existing alert rules may have duplicate names. Therefore, the <strong>AlertName</strong> parameter does not uniquely identify an alert rule.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, the API operation does not filter alert rules based on their names.</li>
+         * <li>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, the API operation does not filter alert rules based on their names.
-         * *   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.
+         * <strong>example:</strong>
+         * <p>[&quot;test&quot;]</p>
          */
         public Builder alertNames(String alertNames) {
             this.putQueryParameter("AlertNames", alertNames);
@@ -210,14 +218,18 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * The status of the alert rule. Valid values:
-         * <p>
+         * <p>The status of the alert rule. Valid values:</p>
+         * <ul>
+         * <li>RUNNING</li>
+         * <li>STOPPED</li>
+         * <li>PAUSED</li>
+         * </ul>
+         * <blockquote>
+         * <p> The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</p>
+         * </blockquote>
          * 
-         * *   RUNNING
-         * *   STOPPED
-         * *   PAUSED
-         * 
-         * >  The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder alertStatus(String alertStatus) {
             this.putQueryParameter("AlertStatus", alertStatus);
@@ -226,12 +238,15 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * The type of the alert rule. Valid values:
-         * <p>
+         * <p>The type of the alert rule. This parameter is required for the new version of Alert Management.</p>
+         * <ul>
+         * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
+         * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
+         * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
+         * </ul>
          * 
-         * *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
-         * *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
-         * *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus
+         * <strong>example:</strong>
+         * <p>APPLICATION_MONITORING_ALERT_RULE</p>
          */
         public Builder alertType(String alertType) {
             this.putQueryParameter("AlertType", alertType);
@@ -240,7 +255,10 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * The ID of the monitored cluster.
+         * <p>The ID of the monitored cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceba9b9ea5b924dd0b6726d2de6******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -249,7 +267,11 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -258,7 +280,10 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * You do not need to configure this parameter.
+         * <p>You do not need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -267,7 +292,11 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -276,7 +305,11 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * The number of alert rules to return on each page.
+         * <p>The number of alert rules to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -285,7 +318,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -300,6 +333,12 @@ public class GetAlertRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetAlertRulesRequest} extends {@link TeaModel}
+     *
+     * <p>GetAlertRulesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -339,7 +378,10 @@ public class GetAlertRulesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -347,7 +389,10 @@ public class GetAlertRulesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCommercialUsageRequest} extends {@link RequestModel}
  *
  * <p>QueryCommercialUsageRequest</p>
@@ -198,7 +199,7 @@ public class QueryCommercialUsageRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -207,7 +208,7 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder advancedFilters(java.util.List < AdvancedFilters> advancedFilters) {
             this.putQueryParameter("AdvancedFilters", advancedFilters);
@@ -216,14 +217,14 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The dimensions of the metric that you want to query. Valid values:
-         * <p>
-         * 
-         * *   dataType: data type
-         * *   productType: product type
-         * *   instanceId: instance ID
-         * *   instanceName: instance name
-         * *   instanceType: instance type
+         * <p>The dimensions of the metric that you want to query. Valid values:</p>
+         * <ul>
+         * <li>dataType: data type</li>
+         * <li>productType: product type</li>
+         * <li>instanceId: instance ID</li>
+         * <li>instanceName: instance name</li>
+         * <li>instanceType: instance type</li>
+         * </ul>
          */
         public Builder dimensions(java.util.List < String > dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -232,7 +233,11 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699286400000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -241,13 +246,15 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The time interval between data slices. Unit: seconds. Minimum value: 3600.
-         * <p>
+         * <p>The time interval between data slices. Unit: seconds. Minimum value: 3600.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>3600: hours</li>
+         * <li>86400: days</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   3600: hours
-         * *   86400: days
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder intervalInSec(Integer intervalInSec) {
             this.putQueryParameter("IntervalInSec", intervalInSec);
@@ -256,7 +263,7 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The measures of the metric that you want to query.
+         * <p>The measures of the metric that you want to query.</p>
          */
         public Builder measures(java.util.List < String > measures) {
             this.putQueryParameter("Measures", measures);
@@ -265,7 +272,11 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The name of the metric. Valid value: USAGEFEE.STAT.
+         * <p>The name of the metric. Valid value: USAGEFEE.STAT.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USAGEFEE.STAT</p>
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -274,11 +285,14 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The order in which data is sorted. Valid value:
-         * <p>
+         * <p>The order in which data is sorted. Valid value:</p>
+         * <ul>
+         * <li><code>ASC</code>: ascending order</li>
+         * <li><code>DESC</code>: descending order</li>
+         * </ul>
          * 
-         * *   `ASC`: ascending order
-         * *   `DESC`: descending order
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -287,18 +301,19 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The dimension by which data is sorted.
-         * <p>
+         * <p>The dimension by which data is sorted.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li><p>dataType</p>
+         * <!-- -->
          * 
-         * Valid value:
+         * <!-- -->
          * 
-         * *   dataType
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>dataType</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -307,11 +322,15 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The data type. Valid values:
-         * <p>
+         * <p>The data type. Valid values:</p>
+         * <ul>
+         * <li>instantQuery: non-time series</li>
+         * <li>timeSeriesQuery: time series</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   instantQuery: non-time series
-         * *   timeSeriesQuery: time series
+         * <strong>example:</strong>
+         * <p>instantQuery</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -320,7 +339,11 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * The start of the time range to query. Unit: milliseconds.
+         * <p>The start of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699200000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -335,6 +358,12 @@ public class QueryCommercialUsageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCommercialUsageRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCommercialUsageRequest</p>
+     */
     public static class AdvancedFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -386,7 +415,10 @@ public class QueryCommercialUsageRequest extends Request {
             private String value; 
 
             /**
-             * The key of the filter condition.
+             * <p>The key of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,7 +426,10 @@ public class QueryCommercialUsageRequest extends Request {
             }
 
             /**
-             * The operator. Valid values: eq and in.
+             * <p>The operator. Valid values: eq and in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -402,7 +437,10 @@ public class QueryCommercialUsageRequest extends Request {
             }
 
             /**
-             * The value of the filter condition.
+             * <p>The value of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentDownloadUrlV2Request} extends {@link RequestModel}
  *
  * <p>GetAgentDownloadUrlV2Request</p>
@@ -105,7 +106,15 @@ public class GetAgentDownloadUrlV2Request extends Request {
         }
 
         /**
-         * AgentType.
+         * <p>The agent type.<br><strong>Valid values:</strong></p>
+         * <ul>
+         * <li><strong>JavaAgent</strong></li>
+         * <li><strong>Instgo</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JavaAgent</p>
          */
         public Builder agentType(String agentType) {
             this.putQueryParameter("AgentType", agentType);
@@ -114,7 +123,14 @@ public class GetAgentDownloadUrlV2Request extends Request {
         }
 
         /**
-         * ArchType.
+         * <p>The architecture type of the environment where the agent is installed.<br>This parameter is required and valid only when <strong>AgentType</strong> is set to <strong>Instgo</strong>.<br><strong>Valid values:</strong></p>
+         * <ul>
+         * <li><strong>amd64</strong></li>
+         * <li><strong>arm64</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>amd64</p>
          */
         public Builder archType(String archType) {
             this.putQueryParameter("ArchType", archType);
@@ -123,7 +139,15 @@ public class GetAgentDownloadUrlV2Request extends Request {
         }
 
         /**
-         * OsType.
+         * <p>The operating system of the environment where the agent is installed.<br>This parameter is required and valid only when <strong>AgentType</strong> is set to <strong>Instgo</strong>.<br><strong>Valid values:</strong></p>
+         * <ul>
+         * <li><strong>linux</strong></li>
+         * <li><strong>darwin</strong></li>
+         * <li><strong>windows</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);

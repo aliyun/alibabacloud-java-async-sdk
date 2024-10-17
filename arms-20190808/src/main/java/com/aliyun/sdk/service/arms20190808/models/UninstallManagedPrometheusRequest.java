@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UninstallManagedPrometheusRequest} extends {@link RequestModel}
  *
  * <p>UninstallManagedPrometheusRequest</p>
@@ -111,7 +112,10 @@ public class UninstallManagedPrometheusRequest extends Request {
         } 
 
         /**
-         * The ID of the Container Service for Kubernetes (ACK) cluster. This parameter is required when the ClusterType parameter is set to ask or one.
+         * <p>The ID of the Container Service for Kubernetes (ACK) cluster. This parameter is required when the ClusterType parameter is set to ask or one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -120,7 +124,11 @@ public class UninstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The cluster type. Valid values: ask, ecs, and one.
+         * <p>The cluster type. Valid values: ask, ecs, and one.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ask</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -129,7 +137,11 @@ public class UninstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +150,10 @@ public class UninstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Prometheus instance belongs.
+         * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -147,7 +162,10 @@ public class UninstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) where the cluster resides.
+         * <p>The ID of the virtual private cloud (VPC) where the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-rpn**********</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRumAppRequest} extends {@link RequestModel}
  *
  * <p>CreateRumAppRequest</p>
@@ -196,7 +197,10 @@ public class CreateRumAppRequest extends Request {
         } 
 
         /**
-         * The name of the application group.
+         * <p>The name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder appGroup(String appGroup) {
             this.putQueryParameter("AppGroup", appGroup);
@@ -205,7 +209,11 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -214,7 +222,10 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * The description of the application.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Monitoring description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -223,7 +234,10 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * The nick name.
+         * <p>The nickname of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -232,7 +246,10 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * The name of the Android application package. This parameter is required if you create an Android application.
+         * <p>The name of the Android application package. This parameter is required if you create an Android application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.xxxx.xxxxxx</p>
          */
         public Builder packageName(String packageName) {
             this.putQueryParameter("PackageName", packageName);
@@ -250,7 +267,11 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +280,10 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -268,7 +292,11 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * The application type. Valid values: web, miniapp, ios, and android.
+         * <p>The application type. Valid values: web, miniapp, ios, and android.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         public Builder siteType(String siteType) {
             this.putQueryParameter("SiteType", siteType);
@@ -277,7 +305,10 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * The source. This is a reserved parameter.
+         * <p>The source. This is a reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -286,7 +317,7 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * The list of tags. You can specify a maximum of 20 tags.
+         * <p>The list of tags. You can specify a maximum of 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -302,6 +333,12 @@ public class CreateRumAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRumAppRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRumAppRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -341,7 +378,10 @@ public class CreateRumAppRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -349,7 +389,10 @@ public class CreateRumAppRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder value(String value) {
                 this.value = value;

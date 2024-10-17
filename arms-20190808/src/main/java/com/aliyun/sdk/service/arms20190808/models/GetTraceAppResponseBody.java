@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTraceAppResponseBody} extends {@link TeaModel}
  *
  * <p>GetTraceAppResponseBody</p>
@@ -49,7 +50,10 @@ public class GetTraceAppResponseBody extends TeaModel {
         private TraceApp traceApp; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D80ADAAC-8C32-5479-BD14-C28CF832****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetTraceAppResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the array object.
+         * <p>The information about the array object.</p>
          */
         public Builder traceApp(TraceApp traceApp) {
             this.traceApp = traceApp;
@@ -70,6 +74,12 @@ public class GetTraceAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTraceAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceAppResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -109,7 +119,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +130,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +147,12 @@ public class GetTraceAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceAppResponseBody</p>
+     */
     public static class TraceApp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
@@ -326,7 +348,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -334,7 +359,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-k8s-demo</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -342,7 +370,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * Cluster ID, used only in K8s scenarios.
+             * <p>Cluster ID, used only in K8s scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c905d1364c2dd4b6284a3f41790c4****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -350,7 +381,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the task was created.
+             * <p>The timestamp generated when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1576599253000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -358,7 +392,7 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The aliases of the application.
+             * <p>The aliases of the application.</p>
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
@@ -366,7 +400,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * Coding Language.
+             * <p>Coding Language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -374,7 +411,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The process identifier (PID) of the application.
+             * <p>The process identifier (PID) of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b590lhguqs@d8deedfa9bf****</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -382,7 +422,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -390,7 +433,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxyexli2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -398,11 +444,14 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
-             * <p>
+             * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: yes</li>
+             * <li><code>false</code>: no</li>
+             * </ul>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -410,7 +459,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the application.
+             * <p>The source of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACSK8S</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -418,7 +470,7 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * A list of key-value pairs.
+             * <p>A list of key-value pairs.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -426,11 +478,14 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the monitoring task. Valid values:
-             * <p>
+             * <p>The type of the monitoring task. Valid values:</p>
+             * <ul>
+             * <li><code>TRACE</code>: Application Monitoring</li>
+             * <li><code>RETCODE</code>: Browser Monitoring</li>
+             * </ul>
              * 
-             * *   `TRACE`: Application Monitoring
-             * *   `RETCODE`: Browser Monitoring
+             * <strong>example:</strong>
+             * <p>TRACE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -438,7 +493,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the task information was updated.
+             * <p>The timestamp generated when the task information was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1635700348000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -446,7 +504,10 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

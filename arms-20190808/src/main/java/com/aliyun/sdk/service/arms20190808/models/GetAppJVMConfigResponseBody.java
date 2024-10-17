@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppJVMConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppJVMConfigResponseBody</p>
@@ -85,7 +86,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.
+         * <p>The response code. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The list of JVM information.
+         * <p>The list of JVM information.</p>
          */
         public Builder jvmInfoList(java.util.List < JvmInfoList> jvmInfoList) {
             this.jvmInfoList = jvmInfoList;
@@ -101,7 +105,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppJVMConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppJVMConfigResponseBody</p>
+     */
     public static class JvmInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentVersion")
         private String agentVersion;
@@ -217,7 +236,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             private String vmArgs; 
 
             /**
-             * The version of the agent.
+             * <p>The version of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.7.0-SNAPSHOT_3.0.3_3756244</p>
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -225,7 +247,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host_name</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -233,7 +258,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.91.59.244</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -241,7 +269,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsv9zcel92@1455182510c5369</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -249,7 +280,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID.
+             * <p>The process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder procId(String procId) {
                 this.procId = procId;
@@ -257,7 +291,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The VM parameters.
+             * <p>The VM parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[-javaagent:/home/admin/.opt/ArmsAgent/arms-bootstrap-1.7.0-SNAPSHOT.jar, -Doneagent.plugin.arms-agent.enabled=true, -Darms.licenseKey=[******], -Darms.agent.env=K8s, -Darms.agent.podinfo.path=/etc/podinfo, -Darms.appName=productservice, -Doneagent.region=cn-hangzhou, -Dproject.name=Product]</p>
              */
             public Builder vmArgs(String vmArgs) {
                 this.vmArgs = vmArgs;

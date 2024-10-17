@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlertRulesRequest} extends {@link RequestModel}
  *
  * <p>DeleteAlertRulesRequest</p>
@@ -69,7 +70,11 @@ public class DeleteAlertRulesRequest extends Request {
         } 
 
         /**
-         * The IDs of the alert rules that you want to delete. The value is a JSON array, for example, `[123, 234]`. You can call the SearchAlertRules operation and view the `Id` parameter in the response to obtain the alert rule ID. For more information, see [SearchAlertRules](~~175825~~).
+         * <p>The IDs of the alert rules that you want to delete. The value is a JSON array, for example, <code>[123, 234]</code>. You can call the SearchAlertRules operation and view the <code>Id</code> parameter in the response to obtain the alert rule ID. For more information, see <a href="https://help.aliyun.com/document_detail/175825.html">SearchAlertRules</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[123, 234]</p>
          */
         public Builder alertIds(String alertIds) {
             this.putQueryParameter("AlertIds", alertIds);
@@ -78,7 +83,11 @@ public class DeleteAlertRulesRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: `cn-hangzhou`.
+         * <p>The region ID. Default value: <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTimingSyntheticTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListTimingSyntheticTasksResponseBody</p>
@@ -73,7 +74,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * <p>The status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>730E90FE-996A-5638-99F3-4F0F9038CC6C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksResponseBody</p>
+     */
     public static class Hosts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -161,7 +177,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private java.util.List < String > ips; 
 
             /**
-             * The destination domain name.
+             * <p>The destination domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -169,12 +188,15 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version. Valid values:
-             * <p>
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li>0: A version is automatically selected.</li>
+             * <li>1: IPv4.</li>
+             * <li>2: IPv6.</li>
+             * </ul>
              * 
-             * *   0: A version is automatically selected.
-             * *   1: IPv4.
-             * *   2: IPv6.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipType(Integer ipType) {
                 this.ipType = ipType;
@@ -182,7 +204,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -196,6 +218,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksResponseBody</p>
+     */
     public static class CustomHost extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hosts")
         private java.util.List < Hosts> hosts;
@@ -235,7 +263,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private Integer selectType; 
 
             /**
-             * The custom host settings.
+             * <p>The custom host settings.</p>
              */
             public Builder hosts(java.util.List < Hosts> hosts) {
                 this.hosts = hosts;
@@ -243,11 +271,14 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The selection mode. Valid values:
-             * <p>
+             * <p>The selection mode. Valid values:</p>
+             * <ul>
+             * <li>0: random</li>
+             * <li>1: polling</li>
+             * </ul>
              * 
-             * *   0: random
-             * *   1: polling
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectType(Integer selectType) {
                 this.selectType = selectType;
@@ -261,6 +292,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksResponseBody</p>
+     */
     public static class CustomPrometheusSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrometheusClusterId")
         private String prometheusClusterId;
@@ -312,7 +349,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private java.util.Map < String, String > prometheusLabels; 
 
             /**
-             * A reserved field.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reserved field</p>
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -320,7 +360,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved field.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reserved field</p>
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -328,7 +371,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved field.
+             * <p>A reserved field.</p>
              */
             public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
                 this.prometheusLabels = prometheusLabels;
@@ -342,6 +385,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksResponseBody</p>
+     */
     public static class CustomVPCSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -405,7 +454,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -413,7 +465,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which the client belongs. The security group specifies the inbound and outbound rules of the client for the VPC. You need to allow the security group to which the client belongs to access the security group to which the VPC belongs. Otherwise, the client cannot access resources in the VPC.
+             * <p>The ID of the security group to which the client belongs. The security group specifies the inbound and outbound rules of the client for the VPC. You need to allow the security group to which the client belongs to access the security group to which the VPC belongs. Otherwise, the client cannot access resources in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxxxxxxxxxx</p>
              */
             public Builder secureGroupId(String secureGroupId) {
                 this.secureGroupId = secureGroupId;
@@ -421,7 +476,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1bcmj81kxxxxxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -429,7 +487,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zehbd4dfzahxxxxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -443,6 +504,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksResponseBody</p>
+     */
     public static class CommonSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomHost")
         private CustomHost customHost;
@@ -554,7 +621,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String xtraceRegion; 
 
             /**
-             * The custom host settings.
+             * <p>The custom host settings.</p>
              */
             public Builder customHost(CustomHost customHost) {
                 this.customHost = customHost;
@@ -562,7 +629,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved field.
+             * <p>A reserved field.</p>
              */
             public Builder customPrometheusSetting(CustomPrometheusSetting customPrometheusSetting) {
                 this.customPrometheusSetting = customPrometheusSetting;
@@ -570,7 +637,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the virtual private cloud (VPC). If the destination URL is an Alibaba Cloud internal endpoint, you need to configure a VPC.
+             * <p>The information about the virtual private cloud (VPC). If the destination URL is an Alibaba Cloud internal endpoint, you need to configure a VPC.</p>
              */
             public Builder customVPCSetting(CustomVPCSetting customVPCSetting) {
                 this.customVPCSetting = customVPCSetting;
@@ -578,12 +645,15 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version. Valid values:
-             * <p>
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li>0: A version is automatically selected.</li>
+             * <li>1: IPv4.</li>
+             * <li>2: IPv6.</li>
+             * </ul>
              * 
-             * *   0: A version is automatically selected.
-             * *   1: IPv4.
-             * *   2: IPv6.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipType(Integer ipType) {
                 this.ipType = ipType;
@@ -591,7 +661,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether tracing is enabled.
+             * <p>Indicates whether tracing is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isOpenTrace(Boolean isOpenTrace) {
                 this.isOpenTrace = isOpenTrace;
@@ -599,11 +672,14 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether monitoring samples are evenly distributed. Valid values:
-             * <p>
+             * <p>Indicates whether monitoring samples are evenly distributed. Valid values:</p>
+             * <ul>
+             * <li>0: No</li>
+             * <li>1: Yes</li>
+             * </ul>
              * 
-             * *   0: No
-             * *   1: Yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder monitorSamples(Integer monitorSamples) {
                 this.monitorSamples = monitorSamples;
@@ -611,12 +687,15 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the client for tracing. Valid values:
-             * <p>
+             * <p>The type of the client for tracing. Valid values:</p>
+             * <ul>
+             * <li>0: ARMS agent</li>
+             * <li>1: OpenTelemetry</li>
+             * <li>2: Jaeger</li>
+             * </ul>
              * 
-             * *   0: ARMS agent
-             * *   1: OpenTelemetry
-             * *   2: Jaeger
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder traceClientType(Integer traceClientType) {
                 this.traceClientType = traceClientType;
@@ -624,7 +703,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which trace data is reported.
+             * <p>The region to which trace data is reported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder xtraceRegion(String xtraceRegion) {
                 this.xtraceRegion = xtraceRegion;
@@ -638,6 +720,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -677,7 +765,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -685,7 +776,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -699,6 +793,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommonSetting")
         private CommonSetting commonSetting;
@@ -882,7 +982,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The general settings.
+             * <p>The general settings.</p>
              */
             public Builder commonSetting(CommonSetting commonSetting) {
                 this.commonSetting = commonSetting;
@@ -890,7 +990,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.
+             * <p>The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1m</p>
              */
             public Builder frequency(String frequency) {
                 this.frequency = frequency;
@@ -898,7 +1001,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671454758000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -906,7 +1012,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was modified.
+             * <p>The time when the task was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1673085633000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -914,7 +1023,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The detection point type. 1: PC. 2: mobile device.
+             * <p>The detection point type. 1: PC. 2: mobile device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder monitorCategory(Integer monitorCategory) {
                 this.monitorCategory = monitorCategory;
@@ -922,7 +1034,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of detection points.
+             * <p>The number of detection points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder monitorNum(String monitorNum) {
                 this.monitorNum = monitorNum;
@@ -930,7 +1045,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task name.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AlibabaCloud DNS Task</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -938,7 +1056,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -946,7 +1067,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzgwtq5vxxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -954,7 +1078,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task status. CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota limit. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: An exception occurs while deleting the task.
+             * <p>The task status. CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota limit. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: An exception occurs while deleting the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -962,7 +1089,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -970,7 +1097,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the synthetic monitoring task.
+             * <p>The ID of the synthetic monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5308a2691f59422c8c3b7aeccec9cd3b</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -978,10 +1108,11 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
-             * <p>
+             * <p>The type of the task. Valid values:</p>
+             * <p>1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.</p>
              * 
-             * 1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;
@@ -989,7 +1120,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The URL for synthetic monitoring.
+             * <p>The URL for synthetic monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com">https://www.example.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1003,6 +1137,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
@@ -1066,7 +1206,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * The queried tasks.
+             * <p>The queried tasks.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -1074,7 +1214,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -1082,7 +1225,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1090,7 +1236,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tasks.
+             * <p>The total number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

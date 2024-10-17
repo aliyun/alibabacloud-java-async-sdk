@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvCustomJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnvCustomJobsResponseBody</p>
@@ -73,7 +74,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A0CEDF1-06FE-44AC-8E21-21A5BE65****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnvCustomJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvCustomJobsResponseBody</p>
+     */
     public static class ScrapeConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
@@ -173,7 +189,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             private String scrapeInterval; 
 
             /**
-             * The name of the job.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom-sd-demo</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -181,7 +200,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the metric.
+             * <p>The path of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/metrics</p>
              */
             public Builder metricsPath(String metricsPath) {
                 this.metricsPath = metricsPath;
@@ -189,7 +211,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The service discovery methods.
+             * <p>The service discovery methods.</p>
              */
             public Builder scrapeDiscoverys(java.util.List < String > scrapeDiscoverys) {
                 this.scrapeDiscoverys = scrapeDiscoverys;
@@ -197,7 +219,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The capture interval.
+             * <p>The capture interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30s</p>
              */
             public Builder scrapeInterval(String scrapeInterval) {
                 this.scrapeInterval = scrapeInterval;
@@ -211,6 +236,12 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnvCustomJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvCustomJobsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddonName")
         private String addonName;
@@ -346,7 +377,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the add-on to which the custom job belongs.
+             * <p>The name of the add-on to which the custom job belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -354,7 +388,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the add-on.
+             * <p>The instance name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql1</p>
              */
             public Builder addonReleaseName(String addonReleaseName) {
                 this.addonReleaseName = addonReleaseName;
@@ -362,7 +399,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the add-on.
+             * <p>The version of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.0</p>
              */
             public Builder addonVersion(String addonVersion) {
                 this.addonVersion = addonVersion;
@@ -370,7 +410,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
+             * <p>If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refer to supplementary instructions.</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -378,7 +421,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the custom job was created. The value of this parameter is a timestamp.
+             * <p>The time when the custom job was created. The value of this parameter is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-01T10:11:34Z</p>
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -386,7 +432,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom job.
+             * <p>The name of the custom job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job1</p>
              */
             public Builder customJobName(String customJobName) {
                 this.customJobName = customJobName;
@@ -394,7 +443,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the environment instance.
+             * <p>The ID of the environment instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -402,7 +454,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -410,7 +465,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The capture configurations.
+             * <p>The capture configurations.</p>
              */
             public Builder scrapeConfigs(java.util.List < ScrapeConfigs> scrapeConfigs) {
                 this.scrapeConfigs = scrapeConfigs;
@@ -418,7 +473,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the custom job.
+             * <p>The status of the custom job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRetcodeAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRetcodeAppsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         private java.util.List < RetcodeApps> retcodeApps; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of applications monitored by Browser Monitoring.
+         * <p>The list of applications monitored by Browser Monitoring.</p>
          */
         public Builder retcodeApps(java.util.List < RetcodeApps> retcodeApps) {
             this.retcodeApps = retcodeApps;
@@ -70,6 +74,12 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRetcodeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRetcodeAppsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -109,7 +119,10 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +130,10 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +147,12 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRetcodeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRetcodeAppsResponseBody</p>
+     */
     public static class RetcodeApps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
@@ -230,7 +252,10 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ID of the application. The parameter is an auto-increment parameter.
+             * <p>The ID of the application. The parameter is an auto-increment parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16064</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -238,7 +263,10 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -246,7 +274,10 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the application monitored by Browser Monitoring.
+             * <p>The alias of the application monitored by Browser Monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B1</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -254,7 +285,10 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The process identifier (PID) of the application.
+             * <p>The process identifier (PID) of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>atc889zkcf@d8deedfa9bf****</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -262,7 +296,10 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxyexli2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -270,15 +307,18 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application. Valid values:
-             * <p>
+             * <p>The type of the application. Valid values:</p>
+             * <ul>
+             * <li><code>web</code>: web application</li>
+             * <li><code>weex</code>: Weex mobile app</li>
+             * <li><code>mini_dd</code>: DingTalk mini program</li>
+             * <li><code>mini_alipay</code>: Alipay mini program</li>
+             * <li><code>mini_wx</code>: WeChat mini program</li>
+             * <li><code>mini_common</code>: mini program on other platforms</li>
+             * </ul>
              * 
-             * *   `web`: web application
-             * *   `weex`: Weex mobile app
-             * *   `mini_dd`: DingTalk mini program
-             * *   `mini_alipay`: Alipay mini program
-             * *   `mini_wx`: WeChat mini program
-             * *   `mini_common`: mini program on other platforms
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder retcodeAppType(String retcodeAppType) {
                 this.retcodeAppType = retcodeAppType;
@@ -286,7 +326,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the task.
+             * <p>The tags of the task.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

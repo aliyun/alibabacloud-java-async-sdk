@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuthTokenResponseBody</p>
@@ -85,7 +86,10 @@ public class GetAuthTokenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code. 200 means success, other status codes are exceptions.
+         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The returned authentication token.
+         * <p>The returned authentication token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJIUzI1NiJ9******</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +108,10 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Additional Information.
+         * <p>Additional Information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,10 +130,14 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Whether the query was successful:
-         * <p>
-         * - true: Success
-         * - false: Failure
+         * <p>Whether the query was successful:</p>
+         * <ul>
+         * <li>true: Success</li>
+         * <li>false: Failure</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

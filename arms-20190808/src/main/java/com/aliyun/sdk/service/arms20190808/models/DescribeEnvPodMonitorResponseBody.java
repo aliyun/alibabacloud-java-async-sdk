@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnvPodMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnvPodMonitorResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnvPodMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnvPodMonitorResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigYaml")
         private String configYaml;
@@ -197,7 +213,10 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The YAML string of the PodMonitor.
+             * <p>The YAML string of the PodMonitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refer to supplementary instructions.</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -205,7 +224,10 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the environment instance.
+             * <p>The ID of the environment instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -213,7 +235,10 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -221,7 +246,10 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the PodMonitor.
+             * <p>The name of the PodMonitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>podMonitor1</p>
              */
             public Builder podMonitorName(String podMonitorName) {
                 this.podMonitorName = podMonitorName;
@@ -229,7 +257,10 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -237,11 +268,14 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The status. Valid values:
-             * <p>
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>run</li>
+             * <li>stop</li>
+             * </ul>
              * 
-             * *   run
-             * *   stop
+             * <strong>example:</strong>
+             * <p>run</p>
              */
             public Builder status(String status) {
                 this.status = status;

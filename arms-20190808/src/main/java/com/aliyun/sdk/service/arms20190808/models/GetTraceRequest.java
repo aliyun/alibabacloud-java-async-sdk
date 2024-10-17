@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTraceRequest} extends {@link RequestModel}
  *
  * <p>GetTraceRequest</p>
@@ -97,10 +98,13 @@ public class GetTraceRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
-         * <p>
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.
+         * <strong>example:</strong>
+         * <p>1623827603000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -109,7 +113,11 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -118,10 +126,13 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: milliseconds.
-         * <p>
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.
+         * <strong>example:</strong>
+         * <p>1623827602000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -130,7 +141,11 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * The trace ID. You can log on to the ARMS console and obtain the trace ID on the **Trace Query** page or **Interface Snapshot** tab.
+         * <p>The trace ID. You can log on to the ARMS console and obtain the trace ID on the <strong>Trace Query</strong> page or <strong>Interface Snapshot</strong> tab.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac14001a15954493811405707d****</p>
          */
         public Builder traceID(String traceID) {
             this.putQueryParameter("TraceID", traceID);

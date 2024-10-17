@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEnvPodMonitorRequest} extends {@link RequestModel}
  *
  * <p>UpdateEnvPodMonitorRequest</p>
@@ -142,11 +143,14 @@ public class UpdateEnvPodMonitorRequest extends Request {
         } 
 
         /**
-         * The language. Valid values:
-         * <p>
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>zh (default value): Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh (default value): Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -155,7 +159,11 @@ public class UpdateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The YAML configuration file of the ServiceMonitor.
+         * <p>The YAML configuration file of the ServiceMonitor.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refer to supplementary instructions.</p>
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -164,7 +172,10 @@ public class UpdateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * Checks whether the format is valid and whether targets are matched.
+         * <p>Checks whether the format is valid and whether targets are matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -173,7 +184,11 @@ public class UpdateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -182,7 +197,11 @@ public class UpdateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The namespace where the PodMonitor resides.
+         * <p>The namespace where the PodMonitor resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -191,7 +210,11 @@ public class UpdateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The name of the PodMonitor.
+         * <p>The name of the PodMonitor.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-admin-pm1</p>
          */
         public Builder podMonitorName(String podMonitorName) {
             this.putQueryParameter("PodMonitorName", podMonitorName);
@@ -200,7 +223,11 @@ public class UpdateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

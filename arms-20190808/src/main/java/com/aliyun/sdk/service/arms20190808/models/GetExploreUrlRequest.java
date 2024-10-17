@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExploreUrlRequest} extends {@link RequestModel}
  *
  * <p>GetExploreUrlRequest</p>
@@ -97,7 +98,11 @@ public class GetExploreUrlRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9cc4c5e220f8461f9d71b6ec6e******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -106,7 +111,10 @@ public class GetExploreUrlRequest extends Request {
         }
 
         /**
-         * The query statement that corresponds to the data source.
+         * <p>The query statement that corresponds to the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{app=&quot;buy2&quot;}</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -115,7 +123,10 @@ public class GetExploreUrlRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +135,11 @@ public class GetExploreUrlRequest extends Request {
         }
 
         /**
-         * The type of the Grafana data source.
+         * <p>The type of the Grafana data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prometheus</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

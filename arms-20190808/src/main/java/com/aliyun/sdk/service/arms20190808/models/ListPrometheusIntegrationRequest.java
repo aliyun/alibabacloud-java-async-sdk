@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrometheusIntegrationRequest} extends {@link RequestModel}
  *
  * <p>ListPrometheusIntegrationRequest</p>
@@ -84,7 +85,11 @@ public class ListPrometheusIntegrationRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.
+         * <p>The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c77f6f2397ea74672872acf5e31374a27</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +98,11 @@ public class ListPrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
+         * <p>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);
@@ -102,7 +111,11 @@ public class ListPrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

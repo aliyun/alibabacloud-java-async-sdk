@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAddonsRequest} extends {@link RequestModel}
  *
  * <p>ListAddonsRequest</p>
@@ -109,7 +110,10 @@ public class ListAddonsRequest extends Request {
         } 
 
         /**
-         * Language,the default language is Chinese.
+         * <p>Language,the default language is Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -118,7 +122,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * Category filter.
+         * <p>Category filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -127,7 +134,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * Whether to enable regular matching.
+         * <p>Whether to enable regular matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder regexp(Boolean regexp) {
             this.putQueryParameter("Regexp", regexp);
@@ -136,7 +146,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,7 +158,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * A query field can be queried by name or description.
+         * <p>A query field can be queried by name or description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("Search", search);

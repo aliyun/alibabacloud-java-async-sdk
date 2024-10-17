@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckServiceStatusRequest} extends {@link RequestModel}
  *
  * <p>CheckServiceStatusRequest</p>
@@ -68,7 +69,10 @@ public class CheckServiceStatusRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,7 +81,11 @@ public class CheckServiceStatusRequest extends Request {
         }
 
         /**
-         * The service code of an Alibaba Cloud service. The service code of Managed Service for Prometheus is prometheus.
+         * <p>The service code of an Alibaba Cloud service. The service code of Managed Service for Prometheus is prometheus.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prometheus</p>
          */
         public Builder svcCode(String svcCode) {
             this.putQueryParameter("SvcCode", svcCode);

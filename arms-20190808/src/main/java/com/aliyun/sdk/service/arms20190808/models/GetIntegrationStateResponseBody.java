@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIntegrationStateResponseBody} extends {@link TeaModel}
  *
  * <p>GetIntegrationStateResponseBody</p>
@@ -73,7 +74,10 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         private Boolean state; 
 
         /**
-         * Status code. 200 means success, other status codes are exceptions.
+         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         }
 
         /**
-         * The prompt information of the returned result.
+         * <p>The prompt information of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         }
 
         /**
-         * The integration state of Prometheus dashboards and collection rules. Valid values:
-         * <p>
+         * <p>The integration state of Prometheus dashboards and collection rules. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The Prometheus dashboards and collection rules that monitor the software are integrated.</li>
+         * <li><code>false</code>: The Prometheus dashboards and collection rules that monitor the software are not integrated.</li>
+         * </ul>
          * 
-         * *   `true`: The Prometheus dashboards and collection rules that monitor the software are integrated.
-         * *   `false`: The Prometheus dashboards and collection rules that monitor the software are not integrated.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder state(Boolean state) {
             this.state = state;

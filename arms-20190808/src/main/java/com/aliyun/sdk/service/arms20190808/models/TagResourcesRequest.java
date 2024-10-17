@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -98,7 +99,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +108,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can specify a maximum of 50 resource IDs.
+         * <p>The resource IDs. You can specify a maximum of 50 resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -116,16 +118,20 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the ARMS resources for which you want to modify tags. Valid values:
-         * <p>
+         * <p>The type of the ARMS resources for which you want to modify tags. Valid values:</p>
+         * <ul>
+         * <li>WEB: Browser Monitoring</li>
+         * <li>APPLICATION: Application Monitoring</li>
+         * <li>PROMETHEUS: Managed Service for Prometheus</li>
+         * <li>SYNTHETICTASK: Synthetic Monitoring</li>
+         * <li>ALERTRULE: Application Monitoring alert rule</li>
+         * <li>PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule</li>
+         * <li>XTRACEAPP: Managed Service for OpenTelemetry</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   WEB: Browser Monitoring
-         * *   APPLICATION: Application Monitoring
-         * *   PROMETHEUS: Managed Service for Prometheus
-         * *   SYNTHETICTASK: Synthetic Monitoring
-         * *   ALERTRULE: Application Monitoring alert rule
-         * *   PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule
-         * *   XTRACEAPP: Managed Service for OpenTelemetry
+         * <strong>example:</strong>
+         * <p>PROMETHEUS</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -134,7 +140,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags to add to the resource. You can specify a maximum of 20 tags.
+         * <p>The tags to add to the resource. You can specify a maximum of 20 tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -149,6 +156,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -188,7 +201,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -196,7 +212,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test1</p>
              */
             public Builder value(String value) {
                 this.value = value;

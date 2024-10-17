@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTracesByPageRequest} extends {@link RequestModel}
  *
  * <p>SearchTracesByPageRequest</p>
@@ -238,7 +239,11 @@ public class SearchTracesByPageRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595210400000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -247,7 +252,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder exclusionFilters(java.util.List < ExclusionFilters> exclusionFilters) {
             this.putQueryParameter("ExclusionFilters", exclusionFilters);
@@ -256,11 +261,14 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * Specifies whether to include the traces of abnormal calls.
-         * <p>
+         * <p>Specifies whether to include the traces of abnormal calls.</p>
+         * <ul>
+         * <li><code>true</code>: No</li>
+         * <li><code>false</code> (default): Yes</li>
+         * </ul>
          * 
-         * *   `true`: No
-         * *   `false` (default): Yes
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isError(Boolean isError) {
             this.putQueryParameter("IsError", isError);
@@ -269,7 +277,10 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The minimum amount of time consumed by traces. Unit: milliseconds.
+         * <p>The minimum amount of time consumed by traces. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minDuration(Long minDuration) {
             this.putQueryParameter("MinDuration", minDuration);
@@ -278,7 +289,10 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The name of the traced span.
+         * <p>The name of the traced span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/demo/queryNotExistDB/11</p>
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -287,7 +301,10 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -296,7 +313,10 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
+         * <p>The number of entries to return on each page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -305,7 +325,10 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@9781be0f44dXXXX</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -314,7 +337,11 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -323,11 +350,14 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.
-         * <p>
+         * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: <code>false</code>.</p>
+         * <ul>
+         * <li><code>true</code>: sorts the query results in reverse chronological order.</li>
+         * <li><code>false</code>: sorts the query results in chronological order.</li>
+         * </ul>
          * 
-         * *   `true`: sorts the query results in reverse chronological order.
-         * *   `false`: sorts the query results in chronological order.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -336,7 +366,10 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The IP address of the host where the application resides.
+         * <p>The IP address of the host where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.XX.XX</p>
          */
         public Builder serviceIp(String serviceIp) {
             this.putQueryParameter("ServiceIp", serviceIp);
@@ -345,7 +378,10 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-k8s-demo-subcomponent</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -354,7 +390,11 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595174400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -363,7 +403,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -378,6 +418,12 @@ public class SearchTracesByPageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTracesByPageRequest} extends {@link TeaModel}
+     *
+     * <p>SearchTracesByPageRequest</p>
+     */
     public static class ExclusionFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -417,7 +463,10 @@ public class SearchTracesByPageRequest extends Request {
             private String value; 
 
             /**
-             * The key that is used to filter the query results.
+             * <p>The key that is used to filter the query results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http.status_code</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -425,7 +474,10 @@ public class SearchTracesByPageRequest extends Request {
             }
 
             /**
-             * The value of the key that is used to filter the query results.
+             * <p>The value of the key that is used to filter the query results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -439,6 +491,12 @@ public class SearchTracesByPageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTracesByPageRequest} extends {@link TeaModel}
+     *
+     * <p>SearchTracesByPageRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -478,18 +536,21 @@ public class SearchTracesByPageRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. The following system preset fields are provided:
-             * <p>
+             * <p>The key of the tag. The following system preset fields are provided:</p>
+             * <ul>
+             * <li>traceId: the ID of the trace.</li>
+             * <li>serverApp: the name of the server application.</li>
+             * <li>clientApp: the name of the client application.</li>
+             * <li>service: the name of the interface.</li>
+             * <li>rpc: the type of the call.</li>
+             * <li>msOfSpan: the duration exceeds a specific value.</li>
+             * <li>clientIp: the IP address of the client.</li>
+             * <li>serverIp: the IP address of the server.</li>
+             * <li>isError: specifies whether the call is abnormal.</li>
+             * </ul>
              * 
-             * *   traceId: the ID of the trace.
-             * *   serverApp: the name of the server application.
-             * *   clientApp: the name of the client application.
-             * *   service: the name of the interface.
-             * *   rpc: the type of the call.
-             * *   msOfSpan: the duration exceeds a specific value.
-             * *   clientIp: the IP address of the client.
-             * *   serverIp: the IP address of the server.
-             * *   isError: specifies whether the call is abnormal.
+             * <strong>example:</strong>
+             * <p>http.status_code</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -497,7 +558,10 @@ public class SearchTracesByPageRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder value(String value) {
                 this.value = value;

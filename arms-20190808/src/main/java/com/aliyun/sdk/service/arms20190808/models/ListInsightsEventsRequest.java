@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInsightsEventsRequest} extends {@link RequestModel}
  *
  * <p>ListInsightsEventsRequest</p>
@@ -112,7 +113,11 @@ public class ListInsightsEventsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The value is a timestamp.
+         * <p>The end of the time range to query. The value is a timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1480607940000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -121,13 +126,16 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * The types of the events that you want to query. Separate multiple event types with commas (,). If you do not specify this parameter, all events are queried.
-         * <p>
+         * <p>The types of the events that you want to query. Separate multiple event types with commas (,). If you do not specify this parameter, all events are queried.</p>
+         * <ul>
+         * <li>errorIncrease: API error-rate spike events. Examples: HTTP API error-rate spike events and Dubbo API error-rate spike events.</li>
+         * <li>topErrorIncrease: the top five API error-rate spike events with the highest traffic.</li>
+         * <li>topRtIncrease: API response-time spike events. Examples: HTTP API response-time spike events and Dubbo API response-time spike events.</li>
+         * <li>rtIncrease: the top five API response-time spike events with the highest traffic.</li>
+         * </ul>
          * 
-         * *   errorIncrease: API error-rate spike events. Examples: HTTP API error-rate spike events and Dubbo API error-rate spike events.
-         * *   topErrorIncrease: the top five API error-rate spike events with the highest traffic.
-         * *   topRtIncrease: API response-time spike events. Examples: HTTP API response-time spike events and Dubbo API response-time spike events.
-         * *   rtIncrease: the top five API response-time spike events with the highest traffic.
+         * <strong>example:</strong>
+         * <p>errorIncrease,topErrorIncrease,topExceptionIncrease,topRtIncrease,rtIncrease</p>
          */
         public Builder insightsTypes(String insightsTypes) {
             this.putQueryParameter("InsightsTypes", insightsTypes);
@@ -136,7 +144,10 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aokcdqn3ly@a195c6d6421****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -145,7 +156,11 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +169,11 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * The start of the time range to query. The value is a timestamp.
+         * <p>The start of the time range to query. The value is a timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595174400000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

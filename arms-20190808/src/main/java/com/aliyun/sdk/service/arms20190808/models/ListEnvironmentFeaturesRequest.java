@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvironmentFeaturesRequest} extends {@link RequestModel}
  *
  * <p>ListEnvironmentFeaturesRequest</p>
@@ -82,13 +83,15 @@ public class ListEnvironmentFeaturesRequest extends Request {
         } 
 
         /**
-         * The language. Default value: zh.
-         * <p>
+         * <p>The language. Default value: zh.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en: English.</li>
+         * <li>zh: Chinese.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   en: English.
-         * *   zh: Chinese.
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -97,7 +100,11 @@ public class ListEnvironmentFeaturesRequest extends Request {
         }
 
         /**
-         * The environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -106,7 +113,10 @@ public class ListEnvironmentFeaturesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

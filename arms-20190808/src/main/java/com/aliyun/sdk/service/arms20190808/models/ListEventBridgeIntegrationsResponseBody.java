@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEventBridgeIntegrationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEventBridgeIntegrationsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about EventBridge integrations that is returned on each page.
+         * <p>The information about EventBridge integrations that is returned on each page.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -57,7 +58,10 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2B289756-E791-5842-BCBD-AD414C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEventBridgeIntegrationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventBridgeIntegrationsResponseBody</p>
+     */
     public static class EventBridgeIntegrations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -121,7 +131,10 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the EventBridge integration.
+             * <p>The description of the EventBridge integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -129,7 +142,10 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EventBridge integration.
+             * <p>The ID of the EventBridge integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -137,7 +153,10 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the EventBridge integration.
+             * <p>The name of the EventBridge integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EventBridge_Test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -151,6 +170,12 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventBridgeIntegrationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventBridgeIntegrationsResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventBridgeIntegrations")
         private java.util.List < EventBridgeIntegrations> eventBridgeIntegrations;
@@ -214,7 +239,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The EventBridge integrations.
+             * <p>The EventBridge integrations.</p>
              */
             public Builder eventBridgeIntegrations(java.util.List < EventBridgeIntegrations> eventBridgeIntegrations) {
                 this.eventBridgeIntegrations = eventBridgeIntegrations;
@@ -222,7 +247,10 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the returned page.
+             * <p>The number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -230,7 +258,10 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -238,7 +269,10 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of EventBridge integrations that are returned.
+             * <p>The total number of EventBridge integrations that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

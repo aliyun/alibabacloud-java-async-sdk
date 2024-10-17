@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAlertContactGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAlertContactGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the alert contact group.
+         * <p>The ID of the alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>446*</p>
          */
         public Builder contactGroupId(String contactGroupId) {
             this.contactGroupId = contactGroupId;
@@ -57,7 +61,10 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70675725-8F11-4817-8106-CFE0AD71****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

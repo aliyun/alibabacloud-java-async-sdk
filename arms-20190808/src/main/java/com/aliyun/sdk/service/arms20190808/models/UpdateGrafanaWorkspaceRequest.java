@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGrafanaWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>UpdateGrafanaWorkspaceRequest</p>
@@ -111,7 +112,10 @@ public class UpdateGrafanaWorkspaceRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -120,7 +124,7 @@ public class UpdateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The description of the workspace.
+         * <p>The description of the workspace.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -129,7 +133,11 @@ public class UpdateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-cn-4xl3g******</p>
          */
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
@@ -138,7 +146,10 @@ public class UpdateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The workspace name.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGrafana</p>
          */
         public Builder grafanaWorkspaceName(String grafanaWorkspaceName) {
             this.putQueryParameter("GrafanaWorkspaceName", grafanaWorkspaceName);
@@ -147,7 +158,11 @@ public class UpdateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: `cn-hangzhou`.
+         * <p>The region ID. Default value: <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

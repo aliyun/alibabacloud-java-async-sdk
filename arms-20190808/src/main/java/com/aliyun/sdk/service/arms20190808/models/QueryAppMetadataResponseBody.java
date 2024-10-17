@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAppMetadataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAppMetadataResponseBody</p>
@@ -85,13 +86,16 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned for the request. Valid values:
-         * <p>
+         * <p>The HTTP status code returned for the request. Valid values:</p>
+         * <ul>
+         * <li>2XX: The request is successful.</li>
+         * <li>3XX: A redirection message is returned.</li>
+         * <li>4XX: The request is invalid.</li>
+         * <li>5XX: A server error occurs.</li>
+         * </ul>
          * 
-         * *   2XX: The request is successful.
-         * *   3XX: A redirection message is returned.
-         * *   4XX: The request is invalid.
-         * *   5XX: A server error occurs.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -99,7 +103,10 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;408d5533&quot;: &quot;SELECT * FROM user_base_info&quot;}</p>
          */
         public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
@@ -107,7 +114,10 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -115,7 +125,10 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51877BAC-330C-5845-BDFD-C7859AD33FB7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,11 +136,14 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The call was successful.</li>
+         * <li><code>false</code>: The call failed.</li>
+         * </ul>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

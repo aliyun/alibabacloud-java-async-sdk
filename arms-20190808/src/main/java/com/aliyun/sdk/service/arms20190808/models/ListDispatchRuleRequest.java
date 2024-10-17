@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDispatchRuleRequest} extends {@link RequestModel}
  *
  * <p>ListDispatchRuleRequest</p>
@@ -82,7 +83,10 @@ public class ListDispatchRuleRequest extends Request {
         } 
 
         /**
-         * The name of the notification policy. Fuzzy match is supported.
+         * <p>The name of the notification policy. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -91,7 +95,11 @@ public class ListDispatchRuleRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,11 +108,16 @@ public class ListDispatchRuleRequest extends Request {
         }
 
         /**
-         * *   The type of notification policies to be queried. Valid values: `false` (default): notification policies created in Application Real-Time Monitoring Service (ARMS).
-         * <p>
-         * *   `true`: notification policies created in an external system.
+         * <ul>
+         * <li>The type of notification policies to be queried. Valid values: <code>false</code> (default): notification policies created in Application Real-Time Monitoring Service (ARMS).</li>
+         * <li><code>true</code>: notification policies created in an external system.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You cannot use the ARMS console to modify the dispatch rules of a notification policy that is created in an external system.</p>
+         * </blockquote>
          * 
-         * >  You cannot use the ARMS console to modify the dispatch rules of a notification policy that is created in an external system.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder system(Boolean system) {
             this.putQueryParameter("System", system);

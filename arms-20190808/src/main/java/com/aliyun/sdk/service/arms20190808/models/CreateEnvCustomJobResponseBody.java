@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnvCustomJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEnvCustomJobResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the custom job that was created, or the exception information.
+         * <p>The name of the custom job that was created, or the exception information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cutomJob1</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C518054-852F-4023-ABC1-4AF95FF7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRumAppInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetRumAppInfoResponseBody</p>
@@ -97,7 +98,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the application.
+         * <p>The details of the application.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StartTime is mandatory for this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRumAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumAppInfoResponseBody</p>
+     */
     public static class ModuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("defaultConfig")
         private java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > defaultConfig;
@@ -205,7 +227,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs; 
 
             /**
-             * The default configuration of the application.
+             * <p>The default configuration of the application.</p>
              */
             public Builder defaultConfig(java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > defaultConfig) {
                 this.defaultConfig = defaultConfig;
@@ -213,7 +235,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configuration is enabled.
+             * <p>Indicates whether the configuration is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -221,7 +246,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version configurations of the application.
+             * <p>The version configurations of the application.</p>
              */
             public Builder versionConfigs(java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs) {
                 this.versionConfigs = versionConfigs;
@@ -235,12 +260,89 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRumAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumAppInfoResponseBody</p>
+     */
+    public static class SamplingConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("samplingRate")
+        private Integer samplingRate;
+
+        @com.aliyun.core.annotation.NameInMap("samplingType")
+        private Integer samplingType;
+
+        private SamplingConfig(Builder builder) {
+            this.samplingRate = builder.samplingRate;
+            this.samplingType = builder.samplingType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SamplingConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return samplingRate
+         */
+        public Integer getSamplingRate() {
+            return this.samplingRate;
+        }
+
+        /**
+         * @return samplingType
+         */
+        public Integer getSamplingType() {
+            return this.samplingType;
+        }
+
+        public static final class Builder {
+            private Integer samplingRate; 
+            private Integer samplingType; 
+
+            /**
+             * samplingRate.
+             */
+            public Builder samplingRate(Integer samplingRate) {
+                this.samplingRate = samplingRate;
+                return this;
+            }
+
+            /**
+             * samplingType.
+             */
+            public Builder samplingType(Integer samplingType) {
+                this.samplingType = samplingType;
+                return this;
+            }
+
+            public SamplingConfig build() {
+                return new SamplingConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetRumAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumAppInfoResponseBody</p>
+     */
     public static class BonreeSDKConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("moduleConfig")
         private ModuleConfig moduleConfig;
 
+        @com.aliyun.core.annotation.NameInMap("samplingConfig")
+        private SamplingConfig samplingConfig;
+
         private BonreeSDKConfig(Builder builder) {
             this.moduleConfig = builder.moduleConfig;
+            this.samplingConfig = builder.samplingConfig;
         }
 
         public static Builder builder() {
@@ -258,14 +360,30 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             return this.moduleConfig;
         }
 
+        /**
+         * @return samplingConfig
+         */
+        public SamplingConfig getSamplingConfig() {
+            return this.samplingConfig;
+        }
+
         public static final class Builder {
             private ModuleConfig moduleConfig; 
+            private SamplingConfig samplingConfig; 
 
             /**
-             * The module configuration.
+             * <p>The module configuration.</p>
              */
             public Builder moduleConfig(ModuleConfig moduleConfig) {
                 this.moduleConfig = moduleConfig;
+                return this;
+            }
+
+            /**
+             * samplingConfig.
+             */
+            public Builder samplingConfig(SamplingConfig samplingConfig) {
+                this.samplingConfig = samplingConfig;
                 return this;
             }
 
@@ -276,6 +394,12 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRumAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumAppInfoResponseBody</p>
+     */
     public static class ServiceDomainConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -351,7 +475,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private Boolean tracing; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -359,7 +486,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name or IP address.
+             * <p>The domain name or IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -367,7 +497,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.
+             * <p>The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.</p>
              */
             public Builder propagatorTypes(java.util.List < String > propagatorTypes) {
                 this.propagatorTypes = propagatorTypes;
@@ -383,11 +513,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the tracing analysis feature is enabled. To enable the tracing analysis feature, you must activate Managed Service for OpenTelemetry. Valid values:
-             * <p>
+             * <p>Indicates whether the tracing analysis feature is enabled. To enable the tracing analysis feature, you must activate Managed Service for OpenTelemetry. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: enables the tracing analysis feature. If you enable the tracing analysis feature, related headers are inserted into requests for the domain name.</li>
+             * <li><code>false</code>: disables the tracing analysis feature.</li>
+             * </ul>
              * 
-             * *   `true`: enables the tracing analysis feature. If you enable the tracing analysis feature, related headers are inserted into requests for the domain name.
-             * *   `false`: disables the tracing analysis feature.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tracing(Boolean tracing) {
                 this.tracing = tracing;
@@ -401,6 +534,12 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRumAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumAppInfoResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -440,7 +579,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Label</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -448,7 +590,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -462,12 +607,21 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRumAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRumAppInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppGroup")
         private String appGroup;
 
         @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
+
+        @com.aliyun.core.annotation.NameInMap("BackendServiceTraceRegion")
+        private String backendServiceTraceRegion;
 
         @com.aliyun.core.annotation.NameInMap("BonreeSDKConfig")
         private BonreeSDKConfig bonreeSDKConfig;
@@ -526,6 +680,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.appGroup = builder.appGroup;
             this.appType = builder.appType;
+            this.backendServiceTraceRegion = builder.backendServiceTraceRegion;
             this.bonreeSDKConfig = builder.bonreeSDKConfig;
             this.cdnDomain = builder.cdnDomain;
             this.createTime = builder.createTime;
@@ -566,6 +721,13 @@ public class GetRumAppInfoResponseBody extends TeaModel {
          */
         public String getAppType() {
             return this.appType;
+        }
+
+        /**
+         * @return backendServiceTraceRegion
+         */
+        public String getBackendServiceTraceRegion() {
+            return this.backendServiceTraceRegion;
         }
 
         /**
@@ -697,6 +859,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String appGroup; 
             private String appType; 
+            private String backendServiceTraceRegion; 
             private BonreeSDKConfig bonreeSDKConfig; 
             private String cdnDomain; 
             private String createTime; 
@@ -717,7 +880,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The group to which the application belongs.
+             * <p>The group to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder appGroup(String appGroup) {
                 this.appGroup = appGroup;
@@ -725,7 +891,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The application type. Valid values: web, miniapp, ios, and android.
+             * <p>The application type. Valid values: web, miniapp, ios, and android.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -733,7 +902,15 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile collection configurations.
+             * BackendServiceTraceRegion.
+             */
+            public Builder backendServiceTraceRegion(String backendServiceTraceRegion) {
+                this.backendServiceTraceRegion = backendServiceTraceRegion;
+                return this;
+            }
+
+            /**
+             * <p>The mobile collection configurations.</p>
              */
             public Builder bonreeSDKConfig(BonreeSDKConfig bonreeSDKConfig) {
                 this.bonreeSDKConfig = bonreeSDKConfig;
@@ -741,7 +918,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the SDK.
+             * <p>The domain name of the SDK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b59xxxxxxxx-sdk.rum.aliyuncs.com/v2/browser-sdk.js</p>
              */
             public Builder cdnDomain(String cdnDomain) {
                 this.cdnDomain = cdnDomain;
@@ -749,7 +929,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created. The value is a timestamp. Unit: milliseconds.
+             * <p>The time when the application was created. The value is a timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683353594000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -757,7 +940,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -765,7 +948,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to report application data.
+             * <p>The endpoint that is used to report application data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx-default-cn.rum.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -773,7 +959,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is subscribed. Valid values: true and false.
+             * <p>Indicates whether the application is subscribed. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSubscription(String isSubscription) {
                 this.isSubscription = isSubscription;
@@ -781,7 +970,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tomcat-demo-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -789,7 +981,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the application.
+             * <p>The alias of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickname</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -797,7 +992,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application package.
+             * <p>The name of the application package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.alibaba.rum</p>
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -805,7 +1003,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>avccccefy0@24cccccbf384dc6</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -813,7 +1014,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -821,7 +1025,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2vezare****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -829,7 +1036,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The list of service domain configurations. Only mobile applications are supported.
+             * <p>The list of service domain configurations. Only mobile applications are supported.</p>
              */
             public Builder serviceDomainConfigs(java.util.List < ServiceDomainConfigs> serviceDomainConfigs) {
                 this.serviceDomainConfigs = serviceDomainConfigs;
@@ -837,7 +1044,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Simple Log Service Logstore that stores application data.
+             * <p>The name of the Simple Log Service Logstore that stores application data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstore-rum</p>
              */
             public Builder slsLogstore(String slsLogstore) {
                 this.slsLogstore = slsLogstore;
@@ -845,7 +1055,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Simple Log Service project that stores application data.
+             * <p>The name of the Simple Log Service project that stores application data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proj-xtrace-xxxxxxxxxxxxxxxxxxxxxxx-cn-hangzhou</p>
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
@@ -853,7 +1066,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application. Valid values: created, running, and stopped.
+             * <p>The status of the application. Valid values: created, running, and stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -861,7 +1077,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -869,7 +1085,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application. Valid value: RUM.
+             * <p>The type of the application. Valid value: RUM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUM</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentDownloadUrlV2ResponseBody} extends {@link TeaModel}
  *
  * <p>GetAgentDownloadUrlV2ResponseBody</p>
@@ -85,7 +86,16 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code.<br><strong>Valid values:</strong></p>
+         * <ul>
+         * <li>2xx: The request was successful.</li>
+         * <li>3xx: The request was redirected.</li>
+         * <li>4xx: The request was invalid.</li>
+         * <li>5xx: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +103,7 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The version number and download URL of the agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +111,7 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,14 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.<br><strong>Valid values:</strong></p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +150,12 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAgentDownloadUrlV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentDownloadUrlV2ResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
@@ -169,7 +195,10 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Url.
+             * <p>The download URL of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://arms-apm-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/3.2.9/ArmsAgent.zip">http://arms-apm-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/3.2.9/ArmsAgent.zip</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -177,7 +206,10 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.2.9</p>
              */
             public Builder version(String version) {
                 this.version = version;

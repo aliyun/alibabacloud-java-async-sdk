@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetTimingSyntheticTaskResponseBody</p>
@@ -73,7 +74,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code returned. The status code 200 indicates that the request was successful.
+         * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E13430A6-57A9-56E9-9D8D-28FE8DEBCA40</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class AvailableAssertions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expect")
         private String expect;
@@ -173,7 +189,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The expected value.
+             * <p>The expected value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder expect(String expect) {
                 this.expect = expect;
@@ -181,7 +200,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The condition. gt: greater than. gte: greater than or equal to. lt: less than. lte: less than or equal to. eq: equal to. neq: not equal to. ctn: contain. nctn: does not contain. exist: exist. n_exist: does not exist. belong: belong to. n_belong: does not belong to. reg_match: regular expression.
+             * <p>The condition. gt: greater than. gte: greater than or equal to. lt: less than. lte: less than or equal to. eq: equal to. neq: not equal to. ctn: contain. nctn: does not contain. exist: exist. n_exist: does not exist. belong: belong to. n_belong: does not belong to. reg_match: regular expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gt</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -189,7 +211,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The check target. If you set the type parameter to HttpResCode, HttpResBody, or HttpResponseTime, you do not need to set the target parameter. If you set the type parameter to HttpResHead, you must specify the key in the header. If you set the type parameter to HttpResBodyJson, use jsonPath.
+             * <p>The check target. If you set the type parameter to HttpResCode, HttpResBody, or HttpResponseTime, you do not need to set the target parameter. If you set the type parameter to HttpResHead, you must specify the key in the header. If you set the type parameter to HttpResBodyJson, use jsonPath.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -197,7 +222,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The assertion type. Valid values: HttpResCode, HttpResHead, HttpResBody, HttpResBodyJson, HttpResponseTime, IcmpPackLoss (packet loss rate), IcmpPackMaxLatency (maximum packet latency), IcmpPackAvgLatency (average packet latency), TraceRouteHops (number of hops), DnsARecord (A record), DnsCName (CNAME), websiteTTFB (time to first packet), websiteTTLB (time to last packet), websiteFST (first paint time), websiteFFST (first meaningful paint), websiteOnload (full loaded time). For more information, see the following description.
+             * <p>The assertion type. Valid values: HttpResCode, HttpResHead, HttpResBody, HttpResBodyJson, HttpResponseTime, IcmpPackLoss (packet loss rate), IcmpPackMaxLatency (maximum packet latency), IcmpPackAvgLatency (average packet latency), TraceRouteHops (number of hops), DnsARecord (A record), DnsCName (CNAME), websiteTTFB (time to first packet), websiteTTLB (time to last packet), websiteFST (first paint time), websiteFFST (first meaningful paint), websiteOnload (full loaded time). For more information, see the following description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>websiteTTLB</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -211,6 +239,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class Hosts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -262,7 +296,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private java.util.List < String > ips; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -270,12 +307,15 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version. Valid values:
-             * <p>
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li>0: A version is automatically selected.</li>
+             * <li>1: IPv4</li>
+             * <li>2: IPv6</li>
+             * </ul>
              * 
-             * *   0: A version is automatically selected.
-             * *   1: IPv4
-             * *   2: IPv6
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipType(Integer ipType) {
                 this.ipType = ipType;
@@ -283,7 +323,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The list of IP addresses.
+             * <p>The list of IP addresses.</p>
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -297,6 +337,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class CustomHost extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hosts")
         private java.util.List < Hosts> hosts;
@@ -336,7 +382,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Integer selectType; 
 
             /**
-             * The list of hosts.
+             * <p>The list of hosts.</p>
              */
             public Builder hosts(java.util.List < Hosts> hosts) {
                 this.hosts = hosts;
@@ -344,7 +390,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The selection mode. 0: Random. 1: Polling.
+             * <p>The selection mode. 0: Random. 1: Polling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectType(Integer selectType) {
                 this.selectType = selectType;
@@ -358,6 +407,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class CustomPrometheusSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrometheusClusterId")
         private String prometheusClusterId;
@@ -409,7 +464,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private java.util.Map < String, String > prometheusLabels; 
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reserved parameter</p>
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -417,7 +475,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reserved parameter</p>
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -425,7 +486,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
              */
             public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
                 this.prometheusLabels = prometheusLabels;
@@ -439,6 +500,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class CustomVPCSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -502,7 +569,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -510,7 +580,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Security group ID. This security group is where the dial-up client is located. The security group limits the inbound and outbound rules of the dial-up client in the VPC. You need to set the inbound rules of the security group where your VPC is located to allow the security group where the dial-up client is located to access. Otherwise, the dial-up client cannot smoothly access the resources in your VPC.
+             * <p>Security group ID. This security group is where the dial-up client is located. The security group limits the inbound and outbound rules of the dial-up client in the VPC. You need to set the inbound rules of the security group where your VPC is located to allow the security group where the dial-up client is located to access. Otherwise, the dial-up client cannot smoothly access the resources in your VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxxx</p>
              */
             public Builder secureGroupId(String secureGroupId) {
                 this.secureGroupId = secureGroupId;
@@ -518,7 +591,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1i0xezblf1yrz4xxxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -526,7 +602,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID.
+             * <p>VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zexy5nae9q2otaxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -540,6 +619,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class CommonSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomHost")
         private CustomHost customHost;
@@ -651,7 +736,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String xtraceRegion; 
 
             /**
-             * The custom host.
+             * <p>The custom host.</p>
              */
             public Builder customHost(CustomHost customHost) {
                 this.customHost = customHost;
@@ -659,7 +744,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameters.
+             * <p>The reserved parameters.</p>
              */
             public Builder customPrometheusSetting(CustomPrometheusSetting customPrometheusSetting) {
                 this.customPrometheusSetting = customPrometheusSetting;
@@ -667,7 +752,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * User VPC information. If the dial-up is to the Alibaba Cloud intranet address, you need to configure the VPC information.
+             * <p>User VPC information. If the dial-up is to the Alibaba Cloud intranet address, you need to configure the VPC information.</p>
              */
             public Builder customVPCSetting(CustomVPCSetting customVPCSetting) {
                 this.customVPCSetting = customVPCSetting;
@@ -675,12 +760,15 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version. Valid values:
-             * <p>
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li>0: A version is automatically selected.</li>
+             * <li>1: IPv4</li>
+             * <li>2: IPv6</li>
+             * </ul>
              * 
-             * *   0: A version is automatically selected.
-             * *   1: IPv4
-             * *   2: IPv6
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipType(Integer ipType) {
                 this.ipType = ipType;
@@ -688,7 +776,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable tracing.
+             * <p>Whether to enable tracing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isOpenTrace(Boolean isOpenTrace) {
                 this.isOpenTrace = isOpenTrace;
@@ -696,11 +787,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to evenly distribute monitoring samples. Valid values:
-             * <p>
+             * <p>Specifies whether to evenly distribute monitoring samples. Valid values:</p>
+             * <ul>
+             * <li>0: No</li>
+             * <li>1: Yes</li>
+             * </ul>
              * 
-             * *   0: No
-             * *   1: Yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder monitorSamples(Integer monitorSamples) {
                 this.monitorSamples = monitorSamples;
@@ -708,12 +802,15 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Tracing client type:
-             * <p>
+             * <p>Tracing client type:</p>
+             * <ul>
+             * <li>0: ARMS Agent</li>
+             * <li>1: Open Telemetry</li>
+             * <li>2: Jaeger</li>
+             * </ul>
              * 
-             * - 0: ARMS Agent
-             * - 1: Open Telemetry
-             * - 2: Jaeger
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder traceClientType(Integer traceClientType) {
                 this.traceClientType = traceClientType;
@@ -721,7 +818,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Tracing data reporting region.
+             * <p>Tracing data reporting region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder xtraceRegion(String xtraceRegion) {
                 this.xtraceRegion = xtraceRegion;
@@ -735,6 +835,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class CustomPeriod extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndHour")
         private Long endHour;
@@ -774,7 +880,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Long startHour; 
 
             /**
-             * The hour at which the test ends. Valid values: 0 to 24.
+             * <p>The hour at which the test ends. Valid values: 0 to 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder endHour(Long endHour) {
                 this.endHour = endHour;
@@ -782,7 +891,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The hour at which the test starts. Valid values: 0 to 24.
+             * <p>The hour at which the test starts. Valid values: 0 to 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder startHour(Long startHour) {
                 this.startHour = startHour;
@@ -796,6 +908,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class RequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -835,7 +953,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The content of the request body. Format: JSON string. The parameter is required if the type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.
+             * <p>The content of the request body. Format: JSON string. The parameter is required if the type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text/plain</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -843,7 +964,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the request body. Valid values: text/plain, application/json, application/x-www-form-urlencoded, multipart/form-data, application/xml, and text/html.
+             * <p>The type of the request body. Valid values: text/plain, application/json, application/x-www-form-urlencoded, multipart/form-data, application/xml, and text/html.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>multipart/form-data</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -857,6 +981,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class ApiHTTP extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckCert")
         private Boolean checkCert;
@@ -968,7 +1098,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Long timeout; 
 
             /**
-             * Whether to verify the certificate. The default is no.
+             * <p>Whether to verify the certificate. The default is no.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder checkCert(Boolean checkCert) {
                 this.checkCert = checkCert;
@@ -976,7 +1109,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The connection timeout period. Unit: milliseconds. Default value: 5000. Minimum value: 1000. Maximum value: 300000.
+             * <p>The connection timeout period. Unit: milliseconds. Default value: 5000. Minimum value: 1000. Maximum value: 300000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder connectTimeout(Long connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -984,11 +1120,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The request method.
-             * <p>
+             * <p>The request method.</p>
+             * <ul>
+             * <li>POST</li>
+             * <li>GET</li>
+             * </ul>
              * 
-             * *   POST
-             * *   GET
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -996,16 +1135,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:
-             * <p>
+             * <p>The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:</p>
+             * <p>0: default</p>
+             * <p>1: HTTP/1.1</p>
+             * <p>2: HTTP/2</p>
+             * <p>3: disables the ALPN protocol</p>
              * 
-             * 0: default
-             * 
-             * 1: HTTP/1.1
-             * 
-             * 2: HTTP/2
-             * 
-             * 3: disables the ALPN protocol
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder protocolAlpnProtocol(Integer protocolAlpnProtocol) {
                 this.protocolAlpnProtocol = protocolAlpnProtocol;
@@ -1013,7 +1150,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request body.
+             * <p>The HTTP request body.</p>
              */
             public Builder requestBody(RequestBody requestBody) {
                 this.requestBody = requestBody;
@@ -1021,7 +1158,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request header.
+             * <p>The HTTP request header.</p>
              */
             public Builder requestHeaders(java.util.Map < String, String > requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -1029,7 +1166,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The URL for synthetic monitoring.
+             * <p>The URL for synthetic monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://127.0.0.1:8090/api/list">http://127.0.0.1:8090/api/list</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -1037,7 +1177,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period. Unit: milliseconds. Default value: 10000. Minimum value: 1000. Maximum value: 300000.
+             * <p>The timeout period. Unit: milliseconds. Default value: 10000. Minimum value: 1000. Maximum value: 300000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -1051,6 +1194,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class FileDownload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionTimeout")
         private Long connectionTimeout;
@@ -1282,7 +1431,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * The connection timeout period. Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.
+             * <p>The connection timeout period. Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder connectionTimeout(Long connectionTimeout) {
                 this.connectionTimeout = connectionTimeout;
@@ -1290,7 +1442,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the custom request header.
+             * <p>The content of the custom request header.</p>
              */
             public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
@@ -1298,11 +1450,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The kernel type.
-             * <p>
+             * <p>The kernel type.</p>
+             * <ul>
+             * <li>1: curl</li>
+             * <li>0: WinInet</li>
+             * </ul>
              * 
-             * *   1: curl
-             * *   0: WinInet
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder downloadKernel(Long downloadKernel) {
                 this.downloadKernel = downloadKernel;
@@ -1310,7 +1465,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to ignore CA certificate authentication errors. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to ignore CA certificate authentication errors. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateAuthError(Integer ignoreCertificateAuthError) {
                 this.ignoreCertificateAuthError = ignoreCertificateAuthError;
@@ -1318,7 +1476,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to ignore certificate revocation errors. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate revocation errors. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateCanceledError(Integer ignoreCertificateCanceledError) {
                 this.ignoreCertificateCanceledError = ignoreCertificateCanceledError;
@@ -1326,7 +1487,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to ignore certificate invalidity. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate invalidity. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateOutOfDateError(Integer ignoreCertificateOutOfDateError) {
                 this.ignoreCertificateOutOfDateError = ignoreCertificateOutOfDateError;
@@ -1334,7 +1498,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to ignore certificate status errors. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate status errors. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateStatusError(Integer ignoreCertificateStatusError) {
                 this.ignoreCertificateStatusError = ignoreCertificateStatusError;
@@ -1342,7 +1509,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to ignore certificate incredibility. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate incredibility. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateUntrustworthyError(Integer ignoreCertificateUntrustworthyError) {
                 this.ignoreCertificateUntrustworthyError = ignoreCertificateUntrustworthyError;
@@ -1350,7 +1520,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to ignore certificate usage errors. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to ignore certificate usage errors. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateUsingError(Integer ignoreCertificateUsingError) {
                 this.ignoreCertificateUsingError = ignoreCertificateUsingError;
@@ -1358,7 +1531,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to ignore host invalidity. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to ignore host invalidity. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreInvalidHostError(Integer ignoreInvalidHostError) {
                 this.ignoreInvalidHostError = ignoreInvalidHostError;
@@ -1366,7 +1542,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring timeout period. Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 60000.
+             * <p>The monitoring timeout period. Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 60000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder monitorTimeout(Long monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -1374,12 +1553,15 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The QUIC protocol type.
-             * <p>
+             * <p>The QUIC protocol type.</p>
+             * <ul>
+             * <li>1: http1</li>
+             * <li>2: http2</li>
+             * <li>3: http3</li>
+             * </ul>
              * 
-             * *   1: http1
-             * *   2: http2
-             * *   3: http3
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quickProtocol(Long quickProtocol) {
                 this.quickProtocol = quickProtocol;
@@ -1387,7 +1569,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to support redirection. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to support redirection. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder redirection(Integer redirection) {
                 this.redirection = redirection;
@@ -1395,7 +1580,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The file download URL.
+             * <p>The file download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://********</p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -1403,7 +1591,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum file size of a single transfer. Unit: KB. Minimum value: 1. Maximum value: 20480. Valid values: 2048.
+             * <p>The maximum file size of a single transfer. Unit: KB. Minimum value: 1. Maximum value: 20480. Valid values: 2048.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder transmissionSize(Long transmissionSize) {
                 this.transmissionSize = transmissionSize;
@@ -1411,7 +1602,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Verify keywords.
+             * <p>Verify keywords.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder validateKeywords(String validateKeywords) {
                 this.validateKeywords = validateKeywords;
@@ -1419,12 +1613,15 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Verification method.
-             * <p>
+             * <p>Verification method.</p>
+             * <ul>
+             * <li>0: No verification</li>
+             * <li>1: Verification string</li>
+             * <li>2: MD5 verification</li>
+             * </ul>
              * 
-             * - 0: No verification
-             * - 1: Verification string
-             * - 2: MD5 verification
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder verifyWay(Integer verifyWay) {
                 this.verifyWay = verifyWay;
@@ -1432,7 +1629,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: `www.aliyun.com:203.0.3.55|203.3.44.67`, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the www.aliyun.com domain name are hijacked.
+             * <p>DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: <code>www.aliyun.com:203.0.3.55|203.3.44.67</code>, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name are hijacked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -1446,6 +1646,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class NetDNS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsServerIpType")
         private Integer dnsServerIpType;
@@ -1521,7 +1727,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Long timeout; 
 
             /**
-             * The IP version of the DNS server. 0: IPv4. 1: IPv6. 2: A version is automatically selected. Default value: 0.
+             * <p>The IP version of the DNS server. 0: IPv4. 1: IPv6. 2: A version is automatically selected. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dnsServerIpType(Integer dnsServerIpType) {
                 this.dnsServerIpType = dnsServerIpType;
@@ -1529,7 +1738,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the DNS server. Default value: 114.114.114.114.
+             * <p>The IP address of the DNS server. Default value: 114.114.114.114.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.114.114.114</p>
              */
             public Builder nsServer(String nsServer) {
                 this.nsServer = nsServer;
@@ -1537,7 +1749,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The DNS query. 0: recursive, 1: iterative. Default value: 0.
+             * <p>The DNS query. 0: recursive, 1: iterative. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queryMethod(Integer queryMethod) {
                 this.queryMethod = queryMethod;
@@ -1545,7 +1760,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The destination domain name.
+             * <p>The destination domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -1553,7 +1771,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for the DNS synthetic test. Unit: milliseconds. The minimum value is 1000 and the maximum value is 45000. Default value: 5000.
+             * <p>The timeout period for the DNS synthetic test. Unit: milliseconds. The minimum value is 1000 and the maximum value is 45000. Default value: 5000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -1567,6 +1788,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class NetICMP extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
@@ -1690,7 +1917,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Long tracertTimeout; 
 
             /**
-             * The interval at which ICMP packets are sent. Unit: milliseconds. Minimum value: 200. Maximum value: 2000. Default value: 200.
+             * <p>The interval at which ICMP packets are sent. Unit: milliseconds. Minimum value: 200. Maximum value: 2000. Default value: 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -1698,7 +1928,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ICMP packets that are sent. Minimum value: 1. Maximum value: 50. Default value: 4.
+             * <p>The number of ICMP packets that are sent. Minimum value: 1. Maximum value: 50. Default value: 4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder packageNum(Integer packageNum) {
                 this.packageNum = packageNum;
@@ -1706,7 +1939,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The size of each ICMP packet. Unit: bytes. Valid values: 32, 64, 128, 256, 512, 1024.
+             * <p>The size of each ICMP packet. Unit: bytes. Valid values: 32, 64, 128, 256, 512, 1024.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder packageSize(Integer packageSize) {
                 this.packageSize = packageSize;
@@ -1714,7 +1950,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to split ICMP packets. Default value: true.
+             * <p>Specifies whether to split ICMP packets. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder splitPackage(Boolean splitPackage) {
                 this.splitPackage = splitPackage;
@@ -1722,7 +1961,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The destination host IP address or domain name
+             * <p>The destination host IP address or domain name</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -1730,7 +1972,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for the TCP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.
+             * <p>The timeout period for the TCP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -1738,7 +1983,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the tracert command. Default value: true.
+             * <p>Specifies whether to enable the tracert command. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tracertEnable(Boolean tracertEnable) {
                 this.tracertEnable = tracertEnable;
@@ -1746,7 +1994,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of hops for tracert. Minimum value: 1. Maximum value: 128. Default value: 64.
+             * <p>The maximum number of hops for tracert. Minimum value: 1. Maximum value: 128. Default value: 64.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder tracertNumMax(Integer tracertNumMax) {
                 this.tracertNumMax = tracertNumMax;
@@ -1754,7 +2005,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of tracert. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.
+             * <p>The timeout period of tracert. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60000</p>
              */
             public Builder tracertTimeout(Long tracertTimeout) {
                 this.tracertTimeout = tracertTimeout;
@@ -1768,6 +2022,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class NetTCP extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectTimes")
         private Integer connectTimes;
@@ -1867,7 +2127,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Long tracertTimeout; 
 
             /**
-             * The number of TCP connections that are established in a test. Minimum value: 1. Maximum value: 16. Default value: 4.
+             * <p>The number of TCP connections that are established in a test. Minimum value: 1. Maximum value: 16. Default value: 4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder connectTimes(Integer connectTimes) {
                 this.connectTimes = connectTimes;
@@ -1875,7 +2138,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which TCP connections are established. Unit: milliseconds. Minimum value: 200. Maximum value: 10000. Default value: 200.
+             * <p>The interval at which TCP connections are established. Unit: milliseconds. Minimum value: 200. Maximum value: 10000. Default value: 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -1883,7 +2149,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The destination host IP address.
+             * <p>The destination host IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1:8888</p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -1891,7 +2160,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for the TCP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.
+             * <p>The timeout period for the TCP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -1899,7 +2171,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the tracert command. Default value: true.
+             * <p>Specifies whether to enable the tracert command. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tracertEnable(Boolean tracertEnable) {
                 this.tracertEnable = tracertEnable;
@@ -1907,7 +2182,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of hops for tracert. Minimum value: 1. Maximum value: 128. Default value: 20.
+             * <p>The maximum number of hops for tracert. Minimum value: 1. Maximum value: 128. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tracertNumMax(Integer tracertNumMax) {
                 this.tracertNumMax = tracertNumMax;
@@ -1915,7 +2193,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of tracert. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.
+             * <p>The timeout period of tracert. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60000</p>
              */
             public Builder tracertTimeout(Long tracertTimeout) {
                 this.tracertTimeout = tracertTimeout;
@@ -1929,6 +2210,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class Stream extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomHeaderContent")
         private java.util.Map < String, String > customHeaderContent;
@@ -2028,7 +2315,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * Custom header, JSON Map format.
+             * <p>Custom header, JSON Map format.</p>
              */
             public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
@@ -2036,11 +2323,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Player, default is 12 if not specified.
-             * <p>
+             * <p>Player, default is 12 if not specified.</p>
+             * <ul>
+             * <li>12: VLC</li>
+             * <li>2: Flash Player</li>
+             * </ul>
              * 
-             * - 12: VLC
-             * - 2: Flash Player
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder playerType(Integer playerType) {
                 this.playerType = playerType;
@@ -2048,11 +2338,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Resource address type:
-             * <p>
+             * <p>Resource address type:</p>
+             * <ul>
+             * <li>1: Resource address.</li>
+             * <li>0: Page address. If not passed, the default value is 0.</li>
+             * </ul>
              * 
-             * - 1: Resource address.
-             * - 0: Page address. If not passed, the default value is 0.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder streamAddressType(Integer streamAddressType) {
                 this.streamAddressType = streamAddressType;
@@ -2060,7 +2353,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Monitoring duration, in seconds, supports up to 60 seconds. If not specified, the default value is 60 seconds.
+             * <p>Monitoring duration, in seconds, supports up to 60 seconds. If not specified, the default value is 60 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder streamMonitorTimeout(Integer streamMonitorTimeout) {
                 this.streamMonitorTimeout = streamMonitorTimeout;
@@ -2068,11 +2364,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Audio and video flag:
-             * <p>
+             * <p>Audio and video flag:</p>
+             * <ul>
+             * <li>0: video</li>
+             * <li>1: audio</li>
+             * </ul>
              * 
-             * - 0: video
-             * - 1: audio
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder streamType(Integer streamType) {
                 this.streamType = streamType;
@@ -2080,7 +2379,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Streaming media resource address.
+             * <p>Streaming media resource address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com/stream/test.mp4">http://www.aliyun.com/stream/test.mp4</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -2088,7 +2390,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: `www.aliyun.com:203.0.3.55|203.3.44.67`, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the www.aliyun.com domain name are hijacked.
+             * <p>DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: <code>www.aliyun.com:203.0.3.55|203.3.44.67</code>, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name are hijacked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -2102,6 +2407,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class Website extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutomaticScrolling")
         private Integer automaticScrolling;
@@ -2345,7 +2656,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Long waitCompletionTime; 
 
             /**
-             * Specifies whether to automatically scroll up and down the screen to load a page. 0: No. 1: Yes. Default value: 0.
+             * <p>Specifies whether to automatically scroll up and down the screen to load a page. 0: No. 1: Yes. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder automaticScrolling(Integer automaticScrolling) {
                 this.automaticScrolling = automaticScrolling;
@@ -2353,7 +2667,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to create a custom header. 0: No. 1: The first packet is modified. 2: All packets are modified. Default value: 0.
+             * <p>Specifies whether to create a custom header. 0: No. 1: The first packet is modified. 2: All packets are modified. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder customHeader(Integer customHeader) {
                 this.customHeader = customHeader;
@@ -2361,7 +2678,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The custom header. Format: JSON map.
+             * <p>The custom header. Format: JSON map.</p>
              */
             public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
@@ -2369,12 +2686,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * When resolving a domain name (such as www.aliyun.com), if the resolved IP address or CNAME is not in the DNS hijacking whitelist, the user will fail to access or return a non-Aliyun target IP; if the IP or CNAME in the resolution result is in the DNS whitelist, it will be deemed that no DNS hijacking has occurred.
-             * <p>
+             * <p>When resolving a domain name (such as <a href="http://www.aliyun.com">www.aliyun.com</a>), if the resolved IP address or CNAME is not in the DNS hijacking whitelist, the user will fail to access or return a non-Aliyun target IP; if the IP or CNAME in the resolution result is in the DNS whitelist, it will be deemed that no DNS hijacking has occurred.</p>
+             * <p>Fill in the format: <code>domain name: matching rule</code>. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). </p>
+             * <p>For example: <code>www.aliyun.com:203.0.3.55|203.3.44.67</code>, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name are hijacked.</p>
              * 
-             * Fill in the format: `domain name: matching rule`. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). 
-             * 
-             * For example: `www.aliyun.com:203.0.3.55|203.3.44.67`, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the www.aliyun.com domain name are hijacked.
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
              */
             public Builder DNSHijackWhitelist(String DNSHijackWhitelist) {
                 this.DNSHijackWhitelist = DNSHijackWhitelist;
@@ -2382,7 +2699,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to disable the cache. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to disable the cache. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder disableCache(Integer disableCache) {
                 this.disableCache = disableCache;
@@ -2390,7 +2710,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. 0: No. 1: Yes. Default value: 0.
+             * <p>Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. 0: No. 1: Yes. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder disableCompression(Integer disableCompression) {
                 this.disableCompression = disableCompression;
@@ -2398,7 +2721,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * If an element configured in the element blacklist appears during page loading, no request will be made to load the element.
+             * <p>If an element configured in the element blacklist appears during page loading, no request will be made to load the element.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com/a.jpg">www.example.com/a.jpg</a></p>
              */
             public Builder elementBlacklist(String elementBlacklist) {
                 this.elementBlacklist = elementBlacklist;
@@ -2406,11 +2732,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to exclude invalid IP addresses.
-             * <p>
+             * <p>Specifies whether to exclude invalid IP addresses.</p>
+             * <ul>
+             * <li>1: No</li>
+             * <li>0: Yes</li>
+             * </ul>
              * 
-             * *   1: No
-             * *   0: Yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder filterInvalidIP(Integer filterInvalidIP) {
                 this.filterInvalidIP = filterInvalidIP;
@@ -2418,7 +2747,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Identify elements: Set the total number of elements to browse the page.
+             * <p>Identify elements: Set the total number of elements to browse the page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flowHijackJumpTimes(Integer flowHijackJumpTimes) {
                 this.flowHijackJumpTimes = flowHijackJumpTimes;
@@ -2426,7 +2758,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Hijacking flag: Set the key information for matching. Fill in the hijacking judgment keyword or key element, and asterisks (*) are allowed.
+             * <p>Hijacking flag: Set the key information for matching. Fill in the hijacking judgment keyword or key element, and asterisks (*) are allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder flowHijackLogo(String flowHijackLogo) {
                 this.flowHijackLogo = flowHijackLogo;
@@ -2434,7 +2769,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to ignore SSL certificate errors during browsing. 0: No. 1: Yes. Default value: 1.
+             * <p>Specifies whether to ignore SSL certificate errors during browsing. 0: No. 1: Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreCertificateError(Integer ignoreCertificateError) {
                 this.ignoreCertificateError = ignoreCertificateError;
@@ -2442,7 +2780,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring timeout period. Unit: milliseconds. Default value: 20000. Minimum value: 5000. Maximum value: 300000.
+             * <p>The monitoring timeout period. Unit: milliseconds. Default value: 20000. Minimum value: 5000. Maximum value: 300000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder monitorTimeout(Integer monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -2450,10 +2791,11 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * If any element other than the domain name setting appears on the monitoring page, it means that the page has been tampered. Common manifestations include pop-up ads, floating ads, jumps, etc.
-             * <p>
+             * <p>If any element other than the domain name setting appears on the monitoring page, it means that the page has been tampered. Common manifestations include pop-up ads, floating ads, jumps, etc.</p>
+             * <p>Fill in the format: <code>domain name: element</code>. Elements support wildcards, and multiple elements can be filled in. Multiple elements are separated by vertical bars (|). For example: <code>www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</code>, which means that all elements except the basic document, /cc/bb/a.gif and /vv/bb/cc.jpg under the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name are considered to be tampered with.</p>
              * 
-             * Fill in the format: `domain name: element`. Elements support wildcards, and multiple elements can be filled in. Multiple elements are separated by vertical bars (|). For example: `www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg`, which means that all elements except the basic document, /cc/bb/a.gif and /vv/bb/cc.jpg under the www.aliyun.com domain name are considered to be tampered with.
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</a></p>
              */
             public Builder pageTamper(String pageTamper) {
                 this.pageTamper = pageTamper;
@@ -2461,7 +2803,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to continue browsing after redirection. 0: No, 1:Yes. Default value: 1.
+             * <p>Specifies whether to continue browsing after redirection. 0: No, 1:Yes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder redirection(Integer redirection) {
                 this.redirection = redirection;
@@ -2469,7 +2814,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time threshold that is used to define a slow element. Unit: milliseconds. Default value: 5000. Minimum value: 1. Maximum value: 300000.
+             * <p>The time threshold that is used to define a slow element. Unit: milliseconds. Default value: 5000. Minimum value: 1. Maximum value: 300000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder slowElementThreshold(Long slowElementThreshold) {
                 this.slowElementThreshold = slowElementThreshold;
@@ -2477,7 +2825,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The destination URL.
+             * <p>The destination URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -2485,7 +2836,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The verification string is an arbitrary string in the source code of the monitoring page. If the source code returned by the client contains any string in the blacklist, an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by vertical bars (|).
+             * <p>The verification string is an arbitrary string in the source code of the monitoring page. If the source code returned by the client contains any string in the blacklist, an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by vertical bars (|).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder verifyStringBlacklist(String verifyStringBlacklist) {
                 this.verifyStringBlacklist = verifyStringBlacklist;
@@ -2493,7 +2847,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The verification string is an arbitrary string in the source code of the monitoring page. The source code returned by the client must contain all the strings in the whitelist, otherwise an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by a vertical bar (|).
+             * <p>The verification string is an arbitrary string in the source code of the monitoring page. The source code returned by the client must contain all the strings in the whitelist, otherwise an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by a vertical bar (|).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder verifyStringWhitelist(String verifyStringWhitelist) {
                 this.verifyStringWhitelist = verifyStringWhitelist;
@@ -2501,7 +2858,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum waiting time. Unit: milliseconds. Default value: 5000. Minimum value: 5000. Maximum value: 300000.
+             * <p>The maximum waiting time. Unit: milliseconds. Default value: 5000. Minimum value: 5000. Maximum value: 300000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder waitCompletionTime(Long waitCompletionTime) {
                 this.waitCompletionTime = waitCompletionTime;
@@ -2515,6 +2875,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class MonitorConf extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiHTTP")
         private ApiHTTP apiHTTP;
@@ -2614,7 +2980,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Website website; 
 
             /**
-             * The parameters of the HTTP(S) synthetic test.
+             * <p>The parameters of the HTTP(S) synthetic test.</p>
              */
             public Builder apiHTTP(ApiHTTP apiHTTP) {
                 this.apiHTTP = apiHTTP;
@@ -2622,7 +2988,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The file download parameters.
+             * <p>The file download parameters.</p>
              */
             public Builder fileDownload(FileDownload fileDownload) {
                 this.fileDownload = fileDownload;
@@ -2630,7 +2996,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The DNS synthetic test parameters. This parameter is required if the TaskType parameter is set to 3.
+             * <p>The DNS synthetic test parameters. This parameter is required if the TaskType parameter is set to 3.</p>
              */
             public Builder netDNS(NetDNS netDNS) {
                 this.netDNS = netDNS;
@@ -2638,7 +3004,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ICMP synthetic test parameters. This parameter is required if the TaskType parameter is set to 1.
+             * <p>The ICMP synthetic test parameters. This parameter is required if the TaskType parameter is set to 1.</p>
              */
             public Builder netICMP(NetICMP netICMP) {
                 this.netICMP = netICMP;
@@ -2646,7 +3012,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The TCP synthetic tests parameters. This parameter is required if the TaskType parameter is set to 2.
+             * <p>The TCP synthetic tests parameters. This parameter is required if the TaskType parameter is set to 2.</p>
              */
             public Builder netTCP(NetTCP netTCP) {
                 this.netTCP = netTCP;
@@ -2654,7 +3020,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Streaming media dial test configuration.
+             * <p>Streaming media dial test configuration.</p>
              */
             public Builder stream(Stream stream) {
                 this.stream = stream;
@@ -2662,7 +3028,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The website-speed measurement parameters.
+             * <p>The website-speed measurement parameters.</p>
              */
             public Builder website(Website website) {
                 this.website = website;
@@ -2676,6 +3042,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class Monitors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -2727,7 +3099,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String operatorCode; 
 
             /**
-             * The city code.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110100</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -2735,7 +3110,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The client type of the monitoring point. Valid values: 1: data center. 2: Internet. 3: mobile device. 4: ECS instance.
+             * <p>The client type of the monitoring point. Valid values: 1: data center. 2: Internet. 3: mobile device. 4: ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clientType(Integer clientType) {
                 this.clientType = clientType;
@@ -2743,7 +3121,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The carrier code.
+             * <p>The carrier code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder operatorCode(String operatorCode) {
                 this.operatorCode = operatorCode;
@@ -2757,6 +3138,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -2796,7 +3183,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2804,7 +3194,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myweb</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2818,6 +3211,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTimingSyntheticTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableAssertions")
         private java.util.List < AvailableAssertions> availableAssertions;
@@ -3001,7 +3400,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Integer taskType; 
 
             /**
-             * The list of assertions.
+             * <p>The list of assertions.</p>
              */
             public Builder availableAssertions(java.util.List < AvailableAssertions> availableAssertions) {
                 this.availableAssertions = availableAssertions;
@@ -3009,7 +3408,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The general settings.
+             * <p>The general settings.</p>
              */
             public Builder commonSetting(CommonSetting commonSetting) {
                 this.commonSetting = commonSetting;
@@ -3017,7 +3416,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The custom cycle.
+             * <p>The custom cycle.</p>
              */
             public Builder customPeriod(CustomPeriod customPeriod) {
                 this.customPeriod = customPeriod;
@@ -3025,7 +3424,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.
+             * <p>The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder frequency(String frequency) {
                 this.frequency = frequency;
@@ -3033,7 +3435,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The detection point type. 1: PC. 2: mobile device.
+             * <p>The detection point type. 1: PC. 2: mobile device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder monitorCategory(Long monitorCategory) {
                 this.monitorCategory = monitorCategory;
@@ -3041,7 +3446,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring configurations.
+             * <p>The monitoring configurations.</p>
              */
             public Builder monitorConf(MonitorConf monitorConf) {
                 this.monitorConf = monitorConf;
@@ -3049,7 +3454,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The list of monitoring points.
+             * <p>The list of monitoring points.</p>
              */
             public Builder monitors(java.util.List < Monitors> monitors) {
                 this.monitors = monitors;
@@ -3057,7 +3462,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AlibabaCloud DNS Task</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3065,7 +3473,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -3073,7 +3484,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -3081,7 +3495,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota insufficiency. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: The task failed to be deleted.
+             * <p>CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota insufficiency. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: The task failed to be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3089,7 +3506,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The tag.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -3097,7 +3514,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the synthetic monitoring task.
+             * <p>The ID of the synthetic monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5308a2691f59422c8c3b7aeccec9cd3b</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -3105,10 +3525,11 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
-             * <p>
+             * <p>The type of the task. Valid values:</p>
+             * <p>ICMP TCP DNS HTTP Website speed measurement File download</p>
              * 
-             * ICMP TCP DNS HTTP Website speed measurement File download
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;

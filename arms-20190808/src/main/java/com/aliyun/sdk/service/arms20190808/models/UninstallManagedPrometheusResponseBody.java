@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UninstallManagedPrometheusResponseBody} extends {@link TeaModel}
  *
  * <p>UninstallManagedPrometheusResponseBody</p>
@@ -85,7 +86,10 @@ public class UninstallManagedPrometheusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class UninstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * The response content. The status of the Prometheus instance is returned.
+         * <p>The response content. The status of the Prometheus instance is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +108,10 @@ public class UninstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if the request fails.
+         * <p>The error message that is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcId is blank</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class UninstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A0CEDF1-06FE-44AC-8E21-21A5BE65****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class UninstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Prometheus instance was removed.
+         * <p>Indicates whether the Prometheus instance was removed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

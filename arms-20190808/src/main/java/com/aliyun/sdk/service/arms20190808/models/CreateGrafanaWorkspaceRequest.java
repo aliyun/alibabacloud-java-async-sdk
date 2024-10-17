@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGrafanaWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>CreateGrafanaWorkspaceRequest</p>
@@ -169,7 +170,14 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * <p>The language. Default value: zh. Valid values:</p>
+         * <ul>
+         * <li>zh</li>
+         * <li>en</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -178,7 +186,10 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The description of the workspace
+         * <p>The description of the workspace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -187,7 +198,10 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * GrafanaVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.x</p>
          */
         public Builder grafanaVersion(String grafanaVersion) {
             this.putQueryParameter("GrafanaVersion", grafanaVersion);
@@ -196,15 +210,18 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The edition.
-         * <p>
+         * <p>The edition.</p>
+         * <p><strong>Valid values:</strong></p>
+         * <ul>
+         * <li>standard: <code>Beta Edition or Standard Edition</code></li>
+         * <li>personal_edition: Developer Edition</li>
+         * <li>experts_edition: Pro Edition</li>
+         * <li>advanced_edition: Advanced Edition</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * **Valid values:**
-         * 
-         * *   standard: `Beta Edition or Standard Edition`
-         * *   personal_edition: Developer Edition
-         * *   experts_edition: Pro Edition
-         * *   advanced_edition: Advanced Edition
+         * <strong>example:</strong>
+         * <p>experts_edition</p>
          */
         public Builder grafanaWorkspaceEdition(String grafanaWorkspaceEdition) {
             this.putQueryParameter("GrafanaWorkspaceEdition", grafanaWorkspaceEdition);
@@ -213,7 +230,11 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The name of the Grafana workspace.
+         * <p>The name of the Grafana workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testgrafana</p>
          */
         public Builder grafanaWorkspaceName(String grafanaWorkspaceName) {
             this.putQueryParameter("GrafanaWorkspaceName", grafanaWorkspaceName);
@@ -222,7 +243,10 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The password of the workspace. The password must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letter, lowercase letter, digit, and special character. Special characters include () \" ~ ! @ # $ % ^ & \* - \_ + =.
+         * <p>The password of the workspace. The password must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letter, lowercase letter, digit, and special character. Special characters include () &quot; ~ ! @ # $ % ^ &amp; * - _ + =.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test123456!</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -231,7 +255,11 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +268,10 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -249,7 +280,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -265,6 +296,12 @@ public class CreateGrafanaWorkspaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGrafanaWorkspaceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateGrafanaWorkspaceRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -304,7 +341,10 @@ public class CreateGrafanaWorkspaceRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,7 +352,10 @@ public class CreateGrafanaWorkspaceRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

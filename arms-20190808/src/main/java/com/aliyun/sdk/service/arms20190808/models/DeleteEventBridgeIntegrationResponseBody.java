@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEventBridgeIntegrationResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteEventBridgeIntegrationResponseBody</p>
@@ -49,11 +50,14 @@ public class DeleteEventBridgeIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the EventBridge integration is deleted.
-         * <p>
+         * <p>Indicates whether the EventBridge integration is deleted.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -61,7 +65,10 @@ public class DeleteEventBridgeIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2B289756-E791-5842-BCBD-AD414C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
