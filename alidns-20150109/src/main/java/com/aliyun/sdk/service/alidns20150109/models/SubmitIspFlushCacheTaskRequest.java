@@ -99,7 +99,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>This parameter is required.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -108,7 +108,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -117,7 +117,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
         }
 
         /**
-         * Isp.
+         * <p>This parameter is required.</p>
          */
         public Builder isp(java.util.List < String > isp) {
             this.putQueryParameter("Isp", isp);

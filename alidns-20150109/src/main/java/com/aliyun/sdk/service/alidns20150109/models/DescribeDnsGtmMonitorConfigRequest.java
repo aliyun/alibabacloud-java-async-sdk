@@ -82,6 +82,7 @@ public class DescribeDnsGtmMonitorConfigRequest extends Request {
 
         /**
          * <p>The ID of the health check task.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>MonitorConfigId1</p>

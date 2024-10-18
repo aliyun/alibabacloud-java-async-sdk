@@ -99,6 +99,7 @@ public class AddGtmRecoveryPlanRequest extends Request {
 
         /**
          * <p>The IDs of faulty address pools.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;hra0or&quot;]</p>
@@ -123,6 +124,7 @@ public class AddGtmRecoveryPlanRequest extends Request {
 
         /**
          * <p>The name of the disaster recovery plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>name-example</p>

@@ -100,6 +100,7 @@ public class AddCustomLineRequest extends Request {
 
         /**
          * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -112,6 +113,7 @@ public class AddCustomLineRequest extends Request {
 
         /**
          * <p>The CIDR blocks.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ipSegment(java.util.List < IpSegment> ipSegment) {
             this.putQueryParameter("IpSegment", ipSegment);
@@ -133,6 +135,7 @@ public class AddCustomLineRequest extends Request {
 
         /**
          * <p>The name of the custom line.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder lineName(String lineName) {
             this.putQueryParameter("LineName", lineName);

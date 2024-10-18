@@ -192,6 +192,7 @@ public class SetDNSSLBStatusRequest extends Request {
 
         /**
          * <p>The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>

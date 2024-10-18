@@ -134,6 +134,7 @@ public class DescribeTagsRequest extends Request {
 
         /**
          * <p>The type of the resources from which you want to query tags. Set the value to DOMAIN.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>DOMAIN</p>

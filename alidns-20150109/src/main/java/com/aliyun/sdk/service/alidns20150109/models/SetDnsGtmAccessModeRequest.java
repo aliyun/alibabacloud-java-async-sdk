@@ -90,6 +90,7 @@ public class SetDnsGtmAccessModeRequest extends Request {
          * <li>DEFAULT: the primary address pool set</li>
          * <li>FAILOVER: the secondary address pool set</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -114,6 +115,7 @@ public class SetDnsGtmAccessModeRequest extends Request {
 
         /**
          * <p>The policy ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>strategyId</p>

@@ -70,6 +70,7 @@ public class DescribeGtmInstanceStatusRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>instance1</p>

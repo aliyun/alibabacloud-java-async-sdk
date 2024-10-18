@@ -117,6 +117,7 @@ public class UpdateCloudGtmAddressEnableStatusRequest extends Request {
 
         /**
          * <p>The ID of the address. This ID uniquely identifies the address.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>addr-89518218114368**92</p>
@@ -145,6 +146,7 @@ public class UpdateCloudGtmAddressEnableStatusRequest extends Request {
          * <li>enable: The address is enabled and the address can be used for Domain Name System (DNS) resolution if the address passes health checks.</li>
          * <li>disable: The address is disabled and the address cannot be used for DNS resolution regardless of whether the address passes health checks or not.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>enable</p>

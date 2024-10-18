@@ -148,6 +148,7 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
 
         /**
          * <p>The ID of the disaster recovery plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

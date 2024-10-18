@@ -134,6 +134,7 @@ public class PreviewGtmRecoveryPlanRequest extends Request {
 
         /**
          * <p>The ID of the disaster recovery plan that you want to preview.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

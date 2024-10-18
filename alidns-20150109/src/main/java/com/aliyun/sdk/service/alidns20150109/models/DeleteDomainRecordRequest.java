@@ -97,6 +97,7 @@ public class DeleteDomainRecordRequest extends Request {
         /**
          * <p>The ID of the DNS record.</p>
          * <p>This parameter is returned when you add a DNS record or when you query a list of DNS records.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>9999985</p>

@@ -260,6 +260,7 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends Request {
 
         /**
          * <p>The start time in the yyyy-MM-dd format, for example, 2023-03-01.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-01</p>

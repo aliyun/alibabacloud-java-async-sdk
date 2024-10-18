@@ -130,6 +130,7 @@ public class AddGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The line codes of access regions.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;default&quot;, &quot;drpeng&quot;]</p>
@@ -142,6 +143,7 @@ public class AddGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The ID of the default address pool.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hrsix</p>
@@ -155,6 +157,7 @@ public class AddGtmAccessStrategyRequest extends Request {
         /**
          * <p>The ID of the failover address pool.</p>
          * <p>If the failover address pool is not set, pass the <strong>Empty</strong> value.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hrsyw</p>
@@ -167,6 +170,7 @@ public class AddGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The ID of the GTM instance for which you want to create an access policy.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>instance1</p>
@@ -191,6 +195,7 @@ public class AddGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The name of the access policy.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

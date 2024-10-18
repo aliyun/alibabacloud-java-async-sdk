@@ -112,6 +112,7 @@ public class TagResourcesRequest extends Request {
 
         /**
          * <p>The resource ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>dns-example.com</p>
@@ -124,6 +125,7 @@ public class TagResourcesRequest extends Request {
 
         /**
          * <p>The resource type.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>DOMAIN</p>
@@ -136,6 +138,7 @@ public class TagResourcesRequest extends Request {
 
         /**
          * <p>The tag to add to the resource.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

@@ -184,6 +184,7 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
 
         /**
          * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>dns-example.com</p>
@@ -290,6 +291,7 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         /**
          * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
          * <p>You can only query the DNS records within the last 90 days.``</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-07-04</p>

@@ -112,6 +112,7 @@ public class GetTxtRecordForVerifyRequest extends Request {
          * <li>ADD_SUB_DOMAIN</li>
          * <li>RETRIEVAL</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ADD_SUB_DOMAIN</p>

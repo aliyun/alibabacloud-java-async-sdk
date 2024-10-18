@@ -111,6 +111,7 @@ public class SetDomainRecordStatusRequest extends Request {
 
         /**
          * <p>The ID of the DNS record.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>9999985</p>
@@ -127,6 +128,7 @@ public class SetDomainRecordStatusRequest extends Request {
          * <li><strong>Enable</strong>: enables the DNS record.</li>
          * <li><strong>Disable</strong>: disables the DNS record.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Disable</p>

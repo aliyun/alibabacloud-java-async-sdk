@@ -82,6 +82,7 @@ public class DeleteCustomLinesRequest extends Request {
 
         /**
          * <p>The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1234,1235</p>

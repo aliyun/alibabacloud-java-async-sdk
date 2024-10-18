@@ -70,6 +70,7 @@ public class DeleteDomainGroupRequest extends Request {
 
         /**
          * <p>The ID of the domain name group.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2223</p>

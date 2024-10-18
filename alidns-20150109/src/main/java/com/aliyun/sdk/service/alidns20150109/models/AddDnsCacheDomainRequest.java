@@ -174,6 +174,7 @@ public class AddDnsCacheDomainRequest extends Request {
 
         /**
          * <p>The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -186,6 +187,7 @@ public class AddDnsCacheDomainRequest extends Request {
 
         /**
          * <p>The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -198,6 +200,7 @@ public class AddDnsCacheDomainRequest extends Request {
 
         /**
          * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>dns.example.com</p>
@@ -210,6 +213,7 @@ public class AddDnsCacheDomainRequest extends Request {
 
         /**
          * <p>The instance ID of the cache-accelerated domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>dns-cn-j6666</p>
@@ -246,6 +250,7 @@ public class AddDnsCacheDomainRequest extends Request {
 
         /**
          * <p>The origin DNS servers. A maximum of 10 origin DNS servers are supported.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sourceDnsServer(java.util.List < SourceDnsServer> sourceDnsServer) {
             this.putQueryParameter("SourceDnsServer", sourceDnsServer);
@@ -255,6 +260,7 @@ public class AddDnsCacheDomainRequest extends Request {
 
         /**
          * <p>Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SUPPORT</p>
@@ -267,6 +273,7 @@ public class AddDnsCacheDomainRequest extends Request {
 
         /**
          * <p>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>UDP</p>
@@ -332,6 +339,7 @@ public class AddDnsCacheDomainRequest extends Request {
 
             /**
              * <p>The domain name or IP address of the origin DNS server.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>192.0.0.0</p>
@@ -343,6 +351,7 @@ public class AddDnsCacheDomainRequest extends Request {
 
             /**
              * <p>The port of the origin DNS server.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>53</p>

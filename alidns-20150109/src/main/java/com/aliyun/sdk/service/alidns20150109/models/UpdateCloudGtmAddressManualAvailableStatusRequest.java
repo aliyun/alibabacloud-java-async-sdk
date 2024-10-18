@@ -128,6 +128,7 @@ public class UpdateCloudGtmAddressManualAvailableStatusRequest extends Request {
 
         /**
          * <p>The ID of the address. This ID uniquely identifies the address.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>addr-89518218114368**92</p>

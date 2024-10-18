@@ -85,6 +85,7 @@ public class AddDomainBackupRequest extends Request {
 
         /**
          * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test.aliyun.com</p>
@@ -118,6 +119,7 @@ public class AddDomainBackupRequest extends Request {
          * <li>DAY: backs up data on a daily basis.</li>
          * <li>HOUR: backs up data on an hourly basis.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>HOUR</p>

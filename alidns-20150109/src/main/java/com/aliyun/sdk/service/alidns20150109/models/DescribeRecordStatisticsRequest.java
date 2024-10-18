@@ -128,6 +128,7 @@ public class DescribeRecordStatisticsRequest extends Request {
 
         /**
          * <p>The primary domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>dns-example.com</p>
@@ -181,6 +182,7 @@ public class DescribeRecordStatisticsRequest extends Request {
 
         /**
          * <p>The hostname. If you want to resolve <a href="http://www.dns-exmaple.top">www.dns-exmaple.top</a>, set Rr to www.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>www</p>
@@ -196,6 +198,7 @@ public class DescribeRecordStatisticsRequest extends Request {
          * <p>You can only query the DNS records within the last 90 days.``</p>
          * <p>If the time range is less than or equal to seven days, data is returned on an hourly basis.````</p>
          * <p>If the time range is greater than seven days, data is returned on a daily basis.````</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-07-04</p>

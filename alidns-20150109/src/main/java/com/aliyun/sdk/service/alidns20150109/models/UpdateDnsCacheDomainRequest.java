@@ -180,6 +180,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
 
         /**
          * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>dns.example.com</p>

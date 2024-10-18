@@ -137,6 +137,7 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>The resource ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>The type of the resource.</p>
@@ -149,6 +150,7 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>The resource type.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>DOMAIN</p>

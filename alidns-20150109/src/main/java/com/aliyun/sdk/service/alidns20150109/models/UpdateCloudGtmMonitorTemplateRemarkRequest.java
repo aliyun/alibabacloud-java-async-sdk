@@ -138,6 +138,7 @@ public class UpdateCloudGtmMonitorTemplateRemarkRequest extends Request {
 
         /**
          * <p>The ID of the health check template. This ID uniquely identifies a health check template.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>mtp-89518052455928**00</p>

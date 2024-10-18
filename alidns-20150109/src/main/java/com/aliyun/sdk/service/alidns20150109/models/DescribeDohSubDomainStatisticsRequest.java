@@ -136,6 +136,7 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
 
         /**
          * <p>The subdomain whose statistics you want to query.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>

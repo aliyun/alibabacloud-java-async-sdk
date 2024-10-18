@@ -84,6 +84,7 @@ public class UpdateDomainRemarkRequest extends Request {
 
         /**
          * <p>The domain name that already exists in Alibaba Cloud DNS.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>mydomain.com</p>

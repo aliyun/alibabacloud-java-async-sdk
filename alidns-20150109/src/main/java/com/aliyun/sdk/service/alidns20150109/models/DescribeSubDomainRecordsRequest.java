@@ -216,6 +216,7 @@ public class DescribeSubDomainRecordsRequest extends Request {
         /**
          * <p>If you set SubDomain to <code>a.www.example.com</code> and leave</p>
          * <p>DomainName empty, the system returns the DNS records that contain the hostname <code>a.www</code> for the domain name example.com. If you set SubDomain to a.<a href="http://www.example.com">www.example.com</a> and set DomainName to <a href="http://www.example.com">www.example.com</a>, the system returns the DNS records that contain the hostname <code>a</code> for the domain name <a href="http://www.example.com">www.example.com</a>. If you set SubDomain to a.<a href="http://www.example.com">www.example.com</a> and set DomainName to a.<a href="http://www.example.com">www.example.com</a>, the system returns the DNS records that contain the hostname <code>@</code> for the domain name a.<a href="http://www.example.com">www.example.com</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>a.<a href="http://www.example.com">www.example.com</a></p>

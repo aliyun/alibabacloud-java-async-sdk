@@ -98,6 +98,7 @@ public class MoveDomainResourceGroupRequest extends Request {
         /**
          * <p>The ID of the new resource group.</p>
          * <p>You can view the ID of the resource group in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> or call the ListResourceGroups operation.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzzk7hx3glaoq</p>
@@ -110,6 +111,7 @@ public class MoveDomainResourceGroupRequest extends Request {
 
         /**
          * <p>The resource ID. If Tag is left empty, ResourceId is required.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>

@@ -171,6 +171,7 @@ public class ListCloudGtmMonitorTemplatesRequest extends Request {
 
         /**
          * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -183,6 +184,7 @@ public class ListCloudGtmMonitorTemplatesRequest extends Request {
 
         /**
          * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

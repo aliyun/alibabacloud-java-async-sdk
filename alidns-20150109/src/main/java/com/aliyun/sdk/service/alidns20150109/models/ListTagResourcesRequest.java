@@ -145,6 +145,7 @@ public class ListTagResourcesRequest extends Request {
 
         /**
          * <p>The resource type.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>DOMAIN</p>

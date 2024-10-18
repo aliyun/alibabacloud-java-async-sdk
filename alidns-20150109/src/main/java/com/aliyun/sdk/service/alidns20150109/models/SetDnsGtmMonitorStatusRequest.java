@@ -97,6 +97,7 @@ public class SetDnsGtmMonitorStatusRequest extends Request {
 
         /**
          * <p>The ID of the health check task.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>MonitorConfigId1</p>
@@ -113,6 +114,7 @@ public class SetDnsGtmMonitorStatusRequest extends Request {
          * <li>OPEN: enables the health check feature.</li>
          * <li>CLOSE: disables the health check feature.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>open</p>

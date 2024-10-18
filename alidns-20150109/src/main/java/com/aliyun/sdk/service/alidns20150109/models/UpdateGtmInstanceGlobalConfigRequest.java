@@ -208,6 +208,7 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
 
         /**
          * <p>The ID of the GTM instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>instance1</p>

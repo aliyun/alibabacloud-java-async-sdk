@@ -304,6 +304,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The address pools in the primary address pool set.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder defaultAddrPool(java.util.List < DefaultAddrPool> defaultAddrPool) {
             this.putQueryParameter("DefaultAddrPool", defaultAddrPool);
@@ -318,6 +319,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
          * <li>IPV6</li>
          * <li>DOMAIN</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -374,6 +376,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The minimum number of available addresses in the primary address pool set.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -492,6 +495,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The ID of the access policy.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>StrategyId1</p>
@@ -504,6 +508,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The name of the access policy.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>StrategyName1</p>

@@ -90,6 +90,7 @@ public class SetGtmAccessModeRequest extends Request {
          * <li><strong>DEFAULT: specifies the primary address pool set.</strong></li>
          * <li>**FAILOVER: specifies the secondary address pool set.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTO</p>
@@ -114,6 +115,7 @@ public class SetGtmAccessModeRequest extends Request {
 
         /**
          * <p>The ID of the access policy.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hra0hx</p>

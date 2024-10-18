@@ -160,6 +160,7 @@ public class AddDnsGtmMonitorRequest extends Request {
 
         /**
          * <p>The ID of the address pool.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pool1</p>
@@ -172,6 +173,7 @@ public class AddDnsGtmMonitorRequest extends Request {
 
         /**
          * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,6 +186,7 @@ public class AddDnsGtmMonitorRequest extends Request {
 
         /**
          * <p>The health check interval. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -196,6 +199,7 @@ public class AddDnsGtmMonitorRequest extends Request {
 
         /**
          * <p>The monitored nodes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -275,6 +279,7 @@ public class AddDnsGtmMonitorRequest extends Request {
          * </ul>
          * </li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;code&quot;:200,&quot;path&quot;:&quot;\index.htm&quot;,&quot;host&quot;:&quot;aliyun.com&quot;}</p>
@@ -293,6 +298,7 @@ public class AddDnsGtmMonitorRequest extends Request {
          * <li>PING</li>
          * <li>TCP</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>http</p>
@@ -305,6 +311,7 @@ public class AddDnsGtmMonitorRequest extends Request {
 
         /**
          * <p>The timeout period. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>30000</p>

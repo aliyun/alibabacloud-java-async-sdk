@@ -86,6 +86,7 @@ public class UnbindInstanceDomainsRequest extends Request {
         /**
          * <p>The domain names.</p>
          * <p>Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com,example.net</p>
@@ -98,6 +99,7 @@ public class UnbindInstanceDomainsRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

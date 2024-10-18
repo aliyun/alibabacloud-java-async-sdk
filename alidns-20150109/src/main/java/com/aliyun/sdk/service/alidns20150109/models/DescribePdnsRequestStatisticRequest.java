@@ -32,6 +32,10 @@ public class DescribePdnsRequestStatisticRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SubDomain")
     private String subDomain;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private DescribePdnsRequestStatisticRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
@@ -39,6 +43,7 @@ public class DescribePdnsRequestStatisticRequest extends Request {
         this.lang = builder.lang;
         this.startDate = builder.startDate;
         this.subDomain = builder.subDomain;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -89,12 +94,20 @@ public class DescribePdnsRequestStatisticRequest extends Request {
         return this.subDomain;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<DescribePdnsRequestStatisticRequest, Builder> {
         private String domainName; 
         private String endDate; 
         private String lang; 
         private String startDate; 
         private String subDomain; 
+        private String type; 
 
         private Builder() {
             super();
@@ -107,6 +120,7 @@ public class DescribePdnsRequestStatisticRequest extends Request {
             this.lang = request.lang;
             this.startDate = request.startDate;
             this.subDomain = request.subDomain;
+            this.type = request.type;
         } 
 
         /**
@@ -151,6 +165,15 @@ public class DescribePdnsRequestStatisticRequest extends Request {
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
             this.subDomain = subDomain;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

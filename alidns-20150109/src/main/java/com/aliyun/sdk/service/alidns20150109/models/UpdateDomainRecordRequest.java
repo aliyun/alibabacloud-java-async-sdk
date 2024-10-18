@@ -213,6 +213,7 @@ public class UpdateDomainRecordRequest extends Request {
         /**
          * <p>The hostname.</p>
          * <p>For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>www</p>
@@ -225,6 +226,7 @@ public class UpdateDomainRecordRequest extends Request {
 
         /**
          * <p>The ID of the DNS record.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>9999985</p>
@@ -252,6 +254,7 @@ public class UpdateDomainRecordRequest extends Request {
         /**
          * <p>The type of the DNS record. For more information, see</p>
          * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>A</p>
@@ -276,6 +279,7 @@ public class UpdateDomainRecordRequest extends Request {
 
         /**
          * <p>The record value.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.2.254</p>

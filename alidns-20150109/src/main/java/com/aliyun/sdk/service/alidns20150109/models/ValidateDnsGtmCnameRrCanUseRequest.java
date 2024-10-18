@@ -129,7 +129,7 @@ public class ValidateDnsGtmCnameRrCanUseRequest extends Request {
         } 
 
         /**
-         * CnameMode.
+         * <p>This parameter is required.</p>
          */
         public Builder cnameMode(String cnameMode) {
             this.putQueryParameter("CnameMode", cnameMode);
@@ -138,7 +138,7 @@ public class ValidateDnsGtmCnameRrCanUseRequest extends Request {
         }
 
         /**
-         * CnameRr.
+         * <p>This parameter is required.</p>
          */
         public Builder cnameRr(String cnameRr) {
             this.putQueryParameter("CnameRr", cnameRr);
@@ -147,7 +147,7 @@ public class ValidateDnsGtmCnameRrCanUseRequest extends Request {
         }
 
         /**
-         * CnameType.
+         * <p>This parameter is required.</p>
          */
         public Builder cnameType(String cnameType) {
             this.putQueryParameter("CnameType", cnameType);
@@ -156,7 +156,7 @@ public class ValidateDnsGtmCnameRrCanUseRequest extends Request {
         }
 
         /**
-         * CnameZone.
+         * <p>This parameter is required.</p>
          */
         public Builder cnameZone(String cnameZone) {
             this.putQueryParameter("CnameZone", cnameZone);
@@ -165,7 +165,7 @@ public class ValidateDnsGtmCnameRrCanUseRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

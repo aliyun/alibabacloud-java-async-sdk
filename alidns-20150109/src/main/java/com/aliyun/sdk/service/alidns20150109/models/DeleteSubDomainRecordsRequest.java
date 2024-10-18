@@ -113,6 +113,7 @@ public class DeleteSubDomainRecordsRequest extends Request {
 
         /**
          * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -138,6 +139,7 @@ public class DeleteSubDomainRecordsRequest extends Request {
         /**
          * <p>The host record.</p>
          * <p>For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>www</p>

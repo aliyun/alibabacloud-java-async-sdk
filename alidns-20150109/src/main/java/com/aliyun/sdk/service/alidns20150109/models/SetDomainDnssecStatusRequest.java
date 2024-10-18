@@ -85,6 +85,7 @@ public class SetDomainDnssecStatusRequest extends Request {
 
         /**
          * <p>The domain name for which you want to enable the DNSSEC. Only the users of the paid editions of Alibaba Cloud DNS can enable this feature.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -118,6 +119,7 @@ public class SetDomainDnssecStatusRequest extends Request {
          * <li>ON: enables DNSSEC for the domain name.</li>
          * <li>OFF: disables DNSSEC for the domain name.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>

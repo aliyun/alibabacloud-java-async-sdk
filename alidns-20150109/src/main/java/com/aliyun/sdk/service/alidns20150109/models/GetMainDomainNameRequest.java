@@ -70,6 +70,7 @@ public class GetMainDomainNameRequest extends Request {
 
         /**
          * <p>The string. The string can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>

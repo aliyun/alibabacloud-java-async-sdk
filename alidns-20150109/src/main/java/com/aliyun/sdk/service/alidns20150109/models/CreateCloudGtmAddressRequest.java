@@ -231,6 +231,7 @@ public class CreateCloudGtmAddressRequest extends Request {
 
         /**
          * <p>IP address or domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>223.5.XX.XX</p>
@@ -259,6 +260,7 @@ public class CreateCloudGtmAddressRequest extends Request {
          * <li>auto: the automatic mode. The system determines whether to return an address based on the health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</li>
          * <li>manual: the manual mode. If an address is in the unavailable state, the address is not returned for DNS requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -287,6 +289,7 @@ public class CreateCloudGtmAddressRequest extends Request {
          * <li>enable: Enabled status </li>
          * <li>disable: Disabled status</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>enable</p>
@@ -306,6 +309,7 @@ public class CreateCloudGtmAddressRequest extends Request {
          * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
          * <li>all_ok: The health check results of all health check templates are normal.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>p50_ok</p>
@@ -344,6 +348,7 @@ public class CreateCloudGtmAddressRequest extends Request {
 
         /**
          * <p>Address name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Address-1</p>
@@ -373,6 +378,7 @@ public class CreateCloudGtmAddressRequest extends Request {
          * <li>IPv6</li>
          * <li>domain</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>

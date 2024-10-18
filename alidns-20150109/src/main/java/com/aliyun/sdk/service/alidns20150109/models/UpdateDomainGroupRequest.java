@@ -85,6 +85,7 @@ public class UpdateDomainGroupRequest extends Request {
 
         /**
          * <p>The ID of the domain name group whose name you want to modify.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2223</p>
@@ -97,6 +98,7 @@ public class UpdateDomainGroupRequest extends Request {
 
         /**
          * <p>The new name of the domain name group.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>NewName</p>

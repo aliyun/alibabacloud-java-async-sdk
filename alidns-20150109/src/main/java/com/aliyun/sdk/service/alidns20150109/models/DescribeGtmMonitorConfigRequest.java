@@ -82,6 +82,7 @@ public class DescribeGtmMonitorConfigRequest extends Request {
 
         /**
          * <p>The ID of the health check configuration.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

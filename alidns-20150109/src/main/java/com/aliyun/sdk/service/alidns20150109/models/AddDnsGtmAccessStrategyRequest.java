@@ -288,6 +288,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The address pools in the primary address pool set.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder defaultAddrPool(java.util.List < DefaultAddrPool> defaultAddrPool) {
             this.putQueryParameter("DefaultAddrPool", defaultAddrPool);
@@ -302,6 +303,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
          * <li>IPV6</li>
          * <li>DOMAIN</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -358,6 +360,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The minimum number of available addresses in the primary address pool set.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -452,6 +455,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>instance1</p>
@@ -492,6 +496,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
          * <li>GEO: geographical location-based access policy</li>
          * <li>LATENCY: latency-based access policy</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>geo</p>
@@ -504,6 +509,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The name of the access policy.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testStrategyName</p>

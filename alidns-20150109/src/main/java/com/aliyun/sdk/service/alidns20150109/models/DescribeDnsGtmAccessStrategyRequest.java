@@ -82,6 +82,7 @@ public class DescribeDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The ID of the access policy.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>strategyId1</p>

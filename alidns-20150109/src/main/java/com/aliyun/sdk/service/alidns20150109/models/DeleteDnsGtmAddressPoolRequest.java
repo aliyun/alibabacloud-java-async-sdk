@@ -70,6 +70,7 @@ public class DeleteDnsGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The ID of the address pool.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpool1</p>

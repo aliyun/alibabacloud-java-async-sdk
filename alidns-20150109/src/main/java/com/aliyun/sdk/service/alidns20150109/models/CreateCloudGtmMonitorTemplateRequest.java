@@ -230,7 +230,10 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
         }
 
         /**
-         * EvaluationCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -276,7 +279,10 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
         }
 
         /**
-         * FailureRate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder failureRate(Integer failureRate) {
             this.putQueryParameter("FailureRate", failureRate);
@@ -285,7 +291,10 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -299,6 +308,7 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
          * <li>IPv4: You can set IpVersion to IPv4 to perform health checks on IPv4 addresses.</li>
          * <li>IPv6: You can set IpVersion to IPv6 to perform health checks on IPv6 addresses.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -311,6 +321,7 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
 
         /**
          * <p>The health check nodes. You can call the <a href="~~ListCloudGtmMonitorNodes~~">ListCloudGtmMonitorNodes</a> operation to obtain the health check nodes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ispCityNodes(java.util.List < IspCityNodes> ispCityNodes) {
             String ispCityNodesShrink = shrink(ispCityNodes, "IspCityNodes", "json");
@@ -321,6 +332,7 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
 
         /**
          * <p>The name of the health check template. We recommend that you use a name that distinguishes the type of health check protocol used.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Ping-IPv4</p>
@@ -332,7 +344,10 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ping</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -341,7 +356,10 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

@@ -100,6 +100,7 @@ public class DeleteCloudGtmAddressRequest extends Request {
 
         /**
          * <p>The address ID. This ID uniquely identifies the address.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>addr-895182181143688192</p>

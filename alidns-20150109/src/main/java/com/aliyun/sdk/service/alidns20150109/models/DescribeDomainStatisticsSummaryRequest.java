@@ -233,6 +233,7 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         /**
          * <p>The beginning of the time range to query. Specify the time in the <strong>YYYY-MM-DD</strong> format.</p>
          * <p>You can only query DNS records of the last 90 days.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-07-04</p>

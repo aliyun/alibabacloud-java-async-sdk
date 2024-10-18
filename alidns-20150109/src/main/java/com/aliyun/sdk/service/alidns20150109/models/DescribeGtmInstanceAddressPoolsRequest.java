@@ -99,6 +99,7 @@ public class DescribeGtmInstanceAddressPoolsRequest extends Request {
 
         /**
          * <p>The ID of the GTM instance that you want to query.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gtmtest</p>

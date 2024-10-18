@@ -184,6 +184,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
 
         /**
          * <p>The monitored nodes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -205,6 +206,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
 
         /**
          * <p>The ID of the health check configuration.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>MonitorConfigId1</p>
@@ -275,6 +277,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
          * </ul>
          * </li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;code&quot;:200,&quot;path&quot;:&quot;\index.htm&quot;,&quot;host&quot;:&quot;aliyun.com&quot;}</p>
@@ -293,6 +296,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
          * <li>PING</li>
          * <li>TCP</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>http</p>

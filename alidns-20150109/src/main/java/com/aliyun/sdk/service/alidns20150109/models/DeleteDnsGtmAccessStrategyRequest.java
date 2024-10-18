@@ -82,6 +82,7 @@ public class DeleteDnsGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The ID of the access policy.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testStrategyId1</p>

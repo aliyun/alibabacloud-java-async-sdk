@@ -84,6 +84,7 @@ public class DescribeDnsProductInstanceRequest extends Request {
 
         /**
          * <p>The instance ID. You can call the <strong>DescribeDomainInfo</strong> operation to obtain the instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>i-8fxxxx</p>

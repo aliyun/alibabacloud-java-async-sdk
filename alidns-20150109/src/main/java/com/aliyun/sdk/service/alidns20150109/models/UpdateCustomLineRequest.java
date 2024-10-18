@@ -119,6 +119,7 @@ public class UpdateCustomLineRequest extends Request {
 
         /**
          * <p>The unique ID of the custom line.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>

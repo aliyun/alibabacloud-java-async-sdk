@@ -70,6 +70,7 @@ public class DescribeGtmInstanceAddressPoolRequest extends Request {
 
         /**
          * <p>The ID of the address pool that you want to query.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>

@@ -111,6 +111,7 @@ public class UpdateDNSSLBWeightRequest extends Request {
 
         /**
          * <p>The ID of the DNS record.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>9999985</p>
@@ -135,6 +136,7 @@ public class UpdateDNSSLBWeightRequest extends Request {
 
         /**
          * <p>The weight of the DNS record that you want to specify. Valid values: <code>1 to 100</code>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

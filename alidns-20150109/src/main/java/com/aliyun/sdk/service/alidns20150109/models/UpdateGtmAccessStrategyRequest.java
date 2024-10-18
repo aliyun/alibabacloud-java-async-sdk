@@ -174,6 +174,7 @@ public class UpdateGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The ID of the access policy that you want to query for the GTM instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hrmxc</p>

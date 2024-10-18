@@ -100,6 +100,7 @@ public class CopyGtmConfigRequest extends Request {
 
         /**
          * <p>The type of the object that is copied. Only the INSTANCE type is supported.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
@@ -124,6 +125,7 @@ public class CopyGtmConfigRequest extends Request {
 
         /**
          * <p>The ID of the source object. Only instance IDs are supported.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gtm-cn-0pp1j84v60d</p>
@@ -136,6 +138,7 @@ public class CopyGtmConfigRequest extends Request {
 
         /**
          * <p>The ID of the target object. Only instance IDs are supported.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gtm-cn-v0h1gaujg06</p>

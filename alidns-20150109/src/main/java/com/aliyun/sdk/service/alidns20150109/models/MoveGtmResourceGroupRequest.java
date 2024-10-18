@@ -93,7 +93,10 @@ public class MoveGtmResourceGroupRequest extends Request {
         }
 
         /**
-         * NewResourceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgIDE1MA_XXX</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -102,7 +105,10 @@ public class MoveGtmResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzzk7hx3*****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

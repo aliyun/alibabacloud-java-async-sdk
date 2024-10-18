@@ -82,6 +82,7 @@ public class DescribeGtmAccessStrategyRequest extends Request {
 
         /**
          * <p>The ID of the access policy that you want to query.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hra0hs</p>

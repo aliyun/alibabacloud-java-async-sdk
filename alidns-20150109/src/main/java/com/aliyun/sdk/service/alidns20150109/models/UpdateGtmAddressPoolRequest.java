@@ -127,7 +127,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * Addr.
+         * <p>This parameter is required.</p>
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -137,6 +137,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The ID of the address pool that you want to modify.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1234abc</p>
@@ -182,6 +183,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The type of the address pool that you want to modify.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>IP</p>

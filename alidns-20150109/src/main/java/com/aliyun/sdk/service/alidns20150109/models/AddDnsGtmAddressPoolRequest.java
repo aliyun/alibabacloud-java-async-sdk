@@ -231,6 +231,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The address pools.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -252,6 +253,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>instance1</p>
@@ -301,6 +303,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
          * <li>ALL_RR: returns all addresses.</li>
          * <li>RATIO: returns addresses by weight.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>all_rr</p>
@@ -399,6 +402,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The name of the address pool.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -446,6 +450,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
          * <li>IPV6: IPv6 address</li>
          * <li>DOMAIN: domain name</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -548,6 +553,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
 
             /**
              * <p>The address in the address pool.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.1.1</p>
@@ -570,6 +576,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
              * </ul>
              * </li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -597,6 +604,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
              * <li>ONLINE: always online</li>
              * <li>OFFLINE: always offline</li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>online</p>

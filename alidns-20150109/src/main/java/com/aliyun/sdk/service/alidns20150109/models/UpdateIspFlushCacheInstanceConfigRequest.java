@@ -84,7 +84,7 @@ public class UpdateIspFlushCacheInstanceConfigRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +93,7 @@ public class UpdateIspFlushCacheInstanceConfigRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);

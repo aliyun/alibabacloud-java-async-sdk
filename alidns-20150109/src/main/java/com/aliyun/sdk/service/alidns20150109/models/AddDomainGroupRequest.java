@@ -70,6 +70,7 @@ public class AddDomainGroupRequest extends Request {
 
         /**
          * <p>The name of the domain name group.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>MyGroup</p>

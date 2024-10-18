@@ -124,6 +124,7 @@ public class ChangeDomainOfDnsProductRequest extends Request {
 
         /**
          * <p>The ID of the Alibaba Cloud DNS instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>i-7sb</p>

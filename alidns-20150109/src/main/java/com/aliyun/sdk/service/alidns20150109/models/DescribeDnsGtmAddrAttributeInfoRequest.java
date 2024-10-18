@@ -85,6 +85,7 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends Request {
 
         /**
          * <p>The addresses.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;1.1.1.1&quot;]</p>
@@ -114,6 +115,7 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends Request {
          * <li>IPv6: IPv6 address</li>
          * <li>DOMAIN: domain name</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>

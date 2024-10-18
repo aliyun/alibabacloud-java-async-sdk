@@ -228,6 +228,7 @@ public class AddGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The address pools.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -249,6 +250,7 @@ public class AddGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The ID of the GTM instance for which you want to create an address pool.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gtm-cn-xxxxxxx</p>
@@ -294,6 +296,7 @@ public class AddGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The minimum number of available addresses in the address pool.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -353,6 +356,7 @@ public class AddGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The name of the address pool.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud cluster</p>
@@ -399,6 +403,7 @@ public class AddGtmAddressPoolRequest extends Request {
          * <li><strong>IP</strong>: IPv4 address</li>
          * <li><strong>DOMAIN</strong>: domain name</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>IP</p>

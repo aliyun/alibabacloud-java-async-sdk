@@ -97,6 +97,7 @@ public class SetGtmMonitorStatusRequest extends Request {
 
         /**
          * <p>The health check ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>abc1234</p>
@@ -113,6 +114,7 @@ public class SetGtmMonitorStatusRequest extends Request {
          * <li><strong>OPEN</strong>: Enabled</li>
          * <li><strong>CLOSE</strong>: Disabled</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>OPEN</p>

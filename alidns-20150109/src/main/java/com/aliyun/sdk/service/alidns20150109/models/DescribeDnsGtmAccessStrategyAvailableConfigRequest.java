@@ -85,6 +85,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigRequest extends Request 
 
         /**
          * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>instance1</p>
@@ -113,6 +114,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigRequest extends Request 
          * <li>GEO: geographical location-based</li>
          * <li>LATENCY: latency-based</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>geo</p>

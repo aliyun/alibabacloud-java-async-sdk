@@ -70,6 +70,7 @@ public class DeleteGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The ID of the address pool that you want to delete.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>

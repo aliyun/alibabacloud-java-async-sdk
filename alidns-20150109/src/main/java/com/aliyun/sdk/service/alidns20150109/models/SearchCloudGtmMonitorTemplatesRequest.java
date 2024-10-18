@@ -167,7 +167,10 @@ public class SearchCloudGtmMonitorTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +179,10 @@ public class SearchCloudGtmMonitorTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

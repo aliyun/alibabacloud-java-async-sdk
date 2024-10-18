@@ -213,6 +213,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
 
         /**
          * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -317,6 +318,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
 
         /**
          * <p>The start date of the time range to be queried. Specify the time in the yyyy-MM-dd format, such as 2023-03-01.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-29</p>

@@ -110,6 +110,7 @@ public class UpdateDomainRecordRemarkRequest extends Request {
 
         /**
          * <p>The ID of the DNS record.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678</p>

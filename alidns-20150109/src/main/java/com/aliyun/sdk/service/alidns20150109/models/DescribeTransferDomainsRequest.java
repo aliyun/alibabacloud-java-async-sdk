@@ -217,6 +217,7 @@ public class DescribeTransferDomainsRequest extends Request {
          * <li>IN: The domain name was transferred to the current account.</li>
          * <li>OUT: The domain name was transferred from the current account.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>IN</p>

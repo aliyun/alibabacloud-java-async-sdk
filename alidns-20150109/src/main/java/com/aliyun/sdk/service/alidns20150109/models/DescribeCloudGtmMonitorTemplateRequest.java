@@ -86,6 +86,7 @@ public class DescribeCloudGtmMonitorTemplateRequest extends Request {
 
         /**
          * <p>The ID of the health check template that you want to query. This ID uniquely identifies the health check template.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>mtp-89518052425100**80</p>

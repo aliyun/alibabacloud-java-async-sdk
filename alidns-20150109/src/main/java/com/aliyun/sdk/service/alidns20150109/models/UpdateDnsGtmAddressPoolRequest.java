@@ -114,6 +114,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The address pools.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -123,6 +124,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
 
         /**
          * <p>The ID of the address pool.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testpool1</p>
@@ -151,6 +153,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
          * <li>ALL_RR: returns all addresses.</li>
          * <li>RATIO: returns addresses by weight.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>all_rr</p>
@@ -264,6 +267,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
 
             /**
              * <p>The address in the address pool.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.1.1</p>
@@ -315,6 +319,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
              * <li>ONLINE: always online</li>
              * <li>OFFLINE: always offline</li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>online</p>

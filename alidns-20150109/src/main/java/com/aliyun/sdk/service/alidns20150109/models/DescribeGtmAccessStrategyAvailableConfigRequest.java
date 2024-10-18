@@ -70,6 +70,7 @@ public class DescribeGtmAccessStrategyAvailableConfigRequest extends Request {
 
         /**
          * <p>The ID of the Global Traffic Manager (GTM) instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gtm-cn-xxxx</p>

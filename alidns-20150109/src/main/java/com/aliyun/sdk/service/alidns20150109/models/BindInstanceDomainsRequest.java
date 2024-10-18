@@ -88,6 +88,7 @@ public class BindInstanceDomainsRequest extends Request {
          * <blockquote>
          * <p> Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com,example.net</p>
@@ -100,6 +101,7 @@ public class BindInstanceDomainsRequest extends Request {
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>sdfasdf</p>

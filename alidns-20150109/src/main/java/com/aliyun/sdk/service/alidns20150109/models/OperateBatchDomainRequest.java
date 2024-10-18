@@ -85,6 +85,7 @@ public class OperateBatchDomainRequest extends Request {
 
         /**
          * <p>The Domain Name System (DNS) records. You can submit up to 1,000 DNS records.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder domainRecordInfo(java.util.List < DomainRecordInfo> domainRecordInfo) {
             this.putQueryParameter("DomainRecordInfo", domainRecordInfo);
@@ -112,6 +113,7 @@ public class OperateBatchDomainRequest extends Request {
          * <li><strong>RR_ADD</strong>: adds DNS records in batches.</li>
          * <li><strong>RR_DEL</strong>: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>RR_ADD</p>
@@ -275,6 +277,7 @@ public class OperateBatchDomainRequest extends Request {
              * <blockquote>
              * <p> You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.</p>
              * </blockquote>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>

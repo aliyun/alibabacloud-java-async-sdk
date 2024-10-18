@@ -1,3 +1,6 @@
+2024-10-18 Version: 3.0.23
+- Generated java-async 2015-01-09 for Alidns.
+
 2024-09-27 Version: 3.0.22
 - Generated java-async 2015-01-09 for Alidns.
 
