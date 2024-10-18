@@ -36,6 +36,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
+    @com.aliyun.core.annotation.NameInMap("LatestVersion")
+    private DatasetVersion latestVersion;
+
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -57,11 +60,20 @@ public class GetDatasetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SourceDatasetId")
+    private String sourceDatasetId;
+
+    @com.aliyun.core.annotation.NameInMap("SourceDatasetVersion")
+    private String sourceDatasetVersion;
+
     @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
     @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
+
+    @com.aliyun.core.annotation.NameInMap("TagTemplateType")
+    private String tagTemplateType;
 
     @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
@@ -81,6 +93,7 @@ public class GetDatasetResponseBody extends TeaModel {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.labels = builder.labels;
+        this.latestVersion = builder.latestVersion;
         this.name = builder.name;
         this.options = builder.options;
         this.ownerId = builder.ownerId;
@@ -88,8 +101,11 @@ public class GetDatasetResponseBody extends TeaModel {
         this.provider = builder.provider;
         this.providerType = builder.providerType;
         this.requestId = builder.requestId;
+        this.sourceDatasetId = builder.sourceDatasetId;
+        this.sourceDatasetVersion = builder.sourceDatasetVersion;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
+        this.tagTemplateType = builder.tagTemplateType;
         this.uri = builder.uri;
         this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
@@ -160,6 +176,13 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     /**
+     * @return latestVersion
+     */
+    public DatasetVersion getLatestVersion() {
+        return this.latestVersion;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -209,6 +232,20 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     /**
+     * @return sourceDatasetId
+     */
+    public String getSourceDatasetId() {
+        return this.sourceDatasetId;
+    }
+
+    /**
+     * @return sourceDatasetVersion
+     */
+    public String getSourceDatasetVersion() {
+        return this.sourceDatasetVersion;
+    }
+
+    /**
      * @return sourceId
      */
     public String getSourceId() {
@@ -220,6 +257,13 @@ public class GetDatasetResponseBody extends TeaModel {
      */
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    /**
+     * @return tagTemplateType
+     */
+    public String getTagTemplateType() {
+        return this.tagTemplateType;
     }
 
     /**
@@ -252,6 +296,7 @@ public class GetDatasetResponseBody extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private java.util.List < Label > labels; 
+        private DatasetVersion latestVersion; 
         private String name; 
         private String options; 
         private String ownerId; 
@@ -259,8 +304,11 @@ public class GetDatasetResponseBody extends TeaModel {
         private String provider; 
         private String providerType; 
         private String requestId; 
+        private String sourceDatasetId; 
+        private String sourceDatasetVersion; 
         private String sourceId; 
         private String sourceType; 
+        private String tagTemplateType; 
         private String uri; 
         private String userId; 
         private String workspaceId; 
@@ -330,6 +378,14 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
+         * LatestVersion.
+         */
+        public Builder latestVersion(DatasetVersion latestVersion) {
+            this.latestVersion = latestVersion;
+            return this;
+        }
+
+        /**
          * Name.
          */
         public Builder name(String name) {
@@ -386,6 +442,22 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
+         * SourceDatasetId.
+         */
+        public Builder sourceDatasetId(String sourceDatasetId) {
+            this.sourceDatasetId = sourceDatasetId;
+            return this;
+        }
+
+        /**
+         * SourceDatasetVersion.
+         */
+        public Builder sourceDatasetVersion(String sourceDatasetVersion) {
+            this.sourceDatasetVersion = sourceDatasetVersion;
+            return this;
+        }
+
+        /**
          * SourceId.
          */
         public Builder sourceId(String sourceId) {
@@ -398,6 +470,14 @@ public class GetDatasetResponseBody extends TeaModel {
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
+         * TagTemplateType.
+         */
+        public Builder tagTemplateType(String tagTemplateType) {
+            this.tagTemplateType = tagTemplateType;
             return this;
         }
 

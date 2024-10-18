@@ -17,6 +17,16 @@ public class CreateDatasetRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataCount")
+    @com.aliyun.core.annotation.Validation(maximum = 999999999999D, minimum = 1)
+    private Long dataCount;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSize")
+    @com.aliyun.core.annotation.Validation(maximum = 999999999999D, minimum = 1)
+    private Long dataSize;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataSourceType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceType;
@@ -56,6 +66,14 @@ public class CreateDatasetRequest extends Request {
     private String providerType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceDatasetId")
+    private String sourceDatasetId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceDatasetVersion")
+    private String sourceDatasetVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
@@ -73,12 +91,22 @@ public class CreateDatasetRequest extends Request {
     private String userId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VersionDescription")
+    private String versionDescription;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VersionLabels")
+    private java.util.List < Label > versionLabels;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateDatasetRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
+        this.dataCount = builder.dataCount;
+        this.dataSize = builder.dataSize;
         this.dataSourceType = builder.dataSourceType;
         this.dataType = builder.dataType;
         this.description = builder.description;
@@ -88,10 +116,14 @@ public class CreateDatasetRequest extends Request {
         this.property = builder.property;
         this.provider = builder.provider;
         this.providerType = builder.providerType;
+        this.sourceDatasetId = builder.sourceDatasetId;
+        this.sourceDatasetVersion = builder.sourceDatasetVersion;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
         this.uri = builder.uri;
         this.userId = builder.userId;
+        this.versionDescription = builder.versionDescription;
+        this.versionLabels = builder.versionLabels;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -113,6 +145,20 @@ public class CreateDatasetRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return dataCount
+     */
+    public Long getDataCount() {
+        return this.dataCount;
+    }
+
+    /**
+     * @return dataSize
+     */
+    public Long getDataSize() {
+        return this.dataSize;
     }
 
     /**
@@ -179,6 +225,20 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return sourceDatasetId
+     */
+    public String getSourceDatasetId() {
+        return this.sourceDatasetId;
+    }
+
+    /**
+     * @return sourceDatasetVersion
+     */
+    public String getSourceDatasetVersion() {
+        return this.sourceDatasetVersion;
+    }
+
+    /**
      * @return sourceId
      */
     public String getSourceId() {
@@ -207,6 +267,20 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return versionDescription
+     */
+    public String getVersionDescription() {
+        return this.versionDescription;
+    }
+
+    /**
+     * @return versionLabels
+     */
+    public java.util.List < Label > getVersionLabels() {
+        return this.versionLabels;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -215,6 +289,8 @@ public class CreateDatasetRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDatasetRequest, Builder> {
         private String accessibility; 
+        private Long dataCount; 
+        private Long dataSize; 
         private String dataSourceType; 
         private String dataType; 
         private String description; 
@@ -224,10 +300,14 @@ public class CreateDatasetRequest extends Request {
         private String property; 
         private String provider; 
         private String providerType; 
+        private String sourceDatasetId; 
+        private String sourceDatasetVersion; 
         private String sourceId; 
         private String sourceType; 
         private String uri; 
         private String userId; 
+        private String versionDescription; 
+        private java.util.List < Label > versionLabels; 
         private String workspaceId; 
 
         private Builder() {
@@ -237,6 +317,8 @@ public class CreateDatasetRequest extends Request {
         private Builder(CreateDatasetRequest request) {
             super(request);
             this.accessibility = request.accessibility;
+            this.dataCount = request.dataCount;
+            this.dataSize = request.dataSize;
             this.dataSourceType = request.dataSourceType;
             this.dataType = request.dataType;
             this.description = request.description;
@@ -246,10 +328,14 @@ public class CreateDatasetRequest extends Request {
             this.property = request.property;
             this.provider = request.provider;
             this.providerType = request.providerType;
+            this.sourceDatasetId = request.sourceDatasetId;
+            this.sourceDatasetVersion = request.sourceDatasetVersion;
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
             this.uri = request.uri;
             this.userId = request.userId;
+            this.versionDescription = request.versionDescription;
+            this.versionLabels = request.versionLabels;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -259,6 +345,24 @@ public class CreateDatasetRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * DataCount.
+         */
+        public Builder dataCount(Long dataCount) {
+            this.putBodyParameter("DataCount", dataCount);
+            this.dataCount = dataCount;
+            return this;
+        }
+
+        /**
+         * DataSize.
+         */
+        public Builder dataSize(Long dataSize) {
+            this.putBodyParameter("DataSize", dataSize);
+            this.dataSize = dataSize;
             return this;
         }
 
@@ -353,6 +457,24 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
+         * SourceDatasetId.
+         */
+        public Builder sourceDatasetId(String sourceDatasetId) {
+            this.putBodyParameter("SourceDatasetId", sourceDatasetId);
+            this.sourceDatasetId = sourceDatasetId;
+            return this;
+        }
+
+        /**
+         * SourceDatasetVersion.
+         */
+        public Builder sourceDatasetVersion(String sourceDatasetVersion) {
+            this.putBodyParameter("SourceDatasetVersion", sourceDatasetVersion);
+            this.sourceDatasetVersion = sourceDatasetVersion;
+            return this;
+        }
+
+        /**
          * SourceId.
          */
         public Builder sourceId(String sourceId) {
@@ -388,6 +510,24 @@ public class CreateDatasetRequest extends Request {
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * VersionDescription.
+         */
+        public Builder versionDescription(String versionDescription) {
+            this.putBodyParameter("VersionDescription", versionDescription);
+            this.versionDescription = versionDescription;
+            return this;
+        }
+
+        /**
+         * VersionLabels.
+         */
+        public Builder versionLabels(java.util.List < Label > versionLabels) {
+            this.putBodyParameter("VersionLabels", versionLabels);
+            this.versionLabels = versionLabels;
             return this;
         }
 

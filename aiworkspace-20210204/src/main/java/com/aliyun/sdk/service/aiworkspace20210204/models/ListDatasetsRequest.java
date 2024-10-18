@@ -49,6 +49,10 @@ public class ListDatasetsRequest extends Request {
     private String provider;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDatasetId")
+    private String sourceDatasetId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
@@ -71,6 +75,7 @@ public class ListDatasetsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.properties = builder.properties;
         this.provider = builder.provider;
+        this.sourceDatasetId = builder.sourceDatasetId;
         this.sourceId = builder.sourceId;
         this.sourceTypes = builder.sourceTypes;
         this.workspaceId = builder.workspaceId;
@@ -153,6 +158,13 @@ public class ListDatasetsRequest extends Request {
     }
 
     /**
+     * @return sourceDatasetId
+     */
+    public String getSourceDatasetId() {
+        return this.sourceDatasetId;
+    }
+
+    /**
      * @return sourceId
      */
     public String getSourceId() {
@@ -183,6 +195,7 @@ public class ListDatasetsRequest extends Request {
         private Integer pageSize; 
         private String properties; 
         private String provider; 
+        private String sourceDatasetId; 
         private String sourceId; 
         private String sourceTypes; 
         private String workspaceId; 
@@ -202,6 +215,7 @@ public class ListDatasetsRequest extends Request {
             this.pageSize = request.pageSize;
             this.properties = request.properties;
             this.provider = request.provider;
+            this.sourceDatasetId = request.sourceDatasetId;
             this.sourceId = request.sourceId;
             this.sourceTypes = request.sourceTypes;
             this.workspaceId = request.workspaceId;
@@ -285,6 +299,15 @@ public class ListDatasetsRequest extends Request {
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
             this.provider = provider;
+            return this;
+        }
+
+        /**
+         * SourceDatasetId.
+         */
+        public Builder sourceDatasetId(String sourceDatasetId) {
+            this.putQueryParameter("SourceDatasetId", sourceDatasetId);
+            this.sourceDatasetId = sourceDatasetId;
             return this;
         }
 
