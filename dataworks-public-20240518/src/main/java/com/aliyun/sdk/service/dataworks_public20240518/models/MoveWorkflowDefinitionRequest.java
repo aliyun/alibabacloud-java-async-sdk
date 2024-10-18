@@ -108,6 +108,7 @@ public class MoveWorkflowDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,6 +121,8 @@ public class MoveWorkflowDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The path to which you want to move the workflow. You do not need to specify a workflow name in the path.</p>
+         * <p>For example, if you want to move the test workflow to root/demo/test, you must set this parameter to root/demo.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +135,7 @@ public class MoveWorkflowDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID. You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -162,7 +162,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * DestinationDataSourceType.
+         * <p>The destination type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hologres</p>
          */
         public Builder destinationDataSourceType(String destinationDataSourceType) {
             this.putQueryParameter("DestinationDataSourceType", destinationDataSourceType);
@@ -171,7 +174,17 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * MigrationType.
+         * <p>The synchronization type. Valid values:</p>
+         * <ul>
+         * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
+         * <li>RealtimeIncremental: real-time incremental synchronization</li>
+         * <li>Full: full synchronization</li>
+         * <li>OfflineIncremental: batch incremental synchronization</li>
+         * <li>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FullAndRealtimeIncremental</p>
          */
         public Builder migrationType(String migrationType) {
             this.putQueryParameter("MigrationType", migrationType);
@@ -180,7 +193,11 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the export task.</p>
+         * <p>The name of each export task must be unique. You must make sure that the names of the export tasks in the current workspace are unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_export_01</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -189,7 +206,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,7 +218,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,6 +230,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +243,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * SourceDataSourceType.
+         * <p>The source type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder sourceDataSourceType(String sourceDataSourceType) {
             this.putQueryParameter("SourceDataSourceType", sourceDataSourceType);

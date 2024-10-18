@@ -94,7 +94,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>资源文件的项目id</p>
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,6 +107,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
+         * <p>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {

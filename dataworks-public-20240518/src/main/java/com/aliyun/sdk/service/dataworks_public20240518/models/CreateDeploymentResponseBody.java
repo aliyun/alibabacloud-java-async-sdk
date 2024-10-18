@@ -50,7 +50,10 @@ public class CreateDeploymentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -58,7 +61,10 @@ public class CreateDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

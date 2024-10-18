@@ -1331,6 +1331,9 @@ public class GetDIJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobSettings")
         private JobSettings jobSettings;
 
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
+        private String jobStatus;
+
         @com.aliyun.core.annotation.NameInMap("MigrationType")
         private String migrationType;
 
@@ -1359,6 +1362,7 @@ public class GetDIJobResponseBody extends TeaModel {
             this.destinationDataSourceType = builder.destinationDataSourceType;
             this.jobName = builder.jobName;
             this.jobSettings = builder.jobSettings;
+            this.jobStatus = builder.jobStatus;
             this.migrationType = builder.migrationType;
             this.projectId = builder.projectId;
             this.resourceSettings = builder.resourceSettings;
@@ -1419,6 +1423,13 @@ public class GetDIJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobStatus
+         */
+        public String getJobStatus() {
+            return this.jobStatus;
+        }
+
+        /**
          * @return migrationType
          */
         public String getMigrationType() {
@@ -1474,6 +1485,7 @@ public class GetDIJobResponseBody extends TeaModel {
             private String destinationDataSourceType; 
             private String jobName; 
             private JobSettings jobSettings; 
+            private String jobStatus; 
             private String migrationType; 
             private Long projectId; 
             private ResourceSettings resourceSettings; 
@@ -1527,6 +1539,14 @@ public class GetDIJobResponseBody extends TeaModel {
              */
             public Builder jobSettings(JobSettings jobSettings) {
                 this.jobSettings = jobSettings;
+                return this;
+            }
+
+            /**
+             * JobStatus.
+             */
+            public Builder jobStatus(String jobStatus) {
+                this.jobStatus = jobStatus;
                 return this;
             }
 

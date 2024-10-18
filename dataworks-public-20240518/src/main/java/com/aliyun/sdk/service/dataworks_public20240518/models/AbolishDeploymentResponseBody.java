@@ -50,7 +50,10 @@ public class AbolishDeploymentResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55D786C9-DD57-524D-884C-C5239278XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,14 @@ public class AbolishDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

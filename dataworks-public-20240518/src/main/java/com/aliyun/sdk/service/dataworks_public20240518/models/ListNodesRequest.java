@@ -36,12 +36,12 @@ public class ListNodesRequest extends Request {
     private String projectId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RerunMode")
-    private String rerunMode;
+    @com.aliyun.core.annotation.NameInMap("Recurrence")
+    private String recurrence;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Rerurrence")
-    private String rerurrence;
+    @com.aliyun.core.annotation.NameInMap("RerunMode")
+    private String rerunMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Scene")
@@ -54,8 +54,8 @@ public class ListNodesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
+        this.recurrence = builder.recurrence;
         this.rerunMode = builder.rerunMode;
-        this.rerurrence = builder.rerurrence;
         this.scene = builder.scene;
     }
 
@@ -108,17 +108,17 @@ public class ListNodesRequest extends Request {
     }
 
     /**
+     * @return recurrence
+     */
+    public String getRecurrence() {
+        return this.recurrence;
+    }
+
+    /**
      * @return rerunMode
      */
     public String getRerunMode() {
         return this.rerunMode;
-    }
-
-    /**
-     * @return rerurrence
-     */
-    public String getRerurrence() {
-        return this.rerurrence;
     }
 
     /**
@@ -134,8 +134,8 @@ public class ListNodesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectId; 
+        private String recurrence; 
         private String rerunMode; 
-        private String rerurrence; 
         private String scene; 
 
         private Builder() {
@@ -149,8 +149,8 @@ public class ListNodesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
+            this.recurrence = request.recurrence;
             this.rerunMode = request.rerunMode;
-            this.rerurrence = request.rerurrence;
             this.scene = request.scene;
         } 
 
@@ -164,7 +164,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * ContainerId.
+         * <p>The container ID. This parameter specifies a filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>860438872620113XXXX</p>
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -173,7 +176,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -182,7 +188,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -191,6 +200,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +213,24 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * RerunMode.
+         * Recurrence.
+         */
+        public Builder recurrence(String recurrence) {
+            this.putQueryParameter("Recurrence", recurrence);
+            this.recurrence = recurrence;
+            return this;
+        }
+
+        /**
+         * <p>The rerun mode. Valid values:</p>
+         * <ul>
+         * <li>Allowed: The nodes can be rerun regardless of whether they are successfully run or fail to run.</li>
+         * <li>FailureAllowed: The nodes can be rerun only after they fail to run.</li>
+         * <li>Denied: The nodes cannot be rerun regardless of whether they are successfully run or fail to run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Allowed</p>
          */
         public Builder rerunMode(String rerunMode) {
             this.putQueryParameter("RerunMode", rerunMode);
@@ -212,16 +239,16 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Rerurrence.
-         */
-        public Builder rerurrence(String rerurrence) {
-            this.putQueryParameter("Rerurrence", rerurrence);
-            this.rerurrence = rerurrence;
-            return this;
-        }
-
-        /**
-         * Scene.
+         * <p>The scene of nodes. This parameter specifies a filter condition.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DATAWORKS_PROJECT</li>
+         * <li>MANUAL_WORKFLOW</li>
+         * <li>MANUAL_NODE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DATAWORKS_PROJECT</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);

@@ -50,7 +50,7 @@ public class GetFunctionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Function.
+         * <p>The information about the UDF.</p>
          */
         public Builder function(Function function) {
             this.function = function;
@@ -58,7 +58,10 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CF95929-6D12-5A88-8CC3-4B2F4C2EXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -176,7 +179,10 @@ public class GetFunctionResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * CreateTime.
+             * <p>The time when the UDF was created. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724505917000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -184,7 +190,10 @@ public class GetFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the UDF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>860438872620113XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -192,7 +201,10 @@ public class GetFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the UDF was last modified. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724506661000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -200,7 +212,7 @@ public class GetFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the UDF.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -208,7 +220,10 @@ public class GetFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the UDF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110755000425XXXX</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -216,7 +231,10 @@ public class GetFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the DataWorks workspace to which the UDF belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -224,7 +242,7 @@ public class GetFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The FlowSpec field information about the UDF. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;

@@ -26,7 +26,6 @@ public class CreateProjectRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
     @com.aliyun.core.annotation.Body
@@ -197,7 +196,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * Description.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);

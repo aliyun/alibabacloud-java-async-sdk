@@ -21,10 +21,15 @@ public class DeleteDIJobRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long DIJobId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
     private DeleteDIJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.DIJobId = builder.DIJobId;
+        this.projectId = builder.projectId;
     }
 
     public static Builder builder() {
@@ -54,9 +59,17 @@ public class DeleteDIJobRequest extends Request {
         return this.DIJobId;
     }
 
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteDIJobRequest, Builder> {
         private String regionId; 
         private Long DIJobId; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -66,6 +79,7 @@ public class DeleteDIJobRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.DIJobId = request.DIJobId;
+            this.projectId = request.projectId;
         } 
 
         /**
@@ -86,6 +100,15 @@ public class DeleteDIJobRequest extends Request {
         public Builder DIJobId(Long DIJobId) {
             this.putQueryParameter("DIJobId", DIJobId);
             this.DIJobId = DIJobId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

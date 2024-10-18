@@ -50,7 +50,10 @@ public class RenameWorkflowDefinitionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>975BD43D-C421-595C-A29C-565A8AD5XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,14 @@ public class RenameWorkflowDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -93,6 +93,7 @@ public class DeleteWorkflowDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +106,7 @@ public class DeleteWorkflowDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

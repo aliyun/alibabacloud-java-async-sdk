@@ -108,6 +108,7 @@ public class RenameFunctionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the UDF.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,6 +121,7 @@ public class RenameFunctionRequest extends Request {
         }
 
         /**
+         * <p>The new name.</p>
          * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
@@ -129,6 +131,7 @@ public class RenameFunctionRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

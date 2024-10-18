@@ -50,7 +50,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89FB2BF0-EB00-5D03-9C34-05931001XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +119,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>数据源名称</p>
+             * <p>The name of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_first</p>
@@ -127,7 +130,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据源类型</p>
+             * <p>The type of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>odps</p>
@@ -177,7 +180,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * <p>运行时资源组Id</p>
+             * <p>The ID of the resource group used when you run the UDF.</p>
              * 
              * <strong>example:</strong>
              * <p>S_resgrop_xxx</p>
@@ -227,7 +230,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String command; 
 
             /**
-             * <p>脚本所属类型</p>
+             * <p>The command.</p>
              * 
              * <strong>example:</strong>
              * <p>ODPS_FUNCTION</p>
@@ -301,7 +304,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private Runtime runtime; 
 
             /**
-             * <p>脚本的id</p>
+             * <p>The script ID.</p>
              * 
              * <strong>example:</strong>
              * <p>652567824470354XXXX</p>
@@ -312,7 +315,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脚本路径</p>
+             * <p>The script path.</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -320,7 +323,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脚本的运行时信息</p>
+             * <p>The runtime.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -619,7 +622,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>ARM集群资源文件列表</p>
+             * <p>The file resources in an Advanced RISC Machines (ARM) cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx.jar,yyy.jar</p>
@@ -630,7 +633,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>函数实现类名</p>
+             * <p>The fully qualified class name of the UDF.</p>
              * 
              * <strong>example:</strong>
              * <p>com.demo.Main</p>
@@ -641,7 +644,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>命令描述</p>
+             * <p>The description of the command.</p>
              * 
              * <strong>example:</strong>
              * <p>testUdf(xx,yy)</p>
@@ -652,7 +655,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表创建时间的资源属性字段</p>
+             * <p>The time when the UDF was created. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1655953028000</p>
@@ -663,7 +666,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>函数注册到的数据源信息</p>
+             * <p>The data source information about the UDF.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -671,7 +674,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据库名，可选</p>
+             * <p>The name of the database. This parameter is returned for E-MapReduce (EMR) functions.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_first</p>
@@ -682,7 +685,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对funciotn的描述</p>
+             * <p>The overall description of the UDF.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -690,7 +693,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>嵌套函数代码内容</p>
+             * <p>The code of the embedded UDF.</p>
              * 
              * <strong>example:</strong>
              * <p>print(&quot;hello,world!&quot;)</p>
@@ -701,7 +704,15 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>嵌套代码类型</p>
+             * <p>The type of the nested code.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Python2</li>
+             * <li>Python3</li>
+             * <li>Java8</li>
+             * <li>Java11</li>
+             * <li>Java17</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Python2</p>
@@ -712,7 +723,12 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>嵌套资源类型</p>
+             * <p>The type of the nested resource.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>File: general resources</li>
+             * <li>Embedded: embedded resources</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>File</p>
@@ -723,7 +739,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>示例说明</p>
+             * <p>The description of the example.</p>
              */
             public Builder exampleDescription(String exampleDescription) {
                 this.exampleDescription = exampleDescription;
@@ -731,7 +747,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>函数的实现代码</p>
+             * <p>The files resources.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx.jar,yyy.jar</p>
@@ -742,7 +758,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源一级ID的资源属性字段</p>
+             * <p>The ID of the UDF.</p>
              * 
              * <strong>example:</strong>
              * <p>580667964888595XXXX</p>
@@ -753,7 +769,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间</p>
+             * <p>The time when the UDF was last modified. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1655953028000</p>
@@ -764,7 +780,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源名称的资源属性字段</p>
+             * <p>The name of the UDF.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -772,7 +788,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>函数责任人</p>
+             * <p>The owner of the UDF.</p>
              * 
              * <strong>example:</strong>
              * <p>110755000425XXXX</p>
@@ -783,7 +799,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>命令描述</p>
+             * <p>The description of the parameter.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -791,7 +807,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>项目Id</p>
+             * <p>The ID of the workspace to which the UDF belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>307XXX</p>
@@ -802,7 +818,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>返回值说明</p>
+             * <p>The description of the return value.</p>
              */
             public Builder returnValueDescription(String returnValueDescription) {
                 this.returnValueDescription = returnValueDescription;
@@ -810,7 +826,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>运行时资源组信息</p>
+             * <p>The information about the resource group used when you run the UDF.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -818,7 +834,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的脚本信息</p>
+             * <p>The script information about the UDF.</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -826,7 +842,16 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>函数类型</p>
+             * <p>The UDF type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>MATH: mathematical operation function</li>
+             * <li>AGGREGATE: aggregate function</li>
+             * <li>STRING: string processing function</li>
+             * <li>DATE: date function</li>
+             * <li>ANALYTIC: window function</li>
+             * <li>OTHER: others</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>MATH</p>
@@ -912,7 +937,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Functions.
+             * <p>The UDFs.</p>
              */
             public Builder functions(java.util.List < Functions> functions) {
                 this.functions = functions;
@@ -920,7 +945,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -928,7 +956,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -936,7 +967,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>294</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -50,7 +50,10 @@ public class GetResourceResponseBody extends TeaModel {
         private Resource resource; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E871F6C0-2EFF-5790-A00D-C57543EEXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Resource.
+         * <p>The information about the file resource.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -176,7 +179,10 @@ public class GetResourceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * CreateTime.
+             * <p>The time when the file resource was created. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700539206000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -184,7 +190,10 @@ public class GetResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the file resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>860438872620113XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -192,7 +201,10 @@ public class GetResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the file resource was last modified. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700539206000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -200,7 +212,7 @@ public class GetResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the file resource.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -208,7 +220,10 @@ public class GetResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the file resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110755000425XXXX</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -216,7 +231,10 @@ public class GetResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace to which the file resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -224,7 +242,7 @@ public class GetResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;

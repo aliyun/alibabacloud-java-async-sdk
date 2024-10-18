@@ -50,7 +50,10 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         private WorkflowDefinition workflowDefinition; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2BDD628-8A21-5BD1-B930-1A2D5989XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * WorkflowDefinition.
+         * <p>The information about the workflow.</p>
          */
         public Builder workflowDefinition(WorkflowDefinition workflowDefinition) {
             this.workflowDefinition = workflowDefinition;
@@ -176,7 +179,10 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * CreateTime.
+             * <p>The time when the workflow was created. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708481905000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -184,7 +190,10 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>463497880880954XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -192,7 +201,10 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the workflow was last modified. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708481905000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -200,7 +212,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the workflow.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -208,7 +220,10 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110755000425XXXX</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -216,7 +231,10 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace to which the workflow belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>307XXX</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -224,7 +242,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The FlowSpec field information about the workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;

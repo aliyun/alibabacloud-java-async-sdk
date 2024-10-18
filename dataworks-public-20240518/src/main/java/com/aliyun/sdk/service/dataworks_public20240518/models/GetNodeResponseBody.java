@@ -50,7 +50,7 @@ public class GetNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Node.
+         * <p>The information about the node.</p>
          */
         public Builder node(Node node) {
             this.node = node;
@@ -58,7 +58,10 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -176,7 +179,10 @@ public class GetNodeResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * CreateTime.
+             * <p>The time when the node was created. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700539206000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -184,7 +190,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>860438872620113XXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -192,7 +201,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the node was last modified. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700539206000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -200,7 +212,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the node.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -208,7 +220,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196596664824XXXX</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -216,7 +231,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -224,7 +242,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The FlowSpec field information about this node. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;

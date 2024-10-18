@@ -136,7 +136,10 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110755000425XXXX</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -145,7 +148,10 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +160,10 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,6 +172,8 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +186,15 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The workflow type. This parameter specifies a filter condition.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CycleWorkflow</li>
+         * <li>ManualWorkflow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CycleWorkflow</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

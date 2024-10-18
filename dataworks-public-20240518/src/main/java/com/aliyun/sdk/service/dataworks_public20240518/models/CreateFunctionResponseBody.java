@@ -50,7 +50,10 @@ public class CreateFunctionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the UDF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>580667964888595XXXX</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -58,7 +61,10 @@ public class CreateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE49C88D-5BEE-5ADD-8B8C-C4BBC0D7XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

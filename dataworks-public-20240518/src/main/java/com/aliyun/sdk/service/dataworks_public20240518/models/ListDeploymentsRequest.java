@@ -136,7 +136,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * Creator.
+         * <p>The ID of the user who creates the processes. This parameter specifies a filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110755000425XXXX</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -145,7 +148,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +160,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,6 +172,8 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +186,19 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the processes. This parameter specifies a filter condition.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>INIT</li>
+         * <li>RUNNING</li>
+         * <li>SUCCESS</li>
+         * <li>FAIL</li>
+         * <li>TERMINATION</li>
+         * <li>CANCEL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

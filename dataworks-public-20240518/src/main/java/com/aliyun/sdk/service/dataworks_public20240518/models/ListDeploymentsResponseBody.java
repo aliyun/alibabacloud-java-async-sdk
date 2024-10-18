@@ -50,7 +50,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +191,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>阶段代号</p>
+             * <p>The code of the stage.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV_CHECK</p>
@@ -199,7 +202,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段描述</p>
+             * <p>The description of the stage.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -207,7 +210,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段详细信息</p>
+             * <p>The additional information about the stage.</p>
              */
             public Builder detail(java.util.Map < String, ? > detail) {
                 this.detail = detail;
@@ -215,7 +218,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段信息</p>
+             * <p>The error message returned during the stage.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -223,7 +226,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段名称</p>
+             * <p>The name of the stage.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +234,16 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段状态</p>
+             * <p>The status of the stage.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>INIT</li>
+             * <li>RUNNING</li>
+             * <li>SUCCESS</li>
+             * <li>FAIL</li>
+             * <li>TERMINATION</li>
+             * <li>CANCEL</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -242,7 +254,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>步骤</p>
+             * <p>The step number of the stage.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -253,7 +265,15 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段类型</p>
+             * <p>The type of the stage. This parameter indicates the operation type in the stage.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DEPLOY</li>
+             * <li>CHECK</li>
+             * <li>OFFLINE.</li>
+             * <li>BUILD</li>
+             * <li>DELETE</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CHECK</p>
@@ -387,7 +407,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * <p>发布包创建时间戳</p>
+             * <p>The time when the process was created. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1702736654000</p>
@@ -398,7 +418,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建人</p>
+             * <p>The ID of the user who creates the process.</p>
              * 
              * <strong>example:</strong>
              * <p>110755000425XXXX</p>
@@ -409,7 +429,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>发布流程Id</p>
+             * <p>The process ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ddf354a5-03df-48fc-94c1-cc973f79XXXX</p>
@@ -420,7 +440,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段信息</p>
+             * <p>The error message returned if the process fails.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -428,7 +448,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间</p>
+             * <p>The time when the process was last modified. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1702736654000</p>
@@ -439,7 +459,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>项目Id</p>
+             * <p>The DataWorks workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>44683</p>
@@ -450,7 +470,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>步骤详情</p>
+             * <p>The stages of the process.</p>
              */
             public Builder stages(java.util.List < Stages> stages) {
                 this.stages = stages;
@@ -458,7 +478,16 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>发布流程状态</p>
+             * <p>The status of the process.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>INIT</li>
+             * <li>RUNNING</li>
+             * <li>FAIL</li>
+             * <li>SUCCESS</li>
+             * <li>TERMINATION</li>
+             * <li>CANCEL</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -544,7 +573,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String totalCount; 
 
             /**
-             * Deployments.
+             * <p>The processes.</p>
              */
             public Builder deployments(java.util.List < Deployments> deployments) {
                 this.deployments = deployments;
@@ -552,7 +581,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -560,7 +592,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -568,7 +603,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2524</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

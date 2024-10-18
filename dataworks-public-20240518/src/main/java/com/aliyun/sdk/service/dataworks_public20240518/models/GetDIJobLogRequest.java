@@ -106,6 +106,7 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
+         * <p>The ID of the synchronization task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +119,10 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * FailoverId.
+         * <p>The failover ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder failoverId(Long failoverId) {
             this.putQueryParameter("FailoverId", failoverId);
@@ -127,7 +131,10 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6153616438</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

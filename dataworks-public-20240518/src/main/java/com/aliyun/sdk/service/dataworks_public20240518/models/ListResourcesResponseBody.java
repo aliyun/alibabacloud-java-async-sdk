@@ -50,7 +50,7 @@ public class ListResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99EBE7CF-69C0-5089-BE3E-79563C31XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +119,7 @@ public class ListResourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>数据源名称</p>
+             * <p>The name of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_first</p>
@@ -127,7 +130,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据源类型</p>
+             * <p>The type of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>odps</p>
@@ -177,7 +180,7 @@ public class ListResourcesResponseBody extends TeaModel {
             private String command; 
 
             /**
-             * <p>脚本所属类型</p>
+             * <p>The command used to distinguish file resource types.</p>
              * 
              * <strong>example:</strong>
              * <p>ODPS_PYTHON</p>
@@ -251,7 +254,7 @@ public class ListResourcesResponseBody extends TeaModel {
             private Runtime runtime; 
 
             /**
-             * <p>工作流脚本的id</p>
+             * <p>The script ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123348864897630XXXX</p>
@@ -262,7 +265,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的脚本路径</p>
+             * <p>The script path.</p>
              * 
              * <strong>example:</strong>
              * <p>root/demo</p>
@@ -273,7 +276,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脚本的运行时信息</p>
+             * <p>The runtime.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -464,7 +467,10 @@ public class ListResourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CreateTime.
+             * <p>The time when the file resource was created. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724505917000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -472,7 +478,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>函数注册到的数据源信息</p>
+             * <p>The information about the data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -480,7 +486,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源组的资源属性字段</p>
+             * <p>The ID of the file resource.</p>
              * 
              * <strong>example:</strong>
              * <p>631478864897630XXXX</p>
@@ -491,7 +497,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源文件的最近修改时间</p>
+             * <p>The times when the file resource was last modified. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1724505917000</p>
@@ -502,7 +508,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源名称的资源属性字段</p>
+             * <p>The name of the file resource.</p>
              * 
              * <strong>example:</strong>
              * <p>math.py</p>
@@ -513,7 +519,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源文件的责任人</p>
+             * <p>The owner of the file resource.</p>
              * 
              * <strong>example:</strong>
              * <p>110755000425XXXX</p>
@@ -524,7 +530,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源文件的项目id</p>
+             * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
              * 
              * <strong>example:</strong>
              * <p>344247</p>
@@ -535,7 +541,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的脚本信息</p>
+             * <p>The script information.</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -543,7 +549,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件目标存储路径</p>
+             * <p>The storage path of the source of the file resource. If the value of the SourecType parameter is local, this parameter is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>
@@ -554,7 +560,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件资源来源存储类型</p>
+             * <p>The storage type of the source of the file resource.</p>
              * 
              * <strong>example:</strong>
              * <p>local</p>
@@ -565,7 +571,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件来源路径</p>
+             * <p>The storage path of the destination of the file resource.</p>
              * 
              * <strong>example:</strong>
              * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>
@@ -576,7 +582,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件目标存储类型</p>
+             * <p>The storage type of the destination of the file resource.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -587,7 +593,14 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源类型</p>
+             * <p>The type of the file resource.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>jar</li>
+             * <li>python</li>
+             * <li>file</li>
+             * <li>archive</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>jar</p>
@@ -673,7 +686,10 @@ public class ListResourcesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -681,7 +697,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -689,7 +708,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Resources.
+             * <p>The file resources.</p>
              */
             public Builder resources(java.util.List < Resources> resources) {
                 this.resources = resources;
@@ -697,7 +716,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

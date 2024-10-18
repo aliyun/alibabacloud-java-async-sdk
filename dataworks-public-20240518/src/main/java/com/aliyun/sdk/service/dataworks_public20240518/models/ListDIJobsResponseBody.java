@@ -50,7 +50,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7263E4AC-9D2E-5B29-B8AF-7C5012E92A41</p>
@@ -179,7 +179,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             private String sourceDataSourceType; 
 
             /**
-             * DIJobId.
+             * <p>The ID of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32599</p>
              */
             public Builder DIJobId(Long DIJobId) {
                 this.DIJobId = DIJobId;
@@ -187,7 +190,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationDataSourceType.
+             * <p>The destination type. Valid values: Hologres and Hive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hologres</p>
              */
             public Builder destinationDataSourceType(String destinationDataSourceType) {
                 this.destinationDataSourceType = destinationDataSourceType;
@@ -195,7 +201,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The name of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_to_holo_sync_35197</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -203,7 +212,18 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * <p>The status of the synchronization task. Valid values:</p>
+             * <ul>
+             * <li>Finished</li>
+             * <li>Initialized</li>
+             * <li>Stopped</li>
+             * <li>Failed</li>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -211,7 +231,17 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationType.
+             * <p>The synchronization type. Valid values:</p>
+             * <ul>
+             * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
+             * <li>RealtimeIncremental: real-time incremental synchronization</li>
+             * <li>Full: full synchronization</li>
+             * <li>OfflineIncremental: batch incremental synchronization</li>
+             * <li>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FullAndRealtimeIncremental</p>
              */
             public Builder migrationType(String migrationType) {
                 this.migrationType = migrationType;
@@ -219,7 +249,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the DataWorks workspace to which the synchronization task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26442</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -227,7 +260,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDataSourceType.
+             * <p>The source type. The value MySQL is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mysql</p>
              */
             public Builder sourceDataSourceType(String sourceDataSourceType) {
                 this.sourceDataSourceType = sourceDataSourceType;
@@ -310,7 +346,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * DIJobs.
+             * <p>The synchronization tasks that are returned.</p>
              */
             public Builder DIJobs(java.util.List < DIJobs> DIJobs) {
                 this.DIJobs = DIJobs;
@@ -318,7 +354,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -326,7 +365,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -334,7 +376,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

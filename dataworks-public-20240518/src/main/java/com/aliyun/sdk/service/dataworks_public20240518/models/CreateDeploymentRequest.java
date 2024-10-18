@@ -123,7 +123,7 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the process.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -132,6 +132,10 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
+         * <p>The IDs of entities to which you want to apply the process.</p>
+         * <blockquote>
+         * <p> A process can be applied to only a single entity and its child entities. If you specify multiple entities in the array, the process is applied only to the first entity in the array and its child entities. Make sure that the array in your request contains only one element. Extra elements will be ignored.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder objectIds(java.util.List < String > objectIds) {
@@ -142,7 +146,8 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * <p>项目Id</p>
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +160,11 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to deploy or undeploy the entity. Valid values:</p>
+         * <ul>
+         * <li>Online: deploys the entity.</li>
+         * <li>Offline: undeploys the entity.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

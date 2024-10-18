@@ -18,8 +18,7 @@ public class ListDIJobMetricsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DIJobId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DIJobId;
+    private Long DIJobId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -68,7 +67,7 @@ public class ListDIJobMetricsRequest extends Request {
     /**
      * @return DIJobId
      */
-    public String getDIJobId() {
+    public Long getDIJobId() {
         return this.DIJobId;
     }
 
@@ -95,7 +94,7 @@ public class ListDIJobMetricsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDIJobMetricsRequest, Builder> {
         private String regionId; 
-        private String DIJobId; 
+        private Long DIJobId; 
         private Long endTime; 
         private java.util.List < String > metricName; 
         private Long startTime; 
@@ -123,12 +122,9 @@ public class ListDIJobMetricsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11265</p>
+         * DIJobId.
          */
-        public Builder DIJobId(String DIJobId) {
+        public Builder DIJobId(Long DIJobId) {
             this.putQueryParameter("DIJobId", DIJobId);
             this.DIJobId = DIJobId;
             return this;

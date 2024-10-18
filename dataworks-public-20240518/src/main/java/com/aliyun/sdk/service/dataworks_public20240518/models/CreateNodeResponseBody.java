@@ -50,7 +50,10 @@ public class CreateNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>860438872620113XXXX</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -58,7 +61,10 @@ public class CreateNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

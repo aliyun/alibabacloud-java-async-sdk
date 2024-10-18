@@ -50,7 +50,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Pipeline.
+         * <p>The information about the process.</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.pipeline = pipeline;
@@ -58,7 +58,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08468352-032C-5262-AEDC-68C9FA05XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +191,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>阶段代号</p>
+             * <p>The code of the stage.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV_CHECK</p>
@@ -199,7 +202,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段描述</p>
+             * <p>The description of the stage.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -207,7 +210,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The details of the stage.</p>
              */
             public Builder detail(java.util.Map < String, ? > detail) {
                 this.detail = detail;
@@ -215,7 +218,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段信息</p>
+             * <p>The error message returned for the stage.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -223,7 +226,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段名称</p>
+             * <p>The name of the stage.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +234,16 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段状态</p>
+             * <p>The status of the stage.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>INIT</li>
+             * <li>RUNNING</li>
+             * <li>SUCCESS</li>
+             * <li>FAIL</li>
+             * <li>TERMINATION</li>
+             * <li>CANCEL</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>INIT</p>
@@ -242,7 +254,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>步骤</p>
+             * <p>The step number of the stage.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -253,7 +265,15 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段类型</p>
+             * <p>The type of the stage.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DELETE</li>
+             * <li>BUILD</li>
+             * <li>CHECK</li>
+             * <li>DEPLOY</li>
+             * <li>OFFLINE</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>BUILD</p>
@@ -387,7 +407,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * <p>发布包创建时间戳</p>
+             * <p>The time when the process was created. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1724984066000</p>
@@ -398,7 +418,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建人</p>
+             * <p>The creator of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>137946317766XXXX</p>
@@ -409,7 +429,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>发布流程Id</p>
+             * <p>The ID of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
@@ -420,7 +440,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阶段信息</p>
+             * <p>The error message returned when the process fails.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -428,7 +448,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间</p>
+             * <p>The time when the process was modified. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1724984066000</p>
@@ -439,7 +459,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56160</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -447,7 +470,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>步骤详情</p>
+             * <p>The information about stages in the process.</p>
              */
             public Builder stages(java.util.List < Stages> stages) {
                 this.stages = stages;
@@ -455,7 +478,16 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>发布流程状态</p>
+             * <p>The status of the process.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>INIT</li>
+             * <li>RUNNING</li>
+             * <li>SUCCESS</li>
+             * <li>FAIL</li>
+             * <li>TERMINATION</li>
+             * <li>CANCEL</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>

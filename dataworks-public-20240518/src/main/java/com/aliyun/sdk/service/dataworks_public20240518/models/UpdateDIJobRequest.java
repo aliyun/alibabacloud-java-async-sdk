@@ -30,6 +30,10 @@ public class UpdateDIJobRequest extends Request {
     private JobSettings jobSettings;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceSettings")
     private ResourceSettings resourceSettings;
 
@@ -47,6 +51,7 @@ public class UpdateDIJobRequest extends Request {
         this.DIJobId = builder.DIJobId;
         this.description = builder.description;
         this.jobSettings = builder.jobSettings;
+        this.projectId = builder.projectId;
         this.resourceSettings = builder.resourceSettings;
         this.tableMappings = builder.tableMappings;
         this.transformationRules = builder.transformationRules;
@@ -94,6 +99,13 @@ public class UpdateDIJobRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return resourceSettings
      */
     public ResourceSettings getResourceSettings() {
@@ -119,6 +131,7 @@ public class UpdateDIJobRequest extends Request {
         private Long DIJobId; 
         private String description; 
         private JobSettings jobSettings; 
+        private Long projectId; 
         private ResourceSettings resourceSettings; 
         private java.util.List < TableMappings> tableMappings; 
         private java.util.List < TransformationRules> transformationRules; 
@@ -133,6 +146,7 @@ public class UpdateDIJobRequest extends Request {
             this.DIJobId = request.DIJobId;
             this.description = request.description;
             this.jobSettings = request.jobSettings;
+            this.projectId = request.projectId;
             this.resourceSettings = request.resourceSettings;
             this.tableMappings = request.tableMappings;
             this.transformationRules = request.transformationRules;
@@ -175,6 +189,15 @@ public class UpdateDIJobRequest extends Request {
             String jobSettingsShrink = shrink(jobSettings, "JobSettings", "json");
             this.putQueryParameter("JobSettings", jobSettingsShrink);
             this.jobSettings = jobSettings;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

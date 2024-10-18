@@ -18,8 +18,11 @@ public class GetDIJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DIJobId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DIJobId;
+    private Long DIJobId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithDetails")
@@ -29,6 +32,7 @@ public class GetDIJobRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.DIJobId = builder.DIJobId;
+        this.projectId = builder.projectId;
         this.withDetails = builder.withDetails;
     }
 
@@ -55,8 +59,15 @@ public class GetDIJobRequest extends Request {
     /**
      * @return DIJobId
      */
-    public String getDIJobId() {
+    public Long getDIJobId() {
         return this.DIJobId;
+    }
+
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     /**
@@ -68,7 +79,8 @@ public class GetDIJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetDIJobRequest, Builder> {
         private String regionId; 
-        private String DIJobId; 
+        private Long DIJobId; 
+        private Long projectId; 
         private Boolean withDetails; 
 
         private Builder() {
@@ -79,6 +91,7 @@ public class GetDIJobRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.DIJobId = request.DIJobId;
+            this.projectId = request.projectId;
             this.withDetails = request.withDetails;
         } 
 
@@ -92,14 +105,20 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11588</p>
+         * DIJobId.
          */
-        public Builder DIJobId(String DIJobId) {
+        public Builder DIJobId(Long DIJobId) {
             this.putQueryParameter("DIJobId", DIJobId);
             this.DIJobId = DIJobId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

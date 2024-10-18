@@ -136,7 +136,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The ID of the owner of the UDF. This parameter specifies a filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110755000425XXXX</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -145,7 +148,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +160,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,6 +172,8 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +186,19 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The UDF type. This parameter specifies a filter condition.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>MATH: mathematical operation function</li>
+         * <li>AGGREGATE: aggregate function</li>
+         * <li>STRING: string processing function</li>
+         * <li>DATE: date function</li>
+         * <li>ANALYTIC: window function</li>
+         * <li>OTHER: others</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MATH</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

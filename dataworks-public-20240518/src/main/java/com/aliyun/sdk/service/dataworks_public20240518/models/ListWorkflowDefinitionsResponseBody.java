@@ -50,7 +50,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C3ED0C5-ABAB-55E1-854B-DAC02B11XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -104,7 +107,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private String command; 
 
             /**
-             * <p>脚本所属类型</p>
+             * <p>The command.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKFLOW</p>
@@ -178,7 +181,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private Runtime runtime; 
 
             /**
-             * <p>工作流脚本的id</p>
+             * <p>The script ID.</p>
              * 
              * <strong>example:</strong>
              * <p>698002781368644XXXX</p>
@@ -189,7 +192,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的脚本路径</p>
+             * <p>The script path.</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -197,7 +200,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脚本的运行时信息</p>
+             * <p>The runtime.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -341,7 +344,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>工作流的创建时间</p>
+             * <p>The time when the workflow was created. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1698057323000</p>
@@ -352,7 +355,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的描述</p>
+             * <p>The description of the workflow.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -360,7 +363,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流定义的唯一ID</p>
+             * <p>The ID of the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>463497880880954XXXX</p>
@@ -371,7 +374,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的最近修改时间</p>
+             * <p>The times when the workflow was last modified. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1698057323000</p>
@@ -382,7 +385,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的名称</p>
+             * <p>The name of the workflow.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -390,7 +393,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的责任人</p>
+             * <p>The owner.</p>
              * 
              * <strong>example:</strong>
              * <p>110755000425XXXX</p>
@@ -401,7 +404,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流定义的所属项目空间</p>
+             * <p>The ID of the DataWorks workspace to which the workflow belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -413,7 +416,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流的脚本信息</p>
+             * <p>The script information.</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -421,7 +424,12 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流类型，可选值：CycleWorkflow、ManualWorkflow，分别表示周期工作流和手动工作流</p>
+             * <p>The type of the workflow.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CycleWorkflow</li>
+             * <li>ManualWorkflow</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CycleWorkflow</p>
@@ -507,7 +515,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private java.util.List < WorkflowDefinitions> workflowDefinitions; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -515,7 +526,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -523,7 +537,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>227</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -531,7 +548,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowDefinitions.
+             * <p>The workflows.</p>
              */
             public Builder workflowDefinitions(java.util.List < WorkflowDefinitions> workflowDefinitions) {
                 this.workflowDefinitions = workflowDefinitions;
