@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckAccountNameAvailableResponseBody} extends {@link TeaModel}
  *
  * <p>CheckAccountNameAvailableResponseBody</p>
@@ -37,7 +38,10 @@ public class CheckAccountNameAvailableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E4AA101-1EE5-41C0-AE6D-0F066331AC1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

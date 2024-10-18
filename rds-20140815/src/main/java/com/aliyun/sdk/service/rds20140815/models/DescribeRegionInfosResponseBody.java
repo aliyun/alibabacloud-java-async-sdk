@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionInfosResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionInfosResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * A list of regions.
+         * <p>A list of regions.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5414A4E5-4C36-4461-95FC-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionInfosResponseBody</p>
+     */
     public static class RDSRegion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -97,7 +107,10 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -111,6 +124,12 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionInfosResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RDSRegion")
         private java.util.List < RDSRegion> RDSRegion;

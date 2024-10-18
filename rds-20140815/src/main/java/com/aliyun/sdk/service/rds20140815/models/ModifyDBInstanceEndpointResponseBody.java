@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceEndpointResponseBody</p>
@@ -49,7 +50,7 @@ public class ModifyDBInstanceEndpointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ModifyDBInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ModifyDBInstanceEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBInstanceEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDBInstanceEndpointResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointId")
         private String DBInstanceEndpointId;
@@ -109,7 +119,10 @@ public class ModifyDBInstanceEndpointResponseBody extends TeaModel {
             private String DBInstanceName; 
 
             /**
-             * The endpoint ID of the instance.
+             * <p>The endpoint ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-****</p>
              */
             public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
                 this.DBInstanceEndpointId = DBInstanceEndpointId;
@@ -117,7 +130,10 @@ public class ModifyDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

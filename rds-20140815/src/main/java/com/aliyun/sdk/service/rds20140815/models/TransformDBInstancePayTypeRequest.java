@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformDBInstancePayTypeRequest} extends {@link RequestModel}
  *
  * <p>TransformDBInstancePayTypeRequest</p>
@@ -195,14 +196,20 @@ public class TransformDBInstancePayTypeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the auto-renewal feature for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the auto-renewal feature for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</li>
+         * <li>All strings except <strong>true</strong> are considered <strong>false</strong>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * > - This parameter is valid only when you change the billing method from pay-as-you-go to subscription.
-         * > - All strings except **true** are considered **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -211,7 +218,10 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The additional business information about the instance.
+         * <p>The additional business information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -220,7 +230,10 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -229,7 +242,11 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -256,11 +273,15 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The new billing method of the instance. Valid values:
-         * <p>
+         * <p>The new billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -269,13 +290,17 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The renewal cycle of the instance. Valid values:
-         * <p>
+         * <p>The renewal cycle of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified if you set <strong>PayType</strong> to <strong>Prepaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Year**
-         * *   **Month**
-         * 
-         * > This parameter must be specified if you set **PayType** to **Prepaid**.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -302,13 +327,17 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. Valid values:
-         * <p>
+         * <p>The subscription duration of the instance. Valid values:</p>
+         * <ul>
+         * <li>If you set <strong>Period</strong> to <strong>Year</strong>, the value of UsedTime ranges from <strong>1 to 5</strong>.</li>
+         * <li>If you set <strong>Period</strong> to <strong>Month</strong>, the value of UsedTime ranges from <strong>1 to 11</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   If you set **Period** to **Year**, the value of UsedTime ranges from **1 to 5**.
-         * *   If you set **Period** to **Month**, the value of UsedTime ranges from **1 to 11**.
-         * 
-         * > This parameter must be specified when **PayType** is set to **Prepaid**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

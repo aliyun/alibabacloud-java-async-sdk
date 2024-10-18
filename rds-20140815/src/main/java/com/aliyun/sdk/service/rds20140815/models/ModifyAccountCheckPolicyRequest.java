@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountCheckPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountCheckPolicyRequest</p>
@@ -168,7 +169,11 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>The account username.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DatabaseTest</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -177,7 +182,11 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         }
 
         /**
-         * CheckPolicy.
+         * <p>Specifies whether to apply the password policy</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkPolicy(Boolean checkPolicy) {
             this.putQueryParameter("CheckPolicy", checkPolicy);
@@ -186,7 +195,10 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -195,7 +207,11 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -222,7 +238,10 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

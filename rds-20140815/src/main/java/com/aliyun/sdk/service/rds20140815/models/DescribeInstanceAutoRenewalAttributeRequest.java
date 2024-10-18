@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAutoRenewalAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceAutoRenewalAttributeRequest</p>
@@ -182,7 +183,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +195,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bpxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -218,7 +225,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -227,12 +237,15 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30 (default value)</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30 (default value)**
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -241,7 +254,11 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +285,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * This parameter is reserved. You do not need to specify this parameter.
+         * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePromoteActivityRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancePromoteActivityRequest</p>
@@ -125,7 +126,11 @@ public class DescribeDBInstancePromoteActivityRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22973492**********</p>
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -134,7 +139,11 @@ public class DescribeDBInstancePromoteActivityRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder dbInstanceName(String dbInstanceName) {
             this.putQueryParameter("DbInstanceName", dbInstanceName);
@@ -152,7 +161,10 @@ public class DescribeDBInstancePromoteActivityRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

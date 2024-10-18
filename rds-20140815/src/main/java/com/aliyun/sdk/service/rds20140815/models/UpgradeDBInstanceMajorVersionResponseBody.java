@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceMajorVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeDBInstanceMajorVersionResponseBody</p>
@@ -73,7 +74,10 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1gm3yh0ht1****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,10 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21128667463****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -89,7 +96,10 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>006729E5-2A33-5955-89E3-651D3F44EBE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>416980000</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeADInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeADInfoResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeADInfoResponseBody extends TeaModel {
         private String userName; 
 
         /**
-         * The DNS information about the AD domain.
+         * <p>The DNS information about the AD domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.100.XX.XX</p>
          */
         public Builder ADDNS(String ADDNS) {
             this.ADDNS = ADDNS;
@@ -105,7 +109,10 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The service IP address of the AD domain.
+         * <p>The service IP address of the AD domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder ADServerIpAddress(String ADServerIpAddress) {
             this.ADServerIpAddress = ADServerIpAddress;
@@ -113,12 +120,15 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the AD domain. Valid values:
-         * <p>
+         * <p>The status of the AD domain. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: The instance is being added to the AD domain.</li>
+         * <li><strong>0</strong>: The instance fails to be added to the AD domain.</li>
+         * <li><strong>1</strong>: The instance is added to the AD domain.</li>
+         * </ul>
          * 
-         * *   **-1**: The instance is being added to the AD domain.
-         * *   **0**: The instance fails to be added to the AD domain.
-         * *   **1**: The instance is added to the AD domain.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ADStatus(String ADStatus) {
             this.ADStatus = ADStatus;
@@ -126,7 +136,10 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The cause of the error.
+         * <p>The cause of the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXXX</p>
          */
         public Builder abnormalReason(String abnormalReason) {
             this.abnormalReason = abnormalReason;
@@ -134,7 +147,10 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +158,10 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The username of the AD domain.
+         * <p>The username of the AD domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_01</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

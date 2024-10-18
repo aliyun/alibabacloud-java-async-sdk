@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQuickSaleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeQuickSaleConfigResponseBody</p>
@@ -61,11 +62,14 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The product code. Valid values:
-         * <p>
+         * <p>The product code. Valid values:</p>
+         * <ul>
+         * <li>rds: The instance is a subscription instance.</li>
+         * <li>bards: The instance is a pay-as-you-go instance.</li>
+         * </ul>
          * 
-         * *   rds: The instance is a subscription instance.
-         * *   bards: The instance is a pay-as-you-go instance.
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder commodity(String commodity) {
             this.commodity = commodity;
@@ -73,7 +77,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration details of the product.
+         * <p>The configuration details of the product.</p>
          */
         public Builder items(java.util.Map < String, ? > items) {
             this.items = items;
@@ -81,7 +85,10 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DFFE9EC-3369-5937-A4E2-507C0C86A4C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

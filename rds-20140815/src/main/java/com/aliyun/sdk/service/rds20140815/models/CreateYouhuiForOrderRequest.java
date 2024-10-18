@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateYouhuiForOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateYouhuiForOrderRequest</p>
@@ -126,7 +127,11 @@ public class CreateYouhuiForOrderRequest extends Request {
         } 
 
         /**
-         * The activity ID.
+         * <p>The activity ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1711510887******</p>
          */
         public Builder activityId(Long activityId) {
             this.putQueryParameter("ActivityId", activityId);
@@ -144,7 +149,11 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.
+         * <p>The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000001******</p>
          */
         public Builder promotionId(Long promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -153,7 +162,11 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

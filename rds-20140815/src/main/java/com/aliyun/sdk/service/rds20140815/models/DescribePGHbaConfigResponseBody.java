@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePGHbaConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePGHbaConfigResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         private RunningHbaItems runningHbaItems; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -117,7 +121,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The default configuration items of the pg_hba.conf file.
+         * <p>The default configuration items of the pg_hba.conf file.</p>
          */
         public Builder defaultHbaItems(DefaultHbaItems defaultHbaItems) {
             this.defaultHbaItems = defaultHbaItems;
@@ -125,7 +129,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the previous modification was made to the pg_hba.conf file.
+         * <p>The time when the previous modification was made to the pg_hba.conf file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-25T06:00:40Z</p>
          */
         public Builder hbaModifyTime(String hbaModifyTime) {
             this.hbaModifyTime = hbaModifyTime;
@@ -133,12 +140,15 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the previous modification to the pg_hba.conf file. Valid values:
-         * <p>
+         * <p>The status of the previous modification to the pg_hba.conf file. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>setting</strong></li>
+         * <li><strong>failed</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **setting**
-         * *   **failed**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder lastModifyStatus(String lastModifyStatus) {
             this.lastModifyStatus = lastModifyStatus;
@@ -146,7 +156,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The reason why the previous modification was made to the pg_hba.conf file.
+         * <p>The reason why the previous modification was made to the pg_hba.conf file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified users (testuser) is not exist.</p>
          */
         public Builder modifyStatusReason(String modifyStatusReason) {
             this.modifyStatusReason = modifyStatusReason;
@@ -154,7 +167,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A147A124-A147-5CCF-9609-B73C028848DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +178,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The current configuration items of the pg_hba.conf file.
+         * <p>The current configuration items of the pg_hba.conf file.</p>
          */
         public Builder runningHbaItems(RunningHbaItems runningHbaItems) {
             this.runningHbaItems = runningHbaItems;
@@ -175,6 +191,12 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePGHbaConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePGHbaConfigResponseBody</p>
+     */
     public static class HbaItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -286,7 +308,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The IP addresses from which the specified users can access the specified databases. The value is fixed as 0.0.0.0/0.
+             * <p>The IP addresses from which the specified users can access the specified databases. The value is fixed as 0.0.0.0/0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -294,7 +319,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the databases that the specified users are allowed to access. The value is fixed as all or replication.
+             * <p>The names of the databases that the specified users are allowed to access. The value is fixed as all or replication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -302,7 +330,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The mask of the instance. The value is fixed as null.
+             * <p>The mask of the instance. The value is fixed as null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -310,7 +341,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication method. The value is fixed as md5.
+             * <p>The authentication method. The value is fixed as md5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>md5</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -318,7 +352,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The value of this parameter is based on the value of the Method parameter. The value is fixed as null.
+             * <p>The value of this parameter is based on the value of the Method parameter. The value is fixed as null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder option(String option) {
                 this.option = option;
@@ -326,7 +363,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the configuration items in the pg_hba.conf file. This value is automatically generated.
+             * <p>The priority of the configuration items in the pg_hba.conf file. This value is automatically generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -334,7 +374,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of connection to the instance. The value is fixed as host.
+             * <p>The type of connection to the instance. The value is fixed as host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -342,7 +385,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The user that is allowed to access the instance. The value is fixed as all.
+             * <p>The user that is allowed to access the instance. The value is fixed as all.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -356,6 +402,12 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePGHbaConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePGHbaConfigResponseBody</p>
+     */
     public static class DefaultHbaItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HbaItem")
         private java.util.List < HbaItem> hbaItem;
@@ -397,6 +449,12 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePGHbaConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePGHbaConfigResponseBody</p>
+     */
     public static class RunningHbaItemsHbaItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -508,7 +566,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -516,7 +577,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -524,7 +588,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The mask of the IP address.
+             * <p>The mask of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -532,7 +599,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication method.
+             * <p>The authentication method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>md5</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -540,7 +610,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The value of this parameter varies based on the value of the Method parameter. The value is fixed as null.
+             * <p>The value of this parameter varies based on the value of the Method parameter. The value is fixed as null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder option(String option) {
                 this.option = option;
@@ -548,7 +621,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -556,12 +632,15 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The connection type. Valor:
-             * <p>
+             * <p>The connection type. Valor:</p>
+             * <ul>
+             * <li><strong>host</strong>: The record matches TCP/IP connections, including SSL connections and non-SSL connections.</li>
+             * <li><strong>hostssl</strong>: The record matches only TCP/IP connections that are established over SSL.</li>
+             * <li><strong>hostnossl</strong>: The record matches only TCP/IP connections that are not established over SSL connections.</li>
+             * </ul>
              * 
-             * *   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.
-             * *   **hostssl**: The record matches only TCP/IP connections that are established over SSL.
-             * *   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL connections.
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -569,7 +648,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -583,6 +665,12 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePGHbaConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePGHbaConfigResponseBody</p>
+     */
     public static class RunningHbaItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HbaItem")
         private java.util.List < RunningHbaItemsHbaItem> hbaItem;

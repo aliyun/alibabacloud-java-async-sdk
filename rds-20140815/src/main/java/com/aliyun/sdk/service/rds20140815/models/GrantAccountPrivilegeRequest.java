@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantAccountPrivilegeRequest} extends {@link RequestModel}
  *
  * <p>GrantAccountPrivilegeRequest</p>
@@ -113,7 +114,11 @@ public class GrantAccountPrivilegeRequest extends Request {
         } 
 
         /**
-         * The username of the account.
+         * <p>The username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -122,21 +127,28 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The permissions that you want to grant to the account. The number of permissions must be the same as the number of databases that you specify for the DBName parameter. You can specify this parameter based on your business requirements. Valid values:
-         * <p>
+         * <p>The permissions that you want to grant to the account. The number of permissions must be the same as the number of databases that you specify for the DBName parameter. You can specify this parameter based on your business requirements. Valid values:</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong>: read and write permissions</li>
+         * <li><strong>ReadOnly</strong>: read-only permissions</li>
+         * <li><strong>DDLOnly</strong>: DDL-only permissions</li>
+         * <li><strong>DMLOnly</strong>: DML-only permissions</li>
+         * <li><strong>DBOwner</strong>: database owner permissions</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If the instance runs MySQL or MariaDB, you can set this parameter to <strong>ReadWrite</strong>, <strong>ReadOnly</strong>, <strong>DDLOnly</strong>, or <strong>DMLOnly</strong>.</p>
+         * </li>
+         * <li><p>If the instance runs SQL Server, you can set this parameter to <strong>ReadWrite</strong>, <strong>ReadOnly</strong>, or <strong>DBOwner</strong>.</p>
+         * </li>
+         * <li><p>If the instance runs PostgreSQL and uses cloud disks, you can set this parameter to <strong>DBOwner</strong>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ReadWrite**: read and write permissions
-         * *   **ReadOnly**: read-only permissions
-         * *   **DDLOnly**: DDL-only permissions
-         * *   **DMLOnly**: DML-only permissions
-         * *   **DBOwner**: database owner permissions
-         * 
-         * > 
-         * 
-         * *   If the instance runs MySQL or MariaDB, you can set this parameter to **ReadWrite**, **ReadOnly**, **DDLOnly**, or **DMLOnly**.
-         * 
-         * *   If the instance runs SQL Server, you can set this parameter to **ReadWrite**, **ReadOnly**, or **DBOwner**.
-         * *   If the instance runs PostgreSQL and uses cloud disks, you can set this parameter to **DBOwner**.
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -145,7 +157,11 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -154,7 +170,11 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The name of the database on which you want to grant permissions. Separate multiple database names with commas (,).
+         * <p>The name of the database on which you want to grant permissions. Separate multiple database names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB1</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

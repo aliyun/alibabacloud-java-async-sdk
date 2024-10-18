@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LockAccountRequest} extends {@link RequestModel}
  *
  * <p>LockAccountRequest</p>
@@ -111,7 +112,11 @@ public class LockAccountRequest extends Request {
         } 
 
         /**
-         * The account that you want to lock. You can lock only a single account at a time.
+         * <p>The account that you want to lock. You can lock only a single account at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -120,7 +125,11 @@ public class LockAccountRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bpxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

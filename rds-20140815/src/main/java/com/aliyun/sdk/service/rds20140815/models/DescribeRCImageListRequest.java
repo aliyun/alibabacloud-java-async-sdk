@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRCImageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeRCImageListRequest</p>
@@ -110,7 +111,14 @@ public class DescribeRCImageListRequest extends Request {
         } 
 
         /**
-         * Architecture.
+         * <p>The image architecture. Valid values:</p>
+         * <ul>
+         * <li>x86_64</li>
+         * <li>arm64</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -119,7 +127,10 @@ public class DescribeRCImageListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -128,7 +139,10 @@ public class DescribeRCImageListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -137,7 +151,11 @@ public class DescribeRCImageListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,7 +164,10 @@ public class DescribeRCImageListRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The image type. Set the value to <strong>self</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>self</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

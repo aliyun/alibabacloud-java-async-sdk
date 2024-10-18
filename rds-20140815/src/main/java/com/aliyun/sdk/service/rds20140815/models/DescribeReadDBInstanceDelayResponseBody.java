@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeReadDBInstanceDelayResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The primary instance ID.
+         * <p>The primary instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -93,7 +97,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The latency of data replication. Unit: seconds.
+         * <p>The latency of data replication. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder delayTime(Integer delayTime) {
             this.delayTime = delayTime;
@@ -101,7 +108,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The latency information.
+         * <p>The latency information.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -109,7 +116,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The read-only instance ID.
+         * <p>The read-only instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-bp*****</p>
          */
         public Builder readDBInstanceId(String readDBInstanceId) {
             this.readDBInstanceId = readDBInstanceId;
@@ -117,7 +127,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1BDDEA8-452D-450B-AB10-CD5C5BAFC5DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +143,12 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ReadDBInstanceNames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadDBInstanceName")
         private java.util.List < String > readDBInstanceName;
@@ -171,6 +190,12 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ReadDelayTimes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadDelayTime")
         private java.util.List < String > readDelayTime;
@@ -212,6 +237,12 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ReadonlyInstanceDelay extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlushLag")
         private String flushLag;
@@ -323,7 +354,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private String writeLatency; 
 
             /**
-             * The duration that is allowed for the latency in the persistence of WAL data. Unit: seconds.
+             * <p>The duration that is allowed for the latency in the persistence of WAL data. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flushLag(String flushLag) {
                 this.flushLag = flushLag;
@@ -331,7 +365,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The data size that is allowed for the latency in the persistence of WAL data. Unit: MB.
+             * <p>The data size that is allowed for the latency in the persistence of WAL data. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flushLatency(String flushLatency) {
                 this.flushLatency = flushLatency;
@@ -339,7 +376,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The read-only instance ID.
+             * <p>The read-only instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rr-bp*****</p>
              */
             public Builder readDBInstanceName(String readDBInstanceName) {
                 this.readDBInstanceName = readDBInstanceName;
@@ -347,7 +387,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The duration that is allowed for the latency in the playback of WAL data. Unit: seconds.
+             * <p>The duration that is allowed for the latency in the playback of WAL data. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder replayLag(String replayLag) {
                 this.replayLag = replayLag;
@@ -355,7 +398,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The data size that is allowed for the latency in the playback of WAL data. Unit: MB.
+             * <p>The data size that is allowed for the latency in the playback of WAL data. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder replayLatency(String replayLatency) {
                 this.replayLatency = replayLatency;
@@ -363,7 +409,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The data size that is allowed for the latency in the sending of WAL data. Unit: MB.
+             * <p>The data size that is allowed for the latency in the sending of WAL data. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sendLatency(String sendLatency) {
                 this.sendLatency = sendLatency;
@@ -371,7 +420,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The duration that is allowed for the latency in the write-back of WAL data. Unit: seconds.
+             * <p>The duration that is allowed for the latency in the write-back of WAL data. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder writeLag(String writeLag) {
                 this.writeLag = writeLag;
@@ -379,7 +431,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The data size that is allowed for the latency in the write-back of WAL data. Unit: MB.
+             * <p>The data size that is allowed for the latency in the write-back of WAL data. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder writeLatency(String writeLatency) {
                 this.writeLatency = writeLatency;
@@ -393,6 +448,12 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ItemsReadonlyInstanceDelay extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadonlyInstanceDelay")
         private java.util.List < ReadonlyInstanceDelay> readonlyInstanceDelay;
@@ -434,6 +495,12 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ItemsItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
@@ -497,7 +564,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private ItemsReadonlyInstanceDelay readonlyInstanceDelay; 
 
             /**
-             * The primary instance ID.
+             * <p>The primary instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp*****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -505,7 +575,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of information about the read-only instance.
+             * <p>An array that consists of information about the read-only instance.</p>
              */
             public Builder readDBInstanceNames(ReadDBInstanceNames readDBInstanceNames) {
                 this.readDBInstanceNames = readDBInstanceNames;
@@ -513,7 +583,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The latency of data replication.
+             * <p>The latency of data replication.</p>
              */
             public Builder readDelayTimes(ReadDelayTimes readDelayTimes) {
                 this.readDelayTimes = readDelayTimes;
@@ -521,10 +591,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the write-ahead log (WAL) latency.
-             * <p>
-             * 
-             * >  This parameter is returned only when the primary instance runs PostgreSQL.
+             * <p>The information about the write-ahead log (WAL) latency.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the primary instance runs PostgreSQL.</p>
+             * </blockquote>
              */
             public Builder readonlyInstanceDelay(ItemsReadonlyInstanceDelay readonlyInstanceDelay) {
                 this.readonlyInstanceDelay = readonlyInstanceDelay;
@@ -538,6 +608,12 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < ItemsItems> items;
@@ -565,7 +641,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private java.util.List < ItemsItems> items; 
 
             /**
-             * The latency information.
+             * <p>The latency information.</p>
              */
             public Builder items(java.util.List < ItemsItems> items) {
                 this.items = items;

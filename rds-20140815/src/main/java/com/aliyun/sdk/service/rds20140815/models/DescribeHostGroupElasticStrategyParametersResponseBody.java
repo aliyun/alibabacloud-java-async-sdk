@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHostGroupElasticStrategyParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHostGroupElasticStrategyParametersResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         private String requestId; 
 
         /**
-         * The CPU utilization of the instance. Unit: percentage.
+         * <p>The CPU utilization of the instance. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder cpuShar(Integer cpuShar) {
             this.cpuShar = cpuShar;
@@ -105,7 +109,10 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         }
 
         /**
-         * The number of CPU cores used by the instance. Unit: cores.
+         * <p>The number of CPU cores used by the instance. Unit: cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder cpuZoom(Integer cpuZoom) {
             this.cpuZoom = cpuZoom;
@@ -113,7 +120,10 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         }
 
         /**
-         * The number of I/O requests.
+         * <p>The number of I/O requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder iopsZoom(Integer iopsZoom) {
             this.iopsZoom = iopsZoom;
@@ -121,7 +131,10 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         }
 
         /**
-         * The maximum number of concurrent connections supported by the instance type.
+         * <p>The maximum number of concurrent connections supported by the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxConnZoom(Integer maxConnZoom) {
             this.maxConnZoom = maxConnZoom;
@@ -129,7 +142,10 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         }
 
         /**
-         * The total memory size of the instance in the dedicated cluster. Unit: MB.
+         * <p>The total memory size of the instance in the dedicated cluster. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder memoryZoom(Integer memoryZoom) {
             this.memoryZoom = memoryZoom;
@@ -137,7 +153,10 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60F9A12A-16B8-4728-B099-4CA38D32C31C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

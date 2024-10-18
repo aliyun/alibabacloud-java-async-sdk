@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceDetailResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the instance is in the active state.
+         * <p>Indicates whether the instance is in the active state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid</p>
          */
         public Builder activationState(String activationState) {
             this.activationState = activationState;
@@ -93,7 +97,10 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -101,7 +108,10 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the license.
+         * <p>The type of the license.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder licenseType(String licenseType) {
             this.licenseType = licenseType;
@@ -109,7 +119,10 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -117,7 +130,10 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06B220E2-EAC5-4DBE-A1FC-1B62DB6A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesAsCsvRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesAsCsvRequest</p>
@@ -152,7 +153,10 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         } 
 
         /**
-         * A deprecated parameter. You do not need to configure this parameter.
+         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder cachedAsync(Boolean cachedAsync) {
             this.putQueryParameter("CachedAsync", cachedAsync);
@@ -161,7 +165,10 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -170,7 +177,10 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * A deprecated parameter. You do not need to configure this parameter.
+         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder exportKey(String exportKey) {
             this.putQueryParameter("ExportKey", exportKey);
@@ -188,7 +198,11 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -197,7 +211,10 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

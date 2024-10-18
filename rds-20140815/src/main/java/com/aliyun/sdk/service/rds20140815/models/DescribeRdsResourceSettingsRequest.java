@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdsResourceSettingsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRdsResourceSettingsRequest</p>
@@ -105,7 +106,7 @@ public class DescribeRdsResourceSettingsRequest extends Request {
         }
 
         /**
-         * ResourceNiche.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceNiche(String resourceNiche) {
             this.putQueryParameter("ResourceNiche", resourceNiche);

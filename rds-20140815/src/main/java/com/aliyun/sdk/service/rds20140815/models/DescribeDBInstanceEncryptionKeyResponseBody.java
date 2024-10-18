@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceEncryptionKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceEncryptionKeyResponseBody</p>
@@ -145,7 +146,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The user who created the key.
+         * <p>The user who created the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1443*****9604</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -153,7 +157,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The scheduled time at which the key is deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>The scheduled time at which the key is deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-08T08:14:16Z</p>
          */
         public Builder deleteDate(String deleteDate) {
             this.deleteDate = deleteDate;
@@ -161,7 +168,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the key.
+         * <p>The description of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description of the key</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -169,7 +179,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the key.
+         * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5306d1b6-7fd3-42d9-9511-xxxxxxx</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -177,7 +190,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the key.
+         * <p>The details about the key.</p>
          */
         public Builder encryptionKeyList(java.util.List < EncryptionKeyList> encryptionKeyList) {
             this.encryptionKeyList = encryptionKeyList;
@@ -185,11 +198,14 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the key. Valid values:
-         * <p>
+         * <p>The status of the key. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
          * 
-         * *   **Enabled**
-         * *   **Disabled**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder encryptionKeyStatus(String encryptionKeyStatus) {
             this.encryptionKeyStatus = encryptionKeyStatus;
@@ -197,7 +213,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The purpose of the key.
+         * <p>The purpose of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENCRYPT/DECRYPT</p>
          */
         public Builder keyUsage(String keyUsage) {
             this.keyUsage = keyUsage;
@@ -205,7 +224,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The time at which the key expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>The time at which the key expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-18T08:14:16Z</p>
          */
         public Builder materialExpireTime(String materialExpireTime) {
             this.materialExpireTime = materialExpireTime;
@@ -213,7 +235,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The source of the key.
+         * <p>The source of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun_KMS</p>
          */
         public Builder origin(String origin) {
             this.origin = origin;
@@ -221,7 +246,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BC2768E-DEDA-40FC-BBE9-6B884F3626AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -234,6 +262,12 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceEncryptionKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceEncryptionKeyResponseBody</p>
+     */
     public static class EncryptionKeyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -381,7 +415,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             private String usedBy; 
 
             /**
-             * The alias of the key.
+             * <p>The alias of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alias/xxx</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -389,7 +426,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the key.
+             * <p>The user who created the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1443*****9604</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -397,7 +437,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled time at which the key is deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The scheduled time at which the key is deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-08T08:14:16Z</p>
              */
             public Builder deleteDate(String deleteDate) {
                 this.deleteDate = deleteDate;
@@ -405,7 +448,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the key.
+             * <p>The description of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description of the key</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -413,7 +459,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the key.
+             * <p>The ID of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5306d1b6-7fd3-42d9-9511-xxxxxxx</p>
              */
             public Builder encryptionKey(String encryptionKey) {
                 this.encryptionKey = encryptionKey;
@@ -421,11 +470,14 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the key. Valid values:
-             * <p>
+             * <p>The status of the key. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong></li>
+             * <li><strong>Disabled</strong></li>
+             * </ul>
              * 
-             * *   **Enabled**
-             * *   **Disabled**
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder encryptionKeyStatus(String encryptionKeyStatus) {
                 this.encryptionKeyStatus = encryptionKeyStatus;
@@ -433,11 +485,14 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the key. Valid values:
-             * <p>
+             * <p>The type of the key. Valid values:</p>
+             * <ul>
+             * <li><strong>CMK</strong></li>
+             * <li><strong>ServiceKey</strong></li>
+             * </ul>
              * 
-             * *   **CMK**
-             * *   **ServiceKey**
+             * <strong>example:</strong>
+             * <p>ServiceKey</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -445,7 +500,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose of the key.
+             * <p>The purpose of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENCRYPT/DECRYPT</p>
              */
             public Builder keyUsage(String keyUsage) {
                 this.keyUsage = keyUsage;
@@ -453,7 +511,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the key expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time at which the key expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-18T08:14:16Z</p>
              */
             public Builder materialExpireTime(String materialExpireTime) {
                 this.materialExpireTime = materialExpireTime;
@@ -461,7 +522,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the key.
+             * <p>The source of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun_KMS</p>
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -469,11 +533,14 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the instance. Valid values:
-             * <p>
+             * <p>The role of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Master</strong>: primary instance</li>
+             * <li><strong>slave</strong>: read-only instance</li>
+             * </ul>
              * 
-             * *   **Master**: primary instance
-             * *   **slave**: read-only instance
+             * <strong>example:</strong>
+             * <p>Master</p>
              */
             public Builder usedBy(String usedBy) {
                 this.usedBy = usedBy;

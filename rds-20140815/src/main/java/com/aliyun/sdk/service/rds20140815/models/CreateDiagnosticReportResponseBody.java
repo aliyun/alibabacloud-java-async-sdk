@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiagnosticReportResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDiagnosticReportResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDiagnosticReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the diagnostic report.
+         * <p>The ID of the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10166270</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -57,7 +61,10 @@ public class CreateDiagnosticReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8DA8956A-53DA-423E-9540-387428ED37FF-5711</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

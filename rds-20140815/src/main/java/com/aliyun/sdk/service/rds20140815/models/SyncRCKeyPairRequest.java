@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncRCKeyPairRequest} extends {@link RequestModel}
  *
  * <p>SyncRCKeyPairRequest</p>
@@ -19,10 +20,15 @@ public class SyncRCKeyPairRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncMode")
+    private Boolean syncMode;
+
     private SyncRCKeyPairRequest(Builder builder) {
         super(builder);
         this.keyPairName = builder.keyPairName;
         this.regionId = builder.regionId;
+        this.syncMode = builder.syncMode;
     }
 
     public static Builder builder() {
@@ -52,9 +58,17 @@ public class SyncRCKeyPairRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return syncMode
+     */
+    public Boolean getSyncMode() {
+        return this.syncMode;
+    }
+
     public static final class Builder extends Request.Builder<SyncRCKeyPairRequest, Builder> {
         private String keyPairName; 
         private String regionId; 
+        private Boolean syncMode; 
 
         private Builder() {
             super();
@@ -64,10 +78,14 @@ public class SyncRCKeyPairRequest extends Request {
             super(request);
             this.keyPairName = request.keyPairName;
             this.regionId = request.regionId;
+            this.syncMode = request.syncMode;
         } 
 
         /**
-         * KeyPairName.
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer_keypairs</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -76,11 +94,23 @@ public class SyncRCKeyPairRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SyncMode.
+         */
+        public Builder syncMode(Boolean syncMode) {
+            this.putQueryParameter("SyncMode", syncMode);
+            this.syncMode = syncMode;
             return this;
         }
 

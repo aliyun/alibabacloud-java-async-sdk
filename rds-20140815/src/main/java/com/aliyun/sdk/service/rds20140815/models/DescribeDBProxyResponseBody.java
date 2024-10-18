@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBProxyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBProxyResponseBody</p>
@@ -41,6 +42,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBProxyInstanceType")
     private String DBProxyInstanceType;
 
+    @com.aliyun.core.annotation.NameInMap("DBProxyKindCode")
+    private String DBProxyKindCode;
+
+    @com.aliyun.core.annotation.NameInMap("DBProxyNodes")
+    private DBProxyNodes DBProxyNodes;
+
     @com.aliyun.core.annotation.NameInMap("DBProxyPersistentConnectionStatus")
     private String DBProxyPersistentConnectionStatus;
 
@@ -67,6 +74,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         this.DBProxyInstanceSize = builder.DBProxyInstanceSize;
         this.DBProxyInstanceStatus = builder.DBProxyInstanceStatus;
         this.DBProxyInstanceType = builder.DBProxyInstanceType;
+        this.DBProxyKindCode = builder.DBProxyKindCode;
+        this.DBProxyNodes = builder.DBProxyNodes;
         this.DBProxyPersistentConnectionStatus = builder.DBProxyPersistentConnectionStatus;
         this.DBProxyServiceStatus = builder.DBProxyServiceStatus;
         this.dbProxyEndpointItems = builder.dbProxyEndpointItems;
@@ -153,6 +162,20 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
 
     /**
+     * @return DBProxyKindCode
+     */
+    public String getDBProxyKindCode() {
+        return this.DBProxyKindCode;
+    }
+
+    /**
+     * @return DBProxyNodes
+     */
+    public DBProxyNodes getDBProxyNodes() {
+        return this.DBProxyNodes;
+    }
+
+    /**
      * @return DBProxyPersistentConnectionStatus
      */
     public String getDBProxyPersistentConnectionStatus() {
@@ -198,6 +221,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         private String DBProxyInstanceSize; 
         private String DBProxyInstanceStatus; 
         private String DBProxyInstanceType; 
+        private String DBProxyKindCode; 
+        private DBProxyNodes DBProxyNodes; 
         private String DBProxyPersistentConnectionStatus; 
         private String DBProxyServiceStatus; 
         private DbProxyEndpointItems dbProxyEndpointItems; 
@@ -205,7 +230,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The list of zones that are available for the database proxy.
+         * <p>The list of zones that are available for the database proxy.</p>
          */
         public Builder DBProxyAVZones(DBProxyAVZones DBProxyAVZones) {
             this.DBProxyAVZones = DBProxyAVZones;
@@ -213,7 +238,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the information about the database proxy endpoint that is created for the instance.
+         * <p>An array consisting of the information about the database proxy endpoint that is created for the instance.</p>
          */
         public Builder DBProxyConnectStringItems(DBProxyConnectStringItems DBProxyConnectStringItems) {
             this.DBProxyConnectStringItems = DBProxyConnectStringItems;
@@ -221,7 +246,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * An internal parameter. You can ignore this parameter.
+         * <p>An internal parameter. You can ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.DBProxyEngineType = DBProxyEngineType;
@@ -229,7 +257,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the proxy instance.
+         * <p>The version of the proxy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.13.11</p>
          */
         public Builder DBProxyInstanceCurrentMinorVersion(String DBProxyInstanceCurrentMinorVersion) {
             this.DBProxyInstanceCurrentMinorVersion = DBProxyInstanceCurrentMinorVersion;
@@ -237,7 +268,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The latest version that is available for the proxy instance.
+         * <p>The latest version that is available for the proxy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.13.12</p>
          */
         public Builder DBProxyInstanceLatestMinorVersion(String DBProxyInstanceLatestMinorVersion) {
             this.DBProxyInstanceLatestMinorVersion = DBProxyInstanceLatestMinorVersion;
@@ -245,7 +279,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the proxy instance.
+         * <p>The name of the proxy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gos787jog2wk0ye1****</p>
          */
         public Builder DBProxyInstanceName(String DBProxyInstanceName) {
             this.DBProxyInstanceName = DBProxyInstanceName;
@@ -253,7 +290,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of proxies that are enabled on the instance.
+         * <p>The number of proxies that are enabled on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder DBProxyInstanceNum(Integer DBProxyInstanceNum) {
             this.DBProxyInstanceNum = DBProxyInstanceNum;
@@ -261,12 +301,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is available only for ApsaraDB RDS for PostgreSQL instances. The specifications of the proxy instance that is enabled.
-         * <p>
+         * <p>This parameter is available only for ApsaraDB RDS for PostgreSQL instances. The specifications of the proxy instance that is enabled.</p>
+         * <p>Format: <code>Number of cores/Memory capacity</code>.</p>
+         * <p>For example, a value of 4/8 indicates that the proxy instance has 4 cores and 8 GB of memory.</p>
          * 
-         * Format: `Number of cores/Memory capacity`.
-         * 
-         * For example, a value of 4/8 indicates that the proxy instance has 4 cores and 8 GB of memory.
+         * <strong>example:</strong>
+         * <p>4/8</p>
          */
         public Builder DBProxyInstanceSize(String DBProxyInstanceSize) {
             this.DBProxyInstanceSize = DBProxyInstanceSize;
@@ -274,13 +314,16 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the proxy instance.
-         * <p>
+         * <p>The status of the proxy instance.</p>
+         * <ul>
+         * <li>DBInstanceClassChanging: The specifications of the proxy instance are being changed.</li>
+         * <li>Creating: The proxy instance is being created.</li>
+         * <li>Running: The proxy instance is running.</li>
+         * <li>Deleting: The proxy instance is being deleted.</li>
+         * </ul>
          * 
-         * *   DBInstanceClassChanging: The specifications of the proxy instance are being changed.
-         * *   Creating: The proxy instance is being created.
-         * *   Running: The proxy instance is running.
-         * *   Deleting: The proxy instance is being deleted.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBProxyInstanceStatus(String DBProxyInstanceStatus) {
             this.DBProxyInstanceStatus = DBProxyInstanceStatus;
@@ -288,13 +331,17 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database proxy that is enabled on the instance.
-         * <p>
+         * <p>The type of the database proxy that is enabled on the instance.</p>
+         * <ul>
+         * <li>1: shared proxy</li>
+         * <li>2: dedicated proxy</li>
+         * </ul>
+         * <blockquote>
+         * <p> ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</p>
+         * </blockquote>
          * 
-         * *   1: shared proxy
-         * *   2: dedicated proxy
-         * 
-         * >  ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder DBProxyInstanceType(String DBProxyInstanceType) {
             this.DBProxyInstanceType = DBProxyInstanceType;
@@ -302,13 +349,32 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Connection Persistence State. 
-         * <p>
+         * DBProxyKindCode.
+         */
+        public Builder DBProxyKindCode(String DBProxyKindCode) {
+            this.DBProxyKindCode = DBProxyKindCode;
+            return this;
+        }
+
+        /**
+         * DBProxyNodes.
+         */
+        public Builder DBProxyNodes(DBProxyNodes DBProxyNodes) {
+            this.DBProxyNodes = DBProxyNodes;
+            return this;
+        }
+
+        /**
+         * <p>Connection Persistence State. </p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Enabled: Enabled</li>
+         * <li>Disabled: Disabled</li>
+         * <li>Unsupported: The instance does not support connection persistence</li>
+         * </ul>
          * 
-         * Valid values:
-         * - Enabled: Enabled
-         * - Disabled: Disabled
-         * - Unsupported: The instance does not support connection persistence
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder DBProxyPersistentConnectionStatus(String DBProxyPersistentConnectionStatus) {
             this.DBProxyPersistentConnectionStatus = DBProxyPersistentConnectionStatus;
@@ -316,11 +382,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the database proxy.
-         * <p>
+         * <p>The status of the database proxy.</p>
+         * <ul>
+         * <li>Shutdown: disabled</li>
+         * <li>Startup: enabled</li>
+         * </ul>
          * 
-         * *   Shutdown: disabled
-         * *   Startup: enabled
+         * <strong>example:</strong>
+         * <p>Startup</p>
          */
         public Builder DBProxyServiceStatus(String DBProxyServiceStatus) {
             this.DBProxyServiceStatus = DBProxyServiceStatus;
@@ -328,7 +397,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The proxy terminals of the instance.
+         * <p>The proxy terminals of the instance.</p>
          */
         public Builder dbProxyEndpointItems(DbProxyEndpointItems dbProxyEndpointItems) {
             this.dbProxyEndpointItems = dbProxyEndpointItems;
@@ -336,7 +405,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>909A69EE-71C8-4417-A0B9-FF085407E1E3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -344,7 +416,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -357,6 +432,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBProxyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyResponseBody</p>
+     */
     public static class DBProxyAVZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBProxyAVZones")
         private java.util.List < String > DBProxyAVZones;
@@ -384,7 +465,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private java.util.List < String > DBProxyAVZones; 
 
             /**
-             * The list of zones that are available for the database proxy.
+             * <p>The list of zones that are available for the database proxy.</p>
              */
             public Builder DBProxyAVZones(java.util.List < String > DBProxyAVZones) {
                 this.DBProxyAVZones = DBProxyAVZones;
@@ -398,6 +479,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBProxyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyResponseBody</p>
+     */
     public static class DBProxyConnectStringItemsDBProxyConnectStringItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBProxyConnectString")
         private String DBProxyConnectString;
@@ -521,7 +608,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private String DBProxyVswitchId; 
 
             /**
-             * The database proxy endpoint.
+             * <p>The database proxy endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gos787jog2wk0ye1****-rw4rm.rwlb.rds.aliyuncs.com</p>
              */
             public Builder DBProxyConnectString(String DBProxyConnectString) {
                 this.DBProxyConnectString = DBProxyConnectString;
@@ -529,11 +619,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the database proxy endpoint. A database proxy endpoint is formerly referred to as a proxy terminal. Valid values:
-             * <p>
+             * <p>The network type of the database proxy endpoint. A database proxy endpoint is formerly referred to as a proxy terminal. Valid values:</p>
+             * <ul>
+             * <li>OuterString: Internet</li>
+             * <li>InnerString: internal network</li>
+             * </ul>
              * 
-             * *   OuterString: Internet
-             * *   InnerString: internal network
+             * <strong>example:</strong>
+             * <p>InnerString</p>
              */
             public Builder DBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
                 this.DBProxyConnectStringNetType = DBProxyConnectStringNetType;
@@ -541,12 +634,15 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the database proxy. Valid values:
-             * <p>
+             * <p>The network type of the database proxy. Valid values:</p>
+             * <ul>
+             * <li>0: Internet</li>
+             * <li>1: classic network</li>
+             * <li>2: virtual private cloud (VPC)</li>
+             * </ul>
              * 
-             * *   0: Internet
-             * *   1: classic network
-             * *   2: virtual private cloud (VPC)
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder DBProxyConnectStringNetWorkType(String DBProxyConnectStringNetWorkType) {
                 this.DBProxyConnectStringNetWorkType = DBProxyConnectStringNetWorkType;
@@ -554,7 +650,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is associated with the database proxy endpoint.
+             * <p>The port that is associated with the database proxy endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder DBProxyConnectStringPort(String DBProxyConnectStringPort) {
                 this.DBProxyConnectStringPort = DBProxyConnectStringPort;
@@ -562,7 +661,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backend database proxy endpoint.
+             * <p>The ID of the backend database proxy endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20****</p>
              */
             public Builder DBProxyEndpointId(String DBProxyEndpointId) {
                 this.DBProxyEndpointId = DBProxyEndpointId;
@@ -570,7 +672,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database proxy endpoint. The name can be replaced by the ID of the database proxy endpoint.
+             * <p>The name of the database proxy endpoint. The name can be replaced by the ID of the database proxy endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gos787jog2wk0ye1****</p>
              */
             public Builder DBProxyEndpointName(String DBProxyEndpointName) {
                 this.DBProxyEndpointName = DBProxyEndpointName;
@@ -578,7 +683,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC of the database proxy.
+             * <p>The VPC of the database proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6oobt****</p>
              */
             public Builder DBProxyVpcId(String DBProxyVpcId) {
                 this.DBProxyVpcId = DBProxyVpcId;
@@ -586,7 +694,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database proxy instance.
+             * <p>The ID of the database proxy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp145737x5<strong><strong>131161274792</strong></strong></p>
              */
             public Builder DBProxyVpcInstanceId(String DBProxyVpcInstanceId) {
                 this.DBProxyVpcInstanceId = DBProxyVpcInstanceId;
@@ -594,7 +705,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch of the database proxy.
+             * <p>The vSwitch of the database proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6l0pic17****</p>
              */
             public Builder DBProxyVswitchId(String DBProxyVswitchId) {
                 this.DBProxyVswitchId = DBProxyVswitchId;
@@ -608,6 +722,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBProxyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyResponseBody</p>
+     */
     public static class DBProxyConnectStringItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBProxyConnectStringItems")
         private java.util.List < DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems;
@@ -635,7 +755,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private java.util.List < DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems; 
 
             /**
-             * An array consisting of the information about the database proxy endpoint that is created for the instance.
+             * <p>An array consisting of the information about the database proxy endpoint that is created for the instance.</p>
              */
             public Builder DBProxyConnectStringItems(java.util.List < DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems) {
                 this.DBProxyConnectStringItems = DBProxyConnectStringItems;
@@ -649,6 +769,146 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBProxyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyResponseBody</p>
+     */
+    public static class DBProxyNodesDBProxyNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cpuCores")
+        private String cpuCores;
+
+        @com.aliyun.core.annotation.NameInMap("nodeId")
+        private String nodeId;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        private String zoneId;
+
+        private DBProxyNodesDBProxyNodes(Builder builder) {
+            this.cpuCores = builder.cpuCores;
+            this.nodeId = builder.nodeId;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBProxyNodesDBProxyNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpuCores
+         */
+        public String getCpuCores() {
+            return this.cpuCores;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String cpuCores; 
+            private String nodeId; 
+            private String zoneId; 
+
+            /**
+             * cpuCores.
+             */
+            public Builder cpuCores(String cpuCores) {
+                this.cpuCores = cpuCores;
+                return this;
+            }
+
+            /**
+             * nodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * zoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public DBProxyNodesDBProxyNodes build() {
+                return new DBProxyNodesDBProxyNodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBProxyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyResponseBody</p>
+     */
+    public static class DBProxyNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DBProxyNodes")
+        private java.util.List < DBProxyNodesDBProxyNodes> DBProxyNodes;
+
+        private DBProxyNodes(Builder builder) {
+            this.DBProxyNodes = builder.DBProxyNodes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBProxyNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return DBProxyNodes
+         */
+        public java.util.List < DBProxyNodesDBProxyNodes> getDBProxyNodes() {
+            return this.DBProxyNodes;
+        }
+
+        public static final class Builder {
+            private java.util.List < DBProxyNodesDBProxyNodes> DBProxyNodes; 
+
+            /**
+             * DBProxyNodes.
+             */
+            public Builder DBProxyNodes(java.util.List < DBProxyNodesDBProxyNodes> DBProxyNodes) {
+                this.DBProxyNodes = DBProxyNodes;
+                return this;
+            }
+
+            public DBProxyNodes build() {
+                return new DBProxyNodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBProxyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyResponseBody</p>
+     */
     public static class DbProxyEndpointItemsDbProxyEndpointItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbProxyEndpointAliases")
         private String dbProxyEndpointAliases;
@@ -712,7 +972,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private String dbProxyReadWriteMode; 
 
             /**
-             * The description of the database proxy endpoint.
+             * <p>The description of the database proxy endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy-test</p>
              */
             public Builder dbProxyEndpointAliases(String dbProxyEndpointAliases) {
                 this.dbProxyEndpointAliases = dbProxyEndpointAliases;
@@ -720,7 +983,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database proxy endpoint.
+             * <p>The ID of the database proxy endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gos787jog2wk0ye1****</p>
              */
             public Builder dbProxyEndpointName(String dbProxyEndpointName) {
                 this.dbProxyEndpointName = dbProxyEndpointName;
@@ -728,11 +994,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database proxy endpoint. Valid values:
-             * <p>
+             * <p>The type of the database proxy endpoint. Valid values:</p>
+             * <ul>
+             * <li>Custom: custom database proxy endpoint</li>
+             * <li>RWSplit: default database proxy endpoint</li>
+             * </ul>
              * 
-             * *   Custom: custom database proxy endpoint
-             * *   RWSplit: default database proxy endpoint
+             * <strong>example:</strong>
+             * <p>RWSplit</p>
              */
             public Builder dbProxyEndpointType(String dbProxyEndpointType) {
                 this.dbProxyEndpointType = dbProxyEndpointType;
@@ -740,11 +1009,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The read and write attributes of the database proxy endpoint.
-             * <p>
+             * <p>The read and write attributes of the database proxy endpoint.</p>
+             * <ul>
+             * <li>ReadOnly</li>
+             * <li>ReadWrite</li>
+             * </ul>
              * 
-             * *   ReadOnly
-             * *   ReadWrite
+             * <strong>example:</strong>
+             * <p>ReadWrite</p>
              */
             public Builder dbProxyReadWriteMode(String dbProxyReadWriteMode) {
                 this.dbProxyReadWriteMode = dbProxyReadWriteMode;
@@ -758,6 +1030,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBProxyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyResponseBody</p>
+     */
     public static class DbProxyEndpointItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbProxyEndpointItems")
         private java.util.List < DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems;
@@ -785,7 +1063,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private java.util.List < DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems; 
 
             /**
-             * The proxy terminals of the instance.
+             * <p>The proxy terminals of the instance.</p>
              */
             public Builder dbProxyEndpointItems(java.util.List < DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems) {
                 this.dbProxyEndpointItems = dbProxyEndpointItems;

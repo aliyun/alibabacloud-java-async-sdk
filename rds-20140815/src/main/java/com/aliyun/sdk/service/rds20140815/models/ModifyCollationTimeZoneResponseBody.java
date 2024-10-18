@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCollationTimeZoneResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCollationTimeZoneResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         private String timezone; 
 
         /**
-         * The character set collation of the instance.
+         * <p>The character set collation of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Latin1_General_CI_AS</p>
          */
         public Builder collation(String collation) {
             this.collation = collation;
@@ -93,7 +97,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -101,7 +108,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8EA054AF-DFA7-497D-9F57-790FFC974C0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114413215</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -117,7 +130,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The time zone.
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Standard Time</p>
          */
         public Builder timezone(String timezone) {
             this.timezone = timezone;

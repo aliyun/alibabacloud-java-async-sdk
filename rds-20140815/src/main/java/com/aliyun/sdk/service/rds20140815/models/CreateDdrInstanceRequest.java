@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDdrInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDdrInstanceRequest</p>
@@ -496,10 +497,13 @@ public class CreateDdrInstanceRequest extends Request {
         } 
 
         /**
-         * The backup set ID that you want to use for the restoration. You can call the DescribeCrossRegionBackups operation to query backup set ID.
-         * <p>
+         * <p>The backup set ID that you want to use for the restoration. You can call the DescribeCrossRegionBackups operation to query backup set ID.</p>
+         * <blockquote>
+         * <p> This parameter is required when you set the <strong>RestoreType</strong> parameter to <strong>BackupSet</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when you set the **RestoreType** parameter to **BackupSet**.
+         * <strong>example:</strong>
+         * <p>14***</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -508,7 +512,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -517,13 +524,15 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The connection mode of the destination instance. Valid values:
-         * <p>
+         * <p>The connection mode of the destination instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Standard</strong>: standard mode</li>
+         * <li><strong>Safe</strong>: database proxy mode</li>
+         * </ul>
+         * <p>Default value: <strong>Standard</strong>.</p>
          * 
-         * *   **Standard**: standard mode
-         * *   **Safe**: database proxy mode
-         * 
-         * Default value: **Standard**.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder connectionMode(String connectionMode) {
             this.putQueryParameter("ConnectionMode", connectionMode);
@@ -532,7 +541,11 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The instance type of the destination instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+         * <p>The instance type of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mysql.s1.small</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -541,10 +554,13 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The instance name. The name must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
-         * <p>
+         * <p>The instance name. The name must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
+         * <blockquote>
+         * <p> The value cannot start with http:// or https://.</p>
+         * </blockquote>
          * 
-         * >  The value cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>Test database</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -553,11 +569,15 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The network connection type of the destination instance. Valid values:
-         * <p>
+         * <p>The network connection type of the destination instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Internet</strong></li>
+         * <li><strong>Intranet</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Internet**
-         * *   **Intranet**
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         public Builder DBInstanceNetType(String DBInstanceNetType) {
             this.putQueryParameter("DBInstanceNetType", DBInstanceNetType);
@@ -566,7 +586,11 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the destination instance. Valid values: **5 to 2000**. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see [Primary instance types](~~26312~~).
+         * <p>The storage capacity of the destination instance. Valid values: <strong>5 to 2000</strong>. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -575,7 +599,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The storage type of the destination instance. Only the local SSD storage type is supported. Default value: **local_ssd**.
+         * <p>The storage type of the destination instance. Only the local SSD storage type is supported. Default value: <strong>local_ssd</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -584,16 +611,18 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the customer master key (CMK) for cloud disk encryption. If this parameter is specified, cloud disk encryption is enabled and you must also specify the **RoleARN** parameter. Cloud disk encryption cannot be disabled after it is enabled. You can obtain the ID of the key in the KMS console or create a key. For more information, see [Create a key](~~181610~~).
-         * <p>
+         * <p>The ID of the customer master key (CMK) for cloud disk encryption. If this parameter is specified, cloud disk encryption is enabled and you must also specify the <strong>RoleARN</strong> parameter. Cloud disk encryption cannot be disabled after it is enabled. You can obtain the ID of the key in the KMS console or create a key. For more information, see <a href="https://help.aliyun.com/document_detail/181610.html">Create a key</a>.</p>
+         * <p>**</p>
+         * <p><strong>Notes</strong></p>
+         * <ul>
+         * <li><p>This parameter is applicable only to ApsaraDB RDS for SQL Server instances.</p>
+         * </li>
+         * <li><p>You can leave this parameter empty. If you do not specify this parameter, you only need to specify the <strong>RoleARN</strong> to use the service key that is managed by ApsaraDB RDS to encrypt cloud disks.</p>
+         * </li>
+         * </ul>
          * 
-         * **
-         * 
-         * **Notes**
-         * 
-         * *   This parameter is applicable only to ApsaraDB RDS for SQL Server instances.
-         * 
-         * *   You can leave this parameter empty. If you do not specify this parameter, you only need to specify the **RoleARN** to use the service key that is managed by ApsaraDB RDS to encrypt cloud disks.
+         * <strong>example:</strong>
+         * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -602,12 +631,16 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The database engine of the destination instance. Valid values:
-         * <p>
+         * <p>The database engine of the destination instance. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **SQLServer**
-         * *   **PostgreSQL**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -616,12 +649,16 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.
-         * <p>
+         * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of <strong>Engine</strong>.</p>
+         * <ul>
+         * <li>Valid values when Engine is set to MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></li>
+         * <li>Valid values when Engine is set to SQLServer: <strong>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent</strong></li>
+         * <li>Valid values when Engine is set to PostgreSQL: <strong>9.4, 10.0, 11.0, 12.0, and 13.0</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**
-         * *   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
-         * *   Valid values when Engine is set to PostgreSQL: **9.4, 10.0, 11.0, 12.0, and 13.0**
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -630,15 +667,18 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>Classic</strong></li>
+         * </ul>
+         * <p>Default value: Classic.</p>
+         * <blockquote>
+         * <p>If you set this parameter to <strong>VPC</strong>, you must also specify <strong>VpcId</strong> and <strong>VSwitchId</strong>.</p>
+         * </blockquote>
          * 
-         * *   **VPC**
-         * *   **Classic**
-         * 
-         * Default value: Classic.
-         * 
-         * > If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.
+         * <strong>example:</strong>
+         * <p>Classic</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -665,11 +705,15 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -678,13 +722,17 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The unit that is used to measure the subscription duration of the destination instance. Valid values:
-         * <p>
+         * <p>The unit that is used to measure the subscription duration of the destination instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set PayType to <strong>Prepaid</strong>, you must specify UsedTime.</p>
+         * </blockquote>
          * 
-         * *   **Year**
-         * *   **Month**
-         * 
-         * > If you set PayType to **Prepaid**, you must specify UsedTime.
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -693,7 +741,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.
+         * <p>The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.XXX.XXX.69</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -702,7 +753,11 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -711,7 +766,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyxxxxxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -738,10 +796,13 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>If <strong>RestoreType</strong> is set to <strong>BackupTime</strong>, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * > If **RestoreType** is set to **BackupTime**, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>2019-05-30T03:29:10Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -750,11 +811,15 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The restoration method that you want to use. Valid values:
-         * <p>
+         * <p>The restoration method that you want to use. Valid values:</p>
+         * <ul>
+         * <li><strong>BackupSet</strong>: restores data from a backup set. If you use this value, you must also specify <strong>BackupSetId</strong>.</li>
+         * <li><strong>BackupTime</strong>: restores data to a point in time. If you use this value, you must also specify <strong>RestoreTime</strong>, <strong>SourceRegion</strong>, and <strong>SourceDBInstanceName</strong>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetId**.
-         * *   **BackupTime**: restores data to a point in time. If you use this value, you must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.
+         * <strong>example:</strong>
+         * <p>BackupSet</p>
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
@@ -763,10 +828,13 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for Resource Access Management (RAM) users. RAM users can use the ARN to connect to ApsaraDB RDS to Key Management Service (KMS). You can call the [CheckCloudResourceAuthorized](~~2628797~~) operation to query the ARN.
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for Resource Access Management (RAM) users. RAM users can use the ARN to connect to ApsaraDB RDS to Key Management Service (KMS). You can call the <a href="https://help.aliyun.com/document_detail/2628797.html">CheckCloudResourceAuthorized</a> operation to query the ARN.</p>
+         * <blockquote>
+         * <p> This parameter is applicable only to ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
          * 
-         * >  This parameter is applicable only to ApsaraDB RDS for SQL Server instances.
+         * <strong>example:</strong>
+         * <p>acs:ram::1406****:role/aliyunrdsinstanceencryptiondefaultrole</p>
          */
         public Builder roleARN(String roleARN) {
             this.putQueryParameter("RoleARN", roleARN);
@@ -775,11 +843,15 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The IP address whitelist of the destination instance. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add a maximum of 1,000 entries. For more information, see [Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance](~~43185~~). The entries in the IP address whitelist must be in one of the following formats:
-         * <p>
+         * <p>The IP address whitelist of the destination instance. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add a maximum of 1,000 entries. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a>. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <ul>
+         * <li>IP address. Example: 10.23.12.24.</li>
+         * <li>CIDR block. Example: 10.23.12.24/24. In this example, 24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from 1 to 32.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   IP address. Example: 10.23.12.24.
-         * *   CIDR block. Example: 10.23.12.24/24. In this example, 24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from 1 to 32.
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -788,10 +860,13 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The source instance ID, which is used if you want to restore data to a point in time.
-         * <p>
+         * <p>The source instance ID, which is used if you want to restore data to a point in time.</p>
+         * <blockquote>
+         * <p> This parameter is required when you set the <strong>RestoreType</strong> parameter to <strong>BackupTime</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when you set the **RestoreType** parameter to **BackupTime**.
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder sourceDBInstanceName(String sourceDBInstanceName) {
             this.putQueryParameter("SourceDBInstanceName", sourceDBInstanceName);
@@ -800,10 +875,13 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the source instance if you want to restore data to a point in time.
-         * <p>
+         * <p>The region ID of the source instance if you want to restore data to a point in time.</p>
+         * <blockquote>
+         * <p>If you set <strong>RestoreType</strong> to <strong>BackupTime</strong>, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * > If you set **RestoreType** to **BackupTime**, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sourceRegion(String sourceRegion) {
             this.putQueryParameter("SourceRegion", sourceRegion);
@@ -812,13 +890,16 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The character set of the destination instance. Valid values:
-         * <p>
+         * <p>The character set of the destination instance. Valid values:</p>
+         * <ul>
+         * <li><strong>utf8</strong></li>
+         * <li><strong>gbk</strong></li>
+         * <li><strong>latin1</strong></li>
+         * <li><strong>utf8mb4</strong></li>
+         * </ul>
          * 
-         * *   **utf8**
-         * *   **gbk**
-         * *   **latin1**
-         * *   **utf8mb4**
+         * <strong>example:</strong>
+         * <p>uft8</p>
          */
         public Builder systemDBCharset(String systemDBCharset) {
             this.putQueryParameter("SystemDBCharset", systemDBCharset);
@@ -827,13 +908,17 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance.
-         * <p>
+         * <p>The subscription duration of the instance.</p>
+         * <ul>
+         * <li>If you set <strong>Period</strong> to <strong>Year</strong>, the value of UsedTime ranges from <strong>1 to 3</strong>.</li>
+         * <li>If you set <strong>Period</strong> to <strong>Month</strong>, the value of UsedTime ranges from <strong>1 to 9</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set PayType to <strong>Prepaid</strong>, you must specify UsedTime.</p>
+         * </blockquote>
          * 
-         * *   If you set **Period** to **Year**, the value of UsedTime ranges from **1 to 3**.
-         * *   If you set **Period** to **Month**, the value of UsedTime ranges from **1 to 9**.
-         * 
-         * > If you set PayType to **Prepaid**, you must specify UsedTime.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -842,10 +927,13 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The VPC ID of the destination instance. This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.
-         * <p>
+         * <p>The VPC ID of the destination instance. This parameter is available only when you set the <strong>InstanceNetworkType</strong> parameter to <strong>VPC</strong>.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, you must also specify the <strong>ZoneId</strong> parameter.</p>
+         * </blockquote>
          * 
-         * >  If you specify this parameter, you must also specify the **ZoneId** parameter.
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxxxxxxx</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -854,10 +942,13 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.
-         * <p>
+         * <p>The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set the <strong>InstanceNetworkType</strong> parameter to <strong>VPC</strong>.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, you must also specify the <strong>ZoneId</strong> parameter.</p>
+         * </blockquote>
          * 
-         * >  If you specify this parameter, you must also specify the **ZoneId** parameter.
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxxxxx</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -866,10 +957,13 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID of the destination instance. If the destination instance is deployed in multiple zones, separate the IDs of the zones with colons (:).
-         * <p>
+         * <p>The zone ID of the destination instance. If the destination instance is deployed in multiple zones, separate the IDs of the zones with colons (:).</p>
+         * <blockquote>
+         * <p>If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.</p>
+         * </blockquote>
          * 
-         * > If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

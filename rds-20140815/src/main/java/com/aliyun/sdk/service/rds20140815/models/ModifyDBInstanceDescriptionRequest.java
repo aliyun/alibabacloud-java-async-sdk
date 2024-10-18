@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceDescriptionRequest</p>
@@ -125,10 +126,14 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         } 
 
         /**
-         * The name of the instance.
-         * <p>
+         * <p>The name of the instance.</p>
+         * <blockquote>
+         * <p>The name must be 2 to 64 characters in length.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The name must be 2 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>Instance in Alibaba Cloud test environment</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -137,7 +142,11 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

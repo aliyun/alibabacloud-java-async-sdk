@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBinlogFilesRequest} extends {@link RequestModel}
  *
  * <p>DescribeBinlogFilesRequest</p>
@@ -170,7 +171,11 @@ public class DescribeBinlogFilesRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -179,10 +184,12 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time.
-         * <p>
+         * <p>The end of the time range to query. The end time must be later than the start time.</p>
+         * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2011-06-20T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -209,10 +216,11 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from 1.
-         * <p>
+         * <p>The page number. Pages start from 1.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,12 +229,12 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * Valid values: **30** to **100**.
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,10 +261,12 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2011-06-01T15:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

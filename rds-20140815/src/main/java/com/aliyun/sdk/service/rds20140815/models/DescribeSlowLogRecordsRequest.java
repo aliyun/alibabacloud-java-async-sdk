@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSlowLogRecordsRequest</p>
@@ -212,7 +213,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -221,7 +226,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS_MySQL</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -230,10 +238,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.**
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.**</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2020-06-18T16:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -242,10 +254,13 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the node.
-         * <p>
+         * <p>The ID of the node.</p>
+         * <blockquote>
+         * <p>This parameter is available only for instances that run RDS Cluster Edition. You can specify this parameter to query the logs of a specified node. If this parameter is not specified, the logs of the primary node are returned by default.</p>
+         * </blockquote>
          * 
-         * > This parameter is available only for instances that run RDS Cluster Edition. You can specify this parameter to query the logs of a specified node. If this parameter is not specified, the logs of the primary node are returned by default.
+         * <strong>example:</strong>
+         * <p>rn-p1fm78s90x5****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -272,7 +287,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -281,7 +299,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid value: **30 to 200**. Default value: **30**.
+         * <p>The number of entries per page. Valid value: <strong>30 to 200</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -308,7 +329,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.
+         * <p>The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U2FsdGVk****</p>
          */
         public Builder SQLHASH(String SQLHASH) {
             this.putQueryParameter("SQLHASH", SQLHASH);
@@ -317,7 +341,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-17T16:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

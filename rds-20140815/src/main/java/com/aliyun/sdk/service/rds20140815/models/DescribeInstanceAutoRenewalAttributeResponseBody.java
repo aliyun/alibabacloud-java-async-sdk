@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAutoRenewalAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAutoRenewalAttributeResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The renewal information about the instance.
+         * <p>The renewal information about the instance.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4182309D-CD29-49B1-B4A5-D7CB4D56C31F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAutoRenewalAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAutoRenewalAttributeResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private String autoRenew;
@@ -205,7 +224,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Indicates whether to enable auto-renewal for the instance.
+             * <p>Indicates whether to enable auto-renewal for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder autoRenew(String autoRenew) {
                 this.autoRenew = autoRenew;
@@ -213,7 +235,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bpxxxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -221,7 +246,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal period.
+             * <p>The renewal period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -229,7 +257,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -237,7 +268,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -251,6 +285,12 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAutoRenewalAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAutoRenewalAttributeResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;

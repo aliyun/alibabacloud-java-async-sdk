@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLocalAvailableRecoveryTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLocalAvailableRecoveryTimeResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,10 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range to which the instance can be restored.
+         * <p>The start of the time range to which the instance can be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-16T07:59:18Z</p>
          */
         public Builder recoveryBeginTime(String recoveryBeginTime) {
             this.recoveryBeginTime = recoveryBeginTime;
@@ -89,7 +96,10 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range to which the instance can be restored.
+         * <p>The end of the time range to which the instance can be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-20T08:41:29Z</p>
          */
         public Builder recoveryEndTime(String recoveryEndTime) {
             this.recoveryEndTime = recoveryEndTime;
@@ -97,7 +107,10 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14E986AC-0F27-4FFB-8EED-9A8A3A2A0309</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

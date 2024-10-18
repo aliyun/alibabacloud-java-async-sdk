@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDetachedBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDetachedBackupsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * The queried backup sets.
+         * <p>The queried backup sets.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDetachedBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDetachedBackupsResponseBody</p>
+     */
     public static class Backup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupDownloadURL")
         private String backupDownloadURL;
@@ -349,7 +368,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             private String storeStatus; 
 
             /**
-             * The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.
+             * <p>The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
              */
             public Builder backupDownloadURL(String backupDownloadURL) {
                 this.backupDownloadURL = backupDownloadURL;
@@ -357,10 +379,11 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the backup task.
-             * <p>
+             * <p>The end time of the backup task.</p>
+             * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2019-02-13T12:20:00Z</p>
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -368,7 +391,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup set.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>321020562</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -376,7 +402,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned.
+             * <p>The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxx</a></p>
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
@@ -384,11 +413,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to generate the data backup file. Valid values:
-             * <p>
+             * <p>The method that is used to generate the data backup file. Valid values:</p>
+             * <ul>
+             * <li><strong>Logical</strong>: logical backup</li>
+             * <li><strong>Physical</strong>: physical backup</li>
+             * </ul>
              * 
-             * *   **Logical**: logical backup
-             * *   **Physical**: physical backup
+             * <strong>example:</strong>
+             * <p>Physical</p>
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -396,11 +428,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup method. Valid values:
-             * <p>
+             * <p>The backup method. Valid values:</p>
+             * <ul>
+             * <li><strong>Automated</strong></li>
+             * <li><strong>Manual</strong></li>
+             * </ul>
              * 
-             * *   **Automated**
-             * *   **Manual**
+             * <strong>example:</strong>
+             * <p>Automated</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -408,7 +443,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup size. Unit: bytes.
+             * <p>The backup size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2167808</p>
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -416,10 +454,11 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the backup task.
-             * <p>
+             * <p>The start time of the backup task.</p>
+             * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2019-02-03T12:20:00Z</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -427,11 +466,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the backup set. Valid values:
-             * <p>
+             * <p>The status of the backup set. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failed</strong></li>
+             * </ul>
              * 
-             * *   **Success**
-             * *   **Failed**
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -439,11 +481,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup type of the backup file. Valid values:
-             * <p>
+             * <p>The backup type of the backup file. Valid values:</p>
+             * <ul>
+             * <li><strong>FullBackup</strong></li>
+             * <li><strong>IncrementalBackup</strong></li>
+             * </ul>
              * 
-             * *   **FullBackup**
-             * *   **IncrementalBackup**
+             * <strong>example:</strong>
+             * <p>FullBackup</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -451,10 +496,13 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.
-             * <p>
+             * <p>The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.</p>
+             * <blockquote>
+             * <p> If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
+             * </blockquote>
              * 
-             * >  If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.
+             * <strong>example:</strong>
+             * <p>1576506856</p>
              */
             public Builder consistentTime(Long consistentTime) {
                 this.consistentTime = consistentTime;
@@ -462,7 +510,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBInstanceComment(String DBInstanceComment) {
                 this.DBInstanceComment = DBInstanceComment;
@@ -470,7 +521,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -478,7 +532,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.
+             * <p>The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5882781</p>
              */
             public Builder hostInstanceID(String hostInstanceID) {
                 this.hostInstanceID = hostInstanceID;
@@ -486,11 +543,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the backup set is available. Valid values:
-             * <p>
+             * <p>Indicates whether the backup set is available. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The backup set is unavailable.</li>
+             * <li><strong>1</strong>: The backup set is available.</li>
+             * </ul>
              * 
-             * *   **0**: The backup set is unavailable.
-             * *   **1**: The backup set is available.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isAvail(Integer isAvail) {
                 this.isAvail = isAvail;
@@ -498,12 +558,15 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the backup set that is used to restore individual databases or tables. Valid values:
-             * <p>
+             * <p>The status of the backup set that is used to restore individual databases or tables. Valid values:</p>
+             * <ul>
+             * <li><strong>OK</strong>: The backup set is normal.</li>
+             * <li><strong>LARGE</strong>: The backup set contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</li>
+             * <li><strong>EMPTY</strong>: The backup set is generated from a failed backup task.</li>
+             * </ul>
              * 
-             * *   **OK**: The backup set is normal.
-             * *   **LARGE**: The backup set contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.
-             * *   **EMPTY**: The backup set is generated from a failed backup task.
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder metaStatus(String metaStatus) {
                 this.metaStatus = metaStatus;
@@ -511,11 +574,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data backup file can be deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the data backup file can be deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong></li>
+             * <li><strong>Disabled</strong></li>
+             * </ul>
              * 
-             * *   **Enabled**
-             * *   **Disabled**
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder storeStatus(String storeStatus) {
                 this.storeStatus = storeStatus;
@@ -529,6 +595,12 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDetachedBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDetachedBackupsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backup")
         private java.util.List < Backup> backup;

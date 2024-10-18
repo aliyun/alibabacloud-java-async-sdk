@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCollationTimeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCollationTimeZonesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of the character set collations and time zones that are available.
+         * <p>The list of the character set collations and time zones that are available.</p>
          */
         public Builder collationTimeZones(CollationTimeZones collationTimeZones) {
             this.collationTimeZones = collationTimeZones;
@@ -57,7 +58,10 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EAED246-DB18-4C8D-9EB5-C319626F2A77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCollationTimeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCollationTimeZonesResponseBody</p>
+     */
     public static class CollationTimeZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -121,7 +131,10 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Kabul</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -129,7 +142,10 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The offset of the UTC time. The offset is in the following format: (UTC+*HH:mm*).
+             * <p>The offset of the UTC time. The offset is in the following format: (UTC+<em>HH:mm</em>).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(UTC+04:30)</p>
              */
             public Builder standardTimeOffset(String standardTimeOffset) {
                 this.standardTimeOffset = standardTimeOffset;
@@ -137,7 +153,10 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Afghanistan Standard Time</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -151,6 +170,12 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCollationTimeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCollationTimeZonesResponseBody</p>
+     */
     public static class CollationTimeZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CollationTimeZone")
         private java.util.List < CollationTimeZone> collationTimeZone;

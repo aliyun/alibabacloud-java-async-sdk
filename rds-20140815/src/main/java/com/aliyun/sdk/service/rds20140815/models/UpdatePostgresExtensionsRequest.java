@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePostgresExtensionsRequest} extends {@link RequestModel}
  *
  * <p>UpdatePostgresExtensionsRequest</p>
@@ -168,7 +169,10 @@ public class UpdatePostgresExtensionsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +181,11 @@ public class UpdatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-gc7f1****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -186,7 +194,11 @@ public class UpdatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * The database name. You can call the DescribeDatabases operation to obtain the database name.
+         * <p>The database name. You can call the DescribeDatabases operation to obtain the database name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder DBNames(String DBNames) {
             this.putQueryParameter("DBNames", DBNames);
@@ -195,7 +207,11 @@ public class UpdatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * The name of the extension. Separate multiple extensions with commas (,).
+         * <p>The name of the extension. Separate multiple extensions with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>citext</p>
          */
         public Builder extensions(String extensions) {
             this.putQueryParameter("Extensions", extensions);
@@ -222,7 +238,10 @@ public class UpdatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

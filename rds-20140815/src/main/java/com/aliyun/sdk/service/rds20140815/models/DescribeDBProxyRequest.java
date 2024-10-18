@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBProxyRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBProxyRequest</p>
@@ -138,7 +139,11 @@ public class DescribeDBProxyRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1ja4f56s7us****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -147,7 +152,10 @@ public class DescribeDBProxyRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -165,7 +173,10 @@ public class DescribeDBProxyRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +185,10 @@ public class DescribeDBProxyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

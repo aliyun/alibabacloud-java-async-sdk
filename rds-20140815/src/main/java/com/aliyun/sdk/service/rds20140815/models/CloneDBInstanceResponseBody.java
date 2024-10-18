@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CloneDBInstanceResponseBody</p>
@@ -61,7 +62,10 @@ public class CloneDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -69,7 +73,10 @@ public class CloneDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100789370****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -77,7 +84,10 @@ public class CloneDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

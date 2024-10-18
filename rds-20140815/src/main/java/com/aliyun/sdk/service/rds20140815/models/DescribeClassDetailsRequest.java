@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClassDetailsRequest} extends {@link RequestModel}
  *
  * <p>DescribeClassDetailsRequest</p>
@@ -184,7 +185,11 @@ public class DescribeClassDetailsRequest extends Request {
         } 
 
         /**
-         * The code of the instance type.
+         * <p>The code of the instance type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mysql.s3.large</p>
          */
         public Builder classCode(String classCode) {
             this.putQueryParameter("ClassCode", classCode);
@@ -193,7 +198,10 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -202,13 +210,17 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * The commodity code of the instance. Valid values:
-         * <p>
+         * <p>The commodity code of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance.</li>
+         * <li><strong>rds_intl</strong>: The instance is a subscription primary instance.</li>
+         * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance.</li>
+         * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **bards_intl**: The instance is a pay-as-you-go primary instance.
-         * *   **rds_intl**: The instance is a subscription primary instance.
-         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance.
-         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -217,7 +229,11 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -226,7 +242,11 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance.
+         * <p>The database engine version of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -244,7 +264,11 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +277,10 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

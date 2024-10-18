@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunRCInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>RunRCInstancesResponseBody</p>
@@ -61,7 +62,7 @@ public class RunRCInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceIdSets.
+         * <p>The instance IDs (InstanceIdSet).</p>
          */
         public Builder instanceIdSets(InstanceIdSets instanceIdSets) {
             this.instanceIdSets = instanceIdSets;
@@ -69,7 +70,10 @@ public class RunRCInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>237850846720798</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -77,7 +81,10 @@ public class RunRCInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>535BD857-E88F-5B4F-A18C-FAF59A74741F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class RunRCInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunRCInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunRCInstancesResponseBody</p>
+     */
     public static class InstanceIdSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceIdSet")
         private java.util.List < String > instanceIdSet;

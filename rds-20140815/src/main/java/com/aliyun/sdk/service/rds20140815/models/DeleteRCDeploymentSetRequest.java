@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRCDeploymentSetRequest} extends {@link RequestModel}
  *
  * <p>DeleteRCDeploymentSetRequest</p>
@@ -69,7 +70,11 @@ public class DeleteRCDeploymentSetRequest extends Request {
         } 
 
         /**
-         * DeploymentSetId.
+         * <p>The deployment set ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-uf6c8qerk019bj1l****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -78,7 +83,11 @@ public class DeleteRCDeploymentSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

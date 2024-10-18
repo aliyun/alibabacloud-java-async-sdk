@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeTasksRequest</p>
@@ -196,7 +197,11 @@ public class DescribeTasksRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -205,7 +210,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-20T02:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -232,7 +240,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer. Default value: **1**.
+         * <p>The number of the page to return. Valid values: any non-zero positive integer. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -241,7 +252,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30 to 100**. Default value: **30**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30 to 100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,7 +282,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-20T01:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -277,7 +294,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The status of the task. This parameter is invalid.
+         * <p>The status of the task. This parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -286,7 +306,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The operation that is used by the task.
+         * <p>The operation that is used by the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateInstance</p>
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceMetricsRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceMetricsRequest</p>
@@ -98,7 +99,11 @@ public class ModifyDBInstanceMetricsRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1s1j103lo6****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -107,10 +112,12 @@ public class ModifyDBInstanceMetricsRequest extends Request {
         }
 
         /**
-         * The keys of the Enhanced Monitoring metrics that you want to display for the instance. You can enter a maximum of 30 metric keys. If you enter multiple metric keys, you must separate the metric keys with commas (,).
-         * <p>
+         * <p>The keys of the Enhanced Monitoring metrics that you want to display for the instance. You can enter a maximum of 30 metric keys. If you enter multiple metric keys, you must separate the metric keys with commas (,).</p>
+         * <p>You can call the DescribeAvailableMetrics operation to query the keys of metrics.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the DescribeAvailableMetrics operation to query the keys of metrics.
+         * <strong>example:</strong>
+         * <p>os.cpu_usage.sys.avg,os.cpu_usage.user.avg</p>
          */
         public Builder metricsConfig(String metricsConfig) {
             this.putQueryParameter("MetricsConfig", metricsConfig);
@@ -128,11 +135,15 @@ public class ModifyDBInstanceMetricsRequest extends Request {
         }
 
         /**
-         * The application scope of this modification. Valid values:
-         * <p>
+         * <p>The application scope of this modification. Valid values:</p>
+         * <ul>
+         * <li><strong>instance</strong>: This modification is applied only to the current instance.</li>
+         * <li><strong>region</strong>: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs. For example, if the current instance is equipped with cloud disks, this modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with cloud disks in the region to which the current instance belongs.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **instance**: This modification is applied only to the current instance.
-         * *   **region**: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs. For example, if the current instance is equipped with cloud disks, this modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with cloud disks in the region to which the current instance belongs.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

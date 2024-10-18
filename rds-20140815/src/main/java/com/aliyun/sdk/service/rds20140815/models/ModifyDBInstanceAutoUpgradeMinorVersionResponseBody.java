@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceAutoUpgradeMinorVersionResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceAutoUpgradeMinorVersionResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A31818D5-0550-4A81-8D13-B45948D7193F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

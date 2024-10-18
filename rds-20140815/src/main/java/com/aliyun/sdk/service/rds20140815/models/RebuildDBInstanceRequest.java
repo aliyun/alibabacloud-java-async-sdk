@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebuildDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>RebuildDBInstanceRequest</p>
@@ -153,7 +154,11 @@ public class RebuildDBInstanceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -162,7 +167,11 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
+         * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg-4nxxxxxxx</p>
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -171,10 +180,13 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the host on which the system rebuilds the secondary instance.
-         * <p>
+         * <p>The ID of the host on which the system rebuilds the secondary instance.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system preferentially rebuilds the secondary instance on the original host on which the secondary instance resides. If the remaining storage of the original host is insufficient, the system rebuilds the secondary instance on a host on which the primary instance does not reside. If no suitable hosts are found, the system reports an error that indicates insufficient storage.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the system preferentially rebuilds the secondary instance on the original host on which the secondary instance resides. If the remaining storage of the original host is insufficient, the system rebuilds the secondary instance on a host on which the primary instance does not reside. If no suitable hosts are found, the system reports an error that indicates insufficient storage.
+         * <strong>example:</strong>
+         * <p>i-bpxxxxxxx</p>
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -192,11 +204,14 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * The role of the secondary instance that you want to rebuild. Valid values:
-         * <p>
+         * <p>The role of the secondary instance that you want to rebuild. Valid values:</p>
+         * <ul>
+         * <li><strong>FOLLOWER</strong>: secondary instance</li>
+         * <li><strong>LOG</strong>: logger instance</li>
+         * </ul>
          * 
-         * *   **FOLLOWER**: secondary instance
-         * *   **LOG**: logger instance
+         * <strong>example:</strong>
+         * <p>FOLLOWER</p>
          */
         public Builder rebuildNodeType(String rebuildNodeType) {
             this.putQueryParameter("RebuildNodeType", rebuildNodeType);
@@ -205,7 +220,10 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

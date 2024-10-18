@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportUserBackupFileResponseBody} extends {@link TeaModel}
  *
  * <p>ImportUserBackupFileResponseBody</p>
@@ -61,7 +62,10 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The ID of the full backup file.
+         * <p>The ID of the full backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-n8tpg24c6i0v********</p>
          */
         public Builder backupId(String backupId) {
             this.backupId = backupId;
@@ -69,7 +73,10 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A140DD14-DCC9-4548-9C72-52A49A58A310</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the full backup file is successfully imported into the instance. If the full backup file is successfully imported, **true** is returned. Otherwise, an error message is returned.
+         * <p>Indicates whether the full backup file is successfully imported into the instance. If the full backup file is successfully imported, <strong>true</strong> is returned. Otherwise, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

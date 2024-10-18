@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteReplicationLinkResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteReplicationLinkResponseBody</p>
@@ -73,7 +74,10 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1trqb4p1xd****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,10 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3472****</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -97,7 +107,10 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the task.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

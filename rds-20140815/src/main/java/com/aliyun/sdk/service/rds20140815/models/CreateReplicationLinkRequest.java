@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReplicationLinkRequest} extends {@link RequestModel}
  *
  * <p>CreateReplicationLinkRequest</p>
@@ -195,7 +196,11 @@ public class CreateReplicationLinkRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1trqb4p1xd****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -204,11 +209,15 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.
-         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -217,7 +226,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The account of the database that is used for data synchronization.
+         * <p>The account of the database that is used for data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdbuser</p>
          */
         public Builder replicatorAccount(String replicatorAccount) {
             this.putQueryParameter("ReplicatorAccount", replicatorAccount);
@@ -226,7 +238,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The password of the account.
+         * <p>The password of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder replicatorPassword(String replicatorPassword) {
             this.putQueryParameter("ReplicatorPassword", replicatorPassword);
@@ -235,7 +250,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The endpoint of the source instance.
+         * <p>The endpoint of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-****.pg.rds.aliyuncs.com</p>
          */
         public Builder sourceAddress(String sourceAddress) {
             this.putQueryParameter("SourceAddress", sourceAddress);
@@ -244,11 +262,14 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The type of the source instance. Valid values:
-         * <p>
+         * <p>The type of the source instance. Valid values:</p>
+         * <ul>
+         * <li><strong>other</strong>: other instances</li>
+         * <li><strong>aliyunRDS</strong>: an ApsaraDB RDS instance</li>
+         * </ul>
          * 
-         * *   **other**: other instances
-         * *   **aliyunRDS**: an ApsaraDB RDS instance
+         * <strong>example:</strong>
+         * <p>aliyunRDS</p>
          */
         public Builder sourceCategory(String sourceCategory) {
             this.putQueryParameter("SourceCategory", sourceCategory);
@@ -257,10 +278,13 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The name of the source instance.
-         * <p>
+         * <p>The name of the source instance.</p>
+         * <blockquote>
+         * <p> This parameter is required when you set the <strong>SourceCategory</strong> parameter to <strong>aliyunRDS</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when you set the **SourceCategory** parameter to **aliyunRDS**.
+         * <strong>example:</strong>
+         * <p>testInstance</p>
          */
         public Builder sourceInstanceName(String sourceInstanceName) {
             this.putQueryParameter("SourceInstanceName", sourceInstanceName);
@@ -269,10 +293,13 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The region ID of the source instance.
-         * <p>
+         * <p>The region ID of the source instance.</p>
+         * <blockquote>
+         * <p> This parameter is required when you set the <strong>SourceCategory</strong> parameter to <strong>aliyunRDS</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when you set the **SourceCategory** parameter to **aliyunRDS**.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sourceInstanceRegionId(String sourceInstanceRegionId) {
             this.putQueryParameter("SourceInstanceRegionId", sourceInstanceRegionId);
@@ -281,7 +308,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The port of the source instance.
+         * <p>The port of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder sourcePort(Long sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);
@@ -290,7 +320,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The task ID of the successful dry run.
+         * <p>The task ID of the successful dry run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>439946016</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -299,7 +332,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The name of the task. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.
+         * <p>The name of the task. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

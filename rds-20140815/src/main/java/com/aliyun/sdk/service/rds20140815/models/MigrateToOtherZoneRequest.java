@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateToOtherZoneRequest} extends {@link RequestModel}
  *
  * <p>MigrateToOtherZoneRequest</p>
@@ -279,14 +280,17 @@ public class MigrateToOtherZoneRequest extends Request {
         } 
 
         /**
-         * The RDS edition of the instance. Valid values:
-         * <p>
+         * <p>The RDS edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: RDS Basic Edition</li>
+         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+         * <li><strong>AlwaysOn</strong>: SQL Server on RDS Cluster Edition</li>
+         * <li><strong>cluster</strong>: MySQL on RDS Cluster Edition</li>
+         * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+         * </ul>
          * 
-         * *   **Basic**: RDS Basic Edition
-         * *   **HighAvailability**: RDS High-availability Edition
-         * *   **AlwaysOn**: SQL Server on RDS Cluster Edition
-         * *   **cluster**: MySQL on RDS Cluster Edition
-         * *   **Finance**: RDS Enterprise Edition
+         * <strong>example:</strong>
+         * <p>HighAvailability</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -295,10 +299,11 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set **IsModifySpec** to **true**, you must specify at least one of DBInstanceClass and **DBInstanceStorage**.
-         * <p>
+         * <p>The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set <strong>IsModifySpec</strong> to <strong>true</strong>, you must specify at least one of DBInstanceClass and <strong>DBInstanceStorage</strong>.</p>
+         * <p>For more information about instance types, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</p>
          * 
-         * For more information about instance types, see [Primary ApsaraDB RDS for MySQL instance types](~~276975~~).
+         * <strong>example:</strong>
+         * <p>mysql.x4.xlarge.2</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -307,7 +312,11 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -316,10 +325,11 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The new storage capacity of the instance. If you set **IsModifySpec** to **true**, you must specify at least one of DBInstanceStorage and **DBInstanceClass**.
-         * <p>
+         * <p>The new storage capacity of the instance. If you set <strong>IsModifySpec</strong> to <strong>true</strong>, you must specify at least one of DBInstanceStorage and <strong>DBInstanceClass</strong>.</p>
+         * <p>Unit: GB. The available storage capacity range varies based on the instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</p>
          * 
-         * Unit: GB. The available storage capacity range varies based on the instance type of the instance. For more information, see [Primary ApsaraDB RDS for MySQL instance types](~~276975~~).
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder DBInstanceStorage(Long DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -328,14 +338,18 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The time when you want the change to take effect. Valid values:
-         * <p>
+         * <p>The time when you want the change to take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong> (default): The change immediately takes effect.</li>
+         * <li><strong>MaintainTime</strong>: The change takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+         * <li><strong>ScheduleTime</strong>: The change takes effect at the point in time that you specify.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set this parameter to <strong>ScheduleTime</strong>, you must specify the <strong>SwitchTime</strong> parameter.</p>
+         * </blockquote>
          * 
-         * *   **Immediately** (default): The change immediately takes effect.
-         * *   **MaintainTime**: The change takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.
-         * *   **ScheduleTime**: The change takes effect at the point in time that you specify.
-         * 
-         * >  If you set this parameter to **ScheduleTime**, you must specify the **SwitchTime** parameter.
+         * <strong>example:</strong>
+         * <p>Immediate</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -344,7 +358,10 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
             this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
@@ -353,13 +370,17 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * Specifies whether to change the specifications of the instance during the cross-zone migration. Valid values:
-         * <p>
+         * <p>Specifies whether to change the specifications of the instance during the cross-zone migration. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: You want to change the specifications of the instance during the cross-zone migration. If you set this parameter to <strong>true</strong>, you must specify at least one of <strong>DBInstanceClass</strong> and <strong>DBInstanceStorage</strong>.</li>
+         * <li><strong>false</strong> (default): You do not want to change the specifications of the instance during the cross-zone migration.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter applies only to instances that run MySQL.</p>
+         * </blockquote>
          * 
-         * *   **true**: You want to change the specifications of the instance during the cross-zone migration. If you set this parameter to **true**, you must specify at least one of **DBInstanceClass** and **DBInstanceStorage**.
-         * *   **false** (default): You do not want to change the specifications of the instance during the cross-zone migration.
-         * 
-         * > This parameter applies only to instances that run MySQL.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isModifySpec(String isModifySpec) {
             this.putQueryParameter("IsModifySpec", isModifySpec);
@@ -404,10 +425,13 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The migration time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The migration time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>This parameter is used with <strong>EffectiveTime</strong>. You must specify this parameter only when <strong>EffectiveTime</strong> is set to <strong>ScheduleTime</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is used with **EffectiveTime**. You must specify this parameter only when **EffectiveTime** is set to **ScheduleTime**.
+         * <strong>example:</strong>
+         * <p>2021-12-14T15:15:15Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -416,11 +440,14 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC). Do not change the VPC of the instance when you migrate the instance across zones.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC). Do not change the VPC of the instance when you migrate the instance across zones.</p>
+         * <ul>
+         * <li>This parameter must be specified when the instance resides in a VPC.</li>
+         * <li>If the instance runs SQL Server, you can change the VPC of the instance.</li>
+         * </ul>
          * 
-         * *   This parameter must be specified when the instance resides in a VPC.
-         * *   If the instance runs SQL Server, you can change the VPC of the instance.
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxx</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -429,11 +456,14 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The vSwitch ID.
-         * <p>
+         * <p>The vSwitch ID.</p>
+         * <ul>
+         * <li>This parameter must be specified when the instance resides in a VPC. You can call the DescribeVSwitches operation to query existing vSwitches.</li>
+         * <li>If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).</li>
+         * </ul>
          * 
-         * *   This parameter must be specified when the instance resides in a VPC. You can call the DescribeVSwitches operation to query existing vSwitches.
-         * *   If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>vsw-uf6adz52c2pxxxxxxx</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -442,7 +472,11 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The ID of the destination zone. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The ID of the destination zone. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -451,10 +485,13 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The secondary zone 1 of the instance.
-         * <p>
+         * <p>The secondary zone 1 of the instance.</p>
+         * <blockquote>
+         * <p> This parameter must be configured if the instance runs RDS editions other than RDS Basic Edition.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be configured if the instance runs RDS editions other than RDS Basic Edition.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-c</p>
          */
         public Builder zoneIdSlave1(String zoneIdSlave1) {
             this.putQueryParameter("ZoneIdSlave1", zoneIdSlave1);
@@ -463,10 +500,13 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The secondary zone 2 of the instance.
-         * <p>
+         * <p>The secondary zone 2 of the instance.</p>
+         * <blockquote>
+         * <p> You can specify this parameter only for instances that run RDS Enterprise Edition.</p>
+         * </blockquote>
          * 
-         * >  You can specify this parameter only for instances that run RDS Enterprise Edition.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
          */
         public Builder zoneIdSlave2(String zoneIdSlave2) {
             this.putQueryParameter("ZoneIdSlave2", zoneIdSlave2);

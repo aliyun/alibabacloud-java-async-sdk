@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescibeImportsFromDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>DescibeImportsFromDatabaseResponseBody</p>
@@ -85,7 +86,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The migration tasks.
+         * <p>The migration tasks.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B000AA91-393D-46F9-8D9B-098E28931A3A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescibeImportsFromDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescibeImportsFromDatabaseResponseBody</p>
+     */
     public static class ImportResultFromDB extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImportDataStatus")
         private String importDataStatus;
@@ -205,19 +224,22 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             private String incrementalImportingTime; 
 
             /**
-             * The status of the migration task. Valid values:
-             * <p>
+             * <p>The status of the migration task. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStart</strong>: The migration task has not started.</li>
+             * <li><strong>FullExporting</strong>: The migration task is exporting full data.</li>
+             * <li><strong>FullImporting</strong>: The migration task is importing full data.</li>
+             * <li><strong>Success</strong>: The migration task is successful.</li>
+             * <li><strong>Failed</strong>: The migration task failed.</li>
+             * <li><strong>Canceled</strong>: The migration task is canceled.</li>
+             * <li><strong>Canceling</strong>: The migration task is being canceled.</li>
+             * <li><strong>IncrementalWaiting</strong>: The migration task is waiting to synchronize incremental data.</li>
+             * <li><strong>IncrementalImporting</strong>: The migration task is synchronizing incremental data.</li>
+             * <li><strong>StopSyncing</strong>: The migration task stops synchronizing data.</li>
+             * </ul>
              * 
-             * *   **NotStart**: The migration task has not started.
-             * *   **FullExporting**: The migration task is exporting full data.
-             * *   **FullImporting**: The migration task is importing full data.
-             * *   **Success**: The migration task is successful.
-             * *   **Failed**: The migration task failed.
-             * *   **Canceled**: The migration task is canceled.
-             * *   **Canceling**: The migration task is being canceled.
-             * *   **IncrementalWaiting**: The migration task is waiting to synchronize incremental data.
-             * *   **IncrementalImporting**: The migration task is synchronizing incremental data.
-             * *   **StopSyncing**: The migration task stops synchronizing data.
+             * <strong>example:</strong>
+             * <p>NotStart</p>
              */
             public Builder importDataStatus(String importDataStatus) {
                 this.importDataStatus = importDataStatus;
@@ -225,7 +247,10 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the migration task.
+             * <p>The description of the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder importDataStatusDescription(String importDataStatusDescription) {
                 this.importDataStatusDescription = importDataStatusDescription;
@@ -233,11 +258,14 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the migration task. Valid values:
-             * <p>
+             * <p>The type of the migration task. Valid values:</p>
+             * <ul>
+             * <li><strong>Full</strong>: full migration</li>
+             * <li><strong>Incremental:</strong>: incremental migration</li>
+             * </ul>
              * 
-             * *   **Full**: full migration
-             * *   **Incremental:**: incremental migration
+             * <strong>example:</strong>
+             * <p>Full</p>
              */
             public Builder importDataType(String importDataType) {
                 this.importDataType = importDataType;
@@ -245,7 +273,10 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the migration task.
+             * <p>The ID of the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder importId(Integer importId) {
                 this.importId = importId;
@@ -253,7 +284,10 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task synchronized incremental data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the migration task synchronized incremental data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2011-06-11T15:00Z</p>
              */
             public Builder incrementalImportingTime(String incrementalImportingTime) {
                 this.incrementalImportingTime = incrementalImportingTime;
@@ -267,6 +301,12 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescibeImportsFromDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescibeImportsFromDatabaseResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImportResultFromDB")
         private java.util.List < ImportResultFromDB> importResultFromDB;

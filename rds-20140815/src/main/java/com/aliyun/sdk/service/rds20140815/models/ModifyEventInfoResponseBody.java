@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEventInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyEventInfoResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         private String successEventId; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mst.errorcode.success.errormessage</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +97,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error ID.
+         * <p>The error ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12343</p>
          */
         public Builder errorEventId(String errorEventId) {
             this.errorEventId = errorEventId;
@@ -101,7 +108,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of successful records.
+         * <p>The number of successful records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -117,7 +130,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the successful event.
+         * <p>The ID of the successful event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234221</p>
          */
         public Builder successEventId(String successEventId) {
             this.successEventId = successEventId;

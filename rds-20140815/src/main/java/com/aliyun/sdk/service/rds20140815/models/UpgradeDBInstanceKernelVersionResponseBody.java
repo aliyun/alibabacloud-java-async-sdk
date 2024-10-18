@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceKernelVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeDBInstanceKernelVersionResponseBody</p>
@@ -73,7 +74,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bpxxxxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -81,7 +85,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DA2ECBA0-4745-4491-9166-799FF8984AC9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The new minor engine version of the instance.
+         * <p>The new minor engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xcluster80_20210305</p>
          */
         public Builder targetMinorVersion(String targetMinorVersion) {
             this.targetMinorVersion = targetMinorVersion;
@@ -97,7 +107,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>226917****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

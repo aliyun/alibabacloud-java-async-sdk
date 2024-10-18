@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSlotRequest} extends {@link RequestModel}
  *
  * <p>DeleteSlotRequest</p>
@@ -168,10 +169,11 @@ public class DeleteSlotRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -180,7 +182,11 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp102g323jd4****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -207,7 +213,10 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can leave this parameter empty.
+         * <p>The ID of the resource group. You can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -234,7 +243,11 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.
+         * <p>The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slot_test01</p>
          */
         public Builder slotName(String slotName) {
             this.putQueryParameter("SlotName", slotName);
@@ -243,11 +256,15 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:
-         * <p>
+         * <p>The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:</p>
+         * <ul>
+         * <li><strong>ACTIVE</strong></li>
+         * <li><strong>INACTIVE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ACTIVE
-         * *   INACTIVE
+         * <strong>example:</strong>
+         * <p>INACTIVE</p>
          */
         public Builder slotStatus(String slotStatus) {
             this.putQueryParameter("SlotStatus", slotStatus);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The tags that are added to the instance.
+         * <p>The tags that are added to the instance.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class DBInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
         private java.util.List < String > DBInstanceIds;
@@ -111,6 +121,12 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class TagInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
         private DBInstanceIds DBInstanceIds;
@@ -162,7 +178,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The IDs of the instances to which the tag is added.
+             * <p>The IDs of the instances to which the tag is added.</p>
              */
             public Builder DBInstanceIds(DBInstanceIds DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
@@ -170,7 +186,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +197,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -192,6 +214,12 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfos")
         private java.util.List < TagInfos> tagInfos;

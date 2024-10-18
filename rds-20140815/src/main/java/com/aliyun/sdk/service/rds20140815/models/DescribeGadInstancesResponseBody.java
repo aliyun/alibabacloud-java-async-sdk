@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGadInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGadInstancesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the global active database cluster.
+         * <p>The details about the global active database cluster.</p>
          */
         public Builder gadInstances(java.util.List < GadInstances> gadInstances) {
             this.gadInstances = gadInstances;
@@ -57,7 +58,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76AF0609-4195-5DFC-BC78-3AD76FF872BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGadInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGadInstancesResponseBody</p>
+     */
     public static class GadInstanceMembers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceID")
         private String DBInstanceID;
@@ -181,7 +191,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1npi2j8********</p>
              */
             public Builder DBInstanceID(String DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -189,10 +202,13 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * A JSON array that consists of the details about the Data Transmission Service (DTS) synchronization task.
-             * <p>
+             * <p>A JSON array that consists of the details about the Data Transmission Service (DTS) synchronization task.</p>
+             * <blockquote>
+             * <p> Each unit node (secondary node) synchronizes data from the central node (primary node) by using DTS. This parameter contains the synchronization link ID and request ID of DTS.</p>
+             * </blockquote>
              * 
-             * >  Each unit node (secondary node) synchronizes data from the central node (primary node) by using DTS. This parameter contains the synchronization link ID and request ID of DTS.
+             * <strong>example:</strong>
+             * <p>{&quot;dtsInstanceId&quot;:&quot;dtsm9t107c********&quot;,&quot;dtsRequestId&quot;:&quot;190F0C6C-4BE6-5676-989B-DBDE6D34CD9C&quot;}</p>
              */
             public Builder dtsInstance(String dtsInstance) {
                 this.dtsInstance = dtsInstance;
@@ -200,10 +216,13 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine that is run by the node.
-             * <p>
+             * <p>The database engine that is run by the node.</p>
+             * <blockquote>
+             * <p> The value of this parameter is fixed as <strong>mysql</strong>.</p>
+             * </blockquote>
              * 
-             * >  The value of this parameter is fixed as **mysql**.
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -211,7 +230,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version that is run by the node.
+             * <p>The database engine version that is run by the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -219,7 +241,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the node resides.
+             * <p>The ID of the region where the node resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -227,7 +252,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmy*****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -235,11 +263,14 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The type of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>CENTRAL</strong>: The node is a central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.</li>
+             * <li><strong>UNIT</strong>: The node is a unit node. Each global active database cluster can have up to 10 unit nodes. All unit nodes synchronize data from the central node.</li>
+             * </ul>
              * 
-             * *   **CENTRAL**: The node is a central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.
-             * *   **UNIT**: The node is a unit node. Each global active database cluster can have up to 10 unit nodes. All unit nodes synchronize data from the central node.
+             * <strong>example:</strong>
+             * <p>CENTRAL</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -247,11 +278,14 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The node status. Valid values:
-             * <p>
+             * <p>The node status. Valid values:</p>
+             * <ul>
+             * <li><strong>activation</strong>: The node is running.</li>
+             * <li><strong>creating</strong>: The node is being created.</li>
+             * </ul>
              * 
-             * *   **activation**: The node is running.
-             * *   **creating**: The node is being created.
+             * <strong>example:</strong>
+             * <p>activation</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -265,6 +299,12 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGadInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGadInstancesResponseBody</p>
+     */
     public static class GadInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -364,7 +404,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the global active database cluster was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the global active database cluster was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-21T02:57:08Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -372,7 +415,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GadTest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -380,7 +426,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about each node in the cluster.
+             * <p>The information about each node in the cluster.</p>
              */
             public Builder gadInstanceMembers(java.util.List < GadInstanceMembers> gadInstanceMembers) {
                 this.gadInstanceMembers = gadInstanceMembers;
@@ -388,7 +434,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the global active database cluster.
+             * <p>The ID of the global active database cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gad-rm-bp1npi2j8********</p>
              */
             public Builder gadInstanceName(String gadInstanceName) {
                 this.gadInstanceName = gadInstanceName;
@@ -396,7 +445,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the most recent modification was made to the global active database cluster. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the most recent modification was made to the global active database cluster. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-21T03:01:20Z</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -404,10 +456,13 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine that is run by the global active database cluster.
-             * <p>
+             * <p>The database engine that is run by the global active database cluster.</p>
+             * <blockquote>
+             * <p> The value of this parameter is fixed as <strong>mysql</strong>.</p>
+             * </blockquote>
              * 
-             * >  The value of this parameter is fixed as **mysql**.
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -415,12 +470,15 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>activation</strong>: The cluster is running.</li>
+             * <li><strong>creating</strong>: The cluster is being created.</li>
+             * <li><strong>replica_adding</strong>: Nodes are being added to the cluster.</li>
+             * </ul>
              * 
-             * *   **activation**: The cluster is running.
-             * *   **creating**: The cluster is being created.
-             * *   **replica_adding**: Nodes are being added to the cluster.
+             * <strong>example:</strong>
+             * <p>activation</p>
              */
             public Builder status(String status) {
                 this.status = status;

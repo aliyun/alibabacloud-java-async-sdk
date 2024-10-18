@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBInstanceEndpointRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBInstanceEndpointRequest</p>
@@ -97,7 +98,10 @@ public class DeleteDBInstanceEndpointRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotency of requests. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotency of requests. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -106,7 +110,11 @@ public class DeleteDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.
+         * <p>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-****</p>
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -115,7 +123,11 @@ public class DeleteDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancePerformanceResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -105,7 +109,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The end time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2012-06-19T15:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -113,7 +120,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine of the instance.
+         * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -121,7 +131,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the performance metrics.
+         * <p>Details of the performance metrics.</p>
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -129,7 +139,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5409D02-D661-4BF3-8F3D-0A814D0574E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2012-06-10T15:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,6 +166,12 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -189,7 +211,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2011-05-30T03:29:00Z</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -197,7 +222,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the performance metric.
+             * <p>The value of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0&amp;13.6</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -211,6 +239,12 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PerformanceValue")
         private java.util.List < PerformanceValue> performanceValue;
@@ -252,6 +286,12 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -315,7 +355,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private Values values; 
 
             /**
-             * The name of the performance metric.
+             * <p>The name of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL_Sessions</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -323,7 +366,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the performance metrics.
+             * <p>The unit of the performance metrics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -331,10 +377,13 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The format in which the value of the performance metric is returned.
-             * <p>
+             * <p>The format in which the value of the performance metric is returned.</p>
+             * <blockquote>
+             * <p> If a performance metric value consists of multiple fields, the values are separated with ampersands (&amp;). Example: com_delete&amp;com_insert&amp;com_insert_select&amp;com_replace.</p>
+             * </blockquote>
              * 
-             * >  If a performance metric value consists of multiple fields, the values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.
+             * <strong>example:</strong>
+             * <p>recv_k&amp;sent_k</p>
              */
             public Builder valueFormat(String valueFormat) {
                 this.valueFormat = valueFormat;
@@ -342,7 +391,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The performance metric values.
+             * <p>The performance metric values.</p>
              */
             public Builder values(Values values) {
                 this.values = values;
@@ -356,6 +405,12 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PerformanceKey")
         private java.util.List < PerformanceKey> performanceKey;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceEndpointsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceEndpointsRequest</p>
@@ -96,10 +97,11 @@ public class DescribeDBInstanceEndpointsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -108,10 +110,13 @@ public class DescribeDBInstanceEndpointsRequest extends Request {
         }
 
         /**
-         * The endpoint ID of the instance.
-         * <p>
+         * <p>The endpoint ID of the instance.</p>
+         * <blockquote>
+         * <p> If this parameter is not specified, the information about all endpoints is returned.</p>
+         * </blockquote>
          * 
-         * >  If this parameter is not specified, the information about all endpoints is returned.
+         * <strong>example:</strong>
+         * <p>ep-****-ro</p>
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -120,7 +125,11 @@ public class DescribeDBInstanceEndpointsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-u****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

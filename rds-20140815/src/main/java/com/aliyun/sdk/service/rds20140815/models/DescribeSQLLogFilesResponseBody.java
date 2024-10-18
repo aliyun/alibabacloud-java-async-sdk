@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLLogFilesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * An array that consists of the returned audit log files.
+         * <p>An array that consists of the returned audit log files.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLLogFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogFilesResponseBody</p>
+     */
     public static class LogFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileID")
         private String fileID;
@@ -217,7 +236,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             private String logStatus; 
 
             /**
-             * The file name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custinsxxxxx.csv</p>
              */
             public Builder fileID(String fileID) {
                 this.fileID = fileID;
@@ -225,7 +247,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.
+             * <p>The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
              */
             public Builder logDownloadURL(String logDownloadURL) {
                 this.logDownloadURL = logDownloadURL;
@@ -233,7 +258,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the last SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time at which the last SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-05-24T07:00:00Z</p>
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -241,7 +269,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the audit log file. Unit: bytes.
+             * <p>The size of the audit log file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder logSize(String logSize) {
                 this.logSize = logSize;
@@ -249,7 +280,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the first SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time at which the first SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-05-23T07:00:00Z</p>
              */
             public Builder logStartTime(String logStartTime) {
                 this.logStartTime = logStartTime;
@@ -257,12 +291,15 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the audit log file. Valid values:
-             * <p>
+             * <p>The status of the audit log file. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failed</strong></li>
+             * <li><strong>Generating</strong></li>
+             * </ul>
              * 
-             * *   **Success**
-             * *   **Failed**
-             * *   **Generating**
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder logStatus(String logStatus) {
                 this.logStatus = logStatus;
@@ -276,6 +313,12 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogFilesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogFile")
         private java.util.List < LogFile> logFile;

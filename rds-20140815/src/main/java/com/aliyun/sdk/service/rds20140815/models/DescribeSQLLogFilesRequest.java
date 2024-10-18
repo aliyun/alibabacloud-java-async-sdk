@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogFilesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSQLLogFilesRequest</p>
@@ -154,7 +155,11 @@ public class DescribeSQLLogFilesRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -163,7 +168,10 @@ public class DescribeSQLLogFilesRequest extends Request {
         }
 
         /**
-         * The name of the audit log file.
+         * <p>The name of the audit log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custinsxxxxx.csv</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -190,7 +198,10 @@ public class DescribeSQLLogFilesRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: **1 to 100000**. Default value: **1**.
+         * <p>The page number. Valid values: <strong>1 to 100000</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -199,7 +210,10 @@ public class DescribeSQLLogFilesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **30 to 200**. Default value: **30**.
+         * <p>The number of entries per page. Valid values: <strong>30 to 200</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMarketingActivityRequest} extends {@link RequestModel}
  *
  * <p>DescribeMarketingActivityRequest</p>
@@ -168,7 +169,11 @@ public class DescribeMarketingActivityRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20725049</p>
          */
         public Builder aliUid(Long aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -177,9 +182,13 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * *   China site: 26842
-         * <p>
-         * *   International site: 26888
+         * <ul>
+         * <li>China site: 26842</li>
+         * <li>International site: 26888</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>26842</p>
          */
         public Builder bid(String bid) {
             this.putQueryParameter("Bid", bid);
@@ -188,7 +197,10 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +218,11 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -215,7 +231,10 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -242,7 +261,11 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>series</p>
          */
         public Builder upgradeCode(String upgradeCode) {
             this.putQueryParameter("UpgradeCode", upgradeCode);

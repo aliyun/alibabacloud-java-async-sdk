@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMigrateTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateMigrateTaskRequest</p>
@@ -197,11 +198,15 @@ public class CreateMigrateTaskRequest extends Request {
         } 
 
         /**
-         * The type of the migration task. Valid values:
-         * <p>
+         * <p>The type of the migration task. Valid values:</p>
+         * <ul>
+         * <li><strong>FULL</strong>: The migration task migrates full backup files.</li>
+         * <li><strong>UPDF</strong>: The migration task migrates incremental or log backup files.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **FULL**: The migration task migrates full backup files.
-         * *   **UPDF**: The migration task migrates incremental or log backup files.
+         * <strong>example:</strong>
+         * <p>FULL</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -210,15 +215,18 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The consistency check method for the database. Valid values:
-         * <p>
+         * <p>The consistency check method for the database. Valid values:</p>
+         * <ul>
+         * <li><strong>SyncExecuteDBCheck</strong>: synchronous database check</li>
+         * <li><strong>AsyncExecuteDBCheck</strong>: asynchronous database check</li>
+         * </ul>
+         * <p>Default value: <strong>AsyncExecuteDBCheck</strong> (compatible with SQL Server 2008 R2)</p>
+         * <blockquote>
+         * <p> This parameter is valid when <strong>IsOnlineDB</strong> is set to <strong>True</strong>.</p>
+         * </blockquote>
          * 
-         * *   **SyncExecuteDBCheck**: synchronous database check
-         * *   **AsyncExecuteDBCheck**: asynchronous database check
-         * 
-         * Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2)
-         * 
-         * >  This parameter is valid when **IsOnlineDB** is set to **True**.
+         * <strong>example:</strong>
+         * <p>AsyncExecuteDBCheck</p>
          */
         public Builder checkDBMode(String checkDBMode) {
             this.putQueryParameter("CheckDBMode", checkDBMode);
@@ -227,7 +235,11 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -236,7 +248,11 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The name of the destination database.
+         * <p>The name of the destination database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -245,13 +261,18 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to make the restored database data available for user access. Valid values:
-         * <p>
+         * <p>Specifies whether to make the restored database data available for user access. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> Set the value to <strong>True</strong> for instances that run SQL Server 2008 R2.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **True**
-         * *   **False**
-         * 
-         * >  Set the value to **True** for instances that run SQL Server 2008 R2.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder isOnlineDB(String isOnlineDB) {
             this.putQueryParameter("IsOnlineDB", isOnlineDB);
@@ -260,14 +281,20 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The migration task ID.
-         * <p>
+         * <p>The migration task ID.</p>
+         * <ul>
+         * <li>If you set <strong>BackupMode</strong> to <strong>FULL</strong>, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.</li>
+         * <li>If you set <strong>BackupMode</strong> to <strong>UPDF</strong>, the value of this parameter is the ID of the required full migration task.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you set <strong>IsOnlineDB</strong> to <strong>True</strong>, the value of <strong>BackupMode</strong> must be <strong>FULL</strong>.</li>
+         * <li>If you set <strong>IsOnlineDB</strong> to <strong>False</strong>, the value of <strong>BackupMode</strong> must be <strong>UPDF</strong>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   If you set **BackupMode** to **FULL**, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.
-         * *   If you set **BackupMode** to **UPDF**, the value of this parameter is the ID of the required full migration task.
-         * 
-         * > *   If you set **IsOnlineDB** to **True**, the value of **BackupMode** must be **FULL**.
-         * > *   If you set **IsOnlineDB** to **False**, the value of **BackupMode** must be **UPDF**.
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.putQueryParameter("MigrateTaskId", migrateTaskId);
@@ -276,12 +303,14 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The shared URL of the backup file in the OSS bucket. The URL must be encoded.
-         * <p>
+         * <p>The shared URL of the backup file in the OSS bucket. The URL must be encoded.</p>
+         * <p>If you specify multiple URLs, separate them with vertical bars (|) and then encode them.</p>
+         * <blockquote>
+         * <p> This parameter is required for instances that run SQL Server 2008 R2.</p>
+         * </blockquote>
          * 
-         * If you specify multiple URLs, separate them with vertical bars (|) and then encode them.
-         * 
-         * >  This parameter is required for instances that run SQL Server 2008 R2.
+         * <strong>example:</strong>
+         * <p>check_cdn_oss.sh <a href="http://www.xxxxxx.mobi">www.xxxxxx.mobi</a></p>
          */
         public Builder OSSUrls(String OSSUrls) {
             this.putQueryParameter("OSSUrls", OSSUrls);
@@ -290,15 +319,21 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The information about the backup file in the OSS bucket. The values consist of three parts that are separated by colons (:):
-         * <p>
+         * <p>The information about the backup file in the OSS bucket. The values consist of three parts that are separated by colons (:):</p>
+         * <ul>
+         * <li>OSS endpoint: oss-ap-southeast-1.aliyuncs.com.</li>
+         * <li>Name of the OSS bucket: rdsmssqlsingapore.</li>
+         * <li>Key of the backup file in the OSS bucket: autotest_2008R2_TestMigration_FULL.bak.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is optional for instances that run SQL Server 2008 R2.</li>
+         * <li>This parameter is required for instances that run a major engine version later than SQL Server 2008 R2.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   OSS endpoint: oss-ap-southeast-1.aliyuncs.com.
-         * *   Name of the OSS bucket: rdsmssqlsingapore.
-         * *   Key of the backup file in the OSS bucket: autotest\_2008R2\_TestMigration_FULL.bak.
-         * 
-         * > *   This parameter is optional for instances that run SQL Server 2008 R2.
-         * > *   This parameter is required for instances that run a major engine version later than SQL Server 2008 R2.
+         * <strong>example:</strong>
+         * <p>oss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:autotest_2008R2_TestMigration_FULL.bak</p>
          */
         public Builder ossObjectPositions(String ossObjectPositions) {
             this.putQueryParameter("OssObjectPositions", ossObjectPositions);

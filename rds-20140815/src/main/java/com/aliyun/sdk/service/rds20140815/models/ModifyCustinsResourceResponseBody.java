@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCustinsResourceResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCustinsResourceResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyCustinsResourceResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B5A6839-31A7-58D4-9F96-772BFAFD1CB5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ModifyCustinsResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>507******</p>
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

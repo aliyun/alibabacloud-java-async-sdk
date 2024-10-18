@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRenewalPriceResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         private Rules rules; 
 
         /**
-         * Details of price information.
+         * <p>Details of price information.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -69,7 +70,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC9F4EF6-D038-4405-B497-1F48E722C9F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details of the promotion rule.
+         * <p>An array that consists of the details of the promotion rule.</p>
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -90,6 +94,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class ActivityInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckErrMsg")
         private String checkErrMsg;
@@ -141,7 +151,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error description</p>
              */
             public Builder checkErrMsg(String checkErrMsg) {
                 this.checkErrMsg = checkErrMsg;
@@ -149,7 +162,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The error code that is returned.
+             * <p>The error code that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -157,7 +173,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful.
+             * <p>Indicates whether the request was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder success(String success) {
                 this.success = success;
@@ -171,6 +190,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class Coupon extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CouponNo")
         private String couponNo;
@@ -234,7 +259,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The coupon ID.
+             * <p>The coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -242,7 +270,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the coupon.
+             * <p>The description of the coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,7 +281,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the coupon is selected.
+             * <p>Indicates whether the coupon is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSelected(String isSelected) {
                 this.isSelected = isSelected;
@@ -258,7 +292,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the coupon.
+             * <p>The name of the coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -272,6 +309,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class Coupons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Coupon")
         private java.util.List < Coupon> coupon;
@@ -313,6 +356,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class RuleIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private java.util.List < String > ruleId;
@@ -354,6 +403,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityInfo")
         private ActivityInfo activityInfo;
@@ -453,7 +508,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The information about the promotion.
+             * <p>The information about the promotion.</p>
              */
             public Builder activityInfo(ActivityInfo activityInfo) {
                 this.activityInfo = activityInfo;
@@ -461,7 +516,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of information about the coupon.
+             * <p>An array that consists of information about the coupon.</p>
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;
@@ -469,7 +524,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The currency unit.
+             * <p>The currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -477,7 +535,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -485,7 +546,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -493,7 +557,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the ID of the promotion rule.
+             * <p>An array that consists of the ID of the promotion rule.</p>
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -501,7 +565,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price, which is equal to the original price minus the discount.
+             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -515,6 +582,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class Rule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -566,7 +639,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the activity.
+             * <p>The description of the activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -574,7 +650,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -582,7 +661,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the promotion rule.
+             * <p>The ID of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001199213</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -596,6 +678,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;

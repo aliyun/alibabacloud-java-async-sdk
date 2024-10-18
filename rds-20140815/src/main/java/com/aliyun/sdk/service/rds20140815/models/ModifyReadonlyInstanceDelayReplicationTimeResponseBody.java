@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyReadonlyInstanceDelayReplicationTimeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyReadonlyInstanceDelayReplicationTimeResponseBody</p>
@@ -73,7 +74,10 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
         private String taskId; 
 
         /**
-         * The ID of the read-only instance.
+         * <p>The ID of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-bpxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,10 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
         }
 
         /**
-         * The latency at which to replicate data from the primary instance to the read-only instance. Unit: seconds.
+         * <p>The latency at which to replicate data from the primary instance to the read-only instance. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder readSQLReplicationTime(String readSQLReplicationTime) {
             this.readSQLReplicationTime = readSQLReplicationTime;
@@ -89,7 +96,10 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBB11B5A-7B37-493A-87E6-490BCB7BDF98</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>241535739</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

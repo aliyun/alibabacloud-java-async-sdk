@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ActivateMigrationTargetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ActivateMigrationTargetInstanceResponseBody</p>
@@ -85,7 +86,10 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * The name of the destination instance.
+         * <p>The name of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp102g323jd4****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -93,7 +97,10 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76364A52-E0AB-5CC8-9818-CF1DC482C092</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,10 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The private IP address that is used to connect to the self-managed PostgreSQL instance.
+         * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.sourceIpAddress = sourceIpAddress;
@@ -109,7 +119,10 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The port number that is used to connect to the self-managed PostgreSQL instance.
+         * <p>The port number that is used to connect to the self-managed PostgreSQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder sourcePort(Long sourcePort) {
             this.sourcePort = sourcePort;
@@ -117,7 +130,10 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the identification task.
+         * <p>The ID of the identification task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440913675</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

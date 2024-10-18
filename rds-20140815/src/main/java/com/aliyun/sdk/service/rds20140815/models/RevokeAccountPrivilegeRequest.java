@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeAccountPrivilegeRequest} extends {@link RequestModel}
  *
  * <p>RevokeAccountPrivilegeRequest</p>
@@ -140,7 +141,11 @@ public class RevokeAccountPrivilegeRequest extends Request {
         } 
 
         /**
-         * The name of the account.
+         * <p>The name of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -149,7 +154,11 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -158,7 +167,11 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The name of the database. You can revoke all permissions of the account on this database. Separate multiple databases with commas (,).
+         * <p>The name of the database. You can revoke all permissions of the account on this database. Separate multiple databases with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

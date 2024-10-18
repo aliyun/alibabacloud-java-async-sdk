@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMaskingRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMaskingRulesResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMaskingRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMaskingRulesResponseBody</p>
+     */
     public static class RuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < String > columns;
@@ -151,6 +158,12 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMaskingRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMaskingRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultAlgo")
         private String defaultAlgo;
@@ -272,6 +285,12 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMaskingRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMaskingRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;

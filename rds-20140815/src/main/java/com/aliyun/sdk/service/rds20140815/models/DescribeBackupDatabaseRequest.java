@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupDatabaseRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupDatabaseRequest</p>
@@ -110,7 +111,10 @@ public class DescribeBackupDatabaseRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set.
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90262212</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -119,7 +123,11 @@ public class DescribeBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

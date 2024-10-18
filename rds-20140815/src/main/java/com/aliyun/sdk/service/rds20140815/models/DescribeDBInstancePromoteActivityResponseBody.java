@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePromoteActivityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancePromoteActivityResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22973492**********</p>
          */
         public Builder aliUid(String aliUid) {
             this.aliUid = aliUid;
@@ -117,9 +121,13 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * *   China site: 26842
-         * <p>
-         * *   International site: 26888
+         * <ul>
+         * <li>China site: 26842</li>
+         * <li>International site: 26888</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>268**</p>
          */
         public Builder bid(String bid) {
             this.bid = bid;
@@ -127,7 +135,10 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -135,7 +146,10 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -143,12 +157,15 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database engine. Valid values:
-         * <p>
+         * <p>The type of the database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **PostgreSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -156,7 +173,10 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The activity information about the instance. For more information, see [Instance activities](~~2391834~~).
+         * <p>The activity information about the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance activities</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isActivity(String isActivity) {
             this.isActivity = isActivity;
@@ -164,7 +184,10 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94CB8D93-017A-5AE7-A118-6E0F89D93C0A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

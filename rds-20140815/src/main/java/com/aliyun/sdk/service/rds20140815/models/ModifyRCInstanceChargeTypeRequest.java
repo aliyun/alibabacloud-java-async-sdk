@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRCInstanceChargeTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyRCInstanceChargeTypeRequest</p>
@@ -161,7 +162,7 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -170,7 +171,7 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

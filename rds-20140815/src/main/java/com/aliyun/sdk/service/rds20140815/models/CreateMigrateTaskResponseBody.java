@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMigrateTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMigrateTaskResponseBody</p>
@@ -97,11 +98,14 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The type of the migration task. Valid values:
-         * <p>
+         * <p>The type of the migration task. Valid values:</p>
+         * <ul>
+         * <li><strong>FULL</strong>: The migration task migrates full backup files.</li>
+         * <li><strong>UPDF</strong>: The migration task migrates incremental or log backup files.</li>
+         * </ul>
          * 
-         * *   **FULL**: The migration task migrates full backup files.
-         * *   **UPDF**: The migration task migrates incremental or log backup files.
+         * <strong>example:</strong>
+         * <p>FULL</p>
          */
         public Builder backupMode(String backupMode) {
             this.backupMode = backupMode;
@@ -109,7 +113,10 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -117,7 +124,10 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test02</p>
          */
         public Builder DBName(String DBName) {
             this.DBName = DBName;
@@ -125,7 +135,10 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the migration task.
+         * <p>The ID of the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>564******</p>
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.migrateTaskId = migrateTaskId;
@@ -133,7 +146,10 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>866F5EB8-4650-4061-87F0-379F6F968BCE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +157,10 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>545****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

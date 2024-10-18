@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudMigrationResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudMigrationResultRequest</p>
@@ -154,7 +155,11 @@ public class DescribeCloudMigrationResultRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp102g323jd4****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -163,7 +168,11 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -172,7 +181,11 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,11 +203,14 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * The private IP address that is used to connect to the self-managed PostgreSQL instance.
-         * <p>
+         * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         * <ul>
+         * <li>If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
+         * <li>If the self-managed PostgreSQL instance resides in a data center, enter the private IP address of the data center.</li>
+         * </ul>
          * 
-         * *   If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](~~273914~~).
-         * *   If the self-managed PostgreSQL instance resides in a data center, enter the private IP address of the data center.
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.putQueryParameter("SourceIpAddress", sourceIpAddress);
@@ -203,7 +219,10 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * The port number that is used to connect to the self-managed PostgreSQL instance. You can run the netstat -a | grep PGSQL command to obtain the port number.
+         * <p>The port number that is used to connect to the self-managed PostgreSQL instance. You can run the netstat -a | grep PGSQL command to obtain the port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder sourcePort(Long sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);
@@ -212,7 +231,10 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * The task ID. You can obtain the task ID from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.
+         * <p>The task ID. You can obtain the task ID from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440437220</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -221,7 +243,10 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * The task name. You can obtain the task name from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.
+         * <p>The task name. You can obtain the task name from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

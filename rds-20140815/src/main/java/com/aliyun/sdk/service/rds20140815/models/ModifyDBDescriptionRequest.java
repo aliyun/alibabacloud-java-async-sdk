@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBDescriptionRequest</p>
@@ -140,7 +141,11 @@ public class ModifyDBDescriptionRequest extends Request {
         } 
 
         /**
-         * The description of the database.
+         * <p>The description of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test database A</p>
          */
         public Builder DBDescription(String DBDescription) {
             this.putQueryParameter("DBDescription", DBDescription);
@@ -149,7 +154,11 @@ public class ModifyDBDescriptionRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -158,7 +167,11 @@ public class ModifyDBDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB01</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCharacterSetNameResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCharacterSetNameResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The character sets that are supported.
+         * <p>The character sets that are supported.</p>
          */
         public Builder characterSetNameItems(CharacterSetNameItems characterSetNameItems) {
             this.characterSetNameItems = characterSetNameItems;
@@ -69,7 +70,10 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -77,7 +81,10 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCharacterSetNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCharacterSetNameResponseBody</p>
+     */
     public static class CharacterSetNameItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CharacterSetName")
         private java.util.List < String > characterSetName;

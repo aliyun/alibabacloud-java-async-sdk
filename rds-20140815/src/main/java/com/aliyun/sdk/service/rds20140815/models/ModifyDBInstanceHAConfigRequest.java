@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceHAConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceHAConfigRequest</p>
@@ -140,7 +141,11 @@ public class ModifyDBInstanceHAConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk543xxxxx</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -149,11 +154,15 @@ public class ModifyDBInstanceHAConfigRequest extends Request {
         }
 
         /**
-         * The HA mode of the instance.
-         * <p>
+         * <p>The HA mode of the instance.</p>
+         * <ul>
+         * <li>RPO: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</li>
+         * <li>RTO: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements for service availability, select this mode.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   RPO: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.
-         * *   RTO: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements for service availability, select this mode.
+         * <strong>example:</strong>
+         * <p>RPO</p>
          */
         public Builder HAMode(String HAMode) {
             this.putQueryParameter("HAMode", HAMode);
@@ -198,15 +207,20 @@ public class ModifyDBInstanceHAConfigRequest extends Request {
         }
 
         /**
-         * The data replication mode of the instance. For more information, see [Data replication mode](~~96055~~).
-         * <p>
+         * <p>The data replication mode of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/96055.html">Data replication mode</a>.</p>
+         * <ul>
+         * <li>Semi-sync: the semi-synchronous mode.</li>
+         * <li>Sync: the synchronous mode.</li>
+         * <li>gAsyncg: the asynchronous mode.</li>
+         * <li>Mgr: the MySQL group replication (MGR) mode. This mode is available only for the China site (aliyun.com).</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   Semi-sync: the semi-synchronous mode.
-         * *   Sync: the synchronous mode.
-         * *   gAsyncg: the asynchronous mode.
-         * *   Mgr: the MySQL group replication (MGR) mode. This mode is available only for the China site (aliyun.com).
-         * 
-         * > This parameter is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+         * <strong>example:</strong>
+         * <p>Sync</p>
          */
         public Builder syncMode(String syncMode) {
             this.putQueryParameter("SyncMode", syncMode);

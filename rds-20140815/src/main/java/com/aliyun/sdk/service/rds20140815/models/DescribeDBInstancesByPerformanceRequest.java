@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesByPerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesByPerformanceRequest</p>
@@ -260,7 +261,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -269,7 +273,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -296,10 +303,11 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
-         * <p>
+         * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -308,10 +316,11 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **5** to **100**.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: <strong>5</strong> to <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -320,7 +329,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -329,7 +341,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -356,7 +371,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The sorting basis.
+         * <p>The sorting basis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU_Usage</p>
          */
         public Builder sortKey(String sortKey) {
             this.putQueryParameter("SortKey", sortKey);
@@ -365,7 +383,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The sorting method.
+         * <p>The sorting method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder sortMethod(String sortMethod) {
             this.putQueryParameter("SortMethod", sortMethod);
@@ -374,7 +395,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The tags that are added to the instances. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. Format: `{"key1":"value1"}`.
+         * <p>The tags that are added to the instances. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. Format: <code>{&quot;key1&quot;:&quot;value1&quot;}</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -383,7 +407,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the proxy mode.
+         * <p>The ID of the proxy mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);
@@ -398,6 +425,12 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancesByPerformanceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesByPerformanceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -437,7 +470,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag 1 that is added to the instances.
+             * <p>The key of tag 1 that is added to the instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -445,7 +481,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
             }
 
             /**
-             * The value of tag 1 that is added to the instances.
+             * <p>The value of tag 1 that is added to the instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

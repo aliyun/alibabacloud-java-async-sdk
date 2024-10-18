@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhitelistTemplateLinkedInstanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeWhitelistTemplateLinkedInstanceRequest</p>
@@ -110,7 +111,10 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
         } 
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +123,10 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can leave this parameter empty.
+         * <p>The resource group ID. You can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -146,7 +153,11 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.
+         * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>412</p>
          */
         public Builder templateId(Integer templateId) {
             this.putBodyParameter("TemplateId", templateId);

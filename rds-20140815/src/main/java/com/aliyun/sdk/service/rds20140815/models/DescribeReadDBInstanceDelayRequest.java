@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReadDBInstanceDelayRequest} extends {@link RequestModel}
  *
  * <p>DescribeReadDBInstanceDelayRequest</p>
@@ -153,7 +154,11 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
         } 
 
         /**
-         * The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.
+         * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -180,7 +185,11 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
         }
 
         /**
-         * The read-only instance ID. You can call the DescribeDBInstances operation to query the read-only instance ID.
+         * <p>The read-only instance ID. You can call the DescribeDBInstances operation to query the read-only instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-bp*****</p>
          */
         public Builder readInstanceId(String readInstanceId) {
             this.putQueryParameter("ReadInstanceId", readInstanceId);
@@ -189,7 +198,10 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

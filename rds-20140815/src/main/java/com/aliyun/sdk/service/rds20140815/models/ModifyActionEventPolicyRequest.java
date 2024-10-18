@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyActionEventPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyActionEventPolicyRequest</p>
@@ -111,11 +112,15 @@ public class ModifyActionEventPolicyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the event history feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the event history feature. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **True**
-         * *   **False**
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableEventLog(String enableEventLog) {
             this.putQueryParameter("EnableEventLog", enableEventLog);
@@ -133,7 +138,11 @@ public class ModifyActionEventPolicyRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

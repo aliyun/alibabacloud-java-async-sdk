@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRCImageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRCImageListResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Images.
+         * <p>The information about the images.</p>
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -105,7 +106,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -129,7 +139,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2553A660-E4EB-4AF4-A402-8AFF70A49143</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeRCImageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRCImageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCImageListResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -321,7 +343,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * Architecture.
+             * <p>The image architecture. Valid values:</p>
+             * <ul>
+             * <li>x86_64</li>
+             * <li>arm64</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -329,7 +358,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-25T02:17:40Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -337,7 +369,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -345,7 +380,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-2oqiu973jwcxe****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -353,7 +391,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created_from_i-2zeh17y17sz677x****</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -361,7 +402,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * <p>The image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -369,7 +413,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * IsPublic.
+             * <p>Indicates whether the image is a public image. Public images include public images provided by Alibaba Cloud and custom images published as community images.</p>
+             * <ul>
+             * <li><strong>true</strong>: The image is a public image.</li>
+             * <li><strong>false</strong>: The image is not a public image.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPublic(Boolean isPublic) {
                 this.isPublic = isPublic;
@@ -377,7 +428,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * OSName.
+             * <p>The display name of the operating system in Chinese.</p>
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -385,7 +436,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * OSNameEn.
+             * <p>The display name of the operating system in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Linux  2.1903 LTS 64 bit Quick Boot</p>
              */
             public Builder OSNameEn(String OSNameEn) {
                 this.OSNameEn = OSNameEn;
@@ -393,7 +447,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong></li>
+             * <li><strong>linux</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -401,7 +462,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The image size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -409,7 +473,16 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The image status. Valid values:</p>
+             * <ul>
+             * <li><strong>Unavailable</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>CreateFailed</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -417,7 +490,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>Indicates whether the image is used by the RDS Custom instance. Valid values:</p>
+             * <ul>
+             * <li><strong>instance</strong>: The image is used to create one or more RDS Custom instances.</li>
+             * <li><strong>none</strong>: The image is not used to create RDS Custom instances.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;

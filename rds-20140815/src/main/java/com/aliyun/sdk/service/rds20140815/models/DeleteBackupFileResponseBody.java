@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackupFileResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteBackupFileResponseBody</p>
@@ -49,7 +50,7 @@ public class DeleteBackupFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the IDs of deleted backup sets.
+         * <p>An array that consists of the IDs of deleted backup sets.</p>
          */
         public Builder deletedBaksetIds(DeletedBaksetIds deletedBaksetIds) {
             this.deletedBaksetIds = deletedBaksetIds;
@@ -57,7 +58,10 @@ public class DeleteBackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7B3A91C-0ACD-4948-ACAE-xxxxxxxD4069</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DeleteBackupFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteBackupFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteBackupFileResponseBody</p>
+     */
     public static class DeletedBaksetIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeletedBaksetIds")
         private java.util.List < Integer > deletedBaksetIds;
@@ -97,7 +107,7 @@ public class DeleteBackupFileResponseBody extends TeaModel {
             private java.util.List < Integer > deletedBaksetIds; 
 
             /**
-             * An array that consists of the IDs of deleted backup sets.
+             * <p>An array that consists of the IDs of deleted backup sets.</p>
              */
             public Builder deletedBaksetIds(java.util.List < Integer > deletedBaksetIds) {
                 this.deletedBaksetIds = deletedBaksetIds;

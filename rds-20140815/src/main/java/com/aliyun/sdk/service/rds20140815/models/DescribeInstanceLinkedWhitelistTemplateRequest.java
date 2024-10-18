@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceLinkedWhitelistTemplateRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceLinkedWhitelistTemplateRequest</p>
@@ -110,7 +111,11 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp191w771kd3****</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -119,7 +124,10 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +136,10 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can leave this parameter empty.
+         * <p>The resource group ID. You can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek3dbzqbh6****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

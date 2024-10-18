@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRCInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRCInstancesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RCInstances.
+         * <p>The details of the instance.</p>
          */
         public Builder RCInstances(java.util.List < RCInstances> RCInstances) {
             this.RCInstances = RCInstances;
@@ -109,7 +116,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9DD55F4-1A5F-48CA-BA57-DFB3CA8C4C34</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRCInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstancesResponseBody</p>
+     */
     public static class RCInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
@@ -265,7 +284,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ClusterName.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testrdscustom</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -273,7 +295,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * <p>The database type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_custom</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -281,7 +306,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -289,7 +317,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the task was created. The time is displayed in GMT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 07:56:53.0</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -297,7 +328,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HostIp.
+             * <p>The host IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.30.XXX.XXX</p>
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -305,7 +339,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The host name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zeaiz4g9u23f40m****</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -313,7 +350,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze704f*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -321,7 +361,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -329,7 +372,20 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Starting</strong></li>
+             * <li><strong>Stopping</strong></li>
+             * <li><strong>Stopped</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> If the value returned for the DescribeRCInstances operation is different from the value that is returned for the <strong>DescribeRCInstanceAttribute</strong> operation, the value returned for the <strong>DescribeRCInstanceAttribute</strong> operation shall prevail.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -337,7 +393,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6f7l4fg90****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

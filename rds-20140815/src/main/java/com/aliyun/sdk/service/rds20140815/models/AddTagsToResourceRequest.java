@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTagsToResourceRequest} extends {@link RequestModel}
  *
  * <p>AddTagsToResourceRequest</p>
@@ -204,7 +205,10 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -213,10 +217,14 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can enter up to 30 instance IDs in a single request. If you enter more than one instance ID, you must separate the instance IDs with commas (,).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can enter up to 30 instance IDs in a single request. If you enter more than one instance ID, you must separate the instance IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -243,7 +251,11 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hagnzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,7 +264,10 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -279,10 +294,13 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The tags that you want to add. Each tag consists of a tag key and a tag value. You can specify a maximum of five tags in the following format for each request: {"key1":"value1","key2":"value2"...}.
-         * <p>
+         * <p>The tags that you want to add. Each tag consists of a tag key and a tag value. You can specify a maximum of five tags in the following format for each request: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}.</p>
+         * <blockquote>
+         * <p> The tag key is required and the tag value is optional.</p>
+         * </blockquote>
          * 
-         * >  The tag key is required and the tag value is optional.
+         * <strong>example:</strong>
+         * <p>{“key1”:”value1”,“key2”:””}</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -291,7 +309,10 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The ID of the proxy mode.
+         * <p>The ID of the proxy mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);
@@ -306,6 +327,12 @@ public class AddTagsToResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddTagsToResourceRequest} extends {@link TeaModel}
+     *
+     * <p>AddTagsToResourceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -345,7 +372,10 @@ public class AddTagsToResourceRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.
+             * <p>The tag key of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -353,7 +383,10 @@ public class AddTagsToResourceRequest extends Request {
             }
 
             /**
-             * The tag value of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.
+             * <p>The tag value of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

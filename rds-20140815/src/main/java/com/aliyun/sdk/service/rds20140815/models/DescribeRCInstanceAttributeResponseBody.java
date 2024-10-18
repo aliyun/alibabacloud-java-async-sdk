@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRCInstanceAttributeResponseBody</p>
@@ -481,7 +482,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster to which the instance belongs.</p>
+         * <blockquote>
+         * <p> This parameter will be deprecated. We recommend that you use other parameters to ensure compatibility.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -489,7 +496,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Cpu.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder cpu(Integer cpu) {
             this.cpu = cpu;
@@ -497,7 +507,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-22T06:52:23Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -505,7 +518,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreditSpecification.
+         * <p>The performance mode of the burstable instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder creditSpecification(String creditSpecification) {
             this.creditSpecification = creditSpecification;
@@ -513,7 +529,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DataDisks.
+         * <p>The details of the data disk.</p>
          */
         public Builder dataDisks(DataDisks dataDisks) {
             this.dataDisks = dataDisks;
@@ -521,7 +537,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DedicatedHostAttribute.
+         * <p>The attributes of the dedicated hosts.</p>
          */
         public Builder dedicatedHostAttribute(DedicatedHostAttribute dedicatedHostAttribute) {
             this.dedicatedHostAttribute = dedicatedHostAttribute;
@@ -529,7 +545,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DeploymentSetId.
+         * <p>The ID of the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-uf6c8qerk019bj1l****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.deploymentSetId = deploymentSetId;
@@ -537,7 +556,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -545,7 +567,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DiskType.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder diskType(String diskType) {
             this.diskType = diskType;
@@ -553,7 +578,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EcsInstanceType.
+         * <p>The Elastic Compute Service (ECS) instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.2xlarge</p>
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.ecsInstanceType = ecsInstanceType;
@@ -561,7 +589,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EipAddress.
+         * <p>The elastic IP address (EIP) associated with the instance.</p>
          */
         public Builder eipAddress(EipAddress eipAddress) {
             this.eipAddress = eipAddress;
@@ -569,7 +597,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EnableJumboFrame.
+         * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableJumboFrame(Boolean enableJumboFrame) {
             this.enableJumboFrame = enableJumboFrame;
@@ -577,7 +612,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * <p>The expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-10T00:00:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -585,7 +623,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HostName.
+         * <p>The instance hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iZ2zej1n3cin51rlmby****</p>
          */
         public Builder hostName(String hostName) {
             this.hostName = hostName;
@@ -593,7 +634,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HostType.
+         * <p>The storage type of the host. Valid values:</p>
+         * <ul>
+         * <li><strong>dhg_cloud_ssd</strong>: ESSD</li>
+         * <li><strong>dhg_local_ssd</strong>: local SSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg_cloud_ssd</p>
          */
         public Builder hostType(String hostType) {
             this.hostType = hostType;
@@ -601,7 +649,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-2oqiu973jwcxe****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -609,7 +660,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InnerIpAddress.
+         * <p>The private IP addresses of the instance in the classic network.</p>
          */
         public Builder innerIpAddress(InnerIpAddress innerIpAddress) {
             this.innerIpAddress = innerIpAddress;
@@ -617,7 +668,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-dh2jf9n6j4s14926****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -625,7 +679,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -633,7 +690,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceNetworkType.
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><strong>classic</strong></li>
+         * <li><strong>vpc</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
@@ -641,7 +705,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.x4.xlarge.6cm</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -649,7 +716,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InternetChargeType.
+         * <p>The billing method for network usage. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+         * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -657,7 +734,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InternetMaxBandwidthIn.
+         * <p>The maximum inbound bandwidth from the Internet. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.internetMaxBandwidthIn = internetMaxBandwidthIn;
@@ -665,7 +745,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InternetMaxBandwidthOut.
+         * <p>The maximum outbound bandwidth to the Internet. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -673,7 +756,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IoOptimized.
+         * <p>Indicates whether the instance is I/O optimized.</p>
+         * <ul>
+         * <li><strong>optimized</strong>: The instance is I/O optimized.</li>
+         * <li><strong>none</strong>: The instance is not I/O optimized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>optimized</p>
          */
         public Builder ioOptimized(String ioOptimized) {
             this.ioOptimized = ioOptimized;
@@ -681,7 +771,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPairName.
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_01</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -689,7 +782,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory capacity of the instance. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -697,7 +793,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * OperationLocks.
+         * <p>The reasons why the instance is locked.</p>
          */
         public Builder operationLocks(OperationLocks operationLocks) {
             this.operationLocks = operationLocks;
@@ -705,7 +801,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PublicIpAddress.
+         * <p>The public IP address of the instance.</p>
          */
         public Builder publicIpAddress(PublicIpAddress publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
@@ -713,7 +809,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -721,7 +820,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA2D4F34-01A7-46EB-A339-D80882135206</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -729,7 +831,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupIds.
+         * <p>The security groups.</p>
          */
         public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
@@ -737,7 +839,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SerialNumber.
+         * <p>The serial number of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b076f6ff-46d1-4234-a608-4e951ed6****</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
@@ -745,7 +850,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>Pending</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Starting</strong></li>
+         * <li><strong>Stopping</strong></li>
+         * <li><strong>Stopped</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -753,7 +868,15 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StoppedMode.
+         * <p>Indicates whether the billing of the instance continues after the instance is stopped. Valid values:</p>
+         * <ul>
+         * <li><strong>KeepCharging</strong>: The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</li>
+         * <li><strong>StopCharging</strong>: The billing of the instance stops after the instance is stopped. After the instance is stopped, resources such as CPU cores, memory resources, and public IP address are released. The instance may be unable to restart if some required resources are out of stock in the current region.</li>
+         * <li><strong>Not-applicable</strong>: The No Fees for Stopped Instances feature is not supported for the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Not-applicable</p>
          */
         public Builder stoppedMode(String stoppedMode) {
             this.stoppedMode = stoppedMode;
@@ -761,7 +884,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VlanId.
+         * <p>The virtual LAN (VLAN) ID of the instance.</p>
+         * <blockquote>
+         * <p> This parameter will be deprecated. We recommend that you use other parameters to ensure compatibility.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder vlanId(String vlanId) {
             this.vlanId = vlanId;
@@ -769,7 +898,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcAttributes.
+         * <p>The virtual private cloud (VPC) attributes of the instance.</p>
          */
         public Builder vpcAttributes(VpcAttributes vpcAttributes) {
             this.vpcAttributes = vpcAttributes;
@@ -777,7 +906,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -790,6 +922,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class DataDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -865,7 +1003,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * Category.
+             * <p>The category of the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -873,7 +1014,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteWithInstance.
+             * <p>Indicates whether the data disk is released when the instance is released. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The data disk is released when the instance is released.</li>
+             * <li><strong>false</strong>: The data disk is reserved when the instance is released.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -881,7 +1029,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Encrypted.
+             * <p>Indicates whether the data disk is encrypted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -889,7 +1044,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level of data disk. This parameter is available when the data disk is an Enterprise SSD (ESSD).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -897,7 +1055,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -911,6 +1072,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class DataDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDisk")
         private java.util.List < DataDisk> dataDisk;
@@ -952,6 +1119,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class DedicatedHostAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private String dedicatedHostId;
@@ -991,7 +1164,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private String dedicatedHostName; 
 
             /**
-             * DedicatedHostId.
+             * <p>The ID of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -999,7 +1175,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostName.
+             * <p>The name of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder dedicatedHostName(String dedicatedHostName) {
                 this.dedicatedHostName = dedicatedHostName;
@@ -1013,6 +1192,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class EipAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
@@ -1076,7 +1261,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private String ipAddress; 
 
             /**
-             * AllocationId.
+             * <p>The EIP ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bp14k3rz6cbg6zxbe****</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -1084,7 +1272,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * <p>The maximum Internet bandwidth of the EIP. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -1092,7 +1283,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeType.
+             * <p>The billing method of the Internet-facing instance. Valid values:</p>
+             * <ul>
+             * <li><strong>paybytraffic:</strong> pay-by-data-transfer</li>
+             * <li><strong>paybybandwidth</strong>: pay-by-bandwidth</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>paybytraffic</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1100,7 +1301,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * <p>The EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.147.XXX.XXX</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1114,6 +1318,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class InnerIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
@@ -1141,7 +1351,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * IpAddress.
+             * <p>The EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.147.XXX.XXX</p>
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1155,6 +1368,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class LockReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
@@ -1182,7 +1401,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * LockReason.
+             * <p>The reason why the instance is locked. Valid values:</p>
+             * <ul>
+             * <li><strong>financial</strong>: The instance is locked due to overdue payments.</li>
+             * <li><strong>security</strong>: The instance is locked for security purposes.</li>
+             * <li><strong>recycling</strong>: The instance is locked because the instance is a preemptible instance and pending to be released.</li>
+             * <li><strong>dedicatedhostfinancial</strong>: The instance is locked due to overdue payments for the dedicated host.</li>
+             * <li><strong>refunded</strong>: The instance is locked because a refund was made for the instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1196,6 +1425,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private java.util.List < LockReason> lockReason;
@@ -1223,7 +1458,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * LockReason.
+             * <p>The reason why the instance is locked. Valid values:</p>
+             * <ul>
+             * <li><strong>financial</strong>: The instance is locked due to overdue payments.</li>
+             * <li><strong>security</strong>: The instance is locked for security purposes.</li>
+             * <li><strong>recycling</strong>: The instance is locked because the instance is a preemptible instance and pending to be released.</li>
+             * <li><strong>dedicatedhostfinancial</strong>: The instance is locked due to overdue payments for the dedicated host.</li>
+             * <li><strong>refunded</strong>: The instance is locked because a refund was made for the instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;
@@ -1237,6 +1482,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class PublicIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
@@ -1264,7 +1515,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * IpAddress.
+             * <p>The EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.147.XXX.XXX</p>
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1278,6 +1532,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class SecurityGroupIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private java.util.List < String > securityGroupId;
@@ -1319,6 +1579,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class PrivateIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
@@ -1346,7 +1612,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * IpAddress.
+             * <p>The EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.147.XXX.XXX</p>
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1360,6 +1629,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class VpcAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NatIpAddress")
         private String natIpAddress;
@@ -1423,7 +1698,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * NatIpAddress.
+             * <p>The network address translation (NAT) IP address of the instance. The NAT IP address is used by instances in different VPCs for communication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder natIpAddress(String natIpAddress) {
                 this.natIpAddress = natIpAddress;
@@ -1431,7 +1709,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * <p>The private IP addresses of the instance.</p>
              */
             public Builder privateIpAddress(PrivateIpAddress privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -1439,7 +1717,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1nt15muovrc5qdj****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1447,7 +1728,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zeu747v4765aw2id****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

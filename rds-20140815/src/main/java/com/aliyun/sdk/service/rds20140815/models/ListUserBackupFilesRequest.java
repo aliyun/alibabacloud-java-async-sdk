@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserBackupFilesRequest} extends {@link RequestModel}
  *
  * <p>ListUserBackupFilesRequest</p>
@@ -180,7 +181,10 @@ public class ListUserBackupFilesRequest extends Request {
         } 
 
         /**
-         * The ID of the full backup file.
+         * <p>The ID of the full backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-kwwvr7v8t7of********</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -189,10 +193,13 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * The description of the full backup file.
-         * <p>
+         * <p>The description of the full backup file.</p>
+         * <blockquote>
+         * <p>The system implements a fuzzy match based on the value of this parameter.</p>
+         * </blockquote>
          * 
-         * > The system implements a fuzzy match based on the value of this parameter.
+         * <strong>example:</strong>
+         * <p>BackupTest</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -201,7 +208,10 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * The URL from which you can download the full backup file that is stored as an object in an Object Storage Service (OSS) bucket. For more information about how to obtain the URL, see [Obtain the access URL after you upload objects](~~39607~~).
+         * <p>The URL from which you can download the full backup file that is stored as an object in an Object Storage Service (OSS) bucket. For more information about how to obtain the URL, see <a href="https://help.aliyun.com/document_detail/39607.html">Obtain the access URL after you upload objects</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<strong><strong><strong>.oss-ap-</strong></strong></strong>**.aliyuncs.com/backup_qp.xb</p>
          */
         public Builder ossUrl(String ossUrl) {
             this.putQueryParameter("OssUrl", ossUrl);
@@ -219,7 +229,11 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -228,7 +242,10 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -255,14 +272,17 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * The status of the full backup file. Valid values:
-         * <p>
+         * <p>The status of the full backup file. Valid values:</p>
+         * <ul>
+         * <li><strong>Importing</strong>: The full backup file is being imported.</li>
+         * <li><strong>Failed</strong>: The full backup file fails to be imported.</li>
+         * <li><strong>CheckSucccess</strong>: The full backup file passes the check.</li>
+         * <li><strong>BackupSuccess</strong>: The full backup file is imported.</li>
+         * <li><strong>Deleted</strong>: The full backup file is deleted.</li>
+         * </ul>
          * 
-         * *   **Importing**: The full backup file is being imported.
-         * *   **Failed**: The full backup file fails to be imported.
-         * *   **CheckSucccess**: The full backup file passes the check.
-         * *   **BackupSuccess**: The full backup file is imported.
-         * *   **Deleted**: The full backup file is deleted.
+         * <strong>example:</strong>
+         * <p>CheckSuccess</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -271,7 +291,10 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * The tag that is added to the full backup file.
+         * <p>The tag that is added to the full backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1:value1</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

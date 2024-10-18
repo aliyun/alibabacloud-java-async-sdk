@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceForRebuildRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceForRebuildRequest</p>
@@ -336,10 +337,11 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -348,10 +350,13 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
-         * <p>
+         * <p>The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <blockquote>
+         * <p>: The name cannot start with http:// or https://.</p>
+         * </blockquote>
          * 
-         * > : The name cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>Test database</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -360,7 +365,11 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -369,11 +378,14 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The type of the network connection to the instance. Valid values:
-         * <p>
+         * <p>The type of the network connection to the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Internet</strong></li>
+         * <li><strong>Intranet</strong></li>
+         * </ul>
          * 
-         * *   **Internet**
-         * *   **Intranet**
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder DBInstanceNetType(String DBInstanceNetType) {
             this.putQueryParameter("DBInstanceNetType", DBInstanceNetType);
@@ -382,15 +394,18 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>Classic</strong></li>
+         * </ul>
+         * <p>Default value: Classic.</p>
+         * <blockquote>
+         * <p> The <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters must be specified when this parameter is set to <strong>VPC</strong>.</p>
+         * </blockquote>
          * 
-         * *   **VPC**
-         * *   **Classic**
-         * 
-         * Default value: Classic.
-         * 
-         * >  The **VPCId** and **VSwitchId** parameters must be specified when this parameter is set to **VPC**.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -417,11 +432,15 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The billing method of the destination instance. Valid values:
-         * <p>
+         * <p>The billing method of the destination instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -430,13 +449,17 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * *   **Year**
-         * *   **Month**
-         * 
-         * >  If you set the PayType parameter to **Prepaid**, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -445,7 +468,11 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -454,7 +481,10 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. The value of this parameter can be NULL.
+         * <p>The ID of the resource group. The value of this parameter can be NULL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -481,13 +511,15 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The IP address whitelist of the serverless instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for PostgreSQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. You can specify up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
-         * <p>
+         * <p>The IP address whitelist of the serverless instance. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Use a database client or the CLI to connect to an ApsaraDB RDS for PostgreSQL instance</a>. If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. You can specify up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <ul>
+         * <li>IP addresses, such as 10.10.XX.XX.</li>
+         * <li>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</li>
+         * </ul>
+         * <p>If this parameter is not specified, the default IP address whitelist is used.</p>
          * 
-         * *   IP addresses, such as 10.10.XX.XX.
-         * *   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
-         * 
-         * If this parameter is not specified, the default IP address whitelist is used.
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -505,13 +537,17 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. Valid values:
-         * <p>
+         * <p>The subscription duration of the instance. Valid values:</p>
+         * <ul>
+         * <li>If you set <strong>Period</strong> to <strong>Year</strong>, the value of <strong>UsedTime</strong> ranges from <strong>1</strong> to <strong>5</strong>.</li>
+         * <li>If you set <strong>Period</strong> to <strong>Month</strong>, the value of <strong>UsedTime</strong> ranges from <strong>1</strong> to <strong>11</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set <strong>PayType</strong> to <strong>Prepaid</strong>, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * *   If you set **Period** to **Year**, the value of **UsedTime** ranges from **1** to **5**.
-         * *   If you set **Period** to **Month**, the value of **UsedTime** ranges from **1** to **11**.
-         * 
-         * > If you set **PayType** to **Prepaid**, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -520,10 +556,13 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The VPC ID of the instance. If you set **InstanceNetworkType** to **VPC**, you must specify this parameter.
-         * <p>
+         * <p>The VPC ID of the instance. If you set <strong>InstanceNetworkType</strong> to <strong>VPC</strong>, you must specify this parameter.</p>
+         * <blockquote>
+         * <p>: If you specify this parameter, you must also specify <strong>ZoneId</strong>.</p>
+         * </blockquote>
          * 
-         * > : If you specify this parameter, you must also specify **ZoneId**.
+         * <strong>example:</strong>
+         * <p>vpc-uf6f7l4fg90xxxxxx</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -532,14 +571,18 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch. The vSwitch must belong to the zone that is specified by **ZoneId**.
-         * <p>
+         * <p>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by <strong>ZoneId</strong>.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you set <strong>InstanceNetworkType</strong> to <strong>VPC</strong>, you must also specify this parameter.</p>
+         * </li>
+         * <li><p>If you specify the ZoneSlaveId1 parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.
-         * 
-         * *   If you specify the ZoneSlaveId1 parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
+         * <strong>example:</strong>
+         * <p>vsw-uf6adz52c2pxxxxx</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -548,10 +591,13 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The zone ID of the primary instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
-         * <p>
+         * <p>The zone ID of the primary instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * <blockquote>
+         * <p>If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.</p>
+         * </blockquote>
          * 
-         * > If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -560,10 +606,13 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The zone ID of the secondary instance.
-         * <p>
+         * <p>The zone ID of the secondary instance.</p>
+         * <blockquote>
+         * <p> If the instance does not run RDS Basic Edition, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * >  If the instance does not run RDS Basic Edition, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-c</p>
          */
         public Builder zoneIdSlave1(String zoneIdSlave1) {
             this.putQueryParameter("ZoneIdSlave1", zoneIdSlave1);
@@ -572,10 +621,13 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The zone ID of the logger instance.
-         * <p>
+         * <p>The zone ID of the logger instance.</p>
+         * <blockquote>
+         * <p> This parameter is available only when the instance runs RDS Enterprise Edition.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only when the instance runs RDS Enterprise Edition.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
          */
         public Builder zoneIdSlave2(String zoneIdSlave2) {
             this.putQueryParameter("ZoneIdSlave2", zoneIdSlave2);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchDBInstanceNetTypeResponseBody} extends {@link TeaModel}
  *
  * <p>SwitchDBInstanceNetTypeResponseBody</p>
@@ -61,7 +62,10 @@ public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The endpoint that is used to connect to the instance after the switch of endpoints.
+         * <p>The endpoint that is used to connect to the instance after the switch of endpoints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new**********.mysql.rds.aliyuncs.com</p>
          */
         public Builder newConnectionString(String newConnectionString) {
             this.newConnectionString = newConnectionString;
@@ -69,7 +73,10 @@ public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint that is used to connect to the instance before the switch of endpoints.
+         * <p>The endpoint that is used to connect to the instance before the switch of endpoints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1**************.mysql.rds.aliyuncs.com</p>
          */
         public Builder oldConnectionString(String oldConnectionString) {
             this.oldConnectionString = oldConnectionString;
@@ -77,7 +84,10 @@ public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65BDA532-28AF-4122-AA39-B382721EEE64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

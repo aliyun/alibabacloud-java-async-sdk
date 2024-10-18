@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBNodesRequest} extends {@link RequestModel}
  *
  * <p>CreateDBNodesRequest</p>
@@ -153,10 +154,11 @@ public class CreateDBNodesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -165,7 +167,11 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * The instance ID You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze450g4ctg6t****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -174,7 +180,8 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * The details of the node.
+         * <p>The details of the node.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
@@ -202,7 +209,10 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -235,6 +245,12 @@ public class CreateDBNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBNodesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBNodesRequest</p>
+     */
     public static class DBNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("classCode")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -288,7 +304,11 @@ public class CreateDBNodesRequest extends Request {
             private String zoneId; 
 
             /**
-             * The specification information of the node.
+             * <p>The specification information of the node.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.n2.medium.xc</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -296,7 +316,10 @@ public class CreateDBNodesRequest extends Request {
             }
 
             /**
-             * The vSwitch ID of the node.
+             * <p>The vSwitch ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1sxxsodv28ey5dl****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -304,7 +327,11 @@ public class CreateDBNodesRequest extends Request {
             }
 
             /**
-             * The ID of the zone in which the node is deployed.
+             * <p>The ID of the zone in which the node is deployed.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

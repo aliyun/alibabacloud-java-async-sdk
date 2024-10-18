@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceIpHostnameRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceIpHostnameRequest</p>
@@ -139,7 +140,11 @@ public class DescribeDBInstanceIpHostnameRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~2628785~~) operation to query the instance ID.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -166,7 +171,11 @@ public class DescribeDBInstanceIpHostnameRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeDBInstanceAttribute](~~2628783~~) operation to query the region ID.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2628783.html">DescribeDBInstanceAttribute</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

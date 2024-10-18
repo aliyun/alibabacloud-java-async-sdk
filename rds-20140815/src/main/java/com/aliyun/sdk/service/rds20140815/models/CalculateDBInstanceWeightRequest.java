@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CalculateDBInstanceWeightRequest} extends {@link RequestModel}
  *
  * <p>CalculateDBInstanceWeightRequest</p>
@@ -68,7 +69,11 @@ public class CalculateDBInstanceWeightRequest extends Request {
         } 
 
         /**
-         * The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

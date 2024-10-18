@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateConnectionToOtherZoneRequest} extends {@link RequestModel}
  *
  * <p>MigrateConnectionToOtherZoneRequest</p>
@@ -112,7 +113,11 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         } 
 
         /**
-         * The endpoint of the instance. The endpoint is specified when you create the instance.
+         * <p>The endpoint of the instance. The endpoint is specified when you create the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1oypo6ky19y****</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -121,7 +126,11 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1oypo6ky19y****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -148,7 +157,11 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
+         * <p>The ID of the zone.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

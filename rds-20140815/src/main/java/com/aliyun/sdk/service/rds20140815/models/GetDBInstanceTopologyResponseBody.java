@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDBInstanceTopologyResponseBody} extends {@link TeaModel}
  *
  * <p>GetDBInstanceTopologyResponseBody</p>
@@ -73,7 +74,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An internal parameter. You can ignore this parameter.
+         * <p>An internal parameter. You can ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the topology.
+         * <p>The details about the topology.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * An internal parameter. You can ignore this parameter.
+         * <p>An internal parameter. You can ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7430AB1A-6D49-5B6D-B9E5-920250076074</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDBInstanceTopologyResponseBody</p>
+     */
     public static class Connections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -173,7 +189,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The endpoint that is used to connect to the database instance.
+             * <p>The endpoint that is used to connect to the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-m5ezban**********.mysql.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -181,7 +200,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-m5ezban**********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -189,11 +211,14 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the endpoint. Valid values:
-             * <p>
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>vpc</strong></li>
+             * <li><strong>public</strong></li>
+             * </ul>
              * 
-             * *   **vpc**
-             * *   **public**
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -201,7 +226,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -215,6 +243,12 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDBInstanceTopologyResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
@@ -302,7 +336,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-m5ezban**********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -310,10 +347,13 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated cluster.
-             * <p>
+             * <p>The ID of the dedicated cluster.</p>
+             * <blockquote>
+             * <p>: If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+             * </blockquote>
              * 
-             * > : If the instance does not reside in the specified dedicated cluster, no value is returned.
+             * <strong>example:</strong>
+             * <p>dhg-4n*****</p>
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -321,10 +361,13 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The host ID of the instance in the dedicated cluster.
-             * <p>
+             * <p>The host ID of the instance in the dedicated cluster.</p>
+             * <blockquote>
+             * <p>: If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+             * </blockquote>
              * 
-             * > : If the instance does not reside in the specified dedicated cluster, no value is returned.
+             * <strong>example:</strong>
+             * <p>i-bpxxxxxxx</p>
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -332,10 +375,13 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
-             * <p>
+             * <p>The ID of the instance.</p>
+             * <blockquote>
+             * <p>: The value **-1** is returned for an instance that does not reside in a dedicated cluster.</p>
+             * </blockquote>
              * 
-             * > : The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.
+             * <strong>example:</strong>
+             * <p>349054</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -343,11 +389,14 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. The following result is returned:
-             * <p>
+             * <p>The type of the node. The following result is returned:</p>
+             * <ul>
+             * <li><strong>Master</strong>: a primary node</li>
+             * <li><strong>Slave</strong>: a secondary node</li>
+             * </ul>
              * 
-             * *   **Master**: a primary node
-             * *   **Slave**: a secondary node
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -355,7 +404,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -369,6 +421,12 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDBInstanceTopologyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Connections")
         private java.util.List < Connections> connections;
@@ -420,7 +478,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * The network connection information of the instance.
+             * <p>The network connection information of the instance.</p>
              */
             public Builder connections(java.util.List < Connections> connections) {
                 this.connections = connections;
@@ -428,7 +486,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-m5ezban**********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -436,7 +497,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The queried nodes.
+             * <p>The queried nodes.</p>
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;

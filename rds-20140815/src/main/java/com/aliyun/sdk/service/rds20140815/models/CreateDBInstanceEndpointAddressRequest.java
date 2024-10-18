@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceEndpointAddressRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceEndpointAddressRequest</p>
@@ -156,10 +157,11 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -168,7 +170,11 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The prefix of the public endpoint.
+         * <p>The prefix of the public endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-*****</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -177,7 +183,11 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.
+         * <p>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-****</p>
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -186,7 +196,11 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -195,7 +209,11 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The network type of the endpoint. Only Internet is supported. Set the value to **Public**.
+         * <p>The network type of the endpoint. Only Internet is supported. Set the value to <strong>Public</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -204,7 +222,11 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The port number of the public endpoint.
+         * <p>The port number of the public endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -213,7 +235,10 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

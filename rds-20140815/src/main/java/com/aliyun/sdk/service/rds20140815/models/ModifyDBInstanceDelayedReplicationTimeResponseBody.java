@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceDelayedReplicationTimeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceDelayedReplicationTimeResponseBody</p>
@@ -73,7 +74,10 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         private String taskId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,10 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         }
 
         /**
-         * The replication latency of the read-only instance. Unit: seconds.
+         * <p>The replication latency of the read-only instance. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder readSQLReplicationTime(String readSQLReplicationTime) {
             this.readSQLReplicationTime = readSQLReplicationTime;
@@ -89,7 +96,10 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFB6083A-7699-489B-8278-C0CB4793A96E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715482.0</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

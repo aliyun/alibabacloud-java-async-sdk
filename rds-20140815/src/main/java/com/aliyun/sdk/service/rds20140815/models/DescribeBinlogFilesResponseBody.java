@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBinlogFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBinlogFilesResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details of the log file.
+         * <p>The details of the log file.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -105,7 +106,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of log files on the current page.
+         * <p>The number of log files on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -121,7 +128,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED169A3E-1657-4104-82AB-24EA8CD0DB75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total size of the log file.
+         * <p>The total size of the log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2269410</p>
          */
         public Builder totalFileSize(Long totalFileSize) {
             this.totalFileSize = totalFileSize;
@@ -137,7 +150,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of log files.
+         * <p>The total number of log files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -150,6 +166,12 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBinlogFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBinlogFilesResponseBody</p>
+     */
     public static class BinLogFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Checksum")
         private String checksum;
@@ -285,7 +307,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             private String remoteStatus; 
 
             /**
-             * The checksum. The value of this parameter is calculated by using the CRC64 algorithm.
+             * <p>The checksum. The value of this parameter is calculated by using the CRC64 algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18358304393468701857</p>
              */
             public Builder checksum(String checksum) {
                 this.checksum = checksum;
@@ -293,7 +318,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP-based download URL of the log file. If the return value of this parameter is NULL, ApsaraDB RDS does not provide a download URL for the log file.
+             * <p>The HTTP-based download URL of the log file. If the return value of this parameter is NULL, ApsaraDB RDS does not provide a download URL for the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdsxxxxx.oss.aliyuncs.com/xxxxxx">http://rdsxxxxx.oss.aliyuncs.com/xxxxxx</a></p>
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -301,10 +329,11 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the log file.
-             * <p>
+             * <p>The size of the log file.</p>
+             * <p>Unit: bytes.</p>
              * 
-             * Unit: bytes.
+             * <strong>example:</strong>
+             * <p>2269410</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -312,10 +341,13 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the log file belongs. This parameter helps determine whether the log file is generated on the primary instance or the secondary instance.
-             * <p>
+             * <p>The ID of the instance to which the log file belongs. This parameter helps determine whether the log file is generated on the primary instance or the secondary instance.</p>
+             * <blockquote>
+             * <p> You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click <strong>Service Availability</strong> to view the values of <strong>Primary Instance No.</strong> and <strong>Secondary Instance No.</strong>.</p>
+             * </blockquote>
              * 
-             * >  You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click **Service Availability** to view the values of **Primary Instance No.** and **Secondary Instance No.**.
+             * <strong>example:</strong>
+             * <p>5841973</p>
              */
             public Builder hostInstanceID(String hostInstanceID) {
                 this.hostInstanceID = hostInstanceID;
@@ -323,7 +355,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download files over an internal network.
+             * <p>The URL that is used to download files over an internal network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdslog-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxxx">http://rdslog-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxxx</a></p>
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -331,10 +366,11 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the URL.
-             * <p>
+             * <p>The expiration time of the URL.</p>
+             * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2013-06-09T18:00:00Z</p>
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -342,10 +378,11 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query.
-             * <p>
+             * <p>The beginning of the time range to query.</p>
+             * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2019-02-09T17:45:21Z</p>
              */
             public Builder logBeginTime(String logBeginTime) {
                 this.logBeginTime = logBeginTime;
@@ -353,10 +390,11 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query.
-             * <p>
+             * <p>The end of the time range to query.</p>
+             * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2019-02-15T13:10:28Z</p>
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -364,7 +402,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The log file name.
+             * <p>The log file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000000040000000000000019</p>
              */
             public Builder logFileName(String logFileName) {
                 this.logFileName = logFileName;
@@ -372,13 +413,15 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the log file that is stored in the Object Storage Service (OSS) bucket.
-             * <p>
+             * <p>The status of the log file that is stored in the Object Storage Service (OSS) bucket.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>Uploading</strong></li>
+             * <li><strong>Completed</strong></li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   **Uploading**
-             * *   **Completed**
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder remoteStatus(String remoteStatus) {
                 this.remoteStatus = remoteStatus;
@@ -392,6 +435,12 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBinlogFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBinlogFilesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BinLogFile")
         private java.util.List < BinLogFile> binLogFile;

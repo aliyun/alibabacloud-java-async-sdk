@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGadInstanceMemberResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGadInstanceMemberResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16C62438-491B-5C02-9B49-BA924A1372A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information returned.
+         * <p>An array that consists of the information returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGadInstanceMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGadInstanceMemberResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateCount")
         private String createCount;
@@ -109,7 +119,10 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
             private String gadInstanceName; 
 
             /**
-             * The number of unit nodes that are created by calling this operation.
+             * <p>The number of unit nodes that are created by calling this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder createCount(String createCount) {
                 this.createCount = createCount;
@@ -117,7 +130,10 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the global active database cluster.
+             * <p>The ID of the global active database cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gad-rm-bp1npi2j8********</p>
              */
             public Builder gadInstanceName(String gadInstanceName) {
                 this.gadInstanceName = gadInstanceName;

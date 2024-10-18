@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableCrossRegionRequest} extends {@link RequestModel}
  *
  * <p>DescribeAvailableCrossRegionRequest</p>
@@ -105,7 +106,11 @@ public class DescribeAvailableCrossRegionRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent zone list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent zone list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

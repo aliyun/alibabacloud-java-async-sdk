@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReceiveDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ReceiveDBInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class ReceiveDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the disaster recovery instance after the switchover.
+         * <p>The ID of the disaster recovery instance after the switchover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-tr2whku*****</p>
          */
         public Builder guardDBInstanceId(String guardDBInstanceId) {
             this.guardDBInstanceId = guardDBInstanceId;
@@ -57,7 +61,10 @@ public class ReceiveDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFB6083A-7699-489B-8278-C0CB4793A96E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

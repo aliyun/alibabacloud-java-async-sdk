@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachWhitelistTemplateToInstanceRequest} extends {@link RequestModel}
  *
  * <p>AttachWhitelistTemplateToInstanceRequest</p>
@@ -125,7 +126,11 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         } 
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp191w771kd3****</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -134,7 +139,10 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -143,7 +151,10 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about resource groups, see Resource groups.
+         * <p>The ID of the resource group. For more information about resource groups, see Resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -170,7 +181,11 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.
+         * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>412</p>
          */
         public Builder templateId(Integer templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePostgresExtensionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePostgresExtensionsResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         private java.util.List < UninstalledExtensions> uninstalledExtensions; 
 
         /**
-         * The list of extensions that are installed on the specified database.
+         * <p>The list of extensions that are installed on the specified database.</p>
          */
         public Builder installedExtensions(java.util.List < InstalledExtensions> installedExtensions) {
             this.installedExtensions = installedExtensions;
@@ -81,7 +82,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The overview of the extension.
+         * <p>The overview of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder overview(java.util.Map < String, ? > overview) {
             this.overview = overview;
@@ -89,7 +93,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E4448A6-9FE6-4474-A0C1-AA7CFC772CAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of extensions that are not installed on the specified database.
+         * <p>The list of extensions that are not installed on the specified database.</p>
          */
         public Builder uninstalledExtensions(java.util.List < UninstalledExtensions> uninstalledExtensions) {
             this.uninstalledExtensions = uninstalledExtensions;
@@ -110,6 +117,12 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePostgresExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePostgresExtensionsResponseBody</p>
+     */
     public static class InstalledExtensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -233,20 +246,23 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * The category of the extension.
-             * <p>
+             * <p>The category of the extension.</p>
+             * <ul>
+             * <li><strong>external_access</strong></li>
+             * <li><strong>index_support</strong></li>
+             * <li><strong>information_stat</strong></li>
+             * <li><strong>geography_space</strong></li>
+             * <li><strong>vector_engine</strong></li>
+             * <li><strong>timing_engine</strong></li>
+             * <li><strong>data_type</strong></li>
+             * <li><strong>encrypt_secure</strong></li>
+             * <li><strong>text_process</strong></li>
+             * <li><strong>operation_maintenance</strong></li>
+             * <li><strong>self_develop</strong></li>
+             * </ul>
              * 
-             * *   **external_access**
-             * *   **index_support**
-             * *   **information_stat**
-             * *   **geography_space**
-             * *   **vector_engine**
-             * *   **timing_engine**
-             * *   **data_type**
-             * *   **encrypt_secure**
-             * *   **text_process**
-             * *   **operation_maintenance**
-             * *   **self_develop**
+             * <strong>example:</strong>
+             * <p>information_stat</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -254,7 +270,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose of the extension.
+             * <p>The purpose of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostgreSQL load profile repository and report builder</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -262,7 +281,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The default version of the extension.
+             * <p>The default version of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.1</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -270,7 +292,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The current version of the extension.
+             * <p>The current version of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.1</p>
              */
             public Builder installedVersion(String installedVersion) {
                 this.installedVersion = installedVersion;
@@ -278,7 +303,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extension.
+             * <p>The name of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg_profile</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,7 +314,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The user of the extension.
+             * <p>The user of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -294,11 +325,14 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the extension.
-             * <p>
+             * <p>The priority of the extension.</p>
+             * <ul>
+             * <li><strong>0</strong>: The extension is displayed by default.</li>
+             * <li><strong>1</strong>: The extension is preferentially displayed.</li>
+             * </ul>
              * 
-             * *   **0**: The extension is displayed by default.
-             * *   **1**: The extension is preferentially displayed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -306,7 +340,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The extensions on which the current extension depends when it is installed.
+             * <p>The extensions on which the current extension depends when it is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{dblink,plpgsql}</p>
              */
             public Builder requires(String requires) {
                 this.requires = requires;
@@ -314,10 +351,13 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Alibaba Cloud account ID.
-             * <p>
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for self-developed exclusive extensions. You can view exclusive extensions only within your Alibaba Cloud account.</p>
+             * </blockquote>
              * 
-             * > Only exclusive plug-ins (plug-ins written by users) will return this parameter. Each Alibaba Cloud account only displays its own exclusive plug-ins.
+             * <strong>example:</strong>
+             * <p>181578148294****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -331,6 +371,12 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePostgresExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePostgresExtensionsResponseBody</p>
+     */
     public static class UninstalledExtensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -454,7 +500,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * The category of the extension.
+             * <p>The category of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>information_stat</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -462,7 +511,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose of the extension.
+             * <p>The purpose of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostgreSQL load profile repository and report builder</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -470,7 +522,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The default version of the extension.
+             * <p>The default version of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.1</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -478,7 +533,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The current version of the extension.
+             * <p>The current version of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.1</p>
              */
             public Builder installedVersion(String installedVersion) {
                 this.installedVersion = installedVersion;
@@ -486,7 +544,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extension.
+             * <p>The name of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg_cron</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -494,7 +555,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The user of the extension.
+             * <p>The user of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -502,7 +566,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the extension.
+             * <p>The priority of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -510,7 +577,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The extensions on which the current extension depends when it is installed.
+             * <p>The extensions on which the current extension depends when it is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{dblink,plpgsql}</p>
              */
             public Builder requires(String requires) {
                 this.requires = requires;
@@ -518,10 +588,13 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Alibaba Cloud account ID.
-             * <p>
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for self-developed exclusive extensions. You can view exclusive extensions only within your Alibaba Cloud account.</p>
+             * </blockquote>
              * 
-             * > Only exclusive plug-ins (plug-ins written by users) will return this parameter. Each Alibaba Cloud account only displays its own exclusive plug-ins.
+             * <strong>example:</strong>
+             * <p>181578148294****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

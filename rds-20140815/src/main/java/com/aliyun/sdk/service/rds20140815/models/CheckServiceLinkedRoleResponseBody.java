@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckServiceLinkedRoleResponseBody} extends {@link TeaModel}
  *
  * <p>CheckServiceLinkedRoleResponseBody</p>
@@ -49,7 +50,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether an SLR is created.
+         * <p>Indicates whether an SLR is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasServiceLinkedRole(String hasServiceLinkedRole) {
             this.hasServiceLinkedRole = hasServiceLinkedRole;
@@ -57,7 +61,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB44DC0A-7E77-442A-97A9-C6418694CB22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

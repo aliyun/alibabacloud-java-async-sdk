@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LockAccountResponseBody} extends {@link TeaModel}
  *
  * <p>LockAccountResponseBody</p>
@@ -37,7 +38,10 @@ public class LockAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B291C4B-DDCD-4D0A-8F6D-7F3241DE9228</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

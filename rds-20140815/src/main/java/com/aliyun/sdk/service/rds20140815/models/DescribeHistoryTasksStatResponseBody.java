@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHistoryTasksStatResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried tasks.
+         * <p>The queried tasks.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryTasksStatResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -109,16 +119,19 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>Scheduled</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Succeed</strong></li>
+             * <li><strong>Failed</strong></li>
+             * <li><strong>Cancelling</strong></li>
+             * <li><strong>Canceled</strong></li>
+             * <li><strong>Waiting</strong></li>
+             * </ul>
              * 
-             * *   **Scheduled**
-             * *   **Running**
-             * *   **Succeed**
-             * *   **Failed**
-             * *   **Cancelling**
-             * *   **Canceled**
-             * *   **Waiting**
+             * <strong>example:</strong>
+             * <p>Succeed,Waiting</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -126,7 +139,10 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tasks.
+             * <p>The total number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

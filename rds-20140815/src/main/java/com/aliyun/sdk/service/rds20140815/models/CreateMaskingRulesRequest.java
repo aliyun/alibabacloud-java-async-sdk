@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMaskingRulesRequest} extends {@link RequestModel}
  *
  * <p>CreateMaskingRulesRequest</p>
@@ -167,7 +168,7 @@ public class CreateMaskingRulesRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -240,7 +241,7 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>This parameter is required.</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -255,6 +256,12 @@ public class CreateMaskingRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMaskingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMaskingRulesRequest</p>
+     */
     public static class RuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < String > columns;

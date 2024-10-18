@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceConfigRequest</p>
@@ -168,7 +169,10 @@ public class ModifyDBInstanceConfigRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,11 +181,15 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * The name of the configuration item that you want to modify. Valid values:
-         * <p>
+         * <p>The name of the configuration item that you want to modify. Valid values:</p>
+         * <ul>
+         * <li><strong>pgbouncer</strong>. This configuration item is supported for ApsaraDB RDS for PostgreSQL instances.</li>
+         * <li><strong>clear_errorlog</strong>. This configuration item is supported for ApsaraDB RDS for SQL Server instances.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **pgbouncer**. This configuration item is supported for ApsaraDB RDS for PostgreSQL instances.
-         * *   **clear_errorlog**. This configuration item is supported for ApsaraDB RDS for SQL Server instances.
+         * <strong>example:</strong>
+         * <p>pgbouncer</p>
          */
         public Builder configName(String configName) {
             this.putQueryParameter("ConfigName", configName);
@@ -190,11 +198,15 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * The value of the configuration item that you want to modify. Valid values:
-         * <p>
+         * <p>The value of the configuration item that you want to modify. Valid values:</p>
+         * <ul>
+         * <li>If you set ConfigName to pgbouncer, the valid values are <strong>true</strong> and <strong>false</strong>.</li>
+         * <li>If you set ConfigName to clear_errorlog, set the value to <strong>1</strong>. The value 1 indicates that error logs are cleaned up.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set ConfigName to pgbouncer, the valid values are **true** and **false**.
-         * *   If you set ConfigName to clear_errorlog, set the value to **1**. The value 1 indicates that error logs are cleaned up.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder configValue(String configValue) {
             this.putQueryParameter("ConfigValue", configValue);
@@ -203,7 +215,11 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -230,7 +246,10 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute to obtain the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to obtain the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

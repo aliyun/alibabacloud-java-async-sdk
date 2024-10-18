@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDatabaseConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyDatabaseConfigRequest</p>
@@ -155,7 +156,11 @@ public class ModifyDatabaseConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4nnu1my39qr8****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -164,10 +169,14 @@ public class ModifyDatabaseConfigRequest extends Request {
         }
 
         /**
-         * The database name.
-         * <p>
+         * <p>The database name.</p>
+         * <blockquote>
+         * <p> You can specify only one database name.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can specify only one database name.
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -176,11 +185,15 @@ public class ModifyDatabaseConfigRequest extends Request {
         }
 
         /**
-         * The database property that you want to modify.
-         * <p>
+         * <p>The database property that you want to modify.</p>
+         * <ul>
+         * <li><strong>If you want to modify a property of the database</strong>, set this parameter to the name of the database property.</li>
+         * <li><strong>If you want to archive data from the database to an OSS bucket</strong>, specify the database status. If you set this parameter to <code>covert_online_db_to_cold_storage</code>, the system converts an online database to a cold storage database. If you set this parameter to <code>convert_cold_storage_db_to_online</code>, the system converts a cold storage database to an online database.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **If you want to modify a property of the database**, set this parameter to the name of the database property.
-         * *   **If you want to archive data from the database to an OSS bucket**, specify the database status. If you set this parameter to `covert_online_db_to_cold_storage`, the system converts an online database to a cold storage database. If you set this parameter to `convert_cold_storage_db_to_online`, the system converts a cold storage database to an online database.
+         * <strong>example:</strong>
+         * <p>compatibility_level</p>
          */
         public Builder databasePropertyName(String databasePropertyName) {
             this.putQueryParameter("DatabasePropertyName", databasePropertyName);
@@ -189,11 +202,15 @@ public class ModifyDatabaseConfigRequest extends Request {
         }
 
         /**
-         * The value of the database property that you want to modify.
-         * <p>
+         * <p>The value of the database property that you want to modify.</p>
+         * <ul>
+         * <li><strong>If you want to modify a property of the database</strong>, set this parameter to the property value.</li>
+         * <li><strong>If you want to archive data from the database to an OSS bucket</strong>, set this parameter to <strong>1</strong>. The system converts a database to a cold storage database or an online database.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **If you want to modify a property of the database**, set this parameter to the property value.
-         * *   **If you want to archive data from the database to an OSS bucket**, set this parameter to **1**. The system converts a database to a cold storage database or an online database.
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         public Builder databasePropertyValue(String databasePropertyValue) {
             this.putQueryParameter("DatabasePropertyValue", databasePropertyValue);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeRCInstanceDiskResponseBody} extends {@link TeaModel}
  *
  * <p>ResizeRCInstanceDiskResponseBody</p>
@@ -49,7 +50,10 @@ public class ResizeRCInstanceDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>230546833080102</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class ResizeRCInstanceDiskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

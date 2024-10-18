@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLLogRecordsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * The details about each SQL audit log entry.
+         * <p>The details about each SQL audit log entry.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of SQL audit log entries on the current page.
+         * <p>The number of SQL audit log entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogRecordsResponseBody</p>
+     */
     public static class SQLRecord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
@@ -241,7 +260,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             private Long totalExecutionTimes; 
 
             /**
-             * The username of the account that is recorded in the SQL audit log entry.
+             * <p>The username of the account that is recorded in the SQL audit log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accounttest</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -249,7 +271,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDB</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -257,7 +282,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2011-06-11T15:00:23Z</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -265,7 +293,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that is connected to the instance.
+             * <p>The IP address of the client that is connected to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.121</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -273,7 +304,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL audit log entries that are returned.
+             * <p>The number of SQL audit log entries that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -281,7 +315,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>update test.zxb set id=0 limit 1</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -289,7 +326,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The thread ID.
+             * <p>The thread ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1025865428</p>
              */
             public Builder threadID(String threadID) {
                 this.threadID = threadID;
@@ -297,7 +337,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the SQL statement. Unit: microseconds.
+             * <p>The execution duration of the SQL statement. Unit: microseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder totalExecutionTimes(Long totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;
@@ -311,6 +354,12 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SQLRecord")
         private java.util.List < SQLRecord> SQLRecord;

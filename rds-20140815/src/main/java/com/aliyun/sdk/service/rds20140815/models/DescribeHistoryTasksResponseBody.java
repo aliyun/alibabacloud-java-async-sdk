@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHistoryTasksResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The tasks.
+         * <p>The tasks.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: **10 to 100**. Default value: **10**.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
+         * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CD61041-35F7-10F7-BE94-33A48B22****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks that meet these constraints without taking pagination into account.
+         * <p>The total number of tasks that meet these constraints without taking pagination into account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHistoryTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionInfo")
         private String actionInfo;
@@ -385,31 +404,29 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:
-             * <p>
-             * 
-             *       "steps": [
-             *         {
-             *           "step_name": "exec_task", // The name of the step, which matches CurrentStepName.
-             *           "action_info": {    // The actions supported for this step.
-             *             "Waiting": [      // The status, which matches Status.
-             *               "modifySwitchTime" // The action. Multiple actions are supported.
-             *             ]
-             *           }
-             *         },
-             *         {
-             *           "step_name": "init_task", // The name of the step.
-             *           "action_info": {    // The actions supported for this step.
-             *             "Running": [      // The status.
-             *               "cancel",       // The action.
-             *               "pause"
-             *             ]
-             *           }
-             *         }
-             *       ]
+             * <p>A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:</p>
+             * <pre><code>  &quot;steps&quot;: [
+             *     {
+             *       &quot;step_name&quot;: &quot;exec_task&quot;, // The name of the step, which matches CurrentStepName.      &quot;action_info&quot;: {    // The actions supported for this step.        &quot;Waiting&quot;: [      // The status, which matches Status.          &quot;modifySwitchTime&quot; // The action. Multiple actions are supported.        ]
+             *       }
+             *     },
+             *     {
+             *       &quot;step_name&quot;: &quot;init_task&quot;, // The name of the step.      &quot;action_info&quot;: {    // The actions supported for this step.        &quot;Running&quot;: [      // The status.          &quot;cancel&quot;,       // The action.          &quot;pause&quot;
+             *         ]
+             *       }
              *     }
+             *   ]
+             * }
+             * </code></pre>
+             * <p>The system may support the following actions:</p>
+             * <ul>
+             * <li><strong>retry</strong>: retries the action.</li>
+             * <li><strong>cancel</strong>: cancels the action.</li>
+             * <li><strong>modifySwitchTime</strong>: changes the switching time or restoration time.</li>
+             * </ul>
              * 
-             * The system may support the following actions: retry cancel modifySwitchTime: changes the switching or restoration time.
+             * <strong>example:</strong>
+             * <p>{&quot;steps&quot;:[{&quot;action_info&quot;:{&quot;Waiting&quot;:[&quot;modifySwitchTime&quot;]},&quot;step_name&quot;:&quot;exec_task&quot;}]}</p>
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -417,7 +434,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who made the request. If CallerSource is set to User, CallerUid indicates the unique ID (UID) of the user.
+             * <p>The ID of the user who made the request. If CallerSource is set to User, CallerUid indicates the unique ID (UID) of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141345906006****</p>
              */
             public Builder callerSource(String callerSource) {
                 this.callerSource = callerSource;
@@ -425,7 +445,14 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The request source. Valid values: System User
+             * <p>The source of the request. Valid values:</p>
+             * <ul>
+             * <li><strong>System</strong></li>
+             * <li><strong>User</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder callerUid(String callerUid) {
                 this.callerUid = callerUid;
@@ -433,7 +460,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the current step. If this parameter is left empty, the task is not started.
+             * <p>The name of the current step. If this parameter is left empty, the task is not started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec_task</p>
              */
             public Builder currentStepName(String currentStepName) {
                 this.currentStepName = currentStepName;
@@ -441,7 +471,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The database type.
+             * <p>The database type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -449,7 +482,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The end time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-03T12:06:17Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -457,7 +493,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID. Example: rm-xxx.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf62br2491p5l****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -465,7 +504,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name, which is a user-defined alias.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -473,7 +515,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Example: user instance.
+             * <p>The instance category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -481,7 +526,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The product. Example: rds.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -489,7 +537,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task progress. Valid values: 0 to 100.
+             * <p>Indicates the task progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79.0</p>
              */
             public Builder progress(Float progress) {
                 this.progress = progress;
@@ -497,7 +548,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the current task was initiated.
+             * <p>The reason why the current task was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -505,7 +559,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -513,7 +570,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated amount of time remaining to complete the task. Unit: seconds.
+             * <p>The estimated amount of time remaining to complete the task. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -521,7 +581,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the task. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The start time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-03T11:31:03Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -529,16 +592,19 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
-             * <p>
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Scheduled</li>
+             * <li>Running</li>
+             * <li>Succeed</li>
+             * <li>Failed</li>
+             * <li>Cancelling</li>
+             * <li>Canceled</li>
+             * <li>Waiting</li>
+             * </ul>
              * 
-             * *   Scheduled
-             * *   Running
-             * *   Succeed
-             * *   Failed
-             * *   Cancelling
-             * *   Canceled
-             * *   Waiting
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -546,7 +612,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task details provided in the form of a JSON string. The JSON string can be customized and extended to include additional information about the task. The details vary based on the task type.
+             * <p>The task details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;callerUid&quot;:&quot;test&quot;}</p>
              */
             public Builder taskDetail(String taskDetail) {
                 this.taskDetail = taskDetail;
@@ -554,7 +623,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID in the t-\*\*\* format.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-83br18hloy3faf****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -562,7 +634,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task type or name.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest_dispatch_cases</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -570,7 +645,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user to which the resources belong.
+             * <p>The ID of the user to which the resources belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141345906006****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

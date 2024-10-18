@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmNotifyResponseBody} extends {@link TeaModel}
  *
  * <p>ConfirmNotifyResponseBody</p>
@@ -37,7 +38,10 @@ public class ConfirmNotifyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6919FA39-04CF-571F-A6B0-DCC7AECB4170</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

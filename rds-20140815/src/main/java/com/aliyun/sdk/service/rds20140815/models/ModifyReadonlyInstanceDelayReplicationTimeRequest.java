@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyReadonlyInstanceDelayReplicationTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyReadonlyInstanceDelayReplicationTimeRequest</p>
@@ -125,7 +126,11 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         } 
 
         /**
-         * The ID of the read-only instance. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The ID of the read-only instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-bpxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -143,7 +148,11 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         }
 
         /**
-         * The replication latency of the data replication. Unit: seconds.
+         * <p>The replication latency of the data replication. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder readSQLReplicationTime(String readSQLReplicationTime) {
             this.putQueryParameter("ReadSQLReplicationTime", readSQLReplicationTime);
@@ -152,7 +161,10 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

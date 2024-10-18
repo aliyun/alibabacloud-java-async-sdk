@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLLogReportListResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * An array that consists of SQL log reports.
+         * <p>An array that consists of SQL log reports.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of SQL log reports on the current page.
+         * <p>The number of SQL log reports on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class LatencyTopNItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgLatency")
         private Long avgLatency;
@@ -181,7 +200,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private String SQLText; 
 
             /**
-             * The average time that is required to execute the SQL statement. Unit: milliseconds.
+             * <p>The average time that is required to execute the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder avgLatency(Long avgLatency) {
                 this.avgLatency = avgLatency;
@@ -189,7 +211,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the SQL statement is executed.
+             * <p>The number of times that the SQL statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder SQLExecuteTimes(Long SQLExecuteTimes) {
                 this.SQLExecuteTimes = SQLExecuteTimes;
@@ -197,10 +222,13 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
-             * <p>
+             * <p>The SQL statement.</p>
+             * <blockquote>
+             * <p> Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.</p>
+             * </blockquote>
              * 
-             * >  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.
+             * <strong>example:</strong>
+             * <p>SELECT * FROM table_name;</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -214,6 +242,12 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class LatencyTopNItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LatencyTopNItem")
         private java.util.List < LatencyTopNItem> latencyTopNItem;
@@ -255,6 +289,12 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class QPSTopNItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SQLExecuteTimes")
         private Long SQLExecuteTimes;
@@ -294,7 +334,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private String SQLText; 
 
             /**
-             * The number of times that the SQL statement is executed.
+             * <p>The number of times that the SQL statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder SQLExecuteTimes(Long SQLExecuteTimes) {
                 this.SQLExecuteTimes = SQLExecuteTimes;
@@ -302,10 +345,13 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
-             * <p>
+             * <p>The SQL statement.</p>
+             * <blockquote>
+             * <p> Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.</p>
+             * </blockquote>
              * 
-             * >  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.
+             * <strong>example:</strong>
+             * <p>SELECT * FROM table_name;</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -319,6 +365,12 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class QPSTopNItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QPSTopNItem")
         private java.util.List < QPSTopNItem> QPSTopNItem;
@@ -360,6 +412,12 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LatencyTopNItems")
         private LatencyTopNItems latencyTopNItems;
@@ -411,7 +469,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private String reportTime; 
 
             /**
-             * An array that consists of SQL statements executed with the highest latency.
+             * <p>An array that consists of SQL statements executed with the highest latency.</p>
              */
             public Builder latencyTopNItems(LatencyTopNItems latencyTopNItems) {
                 this.latencyTopNItems = latencyTopNItems;
@@ -419,7 +477,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of SQL statements executed the most frequently.
+             * <p>An array that consists of SQL statements executed the most frequently.</p>
              */
             public Builder QPSTopNItems(QPSTopNItems QPSTopNItems) {
                 this.QPSTopNItems = QPSTopNItems;
@@ -427,7 +485,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the report was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the report was generated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-27T16:00:00Z</p>
              */
             public Builder reportTime(String reportTime) {
                 this.reportTime = reportTime;
@@ -441,6 +502,12 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssDownloadsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOssDownloadsResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the backup file.
+         * <p>Details of the backup file.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -89,7 +93,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the migration task.
+         * <p>The ID of the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>562154852</p>
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.migrateTaskId = migrateTaskId;
@@ -97,7 +104,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5409D02-D661-4BF3-8F3D-0A814D0574E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOssDownloadsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssDownloadsResponseBody</p>
+     */
     public static class OssDownload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
@@ -221,12 +237,15 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The backup type. Valid values:
-             * <p>
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>Database</strong>: full backup file</li>
+             * <li><strong>Differential_Database</strong>: incremental backup file</li>
+             * <li><strong>Transaction_Log</strong>: log backup file</li>
+             * </ul>
              * 
-             * *   **Database**: full backup file
-             * *   **Differential_Database**: incremental backup file
-             * *   **Transaction_Log**: log backup file
+             * <strong>example:</strong>
+             * <p>Database</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -234,7 +253,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup file was created in the download list. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the backup file was created in the download list. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-08-17T12:45:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -242,7 +264,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the backup file.
+             * <p>The description of the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>App description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,7 +275,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-08-27T12:45:15Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -258,7 +286,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backup file stored in the Object Storage Service (OSS) bucket.
+             * <p>The name of the backup file stored in the Object Storage Service (OSS) bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -266,7 +297,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the backup file. Unit: MB
+             * <p>The size of the backup file. Unit: MB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -274,7 +308,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the backup file is available. Valid values: **True and False**.
+             * <p>Indicates whether the backup file is available. Valid values: <strong>True and False</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isAvailable(String isAvailable) {
                 this.isAvailable = isAvailable;
@@ -282,21 +319,24 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the backup file. Valid values:
-             * <p>
+             * <p>The state of the backup file. Valid values:</p>
+             * <ul>
+             * <li><strong>NoStart</strong></li>
+             * <li><strong>Downloading</strong></li>
+             * <li><strong>Finished</strong></li>
+             * <li><strong>DownloadFailed</strong></li>
+             * <li><strong>VerifyFailed</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * <li><strong>DeleteFailed</strong></li>
+             * <li><strong>CheckSuccess</strong></li>
+             * <li><strong>CheckFailed</strong></li>
+             * <li><strong>Restoring</strong></li>
+             * <li><strong>Restored</strong></li>
+             * <li><strong>RestoreFailed</strong></li>
+             * </ul>
              * 
-             * *   **NoStart**
-             * *   **Downloading**
-             * *   **Finished**
-             * *   **DownloadFailed**
-             * *   **VerifyFailed**
-             * *   **Deleted**
-             * *   **DeleteFailed**
-             * *   **CheckSuccess**
-             * *   **CheckFailed**
-             * *   **Restoring**
-             * *   **Restored**
-             * *   **RestoreFailed**
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -310,6 +350,12 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOssDownloadsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssDownloadsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OssDownload")
         private java.util.List < OssDownload> ossDownload;

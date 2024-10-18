@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatabaseRequest} extends {@link RequestModel}
  *
  * <p>CreateDatabaseRequest</p>
@@ -154,18 +155,24 @@ public class CreateDatabaseRequest extends Request {
         } 
 
         /**
-         * The character set.
-         * <p>
+         * <p>The character set.</p>
+         * <ul>
+         * <li><p>Valid values for MySQL or MariaDB databases: <strong>utf8, gbk, latin1, and utf8mb4</strong></p>
+         * </li>
+         * <li><p>Valid values for SQL Server databases: <strong>Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS, and Chinese_PRC_BIN</strong></p>
+         * </li>
+         * <li><p>Valid values for PostgreSQL databases: a value in the <code>Character set,&lt;Collate&gt;,&lt;Ctype&gt;</code> format. Example: <code>UTF8,C,en_US.utf8</code>.</p>
+         * <ul>
+         * <li>Valid values for the character set: <strong>KOI8U, UTF8, WIN866, WIN874, WIN1250, WIN1251, WIN1252, WIN1253, WIN1254, WIN1255, WIN1256, WIN1257, WIN1258, EUC_CN, EUC_KR, EUC_TW, EUC_JP, EUC_JIS_2004, KOI8R, MULE_INTERNAL, LATIN1, LATIN2, LATIN3, LATIN4, LATIN5, LATIN6, LATIN7, LATIN8, LATIN9, LATIN10, ISO_8859_5, ISO_8859_6, ISO_8859_7, ISO_8859_8, and SQL_ASCII</strong></li>
+         * <li>Valid values for the <strong>Collate</strong> field: You can execute the <code>SELECT DISTINCT collname FROM pg_collation;</code> statement to obtain the field value. The default value is <strong>C</strong>.</li>
+         * <li>Valid values for the <strong>Ctype</strong> field: You can execute the <code>SELECT DISTINCT collctype FROM pg_collation;</code> statement to obtain the field value. The default value is <strong>en_US.utf8</strong>.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values for MySQL or MariaDB databases: **utf8, gbk, latin1, and utf8mb4**
-         * 
-         * *   Valid values for SQL Server databases: **Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, SQL_Latin1\_General_CP1\_CI_AS, SQL_Latin1\_General_CP1\_CS_AS, and Chinese_PRC_BIN**
-         * 
-         * *   Valid values for PostgreSQL databases: a value in the `Character set,<Collate>,<Ctype>` format. Example: `UTF8,C,en_US.utf8`.
-         * 
-         *     *   Valid values for the character set: **KOI8U, UTF8, WIN866, WIN874, WIN1250, WIN1251, WIN1252, WIN1253, WIN1254, WIN1255, WIN1256, WIN1257, WIN1258, EUC_CN, EUC_KR, EUC_TW, EUC_JP, EUC_JIS\_2004, KOI8R, MULE_INTERNAL, LATIN1, LATIN2, LATIN3, LATIN4, LATIN5, LATIN6, LATIN7, LATIN8, LATIN9, LATIN10, ISO\_8859\_5, ISO\_8859\_6, ISO\_8859\_7, ISO\_8859\_8, and SQL_ASCII**
-         *     *   Valid values for the **Collate** field: You can execute the `SELECT DISTINCT collname FROM pg_collation;` statement to obtain the field value. The default value is **C**.
-         *     *   Valid values for the **Ctype** field: You can execute the `SELECT DISTINCT collctype FROM pg_collation;` statement to obtain the field value. The default value is **en_US.utf8**.
+         * <strong>example:</strong>
+         * <p>gbk</p>
          */
         public Builder characterSetName(String characterSetName) {
             this.putQueryParameter("CharacterSetName", characterSetName);
@@ -174,10 +181,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The description of the database. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
-         * <p>
+         * <p>The description of the database. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The description must start with a letter.</p>
+         * <blockquote>
+         * <p>The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
          * 
-         * > The value cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>Database for testing</p>
          */
         public Builder DBDescription(String DBDescription) {
             this.putQueryParameter("DBDescription", DBDescription);
@@ -186,7 +196,11 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -195,14 +209,20 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the database.
-         * <p>
+         * <p>The name of the database.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The name must be 2 to 64 characters in length.</li>
+         * <li>The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
+         * <li>The name can contain lowercase letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must be unique within the instance.</li>
+         * <li>For more information about invalid characters, see <a href="https://help.aliyun.com/document_detail/26317.html">Forbidden keywords table</a>.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > *   The name must be 2 to 64 characters in length.
-         * > *   The name must start with a lowercase letter and end with a lowercase letter or digit.
-         * > *   The name can contain lowercase letters, digits, underscores (\_), and hyphens (-).
-         * > *   The name must be unique within the instance.
-         * > *   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).
+         * <strong>example:</strong>
+         * <p>rds_mysql</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

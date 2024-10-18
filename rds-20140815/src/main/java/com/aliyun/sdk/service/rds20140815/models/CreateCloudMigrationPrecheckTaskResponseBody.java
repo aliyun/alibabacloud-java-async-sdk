@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudMigrationPrecheckTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCloudMigrationPrecheckTaskResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateCloudMigrationPrecheckTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp102g323jd4****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -81,7 +85,10 @@ public class CreateCloudMigrationPrecheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60F9A12A-16B8-4728-B099-4CA38D32C31C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class CreateCloudMigrationPrecheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>439946016</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -97,7 +107,10 @@ public class CreateCloudMigrationPrecheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the task.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slf7w7wj3g</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

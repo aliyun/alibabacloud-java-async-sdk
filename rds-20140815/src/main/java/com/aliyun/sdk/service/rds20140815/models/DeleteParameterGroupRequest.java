@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteParameterGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteParameterGroupRequest</p>
@@ -134,7 +135,11 @@ public class DeleteParameterGroupRequest extends Request {
         }
 
         /**
-         * The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.
+         * <p>The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpg-gfs****</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -143,7 +148,11 @@ public class DeleteParameterGroupRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,7 +161,10 @@ public class DeleteParameterGroupRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute to obtain the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to obtain the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDbProxyInstanceSslRequest} extends {@link RequestModel}
  *
  * <p>ModifyDbProxyInstanceSslRequest</p>
@@ -127,7 +128,10 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         } 
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -136,7 +140,11 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4n3axxxxx</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -145,7 +153,11 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * The dedicated proxy endpoint of the instance.
+         * <p>The dedicated proxy endpoint of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123456.rwlb.rds.aliyuncs.com</p>
          */
         public Builder dbProxyConnectString(String dbProxyConnectString) {
             this.putQueryParameter("DbProxyConnectString", dbProxyConnectString);
@@ -154,7 +166,11 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.
+         * <p>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ta9um4xxxxx</p>
          */
         public Builder dbProxyEndpointId(String dbProxyEndpointId) {
             this.putQueryParameter("DbProxyEndpointId", dbProxyEndpointId);
@@ -163,14 +179,19 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * The SSL configuration setting that you want to apply on the instance. Valid values:
-         * <p>
+         * <p>The SSL configuration setting that you want to apply on the instance. Valid values:</p>
+         * <ul>
+         * <li>0: disables SSL encryption.</li>
+         * <li>1: enables SSL encryption or modifies the endpoint that requires SSL encryption.</li>
+         * <li>2: updates the validity period of the SSL certificate.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This setting causes your instance to restart. Proceed with caution.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: disables SSL encryption.
-         * *   1: enables SSL encryption or modifies the endpoint that requires SSL encryption.
-         * *   2: updates the validity period of the SSL certificate.
-         * 
-         * > This setting causes your instance to restart. Proceed with caution.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dbProxySslEnabled(String dbProxySslEnabled) {
             this.putQueryParameter("DbProxySslEnabled", dbProxySslEnabled);
@@ -179,7 +200,10 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

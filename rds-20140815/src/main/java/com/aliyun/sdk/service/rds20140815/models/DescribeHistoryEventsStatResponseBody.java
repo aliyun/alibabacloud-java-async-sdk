@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryEventsStatResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHistoryEventsStatResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The event.
+         * <p>The event.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E52666CC-330E-418A-8E5B-A19E3FB42D13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHistoryEventsStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryEventsStatResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventCategory")
         private String eventCategory;
@@ -109,7 +119,10 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+             * <p>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exception</p>
              */
             public Builder eventCategory(String eventCategory) {
                 this.eventCategory = eventCategory;
@@ -117,7 +130,10 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

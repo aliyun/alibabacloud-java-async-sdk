@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReplicationLinkLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeReplicationLinkLogsResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1trqb4p1xd****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The items.
+         * <p>The items.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -89,7 +93,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16C62438-491B-5C02-9B49-BA924A1372A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;
@@ -110,6 +120,12 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeReplicationLinkLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationLinkLogsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
@@ -317,7 +333,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The details of the task.
+             * <p>The details of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[Check rds empty]\nCheck rds databases: success\n[Check source connectivity]\nCheck ip connectable: success\nCheck port connectable: success\nCheck database connectable: success\nCheck account replication privilege: success\nCheck account createrole privilege: success\nCheck account monitor privilege: success\n[Check source version]\nCheck major version consistent: success\n[Check source glibc version]\nCheck source glibc version compatible: warning(warning:source glibc version is not compatible with rds pg)\n[Check disk size]\nCheck disk size enough: success\n[Check wal keep size]\nCheck wal keep size large enough: success\n[Check spec params]\nCheck if spec params too large: success\n [Check triggers]\nCheck triggers compatible: success\n[Check user functions]\nCheck user functions compatible: success\n<em>Migrate check success</em></p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -325,7 +344,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time. The time is displayed in UTC.
+             * <p>The creation time. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-25T06:57:41Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -333,7 +355,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time. The time is displayed in UTC.
+             * <p>The modification time. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-01T06:39:51Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -341,7 +366,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization information. This parameter is a reserved parameter.
+             * <p>The synchronization information. This parameter is a reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder replicationInfo(String replicationInfo) {
                 this.replicationInfo = replicationInfo;
@@ -349,12 +377,15 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the synchronization. Valid values:
-             * <p>
+             * <p>The status of the synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>steaming</strong>: The synchronization is in progress.</li>
+             * <li><strong>finish</strong>: The synchronization is complete.</li>
+             * <li><strong>disconnect</strong>: The synchronization is disconnected.</li>
+             * </ul>
              * 
-             * *   **steaming**: The synchronization is in progress.
-             * *   **finish**: The synchronization is complete.
-             * *   **disconnect**: The synchronization is disconnected.
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder replicationState(String replicationState) {
                 this.replicationState = replicationState;
@@ -362,7 +393,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The account of the database that is used for data synchronization.
+             * <p>The account of the database that is used for data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdbuser</p>
              */
             public Builder replicatorAccount(String replicatorAccount) {
                 this.replicatorAccount = replicatorAccount;
@@ -370,7 +404,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The password of the account.
+             * <p>The password of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testpassword</p>
              */
             public Builder replicatorPassword(String replicatorPassword) {
                 this.replicatorPassword = replicatorPassword;
@@ -378,7 +415,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the source instance.
+             * <p>The endpoint of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pgm-****.pg.rds.aliyuncs.com</p>
              */
             public Builder sourceAddress(String sourceAddress) {
                 this.sourceAddress = sourceAddress;
@@ -386,11 +426,14 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source instance. Valid values:
-             * <p>
+             * <p>The type of the source instance. Valid values:</p>
+             * <ul>
+             * <li>other: other instances</li>
+             * <li>aliyunRDS: an ApsaraDB RDS instance</li>
+             * </ul>
              * 
-             * *   other: other instances
-             * *   aliyunRDS: an ApsaraDB RDS instance
+             * <strong>example:</strong>
+             * <p>aliyunRDS</p>
              */
             public Builder sourceCategory(String sourceCategory) {
                 this.sourceCategory = sourceCategory;
@@ -398,7 +441,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the source instance.
+             * <p>The port number of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5432</p>
              */
             public Builder sourcePort(Long sourcePort) {
                 this.sourcePort = sourcePort;
@@ -406,7 +452,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The destination instance ID.
+             * <p>The destination instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pgm-bp1l4dutw453****</p>
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -414,7 +463,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8413252</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -422,7 +474,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -430,13 +485,16 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The stage of the task. Valid values:
-             * <p>
+             * <p>The stage of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>precheck</strong>: the precheck stage.</li>
+             * <li><strong>basebackup</strong>: the basic backup stage.</li>
+             * <li><strong>startup</strong>: the startup stage.</li>
+             * <li><strong>increment</strong>: the incremental synchronization stage.</li>
+             * </ul>
              * 
-             * *   **precheck**: the precheck stage.
-             * *   **basebackup**: the basic backup stage.
-             * *   **startup**: the startup stage.
-             * *   **increment**: the incremental synchronization stage.
+             * <strong>example:</strong>
+             * <p>increment</p>
              */
             public Builder taskStage(String taskStage) {
                 this.taskStage = taskStage;
@@ -444,12 +502,15 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>failure</strong></li>
+             * <li><strong>running</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **failure**
-             * *   **running**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -457,11 +518,14 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
-             * <p>
+             * <p>The type of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>create</strong>: creates a synchronization link.</li>
+             * <li><strong>create-dryrun</strong>: performs a precheck before a synchronization link is created.</li>
+             * </ul>
              * 
-             * *   **create**: creates a synchronization link.
-             * *   **create-dryrun**: performs a precheck before a synchronization link is created.
+             * <strong>example:</strong>
+             * <p>create</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebuildReplicationLinkResponseBody} extends {@link TeaModel}
  *
  * <p>RebuildReplicationLinkResponseBody</p>
@@ -73,7 +74,10 @@ public class RebuildReplicationLinkResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1trqb4p1xd****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,10 @@ public class RebuildReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65BDA532-28AF-4122-AA39-B382721EEE64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class RebuildReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3472****</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -97,7 +107,10 @@ public class RebuildReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The task name.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

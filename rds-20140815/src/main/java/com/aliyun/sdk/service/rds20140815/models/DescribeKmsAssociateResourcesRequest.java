@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKmsAssociateResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeKmsAssociateResourcesRequest</p>
@@ -196,10 +197,11 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -208,7 +210,11 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the KMS resource. Only key IDs are supported.
+         * <p>The ID of the KMS resource. Only key IDs are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>494c98ce-f2b5-48ab-96ab-36c986b6****</p>
          */
         public Builder kmsResourceId(String kmsResourceId) {
             this.putQueryParameter("KmsResourceId", kmsResourceId);
@@ -217,7 +223,10 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the KMS resource belongs.
+         * <p>The ID of the region to which the KMS resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder kmsResourceRegionId(String kmsResourceRegionId) {
             this.putQueryParameter("KmsResourceRegionId", kmsResourceRegionId);
@@ -226,7 +235,11 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * The type of the KMS resource. Only key is supported.
+         * <p>The type of the KMS resource. Only key is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder kmsResourceType(String kmsResourceType) {
             this.putQueryParameter("KmsResourceType", kmsResourceType);
@@ -235,7 +248,11 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the KMS resource belongs.
+         * <p>The ID of the Alibaba Cloud account to which the KMS resource belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>164882191396****</p>
          */
         public Builder kmsResourceUser(String kmsResourceUser) {
             this.putQueryParameter("KmsResourceUser", kmsResourceUser);
@@ -262,7 +279,10 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -271,7 +291,10 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

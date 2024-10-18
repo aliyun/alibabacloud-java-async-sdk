@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMaskingRulesRequest} extends {@link RequestModel}
  *
  * <p>ModifyMaskingRulesRequest</p>
@@ -33,6 +34,10 @@ public class ModifyMaskingRulesRequest extends Request {
     private String ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -56,6 +61,7 @@ public class ModifyMaskingRulesRequest extends Request {
         this.enabled = builder.enabled;
         this.maskingAlgo = builder.maskingAlgo;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.ruleConfig = builder.ruleConfig;
@@ -111,6 +117,13 @@ public class ModifyMaskingRulesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -144,6 +157,7 @@ public class ModifyMaskingRulesRequest extends Request {
         private String enabled; 
         private String maskingAlgo; 
         private String ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private RuleConfig ruleConfig; 
@@ -160,6 +174,7 @@ public class ModifyMaskingRulesRequest extends Request {
             this.enabled = request.enabled;
             this.maskingAlgo = request.maskingAlgo;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.ruleConfig = request.ruleConfig;
@@ -167,7 +182,7 @@ public class ModifyMaskingRulesRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -212,6 +227,15 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -240,7 +264,7 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>This parameter is required.</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -255,6 +279,12 @@ public class ModifyMaskingRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyMaskingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyMaskingRulesRequest</p>
+     */
     public static class RuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < String > columns;

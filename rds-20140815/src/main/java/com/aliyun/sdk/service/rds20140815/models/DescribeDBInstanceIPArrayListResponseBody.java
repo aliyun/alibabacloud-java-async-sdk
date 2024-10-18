@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceIPArrayListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceIPArrayListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the details about the IP address whitelists.
+         * <p>An array that consists of the details about the IP address whitelists.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2B6AF71-DC32-4055-B477-43B348798D10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceIPArrayListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceIPArrayListResponseBody</p>
+     */
     public static class DBInstanceIPArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayAttribute")
         private String DBInstanceIPArrayAttribute;
@@ -133,10 +143,13 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             private String securityIPType; 
 
             /**
-             * The attribute of the IP address whitelist. By default, this parameter is empty.
-             * <p>
+             * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
+             * <blockquote>
+             * <p> A whitelist with the hidden attribute does not appear in the console. Such IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).</p>
+             * </blockquote>
              * 
-             * >  A whitelist with the hidden attribute does not appear in the console. Such IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder DBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
                 this.DBInstanceIPArrayAttribute = DBInstanceIPArrayAttribute;
@@ -144,7 +157,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP address whitelist.
+             * <p>The name of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_default</p>
              */
             public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
                 this.DBInstanceIPArrayName = DBInstanceIPArrayName;
@@ -152,7 +168,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the IP address whitelist.
+             * <p>The IP addresses in the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -160,7 +179,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IP address.
+             * <p>The type of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder securityIPType(String securityIPType) {
                 this.securityIPType = securityIPType;
@@ -174,6 +196,12 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceIPArrayListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceIPArrayListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceIPArray")
         private java.util.List < DBInstanceIPArray> DBInstanceIPArray;

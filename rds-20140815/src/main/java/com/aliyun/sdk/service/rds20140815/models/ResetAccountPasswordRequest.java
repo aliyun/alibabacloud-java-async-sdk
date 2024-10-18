@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetAccountPasswordRequest} extends {@link RequestModel}
  *
  * <p>ResetAccountPasswordRequest</p>
@@ -140,7 +141,11 @@ public class ResetAccountPasswordRequest extends Request {
         } 
 
         /**
-         * The username of the account.
+         * <p>The username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -149,12 +154,18 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The new password.
-         * <p>
+         * <p>The new password.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The value must be 8 to 32 characters in length.</li>
+         * <li>The value must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>The following special characters are supported: ! @ # $ &amp; % ^ * ( ) _ + - =</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > *   The value must be 8 to 32 characters in length.
-         * > *   The value must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.
-         * > *   The following special characters are supported: ! @ # $ & % ^ \* ( ) \_ + - =
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -163,7 +174,11 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

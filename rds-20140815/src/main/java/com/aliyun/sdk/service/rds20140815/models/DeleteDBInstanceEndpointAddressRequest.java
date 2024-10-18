@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBInstanceEndpointAddressRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBInstanceEndpointAddressRequest</p>
@@ -112,10 +113,11 @@ public class DeleteDBInstanceEndpointAddressRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -124,7 +126,11 @@ public class DeleteDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The public endpoint.
+         * <p>The public endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new****.mysql.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putBodyParameter("ConnectionString", connectionString);
@@ -133,7 +139,11 @@ public class DeleteDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.
+         * <p>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-****</p>
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putBodyParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -142,7 +152,11 @@ public class DeleteDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

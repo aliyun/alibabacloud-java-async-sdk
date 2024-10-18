@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckServiceLinkedRoleRequest} extends {@link RequestModel}
  *
  * <p>CheckServiceLinkedRoleRequest</p>
@@ -134,10 +135,14 @@ public class CheckServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can specify any region for this parameter, which does not affect your query results. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can specify any region for this parameter, which does not affect your query results. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,7 +151,10 @@ public class CheckServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -173,10 +181,14 @@ public class CheckServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The SLR name.
-         * <p>
+         * <p>The SLR name.</p>
+         * <blockquote>
+         * <p> For more information about the SLRs supported by ApsaraDB RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about the SLRs supported by ApsaraDB RDS, see [Service-linked roles](~~342840~~).
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForRdsPgsqlOnEcs</p>
          */
         public Builder serviceLinkedRole(String serviceLinkedRole) {
             this.putQueryParameter("ServiceLinkedRole", serviceLinkedRole);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstanceConnectionRequest} extends {@link RequestModel}
  *
  * <p>ReleaseInstanceConnectionRequest</p>
@@ -140,7 +141,11 @@ public class ReleaseInstanceConnectionRequest extends Request {
         } 
 
         /**
-         * The public endpoint of the instance.
+         * <p>The public endpoint of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxx.mysql.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -149,7 +154,11 @@ public class ReleaseInstanceConnectionRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -158,11 +167,15 @@ public class ReleaseInstanceConnectionRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>1</strong>: classic network</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: virtual private cloud (VPC)
-         * *   **1**: classic network
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);

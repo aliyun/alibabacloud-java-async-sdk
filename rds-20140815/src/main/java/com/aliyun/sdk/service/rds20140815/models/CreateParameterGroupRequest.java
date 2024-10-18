@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateParameterGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateParameterGroupRequest</p>
@@ -184,11 +185,15 @@ public class CreateParameterGroupRequest extends Request {
         } 
 
         /**
-         * The database engine. Valid values:
-         * <p>
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>mysql</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **mysql**
-         * *   **PostgreSQL**
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -197,23 +202,30 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance.
-         * <p>
+         * <p>The database engine version of the instance.</p>
+         * <ul>
+         * <li><p>If the instance runs MySQL, the instance must run one of the following MySQL versions:</p>
+         * <ul>
+         * <li><strong>5.6</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>8.0</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If the instance runs PostgreSQL, the instance must run one of the following PostgreSQL versions:</p>
+         * <ul>
+         * <li><strong>10.0</strong></li>
+         * <li><strong>11.0</strong></li>
+         * <li><strong>12.0</strong></li>
+         * <li><strong>13.0</strong></li>
+         * <li><strong>14.0</strong></li>
+         * <li><strong>15.0</strong></li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the instance runs MySQL, the instance must run one of the following MySQL versions:
-         * 
-         *     *   **5.6**
-         *     *   **5.7**
-         *     *   **8.0**
-         * 
-         * *   If the instance runs PostgreSQL, the instance must run one of the following PostgreSQL versions:
-         * 
-         *     *   **10.0**
-         *     *   **11.0**
-         *     *   **12.0**
-         *     *   **13.0**
-         *     *   **14.0**
-         *     *   **15.0**
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -231,7 +243,10 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The description of the parameter template. The value can be up to 200 characters in length.
+         * <p>The description of the parameter template. The value can be up to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder parameterGroupDesc(String parameterGroupDesc) {
             this.putQueryParameter("ParameterGroupDesc", parameterGroupDesc);
@@ -240,11 +255,15 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The name of the parameter template.
-         * <p>
+         * <p>The name of the parameter template.</p>
+         * <ul>
+         * <li>The value must start with a letter and can contain letters, digits, periods (.), and underscores (_).</li>
+         * <li>The value can be 8 to 64 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The value must start with a letter and can contain letters, digits, periods (.), and underscores (\_).
-         * *   The value can be 8 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>test1234</p>
          */
         public Builder parameterGroupName(String parameterGroupName) {
             this.putQueryParameter("ParameterGroupName", parameterGroupName);
@@ -253,7 +272,11 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~).
+         * <p>A JSON string that consists of parameters and their values in the parameter template. Format: {&quot;Parameter 1&quot;:&quot;Value of Parameter 1&quot;,&quot;Parameter 2&quot;:&quot;Value of Parameter 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Modify the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Modify the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;back_log&quot;:&quot;3000&quot;,&quot;wait_timeout&quot;:&quot;86400&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -262,7 +285,11 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the parameter template. You can call the DescribeRegions operation to query the most recent zone list.
+         * <p>The region ID of the parameter template. You can call the DescribeRegions operation to query the most recent zone list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -271,7 +298,10 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

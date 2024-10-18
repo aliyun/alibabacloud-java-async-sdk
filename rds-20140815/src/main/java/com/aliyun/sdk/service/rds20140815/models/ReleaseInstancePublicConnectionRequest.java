@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstancePublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>ReleaseInstancePublicConnectionRequest</p>
@@ -125,7 +126,11 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * The public endpoint. You can call the DescribeDBInstanceNetInfo operation to query the public endpoint.
+         * <p>The public endpoint. You can call the DescribeDBInstanceNetInfo operation to query the public endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxx.mysql.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -134,7 +139,11 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

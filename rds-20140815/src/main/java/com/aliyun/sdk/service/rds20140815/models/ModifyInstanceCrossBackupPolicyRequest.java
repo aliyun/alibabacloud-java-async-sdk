@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceCrossBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceCrossBackupPolicyRequest</p>
@@ -195,13 +196,17 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the cross-region backup feature on the instance. This parameter specifies whether you can back up data and logs. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the cross-region backup feature on the instance. This parameter specifies whether you can back up data and logs. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the feature.</li>
+         * <li><strong>1:</strong> enables the feature.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Before you enable the cross-region backup feature, you must configure the CrossBackupRegion parameter.</p>
+         * </blockquote>
          * 
-         * *   **0**: disables the feature.
-         * *   **1:** enables the feature.
-         * 
-         * > Before you enable the cross-region backup feature, you must configure the CrossBackupRegion parameter.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder backupEnabled(String backupEnabled) {
             this.putQueryParameter("BackupEnabled", backupEnabled);
@@ -210,7 +215,10 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cross-region backup files of the instance are stored.
+         * <p>The ID of the region in which the cross-region backup files of the instance are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder crossBackupRegion(String crossBackupRegion) {
             this.putQueryParameter("CrossBackupRegion", crossBackupRegion);
@@ -219,7 +227,10 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy that is used to save the cross-region backup files of the instance. Set the value to **1**. The value 1 specifies that all cross-region backup files are saved.
+         * <p>The policy that is used to save the cross-region backup files of the instance. Set the value to <strong>1</strong>. The value 1 specifies that all cross-region backup files are saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder crossBackupType(String crossBackupType) {
             this.putQueryParameter("CrossBackupType", crossBackupType);
@@ -228,7 +239,11 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -237,13 +252,17 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the cross-region log backup feature on the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the cross-region log backup feature on the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the feature.</li>
+         * <li><strong>1:</strong> enables the feature.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can enable the cross-region log backup feature only when the cross-region backup feature is enabled.</p>
+         * </blockquote>
          * 
-         * *   **0**: disables the feature.
-         * *   **1:** enables the feature.
-         * 
-         * > You can enable the cross-region log backup feature only when the cross-region backup feature is enabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder logBackupEnabled(String logBackupEnabled) {
             this.putQueryParameter("LogBackupEnabled", logBackupEnabled);
@@ -261,7 +280,11 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * The region ID of the source instance. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID of the source instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -288,7 +311,10 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy that is used to retain the cross-region backup files of the instance. Set the value to 1. The value **1** specifies that the cross-region backup files of the instance are retained based on the specified retention period.
+         * <p>The policy that is used to retain the cross-region backup files of the instance. Set the value to 1. The value <strong>1</strong> specifies that the cross-region backup files of the instance are retained based on the specified retention period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder retentType(Integer retentType) {
             this.putQueryParameter("RetentType", retentType);
@@ -297,7 +323,10 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.
+         * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: <strong>7 to 1825</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);

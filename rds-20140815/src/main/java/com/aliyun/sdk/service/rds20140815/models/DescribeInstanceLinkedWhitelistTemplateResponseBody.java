@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceLinkedWhitelistTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceLinkedWhitelistTemplateResponseBody</p>
@@ -97,14 +98,17 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         private Boolean success; 
 
         /**
-         * The response code returned. Valid values:
-         * <p>
+         * <p>The response code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>401</strong>: identity authentication failed</li>
+         * <li><strong>404</strong>: request page not found</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **401**: identity authentication failed
-         * *   **404**: request page not found
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -112,7 +116,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -120,12 +124,15 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         }
 
         /**
-         * The HTTP status code returned. Valid values:
-         * <p>
+         * <p>The HTTP status code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -133,7 +140,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +151,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,11 +162,14 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -166,6 +182,12 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceLinkedWhitelistTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceLinkedWhitelistTemplateResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
@@ -241,7 +263,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             private Integer userId; 
 
             /**
-             * The primary key of the data table.
+             * <p>The primary key of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1884</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -249,7 +274,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * The IP addresses.
+             * <p>The IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.0.X.X,10.2.X.X</p>
              */
             public Builder ips(String ips) {
                 this.ips = ips;
@@ -257,7 +285,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * The whitelist template ID.
+             * <p>The whitelist template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>412</p>
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -265,7 +296,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * The whitelist template name.
+             * <p>The whitelist template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template_123</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -273,7 +307,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16****</p>
              */
             public Builder userId(Integer userId) {
                 this.userId = userId;
@@ -287,6 +324,12 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceLinkedWhitelistTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceLinkedWhitelistTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InsName")
         private String insName;
@@ -326,7 +369,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             private java.util.List < Templates> templates; 
 
             /**
-             * The instance name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp191w771kd3****</p>
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -334,7 +380,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * The information about whitelists that are returned by page.
+             * <p>The information about whitelists that are returned by page.</p>
              */
             public Builder templates(java.util.List < Templates> templates) {
                 this.templates = templates;

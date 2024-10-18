@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachWhitelistTemplateToInstanceRequest} extends {@link RequestModel}
  *
  * <p>DetachWhitelistTemplateToInstanceRequest</p>
@@ -125,7 +126,11 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         } 
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp191w771k******</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -134,7 +139,10 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -143,7 +151,10 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * The resource group ID. For more information about resource groups, see Resource groups.
+         * <p>The resource group ID. For more information about resource groups, see Resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmz3kjr******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -170,7 +181,11 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.
+         * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>412</p>
          */
         public Builder templateId(Integer templateId) {
             this.putQueryParameter("TemplateId", templateId);

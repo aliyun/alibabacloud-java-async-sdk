@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustinsResourceInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustinsResourceInfoRequest</p>
@@ -110,7 +111,11 @@ public class DescribeCustinsResourceInfoRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-wz9s06u4drmqj4aqv</p>
          */
         public Builder DBInstanceIds(String DBInstanceIds) {
             this.putQueryParameter("DBInstanceIds", DBInstanceIds);
@@ -128,7 +133,10 @@ public class DescribeCustinsResourceInfoRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceIPArrayListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceIPArrayListRequest</p>
@@ -96,7 +97,11 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -123,14 +128,16 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         }
 
         /**
-         * The network type of the IP address whitelist. Valid values:
-         * <p>
+         * <p>The network type of the IP address whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>Classic</strong>: classic network in enhanced whitelist mode</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC) in enhanced whitelist mode</li>
+         * <li><strong>MIX</strong>: standard whitelist mode</li>
+         * </ul>
+         * <p>By default, this operation returns IP address whitelists of all network types.</p>
          * 
-         * *   **Classic**: classic network in enhanced whitelist mode
-         * *   **VPC**: virtual private cloud (VPC) in enhanced whitelist mode
-         * *   **MIX**: standard whitelist mode
-         * 
-         * By default, this operation returns IP address whitelists of all network types.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder whitelistNetworkType(String whitelistNetworkType) {
             this.putQueryParameter("WhitelistNetworkType", whitelistNetworkType);

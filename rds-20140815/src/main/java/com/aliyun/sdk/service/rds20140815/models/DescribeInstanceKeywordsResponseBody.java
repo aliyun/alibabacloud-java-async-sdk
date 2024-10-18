@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceKeywordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceKeywordsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         private Words words; 
 
         /**
-         * The type of reserved keyword returned.
+         * <p>The type of reserved keyword returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -69,7 +73,10 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * The reserved keywords.
+         * <p>The reserved keywords.</p>
          */
         public Builder words(Words words) {
             this.words = words;
@@ -90,6 +97,12 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceKeywordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceKeywordsResponseBody</p>
+     */
     public static class Words extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("word")
         private java.util.List < String > word;

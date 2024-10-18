@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecretsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecretsRequest</p>
@@ -211,13 +212,17 @@ public class DescribeSecretsRequest extends Request {
         } 
 
         /**
-         * The language of the text within the response. Valid values:
-         * <p>
+         * <p>The language of the text within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>en-US</strong>.</p>
+         * </blockquote>
          * 
-         * *   **zh-CN**: Chinese
-         * *   **en-US**: English
-         * 
-         * > The default value is **en-US**.
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -226,7 +231,10 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -235,7 +243,10 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xjkljjxxxxx</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -244,10 +255,14 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The database engine of the database.
-         * <p>
+         * <p>The database engine of the database.</p>
+         * <blockquote>
+         * <p>Only MySQL is supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Only MySQL is supported.
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -274,10 +289,14 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
-         * <p>
+         * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+         * <blockquote>
+         * <p>The default value is 1.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The default value is 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -286,7 +305,11 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -295,7 +318,11 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.
+         * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -304,7 +331,10 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxypivk***</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

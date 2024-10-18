@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHASwitchConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHASwitchConfigResponseBody</p>
@@ -61,11 +62,14 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of the automatic primary/secondary switchover feature. Valid values:
-         * <p>
+         * <p>The status of the automatic primary/secondary switchover feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Auto:</strong> The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</li>
+         * <li><strong>Manual:</strong> The automatic primary/secondary switchover feature is temporarily disabled.</li>
+         * </ul>
          * 
-         * *   **Auto:** The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.
-         * *   **Manual:** The automatic primary/secondary switchover feature is temporarily disabled.
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder HAConfig(String HAConfig) {
             this.HAConfig = HAConfig;
@@ -73,7 +77,10 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the automatic primary/secondary switchover feature is enabled again. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>The time when the automatic primary/secondary switchover feature is enabled again. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-29T15:00:00Z</p>
          */
         public Builder manualHATime(String manualHATime) {
             this.manualHATime = manualHATime;
@@ -81,7 +88,10 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FDF4B79-2741-4C5F-8C76-4B953FC5C2B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

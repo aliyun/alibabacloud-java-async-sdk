@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCrossRegionLogBackupFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCrossRegionLogBackupFilesResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -141,7 +145,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>The end of the time range to query. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-15T12:10:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -149,7 +156,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The cross-region log backup files.
+         * <p>The cross-region log backup files.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -157,10 +164,11 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -168,7 +176,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of cross-region backup files on the current page.
+         * <p>The number of cross-region backup files on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -176,7 +187,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -184,7 +198,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAC241E8-28E6-49DA-BFB0-B2DD090885C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -192,7 +209,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-30T12:10:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -200,7 +220,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that are returned.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -213,6 +236,12 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCrossRegionLogBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossRegionLogBackupFilesResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CrossBackupRegion")
         private String crossBackupRegion;
@@ -348,7 +377,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             private String logFileName; 
 
             /**
-             * The ID of the destination region within which the cross-region backup file is stored.
+             * <p>The ID of the destination region within which the cross-region backup file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder crossBackupRegion(String crossBackupRegion) {
                 this.crossBackupRegion = crossBackupRegion;
@@ -356,7 +388,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The external URL from which you can download the cross-region log backup file.
+             * <p>The external URL from which you can download the cross-region log backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdsddrlog-zb.oss-cn-zhangjiakou.aliyuncs.com/xxxxx">http://rdsddrlog-zb.oss-cn-zhangjiakou.aliyuncs.com/xxxxx</a></p>
              */
             public Builder crossDownloadLink(String crossDownloadLink) {
                 this.crossDownloadLink = crossDownloadLink;
@@ -364,7 +399,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL from which you can download the cross-region log backup file.
+             * <p>The internal URL from which you can download the cross-region log backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdsddrlog-zb.oss-cn-zhangjiakou-internal.aliyuncs.com/xxxxx">http://rdsddrlog-zb.oss-cn-zhangjiakou-internal.aliyuncs.com/xxxxx</a></p>
              */
             public Builder crossIntranetDownloadLink(String crossIntranetDownloadLink) {
                 this.crossIntranetDownloadLink = crossIntranetDownloadLink;
@@ -372,7 +410,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cross-region log backup file.
+             * <p>The ID of the cross-region log backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14567</p>
              */
             public Builder crossLogBackupId(Integer crossLogBackupId) {
                 this.crossLogBackupId = crossLogBackupId;
@@ -380,7 +421,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cross-region log backup file. Unit: bytes.
+             * <p>The size of the cross-region log backup file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5312836</p>
              */
             public Builder crossLogBackupSize(Long crossLogBackupSize) {
                 this.crossLogBackupSize = crossLogBackupSize;
@@ -388,7 +432,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8161055</p>
              */
             public Builder instanceId(Integer instanceId) {
                 this.instanceId = instanceId;
@@ -396,7 +443,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the URL expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the URL expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-30T15:00:00Z</p>
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -404,7 +454,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The start time of the cross-region log backup file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-30T12:10:00Z</p>
              */
             public Builder logBeginTime(String logBeginTime) {
                 this.logBeginTime = logBeginTime;
@@ -412,7 +465,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The end time of the cross-region log backup file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-30T20:10:00Z</p>
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -420,7 +476,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cross-region log backup file.
+             * <p>The name of the cross-region log backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou_rm-bpxxxxx_7198739_mysql-bin.000230</p>
              */
             public Builder logFileName(String logFileName) {
                 this.logFileName = logFileName;
@@ -434,6 +493,12 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCrossRegionLogBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossRegionLogBackupFilesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;

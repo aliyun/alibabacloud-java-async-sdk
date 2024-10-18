@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePostgresExtensionsResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePostgresExtensionsResponseBody</p>
@@ -37,7 +38,10 @@ public class CreatePostgresExtensionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E4448A6-9FE6-4474-A0C1-AA7CFC772CAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

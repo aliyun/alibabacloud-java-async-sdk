@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMaskingRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeMaskingRulesRequest</p>
@@ -124,7 +125,7 @@ public class DescribeMaskingRulesRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);

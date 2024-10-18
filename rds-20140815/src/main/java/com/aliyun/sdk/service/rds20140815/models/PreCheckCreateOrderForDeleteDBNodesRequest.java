@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreCheckCreateOrderForDeleteDBNodesRequest} extends {@link RequestModel}
  *
  * <p>PreCheckCreateOrderForDeleteDBNodesRequest</p>
@@ -250,13 +251,17 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically complete the payment. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+         * <ol>
+         * <li><strong>true</strong>: automatically completes the payment. You must make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
+         * </ol>
+         * <blockquote>
+         * <p> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+         * </blockquote>
          * 
-         * 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
-         * 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
-         * 
-         * >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -265,7 +270,10 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The additional business information about the instance.
+         * <p>The additional business information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;promotion_input_param&quot;:&quot;{\&quot;promotionFilter\&quot;:{},\&quot;promotionOptionCode\&quot;:\&quot;youhui_quan\&quot;}&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -274,7 +282,10 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -283,17 +294,21 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The commodity code. Valid value:
-         * <p>
+         * <p>The commodity code. Valid value:</p>
+         * <ul>
+         * <li><strong>bards</strong>: The instance is a pay-as-you-go primary instance.</li>
+         * <li><strong>rds</strong>: The instance is a subscription primary instance.</li>
+         * <li><strong>rords</strong>: The instance is a pay-as-you-go read-only instance.</li>
+         * <li><strong>rds_rordspre_public_cn</strong>: The instance is a subscription read-only instance.</li>
+         * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance.</li>
+         * <li><strong>rds_intl</strong>: The instance is a subscription primary instance.</li>
+         * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance.</li>
+         * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **bards**: The instance is a pay-as-you-go primary instance.
-         * *   **rds**: The instance is a subscription primary instance.
-         * *   **rords**: The instance is a pay-as-you-go read-only instance.
-         * *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance.
-         * *   **bards_intl**: The instance is a pay-as-you-go primary instance.
-         * *   **rds_intl**: The instance is a subscription primary instance.
-         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance.
-         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -302,7 +317,10 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-wz9rziy3he051if82</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -311,7 +329,7 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The node IDs.
+         * <p>The node IDs.</p>
          */
         public Builder DBNodeId(java.util.List < String > DBNodeId) {
             String DBNodeIdShrink = shrink(DBNodeId, "DBNodeId", "json");
@@ -321,12 +339,15 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.
-         * <p>
+         * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of <strong>Engine</strong>.</p>
+         * <ul>
+         * <li>Valid values when Engine is set to MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></li>
+         * <li>Valid values when Engine is set to SQLServer: <strong>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent</strong></li>
+         * <li>Valid values when Engine is set to PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</strong></li>
+         * </ul>
          * 
-         * *   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**
-         * *   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
-         * *   Valid values when Engine is set to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -335,11 +356,14 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The type of the database node. Valid value:
-         * <p>
+         * <p>The type of the database node. Valid value:</p>
+         * <ul>
+         * <li><strong>Master</strong>: the primary node</li>
+         * <li><strong>Slave</strong>: the secondary node</li>
+         * </ul>
          * 
-         * *   **Master**: the primary node
-         * *   **Slave**: the secondary node
+         * <strong>example:</strong>
+         * <p>Master</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -357,7 +381,10 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The coupon code.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliwood-1688-mobile-promotion</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -366,7 +393,10 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -375,7 +405,10 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The resource of the instance.
+         * <p>The resource of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>buy</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -402,7 +435,10 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

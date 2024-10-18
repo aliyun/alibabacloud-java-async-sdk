@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescibeImportsFromDatabaseRequest} extends {@link RequestModel}
  *
  * <p>DescibeImportsFromDatabaseRequest</p>
@@ -225,7 +226,10 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -234,7 +238,11 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bpxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -243,7 +251,11 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-06-11T16:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -252,7 +264,11 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Set the value to **MySQL**
+         * <p>The database engine of the instance. Set the value to <strong>MySQL</strong></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -261,7 +277,10 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the migration task.
+         * <p>The ID of the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder importId(Integer importId) {
             this.putQueryParameter("ImportId", importId);
@@ -288,10 +307,11 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: any non-zero positive integer.
-         * <p>
+         * <p>The page number. Valid values: any non-zero positive integer.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -300,14 +320,16 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -316,7 +338,10 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
+         * <p>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -343,7 +368,11 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-06-11T15:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

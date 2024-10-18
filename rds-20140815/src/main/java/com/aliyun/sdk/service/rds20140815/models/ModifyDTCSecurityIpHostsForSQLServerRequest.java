@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDTCSecurityIpHostsForSQLServerRequest} extends {@link RequestModel}
  *
  * <p>ModifyDTCSecurityIpHostsForSQLServerRequest</p>
@@ -169,7 +170,11 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -196,7 +201,11 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -223,10 +232,14 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Separate multiple entries with semicolon (;).
-         * <p>
+         * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: <code>IP address,Hostname</code>. Separate multiple entries with semicolon (;).</p>
+         * <blockquote>
+         * <p> For more information about how to query the computer hostname, see <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about how to query the computer hostname, see [Configure a distributed transaction whitelist](~~124321~~).
+         * <strong>example:</strong>
+         * <p>192.168.1.100,k3ecstest</p>
          */
         public Builder securityIpHosts(String securityIpHosts) {
             this.putQueryParameter("SecurityIpHosts", securityIpHosts);
@@ -244,7 +257,11 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * The name of the IP address whitelist.
+         * <p>The name of the IP address whitelist.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder whiteListGroupName(String whiteListGroupName) {
             this.putQueryParameter("WhiteListGroupName", whiteListGroupName);

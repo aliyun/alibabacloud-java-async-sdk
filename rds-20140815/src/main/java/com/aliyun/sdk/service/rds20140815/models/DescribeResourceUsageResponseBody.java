@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceUsageResponseBody</p>
@@ -205,7 +206,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         private Long SQLSize; 
 
         /**
-         * The storage that is occupied by archived backup files on the instance. Unit: bytes.
+         * <p>The storage that is occupied by archived backup files on the instance. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder archiveBackupSize(Long archiveBackupSize) {
             this.archiveBackupSize = archiveBackupSize;
@@ -213,7 +217,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.
+         * <p>The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94324736</p>
          */
         public Builder backupDataSize(Long backupDataSize) {
             this.backupDataSize = backupDataSize;
@@ -221,7 +228,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.
+         * <p>The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45145563</p>
          */
         public Builder backupLogSize(Long backupLogSize) {
             this.backupLogSize = backupLogSize;
@@ -229,7 +239,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The size of data backup files that are stored in Object Storage Service (OSS) buckets. Unit: bytes. The value 0 indicates no data backup files are stored in OSS buckets.
+         * <p>The size of data backup files that are stored in Object Storage Service (OSS) buckets. Unit: bytes. The value 0 indicates no data backup files are stored in OSS buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8821760</p>
          */
         public Builder backupOssDataSize(Long backupOssDataSize) {
             this.backupOssDataSize = backupOssDataSize;
@@ -237,7 +250,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The size of log backup files that are stored in OSS buckets. Unit: bytes. The value 0 indicates no log backup files are stored in OSS buckets.
+         * <p>The size of log backup files that are stored in OSS buckets. Unit: bytes. The value 0 indicates no log backup files are stored in OSS buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44180999</p>
          */
         public Builder backupOssLogSize(Long backupOssLogSize) {
             this.backupOssLogSize = backupOssLogSize;
@@ -245,7 +261,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The storage that is used to store backup files. Unit: bytes. The value -1 indicates that no backup files are stored.
+         * <p>The storage that is used to store backup files. Unit: bytes. The value -1 indicates that no backup files are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53002759</p>
          */
         public Builder backupSize(Long backupSize) {
             this.backupSize = backupSize;
@@ -253,7 +272,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The storage that is used to store cold backup files. Unit: bytes. The value -1 indicates that no cold backup files are stored.
+         * <p>The storage that is used to store cold backup files. Unit: bytes. The value -1 indicates that no cold backup files are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2337275904</p>
          */
         public Builder coldBackupSize(Long coldBackupSize) {
             this.coldBackupSize = coldBackupSize;
@@ -261,7 +283,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -269,7 +294,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The storage that is used to store data files. Unit: bytes. The value -1 indicates that no data files are stored.
+         * <p>The storage that is used to store data files. Unit: bytes. The value -1 indicates that no data files are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1292094741</p>
          */
         public Builder dataSize(Long dataSize) {
             this.dataSize = dataSize;
@@ -277,7 +305,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The total storage that is occupied by data files and log files on the instance. Unit: bytes. The value -1 indicates that no data files or log files are stored on the instance.
+         * <p>The total storage that is occupied by data files and log files on the instance. Unit: bytes. The value -1 indicates that no data files or log files are stored on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2337275904</p>
          */
         public Builder diskUsed(Long diskUsed) {
             this.diskUsed = diskUsed;
@@ -285,7 +316,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine of the instance.
+         * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -293,7 +327,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The storage that is used to store log files. Unit: bytes. The value -1 indicates that no log files are stored.
+         * <p>The storage that is used to store log files. Unit: bytes. The value -1 indicates that no log files are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1045181163</p>
          */
         public Builder logSize(Long logSize) {
             this.logSize = logSize;
@@ -301,7 +338,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The backup storage for which you must pay. The system provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.
+         * <p>The backup storage for which you must pay. The system provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder paidBackupSize(Long paidBackupSize) {
             this.paidBackupSize = paidBackupSize;
@@ -309,7 +349,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F937E173-559C-4498-8D90-38D32342B9E4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -317,7 +360,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The storage that is occupied to execute SQL statements on the instance. Unit: bytes. The value -1 indicates that no SQL statements are executed.
+         * <p>The storage that is occupied to execute SQL statements on the instance. Unit: bytes. The value -1 indicates that no SQL statements are executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>315052751</p>
          */
         public Builder SQLSize(Long SQLSize) {
             this.SQLSize = SQLSize;

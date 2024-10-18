@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeRCInstanceDiskRequest} extends {@link RequestModel}
  *
  * <p>ResizeRCInstanceDiskRequest</p>
@@ -123,7 +124,17 @@ public class ResizeRCInstanceDiskRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable the automatic payment feature for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): enables the feature. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If your account balance is insufficient, you can set AutoPay to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -132,7 +143,14 @@ public class ResizeRCInstanceDiskRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</li>
+         * <li><strong>false</strong>: performs a dry run and performs the actual request. If the request passes the dry run, the instance is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -141,7 +159,10 @@ public class ResizeRCInstanceDiskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf62br2491p5l****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -150,7 +171,10 @@ public class ResizeRCInstanceDiskRequest extends Request {
         }
 
         /**
-         * NewSize.
+         * <p>The new disk size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder newSize(Long newSize) {
             this.putQueryParameter("NewSize", newSize);
@@ -159,7 +183,10 @@ public class ResizeRCInstanceDiskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -168,7 +195,14 @@ public class ResizeRCInstanceDiskRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The method that you want to use to resize the disk. Valid values:</p>
+         * <ul>
+         * <li><strong>offline</strong> (default): resizes disks offline. After you resize a disk offline, you must restart the instance for the resizing operation to take effect.</li>
+         * <li><strong>online</strong>: resizes disks online. After you resize a disk online, the resizing operation takes effect immediately and you do not need to restart the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

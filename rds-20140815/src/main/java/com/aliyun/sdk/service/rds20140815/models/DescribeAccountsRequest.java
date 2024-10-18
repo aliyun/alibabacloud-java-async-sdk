@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccountsRequest</p>
@@ -126,7 +127,10 @@ public class DescribeAccountsRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -135,10 +139,14 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
-         * <p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <blockquote>
+         * <p> This parameter is not supported for RDS instances that run SQL Server 2017 on RDS Cluster Edition.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This parameter is not supported for RDS instances that run SQL Server 2017 on RDS Cluster Edition.
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -147,7 +155,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**. Pages start from page 1.
+         * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +167,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid value: **30 to 200**. Default value: **30**.
+         * <p>The number of entries per page. Valid values: <strong>30 to 200</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

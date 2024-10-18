@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetAccountRequest} extends {@link RequestModel}
  *
  * <p>ResetAccountRequest</p>
@@ -140,7 +141,11 @@ public class ResetAccountRequest extends Request {
         } 
 
         /**
-         * The name of the privileged account.
+         * <p>The name of the privileged account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -149,16 +154,21 @@ public class ResetAccountRequest extends Request {
         }
 
         /**
-         * The new password of the privileged account.
-         * <p>
+         * <p>The new password of the privileged account.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The password must be 8 to 32 characters in length.</p>
+         * </li>
+         * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * </li>
+         * <li><p>It can contain the following special characters: <code>! @ # $ &amp; ; % ^ * () _ + - =</code>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The password must be 8 to 32 characters in length.
-         * 
-         * *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * 
-         * *   It can contain the following special characters: `! @ # $ & ; % ^ * () _ + - =`.
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -167,7 +177,11 @@ public class ResetAccountRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

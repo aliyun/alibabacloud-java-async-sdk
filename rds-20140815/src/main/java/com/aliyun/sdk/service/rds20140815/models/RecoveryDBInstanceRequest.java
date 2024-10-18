@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecoveryDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>RecoveryDBInstanceRequest</p>
@@ -264,12 +265,14 @@ public class RecoveryDBInstanceRequest extends Request {
         } 
 
         /**
-         * The backup set ID. You can call the DescribeBackups operation to query the backup set ID.
-         * <p>
+         * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set ID.</p>
+         * <p>If you specify this parameter, you do not need to specify <strong>DBInstanceId</strong>.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameters.</p>
+         * </blockquote>
          * 
-         * If you specify this parameter, you do not need to specify **DBInstanceId**.
-         * 
-         * >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
+         * <strong>example:</strong>
+         * <p>29304****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -278,7 +281,10 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance type of the new instance. For more information, see [Instance types](~~26312~~).
+         * <p>The instance type of the new instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mysql.s2.large</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -287,11 +293,16 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the original instance.
-         * <p>
+         * <p>The ID of the original instance.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you specify BackupId, you do not need to specify this parameter.</li>
+         * <li>If you specify RestoreTime, you must also specify this parameter.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   If you specify BackupId, you do not need to specify this parameter.
-         * > *   If you specify RestoreTime, you must also specify this parameter.
+         * <strong>example:</strong>
+         * <p>rm-xxxxxxxx1</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -300,10 +311,13 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the new instance. Unit: GB. For more information, see [Instance types](~~26312~~).
-         * <p>
+         * <p>The storage capacity of the new instance. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+         * <blockquote>
+         * <p> You must set this parameter to a value that is greater than or equal to the storage capacity of the original instance.</p>
+         * </blockquote>
          * 
-         * >  You must set this parameter to a value that is greater than or equal to the storage capacity of the original instance.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -312,12 +326,15 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage type of the new instance. Valid values:
-         * <p>
+         * <p>The storage type of the new instance. Valid values:</p>
+         * <ul>
+         * <li><strong>local_ssd/ephemeral_ssd</strong>: local SSD</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD)</li>
+         * </ul>
          * 
-         * *   **local_ssd/ephemeral_ssd**: local SSD
-         * *   **cloud_ssd**: standard SSD.
-         * *   **cloud_essd**: enhanced SSD (ESSD)
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -326,10 +343,14 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The name of the database. When you restore data to a new instance, the format of the database name is `Original database name 1,New database name 2`.
-         * <p>
+         * <p>The name of the database. When you restore data to a new instance, the format of the database name is <code>Original database name 1,New database name 2</code>.</p>
+         * <blockquote>
+         * <p> For more information about how to restore data to an existing instance, see <a href="https://help.aliyun.com/document_detail/2628854.html">CopyDatabaseBetweenInstances</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about how to restore data to an existing instance, see [CopyDatabaseBetweenInstances](~~2628854~~).
+         * <strong>example:</strong>
+         * <p>Restore databases to a new instance: test1,test2. Restore databases to an existing instance: {&quot;test1&quot;:&quot;newtest1&quot;,&quot;test2&quot;:&quot;newtest2&quot;}</p>
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -338,13 +359,15 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the new instance. Valid values:
-         * <p>
+         * <p>The network type of the new instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Classic</strong></li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
+         * <p>By default, the new instance uses the same network type as the original instance.</p>
          * 
-         * *   **Classic**
-         * *   **VPC**
-         * 
-         * By default, the new instance uses the same network type as the original instance.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -353,11 +376,14 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the new instance. Valid values:
-         * <p>
+         * <p>The billing method of the new instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
          * 
-         * *   **Postpaid**: pay-as-you-go.
-         * *   **Prepaid**: subscription.
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -366,13 +392,17 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:
-         * <p>
+         * <p>The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Year**
-         * *   **Month**
-         * 
-         * > This parameter must be specified when **PayType** is set to **Prepaid**.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -381,7 +411,10 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The internal IP address of the new instance. The internal IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.
+         * <p>The internal IP address of the new instance. The internal IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.XXX.XXX.69</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -399,12 +432,14 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>If you specify this parameter, you must also specify <strong>DBInstanceId</strong>.</p>
+         * <blockquote>
+         * <p>You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong>.</p>
+         * </blockquote>
          * 
-         * If you specify this parameter, you must also specify **DBInstanceId**.
-         * 
-         * > You must specify at least one of **BackupId** and **RestoreTime**.
+         * <strong>example:</strong>
+         * <p>2011-06-11T16:00:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -413,7 +448,10 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the destination instance.
+         * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder targetDBInstanceId(String targetDBInstanceId) {
             this.putQueryParameter("TargetDBInstanceId", targetDBInstanceId);
@@ -422,13 +460,17 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. Valid values:
-         * <p>
+         * <p>The subscription duration of the instance. Valid values:</p>
+         * <ul>
+         * <li>Valid values when <strong>Period</strong> is set to <strong>Year</strong>: <strong>1 to 3</strong>.****</li>
+         * <li>Valid values when <strong>Period</strong> is set to <strong>Month</strong>: <strong>1 to 9</strong>.****</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when PayType is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   Valid values when **Period** is set to **Year**: **1 to 3**.****
-         * *   Valid values when **Period** is set to **Month**: **1 to 9**.****
-         * 
-         * > This parameter must be specified when PayType is set to **Prepaid**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -437,7 +479,10 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The VPC ID of the new instance.
+         * <p>The VPC ID of the new instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxxxxxx</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -446,7 +491,10 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the new instance. If you specify more than one vSwitch ID, you must separate the IDs with commas (,).
+         * <p>The vSwitch ID of the new instance. If you specify more than one vSwitch ID, you must separate the IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxxxxx</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

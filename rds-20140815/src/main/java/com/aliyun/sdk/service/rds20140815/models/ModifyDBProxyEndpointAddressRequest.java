@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBProxyEndpointAddressRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBProxyEndpointAddressRequest</p>
@@ -167,7 +168,11 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4n3a****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -176,16 +181,19 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The network type of the proxy endpoint. Valid values:
-         * <p>
+         * <p>The network type of the proxy endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong>: Internet</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>Classic</strong>: classic network</li>
+         * </ul>
+         * <p>If the instance runs MySQL, the default value of this parameter is <strong>Classic</strong>.</p>
+         * <blockquote>
+         * <p>If the instance runs PostgreSQL, you must set this parameter to <strong>Public</strong> or <strong>VPC</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Public**: Internet
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **Classic**: classic network
-         * 
-         * If the instance runs MySQL, the default value of this parameter is **Classic**.
-         * 
-         * > If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder DBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
             this.putQueryParameter("DBProxyConnectStringNetType", DBProxyConnectStringNetType);
@@ -194,7 +202,11 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.
+         * <p>The ID of the dedicated proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ta9um4****</p>
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
@@ -203,7 +215,10 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -212,10 +227,13 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The new prefix of the proxy endpoint. Enter a prefix.
-         * <p>
+         * <p>The new prefix of the proxy endpoint. Enter a prefix.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.
+         * <strong>example:</strong>
+         * <p>test123456</p>
          */
         public Builder DBProxyNewConnectString(String DBProxyNewConnectString) {
             this.putQueryParameter("DBProxyNewConnectString", DBProxyNewConnectString);
@@ -224,10 +242,13 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The port number that is associated with the proxy endpoint. Enter a port number.
-         * <p>
+         * <p>The port number that is associated with the proxy endpoint. Enter a port number.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.
+         * <strong>example:</strong>
+         * <p>3307</p>
          */
         public Builder DBProxyNewConnectStringPort(String DBProxyNewConnectStringPort) {
             this.putQueryParameter("DBProxyNewConnectStringPort", DBProxyNewConnectStringPort);

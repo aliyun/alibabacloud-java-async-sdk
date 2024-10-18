@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryTasksStatRequest} extends {@link RequestModel}
  *
  * <p>DescribeHistoryTasksStatRequest</p>
@@ -238,7 +239,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         } 
 
         /**
-         * The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.
+         * <p>The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder fromExecTime(Integer fromExecTime) {
             this.putQueryParameter("FromExecTime", fromExecTime);
@@ -247,7 +251,11 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-08T07:04:17Z</p>
          */
         public Builder fromStartTime(String fromStartTime) {
             this.putQueryParameter("FromStartTime", fromStartTime);
@@ -256,7 +264,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze704f*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -274,7 +285,11 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -283,7 +298,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -319,18 +337,20 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>Scheduled</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Succeed</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Cancelling</strong></li>
+         * <li><strong>Canceled</strong></li>
+         * <li><strong>Waiting</strong></li>
+         * </ul>
+         * <p>Separate multiple statuses with commas (,). By default, this parameter is left empty. This indicates that tasks in all statuses are queried.</p>
          * 
-         * *   **Scheduled**
-         * *   **Running**
-         * *   **Succeed**
-         * *   **Failed**
-         * *   **Cancelling**
-         * *   **Canceled**
-         * *   **Waiting**
-         * 
-         * Separate multiple statuses with commas (,). By default, this parameter is left empty. This indicates that tasks in all statuses are queried.
+         * <strong>example:</strong>
+         * <p>Scheduled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -339,7 +359,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12221</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -348,7 +371,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The task type.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -357,7 +383,10 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.
+         * <p>The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder toExecTime(Integer toExecTime) {
             this.putQueryParameter("ToExecTime", toExecTime);
@@ -366,7 +395,11 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-24T10:01:37Z</p>
          */
         public Builder toStartTime(String toStartTime) {
             this.putQueryParameter("ToStartTime", toStartTime);

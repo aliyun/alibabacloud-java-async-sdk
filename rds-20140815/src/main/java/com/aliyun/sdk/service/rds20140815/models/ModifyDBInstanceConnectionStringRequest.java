@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConnectionStringRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceConnectionStringRequest</p>
@@ -197,10 +198,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         } 
 
         /**
-         * The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.
-         * <p>
+         * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
+         * <blockquote>
+         * <p>This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</p>
+         * </blockquote>
          * 
-         * > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
+         * <strong>example:</strong>
+         * <p>1433</p>
          */
         public Builder babelfishPort(String babelfishPort) {
             this.putQueryParameter("BabelfishPort", babelfishPort);
@@ -209,10 +213,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The prefix of the endpoint after the change. Only the prefix of the value of **CurrentConnectionString** can be changed.
-         * <p>
+         * <p>The prefix of the endpoint after the change. Only the prefix of the value of <strong>CurrentConnectionString</strong> can be changed.</p>
+         * <blockquote>
+         * <p>The value must be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following special characters: ! # % ^ &amp; * = + | {} ; : &quot; &quot; ,&lt;&gt; / ?</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The value must be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following special characters: ! # % ^ & \* = + | {} ; : \" " ,<> / ?
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -221,10 +229,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The endpoint of the instance. It can be an internal endpoint, a public endpoint, or a classic network endpoint in hybrid access mode.
-         * <p>
+         * <p>The endpoint of the instance. It can be an internal endpoint, a public endpoint, or a classic network endpoint in hybrid access mode.</p>
+         * <blockquote>
+         * <p>The read/write splitting endpoint cannot be changed.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The read/write splitting endpoint cannot be changed.
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5x****.mysql.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -233,7 +245,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -242,7 +258,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
+         * <p>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgc-bp1tkv8****</p>
          */
         public Builder generalGroupName(String generalGroupName) {
             this.putQueryParameter("GeneralGroupName", generalGroupName);
@@ -269,10 +288,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The PgBouncer port.
-         * <p>
+         * <p>The PgBouncer port.</p>
+         * <blockquote>
+         * <p>This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances. If you enable PgBouncer for your instance, you can change the PgBouncer port of the instance.</p>
+         * </blockquote>
          * 
-         * > This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances. If you enable PgBouncer for your instance, you can change the PgBouncer port of the instance.
+         * <strong>example:</strong>
+         * <p>6432</p>
          */
         public Builder PGBouncerPort(String PGBouncerPort) {
             this.putQueryParameter("PGBouncerPort", PGBouncerPort);
@@ -281,7 +303,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The port number after the change.
+         * <p>The port number after the change.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

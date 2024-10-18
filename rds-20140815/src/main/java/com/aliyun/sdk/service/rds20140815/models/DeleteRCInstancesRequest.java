@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRCInstancesRequest} extends {@link RequestModel}
  *
  * <p>DeleteRCInstancesRequest</p>
@@ -110,7 +111,14 @@ public class DeleteRCInstancesRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -119,7 +127,14 @@ public class DeleteRCInstancesRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to forcefully release a running instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Yes</strong></li>
+         * <li><strong>No</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Yes</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -128,7 +143,8 @@ public class DeleteRCInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The details of the instance.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             String instanceIdShrink = shrink(instanceId, "InstanceId", "json");
@@ -138,7 +154,10 @@ public class DeleteRCInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +166,14 @@ public class DeleteRCInstancesRequest extends Request {
         }
 
         /**
-         * TerminateSubscription.
+         * <p>Specifies whether to release an expired subscription instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder terminateSubscription(Boolean terminateSubscription) {
             this.putQueryParameter("TerminateSubscription", terminateSubscription);

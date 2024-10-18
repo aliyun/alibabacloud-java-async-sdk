@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackupRequest} extends {@link RequestModel}
  *
  * <p>DeleteBackupRequest</p>
@@ -125,10 +126,14 @@ public class DeleteBackupRequest extends Request {
         } 
 
         /**
-         * The backup set ID. You can call the DescribeBackups operation to query the backup set ID. Separate multiple values with commas (,). You can specify a maximum of 100 values in a single request.
-         * <p>
+         * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set ID. Separate multiple values with commas (,). You can specify a maximum of 100 values in a single request.</p>
+         * <blockquote>
+         * <p> You can delete only backup sets whose <strong>StoreStatus</strong> is <strong>Enabled</strong> in the response to the DescribeBackups operation call.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can delete only backup sets whose **StoreStatus** is **Enabled** in the response to the DescribeBackups operation call.
+         * <strong>example:</strong>
+         * <p>324******</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -137,7 +142,11 @@ public class DeleteBackupRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

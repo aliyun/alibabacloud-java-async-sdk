@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantOperatorPermissionResponseBody} extends {@link TeaModel}
  *
  * <p>GrantOperatorPermissionResponseBody</p>
@@ -37,7 +38,10 @@ public class GrantOperatorPermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>842B73C8-5776-4BD9-9872-69C8C46DD7D3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

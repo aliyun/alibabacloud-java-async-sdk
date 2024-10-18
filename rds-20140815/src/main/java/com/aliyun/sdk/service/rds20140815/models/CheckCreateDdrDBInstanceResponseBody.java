@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCreateDdrDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CheckCreateDdrDBInstanceResponseBody</p>
@@ -49,11 +50,14 @@ public class CheckCreateDdrDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the data of the source instance can be restored across regions. Valid values:
-         * <p>
+         * <p>Indicates whether the data of the source instance can be restored across regions. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isValid(String isValid) {
             this.isValid = isValid;
@@ -61,7 +65,10 @@ public class CheckCreateDdrDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

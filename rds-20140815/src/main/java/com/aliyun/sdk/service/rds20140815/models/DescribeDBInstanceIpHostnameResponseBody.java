@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceIpHostnameResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceIpHostnameResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -69,7 +73,10 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         }
 
         /**
-         * The internal IP addresses and hostnames of the ECS instance on which a primary ApsaraDB RDS for SQL Server instance and its secondary RDS instance reside. Format: `IP address 1, Hostname 1; IP address 2, Hostname 2`.
+         * <p>The internal IP addresses and hostnames of the ECS instance on which a primary ApsaraDB RDS for SQL Server instance and its secondary RDS instance reside. Format: <code>IP address 1, Hostname 1; IP address 2, Hostname 2</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.xx.xx,sdxxxxxxxxB;172.16.xx.xx,sdxxxxxxxxA</p>
          */
         public Builder ipHostnameInfos(String ipHostnameInfos) {
             this.ipHostnameInfos = ipHostnameInfos;
@@ -77,7 +84,10 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67CD4719-51E3-4A76-A38C-02F45FAE7E36</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

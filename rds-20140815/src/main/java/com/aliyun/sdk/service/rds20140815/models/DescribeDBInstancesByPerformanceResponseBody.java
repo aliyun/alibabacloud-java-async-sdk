@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesByPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancesByPerformanceResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details about the instance.
+         * <p>The details about the instance.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23907437-79B9-411A-9EE6-75A8F0F1C619</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancesByPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesByPerformanceResponseBody</p>
+     */
     public static class DBInstancePerformance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPUUsage")
         private String CPUUsage;
@@ -217,7 +236,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             private String sessionUsage; 
 
             /**
-             * The CPU utilization of the instance in percentage.
+             * <p>The CPU utilization of the instance in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.70</p>
              */
             public Builder CPUUsage(String CPUUsage) {
                 this.CPUUsage = CPUUsage;
@@ -225,7 +247,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DatabaseTest</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -233,7 +258,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -241,7 +269,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The disk usage of the instance in percentage.
+             * <p>The disk usage of the instance in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14.56</p>
              */
             public Builder diskUsage(String diskUsage) {
                 this.diskUsage = diskUsage;
@@ -249,7 +280,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The IOPS usage of the instance in percentage.
+             * <p>The IOPS usage of the instance in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.15</p>
              */
             public Builder IOPSUsage(String IOPSUsage) {
                 this.IOPSUsage = IOPSUsage;
@@ -257,7 +291,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sessions.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.10</p>
              */
             public Builder sessionUsage(String sessionUsage) {
                 this.sessionUsage = sessionUsage;
@@ -271,6 +308,12 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancesByPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesByPerformanceResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstancePerformance")
         private java.util.List < DBInstancePerformance> DBInstancePerformance;

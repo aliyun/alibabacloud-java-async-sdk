@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDdrInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDdrInstanceResponseBody</p>
@@ -85,10 +86,13 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The endpoint that is used to connect to the destination instance.
-         * <p>
+         * <p>The endpoint that is used to connect to the destination instance.</p>
+         * <blockquote>
+         * <p> The <strong>DBInstanceNetType</strong> parameter indicates whether the endpoint is internal or public.</p>
+         * </blockquote>
          * 
-         * >  The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.
+         * <strong>example:</strong>
+         * <p>rm-xxxxx.mysql.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -96,7 +100,10 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The destination instance ID.
+         * <p>The destination instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -104,7 +111,10 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2038691xxxxx</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -112,10 +122,13 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The port number that is used to connect to the destination instance.
-         * <p>
+         * <p>The port number that is used to connect to the destination instance.</p>
+         * <blockquote>
+         * <p><strong>DBInstanceNetType</strong> indicates whether the port is internal or public.</p>
+         * </blockquote>
          * 
-         * > **DBInstanceNetType** indicates whether the port is internal or public.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.port = port;
@@ -123,7 +136,10 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E52666CC-330E-418A-8E5B-A19E3FB42D13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

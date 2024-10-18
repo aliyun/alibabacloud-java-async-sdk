@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceTDEResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceTDEResponseBody</p>
@@ -73,10 +74,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         private String TDEStatus; 
 
         /**
-         * The TDE status at the database level.
-         * <p>
-         * 
-         * >  If your instance runs SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.
+         * <p>The TDE status at the database level.</p>
+         * <blockquote>
+         * <p> If your instance runs SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.</p>
+         * </blockquote>
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -84,7 +85,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,12 +96,15 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * The method that is used to generate the key for TDE at the instance level. Valid values:
-         * <p>
+         * <p>The method that is used to generate the key for TDE at the instance level. Valid values:</p>
+         * <ul>
+         * <li><strong>Aliyun_Generate_Key</strong></li>
+         * <li><strong>Customer_Provided_Key</strong></li>
+         * <li><strong>Unknown</strong></li>
+         * </ul>
          * 
-         * *   **Aliyun_Generate_Key**
-         * *   **Customer_Provided_Key**
-         * *   **Unknown**
+         * <strong>example:</strong>
+         * <p>Aliyun_Generate_Key</p>
          */
         public Builder TDEMode(String TDEMode) {
             this.TDEMode = TDEMode;
@@ -105,11 +112,14 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * The TDE status of the instance. Valid values:
-         * <p>
+         * <p>The TDE status of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
          * 
-         * *   **Enabled**
-         * *   **Disabled**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder TDEStatus(String TDEStatus) {
             this.TDEStatus = TDEStatus;
@@ -122,6 +132,12 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceTDEResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTDEResponseBody</p>
+     */
     public static class Database extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
@@ -161,7 +177,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
             private String TDEStatus; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test02</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -169,11 +188,14 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
             }
 
             /**
-             * The TDE status at the database level. Valid values:
-             * <p>
+             * <p>The TDE status at the database level. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong></li>
+             * <li><strong>Disabled</strong></li>
+             * </ul>
              * 
-             * *   **Enabled**
-             * *   **Disabled**
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder TDEStatus(String TDEStatus) {
                 this.TDEStatus = TDEStatus;
@@ -187,6 +209,12 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTDEResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTDEResponseBody</p>
+     */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private java.util.List < Database> database;

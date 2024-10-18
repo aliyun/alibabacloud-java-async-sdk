@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticReportListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosticReportListResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -69,7 +73,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The details of a diagnostic report.
+         * <p>The details of a diagnostic report.</p>
          */
         public Builder reportList(java.util.List < ReportList> reportList) {
             this.reportList = reportList;
@@ -77,7 +81,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7E9A79C-DE1B-4398-845F-D654FC0958BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosticReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosticReportListResponseBody</p>
+     */
     public static class ReportList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiagnosticTime")
         private String diagnosticTime;
@@ -165,7 +178,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The time when the diagnosis was performed.
+             * <p>The time when the diagnosis was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-17T12:46:09Z</p>
              */
             public Builder diagnosticTime(String diagnosticTime) {
                 this.diagnosticTime = diagnosticTime;
@@ -173,7 +189,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.
+             * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdsreport-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsreport-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
              */
             public Builder downloadURL(String downloadURL) {
                 this.downloadURL = downloadURL;
@@ -181,7 +200,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the monitoring data.
+             * <p>The end time of the monitoring data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-10T15:31:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -189,7 +211,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnostic score.
+             * <p>The diagnostic score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -197,7 +222,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the monitoring data.
+             * <p>The start time of the monitoring data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-10T15:30:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

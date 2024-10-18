@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRCDeploymentSetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRCDeploymentSetResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateRCDeploymentSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeploymentSetId.
+         * <p>The deployment set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-uf6c8qerk019bj1l****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.deploymentSetId = deploymentSetId;
@@ -57,7 +61,10 @@ public class CreateRCDeploymentSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceCrossBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceCrossBackupPolicyResponseBody</p>
@@ -217,11 +218,14 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         private Integer retention; 
 
         /**
-         * The status of the cross-region backup feature on the instance. Valid values:
-         * <p>
+         * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Disable</strong></li>
+         * <li><strong>Enable</strong></li>
+         * </ul>
          * 
-         * *   **Disable**
-         * *   **Enable**
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder backupEnabled(String backupEnabled) {
             this.backupEnabled = backupEnabled;
@@ -229,7 +233,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The point in time at which the cross-region backup feature is enabled. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>The point in time at which the cross-region backup feature is enabled. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-12T05:44:21Z</p>
          */
         public Builder backupEnabledTime(String backupEnabledTime) {
             this.backupEnabledTime = backupEnabledTime;
@@ -237,7 +244,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the destination region where the cross-region backup files of the instance are stored.
+         * <p>The ID of the destination region where the cross-region backup files of the instance are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder crossBackupRegion(String crossBackupRegion) {
             this.crossBackupRegion = crossBackupRegion;
@@ -245,7 +255,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The policy that is used to save the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that all cross-region backup files are saved.
+         * <p>The policy that is used to save the cross-region backup files of the instance. Default value: <strong>1</strong>. The value 1 indicates that all cross-region backup files are saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder crossBackupType(String crossBackupType) {
             this.crossBackupType = crossBackupType;
@@ -253,10 +266,13 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
-         * <p>
+         * <p>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
+         * <blockquote>
+         * <p> The value cannot start with http:// or https://.</p>
+         * </blockquote>
          * 
-         * >  The value cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>Test database</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.DBInstanceDescription = DBInstanceDescription;
@@ -264,7 +280,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -272,7 +291,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the instance. For more information, see [Instance state table](~~26315~~).
+         * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBInstanceStatus(String DBInstanceStatus) {
             this.DBInstanceStatus = DBInstanceStatus;
@@ -280,7 +302,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine of the instance.
+         * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -288,7 +313,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine version.
+         * <p>The database engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -296,14 +324,17 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The lock status of the instance. Valid values:
-         * <p>
+         * <p>The lock status of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The instance is not locked.</li>
+         * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to instance expiration.</li>
+         * <li><strong>LockByRestoration</strong>: The instance is automatically locked before a rollback.</li>
+         * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</li>
+         * </ul>
          * 
-         * *   **Unlock**: The instance is not locked.
-         * *   **ManualLock**: The instance is manually locked.
-         * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-         * *   **LockByRestoration**: The instance is automatically locked before a rollback.
-         * *   **LockByDiskQuota**: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         public Builder lockMode(String lockMode) {
             this.lockMode = lockMode;
@@ -311,11 +342,14 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the cross-region log backup feature on the instance. Valid values:
-         * <p>
+         * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Disable</strong></li>
+         * <li><strong>Enable</strong></li>
+         * </ul>
          * 
-         * *   **Disable**
-         * *   **Enable**
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder logBackupEnabled(String logBackupEnabled) {
             this.logBackupEnabled = logBackupEnabled;
@@ -323,7 +357,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-12T05:44:21Z</p>
          */
         public Builder logBackupEnabledTime(String logBackupEnabledTime) {
             this.logBackupEnabledTime = logBackupEnabledTime;
@@ -331,7 +368,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -339,7 +379,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB7667B2-72C8-497B-9BD8-3B343CEF51AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -347,7 +390,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The policy that is used to retain the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.
+         * <p>The policy that is used to retain the cross-region backup files of the instance. Default value: <strong>1</strong>. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder retentType(Integer retentType) {
             this.retentType = retentType;
@@ -355,7 +401,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.
+         * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: <strong>7 to 1825</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder retention(Integer retention) {
             this.retention = retention;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancesResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The information about the instances.
+         * <p>The information about the instances.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -105,7 +106,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to display the next page. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with **NextToken** specified.
+         * <p>The token that is used to display the next page. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with <strong>NextToken</strong> specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>o7PORW5o2TJg**********</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,10 +117,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
-         * <p>
+         * <p>The page number of the returned page.</p>
+         * <blockquote>
+         * <p>If you specify <strong>MaxResults</strong> or <strong>NextToken</strong>, only the value <strong>1</strong> is returned. You can ignore the value 1.</p>
+         * </blockquote>
          * 
-         * > If you specify **MaxResults** or **NextToken**, only the value **1** is returned. You can ignore the value 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -124,7 +131,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -132,7 +142,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,10 +153,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
-         * <p>
+         * <p>The total number of entries returned.</p>
+         * <blockquote>
+         * <p>If you specify <strong>MaxResults</strong> or <strong>NextToken</strong>, only the number of entries on the current page is returned. You can ignore the number.</p>
+         * </blockquote>
          * 
-         * > If you specify **MaxResults** or **NextToken**, only the number of entries on the current page is returned. You can ignore the number.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -156,6 +172,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesResponseBody</p>
+     */
     public static class ReadOnlyDBInstanceId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
@@ -183,7 +205,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String DBInstanceId; 
 
             /**
-             * The read-only instance ID.
+             * <p>The read-only instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rr-uf6wjk5xxxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -197,6 +222,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesResponseBody</p>
+     */
     public static class ReadOnlyDBInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceId")
         private java.util.List < ReadOnlyDBInstanceId> readOnlyDBInstanceId;
@@ -238,6 +269,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesResponseBody</p>
+     */
     public static class DBInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BpeEnabled")
         private String bpeEnabled;
@@ -889,7 +926,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * A deprecated parameter.
+             * <p>A deprecated parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bpeEnabled(String bpeEnabled) {
                 this.bpeEnabled = bpeEnabled;
@@ -897,11 +937,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the I/O burst feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the I/O burst feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -909,14 +952,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The RDS edition of the instance. Valid values:
-             * <p>
+             * <p>The RDS edition of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Basic</strong>: RDS Basic Edition</li>
+             * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+             * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only when the <strong>InstanceLevel</strong> parameter is set to <strong>1</strong>.</p>
+             * </blockquote>
              * 
-             * *   **Basic**: RDS Basic Edition
-             * *   **HighAvailability**: RDS High-availability Edition
-             * *   **Finance**: RDS Enterprise Edition
-             * 
-             * >  This parameter is returned only when the **InstanceLevel** parameter is set to **1**.
+             * <strong>example:</strong>
+             * <p>Basic</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -924,7 +971,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder coldDataEnabled(Boolean coldDataEnabled) {
                 this.coldDataEnabled = coldDataEnabled;
@@ -932,11 +982,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The connection mode of the instance. Valid values:
-             * <p>
+             * <p>The connection mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Standard</strong>: standard mode</li>
+             * <li><strong>Safe</strong>: database proxy mode</li>
+             * </ul>
              * 
-             * *   **Standard**: standard mode
-             * *   **Safe**: database proxy mode
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder connectionMode(String connectionMode) {
                 this.connectionMode = connectionMode;
@@ -944,7 +997,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance.
+             * <p>The endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -952,7 +1008,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The creation time of the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-05T11:26:02Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -960,10 +1019,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU instances.
-             * <p>
+             * <p>The number of CPU instances.</p>
+             * <p>Returns only when the InstanceLevel parameter is 1.</p>
              * 
-             * Returns only when the InstanceLevel parameter is 1.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder DBInstanceCPU(String DBInstanceCPU) {
                 this.DBInstanceCPU = DBInstanceCPU;
@@ -971,7 +1031,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+             * <p>The instance type of the instance. For information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds.mys2.small</p>
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -979,7 +1042,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance description.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test database</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -987,7 +1053,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -995,10 +1064,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the node. Unit: MB.
-             * <p>
+             * <p>The memory size of the node. Unit: MB.</p>
+             * <p>Returns only when the InstanceLevel parameter is 1.</p>
              * 
-             * Returns only when the InstanceLevel parameter is 1.
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder DBInstanceMemory(Integer DBInstanceMemory) {
                 this.DBInstanceMemory = DBInstanceMemory;
@@ -1006,11 +1076,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network connection to the instance. Valid values:
-             * <p>
+             * <p>The type of the network connection to the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Internet</strong></li>
+             * <li><strong>Intranet</strong></li>
+             * </ul>
              * 
-             * *   **Internet**
-             * *   **Intranet**
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -1018,7 +1091,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance status. For more information, see [Instance statuses](~~26315~~).
+             * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance statuses</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -1026,7 +1102,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the instance.
+             * <p>The storage type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ModuleList.4.ModuleCode</p>
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
                 this.DBInstanceStorageType = DBInstanceStorageType;
@@ -1034,13 +1113,16 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values:
-             * <p>
+             * <p>The type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Primary</strong>: primary instance</li>
+             * <li><strong>Readonly</strong>: read-only instance</li>
+             * <li><strong>Guard</strong>: disaster recovery instance</li>
+             * <li><strong>Temp</strong>: temporary instance</li>
+             * </ul>
              * 
-             * *   **Primary**: primary instance
-             * *   **Readonly**: read-only instance
-             * *   **Guard**: disaster recovery instance
-             * *   **Temp**: temporary instance
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -1048,7 +1130,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated cluster.
+             * <p>The ID of the dedicated cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dhg-7a9xxxxxxxx</p>
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -1056,7 +1141,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dedicated cluster.
+             * <p>The name of the dedicated cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testhostgroup</p>
              */
             public Builder dedicatedHostGroupName(String dedicatedHostGroupName) {
                 this.dedicatedHostGroupName = dedicatedHostGroupName;
@@ -1064,7 +1152,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host on which the logger instance resides.
+             * <p>The ID of the host on which the logger instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dh-bpxxxx</p>
              */
             public Builder dedicatedHostIdForLog(String dedicatedHostIdForLog) {
                 this.dedicatedHostIdForLog = dedicatedHostIdForLog;
@@ -1072,7 +1163,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host on which the primary instance resides.
+             * <p>The ID of the host on which the primary instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dh-bpxxxx</p>
              */
             public Builder dedicatedHostIdForMaster(String dedicatedHostIdForMaster) {
                 this.dedicatedHostIdForMaster = dedicatedHostIdForMaster;
@@ -1080,7 +1174,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host on which the secondary instance resides.
+             * <p>The ID of the host on which the secondary instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dh-bpxxxx</p>
              */
             public Builder dedicatedHostIdForSlave(String dedicatedHostIdForSlave) {
                 this.dedicatedHostIdForSlave = dedicatedHostIdForSlave;
@@ -1088,7 +1185,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host on which the logger instance resides.
+             * <p>The name of the host on which the logger instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testlog</p>
              */
             public Builder dedicatedHostNameForLog(String dedicatedHostNameForLog) {
                 this.dedicatedHostNameForLog = dedicatedHostNameForLog;
@@ -1096,7 +1196,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host on which the primary instance resides.
+             * <p>The name of the host on which the primary instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testmaster</p>
              */
             public Builder dedicatedHostNameForMaster(String dedicatedHostNameForMaster) {
                 this.dedicatedHostNameForMaster = dedicatedHostNameForMaster;
@@ -1104,7 +1207,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host on which the secondary instance resides.
+             * <p>The name of the host on which the secondary instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testslave</p>
              */
             public Builder dedicatedHostNameForSlave(String dedicatedHostNameForSlave) {
                 this.dedicatedHostNameForSlave = dedicatedHostNameForSlave;
@@ -1112,7 +1218,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the host on which the logger instance resides.
+             * <p>The zone ID of the host on which the logger instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder dedicatedHostZoneIdForLog(String dedicatedHostZoneIdForLog) {
                 this.dedicatedHostZoneIdForLog = dedicatedHostZoneIdForLog;
@@ -1120,7 +1229,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the host on which the primary instance resides.
+             * <p>The zone ID of the host on which the primary instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-c</p>
              */
             public Builder dedicatedHostZoneIdForMaster(String dedicatedHostZoneIdForMaster) {
                 this.dedicatedHostZoneIdForMaster = dedicatedHostZoneIdForMaster;
@@ -1128,7 +1240,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the host on which the secondary instance resides.
+             * <p>The zone ID of the host on which the secondary instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-d</p>
              */
             public Builder dedicatedHostZoneIdForSlave(String dedicatedHostZoneIdForSlave) {
                 this.dedicatedHostZoneIdForSlave = dedicatedHostZoneIdForSlave;
@@ -1136,11 +1251,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the release protection feature is enabled for the instance. Valid values:
-             * <p>
+             * <p>Indicates whether the release protection feature is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -1148,7 +1266,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was destroyed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the instance was destroyed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-05T11:26:02Z</p>
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
@@ -1156,7 +1277,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance.
+             * <p>The database engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1164,7 +1288,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -1172,10 +1299,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             * <p>
+             * <p>The expiration time of the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> Pay-as-you-go instances never expire.</p>
+             * </blockquote>
              * 
-             * >  Pay-as-you-go instances never expire.
+             * <strong>example:</strong>
+             * <p>2019-02-27T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1183,7 +1313,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
+             * <p>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup</p>
              */
             public Builder generalGroupName(String generalGroupName) {
                 this.generalGroupName = generalGroupName;
@@ -1191,7 +1324,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance attached.
+             * <p>The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf64zsuxxxxxxxxxx</p>
              */
             public Builder guardDBInstanceId(String guardDBInstanceId) {
                 this.guardDBInstanceId = guardDBInstanceId;
@@ -1199,11 +1335,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance. Valid values:
-             * <p>
+             * <p>The network type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Classic</strong></li>
+             * <li><strong>VPC</strong></li>
+             * </ul>
              * 
-             * *   **Classic**
-             * *   **VPC**
+             * <strong>example:</strong>
+             * <p>Classic</p>
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
@@ -1211,11 +1350,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the I/O acceleration feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the I/O acceleration feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>1: enabled</li>
+             * <li>0: disabled</li>
+             * </ul>
              * 
-             * *   1: enabled
-             * *   0: disabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
                 this.ioAccelerationEnabled = ioAccelerationEnabled;
@@ -1223,15 +1365,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The lock mode of the instance. Valid values:
-             * <p>
+             * <p>The lock mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Unlock</strong>: The instance is not locked.</li>
+             * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+             * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to instance expiration.</li>
+             * <li><strong>LockByRestoration</strong>: The instance is automatically locked before the instance is rolled back.</li>
+             * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked due to exhausted storage capacity.</li>
+             * <li><strong>Released</strong>: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.</li>
+             * </ul>
              * 
-             * *   **Unlock**: The instance is not locked.
-             * *   **ManualLock**: The instance is manually locked.
-             * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-             * *   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.
-             * *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
-             * *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -1239,7 +1384,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the instance was locked.
+             * <p>The reason why the instance was locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_expired</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1247,7 +1395,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary instance. If this parameter is null, the instance is a primary instance.
+             * <p>The ID of the primary instance. If this parameter is null, the instance is a primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxxxxx</p>
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -1255,13 +1406,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the multi-zone deployment method is used for the instance. Valid values:
-             * <p>
+             * <p>Indicates whether the multi-zone deployment method is used for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: <code>cn-hangzhou-MAZ10(h,i)</code>.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * >  If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: `cn-hangzhou-MAZ10(h,i)`.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mutriORsignle(Boolean mutriORsignle) {
                 this.mutriORsignle = mutriORsignle;
@@ -1269,11 +1424,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance. Valid values:
-             * <p>
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+             * <li><strong>Prepaid</strong>: subscription</li>
+             * </ul>
              * 
-             * *   **Postpaid**: pay-as-you-go
-             * *   **Prepaid**: subscription
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1281,7 +1439,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the read-only instances. This parameter is returned only when the instance is a primary instance and has the read-only instances attached.
+             * <p>The IDs of the read-only instances. This parameter is returned only when the instance is a primary instance and has the read-only instances attached.</p>
              */
             public Builder readOnlyDBInstanceIds(ReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
                 this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
@@ -1289,7 +1447,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1297,7 +1458,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmyxxxxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1305,11 +1469,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance supports weight-based switchovers for high availability. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
-             * <p>
+             * <p>Indicates whether the instance supports weight-based switchovers for high availability. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</p>
+             * <ul>
+             * <li><strong>100</strong>: The instance supports weight-based switchovers for high availability.</li>
+             * <li><strong>0</strong>: The instance does not support weight-based switchovers for high availability.</li>
+             * </ul>
              * 
-             * *   **100**: The instance supports weight-based switchovers for high availability.
-             * *   **0**: The instance does not support weight-based switchovers for high availability.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder switchWeight(Integer switchWeight) {
                 this.switchWeight = switchWeight;
@@ -1317,7 +1484,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the temporary instance. This parameter is returned only when the instance is a primary instance and has a temporary instance attached.
+             * <p>The ID of the temporary instance. This parameter is returned only when the instance is a primary instance and has a temporary instance attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf64zsuxxxxxxxxxx</p>
              */
             public Builder tempDBInstanceId(String tempDBInstanceId) {
                 this.tempDBInstanceId = tempDBInstanceId;
@@ -1325,7 +1495,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
+             * <p>The information about the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Run as expected.</p>
              */
             public Builder tips(String tips) {
                 this.tips = tips;
@@ -1333,11 +1506,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
-             * <p>
+             * <p>The severity of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The instance is normal.</li>
+             * <li><strong>2</strong>: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.</li>
+             * </ul>
              * 
-             * *   **1**: The instance is normal.
-             * *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tipsLevel(Integer tipsLevel) {
                 this.tipsLevel = tipsLevel;
@@ -1345,7 +1521,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6adz52c2pxxxxxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1353,7 +1532,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance. This parameter is returned only when the instance resides in a VPC.
+             * <p>The ID of the instance. This parameter is returned only when the instance resides in a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxx</p>
              */
             public Builder vpcCloudInstanceId(String vpcCloudInstanceId) {
                 this.vpcCloudInstanceId = vpcCloudInstanceId;
@@ -1361,7 +1543,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6f7l4fg90xxxxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1369,7 +1554,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC name.
+             * <p>The VPC name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-huadong</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -1377,7 +1565,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1391,6 +1582,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstance")
         private java.util.List < DBInstance> DBInstance;

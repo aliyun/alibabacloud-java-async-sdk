@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestoreDdrTableResponseBody} extends {@link TeaModel}
  *
  * <p>RestoreDdrTableResponseBody</p>
@@ -49,7 +50,10 @@ public class RestoreDdrTableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -57,7 +61,10 @@ public class RestoreDdrTableResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75BBF1EF-1E90-4950-BFFB-252D26E8259B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

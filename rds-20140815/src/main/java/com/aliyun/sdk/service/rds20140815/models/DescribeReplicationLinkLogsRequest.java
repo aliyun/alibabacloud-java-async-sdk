@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReplicationLinkLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeReplicationLinkLogsRequest</p>
@@ -125,7 +126,11 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1trqb4p1xd****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -134,7 +139,10 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,7 +151,10 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,7 +163,10 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * The ID of the task. You can call the **CreateReplicationLink** operation to create the task ID of the disaster recovery instance.
+         * <p>The task ID. You must set this parameter to the ID of the task that you create by calling the <strong>CreateReplicationLink</strong> operation for the disaster recovery instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8413252</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -161,7 +175,10 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * The name of the task. You can call the **CreateReplicationLink** operation to create a disaster recovery instance. You can specify a task name in the request parameters of the call.
+         * <p>The task name. You must set this parameter to the name of the task that you create by calling the <strong>CreateReplicationLink</strong> operation for the disaster recovery instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -170,16 +187,20 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>create</strong>: creates a synchronization link.</li>
+         * <li><strong>create-dryrun</strong>: performs a precheck before a synchronization link is created.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>create: creates a replication link.</li>
+         * <li>create-dryrun: performs a precheck before a replication link is created.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **create**: creates a synchronization link.
-         * *   **create-dryrun**: performs a precheck before a synchronization link is created.
-         * 
-         * Valid values:
-         * 
-         * *   create: creates a replication link.
-         * *   create-dryrun: performs a precheck before a replication link is created.
+         * <strong>example:</strong>
+         * <p>create</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserBackupFileRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserBackupFileRequest</p>
@@ -125,7 +126,11 @@ public class DeleteUserBackupFileRequest extends Request {
         } 
 
         /**
-         * The ID of the full backup file. You can call the ListUserBackupFiles operation to query the information about all full backup files in a region.
+         * <p>The ID of the full backup file. You can call the ListUserBackupFiles operation to query the information about all full backup files in a region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-w1haya7e4i25********</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -143,7 +148,11 @@ public class DeleteUserBackupFileRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,7 +161,10 @@ public class DeleteUserBackupFileRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

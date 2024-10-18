@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRCInstanceChargeTypeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyRCInstanceChargeTypeResponseBody</p>
@@ -90,6 +91,12 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyRCInstanceChargeTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyRCInstanceChargeTypeResponseBody</p>
+     */
     public static class FeeOfInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -171,6 +178,12 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyRCInstanceChargeTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyRCInstanceChargeTypeResponseBody</p>
+     */
     public static class FeeOfInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeeOfInstance")
         private java.util.List < FeeOfInstance> feeOfInstance;

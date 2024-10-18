@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHostGroupElasticStrategyParametersRequest} extends {@link RequestModel}
  *
  * <p>DescribeHostGroupElasticStrategyParametersRequest</p>
@@ -97,7 +98,11 @@ public class DescribeHostGroupElasticStrategyParametersRequest extends Request {
         } 
 
         /**
-         * The name of the dedicated cluster.
+         * <p>The name of the dedicated cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg-d0dwi82293b2w9t5</p>
          */
         public Builder dedicatedHostGroupName(String dedicatedHostGroupName) {
             this.putQueryParameter("DedicatedHostGroupName", dedicatedHostGroupName);
@@ -106,7 +111,11 @@ public class DescribeHostGroupElasticStrategyParametersRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -115,7 +124,10 @@ public class DescribeHostGroupElasticStrategyParametersRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

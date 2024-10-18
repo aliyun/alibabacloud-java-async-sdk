@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRCDeploymentSetsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRCDeploymentSetsRequest</p>
@@ -124,7 +125,10 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         } 
 
         /**
-         * DeploymentSetIds.
+         * <p>The IDs of the deployment sets. The value can be a JSON array that consists of deployment set IDs in the format of <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, ... &quot;ds-zzzzzzzzz&quot;]</code>. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ds-2zeeuw16zo2gr9e6****&quot;]</p>
          */
         public Builder deploymentSetIds(String deploymentSetIds) {
             this.putQueryParameter("DeploymentSetIds", deploymentSetIds);
@@ -133,7 +137,10 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         }
 
         /**
-         * DeploymentSetName.
+         * <p>The deployment set name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deployment_test</p>
          */
         public Builder deploymentSetName(String deploymentSetName) {
             this.putQueryParameter("DeploymentSetName", deploymentSetName);
@@ -142,7 +149,12 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +163,12 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +177,11 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +190,15 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         }
 
         /**
-         * Strategy.
+         * <p>The deployment strategy. Valid values:</p>
+         * <ul>
+         * <li><strong>Availability</strong>: high availability strategy</li>
+         * <li><strong>AvailabilityGroup</strong>: high availability group strategy</li>
+         * </ul>
+         * <p>Default value: Availability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Availability</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);

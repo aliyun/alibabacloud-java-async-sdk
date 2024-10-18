@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -153,7 +154,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, you can specify the token returned from the previous query for the next query to obtain more results.
+         * <p>The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, you can specify the token returned from the previous query for the next query to obtain more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707ec21345</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -171,7 +175,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -180,10 +188,13 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The instance ID. You can specify a maximum of **50** instance IDs.****
-         * <p>
+         * <p>The instance ID. You can specify a maximum of <strong>50</strong> instance IDs.****</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>ResourceId</strong> and <strong>Key</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **ResourceId** and **Key** parameters.
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -210,7 +221,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **INSTANCE**.
+         * <p>The type of the resource. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -219,7 +234,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -234,6 +249,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -273,10 +294,13 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can query N tag keys at a time. Valid values of N: **1** to **20**. The value cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can query N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value cannot be an empty string.</p>
+             * <blockquote>
+             * <p> You must specify at least one of the <strong>ResourceId</strong> and <strong>Key</strong> parameters.</p>
+             * </blockquote>
              * 
-             * >  You must specify at least one of the **ResourceId** and **Key** parameters.
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -284,7 +308,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: **1** to **20**. The value can be an empty string.
+             * <p>The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value can be an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

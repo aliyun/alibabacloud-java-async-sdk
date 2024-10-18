@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceAttributeRequest</p>
@@ -82,10 +83,14 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
-         * <p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <blockquote>
+         * <p>Notice: Do not query the details of multiple instances at a time by using multiple instance IDs. Otherwise, the query times out and fails.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * ><notice>Do not query the details of multiple instances at a time by using multiple instance IDs. Otherwise, the query times out and fails.></notice>
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -94,11 +99,14 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance expires. Valid values:
-         * <p>
+         * <p>Specifies whether the instance expires. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
          * 
-         * *   **True**
-         * *   **False**
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);

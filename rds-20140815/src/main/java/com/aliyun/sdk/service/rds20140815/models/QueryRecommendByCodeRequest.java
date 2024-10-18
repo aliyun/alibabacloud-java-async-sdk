@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRecommendByCodeRequest} extends {@link RequestModel}
  *
  * <p>QueryRecommendByCodeRequest</p>
@@ -110,7 +111,11 @@ public class QueryRecommendByCodeRequest extends Request {
         } 
 
         /**
-         * The code.
+         * <p>The code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_recommend</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -128,7 +133,10 @@ public class QueryRecommendByCodeRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

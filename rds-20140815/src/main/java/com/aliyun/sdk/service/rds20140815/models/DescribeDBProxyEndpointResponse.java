@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBProxyEndpointResponse} extends {@link TeaModel}
  *
  * <p>DescribeDBProxyEndpointResponse</p>

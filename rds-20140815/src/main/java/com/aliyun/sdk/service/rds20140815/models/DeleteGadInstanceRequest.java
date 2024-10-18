@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGadInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeleteGadInstanceRequest</p>
@@ -82,7 +83,11 @@ public class DeleteGadInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the global active database cluster. You can call the GadInstanceName operation to query the cluster ID.
+         * <p>The ID of the global active database cluster. You can call the GadInstanceName operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gad-rm-bp1npi2j8********</p>
          */
         public Builder gadInstanceName(String gadInstanceName) {
             this.putQueryParameter("GadInstanceName", gadInstanceName);
@@ -91,7 +96,10 @@ public class DeleteGadInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the central node of the global active database cluster. The central node refers to the primary node. You can call the DescribeGadInstances operation to query the region ID.
+         * <p>The region ID of the central node of the global active database cluster. The central node refers to the primary node. You can call the DescribeGadInstances operation to query the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +108,10 @@ public class DeleteGadInstanceRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

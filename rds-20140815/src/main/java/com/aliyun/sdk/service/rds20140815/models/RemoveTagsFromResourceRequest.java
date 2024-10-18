@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTagsFromResourceRequest} extends {@link RequestModel}
  *
  * <p>RemoveTagsFromResourceRequest</p>
@@ -204,7 +205,10 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -213,7 +217,11 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -240,7 +248,11 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -249,7 +261,10 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the ListResourceGroups operation to query the resource group ID.
+         * <p>The resource group ID. You can call the ListResourceGroups operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -276,10 +291,13 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * A set of a TagKey and a TagValue that you use to unbind the tag. Format: {"key1":"value1"}.
-         * <p>
+         * <p>A set of a TagKey and a TagValue that you use to unbind the tag. Format: {&quot;key1&quot;:&quot;value1&quot;}.</p>
+         * <blockquote>
+         * <p> You cannot specify an empty string for TagKey. You can specify an empty string for TagValue.</p>
+         * </blockquote>
          * 
-         * >  You cannot specify an empty string for TagKey. You can specify an empty string for TagValue.
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -288,7 +306,10 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * The ID of the proxy mode.
+         * <p>The ID of the proxy mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);
@@ -303,6 +324,12 @@ public class RemoveTagsFromResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveTagsFromResourceRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveTagsFromResourceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -342,7 +369,10 @@ public class RemoveTagsFromResourceRequest extends Request {
             private String value; 
 
             /**
-             * The TagKey of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.
+             * <p>The TagKey of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -350,7 +380,10 @@ public class RemoveTagsFromResourceRequest extends Request {
             }
 
             /**
-             * The TagValue of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.
+             * <p>The TagValue of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

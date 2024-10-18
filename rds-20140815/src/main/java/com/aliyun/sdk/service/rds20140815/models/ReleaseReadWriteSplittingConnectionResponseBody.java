@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseReadWriteSplittingConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>ReleaseReadWriteSplittingConnectionResponseBody</p>
@@ -37,7 +38,10 @@ public class ReleaseReadWriteSplittingConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A77D650-27A1-4E08-AD9E-59008EDB6927</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

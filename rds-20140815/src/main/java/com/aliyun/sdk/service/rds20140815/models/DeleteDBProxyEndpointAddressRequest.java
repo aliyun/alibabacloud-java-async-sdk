@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBProxyEndpointAddressRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBProxyEndpointAddressRequest</p>
@@ -112,7 +113,11 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4n3a****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -121,16 +126,20 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The network type of the proxy endpoint. Valid values:
-         * <p>
+         * <p>The network type of the proxy endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong>: Internet</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>Classic</strong>: classic network</li>
+         * </ul>
+         * <p>If the instance runs MySQL, the default value of this parameter is <strong>Classic</strong>.</p>
+         * <blockquote>
+         * <p>If the instance runs PostgreSQL, you must set this parameter to <strong>Public</strong> or <strong>VPC</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Public**: Internet
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **Classic**: classic network
-         * 
-         * If the instance runs MySQL, the default value of this parameter is **Classic**.
-         * 
-         * > If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder DBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
             this.putQueryParameter("DBProxyConnectStringNetType", DBProxyConnectStringNetType);
@@ -139,7 +148,11 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
+         * <p>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ta9um4****</p>
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
@@ -148,7 +161,10 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -157,7 +173,10 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

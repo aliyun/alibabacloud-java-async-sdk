@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKmsAssociateResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKmsAssociateResourcesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the associated ApsaraDB RDS instances.
+         * <p>The information about the associated ApsaraDB RDS instances.</p>
          */
         public Builder associateDBInstances(java.util.List < AssociateDBInstances> associateDBInstances) {
             this.associateDBInstances = associateDBInstances;
@@ -69,11 +70,14 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether an associated RDS instance exists.
-         * <p>
+         * <p>Indicates whether an associated RDS instance exists.</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes</li>
+         * <li><strong>false</strong>: No</li>
+         * </ul>
          * 
-         * - **true**: Yes
-         * - **false**: No
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder associateStatus(Boolean associateStatus) {
             this.associateStatus = associateStatus;
@@ -81,7 +85,10 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,6 +101,12 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKmsAssociateResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKmsAssociateResourcesResponseBody</p>
+     */
     public static class AssociateDBInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
@@ -157,7 +170,10 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pgm-bp16p6f68130****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -165,12 +181,15 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine. Valid values:
-             * <p>
+             * <p>The database engine. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>SQLServer</strong></li>
+             * <li><strong>PostgreSQL</strong></li>
+             * </ul>
              * 
-             * *   **MySQL**
-             * *   **SQLServer**
-             * *   **PostgreSQL**
+             * <strong>example:</strong>
+             * <p>PostgreSQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -178,11 +197,14 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose of the key. Valid values:
-             * <p>
+             * <p>The purpose of the key. Valid values:</p>
+             * <ul>
+             * <li><strong>DiskEncryption</strong>: cloud disk encryption</li>
+             * <li><strong>TDE</strong>: transparent data encryption</li>
+             * </ul>
              * 
-             * *   **DiskEncryption**: cloud disk encryption
-             * *   **TDE**: transparent data encryption
+             * <strong>example:</strong>
+             * <p>DiskEncryption</p>
              */
             public Builder keyUsedBy(String keyUsedBy) {
                 this.keyUsedBy = keyUsedBy;
@@ -190,17 +212,20 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. Valid values:
-             * <p>
+             * <p>The state of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>CREATING</strong>: The instance is being created.</li>
+             * <li><strong>ACTIVATION</strong>: The instance is running.</li>
+             * <li><strong>DELETING</strong>: The instance is being deleted.</li>
+             * <li><strong>RESTARTING</strong>: The instance is being restarted.</li>
+             * <li><strong>INS_MAINTAINING</strong>: The configuration of the instance is being changed.</li>
+             * <li><strong>INS_MAINTAINING</strong>: The instance is being maintained.</li>
+             * <li><strong>BACKUP_RECOVERING</strong>: The instance is being restored.</li>
+             * <li><strong>NET_MODIFYING</strong>: The network type of the instance is being changed.</li>
+             * </ul>
              * 
-             * *   **CREATING**: The instance is being created.
-             * *   **ACTIVATION**: The instance is running.
-             * *   **DELETING**: The instance is being deleted.
-             * *   **RESTARTING**: The instance is being restarted.
-             * *   **INS_MAINTAINING**: The configuration of the instance is being changed.
-             * *   **INS_MAINTAINING**: The instance is being maintained.
-             * *   **BACKUP_RECOVERING**: The instance is being restored.
-             * *   **NET_MODIFYING**: The network type of the instance is being changed.
+             * <strong>example:</strong>
+             * <p>ACTIVATION</p>
              */
             public Builder status(String status) {
                 this.status = status;

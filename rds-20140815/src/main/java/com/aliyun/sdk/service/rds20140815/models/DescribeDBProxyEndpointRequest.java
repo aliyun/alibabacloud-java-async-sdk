@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBProxyEndpointRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBProxyEndpointRequest</p>
@@ -152,7 +153,11 @@ public class DescribeDBProxyEndpointRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1ja4f56s7us****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -161,7 +166,10 @@ public class DescribeDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The proxy endpoint that you want to query. You can call the DescribeDBProxy interface to query the proxy endpoint.
+         * <p>The proxy endpoint that you want to query. You can call the DescribeDBProxy interface to query the proxy endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testproxy****.rwlb.rds.aliyuncs.com</p>
          */
         public Builder DBProxyConnectString(String DBProxyConnectString) {
             this.putQueryParameter("DBProxyConnectString", DBProxyConnectString);
@@ -170,7 +178,10 @@ public class DescribeDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The name of the proxy terminal. You can call the DescribeDBProxy interface to query the name of the proxy terminal.
+         * <p>The name of the proxy terminal. You can call the DescribeDBProxy interface to query the name of the proxy terminal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keaxncrjluwu0gue****</p>
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
@@ -179,7 +190,10 @@ public class DescribeDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -197,7 +211,10 @@ public class DescribeDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

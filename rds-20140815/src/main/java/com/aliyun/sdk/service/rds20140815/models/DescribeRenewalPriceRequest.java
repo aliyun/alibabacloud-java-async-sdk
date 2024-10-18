@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRenewalPriceRequest} extends {@link RequestModel}
  *
  * <p>DescribeRenewalPriceRequest</p>
@@ -252,7 +253,10 @@ public class DescribeRenewalPriceRequest extends Request {
         } 
 
         /**
-         * The additional business information about the instance.
+         * <p>The additional business information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121436975448952</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -261,7 +265,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -270,7 +277,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. For more information, see [Primary instance types](~~26312~~). By default, the current instance type applies.
+         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. By default, the current instance type applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n2.medium.2c</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -279,7 +289,11 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -288,7 +302,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The type of order. Set the value to **BUY**.
+         * <p>The type of order. Set the value to <strong>BUY</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -315,11 +332,14 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -328,7 +348,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The number of the instances. Default value: **1**.
+         * <p>The number of the instances. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -337,7 +360,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -346,7 +372,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmx****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -373,11 +402,15 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The renewal cycle of the instance. Valid values:
-         * <p>
+         * <p>The renewal cycle of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Year**
-         * *   **Month**
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder timeType(String timeType) {
             this.putQueryParameter("TimeType", timeType);
@@ -386,11 +419,15 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. Valid values:
-         * <p>
+         * <p>The subscription duration of the instance. Valid values:</p>
+         * <ul>
+         * <li>If you set the <strong>TimeType</strong> parameter to <strong>Year</strong>, the value of the UsedTime parameter is within the range of <strong>1 to 3</strong>.</li>
+         * <li>If you set the <strong>TimeType</strong> parameter to <strong>Month</strong>, the value of the UsedTime parameter is within the range of <strong>1 to 9</strong>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set the **TimeType** parameter to **Year**, the value of the UsedTime parameter is within the range of **1 to 3**.
-         * *   If you set the **TimeType** parameter to **Month**, the value of the UsedTime parameter is within the range of **1 to 9**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

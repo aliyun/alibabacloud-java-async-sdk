@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBProxyInstanceKernelVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeDBProxyInstanceKernelVersionResponseBody</p>
@@ -61,7 +62,10 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the database proxy of the instance.
+         * <p>The ID of the database proxy of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bu9***</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -69,7 +73,10 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44537EC8-DFA2-4745-B579-E733FF2C5B9A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33436****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

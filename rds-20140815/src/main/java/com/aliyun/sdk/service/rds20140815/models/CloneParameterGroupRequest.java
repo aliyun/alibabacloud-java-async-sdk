@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneParameterGroupRequest} extends {@link RequestModel}
  *
  * <p>CloneParameterGroupRequest</p>
@@ -178,7 +179,10 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The description of the parameter template in the destination region.
+         * <p>The description of the parameter template in the destination region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloneGroup1</p>
          */
         public Builder parameterGroupDesc(String parameterGroupDesc) {
             this.putQueryParameter("ParameterGroupDesc", parameterGroupDesc);
@@ -187,7 +191,11 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the parameter template. You can call the DescribeParameterGroups operation to query the parameter template ID.
+         * <p>The ID of the parameter template. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpg-13ppdh****</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -196,7 +204,11 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The name of the parameter template in the destination region.
+         * <p>The name of the parameter template in the destination region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tartestgroup</p>
          */
         public Builder parameterGroupName(String parameterGroupName) {
             this.putQueryParameter("ParameterGroupName", parameterGroupName);
@@ -205,7 +217,11 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the source region to which the parameter template belongs. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The ID of the source region to which the parameter template belongs. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -214,7 +230,10 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can leave this parameter empty.
+         * <p>The ID of the resource group. You can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -241,7 +260,11 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the destination region. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The ID of the destination region. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder targetRegionId(String targetRegionId) {
             this.putQueryParameter("TargetRegionId", targetRegionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachWhitelistTemplateToInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>AttachWhitelistTemplateToInstanceResponseBody</p>
@@ -97,14 +98,17 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned. Valid values:
-         * <p>
+         * <p>The response code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>401</strong>: identity authentication failed</li>
+         * <li><strong>404</strong>: request page not found</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **401**: identity authentication failed
-         * *   **404**: request page not found
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -112,7 +116,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -120,12 +124,15 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned. Valid values:
-         * <p>
+         * <p>The HTTP status code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -133,7 +140,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +151,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,11 +162,14 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -166,6 +182,12 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AttachWhitelistTemplateToInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachWhitelistTemplateToInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -193,11 +215,14 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The status code returned. Valid values:
-             * <p>
+             * <p>The status code returned. Valid values:</p>
+             * <ul>
+             * <li><strong>ok</strong>: The request is successful.</li>
+             * <li><strong>error</strong>: The request fails.</li>
+             * </ul>
              * 
-             * *   **ok**: The request is successful.
-             * *   **error**: The request fails.
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder status(String status) {
                 this.status = status;

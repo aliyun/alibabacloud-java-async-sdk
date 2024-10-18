@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackupFileRequest} extends {@link RequestModel}
  *
  * <p>DeleteBackupFileRequest</p>
@@ -152,14 +153,16 @@ public class DeleteBackupFileRequest extends Request {
         } 
 
         /**
-         * The backup set ID. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).
-         * <p>
+         * <p>The backup set ID. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the instance runs SQL Server, only the ID of the backup set for an individual database is supported.</li>
+         * <li>You can call the DescribeBackups operation to query the backup set ID.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > 
-         * 
-         * *   If the instance runs SQL Server, only the ID of the backup set for an individual database is supported.
-         * 
-         * *   You can call the DescribeBackups operation to query the backup set ID.
+         * <strong>example:</strong>
+         * <p>29304****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -168,7 +171,10 @@ public class DeleteBackupFileRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the backup sets that are generated before the specified point in time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>Specifies whether to delete the backup sets that are generated before the specified point in time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-06-11T16:00:00Z</p>
          */
         public Builder backupTime(String backupTime) {
             this.putQueryParameter("BackupTime", backupTime);
@@ -177,7 +183,11 @@ public class DeleteBackupFileRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp6wjk5******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -186,7 +196,10 @@ public class DeleteBackupFileRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -204,7 +217,10 @@ public class DeleteBackupFileRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.
+         * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

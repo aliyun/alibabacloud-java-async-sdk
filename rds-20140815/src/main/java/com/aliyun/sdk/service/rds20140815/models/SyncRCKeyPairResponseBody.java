@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncRCKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>SyncRCKeyPairResponseBody</p>
@@ -49,7 +50,7 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The details of the result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60478CCB-95EA-5D06-8A51-CAC83A316E9A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SyncRCKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncRCKeyPairResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsSyncInfo")
         private Boolean isSyncInfo;
@@ -97,7 +107,14 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
             private Boolean isSyncInfo; 
 
             /**
-             * IsSyncInfo.
+             * <p>Indicates whether the synchronization succeeded. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSyncInfo(Boolean isSyncInfo) {
                 this.isSyncInfo = isSyncInfo;

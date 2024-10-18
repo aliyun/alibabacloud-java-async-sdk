@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBInstanceSecurityGroupRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBInstanceSecurityGroupRuleRequest</p>
@@ -153,7 +154,10 @@ public class DeleteDBInstanceSecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +166,11 @@ public class DeleteDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~2628785~~) operation to query the IDs of instances.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the IDs of instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp15i4hn07r******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -189,7 +197,10 @@ public class DeleteDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -216,7 +227,11 @@ public class DeleteDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The ID of the security group rule. You can call the [DescribeDBInstanceSecurityGroupRule](~~2834044~~) to obtain the ID of the security group rule.
+         * <p>The ID of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/2834044.html">DescribeDBInstanceSecurityGroupRule</a> to obtain the ID of the security group rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgr-2ze17u******</p>
          */
         public Builder securityGroupRuleIds(String securityGroupRuleIds) {
             this.putQueryParameter("SecurityGroupRuleIds", securityGroupRuleIds);

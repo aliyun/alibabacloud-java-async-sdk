@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBProxyEndpointRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBProxyEndpointRequest</p>
@@ -45,6 +46,14 @@ public class ModifyDBProxyEndpointRequest extends Request {
     private String dbEndpointType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveSpecificTime")
+    private String effectiveSpecificTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
+    private String effectiveTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -72,6 +81,10 @@ public class ModifyDBProxyEndpointRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
+
     private ModifyDBProxyEndpointRequest(Builder builder) {
         super(builder);
         this.configDBProxyFeatures = builder.configDBProxyFeatures;
@@ -82,6 +95,8 @@ public class ModifyDBProxyEndpointRequest extends Request {
         this.dbEndpointOperator = builder.dbEndpointOperator;
         this.dbEndpointReadWriteMode = builder.dbEndpointReadWriteMode;
         this.dbEndpointType = builder.dbEndpointType;
+        this.effectiveSpecificTime = builder.effectiveSpecificTime;
+        this.effectiveTime = builder.effectiveTime;
         this.ownerId = builder.ownerId;
         this.readOnlyInstanceDistributionType = builder.readOnlyInstanceDistributionType;
         this.readOnlyInstanceMaxDelayTime = builder.readOnlyInstanceMaxDelayTime;
@@ -89,6 +104,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
@@ -161,6 +177,20 @@ public class ModifyDBProxyEndpointRequest extends Request {
     }
 
     /**
+     * @return effectiveSpecificTime
+     */
+    public String getEffectiveSpecificTime() {
+        return this.effectiveSpecificTime;
+    }
+
+    /**
+     * @return effectiveTime
+     */
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -209,6 +239,13 @@ public class ModifyDBProxyEndpointRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBProxyEndpointRequest, Builder> {
         private String configDBProxyFeatures; 
         private String DBInstanceId; 
@@ -218,6 +255,8 @@ public class ModifyDBProxyEndpointRequest extends Request {
         private String dbEndpointOperator; 
         private String dbEndpointReadWriteMode; 
         private String dbEndpointType; 
+        private String effectiveSpecificTime; 
+        private String effectiveTime; 
         private Long ownerId; 
         private String readOnlyInstanceDistributionType; 
         private String readOnlyInstanceMaxDelayTime; 
@@ -225,6 +264,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String vSwitchId; 
 
         private Builder() {
             super();
@@ -240,6 +280,8 @@ public class ModifyDBProxyEndpointRequest extends Request {
             this.dbEndpointOperator = request.dbEndpointOperator;
             this.dbEndpointReadWriteMode = request.dbEndpointReadWriteMode;
             this.dbEndpointType = request.dbEndpointType;
+            this.effectiveSpecificTime = request.effectiveSpecificTime;
+            this.effectiveTime = request.effectiveTime;
             this.ownerId = request.ownerId;
             this.readOnlyInstanceDistributionType = request.readOnlyInstanceDistributionType;
             this.readOnlyInstanceMaxDelayTime = request.readOnlyInstanceMaxDelayTime;
@@ -247,24 +289,28 @@ public class ModifyDBProxyEndpointRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
-         * The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: `Feature 1:Status;Feature 2:Status;...`. Do not add a semicolon (;) at the end of the value.
-         * <p>
+         * <p>The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: <code>Feature 1:Status;Feature 2:Status;...</code>. Do not add a semicolon (;) at the end of the value.</p>
+         * <p>Valid feature values:</p>
+         * <ul>
+         * <li><strong>ReadWriteSpliting</strong>: read/write splitting</li>
+         * <li><strong>ConnectionPersist</strong>: connection pooling</li>
+         * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: transaction splitting</li>
+         * </ul>
+         * <p>Valid status values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by <strong>ReadWriteSpliting</strong>.</p>
+         * </blockquote>
          * 
-         * Valid feature values:
-         * 
-         * *   **ReadWriteSpliting**: read/write splitting
-         * *   **ConnectionPersist**: connection pooling
-         * *   **TransactionReadSqlRouteOptimizeStatus**: transaction splitting
-         * 
-         * Valid status values:
-         * 
-         * *   **1**: enabled
-         * *   **0**: disabled
-         * 
-         * >  If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by **ReadWriteSpliting**.
+         * <strong>example:</strong>
+         * <p>ReadWriteSpliting:1;ConnectionPersist:0</p>
          */
         public Builder configDBProxyFeatures(String configDBProxyFeatures) {
             this.putQueryParameter("ConfigDBProxyFeatures", configDBProxyFeatures);
@@ -273,7 +319,11 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp145737x5bi6****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -282,11 +332,16 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
-         * <p>
+         * <p>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the instance runs MySQL and you set <strong>DbEndpointOperator</strong> to <strong>Delete</strong> or <strong>Modify</strong>, you must specify DBProxyEndpointId.</li>
+         * <li>If the instance runs PostgreSQL and you set <strong>DbEndpointOperator</strong> to <strong>Delete</strong>, <strong>Modify</strong>, or <strong>Create</strong>, you must specify DBProxyEndpointId.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.
-         * > *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.
+         * <strong>example:</strong>
+         * <p>gos787jog2wk0y****</p>
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
@@ -295,7 +350,10 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * A deprecated parameter. You do not need to specify this parameter.
+         * <p>A deprecated parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -304,7 +362,10 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The description of the proxy terminal.
+         * <p>The description of the proxy terminal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-proxy</p>
          */
         public Builder dbEndpointAliases(String dbEndpointAliases) {
             this.putQueryParameter("DbEndpointAliases", dbEndpointAliases);
@@ -313,12 +374,15 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The type of operation that you want to perform. Valid values:
-         * <p>
+         * <p>The type of operation that you want to perform. Valid values:</p>
+         * <ul>
+         * <li><strong>Modify</strong>: Modify a proxy terminal. This is the default value.</li>
+         * <li><strong>Create</strong>: Create a proxy terminal.</li>
+         * <li><strong>Delete</strong>: Delete a proxy terminal.</li>
+         * </ul>
          * 
-         * *   **Modify**: Modify a proxy terminal. This is the default value.
-         * *   **Create**: Create a proxy terminal.
-         * *   **Delete**: Delete a proxy terminal.
+         * <strong>example:</strong>
+         * <p>Modify</p>
          */
         public Builder dbEndpointOperator(String dbEndpointOperator) {
             this.putQueryParameter("DbEndpointOperator", dbEndpointOperator);
@@ -327,14 +391,20 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The read and write attributes of the proxy terminal. Valid values:
-         * <p>
+         * <p>The read and write attributes of the proxy terminal. Valid values:</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong>: The proxy terminal connects to the primary instance and can receive both read and write requests.</li>
+         * <li><strong>ReadOnly</strong>: The proxy terminal does not connect to the primary instance and can receive only read requests. This is the default value.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you set <strong>DbEndpointOperator</strong> to <strong>Create</strong>, you must also specify DbEndpointReadWriteMode.</li>
+         * <li>If the instance runs MySQL and you change the value of this parameter from <strong>ReadWrite</strong> to <strong>ReadOnly</strong>, the transaction splitting feature is disabled.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **ReadWrite**: The proxy terminal connects to the primary instance and can receive both read and write requests.
-         * *   **ReadOnly**: The proxy terminal does not connect to the primary instance and can receive only read requests. This is the default value.
-         * 
-         * > *   If you set **DbEndpointOperator** to **Create**, you must also specify DbEndpointReadWriteMode.
-         * > *   If the instance runs MySQL and you change the value of this parameter from **ReadWrite** to **ReadOnly**, the transaction splitting feature is disabled.
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         public Builder dbEndpointReadWriteMode(String dbEndpointReadWriteMode) {
             this.putQueryParameter("DbEndpointReadWriteMode", dbEndpointReadWriteMode);
@@ -343,11 +413,32 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The type of the proxy terminal. This is a reserved parameter. You do not need to specify this parameter.
+         * <p>The type of the proxy terminal. This is a reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RWSplit</p>
          */
         public Builder dbEndpointType(String dbEndpointType) {
             this.putQueryParameter("DbEndpointType", dbEndpointType);
             this.dbEndpointType = dbEndpointType;
+            return this;
+        }
+
+        /**
+         * EffectiveSpecificTime.
+         */
+        public Builder effectiveSpecificTime(String effectiveSpecificTime) {
+            this.putQueryParameter("EffectiveSpecificTime", effectiveSpecificTime);
+            this.effectiveSpecificTime = effectiveSpecificTime;
+            return this;
+        }
+
+        /**
+         * EffectiveTime.
+         */
+        public Builder effectiveTime(String effectiveTime) {
+            this.putQueryParameter("EffectiveTime", effectiveTime);
+            this.effectiveTime = effectiveTime;
             return this;
         }
 
@@ -361,13 +452,17 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The policy that is used to allocate read weights. Valid values:
-         * <p>
+         * <p>The policy that is used to allocate read weights. Valid values:</p>
+         * <ul>
+         * <li><strong>Standard</strong>: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</li>
+         * <li><strong>Custom</strong>: You must manually allocate read weights to the instance and its read-only instances.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a> and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+         * </blockquote>
          * 
-         * *   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.
-         * *   **Custom**: You must manually allocate read weights to the instance and its read-only instances.
-         * 
-         * > You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see [Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances](~~96076~~) and [Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](~~418272~~).
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder readOnlyInstanceDistributionType(String readOnlyInstanceDistributionType) {
             this.putQueryParameter("ReadOnlyInstanceDistributionType", readOnlyInstanceDistributionType);
@@ -376,10 +471,13 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. Unit: seconds If you do not specify this parameter, the original value of this parameter is retained. Valid values: **0** to **3600**. Default value: **30**.
-         * <p>
+         * <p>The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. Unit: seconds If you do not specify this parameter, the original value of this parameter is retained. Valid values: <strong>0</strong> to <strong>3600</strong>. Default value: <strong>30</strong>.</p>
+         * <blockquote>
+         * <p>You must specify this parameter only when the read/write splitting feature is enabled.</p>
+         * </blockquote>
          * 
-         * > You must specify this parameter only when the read/write splitting feature is enabled.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder readOnlyInstanceMaxDelayTime(String readOnlyInstanceMaxDelayTime) {
             this.putQueryParameter("ReadOnlyInstanceMaxDelayTime", readOnlyInstanceMaxDelayTime);
@@ -388,18 +486,21 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The read weights of the instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10000. Formats:
-         * <p>
+         * <p>The read weights of the instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10000. Formats:</p>
+         * <ul>
+         * <li><p>Standard instance: <code>{&quot;ID of the primary instance&quot;:&quot;Weight&quot;,&quot;ID of the read-only instance&quot;:&quot;Weight&quot;...}</code></p>
+         * <p>Example: <code>{&quot;rm-uf6wjk5****&quot;:&quot;500&quot;,&quot;rr-tfhfgk5xxx&quot;:&quot;200&quot;...}</code></p>
+         * </li>
+         * <li><p>Instance on RDS Cluster Edition: <code>{&quot;ID of the read-only instance&quot;:&quot;Weight&quot;,&quot;DBClusterNode&quot;:{&quot;ID of the primary node&quot;:&quot;Weight&quot;,&quot;ID of the secondary node&quot;:&quot;Weight&quot;,&quot;ID of the secondary node&quot;:&quot;Weight&quot;...}}</code></p>
+         * <p>Example: <code>{&quot;rr-tfhfgk5****&quot;:&quot;200&quot;,&quot;DBClusterNode&quot;:{&quot;rn-2z****&quot;:&quot;0&quot;,&quot;rn-2z****&quot;:&quot;400&quot;,&quot;rn-2z****&quot;:&quot;400&quot;...}}</code></p>
+         * <blockquote>
+         * <p><strong>DBClusterNode</strong> is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about <strong>IDs</strong> and <strong>weights</strong> of the primary and secondary nodes..</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
-         * *   Standard instance: `{"ID of the primary instance":"Weight","ID of the read-only instance":"Weight"...}`
-         * 
-         *     Example: `{"rm-uf6wjk5****":"500","rr-tfhfgk5xxx":"200"...}`
-         * 
-         * *   Instance on RDS Cluster Edition: `{"ID of the read-only instance":"Weight","DBClusterNode":{"ID of the primary node":"Weight","ID of the secondary node":"Weight","ID of the secondary node":"Weight"...}}`
-         * 
-         *     Example: `{"rr-tfhfgk5****":"200","DBClusterNode":{"rn-2z****":"0","rn-2z****":"400","rn-2z****":"400"...}}`
-         * 
-         *     > **DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes..
+         * <strong>example:</strong>
+         * <p>{&quot;rm-uf6wjk5xxxx&quot;:&quot;500&quot;,&quot;rr-tfhfgk5xxx&quot;:&quot;200&quot;...}</p>
          */
         public Builder readOnlyInstanceWeight(String readOnlyInstanceWeight) {
             this.putQueryParameter("ReadOnlyInstanceWeight", readOnlyInstanceWeight);
@@ -408,7 +509,10 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -431,6 +535,15 @@ public class ModifyDBProxyEndpointRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
             return this;
         }
 

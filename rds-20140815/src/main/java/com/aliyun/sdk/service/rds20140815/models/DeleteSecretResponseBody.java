@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecretResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSecretResponseBody</p>
@@ -73,7 +74,10 @@ public class DeleteSecretResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF4961DD-16F5-5B24-BD4C-0C7788F7ADAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +85,10 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the credential for the Data API account.
+         * <p>The ARN of the credential for the Data API account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</p>
          */
         public Builder secretArn(String secretArn) {
             this.secretArn = secretArn;
@@ -89,7 +96,10 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the credential.
+         * <p>The name of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Foo</p>
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;
@@ -97,11 +107,14 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

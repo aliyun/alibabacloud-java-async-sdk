@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabasesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDatabasesRequest</p>
@@ -168,7 +169,11 @@ public class DescribeDatabasesRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -177,7 +182,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB01</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -186,12 +194,15 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The status of the database. Valid values:
-         * <p>
+         * <p>The status of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
          * 
-         * *   **Creating**
-         * *   **Running**
-         * *   **Deleting**
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder DBStatus(String DBStatus) {
             this.putQueryParameter("DBStatus", DBStatus);
@@ -218,10 +229,11 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from 1.
-         * <p>
+         * <p>The page number. Pages start from 1.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -230,14 +242,16 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: 30.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

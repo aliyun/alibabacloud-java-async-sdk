@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>MigrateDBInstanceResponseBody</p>
@@ -61,7 +62,10 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * The serial number of the task in the migration task queue. When the serial number becomes 0, the system starts the migration.
+         * <p>The serial number of the task in the migration task queue. When the serial number becomes 0, the system starts the migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>224****</p>
          */
         public Builder migrationId(Integer migrationId) {
             this.migrationId = migrationId;
@@ -69,7 +73,10 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>498AE8CA-8C81-4A01-AF37-2B902014ED30</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10824****</p>
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

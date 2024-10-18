@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGadInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeGadInstancesRequest</p>
@@ -81,13 +82,17 @@ public class DescribeGadInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the global active database cluster.
-         * <p>
+         * <p>The ID of the global active database cluster.</p>
+         * <ul>
+         * <li>If you leave this parameter empty, this operation returns the details about all global active database clusters that are created within your Alibaba Cloud account.</li>
+         * <li>If you specify this parameter, this operation returns the details about the global active database cluster that you specify.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter when you call this operation for the first time, the IDs of all clusters that are created by using the current account are returned. Then, you can specify the cluster ID to view the cluster details.</p>
+         * </blockquote>
          * 
-         * *   If you leave this parameter empty, this operation returns the details about all global active database clusters that are created within your Alibaba Cloud account.
-         * *   If you specify this parameter, this operation returns the details about the global active database cluster that you specify.
-         * 
-         * >  If you do not specify this parameter when you call this operation for the first time, the IDs of all clusters that are created by using the current account are returned. Then, you can specify the cluster ID to view the cluster details.
+         * <strong>example:</strong>
+         * <p>gad-rm-bp1npi2j8********</p>
          */
         public Builder gadInstanceName(String gadInstanceName) {
             this.putQueryParameter("GadInstanceName", gadInstanceName);
@@ -96,7 +101,10 @@ public class DescribeGadInstancesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +113,10 @@ public class DescribeGadInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

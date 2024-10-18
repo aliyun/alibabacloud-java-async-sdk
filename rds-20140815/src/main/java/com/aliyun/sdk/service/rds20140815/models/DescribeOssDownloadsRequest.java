@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssDownloadsRequest} extends {@link RequestModel}
  *
  * <p>DescribeOssDownloadsRequest</p>
@@ -125,7 +126,11 @@ public class DescribeOssDownloadsRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -134,7 +139,11 @@ public class DescribeOssDownloadsRequest extends Request {
         }
 
         /**
-         * The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.
+         * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5625458541</p>
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.putQueryParameter("MigrateTaskId", migrateTaskId);
@@ -152,7 +161,10 @@ public class DescribeOssDownloadsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

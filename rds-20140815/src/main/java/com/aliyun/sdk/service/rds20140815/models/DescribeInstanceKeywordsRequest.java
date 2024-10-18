@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceKeywordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceKeywordsRequest</p>
@@ -109,13 +110,17 @@ public class DescribeInstanceKeywordsRequest extends Request {
         } 
 
         /**
-         * The type of reserved keyword to query. Valid values:
-         * <p>
+         * <p>The type of reserved keyword to query. Valid values:</p>
+         * <ul>
+         * <li><strong>account</strong></li>
+         * <li><strong>database</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required.</p>
+         * </blockquote>
          * 
-         * *   **account**
-         * *   **database**
-         * 
-         * >  This parameter is required.
+         * <strong>example:</strong>
+         * <p>account</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);

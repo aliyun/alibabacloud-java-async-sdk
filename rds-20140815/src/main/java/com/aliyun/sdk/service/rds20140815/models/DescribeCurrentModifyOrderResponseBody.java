@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCurrentModifyOrderResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCurrentModifyOrderResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The specification change order.
+         * <p>The specification change order.</p>
          */
         public Builder modifyOrder(java.util.List < ModifyOrder> modifyOrder) {
             this.modifyOrder = modifyOrder;
@@ -57,7 +58,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C87415BE-F5AB-55A4-A60E-A0A329EAF2A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCurrentModifyOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCurrentModifyOrderResponseBody</p>
+     */
     public static class ModifyOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassGroup")
         private String classGroup;
@@ -193,7 +203,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             private String targetDBInstanceClass; 
 
             /**
-             * The instance family of the instance.
+             * <p>The instance family of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x</p>
              */
             public Builder classGroup(String classGroup) {
                 this.classGroup = classGroup;
@@ -201,7 +214,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores that are supported by the instance type. Unit: cores.
+             * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -209,7 +225,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-cn-nwy39qeys0003r</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -217,11 +236,14 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The effective time. Valid values:
-             * <p>
+             * <p>The effective time. Valid values:</p>
+             * <ul>
+             * <li><strong>Immediate</strong>: This is the default value.</li>
+             * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</li>
+             * </ul>
              * 
-             * *   **Immediate**: This is the default value.
-             * *   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).
+             * <strong>example:</strong>
+             * <p>MaintainTime</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -229,7 +251,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6MTg2MjEwOTkwLCJzdGFydCI6InNob3BpZnktdXNlci1jb3JlXHUwMDAwIn0</p>
              */
             public Builder mark(String mark) {
                 this.mark = mark;
@@ -237,7 +262,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The memory capacity that is supported by the instance type. Unit: GB.
+             * <p>The memory capacity that is supported by the instance type. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memoryClass(String memoryClass) {
                 this.memoryClass = memoryClass;
@@ -245,7 +273,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeed,Scheduled,Running,Cancelling,Canceled,Waiting</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -253,7 +284,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the instance.
+             * <p>The storage capacity of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder storage(String storage) {
                 this.storage = storage;
@@ -261,7 +295,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The new instance type of the instance. Valid values:
+             * <p>The new instance type of the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.x2.medium.2c</p>
              */
             public Builder targetDBInstanceClass(String targetDBInstanceClass) {
                 this.targetDBInstanceClass = targetDBInstanceClass;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEventInfoRequest} extends {@link RequestModel}
  *
  * <p>ModifyEventInfoRequest</p>
@@ -111,7 +112,10 @@ public class ModifyEventInfoRequest extends Request {
         } 
 
         /**
-         * The action-related parameters. You can add action-related parameters based on your business requirements. The parameter value varies with the value of the TaskAction parameter.
+         * <p>The action-related parameters. You can add action-related parameters based on your business requirements. The parameter value varies with the value of the TaskAction parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;recoverTime&quot;:&quot;2023-04-17T14:02:35Z&quot;,&quot;recoverMode&quot;:&quot;timePoint&quot;}</p>
          */
         public Builder actionParams(String actionParams) {
             this.putQueryParameter("ActionParams", actionParams);
@@ -120,13 +124,17 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * The event handling action. Valid values:
-         * <p>
+         * <p>The event handling action. Valid values:</p>
+         * <ul>
+         * <li><strong>archive</strong></li>
+         * <li><strong>undo</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required.</p>
+         * </blockquote>
          * 
-         * *   **archive**
-         * *   **undo**
-         * 
-         * >  This parameter is required.
+         * <strong>example:</strong>
+         * <p>archive</p>
          */
         public Builder eventAction(String eventAction) {
             this.putQueryParameter("EventAction", eventAction);
@@ -135,7 +143,11 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * The event ID. You can call the DescribeEvents operation to obtain the IDs of the events. Separate multiple event IDs with commas (,). You can specify up to 20 event IDs.
+         * <p>The event ID. You can call the DescribeEvents operation to obtain the IDs of the events. Separate multiple event IDs with commas (,). You can specify up to 20 event IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5422964</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -144,7 +156,11 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

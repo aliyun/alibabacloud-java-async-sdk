@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDetachedBackupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDetachedBackupsRequest</p>
@@ -196,7 +197,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set.
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>327xxxxx3</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -205,11 +209,14 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The backup method. Valid values:
-         * <p>
+         * <p>The backup method. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong></li>
+         * <li><strong>Manual</strong></li>
+         * </ul>
          * 
-         * *   **Automated**
-         * *   **Manual**
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -218,11 +225,14 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The status of the backup set. Valid values:
-         * <p>
+         * <p>The status of the backup set. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
          * 
-         * *   **Success**
-         * *   **Failed**
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder backupStatus(String backupStatus) {
             this.putQueryParameter("BackupStatus", backupStatus);
@@ -231,7 +241,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -240,10 +253,11 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time.
-         * <p>
+         * <p>The end of the time range to query. The end time must be later than the start time.</p>
+         * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2021-03-15T16:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -252,10 +266,13 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <blockquote>
+         * <p>The default value is 1.</p>
+         * </blockquote>
          * 
-         * > The default value is 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -264,14 +281,18 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>30</strong>.</p>
+         * </blockquote>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * > The default value is **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,7 +301,11 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -289,7 +314,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -307,10 +335,11 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2021-03-01T16:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

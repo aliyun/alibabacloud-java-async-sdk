@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdsResourceSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRdsResourceSettingsResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRdsResourceSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsResourceSettingsResponseBody</p>
+     */
     public static class RdsInstanceResourceSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
@@ -271,6 +278,12 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRdsResourceSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsResourceSettingsResponseBody</p>
+     */
     public static class RdsInstanceResourceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RdsInstanceResourceSetting")
         private java.util.List < RdsInstanceResourceSetting> rdsInstanceResourceSetting;

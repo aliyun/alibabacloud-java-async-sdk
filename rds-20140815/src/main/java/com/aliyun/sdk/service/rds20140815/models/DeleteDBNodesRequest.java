@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBNodesRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBNodesRequest</p>
@@ -153,10 +154,11 @@ public class DeleteDBNodesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.</p>
+         * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -165,7 +167,11 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -174,7 +180,8 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The node IDs.
+         * <p>The node IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder DBNodeId(java.util.List < String > DBNodeId) {
             String DBNodeIdShrink = shrink(DBNodeId, "DBNodeId", "json");
@@ -202,7 +209,10 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
+         * <p>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

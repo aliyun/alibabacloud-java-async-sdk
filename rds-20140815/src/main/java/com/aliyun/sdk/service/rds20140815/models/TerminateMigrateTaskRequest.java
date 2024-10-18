@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TerminateMigrateTaskRequest} extends {@link RequestModel}
  *
  * <p>TerminateMigrateTaskRequest</p>
@@ -111,7 +112,11 @@ public class TerminateMigrateTaskRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp159vfbu******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -120,7 +125,11 @@ public class TerminateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.
+         * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56254****</p>
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.putQueryParameter("MigrateTaskId", migrateTaskId);

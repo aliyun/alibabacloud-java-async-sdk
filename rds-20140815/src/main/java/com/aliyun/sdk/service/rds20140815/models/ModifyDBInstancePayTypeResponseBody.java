@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstancePayTypeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstancePayTypeResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyDBInstancePayTypeResponseBody extends TeaModel {
         private Long orderId; 
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100789370230206</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

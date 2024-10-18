@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeParameterGroupsRequest</p>
@@ -124,11 +125,14 @@ public class DescribeParameterGroupsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the parameter overview.
-         * <p>
+         * <p>Specifies whether to return the parameter overview.</p>
+         * <ul>
+         * <li><strong>false</strong> (default): The parameter overview is returned.</li>
+         * <li><strong>true</strong>: The parameter overview is not returned.</li>
+         * </ul>
          * 
-         * *   **false** (default): The parameter overview is returned.
-         * *   **true**: The parameter overview is not returned.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDetail(Boolean enableDetail) {
             this.putQueryParameter("EnableDetail", enableDetail);
@@ -146,7 +150,11 @@ public class DescribeParameterGroupsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -155,7 +163,10 @@ public class DescribeParameterGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

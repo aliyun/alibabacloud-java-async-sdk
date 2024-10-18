@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceEndpointsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>777C4593-8053-427B-****105593277CAB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceEndpointsResponseBody</p>
+     */
     public static class AddressItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -157,7 +167,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The endpoints of the instance.
+             * <p>The endpoints of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm****.mysql.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -165,7 +178,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.71.XX.XX</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -173,11 +189,14 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IP address. Valid values:
-             * <p>
+             * <p>The type of the IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: Internet</li>
+             * <li><strong>Private</strong>: internal network</li>
+             * </ul>
              * 
-             * *   **Public**: Internet
-             * *   **Private**: internal network
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
@@ -185,7 +204,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the endpoint.
+             * <p>The port number of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -193,7 +215,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp12u14ecz****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -201,7 +226,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp17xdic25d****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -215,6 +243,12 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceEndpointsResponseBody</p>
+     */
     public static class AddressItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressItem")
         private java.util.List < AddressItem> addressItem;
@@ -256,6 +290,12 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceEndpointsResponseBody</p>
+     */
     public static class NodeItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
@@ -307,7 +347,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-u****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -315,7 +358,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rn-****13p6tum4289h</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -323,10 +369,11 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the node. Read requests are distributed based on the weight.
-             * <p>
+             * <p>The weight of the node. Read requests are distributed based on the weight.</p>
+             * <p>Valid values: 0 to 100.</p>
              * 
-             * Valid values: 0 to 100.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -340,6 +387,12 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceEndpointsResponseBody</p>
+     */
     public static class NodeItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeItem")
         private java.util.List < NodeItem> nodeItem;
@@ -381,6 +434,12 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceEndpointsResponseBody</p>
+     */
     public static class DBInstanceEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressItems")
         private AddressItems addressItems;
@@ -456,7 +515,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private NodeItems nodeItems; 
 
             /**
-             * The information about the endpoint.
+             * <p>The information about the endpoint.</p>
              */
             public Builder addressItems(AddressItems addressItems) {
                 this.addressItems = addressItems;
@@ -464,7 +523,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The user-defined description of the endpoint.
+             * <p>The user-defined description of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>for readonly business</p>
              */
             public Builder endpointDescription(String endpointDescription) {
                 this.endpointDescription = endpointDescription;
@@ -472,7 +534,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint ID of the instance.
+             * <p>The endpoint ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -480,11 +545,14 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the endpoint. Valid values:
-             * <p>
+             * <p>The type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>Primary</strong>: the read/write endpoint of the instance</li>
+             * <li><strong>Readonly</strong>: the read-only endpoint of the instance</li>
+             * </ul>
              * 
-             * *   **Primary**: the read/write endpoint of the instance
-             * *   **Readonly**: the read-only endpoint of the instance
+             * <strong>example:</strong>
+             * <p>Readonly</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -492,7 +560,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the node that is configured for the endpoint.
+             * <p>The information about the node that is configured for the endpoint.</p>
              */
             public Builder nodeItems(NodeItems nodeItems) {
                 this.nodeItems = nodeItems;
@@ -506,6 +574,12 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceEndpointsResponseBody</p>
+     */
     public static class DBInstanceEndpoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceEndpoint")
         private java.util.List < DBInstanceEndpoint> DBInstanceEndpoint;
@@ -547,6 +621,12 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceEndpointsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceEndpoints")
         private DBInstanceEndpoints DBInstanceEndpoints;
@@ -598,7 +678,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private String ipVersion; 
 
             /**
-             * The information of the endpoints of the instance.
+             * <p>The information of the endpoints of the instance.</p>
              */
             public Builder DBInstanceEndpoints(DBInstanceEndpoints DBInstanceEndpoints) {
                 this.DBInstanceEndpoints = DBInstanceEndpoints;
@@ -606,7 +686,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-u****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -614,11 +697,14 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the IP protocol. Valid values:
-             * <p>
+             * <p>The version of the IP protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>ipv4</strong></li>
+             * <li><strong>ipv6</strong></li>
+             * </ul>
              * 
-             * *   **ipv4**
-             * *   **ipv6**
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;

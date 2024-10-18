@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountMaskingPrivilegeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountMaskingPrivilegeResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountMaskingPrivilegeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountMaskingPrivilegeResponseBody</p>
+     */
     public static class UserPrivilege extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
@@ -151,6 +158,12 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountMaskingPrivilegeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountMaskingPrivilegeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserPrivilege")
         private java.util.List < UserPrivilege> userPrivilege;

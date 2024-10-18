@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceMetricsResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
         private String scope; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1s1j103lo6****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -69,7 +73,10 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B55934BB-FFAA-5276-80A8-E0FDB12810B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +84,14 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The application scope of this modification. Valid values:
-         * <p>
+         * <p>The application scope of this modification. Valid values:</p>
+         * <ul>
+         * <li><strong>instance</strong>: This modification is applied only to the current instance.</li>
+         * <li><strong>region</strong>: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs.</li>
+         * </ul>
          * 
-         * *   **instance**: This modification is applied only to the current instance.
-         * *   **region**: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;

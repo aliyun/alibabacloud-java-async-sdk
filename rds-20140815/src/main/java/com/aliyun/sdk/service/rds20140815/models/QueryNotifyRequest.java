@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryNotifyRequest} extends {@link RequestModel}
  *
  * <p>QueryNotifyRequest</p>
@@ -113,7 +114,11 @@ public class QueryNotifyRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-02T08:38:37Z</p>
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -122,10 +127,11 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.****
-         * <p>
+         * <p>The page number. Pages start from page 1. Default value: 1.****</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -134,14 +140,16 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -150,7 +158,11 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-09T08:38:37Z</p>
          */
         public Builder to(String to) {
             this.putBodyParameter("To", to);
@@ -159,13 +171,18 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * Specifies whether the query results contain confirmed notifications. Valid values:
-         * <p>
+         * <p>Specifies whether the query results contain confirmed notifications. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> A confirmed notification is a notification that has been marked as confirmed by calling the ConfirmNotify operation.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  A confirmed notification is a notification that has been marked as confirmed by calling the ConfirmNotify operation.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withConfirmed(Boolean withConfirmed) {
             this.putBodyParameter("WithConfirmed", withConfirmed);

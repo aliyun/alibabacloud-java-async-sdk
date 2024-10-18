@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecretRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecretRequest</p>
@@ -181,7 +182,10 @@ public class DeleteSecretRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -190,10 +194,13 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
-         * <p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, you must also specify the <strong>SecretName</strong> parameter. parameter.</p>
+         * </blockquote>
          * 
-         * >  If you specify this parameter, you must also specify the **SecretName** parameter. parameter.
+         * <strong>example:</strong>
+         * <p>rm-sfjdlsjxxxxx</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -202,10 +209,14 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The engine of the database.
-         * <p>
+         * <p>The engine of the database.</p>
+         * <blockquote>
+         * <p>Only MySQL is supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Only MySQL is supported.
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -223,7 +234,11 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeSecrets operation to query the region ID.
+         * <p>The region ID. You can call the DescribeSecrets operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,7 +247,10 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -259,10 +277,13 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the CreateSecret operation to obtain the value of this parameter.
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the CreateSecret operation to obtain the value of this parameter.</p>
+         * <blockquote>
+         * <p> You must specify one of the SecretArn and <strong>SecretName</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify one of the SecretArn and **SecretName** parameters.
+         * <strong>example:</strong>
+         * <p>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</p>
          */
         public Builder secretArn(String secretArn) {
             this.putQueryParameter("SecretArn", secretArn);
@@ -271,11 +292,16 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The name of the credential.
-         * <p>
+         * <p>The name of the credential.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You must specify one of <strong>SecretArn</strong> and SecretName.</li>
+         * <li>If you specify this parameter, you must also specify <strong>DbInstanceId</strong>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   You must specify one of **SecretArn** and SecretName.
-         * > *   If you specify this parameter, you must also specify **DbInstanceId**.
+         * <strong>example:</strong>
+         * <p>Foo</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceSSLRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceSSLRequest</p>
@@ -321,13 +322,16 @@ public class ModifyDBInstanceSSLRequest extends Request {
         } 
 
         /**
-         * The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
-         * <p>
+         * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>cert</strong></li>
+         * <li><strong>prefer</strong></li>
+         * <li><strong>verify-ca</strong></li>
+         * <li><strong>verify-full</strong> (supported only when the instance runs PostgreSQL 12 or later)</li>
+         * </ul>
          * 
-         * *   **cert**
-         * *   **prefer**
-         * *   **verify-ca**
-         * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
+         * <strong>example:</strong>
+         * <p>cert</p>
          */
         public Builder ACL(String ACL) {
             this.putQueryParameter("ACL", ACL);
@@ -336,11 +340,14 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The type of the server certificate. This parameter is supported only when the instance runs MySQL or PostgreSQL with cloud disks. If you set SSLEnabled to **1**, the default value of this parameter is **aliyun**. Valid values:
-         * <p>
+         * <p>The type of the server certificate. This parameter is supported only when the instance runs MySQL or PostgreSQL with cloud disks. If you set SSLEnabled to <strong>1</strong>, the default value of this parameter is <strong>aliyun</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>aliyun</strong>: a cloud certificate</li>
+         * <li><strong>custom</strong>: a custom certificate</li>
+         * </ul>
          * 
-         * *   **aliyun**: a cloud certificate
-         * *   **custom**: a custom certificate
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder CAType(String CAType) {
             this.putQueryParameter("CAType", CAType);
@@ -349,11 +356,14 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The custom certificate. The custom certificate is in the `PFX` format.
-         * <p>
+         * <p>The custom certificate. The custom certificate is in the <code>PFX</code> format.</p>
+         * <ul>
+         * <li>Public endpoint: <code>oss-&lt;The ID of the region&gt;.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file (The file name contains the extension.)&gt;</code></li>
+         * <li>Internal endpoint: <code>oss-&lt;The ID of the region&gt;-internal.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file (The file name contains the extension.)&gt;</code></li>
+         * </ul>
          * 
-         * *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file (The file name contains the extension.)>`
-         * *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file (The file name contains the extension.)>`
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing-internal.aliyuncs.com:zhttest:test.pfx</p>
          */
         public Builder certificate(String certificate) {
             this.putQueryParameter("Certificate", certificate);
@@ -362,7 +372,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCAEbabled is set to **1**.
+         * <p>The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCAEbabled is set to <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----MIID*****viXk=-----END CERTIFICATE-----</p>
          */
         public Builder clientCACert(String clientCACert) {
             this.putQueryParameter("ClientCACert", clientCACert);
@@ -371,11 +384,14 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables the public key.</li>
+         * <li><strong>0</strong>: disables the public key.</li>
+         * </ul>
          * 
-         * *   **1**: enables the public key.
-         * *   **0**: disables the public key.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientCAEnabled(Integer clientCAEnabled) {
             this.putQueryParameter("ClientCAEnabled", clientCAEnabled);
@@ -384,7 +400,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The CRL that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCrlEnabled is set to **1**.
+         * <p>The CRL that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCrlEnabled is set to <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN X509 CRL-----MIIB****19mg==-----END X509 CRL-----</p>
          */
         public Builder clientCertRevocationList(String clientCertRevocationList) {
             this.putQueryParameter("ClientCertRevocationList", clientCertRevocationList);
@@ -393,11 +412,14 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable a certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
-         * <p>
+         * <p>Specifies whether to enable a certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables the CRL.</li>
+         * <li><strong>0</strong>: disables the CRL.</li>
+         * </ul>
          * 
-         * *   **1**: enables the CRL.
-         * *   **0**: disables the CRL.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientCrlEnabled(Integer clientCrlEnabled) {
             this.putQueryParameter("ClientCrlEnabled", clientCrlEnabled);
@@ -406,7 +428,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The internal or public endpoint for which the server certificate needs to be created or updated.
+         * <p>The internal or public endpoint for which the server certificate needs to be created or updated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxx.mysql.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -415,7 +441,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -424,11 +454,14 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the forceful SSL encryption feature. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~). Valid values:
-         * <p>
+         * <p>Specifies whether to enable the forceful SSL encryption feature. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see <a href="https://help.aliyun.com/document_detail/95715.html">Configure the SSL encryption feature</a>. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables the feature.</li>
+         * <li><strong>0</strong>: disables the feature.</li>
+         * </ul>
          * 
-         * *   **1**: enables the feature.
-         * *   **0**: disables the feature.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder forceEncryption(String forceEncryption) {
             this.putQueryParameter("ForceEncryption", forceEncryption);
@@ -455,7 +488,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The password of the certificate.
+         * <p>The password of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zht123456</p>
          */
         public Builder passWord(String passWord) {
             this.putQueryParameter("PassWord", passWord);
@@ -464,13 +500,16 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
-         * <p>
+         * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>cert</strong></li>
+         * <li><strong>prefer</strong></li>
+         * <li><strong>verify-ca</strong></li>
+         * <li><strong>verify-full</strong> (supported only when the instance runs PostgreSQL 12 or later)</li>
+         * </ul>
          * 
-         * *   **cert**
-         * *   **prefer**
-         * *   **verify-ca**
-         * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
+         * <strong>example:</strong>
+         * <p>cert</p>
          */
         public Builder replicationACL(String replicationACL) {
             this.putQueryParameter("ReplicationACL", replicationACL);
@@ -497,11 +536,14 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable the SSL encryption feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable the SSL encryption feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables the feature.</li>
+         * <li><strong>0</strong>: disables the feature.</li>
+         * </ul>
          * 
-         * *   **1**: enables the feature.
-         * *   **0**: disables the feature.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder SSLEnabled(Integer SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);
@@ -510,7 +552,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when CAType is set to **custom**.
+         * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when CAType is set to <strong>custom</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>
          */
         public Builder serverCert(String serverCert) {
             this.putQueryParameter("ServerCert", serverCert);
@@ -519,7 +564,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when CAType is set to **custom**.
+         * <p>The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when CAType is set to <strong>custom</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PRIVATE KEY-----MIIE****ihfg==-----END PRIVATE KEY-----</p>
          */
         public Builder serverKey(String serverKey) {
             this.putQueryParameter("ServerKey", serverKey);
@@ -528,7 +576,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~).
+         * <p>The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see <a href="https://help.aliyun.com/document_detail/95715.html">Configure the SSL encryption feature</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
          */
         public Builder tlsVersion(String tlsVersion) {
             this.putQueryParameter("TlsVersion", tlsVersion);

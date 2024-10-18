@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopRCInstanceRequest} extends {@link RequestModel}
  *
  * <p>StopRCInstanceRequest</p>
@@ -82,7 +83,14 @@ public class StopRCInstanceRequest extends Request {
         } 
 
         /**
-         * ForceStop.
+         * <p>Specifies whether to forcefully stop the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -91,7 +99,11 @@ public class StopRCInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-m5sc1271fv344a1r****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -100,7 +112,10 @@ public class StopRCInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

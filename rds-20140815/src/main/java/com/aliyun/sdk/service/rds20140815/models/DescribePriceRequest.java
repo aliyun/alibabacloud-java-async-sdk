@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceRequest} extends {@link RequestModel}
  *
  * <p>DescribePriceRequest</p>
@@ -353,7 +354,10 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -362,19 +366,23 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The commodity code of the instance. Valid values:
-         * <p>
+         * <p>The commodity code of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>bards</strong>: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</li>
+         * <li><strong>rds</strong> (default): The instance is a subscription primary instance. This value is available on the China site (aliyun.com).</li>
+         * <li><strong>rords</strong>: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</li>
+         * <li><strong>rds_rordspre_public_cn</strong>: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</li>
+         * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance. This value is available at the international site (alibabacloud.com).</li>
+         * <li><strong>rds_intl</strong>: The instance is a subscription primary instance. This value is available at the international site (alibabacloud.com).</li>
+         * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance. This value is available at the international site (alibabacloud.com).</li>
+         * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance. This value is available on the international site (alibabacloud.com).</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you want to query the price of a read-only instance, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * *   **bards**: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).
-         * *   **rds** (default): The instance is a subscription primary instance. This value is available on the China site (aliyun.com).
-         * *   **rords**: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).
-         * *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).
-         * *   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available at the international site (alibabacloud.com).
-         * *   **rds_intl**: The instance is a subscription primary instance. This value is available at the international site (alibabacloud.com).
-         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available at the international site (alibabacloud.com).
-         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance. This value is available on the international site (alibabacloud.com).
-         * 
-         * >  If you want to query the price of a read-only instance, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -383,7 +391,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mysql.s1.small</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -392,11 +404,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which you want to change the specifications or the instance that you want to renew.
-         * <p>
+         * <p>The ID of the instance for which you want to change the specifications or the instance that you want to renew.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you want to query the price of a specification change order or a renewal order, you must specify this parameter.</li>
+         * <li>If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   If you want to query the price of a specification change order or a renewal order, you must specify this parameter.
-         * > *   If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.
+         * <strong>example:</strong>
+         * <p>rm-*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -405,7 +422,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the instance. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+         * <p>The storage capacity of the instance. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -414,14 +435,17 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The storage type of the instance. Valid values:
-         * <p>
+         * <p>The storage type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>local_ssd</strong>: local SSD</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD</li>
+         * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * </ul>
          * 
-         * *   **local_ssd**: local SSD
-         * *   **cloud_ssd**: standard SSD
-         * *   **cloud_essd**: PL1 ESSD
-         * *   **cloud_essd2**: PL2 ESSD
-         * *   **cloud_essd3**: PL3 ESSD
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -430,10 +454,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The information about the node.
-         * <p>
-         * 
-         * >  This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+         * <p>The information about the node.</p>
+         * <blockquote>
+         * <p> This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
+         * </blockquote>
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
@@ -443,13 +467,17 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Valid values:
-         * <p>
+         * <p>The database engine of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>MariaDB</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **SQLServer**
-         * *   **PostgreSQL**
-         * *   **MariaDB**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -458,15 +486,20 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance.
-         * <p>
+         * <p>The database engine version of the instance.</p>
+         * <ul>
+         * <li>Valid values if you set Engine to <strong>MySQL</strong>: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
+         * <li>Valid values if you set Engine to <strong>SQLServer</strong>: <strong>08r2_ent_ha</strong> (cloud disks, discontinued), <strong>2008r2</strong>(local disks, discontinued), <strong>2012</strong> (SQL Server EE Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
+         * <li>Valid values if you set Engine to <strong>PostgreSQL</strong>: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, and <strong>15.0</strong></li>
+         * <li>Valid value if you set Engine to <strong>MariaDB</strong>: <strong>10.3</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> The following information describes the valid values when you set Engine to SQLServer: <code>_ent</code> specifies SQL Server EE on RDS Cluster Edition, <code>_ent_ha</code> specifies SQL Server EE, <code>_std_ha</code> specifies SQL Server SE, and <code>_web</code> specifies SQL Server Web.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values if you set Engine to **MySQL**: **5.5**, **5.6**, **5.7**, and **8.0**
-         * *   Valid values if you set Engine to **SQLServer**: **08r2\_ent_ha** (cloud disks, discontinued), **2008r2**(local disks, discontinued), **2012** (SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**
-         * *   Valid values if you set Engine to **PostgreSQL**: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
-         * *   Valid value if you set Engine to **MariaDB**: **10.3**
-         * 
-         * >  The following information describes the valid values when you set Engine to SQLServer: `_ent` specifies SQL Server EE on RDS Cluster Edition, `_ent_ha` specifies SQL Server EE, `_std_ha` specifies SQL Server SE, and `_web` specifies SQL Server Web.
+         * <strong>example:</strong>
+         * <p>5.5</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -475,11 +508,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The role of the instance. Valid values:
-         * <p>
+         * <p>The role of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: primary instance</li>
+         * <li><strong>3</strong>: read-only instance</li>
+         * </ul>
          * 
-         * *   **0**: primary instance
-         * *   **3**: read-only instance
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder instanceUsedType(Integer instanceUsedType) {
             this.putQueryParameter("InstanceUsedType", instanceUsedType);
@@ -488,12 +524,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The order type. Valid values:
-         * <p>
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li><strong>BUY</strong>: purchase order</li>
+         * <li><strong>UPGRADE</strong>: specification change order</li>
+         * <li><strong>RENEW</strong>: renewal order</li>
+         * </ul>
          * 
-         * *   **BUY**: purchase order
-         * *   **UPGRADE**: specification change order
-         * *   **RENEW**: renewal order
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -520,11 +559,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **Prepaid**: subscription
-         * *   **Postpaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -533,7 +575,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The number of instances that you want to purchase. Valid values: **0 to 30**.
+         * <p>The number of instances that you want to purchase. Valid values: <strong>0 to 30</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -542,7 +588,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -569,10 +618,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The settings of the serverless instance.
-         * <p>
-         * 
-         * > ApsaraDB RDS for MariaDB does not support serverless instances.
+         * <p>The settings of the serverless instance.</p>
+         * <blockquote>
+         * <p>ApsaraDB RDS for MariaDB does not support serverless instances.</p>
+         * </blockquote>
          */
         public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
             String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
@@ -582,11 +631,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The billing cycle of the subscription instance. This parameter is required when **CommodityCode** is set to **rds**, **rds_rordspre_public_cn**, **rds_intl**, or **rds_rordspre_public_intl**. Valid values:
-         * <p>
+         * <p>The billing cycle of the subscription instance. This parameter is required when <strong>CommodityCode</strong> is set to <strong>rds</strong>, <strong>rds_rordspre_public_cn</strong>, <strong>rds_intl</strong>, or <strong>rds_rordspre_public_intl</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
          * 
-         * *   **Year**
-         * *   **Month**
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder timeType(String timeType) {
             this.putQueryParameter("TimeType", timeType);
@@ -595,13 +647,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance.
-         * <p>
+         * <p>The subscription duration of the instance.</p>
+         * <ul>
+         * <li>If you set the <strong>TimeType</strong> parameter to <strong>Year</strong>, the value of the UsedTime parameter ranges from <strong>1 to 100</strong>.</li>
+         * <li>If you set the <strong>TimeType</strong> parameter to <strong>Month</strong>, the value of the UsedTime parameter ranges from <strong>1 to 999</strong>.</li>
+         * </ul>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * *   If you set the **TimeType** parameter to **Year**, the value of the UsedTime parameter ranges from **1 to 100**.
-         * *   If you set the **TimeType** parameter to **Month**, the value of the UsedTime parameter ranges from **1 to 999**.
-         * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -610,10 +664,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The zone ID of the primary instance. You can call the DescribeRegions operation to query the most recent zone list.
-         * <p>
+         * <p>The zone ID of the primary instance. You can call the DescribeRegions operation to query the most recent zone list.</p>
+         * <blockquote>
+         * <p> If you specify a virtual private cloud (VPC) and a vSwitch, this parameter is required to identify the zone for the vSwitch.</p>
+         * </blockquote>
          * 
-         * >  If you specify a virtual private cloud (VPC) and a vSwitch, this parameter is required to identify the zone for the vSwitch.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -628,6 +685,12 @@ public class DescribePriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePriceRequest</p>
+     */
     public static class DBNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassCode")
         private String classCode;
@@ -667,7 +730,10 @@ public class DescribePriceRequest extends Request {
             private String zoneId; 
 
             /**
-             * The instance type of the node.
+             * <p>The instance type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.n2.small.xc</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -675,7 +741,10 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The zone ID of the node.
+             * <p>The zone ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -689,6 +758,12 @@ public class DescribePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePriceRequest</p>
+     */
     public static class ServerlessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCapacity")
         private Double maxCapacity;
@@ -728,7 +803,10 @@ public class DescribePriceRequest extends Request {
             private Double minCapacity; 
 
             /**
-             * The maximum number of RDS Capacity Units (RCUs).
+             * <p>The maximum number of RDS Capacity Units (RCUs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder maxCapacity(Double maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -736,7 +814,10 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The minimum number of RCUs.
+             * <p>The minimum number of RCUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder minCapacity(Double minCapacity) {
                 this.minCapacity = minCapacity;

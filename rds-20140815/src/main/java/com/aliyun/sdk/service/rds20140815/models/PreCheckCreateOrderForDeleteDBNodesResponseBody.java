@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreCheckCreateOrderForDeleteDBNodesResponseBody} extends {@link TeaModel}
  *
  * <p>PreCheckCreateOrderForDeleteDBNodesResponseBody</p>
@@ -61,7 +62,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the failed order.
+         * <p>The information about the failed order.</p>
          */
         public Builder failures(Failures failures) {
             this.failures = failures;
@@ -69,7 +70,10 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The precheck result.
+         * <p>The precheck result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder preCheckResult(Boolean preCheckResult) {
             this.preCheckResult = preCheckResult;
@@ -77,7 +81,10 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B415BC6-FE84-5323-A255-42CF330DB99C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PreCheckCreateOrderForDeleteDBNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreCheckCreateOrderForDeleteDBNodesResponseBody</p>
+     */
     public static class FailuresFailures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -129,14 +142,17 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The response code. Valid values:
-             * <p>
+             * <p>The response code. Valid values:</p>
+             * <ul>
+             * <li><strong>200</strong>: success</li>
+             * <li><strong>400</strong>: client error</li>
+             * <li><strong>401</strong>: identity authentication failed</li>
+             * <li><strong>404</strong>: requested page not found</li>
+             * <li><strong>500</strong>: server error</li>
+             * </ul>
              * 
-             * *   **200**: success
-             * *   **400**: client error
-             * *   **401**: identity authentication failed
-             * *   **404**: requested page not found
-             * *   **500**: server error
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -144,7 +160,10 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -158,6 +177,12 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreCheckCreateOrderForDeleteDBNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreCheckCreateOrderForDeleteDBNodesResponseBody</p>
+     */
     public static class Failures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Failures")
         private java.util.List < FailuresFailures> failures;
@@ -185,7 +210,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
             private java.util.List < FailuresFailures> failures; 
 
             /**
-             * The information about the failed order.
+             * <p>The information about the failed order.</p>
              */
             public Builder failures(java.util.List < FailuresFailures> failures) {
                 this.failures = failures;

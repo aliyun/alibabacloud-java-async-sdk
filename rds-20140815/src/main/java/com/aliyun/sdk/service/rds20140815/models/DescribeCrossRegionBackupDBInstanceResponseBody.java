@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCrossRegionBackupDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCrossRegionBackupDBInstanceResponseBody</p>
@@ -109,7 +110,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         private Integer totalRecords; 
 
         /**
-         * The cross-region backup settings.
+         * <p>The cross-region backup settings.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -117,7 +118,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of items returned for cross-region backup settings.
+         * <p>The total number of items returned for cross-region backup settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder itemsNumbers(Integer itemsNumbers) {
             this.itemsNumbers = itemsNumbers;
@@ -125,10 +129,11 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -136,7 +141,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 30.
+         * <p>The number of entries per page. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -144,7 +152,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -152,7 +163,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33517002-182D-40BE-93EC-610BD3381045</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,7 +174,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecords(Integer totalRecords) {
             this.totalRecords = totalRecords;
@@ -173,6 +190,12 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCrossRegionBackupDBInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossRegionBackupDBInstanceResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupEnabled")
         private String backupEnabled;
@@ -356,11 +379,14 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             private Integer retention; 
 
             /**
-             * The status of the cross-region backup feature on the instance. Valid values:
-             * <p>
+             * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Disable</strong></li>
+             * <li><strong>Enable</strong></li>
+             * </ul>
              * 
-             * *   **Disable**
-             * *   **Enable**
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder backupEnabled(String backupEnabled) {
                 this.backupEnabled = backupEnabled;
@@ -368,7 +394,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when cross-region backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when cross-region backup was enabled on the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-12T05:44:21Z</p>
              */
             public Builder backupEnabledTime(String backupEnabledTime) {
                 this.backupEnabledTime = backupEnabledTime;
@@ -376,7 +405,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination region within which the cross-region backup file is stored.
+             * <p>The ID of the destination region within which the cross-region backup file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder crossBackupRegion(String crossBackupRegion) {
                 this.crossBackupRegion = crossBackupRegion;
@@ -384,7 +416,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The policy that is used to save the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that all cross-region backup files are saved.
+             * <p>The policy that is used to save the cross-region backup files of the instance. Default value: <strong>1</strong>. The value 1 indicates that all cross-region backup files are saved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder crossBackupType(String crossBackupType) {
                 this.crossBackupType = crossBackupType;
@@ -392,10 +427,13 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
-             * <p>
+             * <p>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
+             * <blockquote>
+             * <p> The value cannot start with http:// or https://.</p>
+             * </blockquote>
              * 
-             * >  The value cannot start with http:// or https://.
+             * <strong>example:</strong>
+             * <p>Test database</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -403,7 +441,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -411,7 +452,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance status. For more information, see [Instance statuses](~~26315~~).
+             * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance statuses</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -419,7 +463,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance.
+             * <p>The database engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -427,7 +474,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.6</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -435,14 +485,17 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The lock status of the instance. Valid values:
-             * <p>
+             * <p>The lock status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Unlock</strong>: The instance is not locked.</li>
+             * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+             * <li><strong>LockByExpiration</strong>: The instance is automatically locked after it expires.</li>
+             * <li><strong>LockByRestoration</strong>: The instance is automatically locked before it is rolled back.</li>
+             * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</li>
+             * </ul>
              * 
-             * *   **Unlock**: The instance is not locked.
-             * *   **ManualLock**: The instance is manually locked.
-             * *   **LockByExpiration**: The instance is automatically locked after it expires.
-             * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
-             * *   **LockByDiskQuota**: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -450,11 +503,14 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cross-region log backup feature on the instance. Valid values:
-             * <p>
+             * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Disable</strong></li>
+             * <li><strong>Enable</strong></li>
+             * </ul>
              * 
-             * *   **Disable**
-             * *   **Enable**
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder logBackupEnabled(String logBackupEnabled) {
                 this.logBackupEnabled = logBackupEnabled;
@@ -462,7 +518,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cross-region log backup feature was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the cross-region log backup feature was enabled on the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-12T05:44:21Z</p>
              */
             public Builder logBackupEnabledTime(String logBackupEnabledTime) {
                 this.logBackupEnabledTime = logBackupEnabledTime;
@@ -470,7 +529,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The policy that is used to retain the cross-region backup files of the instance. Cross-region backups can be retained only based on the specified retention period. Default value: **1**.
+             * <p>The policy that is used to retain the cross-region backup files of the instance. Cross-region backups can be retained only based on the specified retention period. Default value: <strong>1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder retentType(Integer retentType) {
                 this.retentType = retentType;
@@ -478,7 +540,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.
+             * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: <strong>7 to 1825</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder retention(Integer retention) {
                 this.retention = retention;
@@ -492,6 +557,12 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCrossRegionBackupDBInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossRegionBackupDBInstanceResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;

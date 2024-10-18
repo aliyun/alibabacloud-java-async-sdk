@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceEngineVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBInstanceEngineVersionRequest</p>
@@ -153,7 +154,10 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +166,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,11 +179,14 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * The effective time. Valid values:
-         * <p>
+         * <p>The effective time. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediate</strong>: This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+         * </ul>
          * 
-         * *   **Immediate**: This is the default value.
-         * *   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.
+         * <strong>example:</strong>
+         * <p>Immediate</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -184,12 +195,16 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * The major engine version that the new instance runs. Valid values:
-         * <p>
+         * <p>The major engine version that the new instance runs. Valid values:</p>
+         * <ul>
+         * <li><strong>8.0</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>5.6</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **8.0**
-         * *   **5.7**
-         * *   **5.6**
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);

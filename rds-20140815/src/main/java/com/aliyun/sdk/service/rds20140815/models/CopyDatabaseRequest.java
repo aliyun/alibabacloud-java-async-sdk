@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyDatabaseRequest} extends {@link RequestModel}
  *
  * <p>CopyDatabaseRequest</p>
@@ -151,7 +152,10 @@ public class CopyDatabaseRequest extends Request {
         } 
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5******</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -160,7 +164,10 @@ public class CopyDatabaseRequest extends Request {
         }
 
         /**
-         * Destination database name.
+         * <p>The destination database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db2***</p>
          */
         public Builder dstDBName(String dstDBName) {
             this.putQueryParameter("DstDBName", dstDBName);
@@ -178,7 +185,10 @@ public class CopyDatabaseRequest extends Request {
         }
 
         /**
-         * Reserve account.
+         * <p>The reserved account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reserveAccount(Integer reserveAccount) {
             this.putQueryParameter("ReserveAccount", reserveAccount);
@@ -187,7 +197,10 @@ public class CopyDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -214,7 +227,10 @@ public class CopyDatabaseRequest extends Request {
         }
 
         /**
-         * Source database name.
+         * <p>The source database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db1***</p>
          */
         public Builder srcDBName(String srcDBName) {
             this.putQueryParameter("SrcDBName", srcDBName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableZonesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The available zones in the region.
+         * <p>The available zones in the region.</p>
          */
         public Builder availableZones(java.util.List < AvailableZones> availableZones) {
             this.availableZones = availableZones;
@@ -57,7 +58,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4256E149-C3C4-4FA7-BDEA-13CA415E8763</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZonesResponseBody</p>
+     */
     public static class SupportedStorageTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
@@ -97,7 +107,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * The storage type of the instance.
+             * <p>The storage type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -111,6 +124,12 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZonesResponseBody</p>
+     */
     public static class SupportedCategorys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -150,7 +169,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private java.util.List < SupportedStorageTypes> supportedStorageTypes; 
 
             /**
-             * The RDS edition of the instance.
+             * <p>The RDS edition of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HighAvailability</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -158,7 +180,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage types that are available for purchase.
+             * <p>The storage types that are available for purchase.</p>
              */
             public Builder supportedStorageTypes(java.util.List < SupportedStorageTypes> supportedStorageTypes) {
                 this.supportedStorageTypes = supportedStorageTypes;
@@ -172,6 +194,12 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZonesResponseBody</p>
+     */
     public static class SupportedEngineVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedCategorys")
         private java.util.List < SupportedCategorys> supportedCategorys;
@@ -211,7 +239,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The RDS editions that are available that are available for purchase.
+             * <p>The RDS editions that are available that are available for purchase.</p>
              */
             public Builder supportedCategorys(java.util.List < SupportedCategorys> supportedCategorys) {
                 this.supportedCategorys = supportedCategorys;
@@ -219,7 +247,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -233,6 +264,12 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZonesResponseBody</p>
+     */
     public static class SupportedEngines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
@@ -272,7 +309,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private java.util.List < SupportedEngineVersions> supportedEngineVersions; 
 
             /**
-             * The database engine of the instance.
+             * <p>The database engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -280,7 +320,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine versions that are available for purchase.
+             * <p>The database engine versions that are available for purchase.</p>
              */
             public Builder supportedEngineVersions(java.util.List < SupportedEngineVersions> supportedEngineVersions) {
                 this.supportedEngineVersions = supportedEngineVersions;
@@ -294,6 +334,12 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZonesResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -345,7 +391,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -353,7 +402,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engines that are available for purchase.
+             * <p>The database engines that are available for purchase.</p>
              */
             public Builder supportedEngines(java.util.List < SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -361,7 +410,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

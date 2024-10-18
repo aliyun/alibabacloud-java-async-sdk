@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateInstancePublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateInstancePublicConnectionRequest</p>
@@ -182,10 +183,13 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.
-         * <p>
+         * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
+         * <blockquote>
+         * <p>This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</p>
+         * </blockquote>
          * 
-         * > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
+         * <strong>example:</strong>
+         * <p>1433</p>
          */
         public Builder babelfishPort(String babelfishPort) {
             this.putQueryParameter("BabelfishPort", babelfishPort);
@@ -194,10 +198,14 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The prefix of the public endpoint. A valid public endpoint is in the following format: `Prefix.Database engine.rds.aliyuncs.com`. Example: `test1234.mysql.rds.aliyuncs.com`.
-         * <p>
+         * <p>The prefix of the public endpoint. A valid public endpoint is in the following format: <code>Prefix.Database engine.rds.aliyuncs.com</code>. Example: <code>test1234.mysql.rds.aliyuncs.com</code>.</p>
+         * <blockquote>
+         * <p>The value can be 5 to 40 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following characters: ~ ! # % ^ &amp; * = + | {} ; : &quot; &quot; , &lt;&gt; / ?</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The value can be 5 to 40 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following characters: ~ ! # % ^ & \* = + | {} ; : \" " , <> / ?
+         * <strong>example:</strong>
+         * <p>test1234</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -206,7 +214,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -215,7 +227,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The name of the dedicated cluster to which the instance belongs. This parameter is available only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
+         * <p>The name of the dedicated cluster to which the instance belongs. This parameter is available only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgc-bp1tkv8*****</p>
          */
         public Builder generalGroupName(String generalGroupName) {
             this.putQueryParameter("GeneralGroupName", generalGroupName);
@@ -242,10 +257,13 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The PgBouncer port.
-         * <p>
+         * <p>The PgBouncer port.</p>
+         * <blockquote>
+         * <p>This parameter is available only for instances that run PostgreSQL.</p>
+         * </blockquote>
          * 
-         * > This parameter is available only for instances that run PostgreSQL.
+         * <strong>example:</strong>
+         * <p>6432</p>
          */
         public Builder PGBouncerPort(String PGBouncerPort) {
             this.putQueryParameter("PGBouncerPort", PGBouncerPort);
@@ -254,7 +272,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The public port of the instance. Valid values: **1000 to 5999**.
+         * <p>The public port of the instance. Valid values: <strong>1000 to 5999</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

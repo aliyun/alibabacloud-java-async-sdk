@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmNotifyRequest} extends {@link RequestModel}
  *
  * <p>ConfirmNotifyRequest</p>
@@ -69,7 +70,11 @@ public class ConfirmNotifyRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account that is used to confirm the notification. You can set this parameter to **0**, which indicates that the notification is confirmed by the system.
+         * <p>The ID of the Alibaba Cloud account that is used to confirm the notification. You can set this parameter to <strong>0</strong>, which indicates that the notification is confirmed by the system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder confirmor(Long confirmor) {
             this.putBodyParameter("Confirmor", confirmor);
@@ -78,7 +83,8 @@ public class ConfirmNotifyRequest extends Request {
         }
 
         /**
-         * The notification IDs.
+         * <p>The notification IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder notifyIdList(java.util.List < Long > notifyIdList) {
             String notifyIdListShrink = shrink(notifyIdList, "NotifyIdList", "json");

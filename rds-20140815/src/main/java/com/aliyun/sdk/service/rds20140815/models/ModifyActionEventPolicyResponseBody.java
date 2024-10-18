@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyActionEventPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyActionEventPolicyResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the event history feature is enabled.
+         * <p>Indicates whether the event history feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableEventLog(String enableEventLog) {
             this.enableEventLog = enableEventLog;
@@ -69,7 +73,10 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region for which the event history feature is enabled or disabled.
+         * <p>The ID of the region for which the event history feature is enabled or disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -77,7 +84,10 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAC0952C-0EB3-4DE7-A567-B83269BFE43F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

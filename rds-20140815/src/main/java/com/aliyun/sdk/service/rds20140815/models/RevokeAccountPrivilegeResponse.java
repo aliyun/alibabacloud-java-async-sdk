@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeAccountPrivilegeResponse} extends {@link TeaModel}
  *
  * <p>RevokeAccountPrivilegeResponse</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCloudResourceAuthorizedResponseBody} extends {@link TeaModel}
  *
  * <p>CheckCloudResourceAuthorizedResponseBody</p>
@@ -61,11 +62,14 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         private String roleArn; 
 
         /**
-         * The authorization status. Valid values:
-         * <p>
+         * <p>The authorization status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: authorized</li>
+         * <li><strong>0</strong>: not authorized</li>
+         * </ul>
          * 
-         * *   **1**: authorized
-         * *   **0**: not authorized
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder authorizationState(Integer authorizationState) {
             this.authorizationState = authorizationState;
@@ -73,7 +77,10 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +88,10 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</p>
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;

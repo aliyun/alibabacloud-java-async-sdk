@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeErrorLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeErrorLogsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Details about the log entries returned.
+         * <p>Details about the log entries returned.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of error logs on the current page.
+         * <p>The number of error logs on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98504E07-BB0E-40FC-B152-E4882615812C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeErrorLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeErrorLogsResponseBody</p>
+     */
     public static class ErrorLog extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -169,7 +188,10 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
             private String errorInfo; 
 
             /**
-             * The time when the error log entry was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the error log entry was generated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2011-05-30T12:11:04Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -177,7 +199,10 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The error log information.
+             * <p>The error log information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spid52 DBCC TRACEON 3499, server process ID (SPID) 52. This is an informational message only; no user action is required</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -191,6 +216,12 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeErrorLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeErrorLogsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorLog")
         private java.util.List < ErrorLog> errorLog;

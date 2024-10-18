@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceMajorVersionPrecheckRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBInstanceMajorVersionPrecheckRequest</p>
@@ -83,7 +84,11 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1c808s731l****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -101,7 +106,11 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends Request {
         }
 
         /**
-         * The new major engine version of the instance. The new major engine version must be later than the original major engine version.
+         * <p>The new major engine version of the instance. The new major engine version must be later than the original major engine version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.0</p>
          */
         public Builder targetMajorVersion(String targetMajorVersion) {
             this.putQueryParameter("TargetMajorVersion", targetMajorVersion);

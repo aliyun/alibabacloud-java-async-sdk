@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogBackupFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogBackupFilesResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details of log files.
+         * <p>The details of log files.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -105,7 +106,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the page returned.
+         * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of log files on the current page.
+         * <p>The number of log files on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -121,7 +128,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8EC669C-FC85-43D7-AF06-C3641626B37E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total size of log files. Unit: bytes.
+         * <p>The total size of log files. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2300</p>
          */
         public Builder totalFileSize(Long totalFileSize) {
             this.totalFileSize = totalFileSize;
@@ -137,7 +150,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of log files.
+         * <p>The total number of log files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -150,6 +166,12 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogBackupFilesResponseBody</p>
+     */
     public static class BinLogFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadLink")
         private String downloadLink;
@@ -237,7 +259,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             private String logEndTime; 
 
             /**
-             * The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.
+             * <p>The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -245,7 +270,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the log file. Unit: bytes.
+             * <p>The size of the log file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>788480</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -253,7 +281,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.
+             * <p>The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -261,7 +292,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the URL. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The expiration time of the URL. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-01T15:04:13Z</p>
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -269,7 +303,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+             * <p>The start time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-31T08:40Z</p>
              */
             public Builder logBeginTime(String logBeginTime) {
                 this.logBeginTime = logBeginTime;
@@ -277,7 +314,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+             * <p>The end time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-31T08:40Z</p>
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -291,6 +331,12 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogBackupFilesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BinLogFile")
         private java.util.List < BinLogFile> binLogFile;

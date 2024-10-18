@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpgradeMajorVersionPrecheckTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUpgradeMajorVersionPrecheckTaskResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         private Integer totalRecordCount; 
 
         /**
-         * The information about the upgrade check report.
+         * <p>The information about the upgrade check report.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1586777-41B5-5F9E-81E8-93DFDD379024</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The total number of entries in the upgrade check report.
+         * <p>The total number of entries in the upgrade check report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUpgradeMajorVersionPrecheckTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpgradeMajorVersionPrecheckTaskResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckTime")
         private String checkTime;
@@ -229,10 +248,11 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             private Integer taskId; 
 
             /**
-             * The time at which the upgrade check was performed.
-             * <p>
+             * <p>The time at which the upgrade check was performed.</p>
+             * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
              * 
-             * The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1635143903000</p>
              */
             public Builder checkTime(String checkTime) {
                 this.checkTime = checkTime;
@@ -240,7 +260,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The content of the upgrade check report.
+             * <p>The content of the upgrade check report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[user_check_report]User check success\n[pg_upgrade_internal.log]Performing...</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -248,10 +271,11 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The expiration time of the upgrade check report.
-             * <p>
+             * <p>The expiration time of the upgrade check report.</p>
+             * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
              * 
-             * The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1635748703000</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -259,15 +283,18 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The result of the upgrade check.
-             * <p>
+             * <p>The result of the upgrade check.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Success</li>
+             * <li>Fail</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the check result is <strong>Fail</strong>, you must check the value of the <strong>Detail</strong> parameter to obtain the information about the errors that occurred, resolve the errors, and then try again. For more information about how to resolve common errors, see <a href="https://help.aliyun.com/document_detail/218391.html">Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   Success
-             * *   Fail
-             * 
-             * >  If the check result is **Fail**, you must check the value of the **Detail** parameter to obtain the information about the errors that occurred, resolve the errors, and then try again. For more information about how to resolve common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](~~218391~~).
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -275,7 +302,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The original major engine version of the instance.
+             * <p>The original major engine version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.0</p>
              */
             public Builder sourceMajorVersion(String sourceMajorVersion) {
                 this.sourceMajorVersion = sourceMajorVersion;
@@ -283,7 +313,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The new major engine version of the instance.
+             * <p>The new major engine version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.0</p>
              */
             public Builder targetMajorVersion(String targetMajorVersion) {
                 this.targetMajorVersion = targetMajorVersion;
@@ -291,7 +324,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the upgrade check task.
+             * <p>The ID of the upgrade check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>416980000</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

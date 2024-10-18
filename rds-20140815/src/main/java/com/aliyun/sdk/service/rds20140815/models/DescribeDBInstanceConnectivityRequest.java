@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceConnectivityRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceConnectivityRequest</p>
@@ -153,7 +154,11 @@ public class DescribeDBInstanceConnectivityRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4ns09hgoy99i5gez</p>
          */
         public Builder dbInstanceName(String dbInstanceName) {
             this.putQueryParameter("DbInstanceName", dbInstanceName);
@@ -180,7 +185,10 @@ public class DescribeDBInstanceConnectivityRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -216,7 +224,11 @@ public class DescribeDBInstanceConnectivityRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.putQueryParameter("SourceIpAddress", sourceIpAddress);

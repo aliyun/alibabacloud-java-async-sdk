@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountMaskingPrivilegeRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountMaskingPrivilegeRequest</p>
@@ -30,6 +31,10 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
     private String privilege;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -48,6 +53,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         this.expireTime = builder.expireTime;
         this.ownerId = builder.ownerId;
         this.privilege = builder.privilege;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.userName = builder.userName;
@@ -95,6 +101,13 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -120,6 +133,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         private String expireTime; 
         private String ownerId; 
         private String privilege; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String userName; 
@@ -134,13 +148,14 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
             this.expireTime = request.expireTime;
             this.ownerId = request.ownerId;
             this.privilege = request.privilege;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.userName = request.userName;
         } 
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -167,11 +182,20 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
-         * Privilege.
+         * <p>This parameter is required.</p>
          */
         public Builder privilege(String privilege) {
             this.putQueryParameter("Privilege", privilege);
             this.privilege = privilege;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -194,7 +218,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>This parameter is required.</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

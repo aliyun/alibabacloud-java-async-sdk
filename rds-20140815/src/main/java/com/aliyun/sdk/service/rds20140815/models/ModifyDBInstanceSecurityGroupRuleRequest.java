@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceSecurityGroupRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceSecurityGroupRuleRequest</p>
@@ -185,7 +186,11 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~2628785~~) operation to query the IDs of instances.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the IDs of instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp15i4hn07r******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -194,7 +199,11 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The description of the security group rule.
+         * <p>The description of the security group rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zht_test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,11 +212,15 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The type of the transport layer protocol. Valid values:
-         * <p>
+         * <p>The type of the transport layer protocol. Valid values:</p>
+         * <ul>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   TCP
-         * *   UDP
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -234,10 +247,12 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The range of destination ports over which TCP and UDP traffic is allowed in the security group rule.
-         * <p>
+         * <p>The range of destination ports over which TCP and UDP traffic is allowed in the security group rule.</p>
+         * <p>Valid values: 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+         * <strong>example:</strong>
+         * <p>1/200</p>
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -264,7 +279,11 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The ID of the security group rule. You can call the [DescribeDBInstanceSecurityGroupRule](~~2834044~~) to obtain the ID of the security group rule.
+         * <p>The ID of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/2834044.html">DescribeDBInstanceSecurityGroupRule</a> to obtain the ID of the security group rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgr-2ze17u******</p>
          */
         public Builder securityGroupRuleId(String securityGroupRuleId) {
             this.putQueryParameter("SecurityGroupRuleId", securityGroupRuleId);
@@ -273,7 +292,11 @@ public class ModifyDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The range of source IP addresses. CIDR blocks and IPv4 addresses are supported.
+         * <p>The range of source IP addresses. CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.100</p>
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);

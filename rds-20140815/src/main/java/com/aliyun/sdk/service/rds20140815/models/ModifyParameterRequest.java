@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParameterRequest} extends {@link RequestModel}
  *
  * <p>ModifyParameterRequest</p>
@@ -194,7 +195,10 @@ public class ModifyParameterRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -203,7 +207,11 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -212,13 +220,15 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * Specifies whether to restart the instance for a new parameter value to take effect. Valid values:
-         * <p>
+         * <p>Specifies whether to restart the instance for a new parameter value to take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The system forcefully restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.</li>
+         * <li><strong>false</strong>: The system does not forcefully restart the instance.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**: The system forcefully restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.
-         * *   **false**: The system does not forcefully restart the instance.
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forcerestart(Boolean forcerestart) {
             this.putQueryParameter("Forcerestart", forcerestart);
@@ -245,11 +255,16 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * The parameter template ID.
-         * <p>
+         * <p>The parameter template ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you specify this parameter, you do not need to specify <strong>Parameters</strong>.</li>
+         * <li>If the parameter template can be applied only after the instance is restarted, you must specify <strong>Forcerestart</strong>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   If you specify this parameter, you do not need to specify **Parameters**.
-         * > *   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.
+         * <strong>example:</strong>
+         * <p>rpg-xxxxxxxxx</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -258,10 +273,13 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * The JSON strings of parameters and their values. All the parameter values are of the string type. Format: {"Parameter name 1":"Parameter value 1","Parameter name 2":"Parameter value 2"...}. You can call the DescribeParameterTemplates operation to query parameter names and values.
-         * <p>
+         * <p>The JSON strings of parameters and their values. All the parameter values are of the string type. Format: {&quot;Parameter name 1&quot;:&quot;Parameter value 1&quot;,&quot;Parameter name 2&quot;:&quot;Parameter value 2&quot;...}. You can call the DescribeParameterTemplates operation to query parameter names and values.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, you do not need to specify <strong>ParameterGroupId</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you specify this parameter, you do not need to specify **ParameterGroupId**.
+         * <strong>example:</strong>
+         * <p>{&quot;delayed_insert_timeout&quot;:&quot;600&quot;,&quot;max_length_for_sort_data&quot;:&quot;2048&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -288,10 +306,13 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * The time at which the modification takes effect. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The time at which the modification takes effect. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>This time must be later than the time at which you call this operation.</p>
+         * </blockquote>
          * 
-         * > This time must be later than the time at which you call this operation.
+         * <strong>example:</strong>
+         * <p>2022-05-06T09:24:00Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -300,12 +321,15 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * The time at which the modification takes effect. Valid values:
-         * <p>
+         * <p>The time at which the modification takes effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediate</strong>: immediately modifies the parameter. This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.</li>
+         * <li><strong>ScheduleTime</strong>: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify <strong>SwitchTime</strong>.</li>
+         * </ul>
          * 
-         * - **Immediate**: immediately modifies the parameter. This is the default value.
-         * - **MaintainTime**: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.
-         * - **ScheduleTime**: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify **SwitchTime**.
+         * <strong>example:</strong>
+         * <p>ScheduleTime</p>
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceSecurityGroupRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceSecurityGroupRuleResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifyDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +73,10 @@ public class ModifyDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the status code.
+         * <p>The information about the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +84,10 @@ public class ModifyDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07F6177E-6DE4-408A-BB4F-0723301340F7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

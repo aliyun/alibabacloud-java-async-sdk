@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReceiveDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReceiveDBInstanceRequest</p>
@@ -125,7 +126,11 @@ public class ReceiveDBInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the primary instance.
+         * <p>The ID of the primary instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the ID of the primary instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -134,7 +139,11 @@ public class ReceiveDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the disaster recovery instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the disaster recovery instance.
+         * <p>The ID of the disaster recovery instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the ID of the disaster recovery instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-tr2whku*****</p>
          */
         public Builder guardDBInstanceId(String guardDBInstanceId) {
             this.putQueryParameter("GuardDBInstanceId", guardDBInstanceId);

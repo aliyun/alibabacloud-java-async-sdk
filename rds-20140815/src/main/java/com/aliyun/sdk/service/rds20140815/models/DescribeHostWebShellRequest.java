@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHostWebShellRequest} extends {@link RequestModel}
  *
  * <p>DescribeHostWebShellRequest</p>
@@ -156,7 +157,11 @@ public class DescribeHostWebShellRequest extends Request {
         } 
 
         /**
-         * The username of the account that is used to log on to the host of the instance.
+         * <p>The username of the account that is used to log on to the host of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testOsAccount1</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -165,7 +170,11 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * The password of the host account.
+         * <p>The password of the host account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -174,7 +183,11 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -183,7 +196,11 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * The instance hostname. You can call the DescribeDBInstanceIpHostname operation to query the hostname.
+         * <p>The instance hostname. You can call the DescribeDBInstanceIpHostname operation to query the hostname.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testHost1</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -201,7 +218,11 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID.
+         * <p>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionID(String regionID) {
             this.putQueryParameter("RegionID", regionID);

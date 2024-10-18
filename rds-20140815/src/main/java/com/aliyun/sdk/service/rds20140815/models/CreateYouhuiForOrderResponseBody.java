@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateYouhuiForOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateYouhuiForOrderResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateYouhuiForOrderResponseBody extends TeaModel {
         private String youhuiId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -69,7 +73,10 @@ public class CreateYouhuiForOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0688F1D2-CDA8-5617-A43C-ADAC61D80D43</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateYouhuiForOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The coupon ID.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221201******</p>
          */
         public Builder youhuiId(String youhuiId) {
             this.youhuiId = youhuiId;

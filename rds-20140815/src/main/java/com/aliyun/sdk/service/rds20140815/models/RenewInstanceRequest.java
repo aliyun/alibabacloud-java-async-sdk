@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewInstanceRequest</p>
@@ -153,21 +154,27 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment during the renewal. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment during the renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.</li>
+         * <li><strong>False</strong> (default): disables automatic payment. You have to manually pay the order in the console.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about how to renew the instance in the console, see the following topics:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p><a href="https://help.aliyun.com/document_detail/96050.html">Manually renew an ApsaraDB RDS for MySQL instance</a></p>
+         * </li>
+         * <li><p><a href="https://help.aliyun.com/document_detail/96741.html">Manually renew an ApsaraDB RDS for PostgreSQL instance</a></p>
+         * </li>
+         * <li><p><a href="https://help.aliyun.com/document_detail/95637.html">Manually renew an ApsaraDB RDS for SQL Server instance</a></p>
+         * </li>
+         * <li><p><a href="https://help.aliyun.com/document_detail/97122.html">Manually renew an ApsaraDB RDS for MariaDB instance</a></p>
+         * </li>
+         * </ul>
          * 
-         * *   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.
-         * *   **False** (default): disables automatic payment. You have to manually pay the order in the console.
-         * 
-         * >  For more information about how to renew the instance in the console, see the following topics:
-         * 
-         * *   [Manually renew an ApsaraDB RDS for MySQL instance](~~96050~~)
-         * 
-         * *   [Manually renew an ApsaraDB RDS for PostgreSQL instance](~~96741~~)
-         * 
-         * *   [Manually renew an ApsaraDB RDS for SQL Server instance](~~95637~~)
-         * 
-         * *   [Manually renew an ApsaraDB RDS for MariaDB instance](~~97122~~)
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder autoPay(String autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -176,11 +183,14 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>.</li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**.
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -189,7 +199,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -198,7 +211,11 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -216,15 +233,19 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The duration of the subscription renewal. Unit: month. Valid values:
-         * <p>
+         * <p>The duration of the subscription renewal. Unit: month. Valid values:</p>
+         * <ul>
+         * <li><strong>1~9</strong></li>
+         * <li><strong>12</strong></li>
+         * <li><strong>24</strong></li>
+         * <li><strong>36</strong></li>
+         * <li><strong>48</strong></li>
+         * <li><strong>60</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1~9**
-         * *   **12**
-         * *   **24**
-         * *   **36**
-         * *   **48**
-         * *   **60**
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllWhitelistTemplateRequest} extends {@link RequestModel}
  *
  * <p>DescribeAllWhitelistTemplateRequest</p>
@@ -153,11 +154,14 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable fuzzy search. Valid values:
-         * <p>
+         * <p>Specifies whether to enable fuzzy search. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fuzzySearch(Boolean fuzzySearch) {
             this.putQueryParameter("FuzzySearch", fuzzySearch);
@@ -166,7 +170,11 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.
+         * <p>The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
             this.putQueryParameter("MaxRecordsPerPage", maxRecordsPerPage);
@@ -175,7 +183,11 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.putQueryParameter("PageNumbers", pageNumbers);
@@ -184,7 +196,10 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +208,10 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The resource group ID. For more information about resource groups, see related documentation.
+         * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyhigxskzysy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -220,7 +238,10 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.
+         * <p>The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

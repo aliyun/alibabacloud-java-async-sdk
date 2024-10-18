@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedHostsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDedicatedHostsRequest</p>
@@ -193,11 +194,14 @@ public class DescribeDedicatedHostsRequest extends Request {
         } 
 
         /**
-         * Specifies whether instances can be deployed on the host. Valid values:
-         * <p>
+         * <p>Specifies whether instances can be deployed on the host. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Instances cannot be deployed on the host.</li>
+         * <li><strong>1</strong>: Instances can be deployed on the host.</li>
+         * </ul>
          * 
-         * *   **0**: Instances cannot be deployed on the host.
-         * *   **1**: Instances can be deployed on the host.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder allocationStatus(String allocationStatus) {
             this.putQueryParameter("AllocationStatus", allocationStatus);
@@ -206,7 +210,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
+         * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg-7a9xxxxxxxx</p>
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -215,7 +222,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The ID of the host in the dedicated cluster.
+         * <p>The ID of the host in the dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ch-t4nn100ddxxxxxxxx</p>
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -224,16 +234,19 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The status of the host. Valid values:
-         * <p>
+         * <p>The status of the host. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: creating</li>
+         * <li><strong>1</strong>: running</li>
+         * <li><strong>2</strong>: faulty</li>
+         * <li><strong>3</strong>: being replaced</li>
+         * <li><strong>4</strong>: deprecated</li>
+         * <li><strong>5</strong>: deleting</li>
+         * <li><strong>6</strong>: restarting</li>
+         * </ul>
          * 
-         * *   **0**: creating
-         * *   **1**: running
-         * *   **2**: faulty
-         * *   **3**: being replaced
-         * *   **4**: deprecated
-         * *   **5**: deleting
-         * *   **6**: restarting
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostStatus(String hostStatus) {
             this.putQueryParameter("HostStatus", hostStatus);
@@ -242,11 +255,14 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The storage type of the host. Valid values:
-         * <p>
+         * <p>The storage type of the host. Valid values:</p>
+         * <ul>
+         * <li><strong>dhg_cloud_ssd</strong>: enhanced SSD (ESSD)</li>
+         * <li><strong>dhg_local_ssd</strong>: local SSD</li>
+         * </ul>
          * 
-         * *   **dhg_cloud_ssd**: enhanced SSD (ESSD)
-         * *   **dhg_local_ssd**: local SSD
+         * <strong>example:</strong>
+         * <p>dhg_cloud_ssd</p>
          */
         public Builder hostType(String hostType) {
             this.putQueryParameter("HostType", hostType);
@@ -255,7 +271,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102565235</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -273,7 +292,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -300,7 +322,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableCrossRegionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableCrossRegionResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of destination regions for cross-region backups.
+         * <p>An array that consists of destination regions for cross-region backups.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39265F46-EC77-4036-8AC4-F035F32F6BE2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableCrossRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableCrossRegionResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < String > region;

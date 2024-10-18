@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableClassesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableClassesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the instance types available for the instance.
+         * <p>An array that consists of the instance types available for the instance.</p>
          */
         public Builder DBInstanceClasses(java.util.List < DBInstanceClasses> DBInstanceClasses) {
             this.DBInstanceClasses = DBInstanceClasses;
@@ -57,7 +58,10 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E4448A6-9FE6-4474-A0C1-AA7CFC772CAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableClassesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableClassesResponseBody</p>
+     */
     public static class DBInstanceStorageRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxValue")
         private Integer maxValue;
@@ -121,7 +131,10 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             private Integer step; 
 
             /**
-             * The maximum storage capacity that is supported for the instance. Unit: GB.
+             * <p>The maximum storage capacity that is supported for the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -129,7 +142,10 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum storage capacity that is supported for the instance. Unit: GB.
+             * <p>The minimum storage capacity that is supported for the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -137,7 +153,10 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum step size at which you can adjust the storage capacity of the instance. The minimum step size is 5 GB.
+             * <p>The minimum step size at which you can adjust the storage capacity of the instance. The minimum step size is 5 GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -151,6 +170,12 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableClassesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableClassesResponseBody</p>
+     */
     public static class DBInstanceClasses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
         private String DBInstanceClass;
@@ -190,7 +215,10 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             private DBInstanceStorageRange DBInstanceStorageRange; 
 
             /**
-             * The instance type of the instance.
+             * <p>The instance type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds.mysql.c1.large</p>
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -198,7 +226,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity range that is supported for the instance.
+             * <p>The storage capacity range that is supported for the instance.</p>
              */
             public Builder DBInstanceStorageRange(DBInstanceStorageRange DBInstanceStorageRange) {
                 this.DBInstanceStorageRange = DBInstanceStorageRange;

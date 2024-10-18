@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetaListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetaListResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -117,7 +121,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the databases and tables whose data is included in the backup set.
+         * <p>The information about the databases and tables whose data is included in the backup set.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -125,7 +129,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -133,7 +140,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -141,7 +151,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60F9A12A-16B8-4728-B099-4CA38D32C31C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +162,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPageCount(Integer totalPageCount) {
             this.totalPageCount = totalPageCount;
@@ -157,7 +173,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -170,6 +189,12 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetaListResponseBody</p>
+     */
     public static class Meta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
@@ -221,7 +246,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
             private String tables; 
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb1</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -229,7 +257,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The table size. Unit: KB.
+             * <p>The table size. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -237,7 +268,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder tables(String tables) {
                 this.tables = tables;
@@ -251,6 +285,12 @@ public class DescribeMetaListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetaListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Meta")
         private java.util.List < Meta> meta;

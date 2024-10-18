@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBProxyEndpointAddressRequest} extends {@link RequestModel}
  *
  * <p>CreateDBProxyEndpointAddressRequest</p>
@@ -183,7 +184,11 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         } 
 
         /**
-         * The prefix of the proxy endpoint Enter a custom prefix.
+         * <p>The prefix of the proxy endpoint Enter a custom prefix.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1234</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -192,7 +197,11 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4n3axxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -201,14 +210,17 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The network type of the proxy endpoint. Valid values:
-         * <p>
+         * <p>The network type of the proxy endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong>: Internet</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
+         * <li><strong>Classic</strong>: classic network</li>
+         * </ul>
+         * <p>Default value: <strong>Classic</strong></p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Public**: Internet
-         * *   **VPC**: Virtual Private Cloud (VPC)
-         * *   **Classic**: classic network
-         * 
-         * Default value: **Classic**
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder DBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
             this.putQueryParameter("DBProxyConnectStringNetType", DBProxyConnectStringNetType);
@@ -217,7 +229,11 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
+         * <p>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ta9um4xxxxx</p>
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
@@ -226,7 +242,10 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -235,11 +254,14 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The port number that is associated with the proxy endpoint.
-         * <p>
+         * <p>The port number that is associated with the proxy endpoint.</p>
+         * <ul>
+         * <li>If the instance runs MySQL, the default value is <strong>3306</strong>.</li>
+         * <li>If the instance runs PostgreSQL, the default value is <strong>5432</strong>.</li>
+         * </ul>
          * 
-         * *   If the instance runs MySQL, the default value is **3306**.
-         * *   If the instance runs PostgreSQL, the default value is **5432**.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder DBProxyNewConnectStringPort(String DBProxyNewConnectStringPort) {
             this.putQueryParameter("DBProxyNewConnectStringPort", DBProxyNewConnectStringPort);
@@ -248,7 +270,10 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -257,7 +282,10 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -266,10 +294,13 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the information.
-         * <p>
+         * <p>The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the information.</p>
+         * <blockquote>
+         * <p> This parameter must be specified when <strong>DBProxyConnectStringNetType</strong> is set to <strong>VPC</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified when **DBProxyConnectStringNetType** is set to **VPC**.
+         * <strong>example:</strong>
+         * <p>vpc-bpxxxxxx</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -278,10 +309,13 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch that is associated with the specified VPC. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.
-         * <p>
+         * <p>The ID of the vSwitch that is associated with the specified VPC. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified when <strong>DBProxyConnectStringNetType</strong> is set to <strong>VPC</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified when **DBProxyConnectStringNetType** is set to **VPC**.
+         * <strong>example:</strong>
+         * <p>vsw-bpxxxxxx</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

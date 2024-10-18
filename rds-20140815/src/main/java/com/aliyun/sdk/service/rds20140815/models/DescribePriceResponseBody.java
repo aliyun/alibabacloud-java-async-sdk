@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePriceResponseBody</p>
@@ -121,10 +122,13 @@ public class DescribePriceResponseBody extends TeaModel {
         private Float tradeMinRCUAmount; 
 
         /**
-         * The order parameters.
-         * <p>
+         * <p>The order parameters.</p>
+         * <blockquote>
+         * <p> If the <strong>OrderParamOut</strong> parameter is set to <strong>true</strong>, the value of the OrderParams parameter is returned.</p>
+         * </blockquote>
          * 
-         * >  If the **OrderParamOut** parameter is set to **true**, the value of the OrderParams parameter is returned.
+         * <strong>example:</strong>
+         * <p>{&quot;autoPay&quot;:false}&quot;</p>
          */
         public Builder orderParams(String orderParams) {
             this.orderParams = orderParams;
@@ -132,7 +136,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The price information.
+         * <p>The price information.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -140,7 +144,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA0ADDDC-0BEB-4381-A3ED-73B4C79B8CC6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,7 +155,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the promotion rule.
+         * <p>The details of the promotion rule.</p>
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -156,7 +163,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The pricing information about a serverless RDS instance.
+         * <p>The pricing information about a serverless RDS instance.</p>
          */
         public Builder serverlessPrice(ServerlessPrice serverlessPrice) {
             this.serverlessPrice = serverlessPrice;
@@ -164,7 +171,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether discounts can be used.
+         * <p>Indicates whether discounts can be used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder showDiscount(Boolean showDiscount) {
             this.showDiscount = showDiscount;
@@ -172,7 +182,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The estimated hourly fee that is calculated based on the maximum number of RCUs.
+         * <p>The estimated hourly fee that is calculated based on the maximum number of RCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2**</p>
          */
         public Builder tradeMaxRCUAmount(Float tradeMaxRCUAmount) {
             this.tradeMaxRCUAmount = tradeMaxRCUAmount;
@@ -180,7 +193,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The estimated hourly fee that is calculated based on the minimum number of RCUs.
+         * <p>The estimated hourly fee that is calculated based on the minimum number of RCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1**</p>
          */
         public Builder tradeMinRCUAmount(Float tradeMinRCUAmount) {
             this.tradeMinRCUAmount = tradeMinRCUAmount;
@@ -193,6 +209,12 @@ public class DescribePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class ActivityInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckErrMsg")
         private String checkErrMsg;
@@ -244,7 +266,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error description</p>
              */
             public Builder checkErrMsg(String checkErrMsg) {
                 this.checkErrMsg = checkErrMsg;
@@ -252,7 +277,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The error code that is returned.
+             * <p>The error code that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -260,7 +288,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful.
+             * <p>Indicates whether the request was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder success(String success) {
                 this.success = success;
@@ -274,6 +305,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Coupon extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CouponNo")
         private String couponNo;
@@ -337,7 +374,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The coupon ID.
+             * <p>The coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -345,7 +385,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the coupon.
+             * <p>The description of the coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -353,7 +396,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the coupon is selected.
+             * <p>Indicates whether the coupon is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSelected(String isSelected) {
                 this.isSelected = isSelected;
@@ -361,7 +407,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The coupon name.
+             * <p>The coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,6 +424,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Coupons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Coupon")
         private java.util.List < Coupon> coupon;
@@ -416,6 +471,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class RuleIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private java.util.List < String > ruleId;
@@ -457,6 +518,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityInfo")
         private ActivityInfo activityInfo;
@@ -592,7 +659,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The information about the promotion.
+             * <p>The information about the promotion.</p>
              */
             public Builder activityInfo(ActivityInfo activityInfo) {
                 this.activityInfo = activityInfo;
@@ -600,7 +667,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the coupon.
+             * <p>The information about the coupon.</p>
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;
@@ -608,7 +675,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The currency unit.
+             * <p>The currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -616,7 +686,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -624,7 +697,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The order information.
+             * <p>The order information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Order Information</p>
              */
             public Builder orderLines(Object orderLines) {
                 this.orderLines = orderLines;
@@ -632,7 +708,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2504</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -640,7 +719,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the ID of the promotion rule.
+             * <p>An array that consists of the ID of the promotion rule.</p>
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -648,7 +727,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.
+             * <p>The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1**</p>
              */
             public Builder tradeMaxRCUAmount(Float tradeMaxRCUAmount) {
                 this.tradeMaxRCUAmount = tradeMaxRCUAmount;
@@ -656,7 +738,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.
+             * <p>The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2**</p>
              */
             public Builder tradeMinRCUAmount(Float tradeMinRCUAmount) {
                 this.tradeMinRCUAmount = tradeMinRCUAmount;
@@ -664,7 +749,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price, which is equal to the original price minus the discount.
+             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2504</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -678,6 +766,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Rule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -729,7 +823,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the promotion rule.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Activity Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -737,7 +834,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the promotion rule.
+             * <p>The name of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -745,7 +845,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the promotion rule.
+             * <p>The ID of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1020021003939076</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -759,6 +862,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;
@@ -800,6 +909,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class ServerlessPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RCUDiscountMaxAmount")
         private Float RCUDiscountMaxAmount;
@@ -935,7 +1050,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float storageDiscountAmount; 
 
             /**
-             * The discount amount of the maximum number of RCUs.
+             * <p>The discount amount of the maximum number of RCUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1**.*</p>
              */
             public Builder RCUDiscountMaxAmount(Float RCUDiscountMaxAmount) {
                 this.RCUDiscountMaxAmount = RCUDiscountMaxAmount;
@@ -943,7 +1061,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount amount of the minimum number of RCUs.
+             * <p>The discount amount of the minimum number of RCUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1*.*</p>
              */
             public Builder RCUDiscountMinAmount(Float RCUDiscountMinAmount) {
                 this.RCUDiscountMinAmount = RCUDiscountMinAmount;
@@ -951,7 +1072,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The price of the maximum number of RCUs.
+             * <p>The price of the maximum number of RCUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2**.*</p>
              */
             public Builder RCUOriginalMaxAmount(Float RCUOriginalMaxAmount) {
                 this.RCUOriginalMaxAmount = RCUOriginalMaxAmount;
@@ -959,7 +1083,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The price of the minimum number of RCUs.
+             * <p>The price of the minimum number of RCUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3*.*</p>
              */
             public Builder RCUOriginalMinAmount(Float RCUOriginalMinAmount) {
                 this.RCUOriginalMinAmount = RCUOriginalMinAmount;
@@ -967,7 +1094,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price of the disk capacity.
+             * <p>The original price of the disk capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1*</p>
              */
             public Builder storageOriginalAmount(Float storageOriginalAmount) {
                 this.storageOriginalAmount = storageOriginalAmount;
@@ -975,7 +1105,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum total price before the discount.
+             * <p>The maximum total price before the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2**.*</p>
              */
             public Builder totalOriginalMaxAmount(Float totalOriginalMaxAmount) {
                 this.totalOriginalMaxAmount = totalOriginalMaxAmount;
@@ -983,7 +1116,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum total price before the discount.
+             * <p>The minimum total price before the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2*.*</p>
              */
             public Builder totalOriginalMinAmount(Float totalOriginalMinAmount) {
                 this.totalOriginalMinAmount = totalOriginalMinAmount;
@@ -991,7 +1127,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price of the maximum number of RCUs.
+             * <p>The transaction price of the maximum number of RCUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1**.*</p>
              */
             public Builder tradeMaxRCUAmount(Float tradeMaxRCUAmount) {
                 this.tradeMaxRCUAmount = tradeMaxRCUAmount;
@@ -999,7 +1138,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price of the minimum number of RCUs.
+             * <p>The transaction price of the minimum number of RCUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2*.*</p>
              */
             public Builder tradeMinRCUAmount(Float tradeMinRCUAmount) {
                 this.tradeMinRCUAmount = tradeMinRCUAmount;
@@ -1007,7 +1149,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discounted price of the disk capacity.
+             * <p>The discounted price of the disk capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.*</p>
              */
             public Builder storageDiscountAmount(Float storageDiscountAmount) {
                 this.storageDiscountAmount = storageDiscountAmount;

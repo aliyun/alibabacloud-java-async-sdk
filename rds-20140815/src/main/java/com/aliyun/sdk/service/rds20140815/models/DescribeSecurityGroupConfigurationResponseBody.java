@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityGroupConfigurationResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -69,7 +73,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the ECS security group.
+         * <p>The information about the ECS security group.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -77,7 +81,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87BDAE8C-ACB0-4A26-BBCC-7D1DD31D630D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class EcsSecurityGroupRelation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
@@ -153,11 +166,14 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupName; 
 
             /**
-             * The network type of the ECS security group. Valid values:
-             * <p>
+             * <p>The network type of the ECS security group. Valid values:</p>
+             * <ul>
+             * <li><strong>Classic</strong></li>
+             * <li><strong>VPC</strong></li>
+             * </ul>
              * 
-             * *   **Classic**
-             * *   **VPC**
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -165,7 +181,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -173,7 +192,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS security group.
+             * <p>The ID of the ECS security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -181,7 +203,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The security group name.
+             * <p>The security group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>security-group-emraccess</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -195,6 +220,12 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsSecurityGroupRelation")
         private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation;

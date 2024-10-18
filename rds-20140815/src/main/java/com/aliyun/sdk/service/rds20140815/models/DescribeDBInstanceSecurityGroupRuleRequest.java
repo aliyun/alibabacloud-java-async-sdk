@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSecurityGroupRuleRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceSecurityGroupRuleRequest</p>
@@ -110,7 +111,11 @@ public class DescribeDBInstanceSecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~2628785~~) operation to query the IDs of instances.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the IDs of instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze202******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

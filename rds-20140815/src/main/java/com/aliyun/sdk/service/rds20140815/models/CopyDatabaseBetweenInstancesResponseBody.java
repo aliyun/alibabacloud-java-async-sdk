@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyDatabaseBetweenInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>CopyDatabaseBetweenInstancesResponseBody</p>
@@ -37,7 +38,10 @@ public class CopyDatabaseBetweenInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>803D11AF-C370-465B-AB46-CB3A642DC303</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

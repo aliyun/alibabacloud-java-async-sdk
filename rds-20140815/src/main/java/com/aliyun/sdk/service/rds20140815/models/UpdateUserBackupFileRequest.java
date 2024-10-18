@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserBackupFileRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserBackupFileRequest</p>
@@ -154,7 +155,11 @@ public class UpdateUserBackupFileRequest extends Request {
         } 
 
         /**
-         * The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.
+         * <p>The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-kwwvr7v8t7of********</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -163,7 +168,10 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The new description of the full backup file.
+         * <p>The new description of the full backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CommentTest</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -181,7 +189,11 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -190,7 +202,10 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -217,7 +232,10 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The new retention period of the full backup file. Unit: days. Valid values: any non-zero positive integer.
+         * <p>The new retention period of the full backup file. Unit: days. Valid values: any non-zero positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);

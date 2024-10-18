@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBNodesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDBNodesResponseBody</p>
@@ -61,7 +62,10 @@ public class DeleteDBNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -69,7 +73,10 @@ public class DeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100780000000000</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -77,7 +84,10 @@ public class DeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

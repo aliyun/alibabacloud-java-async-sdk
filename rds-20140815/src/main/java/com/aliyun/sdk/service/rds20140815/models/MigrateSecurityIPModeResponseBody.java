@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateSecurityIPModeResponseBody} extends {@link TeaModel}
  *
  * <p>MigrateSecurityIPModeResponseBody</p>
@@ -61,7 +62,10 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         private String securityIPMode; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -69,7 +73,10 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF1E53AB-5625-49C7-ADF1-FBD0B6640D19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,22 +84,21 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         }
 
         /**
-         * The whitelist mode after the change, which is the enhanced whitelist mode.
-         * <p>
+         * <p>The whitelist mode after the change, which is the enhanced whitelist mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>safety</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   safety
+         * <p>enhanced whitelist mode</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     enhanced whitelist mode
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>safety</p>
          */
         public Builder securityIPMode(String securityIPMode) {
             this.securityIPMode = securityIPMode;

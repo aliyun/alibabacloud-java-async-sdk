@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteReplicationLinkRequest} extends {@link RequestModel}
  *
  * <p>DeleteReplicationLinkRequest</p>
@@ -83,7 +84,11 @@ public class DeleteReplicationLinkRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1trqb4p1xd****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,11 +97,15 @@ public class DeleteReplicationLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to promote the disaster recovery instance to the primary instance. Valid values:
-         * <p>
+         * <p>Specifies whether to promote the disaster recovery instance to the primary instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder promoteToMaster(Boolean promoteToMaster) {
             this.putQueryParameter("PromoteToMaster", promoteToMaster);
