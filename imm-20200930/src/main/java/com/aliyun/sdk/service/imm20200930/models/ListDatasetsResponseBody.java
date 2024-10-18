@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatasetsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDatasetsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Datasets.
+         * <p>The list of datasets.</p>
          */
         public Builder datasets(java.util.List < Dataset > datasets) {
             this.datasets = datasets;
@@ -69,7 +70,11 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. If the total number of datasets is greater than the value of MaxResults, you must specify this parameter. This parameter has a value only if not all the datasets that meet the conditions are returned.</p>
+         * <p>Pass this value as the value of NextToken in the next call to query subsequent datasets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678:immtest:dataset002</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +82,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEEDE356-C928-4A36-951A-6EB5A592****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

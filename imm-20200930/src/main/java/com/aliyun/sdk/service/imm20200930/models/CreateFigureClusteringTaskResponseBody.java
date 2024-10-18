@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFigureClusteringTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFigureClusteringTaskResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateFigureClusteringTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED-1Bz8z71k5TtsUejT4UJ16****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -69,7 +73,10 @@ public class CreateFigureClusteringTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateFigureClusteringTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>formatconvert-00bec802-073a-4b61-ba3b-39bc****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

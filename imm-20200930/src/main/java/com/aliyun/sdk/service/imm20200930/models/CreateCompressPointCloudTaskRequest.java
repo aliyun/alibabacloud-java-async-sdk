@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCompressPointCloudTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateCompressPointCloudTaskRequest</p>
@@ -235,7 +236,15 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * CompressMethod.
+         * <p>The compression algorithm. Valid values:</p>
+         * <ul>
+         * <li>octree</li>
+         * <li>kdtree</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>octree</p>
          */
         public Builder compressMethod(String compressMethod) {
             this.putQueryParameter("CompressMethod", compressMethod);
@@ -244,7 +253,8 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The configurations of authorization chains. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -254,7 +264,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * KdtreeOption.
+         * <p>The k-d tree compression options.</p>
          */
         public Builder kdtreeOption(KdtreeOption kdtreeOption) {
             String kdtreeOptionShrink = shrink(kdtreeOption, "KdtreeOption", "json");
@@ -264,7 +274,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For more information, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -274,7 +284,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * OctreeOption.
+         * <p>The octree compression options.</p>
          */
         public Builder octreeOption(OctreeOption octreeOption) {
             String octreeOptionShrink = shrink(octreeOption, "OctreeOption", "json");
@@ -284,7 +294,12 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * PointCloudFields.
+         * <p>The PCD property fields and the compression order in which the data is decompressed after the compression is complete.</p>
+         * <ul>
+         * <li>If octree of Point Cloud Library (PCL) is used for compression, [&quot;xyz&quot;] is supported.</li>
+         * <li>If Draco k-dimensional (k-d) tree is used for compression, [&quot;xyz&quot;] and [&quot;xyz&quot;, &quot;intensity&quot;] are supported.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
         public Builder pointCloudFields(java.util.List < String > pointCloudFields) {
             String pointCloudFieldsShrink = shrink(pointCloudFields, "PointCloudFields", "json");
@@ -294,7 +309,10 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * PointCloudFileFormat.
+         * <p>The file format. Set the value to the default value: pcd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcd</p>
          */
         public Builder pointCloudFileFormat(String pointCloudFileFormat) {
             this.putQueryParameter("PointCloudFileFormat", pointCloudFileFormat);
@@ -303,7 +321,11 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -312,7 +334,12 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>The OSS URL of the PCD file.</p>
+         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test/src/test.pcd</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -321,7 +348,10 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags, which can be used to search for and filter asynchronous tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;LabelKey&quot;: &quot;Value&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -331,7 +361,12 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * TargetURI.
+         * <p>The OSS URL of the output file after compression.</p>
+         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test/tgt</p>
          */
         public Builder targetURI(String targetURI) {
             this.putQueryParameter("TargetURI", targetURI);
@@ -340,7 +375,10 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom data, which is returned in an asynchronous notification and facilitates notification management. The maximum length is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

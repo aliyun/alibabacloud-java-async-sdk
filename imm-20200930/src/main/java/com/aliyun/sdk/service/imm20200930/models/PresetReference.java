@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PresetReference} extends {@link TeaModel}
  *
  * <p>PresetReference</p>
@@ -51,7 +52,7 @@ public class PresetReference extends TeaModel {
         private String type; 
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -59,7 +60,7 @@ public class PresetReference extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.type = type;

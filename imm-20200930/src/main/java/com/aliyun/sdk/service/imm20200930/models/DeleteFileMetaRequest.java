@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileMetaRequest} extends {@link RequestModel}
  *
  * <p>DeleteFileMetaRequest</p>
@@ -107,7 +108,11 @@ public class DeleteFileMetaRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-datset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -116,7 +121,11 @@ public class DeleteFileMetaRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -125,7 +134,13 @@ public class DeleteFileMetaRequest extends Request {
         }
 
         /**
-         * URI.
+         * <p>The URI of the file in OSS.</p>
+         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+         * <p>The URI of the file in Photo and Drive Service must be in the pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision} format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket/exampleobject.txt</p>
          */
         public Builder URI(String URI) {
             this.putQueryParameter("URI", URI);

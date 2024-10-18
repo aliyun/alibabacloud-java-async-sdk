@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectTextAnomalyRequest} extends {@link RequestModel}
  *
  * <p>DetectTextAnomalyRequest</p>
@@ -92,7 +93,11 @@ public class DetectTextAnomalyRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The text to be detected. It can contain up to 10,000 characters (including punctuation marks). Only Chinese text can be detected.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -101,7 +106,11 @@ public class DetectTextAnomalyRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

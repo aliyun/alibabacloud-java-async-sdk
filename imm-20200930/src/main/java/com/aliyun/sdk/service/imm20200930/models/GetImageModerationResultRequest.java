@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageModerationResultRequest} extends {@link RequestModel}
  *
  * <p>GetImageModerationResultRequest</p>
@@ -107,7 +108,11 @@ public class GetImageModerationResultRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -116,7 +121,11 @@ public class GetImageModerationResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageModeration-ff207203-3f93-4645-a041-7b8f0f******</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -125,7 +134,11 @@ public class GetImageModerationResultRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageModeration</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

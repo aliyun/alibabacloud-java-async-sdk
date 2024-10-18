@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetFigureClusterRequest} extends {@link RequestModel}
  *
  * <p>BatchGetFigureClusterRequest</p>
@@ -107,7 +108,11 @@ public class BatchGetFigureClusterRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -116,7 +121,8 @@ public class BatchGetFigureClusterRequest extends Request {
         }
 
         /**
-         * ObjectIds.
+         * <p>The cluster IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder objectIds(java.util.List < String > objectIds) {
             String objectIdsShrink = shrink(objectIds, "ObjectIds", "json");
@@ -126,7 +132,11 @@ public class BatchGetFigureClusterRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

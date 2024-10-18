@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBindingsRequest} extends {@link RequestModel}
  *
  * <p>ListBindingsRequest</p>
@@ -120,7 +121,11 @@ public class ListBindingsRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -129,7 +134,13 @@ public class ListBindingsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <ul>
+         * <li>The maximum number of bindings to return. Valid values: 0 to 200.</li>
+         * <li>If you do not specify this parameter or set the parameter to 0, the default value of 100 is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -138,7 +149,14 @@ public class ListBindingsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <ul>
+         * <li>The pagination token that is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</li>
+         * <li>The next call to the operation returns results lexicographically after the NextToken parameter value.</li>
+         * <li>You do not need to specify this parameter in your initial request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest:dataset001:examplebucket01</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -147,7 +165,11 @@ public class ListBindingsRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

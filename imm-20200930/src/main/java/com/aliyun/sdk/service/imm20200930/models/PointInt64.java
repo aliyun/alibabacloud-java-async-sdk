@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PointInt64} extends {@link TeaModel}
  *
  * <p>PointInt64</p>

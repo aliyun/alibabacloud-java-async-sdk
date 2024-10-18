@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TargetSubtitle} extends {@link TeaModel}
  *
  * <p>TargetSubtitle</p>
@@ -90,6 +91,12 @@ public class TargetSubtitle extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TargetSubtitle} extends {@link TeaModel}
+     *
+     * <p>TargetSubtitle</p>
+     */
     public static class ExtractSubtitle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;

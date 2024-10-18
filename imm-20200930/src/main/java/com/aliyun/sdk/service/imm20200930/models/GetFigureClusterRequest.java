@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFigureClusterRequest} extends {@link RequestModel}
  *
  * <p>GetFigureClusterRequest</p>
@@ -107,7 +108,11 @@ public class GetFigureClusterRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The dataset name.<a href="~~CreateDataset~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -116,7 +121,11 @@ public class GetFigureClusterRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the face clustering task. You can obtain the ID from the face clustering information returned after you call the <a href="~~QueryFigureClusters~~">QueryFigureClusters</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster-1f2e1a2c-d5ee-4bc5-84f6-fef94ea****</p>
          */
         public Builder objectId(String objectId) {
             this.putQueryParameter("ObjectId", objectId);
@@ -125,7 +134,11 @@ public class GetFigureClusterRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.<a href="~~CreateProject~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

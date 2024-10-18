@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStoryRequest} extends {@link RequestModel}
  *
  * <p>CreateStoryRequest</p>
@@ -303,7 +304,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * Address.
+         * <p>The address of the story. IMM filters candidate photos to generate a story based on the value of this parameter. This parameter takes effect only if you set StoryType to TravelMemory.</p>
+         * <blockquote>
+         * <p> If you are located in Hong Kong (China), Macao (China), Taiwan (China), or overseas, you cannot specify an address in the Chinese mainland by using this parameter.</p>
+         * </blockquote>
          */
         public Builder address(AddressForStory address) {
             String addressShrink = shrink(address, "Address", "json");
@@ -313,7 +317,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * CustomId.
+         * <p>The custom ID. A custom ID of a generated story may differ from the value of ObjectID and can be utilized for subsequent retrieval and sorting of stories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder customId(String customId) {
             this.putBodyParameter("CustomId", customId);
@@ -322,7 +329,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels. Labels specify the custom information of the story. This enables retrieval based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
          */
         public Builder customLabels(java.util.Map < String, ? > customLabels) {
             String customLabelsShrink = shrink(customLabels, "CustomLabels", "json");
@@ -332,7 +342,11 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. For information about how to obtain the name of a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putBodyParameter("DatasetName", datasetName);
@@ -341,7 +355,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * MaxFileCount.
+         * <p>The maximum number of photo files in the story. The actual number of photo files ranges from the value of MinFileCount to the value of MaxFileCount. The value of this parameter must be an integer greater than the value of MinFileCount. To provide the desired effect, the algorithm limits the maximum number of photo files to 1,500. If you set MaxFileCount to a value greater than 1,500, this parameter does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxFileCount(Long maxFileCount) {
             this.putBodyParameter("MaxFileCount", maxFileCount);
@@ -350,7 +367,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * MinFileCount.
+         * <p>The minimum number of photo files in the story. The actual number of photo files ranges from the value of MinFileCount to the value of MaxFileCount. The value of this parameter must be an integer greater than 1. If the actual number of candidate photos is less than the value of this parameter, a null story is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minFileCount(Long minFileCount) {
             this.putBodyParameter("MinFileCount", minFileCount);
@@ -359,7 +379,7 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * 消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。
+         * <p>The notification settings. For more information, see &quot;Notification&quot;. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous notification format</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -369,7 +389,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * NotifyTopicName.
+         * <p>The topic name of the asynchronous reverse notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-topic</p>
          */
         public Builder notifyTopicName(String notifyTopicName) {
             this.putBodyParameter("NotifyTopicName", notifyTopicName);
@@ -378,7 +401,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the story. This parameter is optional. If you leave this parameter empty, IMM assigns a unique identifier to the story. You can query and update a story based on its ID. You can also manually create an ID for a story. After you create an ID for a story, you must specify this parameter to pass the ID into the system. This way, IMM can record the ID as the unique identifier of the story. If you pass an existing ID into the system, IMM updates the story that corresponds to the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id1</p>
          */
         public Builder objectId(String objectId) {
             this.putBodyParameter("ObjectId", objectId);
@@ -387,7 +413,11 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -396,7 +426,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * StoryEndTime.
+         * <p>The end time of the photo collection for which you want to create the story. StoryStartTime and StoryEndTime form a time interval based on which IMM filters candidate photos to generate a story. The value must be a string in the RFC3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-30T16:00:00Z</p>
          */
         public Builder storyEndTime(String storyEndTime) {
             this.putBodyParameter("StoryEndTime", storyEndTime);
@@ -405,7 +438,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * StoryName.
+         * <p>The name of the story.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name1</p>
          */
         public Builder storyName(String storyName) {
             this.putBodyParameter("StoryName", storyName);
@@ -414,7 +450,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * StoryStartTime.
+         * <p>The start time of the photo collection for which you want to create the story. StoryStartTime and StoryEndTime form a time interval based on which IMM filters candidate photos to generate a story. The value must be a string in the RFC3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-12-30T16:00:00Z</p>
          */
         public Builder storyStartTime(String storyStartTime) {
             this.putBodyParameter("StoryStartTime", storyStartTime);
@@ -423,7 +462,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * StorySubType.
+         * <p>The subtype of the story. For information about valid subtypes, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Solo</p>
          */
         public Builder storySubType(String storySubType) {
             this.putBodyParameter("StorySubType", storySubType);
@@ -432,7 +474,11 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * StoryType.
+         * <p>The type of the story. For information about valid types, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PeopleMemory</p>
          */
         public Builder storyType(String storyType) {
             this.putBodyParameter("StoryType", storyType);
@@ -441,7 +487,15 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags. You can specify this parameter in one of the following scenarios:</p>
+         * <ul>
+         * <li>Specify tags as custom data, which is returned in messages provided by Simple Message Queue.</li>
+         * <li>Search for tasks by tag.</li>
+         * <li>Specify tags as variables in destination URIs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;val&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -451,7 +505,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom information, which is returned as asynchronous notifications to facilitate notification management in your system. The maximum information length is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

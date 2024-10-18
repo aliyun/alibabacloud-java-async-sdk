@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EncodeBlindWatermarkRequest} extends {@link RequestModel}
  *
  * <p>EncodeBlindWatermarkRequest</p>
@@ -149,7 +150,7 @@ public class EncodeBlindWatermarkRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The text content of watermarks. It can be up to 256 characters in length.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -158,7 +159,11 @@ public class EncodeBlindWatermarkRequest extends Request {
         }
 
         /**
-         * ImageQuality.
+         * <p>This parameter takes effect only if the input image format is JPG.</p>
+         * <p>The storage quality of the output image that carries the watermarks. Default value: 90. Valid values: 70 to 100. The higher the quality, the larger the image size and the higher the watermark resolution quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder imageQuality(Integer imageQuality) {
             this.putQueryParameter("ImageQuality", imageQuality);
@@ -167,7 +172,11 @@ public class EncodeBlindWatermarkRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -176,7 +185,14 @@ public class EncodeBlindWatermarkRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>The Object Storage Service (OSS) URI of the image.</p>
+         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region with the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+         * <p>Supported image formats: JPG, PNG, BMP, TIFF, and WebP.</p>
+         * <p>Image size limit: 10,000 px maximum and 80 px x 80 px minimum.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -185,7 +201,10 @@ public class EncodeBlindWatermarkRequest extends Request {
         }
 
         /**
-         * StrengthLevel.
+         * <p>The watermark strength level. The higher the strength, the more resistant the watermarked image is to attacks, but the more the image is distorted. Default value: low. Valid values: [low, medium, high].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         public Builder strengthLevel(String strengthLevel) {
             this.putQueryParameter("StrengthLevel", strengthLevel);
@@ -194,7 +213,12 @@ public class EncodeBlindWatermarkRequest extends Request {
         }
 
         /**
-         * TargetURI.
+         * <p>The OSS URI of the output image.</p>
+         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region with the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/target-object.jpg</p>
          */
         public Builder targetURI(String targetURI) {
             this.putQueryParameter("TargetURI", targetURI);

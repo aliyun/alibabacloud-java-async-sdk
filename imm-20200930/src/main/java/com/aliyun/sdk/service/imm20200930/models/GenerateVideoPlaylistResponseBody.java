@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateVideoPlaylistResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateVideoPlaylistResponseBody</p>
@@ -109,7 +110,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         private java.util.List < VideoPlaylist> videoPlaylist; 
 
         /**
-         * 转码文件列表。
+         * <p>The audio media playlist files.</p>
          */
         public Builder audioPlaylist(java.util.List < AudioPlaylist> audioPlaylist) {
             this.audioPlaylist = audioPlaylist;
@@ -117,7 +118,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The total duration of the generated video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1082</p>
          */
         public Builder duration(Float duration) {
             this.duration = duration;
@@ -125,7 +129,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * MasterURI.
+         * <p>The OSS path of the master playlist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object/master.m3u8</p>
          */
         public Builder masterURI(String masterURI) {
             this.masterURI = masterURI;
@@ -133,7 +140,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA995EFD-083D-4F40-BE8A-BDF75FFF*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +151,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * 转码文件列表。
+         * <p>The subtitle media playlist files.</p>
          */
         public Builder subtitlePlaylist(java.util.List < SubtitlePlaylist> subtitlePlaylist) {
             this.subtitlePlaylist = subtitlePlaylist;
@@ -149,7 +159,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The token of the master playlist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92376fbb-171f-4259-913f-705f7ee0****</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -157,7 +170,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * 转码文件列表。
+         * <p>The video media playlist files.</p>
          */
         public Builder videoPlaylist(java.util.List < VideoPlaylist> videoPlaylist) {
             this.videoPlaylist = videoPlaylist;
@@ -170,6 +183,12 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateVideoPlaylistResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateVideoPlaylistResponseBody</p>
+     */
     public static class AudioPlaylist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
         private Integer channels;
@@ -221,7 +240,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             private String URI; 
 
             /**
-             * Channels.
+             * <p>The number of audio channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder channels(Integer channels) {
                 this.channels = channels;
@@ -229,7 +251,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * 转码生成的Token。用于LiveTranscoding访问的参数。
+             * <p>The token of the audio media playlist. You can use this parameter to generate the path of a TS file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>affe0c6042f09722fec95a21b8b******</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -237,7 +262,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * 输出m3u8的OSS地址。地址规则为 Target.URI + ".m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。
+             * <p>The OSS path of the audio media playlist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://imm-test/testcases/video.m3u8</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -251,6 +279,12 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateVideoPlaylistResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateVideoPlaylistResponseBody</p>
+     */
     public static class SubtitlePlaylist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
@@ -314,7 +348,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             private String URI; 
 
             /**
-             * 字幕流编号，从0开始。
+             * <p>The serial number of the subtitle stream. The value starts from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -322,7 +359,13 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * 视频源中字幕流的语言。
+             * <p>The language of the subtitle stream.</p>
+             * <blockquote>
+             * <p> The language is derived from the subtitle stream information in the OSS path specified by the SourceURI parameter for a source video. If no language information exists in the source video, null is returned.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -330,7 +373,13 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * 转码生成的Token。用于LiveTranscoding访问的参数。
+             * <p>The token of the subtitle media playlist. You can use this parameter to generate the path of a subtitle file.</p>
+             * <blockquote>
+             * <p> You can generate the path of a transcoded subtitle file based on the returned token value. The path must be in the oss://${Bucket}/${Object}-${Token}_${Index}.ts format. oss://${Bucket}/${Object} specifies the URI specified by input parameters for output files. ${Token} specifies the returned token value, and ${Index} specifies the serial number of a subtitle file.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>affe0c6042f09722fec95a21b8b******</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -338,7 +387,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * 输出m3u8的OSS地址。地址规则为 Target.URI + “_” + Index + ".m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。
+             * <p>The OSS path of the subtitle media playlist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://imm-test/testcases/vide_0.m3u8</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -352,6 +404,12 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateVideoPlaylistResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateVideoPlaylistResponseBody</p>
+     */
     public static class VideoPlaylist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FrameRate")
         private String frameRate;
@@ -415,7 +473,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             private String URI; 
 
             /**
-             * FrameRate.
+             * <p>The video frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25/1</p>
              */
             public Builder frameRate(String frameRate) {
                 this.frameRate = frameRate;
@@ -423,7 +484,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * <p>The video resolution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>640x480</p>
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;
@@ -431,7 +495,13 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * 转码生成的Token。用于LiveTranscoding访问的参数。
+             * <p>The token of the video media playlist. You can use this parameter to generate the path of a TS file.</p>
+             * <blockquote>
+             * <p> You can generate the path of a transcoded TS file based on the value of this parameter. The path must be in the oss://${Bucket}/${Object}-${Token}-${Index}.ts format. oss://${Bucket}/${Object} specifies the URI specified by input parameters for output files. ${Token} specifies the returned token, and ${Index} specifies the serial number of a TS file.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>affe0c6042f09722fec95a21b8b******</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -439,7 +509,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * 输出m3u8的OSS地址。地址规则为 Target.URI + ".m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。
+             * <p>The OSS path of the video media playlist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://imm-test/testcases/video.m3u8</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

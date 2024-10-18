@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLocationDateClusterRequest} extends {@link RequestModel}
  *
  * <p>DeleteLocationDateClusterRequest</p>
@@ -107,7 +108,11 @@ public class DeleteLocationDateClusterRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -116,7 +121,11 @@ public class DeleteLocationDateClusterRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the group to be deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>location-date-cluster-71dd4f32-9597-4085-a2ab-3a7b0fd0aff9</p>
          */
         public Builder objectId(String objectId) {
             this.putBodyParameter("ObjectId", objectId);
@@ -125,7 +134,11 @@ public class DeleteLocationDateClusterRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

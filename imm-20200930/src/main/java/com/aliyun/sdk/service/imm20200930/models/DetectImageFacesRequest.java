@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectImageFacesRequest} extends {@link RequestModel}
  *
  * <p>DetectImageFacesRequest</p>
@@ -105,7 +106,8 @@ public class DetectImageFacesRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -115,7 +117,11 @@ public class DetectImageFacesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -124,7 +130,11 @@ public class DetectImageFacesRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>The OSS URI of the image object.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);

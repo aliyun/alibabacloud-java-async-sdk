@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectsResponseBody</p>
@@ -61,7 +62,10 @@ public class ListProjectsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDAx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Projects.
+         * <p>The projects.</p>
          */
         public Builder projects(java.util.List < Project > projects) {
             this.projects = projects;
@@ -77,7 +81,10 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A7A2D0E-D8B8-4DA0-8127-EB32C660</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

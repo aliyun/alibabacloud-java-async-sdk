@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileCompressionTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateFileCompressionTaskRequest</p>
@@ -176,7 +177,13 @@ public class CreateFileCompressionTaskRequest extends Request {
         }
 
         /**
-         * CompressedFormat.
+         * <p>The format of the package. Default value: zip.</p>
+         * <blockquote>
+         * <p> Only the ZIP format is supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zip</p>
          */
         public Builder compressedFormat(String compressedFormat) {
             this.putQueryParameter("CompressedFormat", compressedFormat);
@@ -185,7 +192,8 @@ public class CreateFileCompressionTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -195,7 +203,7 @@ public class CreateFileCompressionTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -205,7 +213,11 @@ public class CreateFileCompressionTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -214,7 +226,15 @@ public class CreateFileCompressionTaskRequest extends Request {
         }
 
         /**
-         * SourceManifestURI.
+         * <p>The OSS URI of the inventory object that contains the objects to compress. The inventory object stores the objects to compress by using the same data structure of the Sources parameter in the JSON format. This parameter is suitable for specifying a large number of objects to compress.</p>
+         * <blockquote>
+         * <p> You must specify this parameter or the <code>Sources</code> parameter. The <code>URI</code> parameter is required and the <code>Alias</code> parameter is optional. You can specify up to 80,000 compression rule by using SourceManifestURI in one single call to the operation. The following line provides an example of the content within an inventory object.</p>
+         * </blockquote>
+         * <pre><code>[{&quot;URI&quot;:&quot;oss://&lt;bucket&gt;/&lt;object&gt;&quot;, &quot;Alias&quot;:&quot;/new-dir/new-name&quot;}]
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object.json</p>
          */
         public Builder sourceManifestURI(String sourceManifestURI) {
             this.putQueryParameter("SourceManifestURI", sourceManifestURI);
@@ -223,7 +243,10 @@ public class CreateFileCompressionTaskRequest extends Request {
         }
 
         /**
-         * Sources.
+         * <p>The objects to compress and compression rules.</p>
+         * <blockquote>
+         * <p> You must this parameter or the SourceManifestURI parameter. You can include up to 100 compression rules in the Sources parameter. If you want to include more than 100 compression rules, use the SourceManifestURI parameter.</p>
+         * </blockquote>
          */
         public Builder sources(java.util.List < Sources> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -233,7 +256,12 @@ public class CreateFileCompressionTaskRequest extends Request {
         }
 
         /**
-         * TargetURI.
+         * <p>The OSS URI of the package. The object name part in the URI is used as the name of the package. Example: <code>name.zip</code>.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-target-object.zip</p>
          */
         public Builder targetURI(String targetURI) {
             this.putQueryParameter("TargetURI", targetURI);
@@ -242,7 +270,10 @@ public class CreateFileCompressionTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -257,6 +288,12 @@ public class CreateFileCompressionTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFileCompressionTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFileCompressionTaskRequest</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -308,7 +345,19 @@ public class CreateFileCompressionTaskRequest extends Request {
             private String URI; 
 
             /**
-             * Alias.
+             * <p>Specifies the path of the compressed object in the package or renames the object.</p>
+             * <ul>
+             * <li>Do not specify this parameter to retain the same directory path of the object in the package. For example, if the object is stored at <code>oss://test-bucket/test-dir/test-object.doc</code>, the path of the compressed object in the package is <code>/test-dir/test-object.doc</code> when you do not specify this parameter.</li>
+             * <li>Rename the object. For example, if the object is stored at <code>oss://test-bucket/test-object.jpg</code> and you set the <strong>Alias</strong> parameter to <code>test-rename-object.jpg</code>, the name of the compressed object in the package is <code>test-rename-object.jpg</code>.</li>
+             * <li>Specify a different path for the compressed object in the package. For example, if the directory to compress is <code>oss://test-bucket/test-dir/</code> and you set the <strong>Alias</strong> parameter to <code>/new-dir/</code>, all objects in the directory to compress are placed in the <code>/new-dir/</code> path in the package.</li>
+             * <li>Set the parameter to <code>/</code> to remove the original directory structure.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Duplicate object names may cause a failure in extracting the objects from the package, depending on the decompression tool that you use. We recommend that you avoid using duplicate object names when you rename objects in the compression task.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>/new-dir/</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -316,7 +365,14 @@ public class CreateFileCompressionTaskRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The compression matching rule. Default value: <code>prefix</code>. Valid values:````</p>
+             * <ul>
+             * <li><code>prefix</code>: matches objects by object name prefix.</li>
+             * <li><code>fullname</code>: exactly matches one single object by its full object name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fullname</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -324,7 +380,15 @@ public class CreateFileCompressionTaskRequest extends Request {
             }
 
             /**
-             * URI.
+             * <p>The OSS URI of the object or directory.</p>
+             * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is a directory or object:</p>
+             * <ul>
+             * <li>When you compress a directory, <code>${Object}</code> is the path of the directory.</li>
+             * <li>When you compress an object, <code>${Object}</code> is the path of the object with the extension included.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOSSBucketAttachmentResponseBody} extends {@link TeaModel}
  *
  * <p>GetOSSBucketAttachmentResponseBody</p>
@@ -85,7 +86,10 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * CreateTime.
+         * <p>The time when the dataset was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;2023-12-19T17:29:34.790931971+08:00&quot;</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -93,7 +97,10 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Dataset&quot;</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -101,7 +108,10 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -109,7 +119,10 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F74C5C9-5AC0-49F9-914D-E01589D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the dataset was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2023-12-19T17:29:34.790931971+08:00&quot;</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

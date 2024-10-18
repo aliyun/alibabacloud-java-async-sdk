@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FuzzyQueryRequest} extends {@link RequestModel}
  *
  * <p>FuzzyQueryRequest</p>
@@ -177,7 +178,11 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -186,7 +191,11 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. Valid values: 0 to 200.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -195,7 +204,12 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the total number of files is greater than the value of MaxResults, you must specify NextToken.</p>
+         * <p>The file information is returned in alphabetical order starting from the value of NextToken.</p>
+         * <p>You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -204,7 +218,24 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting method. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc (default): descending order.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Separate multiple sorting methods with commas (,). Example: asc,desc.</p>
+         * </li>
+         * <li><p>The number of values for Order must be less than or equal to the number of values for Sort. For example, if you set Sort to Size,Filename, you can set Order only to desc or asc.</p>
+         * </li>
+         * <li><p>If the number of values for Order is less than the number of values for Sort, the unsorted fields are default to the value of asc. For example, if you set Sort to Size,Filename and Order to asc, the Filename field is default to the value of asc.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc,desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -213,7 +244,11 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -222,7 +257,8 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The query content. The value can be up to 1 MB in size.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -231,7 +267,15 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field. For more information, see <a href="https://help.aliyun.com/document_detail/252856.html">Supported fields and operators</a>.</p>
+         * <ul>
+         * <li>Separate multiple sort fields with commas (,). Example: <code>Size,Filename</code>.</li>
+         * <li>You can specify up to five sort fields.</li>
+         * <li>The priority order of sorting is determined based on the order of the sort fields.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Size,Filename</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -240,7 +284,8 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * WithFields.
+         * <p>The fields that you want to include in the response. To help reduce the size of the response, include only necessary metadata fields.</p>
+         * <p>If you do not specify this parameter or set the value to null, all existing metadata fields are returned.</p>
          */
         public Builder withFields(java.util.List < String > withFields) {
             String withFieldsShrink = shrink(withFields, "WithFields", "json");

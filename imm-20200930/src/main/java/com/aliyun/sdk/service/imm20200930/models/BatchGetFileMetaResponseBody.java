@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetFileMetaResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetFileMetaResponseBody</p>
@@ -49,7 +50,7 @@ public class BatchGetFileMetaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Files.
+         * <p>The metadata returned.</p>
          */
         public Builder files(java.util.List < File > files) {
             this.files = files;
@@ -57,7 +58,10 @@ public class BatchGetFileMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F84C6D9-5AC0-49F9-914D-F02678E3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

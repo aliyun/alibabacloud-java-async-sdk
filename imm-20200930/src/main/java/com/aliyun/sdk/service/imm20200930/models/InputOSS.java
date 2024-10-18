@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InputOSS} extends {@link TeaModel}
  *
  * <p>InputOSS</p>
@@ -62,7 +63,7 @@ public class InputOSS extends TeaModel {
         private String prefix; 
 
         /**
-         * Bucket.
+         * <p>This parameter is required.</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDecodeBlindWatermarkResultRequest} extends {@link RequestModel}
  *
  * <p>GetDecodeBlindWatermarkResultRequest</p>
@@ -107,7 +108,11 @@ public class GetDecodeBlindWatermarkResultRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -116,7 +121,11 @@ public class GetDecodeBlindWatermarkResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task. You can obtain the ID of the task from the response of the CreateDecodeBlindWatermarkTask operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DecodeBlindWatermark-c09b0943-ed79-4983-8dbe-7a882574****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -125,7 +134,14 @@ public class GetDecodeBlindWatermarkResultRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task.</p>
+         * <ul>
+         * <li>Set the value to DecodeBlindWatermark.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DecodeBlindWatermark</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

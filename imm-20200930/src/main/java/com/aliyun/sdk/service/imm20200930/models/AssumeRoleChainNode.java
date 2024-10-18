@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssumeRoleChainNode} extends {@link TeaModel}
  *
  * <p>AssumeRoleChainNode</p>
@@ -64,7 +65,10 @@ public class AssumeRoleChainNode extends TeaModel {
         private String type; 
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1023210024677934</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -72,7 +76,10 @@ public class AssumeRoleChainNode extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-role</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -80,7 +87,10 @@ public class AssumeRoleChainNode extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder type(String type) {
             this.type = type;

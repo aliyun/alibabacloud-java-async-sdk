@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectImageScoreResponseBody} extends {@link TeaModel}
  *
  * <p>DetectImageScoreResponseBody</p>
@@ -49,7 +50,7 @@ public class DetectImageScoreResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageScore.
+         * <p>The quality score of the image.</p>
          */
         public Builder imageScore(ImageScore imageScore) {
             this.imageScore = imageScore;
@@ -57,7 +58,10 @@ public class DetectImageScoreResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DetectImageScoreResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetectImageScoreResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectImageScoreResponseBody</p>
+     */
     public static class ImageScore extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverallQualityScore")
         private Float overallQualityScore;
@@ -97,7 +107,10 @@ public class DetectImageScoreResponseBody extends TeaModel {
             private Float overallQualityScore; 
 
             /**
-             * OverallQualityScore.
+             * <p>The overall quality score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder overallQualityScore(Float overallQualityScore) {
                 this.overallQualityScore = overallQualityScore;

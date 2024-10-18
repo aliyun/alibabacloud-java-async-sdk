@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFigureClustersResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFigureClustersResponseBody</p>
@@ -73,7 +74,7 @@ public class QueryFigureClustersResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * FigureClusters.
+         * <p>The face groups.</p>
          */
         public Builder figureClusters(java.util.List < FigureCluster > figureClusters) {
             this.figureClusters = figureClusters;
@@ -81,7 +82,10 @@ public class QueryFigureClustersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +93,10 @@ public class QueryFigureClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA995EFD-083D-4F40-BE8A-BDF75FFF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class QueryFigureClustersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of face groups that matches the current query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

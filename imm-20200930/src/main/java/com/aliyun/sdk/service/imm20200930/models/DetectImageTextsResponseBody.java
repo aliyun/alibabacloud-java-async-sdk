@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectImageTextsResponseBody} extends {@link TeaModel}
  *
  * <p>DetectImageTextsResponseBody</p>
@@ -61,7 +62,7 @@ public class DetectImageTextsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OCRContents.
+         * <p>OCR text blocks.</p>
          */
         public Builder OCRContents(java.util.List < OCRContents > OCRContents) {
             this.OCRContents = OCRContents;
@@ -69,7 +70,7 @@ public class DetectImageTextsResponseBody extends TeaModel {
         }
 
         /**
-         * OCRTexts.
+         * <p>The full Optical Character Recognition (OCR) text, which is spliced by using the content of OCRContents.</p>
          */
         public Builder OCRTexts(String OCRTexts) {
             this.OCRTexts = OCRTexts;
@@ -77,7 +78,10 @@ public class DetectImageTextsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

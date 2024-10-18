@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryLocationDateClustersResponseBody} extends {@link TeaModel}
  *
  * <p>QueryLocationDateClustersResponseBody</p>
@@ -61,7 +62,7 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LocationDateClusters.
+         * <p>The list of spatiotemporal groups.</p>
          */
         public Builder locationDateClusters(java.util.List < LocationDateCluster > locationDateClusters) {
             this.locationDateClusters = locationDateClusters;
@@ -69,7 +70,10 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MzQNjmY2MzYxNhNjk2ZNjEu****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +81,10 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7055FCF7-4D7B-098E-BD4D-DD2932B0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

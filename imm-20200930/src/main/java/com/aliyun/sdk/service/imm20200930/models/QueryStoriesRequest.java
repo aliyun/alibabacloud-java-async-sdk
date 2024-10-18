@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryStoriesRequest} extends {@link RequestModel}
  *
  * <p>QueryStoriesRequest</p>
@@ -288,7 +289,7 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * CreateTimeRange.
+         * <p>The time range in which stories were created.</p>
          */
         public Builder createTimeRange(TimeRange createTimeRange) {
             String createTimeRangeShrink = shrink(createTimeRange, "CreateTimeRange", "json");
@@ -298,7 +299,10 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels in key-value pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key=value</p>
          */
         public Builder customLabels(String customLabels) {
             this.putQueryParameter("CustomLabels", customLabels);
@@ -307,7 +311,11 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -316,7 +324,7 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * FigureClusterIds.
+         * <p>The IDs of the face clusters.</p>
          */
         public Builder figureClusterIds(java.util.List < String > figureClusterIds) {
             String figureClusterIdsShrink = shrink(figureClusterIds, "FigureClusterIds", "json");
@@ -326,7 +334,10 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -335,7 +346,10 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If you do not specify this token in the next request, results are returned from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpw****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -344,7 +358,10 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the story.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id1</p>
          */
         public Builder objectId(String objectId) {
             this.putQueryParameter("ObjectId", objectId);
@@ -353,7 +370,14 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>asc: in ascending order.</li>
+         * <li>desc: in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -362,7 +386,11 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -371,7 +399,16 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field. Valid values:</p>
+         * <ul>
+         * <li>CreateTime: sorts by story creation time.</li>
+         * <li>StoryName: sorts by story name.</li>
+         * <li>StoryStartTime: sorts by story start time.</li>
+         * <li>StoryEndTime: sorts by story end time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -380,7 +417,7 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * StoryEndTimeRange.
+         * <p>The time range for the creation time of the last photo or video in the story.</p>
          */
         public Builder storyEndTimeRange(TimeRange storyEndTimeRange) {
             String storyEndTimeRangeShrink = shrink(storyEndTimeRange, "StoryEndTimeRange", "json");
@@ -390,7 +427,10 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * StoryName.
+         * <p>The name of the story.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name1</p>
          */
         public Builder storyName(String storyName) {
             this.putQueryParameter("StoryName", storyName);
@@ -399,7 +439,7 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * StoryStartTimeRange.
+         * <p>The time range for the creation time of the first photo or video in the story.</p>
          */
         public Builder storyStartTimeRange(TimeRange storyStartTimeRange) {
             String storyStartTimeRangeShrink = shrink(storyStartTimeRange, "StoryStartTimeRange", "json");
@@ -409,7 +449,10 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * StorySubType.
+         * <p>The subtype of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SeasonHighlights</p>
          */
         public Builder storySubType(String storySubType) {
             this.putQueryParameter("StorySubType", storySubType);
@@ -418,7 +461,10 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * StoryType.
+         * <p>The type of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TimeMemory</p>
          */
         public Builder storyType(String storyType) {
             this.putQueryParameter("StoryType", storyType);
@@ -427,7 +473,14 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * WithEmptyStories.
+         * <p>Specifies whether to return empty stories. Valid values:</p>
+         * <ul>
+         * <li>true (The default value)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withEmptyStories(Boolean withEmptyStories) {
             this.putQueryParameter("WithEmptyStories", withEmptyStories);

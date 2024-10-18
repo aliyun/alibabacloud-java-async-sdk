@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVideoLabelClassificationTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateVideoLabelClassificationTaskRequest</p>
@@ -158,7 +159,7 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         }
 
         /**
-         * 消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。
+         * <p>消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -168,7 +169,10 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -177,7 +181,10 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket1/object</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);

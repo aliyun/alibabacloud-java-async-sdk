@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TargetAudio} extends {@link TeaModel}
  *
  * <p>TargetAudio</p>
@@ -110,6 +111,12 @@ public class TargetAudio extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TargetAudio} extends {@link TeaModel}
+     *
+     * <p>TargetAudio</p>
+     */
     public static class FilterAudio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mixing")
         private Boolean mixing;
@@ -151,6 +158,12 @@ public class TargetAudio extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TargetAudio} extends {@link TeaModel}
+     *
+     * <p>TargetAudio</p>
+     */
     public static class TranscodeAudio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private Integer bitrate;

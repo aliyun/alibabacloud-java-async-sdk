@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBindingRequest} extends {@link RequestModel}
  *
  * <p>DeleteBindingRequest</p>
@@ -107,7 +108,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -116,7 +121,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -125,7 +134,12 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * URI.
+         * <p>The URI of the OSS bucket to which the dataset is bound.</p>
+         * <p>Specify the value in the oss://${Bucket} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket</p>
          */
         public Builder URI(String URI) {
             this.putQueryParameter("URI", URI);

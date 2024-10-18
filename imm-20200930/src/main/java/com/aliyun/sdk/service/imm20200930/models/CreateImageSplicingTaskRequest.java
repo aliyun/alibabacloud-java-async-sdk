@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageSplicingTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateImageSplicingTaskRequest</p>
@@ -275,7 +276,17 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * Align.
+         * <p>The width or height with which the input images must align. Valid values: 1 to 4096. Unit: px.</p>
+         * <ul>
+         * <li>If you set <strong>Direction</strong> to <code>vertical</code>, this parameter specifies the width with which the input images must align.</li>
+         * <li>If you set <strong>Direction</strong> to <code>horizontal</code>, this parameter specifies the height with which the input images must align.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the width or height of the first input image is used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>192</p>
          */
         public Builder align(Long align) {
             this.putQueryParameter("Align", align);
@@ -284,7 +295,10 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * BackgroundColor.
+         * <p>The padding color of the spaces specified by <code>Padding</code> and <code>Margin</code>. Colors encoded in the <code>#FFFFFF</code> format and colors that are related to preset keywords such as <code>red</code> and <code>alpha</code> are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>red</p>
          */
         public Builder backgroundColor(String backgroundColor) {
             this.putQueryParameter("BackgroundColor", backgroundColor);
@@ -293,7 +307,7 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p>The authorization chain. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -303,7 +317,14 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>The splicing method. Valid values:</p>
+         * <ul>
+         * <li>vertical (default): All input images are vertically aligned and have the same width.</li>
+         * <li>horizontal: All input images are horizontally aligned and have the same height.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vertical</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -312,7 +333,15 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * ImageFormat.
+         * <p>The compression format of the output image. Valid values:</p>
+         * <ul>
+         * <li>jpg (default)</li>
+         * <li>png</li>
+         * <li>webp</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>jpg</p>
          */
         public Builder imageFormat(String imageFormat) {
             this.putQueryParameter("ImageFormat", imageFormat);
@@ -321,7 +350,10 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * Margin.
+         * <p>The empty space or border around the edges of the output image. Default value: 0. Unit: px.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder margin(Long margin) {
             this.putQueryParameter("Margin", margin);
@@ -330,7 +362,7 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For more information, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous notification format</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -340,7 +372,10 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * Padding.
+         * <p>The space between component images in the output image. Default value: 0. Unit: px.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder padding(Long padding) {
             this.putQueryParameter("Padding", padding);
@@ -349,7 +384,11 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -358,7 +397,10 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * Quality.
+         * <p>The compression quality of the output image. This parameter takes effect only for JPG and WebP images. Valid values: 0 to 100. Default value: 80.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder quality(Long quality) {
             this.putQueryParameter("Quality", quality);
@@ -367,7 +409,16 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * ScaleType.
+         * <p>The scaling mode of the input images that are vertically or horizontally aligned. Valid values:</p>
+         * <ul>
+         * <li>fit (default): Input images are scaled proportionally, and black edges are not retained.</li>
+         * <li>stretch: Input images are stretched to fill the space.</li>
+         * <li>horizon: Input images are horizontally stretched.</li>
+         * <li>vertical: Input images are vertically stretched.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>stretch</p>
          */
         public Builder scaleType(String scaleType) {
             this.putQueryParameter("ScaleType", scaleType);
@@ -376,7 +427,8 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * Sources.
+         * <p>The input images. The images are sliced in the order of the input image URIs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sources(java.util.List < Sources> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -386,7 +438,12 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;User&quot;: &quot;Jane&quot;
+         * }</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -396,7 +453,12 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * TargetURI.
+         * <p>The OSS bucket in which you want to store the output image.</p>
+         * <p>Specify the value in the oss://${bucketname}/${objectname} format. ${bucketname} specifies the name of the OSS bucket that resides in the same region as the current project. ${objectname} specifies the path to the output image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket/outputImage.jpg</p>
          */
         public Builder targetURI(String targetURI) {
             this.putQueryParameter("TargetURI", targetURI);
@@ -405,7 +467,10 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user data, which is returned as asynchronous notifications to help manage notifications within your system. The maximum length of the user data is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-data</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -420,6 +485,12 @@ public class CreateImageSplicingTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateImageSplicingTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageSplicingTaskRequest</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rotate")
         private Long rotate;
@@ -460,7 +531,16 @@ public class CreateImageSplicingTaskRequest extends Request {
             private String URI; 
 
             /**
-             * Rotate.
+             * <p>The rotation angle. Valid values:</p>
+             * <ul>
+             * <li>0 (default)</li>
+             * <li>90</li>
+             * <li>180</li>
+             * <li>270</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder rotate(Long rotate) {
                 this.rotate = rotate;
@@ -468,7 +548,13 @@ public class CreateImageSplicingTaskRequest extends Request {
             }
 
             /**
-             * URI.
+             * <p>The Object Storage Service (OSS) bucket in which you store the input images.</p>
+             * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the input images that have an extension.</p>
+             * <p>The following image formats are supported: jpg and png.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://examplebucket/sampleobject.jpg</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

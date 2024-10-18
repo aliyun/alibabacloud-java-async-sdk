@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMediaConvertTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateMediaConvertTaskRequest</p>
@@ -177,7 +178,7 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         /**
-         * AlignmentIndex.
+         * <p>The sequence number of the main media file in the concatenation list of media files. The main media file provides the default transcoding settings, such as the resolution and the frame rate, for videos and audios. Default value: <code>0</code>. A value of <code>0</code> specifies that the main media file is aligned with the first media file in the concatenation list.</p>
          */
         public Builder alignmentIndex(Integer alignmentIndex) {
             this.putQueryParameter("AlignmentIndex", alignmentIndex);
@@ -186,7 +187,8 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The authorization chain. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -196,7 +198,7 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         /**
-         * 消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。
+         * <p>The notification settings. For more information, see &quot;Notification&quot;. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous notification format</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -206,7 +208,11 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -215,7 +221,8 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         /**
-         * Sources.
+         * <p>The source media files. If multiple files exist at the same time, the Concat feature is enabled. The video files are concatenated in the order of their URI inputs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sources(java.util.List < Sources> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -225,7 +232,10 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -235,7 +245,8 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         /**
-         * Targets.
+         * <p>The media processing tasks. You can specify multiple values for this parameter.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder targets(java.util.List < Targets> targets) {
             String targetsShrink = shrink(targets, "Targets", "json");
@@ -245,7 +256,10 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom information, which is returned as asynchronous notifications to facilitate notification management in your system. The maximum information length is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -260,6 +274,12 @@ public class CreateMediaConvertTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMediaConvertTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMediaConvertTaskRequest</p>
+     */
     public static class Subtitles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
@@ -311,7 +331,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             private String URI; 
 
             /**
-             * Language.
+             * <p>The subtitle language. If you specify this parameter, comply with the ISO 639-2 standard. This parameter is left empty by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eng</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -319,7 +342,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * TimeOffset.
+             * <p>The time offset of the subtitle. Unit: seconds. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.5</p>
              */
             public Builder timeOffset(Double timeOffset) {
                 this.timeOffset = timeOffset;
@@ -327,7 +353,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * URI.
+             * <p>The URI of the Object Storage Service (OSS) bucket. Specify the value in the <code>oss://${Bucket}/${Object}</code> format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region with the current project. <code>${Object}</code> specifies the complete path to the file whose name contains an extension. The following subtitle formats are supported: srt, vtt, mov_text, ass, dvd_sub, and pgs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/subtitles</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -341,6 +370,12 @@ public class CreateMediaConvertTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMediaConvertTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMediaConvertTaskRequest</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Double duration;
@@ -404,7 +439,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             private String URI; 
 
             /**
-             * Duration.
+             * <p>The transcoding duration of the media. Unit: seconds. Default value: 0. A value of 0 specifies that the transcoding duration lasts until the end of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -412,7 +450,14 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the media transcoding task. Unit: seconds. Valid values:</p>
+             * <ul>
+             * <li>0 (default): starts transcoding when the media starts playing.</li>
+             * <li>n: starts transcoding n seconds after the media starts playing. n must be greater than 0.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(Double startTime) {
                 this.startTime = startTime;
@@ -420,7 +465,7 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * Subtitles.
+             * <p>The subtitles. By default, this parameter is left empty.</p>
              */
             public Builder subtitles(java.util.List < Subtitles> subtitles) {
                 this.subtitles = subtitles;
@@ -428,7 +473,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * URI.
+             * <p>The URI of the Object Storage Service (OSS) bucket. Specify the value in the <code>oss://${Bucket}/${Object}</code> format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region with the current project. <code>${Object}</code> specifies the complete path to the file whose name contains an extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -442,6 +490,12 @@ public class CreateMediaConvertTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMediaConvertTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMediaConvertTaskRequest</p>
+     */
     public static class Segment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Double duration;
@@ -493,7 +547,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             private Integer startNumber; 
 
             /**
-             * Duration.
+             * <p>The duration of the segment. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -501,7 +558,14 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * Format.
+             * <p>The media segmentation mode. Valid values:</p>
+             * <ul>
+             * <li>hls</li>
+             * <li>dash</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hls</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -509,7 +573,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * StartNumber.
+             * <p>The start sequence number. You can specify this parameter only if you set Format to hls. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder startNumber(Integer startNumber) {
                 this.startNumber = startNumber;
@@ -523,6 +590,12 @@ public class CreateMediaConvertTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMediaConvertTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMediaConvertTaskRequest</p>
+     */
     public static class Targets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Audio")
         private TargetAudio audio;
@@ -646,7 +719,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             private TargetVideo video; 
 
             /**
-             * Audio.
+             * <p>The audio processing settings.</p>
+             * <blockquote>
+             * <p> If you leave Audio empty and the first audio stream exists, the first audio stream is directly copied to the output file.</p>
+             * </blockquote>
              */
             public Builder audio(TargetAudio audio) {
                 this.audio = audio;
@@ -654,7 +730,18 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * Container.
+             * <p>The type of the media container.</p>
+             * <ul>
+             * <li><p>Valid values for audio and video containers: mp4, mkv, mov, asf, avi, mxf, ts, and flv.</p>
+             * </li>
+             * <li><p>Valid values only for audio containers: mp3, aac, flac, oga, ac3, and opus.</p>
+             * <p>**</p>
+             * <p><strong>Note</strong> Specify Container and URI at the same time. If you want to extract subtitles, capture frames, capture image sprites, or rotate media images, set Container and URI to null. In this case, Segment, Video, Audio, and Speed do not take effect.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder container(String container) {
                 this.container = container;
@@ -662,7 +749,7 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>The frame capturing, sprite capturing, and media rotation settings.</p>
              */
             public Builder image(TargetImage image) {
                 this.image = image;
@@ -670,7 +757,7 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * Segment.
+             * <p>The media segmentation settings. By default, no segmentation is performed.</p>
              */
             public Builder segment(Segment segment) {
                 this.segment = segment;
@@ -678,7 +765,13 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * Speed.
+             * <p>The playback speed of the media. Valid values: 0.5 to 2. Default value: 1.0.</p>
+             * <blockquote>
+             * <p> This parameter specifies the ratio of the non-regular playback speed of the transcoded media file to the default playback speed of the source media file.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder speed(Float speed) {
                 this.speed = speed;
@@ -686,7 +779,7 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * StripMetadata.
+             * <p>Specifies whether to remove the metadata, such as <code>title</code> and <code>album</code>, from the media file. Default value: false.</p>
              */
             public Builder stripMetadata(Boolean stripMetadata) {
                 this.stripMetadata = stripMetadata;
@@ -694,7 +787,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * Subtitle.
+             * <p>The subtitle processing settings.</p>
+             * <blockquote>
+             * <p> If you leave Subtitle empty and the first subtitle stream exists, the first subtitle stream is directly copied to the output file.</p>
+             * </blockquote>
              */
             public Builder subtitle(TargetSubtitle subtitle) {
                 this.subtitle = subtitle;
@@ -702,7 +798,21 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * URI.
+             * <p>The URI of the OSS bucket in which you want to store the media transcoding output file.</p>
+             * <p>Specify the value in the <code>oss://${Bucket}/${Object}</code> format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region with the current project. <code>${Object}</code> specifies the complete path to the file whose name contains an extension.</p>
+             * <ul>
+             * <li><p>If the value of <strong>URI</strong> contains an extension, the endpoint of the OSS bucket matches the URI. If multiple media transcoding output files exist, the endpoints of the correspodning OSS buckets may be overwritten.****</p>
+             * </li>
+             * <li><p>If the value of <strong>URI</strong> does not contain an extension, the endpoint of the OSS bucket consists of the following parameters: <strong>URI</strong>, <strong>Container</strong>, and <strong>Segment</strong>. In the following examples, the value of <strong>URI</strong> is <code>oss://examplebucket/outputVideo</code>.</p>
+             * <ul>
+             * <li>If the value of <strong>Container</strong> is <code>mp4</code> and the value of <strong>Segment</strong> is null, the endpoint of the OSS bucket is <code>oss://examplebucket/outputVideo.mp4</code>.</li>
+             * <li>If the value of <strong>Container</strong> is <code>ts</code> and the value of <strong>Format</strong> in <strong>Segment</strong> is <code>hls</code>, the endpoint of the OSS bucket is <code>oss://examplebucket/outputVideo.m3u8</code>. In addition, multiple ts files prefixed with <code>oss://examplebucket/outputVideo</code> are generated.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/targets</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -710,7 +820,10 @@ public class CreateMediaConvertTaskRequest extends Request {
             }
 
             /**
-             * Video.
+             * <p>The video processing settings.</p>
+             * <blockquote>
+             * <p> If you leave Video empty and the first video stream exists, the first video stream is directly copied to the output file.</p>
+             * </blockquote>
              */
             public Builder video(TargetVideo video) {
                 this.video = video;

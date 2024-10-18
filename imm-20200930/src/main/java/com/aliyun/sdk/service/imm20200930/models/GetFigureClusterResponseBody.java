@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFigureClusterResponseBody} extends {@link TeaModel}
  *
  * <p>GetFigureClusterResponseBody</p>
@@ -49,7 +50,7 @@ public class GetFigureClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FigureCluster.
+         * <p>The information about the face clustering task.</p>
          */
         public Builder figureCluster(FigureCluster figureCluster) {
             this.figureCluster = figureCluster;
@@ -57,7 +58,10 @@ public class GetFigureClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F74C5C9-5AC0-49F9-914D-E01589D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

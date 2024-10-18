@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IndexFileMetaResponseBody} extends {@link TeaModel}
  *
  * <p>IndexFileMetaResponseBody</p>
@@ -49,7 +50,10 @@ public class IndexFileMetaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30F-1D8FxFzDXKJH9YQdve4CjR****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -57,7 +61,10 @@ public class IndexFileMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

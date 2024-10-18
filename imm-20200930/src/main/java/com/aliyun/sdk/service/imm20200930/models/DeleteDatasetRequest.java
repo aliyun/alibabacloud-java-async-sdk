@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDatasetRequest} extends {@link RequestModel}
  *
  * <p>DeleteDatasetRequest</p>
@@ -92,7 +93,11 @@ public class DeleteDatasetRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -101,7 +106,11 @@ public class DeleteDatasetRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

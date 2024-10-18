@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveStoryFilesRequest} extends {@link RequestModel}
  *
  * <p>RemoveStoryFilesRequest</p>
@@ -122,7 +123,11 @@ public class RemoveStoryFilesRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putBodyParameter("DatasetName", datasetName);
@@ -131,7 +136,8 @@ public class RemoveStoryFilesRequest extends Request {
         }
 
         /**
-         * Files.
+         * <p>The files that you want to delete.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder files(java.util.List < Files> files) {
             String filesShrink = shrink(files, "Files", "json");
@@ -141,7 +147,11 @@ public class RemoveStoryFilesRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the story.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testid</p>
          */
         public Builder objectId(String objectId) {
             this.putBodyParameter("ObjectId", objectId);
@@ -150,7 +160,11 @@ public class RemoveStoryFilesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -165,6 +179,12 @@ public class RemoveStoryFilesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveStoryFilesRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveStoryFilesRequest</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("URI")
         private String URI;
@@ -192,7 +212,11 @@ public class RemoveStoryFilesRequest extends Request {
             private String URI; 
 
             /**
-             * URI.
+             * <p>The URI of the Object Storage Service (OSS) bucket where you store the files that you want to delete.</p>
+             * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the files that have an extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket1/object</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

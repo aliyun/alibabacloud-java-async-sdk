@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBatchRequest} extends {@link RequestModel}
  *
  * <p>DeleteBatchRequest</p>
@@ -92,7 +93,11 @@ public class DeleteBatchRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the batch processing task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batch-4eb9223f-3e88-42d3-a578-3f2852******</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -101,7 +106,11 @@ public class DeleteBatchRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

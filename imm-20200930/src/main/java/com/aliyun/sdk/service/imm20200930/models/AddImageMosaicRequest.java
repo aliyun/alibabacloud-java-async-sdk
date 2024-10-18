@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddImageMosaicRequest} extends {@link RequestModel}
  *
  * <p>AddImageMosaicRequest</p>
@@ -164,7 +165,8 @@ public class AddImageMosaicRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -174,7 +176,10 @@ public class AddImageMosaicRequest extends Request {
         }
 
         /**
-         * ImageFormat.
+         * <p>The encoding of the output image. By default, the output image uses the same encoding as the input image. Valid values: jpg, png, and webp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jpg</p>
          */
         public Builder imageFormat(String imageFormat) {
             this.putQueryParameter("ImageFormat", imageFormat);
@@ -183,7 +188,11 @@ public class AddImageMosaicRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -192,7 +201,10 @@ public class AddImageMosaicRequest extends Request {
         }
 
         /**
-         * Quality.
+         * <p>The quality of the output image. This parameter applies only to JPG and WebP images. Valid values: 0 to 100. Default value: 80.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder quality(Integer quality) {
             this.putQueryParameter("Quality", quality);
@@ -201,7 +213,13 @@ public class AddImageMosaicRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>The OSS URI of the input image.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <p>Supported formats of input images include JPG, PNG, TIFF, JP2, and BMP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket/sampleobject.jpg</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -210,7 +228,12 @@ public class AddImageMosaicRequest extends Request {
         }
 
         /**
-         * TargetURI.
+         * <p>The OSS URI of the output image.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket/outputImage.jpg</p>
          */
         public Builder targetURI(String targetURI) {
             this.putQueryParameter("TargetURI", targetURI);
@@ -219,7 +242,8 @@ public class AddImageMosaicRequest extends Request {
         }
 
         /**
-         * Targets.
+         * <p>The bounding boxes and processing parameters.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder targets(java.util.List < Targets> targets) {
             String targetsShrink = shrink(targets, "Targets", "json");
@@ -235,6 +259,12 @@ public class AddImageMosaicRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddImageMosaicRequest} extends {@link TeaModel}
+     *
+     * <p>AddImageMosaicRequest</p>
+     */
     public static class Boundary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -314,7 +344,15 @@ public class AddImageMosaicRequest extends Request {
             private Float y; 
 
             /**
-             * Height.
+             * <p>The height of the bounding box. The value can be an integer greater than or equal to 0 or a decimal within the range of [0,1):</p>
+             * <ul>
+             * <li>An integer value greater than or equal to 0 indicates the height of the bounding box in pixels.</li>
+             * <li>A decimal value within the range of [0,1) indicates the height of the bounding box as a ratio of its height to the image height.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -322,7 +360,16 @@ public class AddImageMosaicRequest extends Request {
             }
 
             /**
-             * ReferPos.
+             * <p>The reference position of the bounding box on the image. Valid values:</p>
+             * <ul>
+             * <li>topright: the upper-right corner.</li>
+             * <li>topleft: the upper-left corner. This is the default value.</li>
+             * <li>bottomright: the lower-right corner.</li>
+             * <li>bottomleft: the lower-left corner.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>topleft</p>
              */
             public Builder referPos(String referPos) {
                 this.referPos = referPos;
@@ -330,7 +377,15 @@ public class AddImageMosaicRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the bounding box. The value can be an integer greater than or equal to 0 or a decimal within the range of [0,1):</p>
+             * <ul>
+             * <li>An integer value greater than or equal to 0 indicates the width of the bounding box in pixels.</li>
+             * <li>A decimal value within the range of [0,1) indicates the width of the bounding box as a ratio of its width to the image width.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -338,7 +393,15 @@ public class AddImageMosaicRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The horizontal offset relative to the reference position. The value can be an integer greater than or equal to 0 or a decimal within the range of [0,1):</p>
+             * <ul>
+             * <li>An integer value greater than or equal to 0 indicates the horizontal offset in pixels.</li>
+             * <li>A decimal value within the range of [0,1) indicates the horizontal offset as a ratio of the offset to the image width.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -346,7 +409,15 @@ public class AddImageMosaicRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The vertical offset relative to the reference position. The value can be an integer greater than or equal to 0 or a decimal within the range of [0,1):</p>
+             * <ul>
+             * <li>An integer value greater than or equal to 0 indicates the vertical offset in pixels.</li>
+             * <li>A decimal value within the range of [0,1) indicates the vertical offset as a ratio of the offset to the image height.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -360,6 +431,12 @@ public class AddImageMosaicRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddImageMosaicRequest} extends {@link TeaModel}
+     *
+     * <p>AddImageMosaicRequest</p>
+     */
     public static class Targets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlurRadius")
         private Integer blurRadius;
@@ -449,7 +526,13 @@ public class AddImageMosaicRequest extends Request {
             private String type; 
 
             /**
-             * BlurRadius.
+             * <p>The radius of the Gaussian blur. Valid values: 1 to 50. Default value: 3. Unit: pixels.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only for a Gaussian blur.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder blurRadius(Integer blurRadius) {
                 this.blurRadius = blurRadius;
@@ -457,7 +540,8 @@ public class AddImageMosaicRequest extends Request {
             }
 
             /**
-             * Boundary.
+             * <p>The position of the bounding box.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder boundary(Boundary boundary) {
                 this.boundary = boundary;
@@ -465,7 +549,13 @@ public class AddImageMosaicRequest extends Request {
             }
 
             /**
-             * Color.
+             * <p>The color of the color shape. You can specify a color by using a color code such as<code>#RRGGBB</code> or preset color names such as <code>red</code> and <code>white</code>. The default value is #FFFFFF, which is white.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only for solid color shapes.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>#FFFFFF</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -473,7 +563,13 @@ public class AddImageMosaicRequest extends Request {
             }
 
             /**
-             * MosaicRadius.
+             * <p>The radius of the mosaic. Default value: 5. Unit: pixels.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for Gaussian blurs and solid color shapes.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder mosaicRadius(Integer mosaicRadius) {
                 this.mosaicRadius = mosaicRadius;
@@ -481,7 +577,13 @@ public class AddImageMosaicRequest extends Request {
             }
 
             /**
-             * Sigma.
+             * <p>The standard deviation of the Gaussian blur. The value must be greater than 0. Default value: 5.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only for a Gaussian blur.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder sigma(Integer sigma) {
                 this.sigma = sigma;
@@ -489,7 +591,18 @@ public class AddImageMosaicRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the mosaic effect. Valid values:</p>
+             * <ul>
+             * <li>square: squares.</li>
+             * <li>diamond: diamonds.</li>
+             * <li>hexagon: hexagons.</li>
+             * <li>blur: Gaussian blurs.</li>
+             * <li>pure: solid color shapes.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>square</p>
              */
             public Builder type(String type) {
                 this.type = type;

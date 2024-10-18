@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddStoryFilesRequest} extends {@link RequestModel}
  *
  * <p>AddStoryFilesRequest</p>
@@ -122,7 +123,11 @@ public class AddStoryFilesRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putBodyParameter("DatasetName", datasetName);
@@ -131,7 +136,8 @@ public class AddStoryFilesRequest extends Request {
         }
 
         /**
-         * Files.
+         * <p>The objects that you want to add.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder files(java.util.List < Files> files) {
             String filesShrink = shrink(files, "Files", "json");
@@ -141,7 +147,11 @@ public class AddStoryFilesRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the story.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testid</p>
          */
         public Builder objectId(String objectId) {
             this.putBodyParameter("ObjectId", objectId);
@@ -150,7 +160,11 @@ public class AddStoryFilesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -165,6 +179,12 @@ public class AddStoryFilesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddStoryFilesRequest} extends {@link TeaModel}
+     *
+     * <p>AddStoryFilesRequest</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("URI")
         private String URI;
@@ -192,7 +212,11 @@ public class AddStoryFilesRequest extends Request {
             private String URI; 
 
             /**
-             * URI.
+             * <p>The URI of the object.</p>
+             * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

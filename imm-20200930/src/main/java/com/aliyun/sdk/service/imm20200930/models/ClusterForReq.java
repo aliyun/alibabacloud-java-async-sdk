@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClusterForReq} extends {@link TeaModel}
  *
  * <p>ClusterForReq</p>
@@ -130,6 +131,12 @@ public class ClusterForReq extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ClusterForReq} extends {@link TeaModel}
+     *
+     * <p>ClusterForReq</p>
+     */
     public static class Figures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FigureId")
         private String figureId;
@@ -171,6 +178,12 @@ public class ClusterForReq extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ClusterForReq} extends {@link TeaModel}
+     *
+     * <p>ClusterForReq</p>
+     */
     public static class Cover extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Figures")
         private java.util.List < Figures> figures;

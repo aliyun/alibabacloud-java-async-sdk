@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectRequest} extends {@link RequestModel}
  *
  * <p>GetProjectRequest</p>
@@ -91,7 +92,11 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -100,7 +105,14 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * WithStatistics.
+         * <p>Specifies whether to enable real-time retrieval of file statistics. Default value: false.</p>
+         * <ul>
+         * <li>If you set the value to true, the returned values of FileCount and TotalFileSize in the response are valid.</li>
+         * <li>If you set the value to false, the returned values of FileCount and TotalFileSize in the response are invalid or equal to 0.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withStatistics(Boolean withStatistics) {
             this.putQueryParameter("WithStatistics", withStatistics);

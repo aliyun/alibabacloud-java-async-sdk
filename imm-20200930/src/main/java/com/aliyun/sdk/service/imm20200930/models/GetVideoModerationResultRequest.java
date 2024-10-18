@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoModerationResultRequest} extends {@link RequestModel}
  *
  * <p>GetVideoModerationResultRequest</p>
@@ -107,7 +108,10 @@ public class GetVideoModerationResultRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -116,7 +120,10 @@ public class GetVideoModerationResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoModeration-d0f0df1d-531d-4ab4-b353-e7f475******</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -125,7 +132,10 @@ public class GetVideoModerationResultRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoModeration</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

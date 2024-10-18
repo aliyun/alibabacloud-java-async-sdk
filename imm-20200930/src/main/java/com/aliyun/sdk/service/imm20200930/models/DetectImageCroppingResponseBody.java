@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectImageCroppingResponseBody} extends {@link TeaModel}
  *
  * <p>DetectImageCroppingResponseBody</p>
@@ -49,7 +50,7 @@ public class DetectImageCroppingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Croppings.
+         * <p>The image croppings.</p>
          */
         public Builder croppings(java.util.List < CroppingSuggestion > croppings) {
             this.croppings = croppings;
@@ -57,7 +58,10 @@ public class DetectImageCroppingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91AC8C98-0F36-49D2-8290-742E24D*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileUncompressionTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateFileUncompressionTaskRequest</p>
@@ -176,7 +177,8 @@ public class CreateFileUncompressionTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -186,7 +188,7 @@ public class CreateFileUncompressionTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -196,7 +198,10 @@ public class CreateFileUncompressionTaskRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password that protects the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -205,7 +210,11 @@ public class CreateFileUncompressionTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -214,7 +223,7 @@ public class CreateFileUncompressionTaskRequest extends Request {
         }
 
         /**
-         * SelectedFiles.
+         * <p>The files to extract. If you do not specify this parameter, the entire package is decompressed.</p>
          */
         public Builder selectedFiles(java.util.List < String > selectedFiles) {
             String selectedFilesShrink = shrink(selectedFiles, "SelectedFiles", "json");
@@ -224,7 +233,12 @@ public class CreateFileUncompressionTaskRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>The OSS URI of the package.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://imm-apitest-fxf2/name.zip</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -233,7 +247,11 @@ public class CreateFileUncompressionTaskRequest extends Request {
         }
 
         /**
-         * TargetURI.
+         * <p>The OSS URI to which you want to extract files from the package or decompress the entire package.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-dir/</p>
          */
         public Builder targetURI(String targetURI) {
             this.putQueryParameter("TargetURI", targetURI);
@@ -242,7 +260,10 @@ public class CreateFileUncompressionTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageToPDFTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateImageToPDFTaskRequest</p>
@@ -163,7 +164,8 @@ public class CreateImageToPDFTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -173,7 +175,7 @@ public class CreateImageToPDFTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -183,7 +185,11 @@ public class CreateImageToPDFTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -192,7 +198,8 @@ public class CreateImageToPDFTaskRequest extends Request {
         }
 
         /**
-         * Sources.
+         * <p>The list of images. The sequence of image URIs in the list determines the order in which they are converted.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sources(java.util.List < Sources> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -202,7 +209,12 @@ public class CreateImageToPDFTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;User&quot;: &quot;Jane&quot;
+         * }</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -212,7 +224,12 @@ public class CreateImageToPDFTaskRequest extends Request {
         }
 
         /**
-         * TargetURI.
+         * <p>The OSS URI of the output file.</p>
+         * <p>Specify the OSS URI in the oss://${bucketname}/${objectname} format, where ${bucketname} is the name of the bucket in the same region as the current project and ${objectname} is the path of the object with the extension included.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket/outputDocument.pdf</p>
          */
         public Builder targetURI(String targetURI) {
             this.putQueryParameter("TargetURI", targetURI);
@@ -221,7 +238,10 @@ public class CreateImageToPDFTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-data</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -236,6 +256,12 @@ public class CreateImageToPDFTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateImageToPDFTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageToPDFTaskRequest</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rotate")
         private Long rotate;
@@ -276,7 +302,16 @@ public class CreateImageToPDFTaskRequest extends Request {
             private String URI; 
 
             /**
-             * Rotate.
+             * <p>The rotation angle. Valid values:</p>
+             * <ul>
+             * <li>0 (default)</li>
+             * <li>90</li>
+             * <li>180</li>
+             * <li>270</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder rotate(Long rotate) {
                 this.rotate = rotate;
@@ -284,7 +319,13 @@ public class CreateImageToPDFTaskRequest extends Request {
             }
 
             /**
-             * URI.
+             * <p>The OSS URI of the input image.</p>
+             * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+             * <p>The operation supports the following image formats: JPG, JP2, PNG, TIFF, WebP, BMP, and SVG.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://examplebucket/sampleobject.jpg</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

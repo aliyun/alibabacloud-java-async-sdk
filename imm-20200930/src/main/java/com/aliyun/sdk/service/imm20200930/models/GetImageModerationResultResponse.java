@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageModerationResultResponse} extends {@link TeaModel}
  *
  * <p>GetImageModerationResultResponse</p>

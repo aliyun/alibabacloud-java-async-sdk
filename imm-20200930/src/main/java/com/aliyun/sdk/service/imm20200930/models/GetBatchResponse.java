@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBatchResponse} extends {@link TeaModel}
  *
  * <p>GetBatchResponse</p>

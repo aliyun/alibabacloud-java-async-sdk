@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFileMetaRequest} extends {@link RequestModel}
  *
  * <p>UpdateFileMetaRequest</p>
@@ -107,7 +108,11 @@ public class UpdateFileMetaRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -116,7 +121,8 @@ public class UpdateFileMetaRequest extends Request {
         }
 
         /**
-         * File.
+         * <p>The file whose metadata you want to update. The value must be in the JSON format.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder file(InputFile file) {
             String fileShrink = shrink(file, "File", "json");
@@ -126,7 +132,11 @@ public class UpdateFileMetaRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

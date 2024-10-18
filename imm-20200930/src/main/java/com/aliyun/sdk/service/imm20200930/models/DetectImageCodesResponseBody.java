@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectImageCodesResponseBody} extends {@link TeaModel}
  *
  * <p>DetectImageCodesResponseBody</p>
@@ -50,7 +51,8 @@ public class DetectImageCodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Codes.
+         * <p>The barcodes or QR codes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder codes(java.util.List < Codes > codes) {
             this.codes = codes;
@@ -58,7 +60,10 @@ public class DetectImageCodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

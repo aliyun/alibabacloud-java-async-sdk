@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomizedStoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCustomizedStoryResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateCustomizedStoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ObjectId.
+         * <p>The ID of the story.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>563062c0b085733f34ab****</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -57,7 +61,10 @@ public class CreateCustomizedStoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC91D091-D49F-0ACD-95D5-F0621045****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMediaConvertTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMediaConvertTaskResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateMediaConvertTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED-1Bz8z71k5TtsUejT4UJ16Es****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -69,7 +73,10 @@ public class CreateMediaConvertTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA995EFD-083D-4F40-BE8A-BDF75FFFE0B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateMediaConvertTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MediaConvert-adb1ee28-c4c9-42a7-9f54-3b8eadcb****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLocationDateClusterResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateLocationDateClusterResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateLocationDateClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52B017A8-FEF5-0A61-BAEE-234A8AD8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

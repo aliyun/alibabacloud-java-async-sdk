@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateStoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateStoryRequest</p>
@@ -163,7 +164,7 @@ public class UpdateStoryRequest extends Request {
         }
 
         /**
-         * Cover.
+         * <p>The cover image of the story.</p>
          */
         public Builder cover(Cover cover) {
             String coverShrink = shrink(cover, "Cover", "json");
@@ -173,7 +174,10 @@ public class UpdateStoryRequest extends Request {
         }
 
         /**
-         * CustomId.
+         * <p>The custom ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder customId(String customId) {
             this.putBodyParameter("CustomId", customId);
@@ -182,7 +186,10 @@ public class UpdateStoryRequest extends Request {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom tags. You can specify up to 100 custom tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;value&quot;}</p>
          */
         public Builder customLabels(java.util.Map < String, ? > customLabels) {
             String customLabelsShrink = shrink(customLabels, "CustomLabels", "json");
@@ -192,7 +199,11 @@ public class UpdateStoryRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdata</p>
          */
         public Builder datasetName(String datasetName) {
             this.putBodyParameter("DatasetName", datasetName);
@@ -201,7 +212,11 @@ public class UpdateStoryRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the story.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testid</p>
          */
         public Builder objectId(String objectId) {
             this.putBodyParameter("ObjectId", objectId);
@@ -210,7 +225,11 @@ public class UpdateStoryRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -219,7 +238,10 @@ public class UpdateStoryRequest extends Request {
         }
 
         /**
-         * StoryName.
+         * <p>The name of the story.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newstory</p>
          */
         public Builder storyName(String storyName) {
             this.putBodyParameter("StoryName", storyName);
@@ -234,6 +256,12 @@ public class UpdateStoryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateStoryRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateStoryRequest</p>
+     */
     public static class Cover extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("URI")
         private String URI;
@@ -261,7 +289,11 @@ public class UpdateStoryRequest extends Request {
             private String URI; 
 
             /**
-             * URI.
+             * <p>The URI of the cover image.</p>
+             * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket1/object</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

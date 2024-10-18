@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCompressPointCloudTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCompressPointCloudTaskResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateCompressPointCloudTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B7-1LR4Wcue1aBhk2xT85MfL*****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -69,7 +73,10 @@ public class CreateCompressPointCloudTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA995EFD-083D-4F40-BE8A-BDF75FFF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateCompressPointCloudTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PointCloudCompress-badda57d-a3ab-4e6d-938f-49b77ce****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

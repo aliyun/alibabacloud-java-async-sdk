@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachOSSBucketResponseBody} extends {@link TeaModel}
  *
  * <p>AttachOSSBucketResponseBody</p>
@@ -37,7 +38,10 @@ public class AttachOSSBucketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F74C5C9-5AC0-49F9-914D-E01589D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

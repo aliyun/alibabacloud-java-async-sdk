@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOfficeConversionTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateOfficeConversionTaskRequest</p>
@@ -110,8 +111,11 @@ public class CreateOfficeConversionTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceURI")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceURI;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Sources")
+    private java.util.List < Sources> sources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartPage")
@@ -169,6 +173,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         this.showComments = builder.showComments;
         this.sourceType = builder.sourceType;
         this.sourceURI = builder.sourceURI;
+        this.sources = builder.sources;
         this.startPage = builder.startPage;
         this.tags = builder.tags;
         this.targetType = builder.targetType;
@@ -367,6 +372,13 @@ public class CreateOfficeConversionTaskRequest extends Request {
     }
 
     /**
+     * @return sources
+     */
+    public java.util.List < Sources> getSources() {
+        return this.sources;
+    }
+
+    /**
      * @return startPage
      */
     public Long getStartPage() {
@@ -441,6 +453,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         private Boolean showComments; 
         private String sourceType; 
         private String sourceURI; 
+        private java.util.List < Sources> sources; 
         private Long startPage; 
         private java.util.Map < String, ? > tags; 
         private String targetType; 
@@ -480,6 +493,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
             this.showComments = request.showComments;
             this.sourceType = request.sourceType;
             this.sourceURI = request.sourceURI;
+            this.sources = request.sources;
             this.startPage = request.startPage;
             this.tags = request.tags;
             this.targetType = request.targetType;
@@ -499,7 +513,8 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -509,7 +524,20 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * EndPage.
+         * <p>The end page of the conversion. The default value is -1, which converts the file until the last page of the file.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If the source is a spreadsheet file, you need to specify the SheetIndex parameter.</p>
+         * </li>
+         * <li><p>If the number of pages is large, we recommend that you convert only part of the file at a time. Otherwise, the conversion task may time out.</p>
+         * </li>
+         * <li><p>This parameter takes effect only when you convert the file into an image. It does not take effect when you convert the file into a PDF or TXT file.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder endPage(Long endPage) {
             this.putQueryParameter("EndPage", endPage);
@@ -527,7 +555,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * FitToHeight.
+         * <p>Specifies whether to convert all rows of a table document to one single image or a single-page PDF document when you convert the table document to an image or a PDF document. Valid values:</p>
+         * <ul>
+         * <li>false: converts the document to multiple images or a multi-page PDF document. This is the default value.</li>
+         * <li>true: converts the document to one single image or a single-page PDF document.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fitToHeight(Boolean fitToHeight) {
             this.putQueryParameter("FitToHeight", fitToHeight);
@@ -536,7 +571,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * FitToWidth.
+         * <p>Specifies whether to convert all columns of a table document to one single image or a single-page PDF document when you convert the table document to an image or a PDF document. Valid values:</p>
+         * <ul>
+         * <li>false: converts the document to multiple images or a multi-page PDF document. This is the default value.</li>
+         * <li>true: converts the document to one single image or a single-page PDF document.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fitToWidth(Boolean fitToWidth) {
             this.putQueryParameter("FitToWidth", fitToWidth);
@@ -645,7 +687,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -717,7 +762,28 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * StartPage.
+         * Sources.
+         */
+        public Builder sources(java.util.List < Sources> sources) {
+            String sourcesShrink = shrink(sources, "Sources", "json");
+            this.putBodyParameter("Sources", sourcesShrink);
+            this.sources = sources;
+            return this;
+        }
+
+        /**
+         * <p>The start page of document conversion. Default value: 1.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If the document is a table file, specify the page number of the worksheet.</p>
+         * </li>
+         * <li><p>This parameter takes effect only when you convert the document into an image. It does not take effect when you convert the document into a PDF or TXT file.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder startPage(Long startPage) {
             this.putQueryParameter("StartPage", startPage);
@@ -736,7 +802,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>png</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -745,7 +814,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * TargetURI.
+         * <p>The URI of the output file.</p>
+         * <p>Specify the URI in the <code>oss://{bucket}/{tags.custom}/{dirname}/{barename}.{autoext}</code> format. For more information, see <a href="https://help.aliyun.com/document_detail/465762.html">TargetURI template</a>.</p>
+         * <blockquote>
+         * <p> TargetURI and TargetURIPrefix cannot be empty at the same time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://{bucket}/{tags.custom}/{dirname}/{barename}.{autoext}</p>
          */
         public Builder targetURI(String targetURI) {
             this.putQueryParameter("TargetURI", targetURI);
@@ -754,7 +830,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * TargetURIPrefix.
+         * <p>The URI prefix of the output file.</p>
+         * <p>Specify the prefix in the <code>oss://${Bucket}/${Prefix}/</code> format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Prefix}</code> is the URI prefix of the output file.</p>
+         * <blockquote>
+         * <p> TargetURI and TargetURIPrefix cannot be empty at the same time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket1/</p>
          */
         public Builder targetURIPrefix(String targetURIPrefix) {
             this.putQueryParameter("TargetURIPrefix", targetURIPrefix);
@@ -788,4 +871,51 @@ public class CreateOfficeConversionTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOfficeConversionTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOfficeConversionTaskRequest</p>
+     */
+    public static class Sources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("URI")
+        private String URI;
+
+        private Sources(Builder builder) {
+            this.URI = builder.URI;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Sources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return URI
+         */
+        public String getURI() {
+            return this.URI;
+        }
+
+        public static final class Builder {
+            private String URI; 
+
+            /**
+             * URI.
+             */
+            public Builder URI(String URI) {
+                this.URI = URI;
+                return this;
+            }
+
+            public Sources build() {
+                return new Sources(this);
+            } 
+
+        } 
+
+    }
 }

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStoryRequest} extends {@link RequestModel}
  *
  * <p>GetStoryRequest</p>
@@ -107,7 +108,11 @@ public class GetStoryRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -116,7 +121,11 @@ public class GetStoryRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the story.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id1</p>
          */
         public Builder objectId(String objectId) {
             this.putQueryParameter("ObjectId", objectId);
@@ -125,7 +134,11 @@ public class GetStoryRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProjectRequest} extends {@link RequestModel}
  *
  * <p>UpdateProjectRequest</p>
@@ -217,7 +218,10 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * DatasetMaxBindCount.
+         * <p>The maximum number of bindings for each dataset. Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder datasetMaxBindCount(Long datasetMaxBindCount) {
             this.putQueryParameter("DatasetMaxBindCount", datasetMaxBindCount);
@@ -226,7 +230,13 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * DatasetMaxEntityCount.
+         * <p>The maximum number of metadata entities in each dataset.</p>
+         * <blockquote>
+         * <p> This is a precautionary setting that does not impose practical limitations.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10000000000</p>
          */
         public Builder datasetMaxEntityCount(Long datasetMaxEntityCount) {
             this.putQueryParameter("DatasetMaxEntityCount", datasetMaxEntityCount);
@@ -235,7 +245,10 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * DatasetMaxFileCount.
+         * <p>The maximum number of files in each dataset. Valid values: 1 to 100000000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000</p>
          */
         public Builder datasetMaxFileCount(Long datasetMaxFileCount) {
             this.putQueryParameter("DatasetMaxFileCount", datasetMaxFileCount);
@@ -244,7 +257,13 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * DatasetMaxRelationCount.
+         * <p>The maximum number of metadata relationships in a dataset.</p>
+         * <blockquote>
+         * <p> This is a precautionary setting that does not impose practical limitations.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000000</p>
          */
         public Builder datasetMaxRelationCount(Long datasetMaxRelationCount) {
             this.putQueryParameter("DatasetMaxRelationCount", datasetMaxRelationCount);
@@ -253,7 +272,10 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * DatasetMaxTotalFileSize.
+         * <p>The maximum size of files in each dataset. If the maximum size is exceeded, indexes can no longer be added. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90000000000000000</p>
          */
         public Builder datasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
             this.putQueryParameter("DatasetMaxTotalFileSize", datasetMaxTotalFileSize);
@@ -262,7 +284,10 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the project. The description must be 1 to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -271,7 +296,10 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * ProjectMaxDatasetCount.
+         * <p>The maximum number of datasets in the project. Valid values: 1 to 1000000000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000000</p>
          */
         public Builder projectMaxDatasetCount(Long projectMaxDatasetCount) {
             this.putQueryParameter("ProjectMaxDatasetCount", projectMaxDatasetCount);
@@ -280,7 +308,11 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -289,7 +321,11 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * ServiceRole.
+         * <p>The name of the Resource Access Management (RAM) role. You must grant the RAM role to Intelligent Media Management (IMM) before IMM can access other cloud resources such as Object Storage Service (OSS).</p>
+         * <p>You can also create a custom service role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunIMMDefaultRole</p>
          */
         public Builder serviceRole(String serviceRole) {
             this.putQueryParameter("ServiceRole", serviceRole);
@@ -298,7 +334,7 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -308,7 +344,10 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunIMMDefaultRole</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -323,6 +362,12 @@ public class UpdateProjectRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateProjectRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -362,7 +407,10 @@ public class UpdateProjectRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +418,10 @@ public class UpdateProjectRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

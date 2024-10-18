@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FunctionCall} extends {@link TeaModel}
  *
  * <p>FunctionCall</p>
@@ -58,7 +59,7 @@ public class FunctionCall extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;

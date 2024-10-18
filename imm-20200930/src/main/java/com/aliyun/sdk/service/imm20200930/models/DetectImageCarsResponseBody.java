@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectImageCarsResponseBody} extends {@link TeaModel}
  *
  * <p>DetectImageCarsResponseBody</p>
@@ -50,7 +51,8 @@ public class DetectImageCarsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cars.
+         * <p>The vehicles.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder cars(java.util.List < Car > cars) {
             this.cars = cars;
@@ -58,7 +60,10 @@ public class DetectImageCarsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8745209-DD0E-027E-8ABA-085E0C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

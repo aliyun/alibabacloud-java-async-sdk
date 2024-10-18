@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectMediaMetaResponseBody} extends {@link TeaModel}
  *
  * <p>DetectMediaMetaResponseBody</p>
@@ -313,7 +314,8 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         private Long videoWidth; 
 
         /**
-         * Addresses.
+         * <p>The addresses.</p>
+         * <p>This parameter is returned only when address information is detected.</p>
          */
         public Builder addresses(java.util.List < Address > addresses) {
             this.addresses = addresses;
@@ -321,7 +323,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Album.
+         * <p>The album.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unable</p>
          */
         public Builder album(String album) {
             this.album = album;
@@ -329,7 +334,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * AlbumArtist.
+         * <p>The album artist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unable</p>
          */
         public Builder albumArtist(String albumArtist) {
             this.albumArtist = albumArtist;
@@ -337,7 +345,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Artist.
+         * <p>The artist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unable</p>
          */
         public Builder artist(String artist) {
             this.artist = artist;
@@ -345,7 +356,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * AudioStreams.
+         * <p>The audio streams.</p>
          */
         public Builder audioStreams(java.util.List < AudioStream > audioStreams) {
             this.audioStreams = audioStreams;
@@ -353,7 +364,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Bitrate.
+         * <p>The bitrate. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13164131</p>
          */
         public Builder bitrate(Long bitrate) {
             this.bitrate = bitrate;
@@ -361,7 +375,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Composer.
+         * <p>The composer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unable</p>
          */
         public Builder composer(String composer) {
             this.composer = composer;
@@ -369,7 +386,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The total duration of the video. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15.263000</p>
          */
         public Builder duration(Double duration) {
             this.duration = duration;
@@ -377,7 +397,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * FormatLongName.
+         * <p>The full format name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuickTime / MOV</p>
          */
         public Builder formatLongName(String formatLongName) {
             this.formatLongName = formatLongName;
@@ -385,7 +408,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * FormatName.
+         * <p>The abbreviated format name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
          */
         public Builder formatName(String formatName) {
             this.formatName = formatName;
@@ -393,7 +419,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The language of the content. For more information, see the ISO 639-2 Alpha-3 codes for the representation of names of languages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eng</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -401,7 +430,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * LatLong.
+         * <p>The coordinate pair of the central point. The coordinate pair consists of latitude and longitude values. This parameter value must be in the &quot;latitude,longitude&quot; format. Valid values of the latitude: [-90,+90]. Valid values of the longitude: [-180,+180].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>+120.029003,+30.283095</p>
          */
         public Builder latLong(String latLong) {
             this.latLong = latLong;
@@ -409,7 +441,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Performer.
+         * <p>The performer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unable</p>
          */
         public Builder performer(String performer) {
             this.performer = performer;
@@ -417,7 +452,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * ProduceTime.
+         * <p>The time of recording. For more information about the time formats, see the RFC3339 Nano standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-24T02:39:57Z</p>
          */
         public Builder produceTime(String produceTime) {
             this.produceTime = produceTime;
@@ -425,7 +463,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * ProgramCount.
+         * <p>The number of programs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder programCount(Long programCount) {
             this.programCount = programCount;
@@ -433,7 +474,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2213B1A9-EB3D-4666-84E0-24980BC*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -441,7 +485,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Size.
+         * <p>The size of the media object. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25115517</p>
          */
         public Builder size(Long size) {
             this.size = size;
@@ -449,7 +496,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The initial playback time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000000</p>
          */
         public Builder startTime(Double startTime) {
             this.startTime = startTime;
@@ -457,7 +507,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * StreamCount.
+         * <p>The number of media streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder streamCount(Long streamCount) {
             this.streamCount = streamCount;
@@ -465,7 +518,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Subtitles.
+         * <p>The subtitle streams.</p>
          */
         public Builder subtitles(java.util.List < SubtitleStream > subtitles) {
             this.subtitles = subtitles;
@@ -473,7 +526,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The title of the media object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -481,7 +537,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * VideoHeight.
+         * <p>The video height in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1920</p>
          */
         public Builder videoHeight(Long videoHeight) {
             this.videoHeight = videoHeight;
@@ -489,7 +548,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * VideoStreams.
+         * <p>The video streams.</p>
          */
         public Builder videoStreams(java.util.List < VideoStream > videoStreams) {
             this.videoStreams = videoStreams;
@@ -497,7 +556,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * VideoWidth.
+         * <p>The video width in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         public Builder videoWidth(Long videoWidth) {
             this.videoWidth = videoWidth;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IndexFileMetaRequest} extends {@link RequestModel}
  *
  * <p>IndexFileMetaRequest</p>
@@ -135,7 +136,11 @@ public class IndexFileMetaRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -144,7 +149,8 @@ public class IndexFileMetaRequest extends Request {
         }
 
         /**
-         * File.
+         * <p>The file for which you want to create an index. The value must be in the JSON format.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder file(InputFile file) {
             String fileShrink = shrink(file, "File", "json");
@@ -154,7 +160,7 @@ public class IndexFileMetaRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For more information, click Notification. For information about the formats of asynchronous notifications, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a> topic.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -164,7 +170,11 @@ public class IndexFileMetaRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Hyperparameters} extends {@link TeaModel}
  *
  * <p>Hyperparameters</p>
@@ -147,7 +148,7 @@ public class Hyperparameters extends TeaModel {
         }
 
         /**
-         * Evaluator.
+         * <p>This parameter is required.</p>
          */
         public Builder evaluator(CustomParams evaluator) {
             this.evaluator = evaluator;
@@ -155,7 +156,7 @@ public class Hyperparameters extends TeaModel {
         }
 
         /**
-         * InputSize.
+         * <p>This parameter is required.</p>
          */
         public Builder inputSize(java.util.List < Long > inputSize) {
             this.inputSize = inputSize;

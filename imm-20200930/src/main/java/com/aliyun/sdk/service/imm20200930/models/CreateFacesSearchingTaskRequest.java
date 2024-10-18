@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFacesSearchingTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateFacesSearchingTaskRequest</p>
@@ -148,7 +149,11 @@ public class CreateFacesSearchingTaskRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -157,7 +162,10 @@ public class CreateFacesSearchingTaskRequest extends Request {
         }
 
         /**
-         * MaxResult.
+         * <p>The number of the most similar faces that you want to return. Valid values: 1 to 100. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResult(Long maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -166,7 +174,7 @@ public class CreateFacesSearchingTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -176,7 +184,11 @@ public class CreateFacesSearchingTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -185,7 +197,7 @@ public class CreateFacesSearchingTaskRequest extends Request {
         }
 
         /**
-         * Sources.
+         * <p>The images.</p>
          */
         public Builder sources(java.util.List < Sources> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -195,7 +207,10 @@ public class CreateFacesSearchingTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -210,6 +225,12 @@ public class CreateFacesSearchingTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFacesSearchingTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFacesSearchingTaskRequest</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("URI")
         private String URI;
@@ -237,7 +258,11 @@ public class CreateFacesSearchingTaskRequest extends Request {
             private String URI; 
 
             /**
-             * URI.
+             * <p>The OSS URI of the image.</p>
+             * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteFileMetaRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteFileMetaRequest</p>
@@ -107,7 +108,7 @@ public class BatchDeleteFileMetaRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>This parameter is required.</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -116,7 +117,7 @@ public class BatchDeleteFileMetaRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -125,7 +126,7 @@ public class BatchDeleteFileMetaRequest extends Request {
         }
 
         /**
-         * URIs.
+         * <p>This parameter is required.</p>
          */
         public Builder URIs(java.util.List < String > URIs) {
             String URIsShrink = shrink(URIs, "URIs", "json");

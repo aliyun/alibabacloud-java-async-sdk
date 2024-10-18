@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TargetImage} extends {@link TeaModel}
  *
  * <p>TargetImage</p>
@@ -90,6 +91,12 @@ public class TargetImage extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TargetImage} extends {@link TeaModel}
+     *
+     * <p>TargetImage</p>
+     */
     public static class Animations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -215,7 +222,7 @@ public class TargetImage extends TeaModel {
             private Double width; 
 
             /**
-             * Format.
+             * <p>This parameter is required.</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -271,7 +278,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * URI.
+             * <p>This parameter is required.</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -293,6 +300,12 @@ public class TargetImage extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TargetImage} extends {@link TeaModel}
+     *
+     * <p>TargetImage</p>
+     */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -406,7 +419,7 @@ public class TargetImage extends TeaModel {
             private Double width; 
 
             /**
-             * Format.
+             * <p>This parameter is required.</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -454,7 +467,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * URI.
+             * <p>This parameter is required.</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -476,6 +489,12 @@ public class TargetImage extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TargetImage} extends {@link TeaModel}
+     *
+     * <p>TargetImage</p>
+     */
     public static class Sprites extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Format")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -637,7 +656,7 @@ public class TargetImage extends TeaModel {
             private String URI; 
 
             /**
-             * Format.
+             * <p>This parameter is required.</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -725,7 +744,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * URI.
+             * <p>This parameter is required.</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

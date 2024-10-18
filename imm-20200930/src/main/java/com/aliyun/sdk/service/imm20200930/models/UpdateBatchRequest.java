@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBatchRequest} extends {@link RequestModel}
  *
  * <p>UpdateBatchRequest</p>
@@ -134,7 +135,7 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * Actions.
+         * <p>The processing templates.</p>
          */
         public Builder actions(java.util.List < Actions> actions) {
             String actionsShrink = shrink(actions, "Actions", "json");
@@ -144,7 +145,11 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the batch processing task. You can obtain the ID of the batch processing task from the response of the <a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batch-4eb9223f-3e88-42d3-a578-3f2852******</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -153,7 +158,7 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The input data source.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -163,7 +168,11 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -172,7 +181,10 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;val&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -188,6 +200,12 @@ public class UpdateBatchRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateBatchRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBatchRequest</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -227,7 +245,10 @@ public class UpdateBatchRequest extends Request {
             private java.util.List < String > parameters; 
 
             /**
-             * Name.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc/convert</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -235,7 +256,7 @@ public class UpdateBatchRequest extends Request {
             }
 
             /**
-             * Parameters.
+             * <p>The template parameters.</p>
              */
             public Builder parameters(java.util.List < String > parameters) {
                 this.parameters = parameters;

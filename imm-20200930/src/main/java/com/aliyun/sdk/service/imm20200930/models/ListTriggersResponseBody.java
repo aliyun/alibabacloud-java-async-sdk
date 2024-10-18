@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTriggersResponseBody} extends {@link TeaModel}
  *
  * <p>ListTriggersResponseBody</p>
@@ -61,7 +62,11 @@ public class ListTriggersResponseBody extends TeaModel {
         private java.util.List < DataIngestion > triggers; 
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +74,10 @@ public class ListTriggersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F480BFAF-E778-5079-93AD-1E4631******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +85,7 @@ public class ListTriggersResponseBody extends TeaModel {
         }
 
         /**
-         * Triggers.
+         * <p>The triggers.</p>
          */
         public Builder triggers(java.util.List < DataIngestion > triggers) {
             this.triggers = triggers;

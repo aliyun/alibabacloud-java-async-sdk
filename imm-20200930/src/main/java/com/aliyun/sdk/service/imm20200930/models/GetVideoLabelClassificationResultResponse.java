@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoLabelClassificationResultResponse} extends {@link TeaModel}
  *
  * <p>GetVideoLabelClassificationResultResponse</p>

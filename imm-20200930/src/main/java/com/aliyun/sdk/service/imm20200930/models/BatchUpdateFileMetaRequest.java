@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchUpdateFileMetaRequest} extends {@link RequestModel}
  *
  * <p>BatchUpdateFileMetaRequest</p>
@@ -107,7 +108,11 @@ public class BatchUpdateFileMetaRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -116,7 +121,8 @@ public class BatchUpdateFileMetaRequest extends Request {
         }
 
         /**
-         * Files.
+         * <p>The files whose metadata you want to update.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder files(java.util.List < InputFile > files) {
             String filesShrink = shrink(files, "Files", "json");
@@ -126,7 +132,11 @@ public class BatchUpdateFileMetaRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

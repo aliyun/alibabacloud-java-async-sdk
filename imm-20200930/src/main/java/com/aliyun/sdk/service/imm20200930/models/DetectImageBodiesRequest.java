@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectImageBodiesRequest} extends {@link RequestModel}
  *
  * <p>DetectImageBodiesRequest</p>
@@ -119,7 +120,8 @@ public class DetectImageBodiesRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+         * <p>The authorization chain. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -129,7 +131,11 @@ public class DetectImageBodiesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -138,7 +144,10 @@ public class DetectImageBodiesRequest extends Request {
         }
 
         /**
-         * Sensitivity.
+         * <p>The accuracy level of detecting and recognizing specific content in the image. Valid values: 0 to 1. Default value: 0.6. A higher sensitivity specifies that more image details can be detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
          */
         public Builder sensitivity(Float sensitivity) {
             this.putQueryParameter("Sensitivity", sensitivity);
@@ -147,7 +156,11 @@ public class DetectImageBodiesRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>The URI of the Object Storage Service (OSS) bucket in which the image file is stored.</p>
+         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the file that has an extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);

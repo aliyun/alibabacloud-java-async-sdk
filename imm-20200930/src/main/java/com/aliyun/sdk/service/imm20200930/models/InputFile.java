@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InputFile} extends {@link TeaModel}
  *
  * <p>InputFile</p>
@@ -390,6 +391,12 @@ public class InputFile extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InputFile} extends {@link TeaModel}
+     *
+     * <p>InputFile</p>
+     */
     public static class Figures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FigureClusterId")
         private String figureClusterId;

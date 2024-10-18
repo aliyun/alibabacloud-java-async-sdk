@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SemanticQueryResponseBody} extends {@link TeaModel}
  *
  * <p>SemanticQueryResponseBody</p>
@@ -49,7 +50,7 @@ public class SemanticQueryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Files.
+         * <p>The files.</p>
          */
         public Builder files(java.util.List < File > files) {
             this.files = files;
@@ -57,7 +58,10 @@ public class SemanticQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

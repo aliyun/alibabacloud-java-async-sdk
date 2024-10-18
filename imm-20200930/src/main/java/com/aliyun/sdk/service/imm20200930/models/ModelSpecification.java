@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModelSpecification} extends {@link TeaModel}
  *
  * <p>ModelSpecification</p>
@@ -51,7 +52,7 @@ public class ModelSpecification extends TeaModel {
         private Spec spec; 
 
         /**
-         * MetaData.
+         * <p>This parameter is required.</p>
          */
         public Builder metaData(MetaData metaData) {
             this.metaData = metaData;
@@ -59,7 +60,7 @@ public class ModelSpecification extends TeaModel {
         }
 
         /**
-         * Spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(Spec spec) {
             this.spec = spec;

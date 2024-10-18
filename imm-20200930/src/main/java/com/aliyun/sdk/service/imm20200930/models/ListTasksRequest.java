@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksRequest} extends {@link RequestModel}
  *
  * <p>ListTasksRequest</p>
@@ -217,7 +218,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * EndTimeRange.
+         * <p>The range of task end time. You can specify this parameter to filter tasks that end within the specified range.</p>
          */
         public Builder endTimeRange(TimeRange endTimeRange) {
             String endTimeRangeShrink = shrink(endTimeRange, "EndTimeRange", "json");
@@ -227,7 +228,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return. Valid value range: (0, 100]. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -236,7 +240,14 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * <p>The pagination token is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter. The next call to the operation returns results lexicographically after the NextToken parameter value.</p>
+         * <blockquote>
+         * <p> Leave this parameter empty in your first call to the operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -245,7 +256,14 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>ASC: sorts the results in ascending order. This is the default sort order.</li>
+         * <li>DES: sorts the results in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -254,7 +272,11 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -263,7 +285,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * RequestDefinition.
+         * <p>Specifies whether to return request parameters in the initial request to create the task. Default value: False.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder requestDefinition(Boolean requestDefinition) {
             this.putQueryParameter("RequestDefinition", requestDefinition);
@@ -272,7 +297,15 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The field used to sort the results by. Valid values:</p>
+         * <ul>
+         * <li>TaskId: sorts the results by task ID. This is the default sort field.</li>
+         * <li>StartTime: sorts the results by task start time.</li>
+         * <li>StartTime: sorts the results by task end time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TaskId</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -281,7 +314,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * StartTimeRange.
+         * <p>The range of task start time. You can specify this parameter to filter tasks that start within the specified range.</p>
          */
         public Builder startTimeRange(TimeRange startTimeRange) {
             String startTimeRangeShrink = shrink(startTimeRange, "StartTimeRange", "json");
@@ -291,7 +324,15 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Running: The task is running.</li>
+         * <li>Succeeded: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -300,7 +341,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * TagSelector.
+         * <p>The custom tags of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test=val1</p>
          */
         public Builder tagSelector(String tagSelector) {
             this.putQueryParameter("TagSelector", tagSelector);
@@ -309,7 +353,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * TaskTypes.
+         * <p>The task types.</p>
          */
         public Builder taskTypes(java.util.List < String > taskTypes) {
             String taskTypesShrink = shrink(taskTypes, "TaskTypes", "json");

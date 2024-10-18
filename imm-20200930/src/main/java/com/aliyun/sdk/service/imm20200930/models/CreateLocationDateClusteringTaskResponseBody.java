@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLocationDateClusteringTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLocationDateClusteringTaskResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateLocationDateClusteringTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25B-1W2ChgujA3Q8MbBY6mSp2mh****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -69,7 +73,10 @@ public class CreateLocationDateClusteringTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B121940C-9794-4EE3-8D6E-F8EC525F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateLocationDateClusteringTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LocationDateClustering-c10dce07-1de7-4da7-abee-1a3aba7****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

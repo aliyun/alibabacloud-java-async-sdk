@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskRequest} extends {@link RequestModel}
  *
  * <p>GetTaskRequest</p>
@@ -121,7 +122,11 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -130,7 +135,10 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * RequestDefinition.
+         * <p>Specifies whether to return the initial request parameters that are used to create the task. Default value: False.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder requestDefinition(Boolean requestDefinition) {
             this.putQueryParameter("RequestDefinition", requestDefinition);
@@ -139,7 +147,11 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task. You can obtain the ID of a task after you create the task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2b277b9-0d30-4882-ad6d-ad661382****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -148,7 +160,11 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task. For information about valid values, see <a href="https://help.aliyun.com/document_detail/475313.html">Task types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoLabelClassification</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDecodeBlindWatermarkTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateDecodeBlindWatermarkTaskRequest</p>
@@ -190,7 +191,11 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * ImageQuality.
+         * <p>The quality of the output image. This parameter is also available in the earlier <a href="https://help.aliyun.com/document_detail/444166.html">DecodeBlindWatermark</a> operation.</p>
+         * <p>The higher the quality, the larger the image size and the higher the watermark resolution quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder imageQuality(Integer imageQuality) {
             this.putQueryParameter("ImageQuality", imageQuality);
@@ -199,7 +204,11 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The watermark algorithm model. This parameter is also available in the earlier <a href="https://help.aliyun.com/document_detail/444166.html">DecodeBlindWatermark</a> operation. Valid values: FFT, FFT_FULL, DWT, and DWT_IBG. Default value: FFT.</p>
+         * <p>If this parameter is left empty, the DecodeBlindWatermark operation is called. Otherwise, the CreateDecodeBlindWatermarkTask operation is called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFT</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -208,7 +217,7 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -218,7 +227,12 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * OriginalImageURI.
+         * <p>The OSS URI of the image before the blind watermark is added. This parameter is also available in the earlier <a href="https://help.aliyun.com/document_detail/444166.html">DecodeBlindWatermark</a> operation.</p>
+         * <p>Do not specify this parameter when you set the Model parameter to DWT or DWT_IBG.</p>
+         * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://imm-test/testcases/watermarktestbefore.jpg</p>
          */
         public Builder originalImageURI(String originalImageURI) {
             this.putQueryParameter("OriginalImageURI", originalImageURI);
@@ -227,7 +241,11 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -236,7 +254,12 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>The OSS URI of the image.</p>
+         * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://target/sampleobject.jpg</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -245,7 +268,10 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * StrengthLevel.
+         * <p>The watermark strength level. The higher the strength level, the more resistant the watermarked image is to attacks, but the more the image is distorted. Valid values: low, medium, and high. Default value: low.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         public Builder strengthLevel(String strengthLevel) {
             this.putQueryParameter("StrengthLevel", strengthLevel);
@@ -254,7 +280,11 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * TargetURI.
+         * <p>The OSS URI of the output image. This parameter is also available in the earlier <a href="https://help.aliyun.com/document_detail/444166.html">DecodeBlindWatermark</a> operation.</p>
+         * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://target/targetobject.jpg</p>
          */
         public Builder targetURI(String targetURI) {
             this.putQueryParameter("TargetURI", targetURI);
@@ -263,7 +293,11 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * WatermarkType.
+         * <p>The type of the watermark. Valid value: text.</p>
+         * <p>No image watermarks are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder watermarkType(String watermarkType) {
             this.putQueryParameter("WatermarkType", watermarkType);

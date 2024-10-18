@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTriggerResponseBody} extends {@link TeaModel}
  *
  * <p>GetTriggerResponseBody</p>
@@ -49,7 +50,10 @@ public class GetTriggerResponseBody extends TeaModel {
         private DataIngestion trigger; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A7A2D0E-D8B8-4DA0-8127-EB32C6******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * Trigger.
+         * <p>The trigger information.</p>
          */
         public Builder trigger(DataIngestion trigger) {
             this.trigger = trigger;

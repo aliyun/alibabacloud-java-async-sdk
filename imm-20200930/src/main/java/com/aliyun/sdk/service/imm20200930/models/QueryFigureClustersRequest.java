@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFigureClustersRequest} extends {@link RequestModel}
  *
  * <p>QueryFigureClustersRequest</p>
@@ -204,7 +205,7 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * CreateTimeRange.
+         * <p>The time period during which the faces are grouped together.</p>
          */
         public Builder createTimeRange(TimeRange createTimeRange) {
             String createTimeRangeShrink = shrink(createTimeRange, "CreateTimeRange", "json");
@@ -214,7 +215,10 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels, which can be used as query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key=value</p>
          */
         public Builder customLabels(String customLabels) {
             this.putQueryParameter("CustomLabels", customLabels);
@@ -223,7 +227,11 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -232,7 +240,10 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. Valid values: 0 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -241,7 +252,10 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -250,7 +264,15 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Default value: asc.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -259,7 +281,11 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -268,7 +294,22 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field. If you leave this parameter empty, the group ID is used as the sort field.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ImageCount: the number of images.</li>
+         * <li>VideoCount: the number of videos.</li>
+         * <li>ProjectName: the name of the project.</li>
+         * <li>DatasetName: the name of the dataset.</li>
+         * <li>CreateTime: the point in time when the group is created.</li>
+         * <li>UpdateTime: the most recent point in time when the group is updated.</li>
+         * <li>Gender: the gender.</li>
+         * <li>FaceCount: the number of faces.</li>
+         * <li>GroupName: the name of the group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageCount</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -277,7 +318,7 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * UpdateTimeRange.
+         * <p>The time period during which the faces in the group are updated.</p>
          */
         public Builder updateTimeRange(TimeRange updateTimeRange) {
             String updateTimeRangeShrink = shrink(updateTimeRange, "UpdateTimeRange", "json");
@@ -287,7 +328,10 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * WithTotalCount.
+         * <p>Specifies whether to return the total number of face groups that match the current query conditions. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withTotalCount(Boolean withTotalCount) {
             this.putQueryParameter("WithTotalCount", withTotalCount);

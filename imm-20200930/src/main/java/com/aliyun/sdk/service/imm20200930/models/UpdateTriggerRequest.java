@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTriggerRequest} extends {@link RequestModel}
  *
  * <p>UpdateTriggerRequest</p>
@@ -134,7 +135,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * Actions.
+         * <p>The processing templates.</p>
          */
         public Builder actions(java.util.List < Actions> actions) {
             String actionsShrink = shrink(actions, "Actions", "json");
@@ -144,7 +145,11 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the trigger. You can obtain the ID of the trigger from the response of the <a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger-9f72636a-0f0c-4baf-ae78-38b27b******</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -153,7 +158,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The input data source.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -163,7 +168,11 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -172,7 +181,10 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -188,6 +200,12 @@ public class UpdateTriggerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTriggerRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTriggerRequest</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -227,7 +245,10 @@ public class UpdateTriggerRequest extends Request {
             private java.util.List < String > parameters; 
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc/convert</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -235,7 +256,7 @@ public class UpdateTriggerRequest extends Request {
             }
 
             /**
-             * Parameters.
+             * <p>The template parameters.</p>
              */
             public Builder parameters(java.util.List < String > parameters) {
                 this.parameters = parameters;

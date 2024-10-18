@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchImageFigureClusterResponseBody} extends {@link TeaModel}
  *
  * <p>SearchImageFigureClusterResponseBody</p>
@@ -49,7 +50,7 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Clusters.
+         * <p>The face clusters.</p>
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -57,7 +58,10 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2734912-E6D5-052C-AC67-6A9FD02*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchImageFigureClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchImageFigureClusterResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Boundary")
         private Boundary boundary;
@@ -121,7 +131,7 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
             private Float similarity; 
 
             /**
-             * Boundary.
+             * <p>The bounding box of the face.</p>
              */
             public Builder boundary(Boundary boundary) {
                 this.boundary = boundary;
@@ -129,7 +139,10 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the face cluster that contains faces similar to the face within the bounding box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cluster-ca730577-06b1-42c7-a25b-8f2c7******</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -137,7 +150,10 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Similarity.
+             * <p>The similarity between the face within the bounding box and the face cluster. Valid value: 0 to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.87413794</p>
              */
             public Builder similarity(Float similarity) {
                 this.similarity = similarity;

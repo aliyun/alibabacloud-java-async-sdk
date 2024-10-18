@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectImageLabelsResponseBody} extends {@link TeaModel}
  *
  * <p>DetectImageLabelsResponseBody</p>
@@ -49,7 +50,7 @@ public class DetectImageLabelsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Labels.
+         * <p>The labels that are detected.</p>
          */
         public Builder labels(java.util.List < Label > labels) {
             this.labels = labels;
@@ -57,7 +58,10 @@ public class DetectImageLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91AC8C98-0F36-49D2-8290-742E24DF1F69</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

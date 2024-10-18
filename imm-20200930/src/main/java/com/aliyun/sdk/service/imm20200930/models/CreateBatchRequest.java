@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBatchRequest} extends {@link RequestModel}
  *
  * <p>CreateBatchRequest</p>
@@ -150,7 +151,8 @@ public class CreateBatchRequest extends Request {
         }
 
         /**
-         * Actions.
+         * <p>The processing templates.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder actions(java.util.List < Actions> actions) {
             String actionsShrink = shrink(actions, "Actions", "json");
@@ -160,7 +162,8 @@ public class CreateBatchRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The data source configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -170,7 +173,8 @@ public class CreateBatchRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. The operation supports multiple messaging middleware options. For more information about notification messages, see Asynchronous message examples. You can use one of the following methods to receive notification messages:</p>
+         * <p>Activate and connect to EventBridge in the same region as the IMM project. For more information, see IMM events. Activate Simple Message Queue in the same region as the IMM project and configure a subscription.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -180,7 +184,11 @@ public class CreateBatchRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -189,7 +197,12 @@ public class CreateBatchRequest extends Request {
         }
 
         /**
-         * ServiceRole.
+         * <p>The service role. IMM assumes the service role so that it can access resources in other cloud services, such as OSS. Default value: AliyunIMMBatchTriggerRole.</p>
+         * <p>You can also create a custom service role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunIMMDefaultRole</p>
          */
         public Builder serviceRole(String serviceRole) {
             this.putBodyParameter("ServiceRole", serviceRole);
@@ -198,7 +211,10 @@ public class CreateBatchRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;val&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -214,6 +230,12 @@ public class CreateBatchRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBatchRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBatchRequest</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FastFailPolicy")
         private FastFailPolicy fastFailPolicy;
@@ -266,7 +288,7 @@ public class CreateBatchRequest extends Request {
             private java.util.List < String > parameters; 
 
             /**
-             * FastFailPolicy.
+             * <p>The policy configurations for handling failures.</p>
              */
             public Builder fastFailPolicy(FastFailPolicy fastFailPolicy) {
                 this.fastFailPolicy = fastFailPolicy;
@@ -274,7 +296,11 @@ public class CreateBatchRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the template.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc/convert</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +308,7 @@ public class CreateBatchRequest extends Request {
             }
 
             /**
-             * Parameters.
+             * <p>The template parameters.</p>
              */
             public Builder parameters(java.util.List < String > parameters) {
                 this.parameters = parameters;
@@ -296,6 +322,12 @@ public class CreateBatchRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateBatchRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBatchRequest</p>
+     */
     public static class Notification extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MNS")
         private MNS MNS;
@@ -323,7 +355,7 @@ public class CreateBatchRequest extends Request {
             private MNS MNS; 
 
             /**
-             * MNS.
+             * <p>The Simple Message Queue notification message configurations.</p>
              */
             public Builder MNS(MNS MNS) {
                 this.MNS = MNS;

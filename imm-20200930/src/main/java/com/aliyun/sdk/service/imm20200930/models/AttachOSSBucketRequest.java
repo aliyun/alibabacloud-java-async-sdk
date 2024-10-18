@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachOSSBucketRequest} extends {@link RequestModel}
  *
  * <p>AttachOSSBucketRequest</p>
@@ -106,7 +107,10 @@ public class AttachOSSBucketRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the binding. The description must be 1 to 128 characters in length. By default, no description is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-attachment</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -115,7 +119,11 @@ public class AttachOSSBucketRequest extends Request {
         }
 
         /**
-         * OSSBucket.
+         * <p>The name of the OSS bucket in the same region as the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>examplebucket</p>
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -124,7 +132,11 @@ public class AttachOSSBucketRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

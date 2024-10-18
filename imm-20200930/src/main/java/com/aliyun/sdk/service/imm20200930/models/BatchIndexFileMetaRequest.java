@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchIndexFileMetaRequest} extends {@link RequestModel}
  *
  * <p>BatchIndexFileMetaRequest</p>
@@ -135,7 +136,11 @@ public class BatchIndexFileMetaRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -144,7 +149,8 @@ public class BatchIndexFileMetaRequest extends Request {
         }
 
         /**
-         * Files.
+         * <p>The objects in Object Storage Service (OSS). Specify OSS objects by using a JSON array. You can specify up to 100 objects in an array.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder files(java.util.List < InputFile > files) {
             String filesShrink = shrink(files, "Files", "json");
@@ -154,7 +160,7 @@ public class BatchIndexFileMetaRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a> topic.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -164,7 +170,11 @@ public class BatchIndexFileMetaRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

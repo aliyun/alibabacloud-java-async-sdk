@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomizedStoryRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomizedStoryRequest</p>
@@ -181,7 +182,8 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * Cover.
+         * <p>The cover image of the story. You can specify an image as the cover image of the custom story.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder cover(Cover cover) {
             String coverShrink = shrink(cover, "Cover", "json");
@@ -191,7 +193,10 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels. You can specify labels to help you identify and retrieve the story.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
          */
         public Builder customLabels(java.util.Map < String, ? > customLabels) {
             String customLabelsShrink = shrink(customLabels, "CustomLabels", "json");
@@ -201,7 +206,11 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.putBodyParameter("DatasetName", datasetName);
@@ -210,7 +219,8 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * Files.
+         * <p>The files of the story. You can specify up to 100 files in a custom story.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder files(java.util.List < Files> files) {
             String filesShrink = shrink(files, "Files", "json");
@@ -220,7 +230,11 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -229,7 +243,11 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * StoryName.
+         * <p>The name of the story.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name1</p>
          */
         public Builder storyName(String storyName) {
             this.putBodyParameter("StoryName", storyName);
@@ -238,7 +256,11 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * StorySubType.
+         * <p>The subtype of the story. For information about valid subtypes, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Solo</p>
          */
         public Builder storySubType(String storySubType) {
             this.putBodyParameter("StorySubType", storySubType);
@@ -247,7 +269,11 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * StoryType.
+         * <p>The type of the story. For information about valid types, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PeopleMemory</p>
          */
         public Builder storyType(String storyType) {
             this.putBodyParameter("StoryType", storyType);
@@ -262,6 +288,12 @@ public class CreateCustomizedStoryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCustomizedStoryRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomizedStoryRequest</p>
+     */
     public static class Cover extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("URI")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -290,7 +322,11 @@ public class CreateCustomizedStoryRequest extends Request {
             private String URI; 
 
             /**
-             * URI.
+             * <p>The URI of the cover image.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket1/cover</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -304,6 +340,12 @@ public class CreateCustomizedStoryRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomizedStoryRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomizedStoryRequest</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("URI")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -332,7 +374,11 @@ public class CreateCustomizedStoryRequest extends Request {
             private String URI; 
 
             /**
-             * URI.
+             * <p>The URIs of the files.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;URI&quot;:&quot;oss://bucket1/file1&quot;}]</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Runtime} extends {@link TeaModel}
  *
  * <p>Runtime</p>
@@ -51,7 +52,7 @@ public class Runtime extends TeaModel {
         private Resource resource; 
 
         /**
-         * Hyperparameters.
+         * <p>This parameter is required.</p>
          */
         public Builder hyperparameters(Hyperparameters hyperparameters) {
             this.hyperparameters = hyperparameters;
@@ -59,7 +60,7 @@ public class Runtime extends TeaModel {
         }
 
         /**
-         * Resource.
+         * <p>This parameter is required.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;

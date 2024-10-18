@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompareImageFacesResponseBody} extends {@link TeaModel}
  *
  * <p>CompareImageFacesResponseBody</p>
@@ -49,7 +50,10 @@ public class CompareImageFacesResponseBody extends TeaModel {
         private Float similarity; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F73AC982-2B9E-4ECD-AED5-F8331C5******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CompareImageFacesResponseBody extends TeaModel {
         }
 
         /**
-         * Similarity.
+         * <p>The face similarity. A larger value indicates a higher face similarity. Valid values: 0 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8848152756690983</p>
          */
         public Builder similarity(Float similarity) {
             this.similarity = similarity;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachOSSBucketRequest} extends {@link RequestModel}
  *
  * <p>DetachOSSBucketRequest</p>
@@ -77,7 +78,11 @@ public class DetachOSSBucketRequest extends Request {
         }
 
         /**
-         * OSSBucket.
+         * <p>The OSS bucket that you want to unbind.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>examplebucket</p>
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatasetResponseBody} extends {@link TeaModel}
  *
  * <p>GetDatasetResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDatasetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Dataset.
+         * <p>The dataset.</p>
          */
         public Builder dataset(Dataset dataset) {
             this.dataset = dataset;
@@ -57,7 +58,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D74B3A9-5AC0-49F9-914D-E01589D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

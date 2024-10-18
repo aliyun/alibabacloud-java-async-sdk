@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CredentialConfig} extends {@link TeaModel}
  *
  * <p>CredentialConfig</p>
@@ -90,6 +91,12 @@ public class CredentialConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CredentialConfig} extends {@link TeaModel}
+     *
+     * <p>CredentialConfig</p>
+     */
     public static class Chain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private String assumeRoleFor;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOSSBucketAttachmentRequest} extends {@link RequestModel}
  *
  * <p>GetOSSBucketAttachmentRequest</p>
@@ -77,7 +78,11 @@ public class GetOSSBucketAttachmentRequest extends Request {
         }
 
         /**
-         * OSSBucket.
+         * <p>The name of the OSS bucket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>examplebucket</p>
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);

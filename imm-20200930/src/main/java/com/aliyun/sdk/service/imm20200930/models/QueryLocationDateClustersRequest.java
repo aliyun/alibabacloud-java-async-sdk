@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryLocationDateClustersRequest} extends {@link RequestModel}
  *
  * <p>QueryLocationDateClustersRequest</p>
@@ -274,7 +275,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * Address.
+         * <p>The address information.</p>
          */
         public Builder address(Address address) {
             String addressShrink = shrink(address, "Address", "json");
@@ -284,7 +285,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * CreateTimeRange.
+         * <p>The time range during which the spatiotemporal clustering groups are generated.</p>
          */
         public Builder createTimeRange(TimeRange createTimeRange) {
             String createTimeRangeShrink = shrink(createTimeRange, "CreateTimeRange", "json");
@@ -294,7 +295,10 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels, which can be used as query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key=value</p>
          */
         public Builder customLabels(String customLabels) {
             this.putQueryParameter("CustomLabels", customLabels);
@@ -303,7 +307,11 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -312,7 +320,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * LocationDateClusterEndTimeRange.
+         * <p>The time range when the clustering groups are ended.</p>
          */
         public Builder locationDateClusterEndTimeRange(TimeRange locationDateClusterEndTimeRange) {
             String locationDateClusterEndTimeRangeShrink = shrink(locationDateClusterEndTimeRange, "LocationDateClusterEndTimeRange", "json");
@@ -322,7 +330,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * LocationDateClusterLevels.
+         * <p>The administrative level of the spatiotemporal clustering groups to be queried.</p>
          */
         public Builder locationDateClusterLevels(java.util.List < String > locationDateClusterLevels) {
             String locationDateClusterLevelsShrink = shrink(locationDateClusterLevels, "LocationDateClusterLevels", "json");
@@ -332,7 +340,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * LocationDateClusterStartTimeRange.
+         * <p>The time range when the clustering groups are started.</p>
          */
         public Builder locationDateClusterStartTimeRange(TimeRange locationDateClusterStartTimeRange) {
             String locationDateClusterStartTimeRangeShrink = shrink(locationDateClusterStartTimeRange, "LocationDateClusterStartTimeRange", "json");
@@ -342,7 +350,10 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: [1,100]. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -351,7 +362,10 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MzQNjmY2MzYxNhNjk2ZNjEu****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -360,7 +374,10 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the group that you want to query. Specify this parameter if you want to obtain the information about a specific spatiotemporal clustering group. Otherwise, leave this parameter empty and use other parameters to query the groups that meet the matching conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>location-date-cluster-71dd4f32-9597-4085-a2ab-3a7b0fd0aff9</p>
          */
         public Builder objectId(String objectId) {
             this.putQueryParameter("ObjectId", objectId);
@@ -369,7 +386,15 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order.</p>
+         * <p>Default value: asc. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -378,7 +403,11 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -387,7 +416,17 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The condition by which the results are sorted.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>LocationDateClusterEndTime: by the end time of the spatiotemporal clustering groups.</li>
+         * <li>CreateTime: by the creation time of the spatiotemporal clustering groups.</li>
+         * <li>UpdateTime: by the update time of the spatiotemporal clustering groups.</li>
+         * <li>LocationDateClusterStartTime: by the start time of the spatiotemporal clustering groups. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LocationDateClusterStartTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -396,7 +435,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The title of spatiotemporal clustering. Fuzzy matching is performed.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -405,7 +444,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * UpdateTimeRange.
+         * <p>The time range during which the spatiotemporal clustering groups are updated.</p>
          */
         public Builder updateTimeRange(TimeRange updateTimeRange) {
             String updateTimeRangeShrink = shrink(updateTimeRange, "UpdateTimeRange", "json");

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainingSpecification} extends {@link TeaModel}
  *
  * <p>TrainingSpecification</p>
@@ -146,7 +147,7 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * <p>This parameter is required.</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -154,7 +155,7 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
-         * ModelSpecification.
+         * <p>This parameter is required.</p>
          */
         public Builder modelSpecification(ModelSpecification modelSpecification) {
             this.modelSpecification = modelSpecification;
@@ -162,7 +163,7 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
-         * Runtime.
+         * <p>This parameter is required.</p>
          */
         public Builder runtime(Runtime runtime) {
             this.runtime = runtime;
@@ -170,7 +171,10 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
-         * SourceURI.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://imm-alg-dataset-bj/cifar10/test_index.json</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.sourceURI = sourceURI;
@@ -178,7 +182,10 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
-         * TargetURI.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://imm-alg-dataset-bj/model_training_test/</p>
          */
         public Builder targetURI(String targetURI) {
             this.targetURI = targetURI;

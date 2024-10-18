@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatasetsRequest} extends {@link RequestModel}
  *
  * <p>ListDatasetsRequest</p>
@@ -119,7 +120,11 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of datasets to return. Valid values: 0 to 200.</p>
+         * <p>If this parameter is left empty or set to 0, 100 datasets are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -128,7 +133,14 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * <p>If the total number of datasets is greater than the value of MaxResults, you must specify this parameter. The list is returned in lexicographic order starting from the value of NextToken.</p>
+         * <blockquote>
+         * <p> The first time you call this operation in a query, set this parameter to null.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678:immtest:dataset002</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -137,7 +149,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Prefix.
+         * <p>The dataset prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("Prefix", prefix);
@@ -146,7 +161,11 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

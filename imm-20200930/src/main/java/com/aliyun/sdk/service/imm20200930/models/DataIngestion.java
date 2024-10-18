@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataIngestion} extends {@link TeaModel}
  *
  * <p>DataIngestion</p>
@@ -290,6 +291,12 @@ public class DataIngestion extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DataIngestion} extends {@link TeaModel}
+     *
+     * <p>DataIngestion</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FastFailPolicy")
         private FastFailPolicy fastFailPolicy;
@@ -371,6 +378,12 @@ public class DataIngestion extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DataIngestion} extends {@link TeaModel}
+     *
+     * <p>DataIngestion</p>
+     */
     public static class Notification extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
@@ -472,6 +485,12 @@ public class DataIngestion extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DataIngestion} extends {@link TeaModel}
+     *
+     * <p>DataIngestion</p>
+     */
     public static class Statistic extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SkipFiles")
         private Long skipFiles;

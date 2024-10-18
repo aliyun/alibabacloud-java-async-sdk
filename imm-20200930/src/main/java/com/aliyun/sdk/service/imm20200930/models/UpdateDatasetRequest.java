@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDatasetRequest} extends {@link RequestModel}
  *
  * <p>UpdateDatasetRequest</p>
@@ -235,7 +236,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>This parameter is required.</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -253,7 +254,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

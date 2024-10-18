@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoLabelClassificationResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetVideoLabelClassificationResultResponseBody</p>
@@ -169,7 +170,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         private String userData; 
 
         /**
-         * Code.
+         * <p>The error code of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -177,7 +181,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-24T03:00:42.134971294Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -185,7 +192,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F6-1Bz99Xi93EnRpNEyLudILJm****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -193,7 +203,7 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The labels.</p>
          */
         public Builder labels(java.util.List < Label > labels) {
             this.labels = labels;
@@ -201,7 +211,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource project is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -209,7 +222,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -217,7 +233,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F84C6D9-5AC0-49F9-914D-F02678E3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +244,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-24T03:00:38.892462383Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -233,7 +255,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -241,7 +266,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoLabelClassification-2f157087-91df-4fda-8c3e-232407ec****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -249,7 +277,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoLabelClassification</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -257,7 +288,10 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * UserData.
+         * <p>The custom information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.userData = userData;

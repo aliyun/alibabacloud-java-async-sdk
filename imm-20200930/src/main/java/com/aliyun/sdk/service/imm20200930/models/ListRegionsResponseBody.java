@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * <p>The regions.</p>
          */
         public Builder regions(java.util.List < RegionType > regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F7D235C-76FF-4B65-800C-8238AE3F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

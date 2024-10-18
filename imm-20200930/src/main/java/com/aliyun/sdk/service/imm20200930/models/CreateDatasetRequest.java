@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatasetRequest} extends {@link RequestModel}
  *
  * <p>CreateDatasetRequest</p>
@@ -190,7 +191,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxBindCount.
+         * <p>The maximum number of bindings for the dataset. Valid values: 1 to 10. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder datasetMaxBindCount(Long datasetMaxBindCount) {
             this.putQueryParameter("DatasetMaxBindCount", datasetMaxBindCount);
@@ -199,7 +203,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxEntityCount.
+         * <p>The maximum number of metadata entities in the dataset. Default value: 10000000000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000000000</p>
          */
         public Builder datasetMaxEntityCount(Long datasetMaxEntityCount) {
             this.putQueryParameter("DatasetMaxEntityCount", datasetMaxEntityCount);
@@ -208,7 +215,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxFileCount.
+         * <p>The maximum number of files in the dataset. Valid values: 1 to 100000000. Default value: 100000000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000</p>
          */
         public Builder datasetMaxFileCount(Long datasetMaxFileCount) {
             this.putQueryParameter("DatasetMaxFileCount", datasetMaxFileCount);
@@ -217,7 +227,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxRelationCount.
+         * <p>The maximum number of metadata relationships in the dataset. Default value: 100000000000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000000</p>
          */
         public Builder datasetMaxRelationCount(Long datasetMaxRelationCount) {
             this.putQueryParameter("DatasetMaxRelationCount", datasetMaxRelationCount);
@@ -226,7 +239,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetMaxTotalFileSize.
+         * <p>The maximum total file size for the dataset. If the total file size of the dataset exceeds this limit, indexes can no longer be added. Default value: 90000000000000000. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90000000000000000</p>
          */
         public Builder datasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
             this.putQueryParameter("DatasetMaxTotalFileSize", datasetMaxTotalFileSize);
@@ -235,7 +251,16 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. The dataset name must be unique in the same project. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must start with a letter or underscore (_).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -244,7 +269,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the dataset. The description must be 1 to 256 characters in length. You can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -253,7 +281,11 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -262,7 +294,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Official:AllFunction</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

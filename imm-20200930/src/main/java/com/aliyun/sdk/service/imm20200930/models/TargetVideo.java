@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TargetVideo} extends {@link TeaModel}
  *
  * <p>TargetVideo</p>
@@ -110,6 +111,12 @@ public class TargetVideo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TargetVideo} extends {@link TeaModel}
+     *
+     * <p>TargetVideo</p>
+     */
     public static class Delogos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Double duration;
@@ -271,6 +278,12 @@ public class TargetVideo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TargetVideo} extends {@link TeaModel}
+     *
+     * <p>TargetVideo</p>
+     */
     public static class Watermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BorderColor")
         private String borderColor;
@@ -612,6 +625,12 @@ public class TargetVideo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TargetVideo} extends {@link TeaModel}
+     *
+     * <p>TargetVideo</p>
+     */
     public static class FilterVideo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Delogos")
         private java.util.List < Delogos> delogos;
@@ -673,6 +692,12 @@ public class TargetVideo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TargetVideo} extends {@link TeaModel}
+     *
+     * <p>TargetVideo</p>
+     */
     public static class TranscodeVideo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdaptiveResolutionDirection")
         private Boolean adaptiveResolutionDirection;

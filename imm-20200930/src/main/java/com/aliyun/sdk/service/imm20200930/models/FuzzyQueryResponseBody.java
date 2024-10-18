@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FuzzyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>FuzzyQueryResponseBody</p>
@@ -74,7 +75,7 @@ public class FuzzyQueryResponseBody extends TeaModel {
         private Long totalHits; 
 
         /**
-         * Files.
+         * <p>The files.</p>
          */
         public Builder files(java.util.List < File > files) {
             this.files = files;
@@ -82,7 +83,13 @@ public class FuzzyQueryResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token.</p>
+         * <p>It can be used in the next request to retrieve a new page of results.</p>
+         * <p>If NextToken is empty, no next page exists.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +97,10 @@ public class FuzzyQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +108,7 @@ public class FuzzyQueryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalHits.
+         * <p>The number of hits.</p>
          */
         public Builder totalHits(Long totalHits) {
             this.totalHits = totalHits;

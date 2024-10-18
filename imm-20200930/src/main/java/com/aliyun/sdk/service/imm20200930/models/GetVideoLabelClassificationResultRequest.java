@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoLabelClassificationResultRequest} extends {@link RequestModel}
  *
  * <p>GetVideoLabelClassificationResultRequest</p>
@@ -107,7 +108,11 @@ public class GetVideoLabelClassificationResultRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -116,7 +121,11 @@ public class GetVideoLabelClassificationResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID, which is obtained from response parameters of <a href="https://help.aliyun.com/document_detail/478223.html">CreateVideoLabelClassificationTask</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoLabelClassification-2f157087-91df-4fda-8c3e-232407ec****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -125,7 +134,11 @@ public class GetVideoLabelClassificationResultRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task. Valid values:</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoLabelClassification</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

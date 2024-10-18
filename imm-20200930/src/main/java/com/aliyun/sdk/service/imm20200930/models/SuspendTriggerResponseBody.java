@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SuspendTriggerResponseBody} extends {@link TeaModel}
  *
  * <p>SuspendTriggerResponseBody</p>
@@ -37,7 +38,10 @@ public class SuspendTriggerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0BC1F0C9-8E99-46C6-B502-10DED******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

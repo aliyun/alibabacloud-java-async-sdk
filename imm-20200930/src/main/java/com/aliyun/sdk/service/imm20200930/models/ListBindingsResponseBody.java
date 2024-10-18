@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBindingsResponseBody} extends {@link TeaModel}
  *
  * <p>ListBindingsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListBindingsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Bindings.
+         * <p>The bindings between the dataset and OSS buckets.</p>
          */
         public Builder bindings(java.util.List < Binding > bindings) {
             this.bindings = bindings;
@@ -69,7 +70,14 @@ public class ListBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <ul>
+         * <li>The pagination token that is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</li>
+         * <li>The next request returns remaining results starting from the position marked by the NextToken parameter value.</li>
+         * <li>This parameter has a non-empty value only when not all bindings are returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest:dataset001:examplebucket01</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +85,10 @@ public class ListBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFDFD356-C928-4A36-951A-6EB5A592****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

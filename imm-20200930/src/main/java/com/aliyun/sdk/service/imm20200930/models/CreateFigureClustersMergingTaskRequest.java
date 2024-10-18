@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFigureClustersMergingTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateFigureClustersMergingTaskRequest</p>
@@ -177,7 +178,11 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -186,7 +191,10 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * From.
+         * <p>The ID of the source group. You must specify either From or Froms, but not both.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster-2ab85905-23ba-4632-b2d8-1c21cfe****</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -195,7 +203,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * Froms.
+         * <p>The IDs of source clustering groups. You must specify either From or Froms, but not both. You can specify up to 100 task IDs.</p>
          */
         public Builder froms(java.util.List < String > froms) {
             String fromsShrink = shrink(froms, "Froms", "json");
@@ -205,7 +213,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For more information, see &quot;Notification&quot;. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous notification format</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -215,7 +223,11 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -224,7 +236,10 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags, which can be used to search for and filter asynchronous tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;val&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -234,7 +249,11 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * To.
+         * <p>The ID of the destination clustering group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster-4a3a71c1-c092-4788-8826-2f65d17****</p>
          */
         public Builder to(String to) {
             this.putQueryParameter("To", to);
@@ -243,7 +262,10 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom data, which is returned in an asynchronous notification and facilitates notification management. The maximum length is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

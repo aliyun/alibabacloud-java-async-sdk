@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVideoModerationTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateVideoModerationTaskRequest</p>
@@ -190,7 +191,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -200,7 +201,10 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The interval of capturing video frames. Unit: seconds. Valid values: 1 to 600. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -209,7 +213,10 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * MaxFrames.
+         * <p>The maximum number of frames that can be captured from the video. Valid values: 5 to 3600. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder maxFrames(Long maxFrames) {
             this.putQueryParameter("MaxFrames", maxFrames);
@@ -218,7 +225,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * 消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。
+         * <p>The notification settings. For information about the asynchronous notification format, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a> topic.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -228,7 +235,11 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -237,7 +248,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * Scenes.
+         * <p>The scenarios of video moderation.</p>
          */
         public Builder scenes(java.util.List < String > scenes) {
             String scenesShrink = shrink(scenes, "Scenes", "json");
@@ -247,7 +258,12 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>The OSS URI of the video.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -256,7 +272,10 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags. The custom tags help you retrieve the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -266,7 +285,10 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

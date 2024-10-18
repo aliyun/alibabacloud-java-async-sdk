@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SimpleQueryResponseBody} extends {@link TeaModel}
  *
  * <p>SimpleQueryResponseBody</p>
@@ -86,7 +87,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         private Long totalHits; 
 
         /**
-         * Aggregations.
+         * <p>The aggregations. This parameter is returned only when the value of the Aggregations request parameter is not empty.</p>
          */
         public Builder aggregations(java.util.List < Aggregations> aggregations) {
             this.aggregations = aggregations;
@@ -94,7 +95,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Files.
+         * <p>The files. This parameter is returned only when the value of the Aggregations request parameter is empty.</p>
          */
         public Builder files(java.util.List < File > files) {
             this.files = files;
@@ -102,7 +103,13 @@ public class SimpleQueryResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</p>
+         * <p>It can be used in the next request to retrieve a new page of results.</p>
+         * <p>If NextToken is empty, no next page exists.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +117,10 @@ public class SimpleQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +128,10 @@ public class SimpleQueryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalHits.
+         * <p>The number of total hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalHits(Long totalHits) {
             this.totalHits = totalHits;
@@ -131,6 +144,12 @@ public class SimpleQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SimpleQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>SimpleQueryResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -170,7 +189,10 @@ public class SimpleQueryResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Count.
+             * <p>The number of results in the grouped aggregation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -178,7 +200,10 @@ public class SimpleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value for the grouped aggregation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,6 +217,12 @@ public class SimpleQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SimpleQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>SimpleQueryResponseBody</p>
+     */
     public static class Aggregations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
@@ -255,7 +286,10 @@ public class SimpleQueryResponseBody extends TeaModel {
             private Double value; 
 
             /**
-             * Field.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -263,7 +297,7 @@ public class SimpleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Groups.
+             * <p>The grouped aggregations. This parameter is returned only when the group operator is specified in the Aggregations request parameter.</p>
              */
             public Builder groups(java.util.List < Groups> groups) {
                 this.groups = groups;
@@ -271,7 +305,10 @@ public class SimpleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Operation.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sum</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -279,7 +316,10 @@ public class SimpleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The statistical result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder value(Double value) {
                 this.value = value;

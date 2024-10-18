@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageSplicingTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateImageSplicingTaskResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateImageSplicingTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10C-1R6p7Km0H5Ieg38LKXTIvw*****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -69,7 +73,10 @@ public class CreateImageSplicingTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94D6F994-E298-037E-8E8B-0090F27*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateImageSplicingTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageSplicing-537cc157-7645-444a-a631-c8db4d02*****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

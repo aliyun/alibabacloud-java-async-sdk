@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddStoryFilesResponseBody} extends {@link TeaModel}
  *
  * <p>AddStoryFilesResponseBody</p>
@@ -49,7 +50,7 @@ public class AddStoryFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Files.
+         * <p>The objects that were added.</p>
          */
         public Builder files(java.util.List < Files> files) {
             this.files = files;
@@ -57,7 +58,10 @@ public class AddStoryFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class AddStoryFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddStoryFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddStoryFilesResponseBody</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -121,7 +131,10 @@ public class AddStoryFilesResponseBody extends TeaModel {
             private String URI; 
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceNotFound</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -129,7 +142,10 @@ public class AddStoryFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified resource %s is not found.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -137,7 +153,11 @@ public class AddStoryFilesResponseBody extends TeaModel {
             }
 
             /**
-             * URI.
+             * <p>The URI of the object.</p>
+             * <p>The OSS URI follows the <code>oss://{bucketname}/{objectname}</code> format, where <code>bucketname</code> is the name of the bucket in the same region as the current project and <code>objectname</code> is the path of the object with the extension included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

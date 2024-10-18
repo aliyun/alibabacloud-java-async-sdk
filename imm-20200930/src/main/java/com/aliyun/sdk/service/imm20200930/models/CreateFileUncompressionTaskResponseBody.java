@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileUncompressionTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFileUncompressionTaskResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateFileUncompressionTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED-1Bz8z71k5TtsUejT4UJ16Es*****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -69,7 +73,10 @@ public class CreateFileUncompressionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC564A9A-BA5C-4499-A087-D9B9E76E*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateFileUncompressionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FileUncompression-16ab5dd6-af02-480e-9ed7-a8d51b1*****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshWebofficeTokenRequest} extends {@link RequestModel}
  *
  * <p>RefreshWebofficeTokenRequest</p>
@@ -121,7 +122,10 @@ public class RefreshWebofficeTokenRequest extends Request {
         }
 
         /**
-         * AccessToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99d1b8b478b641c1b3372f5bd6********</p>
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("AccessToken", accessToken);
@@ -130,7 +134,8 @@ public class RefreshWebofficeTokenRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -140,7 +145,10 @@ public class RefreshWebofficeTokenRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -149,7 +157,10 @@ public class RefreshWebofficeTokenRequest extends Request {
         }
 
         /**
-         * RefreshToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a730ae0d7c6a487d87c661d199********</p>
          */
         public Builder refreshToken(String refreshToken) {
             this.putQueryParameter("RefreshToken", refreshToken);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectTextAnomalyResponseBody} extends {@link TeaModel}
  *
  * <p>DetectTextAnomalyResponseBody</p>
@@ -49,7 +50,10 @@ public class DetectTextAnomalyResponseBody extends TeaModel {
         private String suggestion; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91AC8C98-0F36-49D2-8290-742E24DF*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,14 @@ public class DetectTextAnomalyResponseBody extends TeaModel {
         }
 
         /**
-         * Suggestion.
+         * <p>Indicates whether the text contains anomalies. Valid values:</p>
+         * <ul>
+         * <li>pass: the text does not contain anomalies.</li>
+         * <li>block: the text contains anomalies.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder suggestion(String suggestion) {
             this.suggestion = suggestion;

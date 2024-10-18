@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectImageBodiesResponseBody} extends {@link TeaModel}
  *
  * <p>DetectImageBodiesResponseBody</p>
@@ -49,7 +50,7 @@ public class DetectImageBodiesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Bodies.
+         * <p>The human bodies.</p>
          */
         public Builder bodies(java.util.List < Body > bodies) {
             this.bodies = bodies;
@@ -57,7 +58,10 @@ public class DetectImageBodiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>501339F9-4B70-0CE2-AB8C-866C********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

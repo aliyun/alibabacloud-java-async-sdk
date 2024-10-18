@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDecodeBlindWatermarkResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetDecodeBlindWatermarkResultResponseBody</p>
@@ -169,7 +170,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         private String userData; 
 
         /**
-         * Code.
+         * <p>The error code of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -177,7 +181,7 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The watermark content.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -185,7 +189,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-03T09:45:56.87Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -193,7 +200,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C2-1I0EG57VR37J4rQ8oKG6C9*****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -201,7 +211,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource project is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -209,7 +222,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -217,7 +233,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93126E40-0296-4129-95E3-AFAC709372E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +244,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-03T09:44:31.029Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -233,7 +255,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -241,7 +266,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DecodeBlindWatermark-c09b0943-ed79-4983-8dbe-7a882574****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -249,7 +277,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DecodeBlindWatermark</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -257,7 +288,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         }
 
         /**
-         * UserData.
+         * <p>The user data of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.userData = userData;

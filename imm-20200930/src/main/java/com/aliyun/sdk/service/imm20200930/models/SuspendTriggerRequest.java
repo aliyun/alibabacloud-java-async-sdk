@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SuspendTriggerRequest} extends {@link RequestModel}
  *
  * <p>SuspendTriggerRequest</p>
@@ -92,7 +93,11 @@ public class SuspendTriggerRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the trigger.<a href="~~479912~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger-9f72636a-0f0c-4baf-ae78-38b27b******</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -101,7 +106,11 @@ public class SuspendTriggerRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

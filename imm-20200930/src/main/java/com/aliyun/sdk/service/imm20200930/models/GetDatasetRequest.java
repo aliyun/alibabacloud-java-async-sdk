@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatasetRequest} extends {@link RequestModel}
  *
  * <p>GetDatasetRequest</p>
@@ -106,7 +107,11 @@ public class GetDatasetRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -115,7 +120,11 @@ public class GetDatasetRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -124,7 +133,14 @@ public class GetDatasetRequest extends Request {
         }
 
         /**
-         * WithStatistics.
+         * <p>Specifies whether to enable real-time retrieval of file statistics. Default value: false.</p>
+         * <ul>
+         * <li>If you set the value to true, FileCount and TotalFileSize in the response return true and valid values.</li>
+         * <li>If you set the value to false, FileCount and TotalFileSize in the response return invalid values or 0.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withStatistics(Boolean withStatistics) {
             this.putQueryParameter("WithStatistics", withStatistics);

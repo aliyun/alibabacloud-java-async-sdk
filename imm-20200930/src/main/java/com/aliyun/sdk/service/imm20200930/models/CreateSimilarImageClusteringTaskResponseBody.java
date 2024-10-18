@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSimilarImageClusteringTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSimilarImageClusteringTaskResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateSimilarImageClusteringTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BF-1UhtFyrua71eOkFlqYq23Co****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -69,7 +73,10 @@ public class CreateSimilarImageClusteringTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateSimilarImageClusteringTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SimilarImageClustering-48d0a0f3-8459-47f4-b8af-ff49c64****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

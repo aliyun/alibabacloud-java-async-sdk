@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetFileMetaRequest} extends {@link RequestModel}
  *
  * <p>BatchGetFileMetaRequest</p>
@@ -121,7 +122,11 @@ public class BatchGetFileMetaRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -130,7 +135,11 @@ public class BatchGetFileMetaRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -139,7 +148,8 @@ public class BatchGetFileMetaRequest extends Request {
         }
 
         /**
-         * URIs.
+         * <p>The array of object URIs. You can specify up to 100 object URIs in an array.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder URIs(java.util.List < String > URIs) {
             String URIsShrink = shrink(URIs, "URIs", "json");
@@ -149,7 +159,8 @@ public class BatchGetFileMetaRequest extends Request {
         }
 
         /**
-         * WithFields.
+         * <p>The fields to return. If you specify this parameter, only specified metadata fields are returned. You can use this parameter to control the size of the response.</p>
+         * <p>If you do not specify this parameter or leave this parameter empty, the operation returns all metadata fields.</p>
          */
         public Builder withFields(java.util.List < String > withFields) {
             String withFieldsShrink = shrink(withFields, "WithFields", "json");

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchIndexFileMetaResponseBody} extends {@link TeaModel}
  *
  * <p>BatchIndexFileMetaResponseBody</p>
@@ -49,7 +50,10 @@ public class BatchIndexFileMetaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>387-1DAPFFZplUZhuCuhnB6I9H****</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -57,7 +61,10 @@ public class BatchIndexFileMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F93E6D9-5AC0-49F9-914D-E02678A3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

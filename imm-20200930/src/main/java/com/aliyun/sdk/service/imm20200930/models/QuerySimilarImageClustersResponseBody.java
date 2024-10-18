@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySimilarImageClustersResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySimilarImageClustersResponseBody</p>
@@ -61,7 +62,11 @@ public class QuerySimilarImageClustersResponseBody extends TeaModel {
         private java.util.List < SimilarImageCluster > similarImageClusters; 
 
         /**
-         * NextToken.
+         * <p>The pagination token. If the total number of clusters is greater than the value of MaxResults, this token can be used to retrieve the next page. This parameter has a value only if not all the clusters that meet the condition are returned.</p>
+         * <p>Pass this value as the value of NextToken in the next query to return the subsequent clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KClVwZGF0ZVRpbWUQARgBIs8ECgkAAJLUwUCAQ****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +74,10 @@ public class QuerySimilarImageClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA995EFD-083D-4F40-BE8A-BDF75FFF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +85,7 @@ public class QuerySimilarImageClustersResponseBody extends TeaModel {
         }
 
         /**
-         * SimilarImageClusters.
+         * <p>The list of similar image clusters.</p>
          */
         public Builder similarImageClusters(java.util.List < SimilarImageCluster > similarImageClusters) {
             this.similarImageClusters = similarImageClusters;

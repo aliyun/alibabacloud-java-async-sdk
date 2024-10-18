@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SemanticQueryRequest} extends {@link RequestModel}
  *
  * <p>SemanticQueryRequest</p>
@@ -43,10 +44,6 @@ public class SemanticQueryRequest extends Request {
     private String query;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SmartClusterIds")
-    private java.util.List < String > smartClusterIds;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithFields")
     private java.util.List < String > withFields;
 
@@ -59,7 +56,6 @@ public class SemanticQueryRequest extends Request {
         this.nextToken = builder.nextToken;
         this.projectName = builder.projectName;
         this.query = builder.query;
-        this.smartClusterIds = builder.smartClusterIds;
         this.withFields = builder.withFields;
     }
 
@@ -126,13 +122,6 @@ public class SemanticQueryRequest extends Request {
     }
 
     /**
-     * @return smartClusterIds
-     */
-    public java.util.List < String > getSmartClusterIds() {
-        return this.smartClusterIds;
-    }
-
-    /**
      * @return withFields
      */
     public java.util.List < String > getWithFields() {
@@ -147,7 +136,6 @@ public class SemanticQueryRequest extends Request {
         private String nextToken; 
         private String projectName; 
         private String query; 
-        private java.util.List < String > smartClusterIds; 
         private java.util.List < String > withFields; 
 
         private Builder() {
@@ -163,7 +151,6 @@ public class SemanticQueryRequest extends Request {
             this.nextToken = request.nextToken;
             this.projectName = request.projectName;
             this.query = request.query;
-            this.smartClusterIds = request.smartClusterIds;
             this.withFields = request.withFields;
         } 
 
@@ -177,7 +164,11 @@ public class SemanticQueryRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immDatatest</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -186,7 +177,10 @@ public class SemanticQueryRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -195,7 +189,8 @@ public class SemanticQueryRequest extends Request {
         }
 
         /**
-         * MediaTypes.
+         * <p>The types of the media that you want to query. Default value:</p>
+         * <p>[&quot;image&quot;]</p>
          */
         public Builder mediaTypes(java.util.List < String > mediaTypes) {
             String mediaTypesShrink = shrink(mediaTypes, "MediaTypes", "json");
@@ -205,7 +200,10 @@ public class SemanticQueryRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is no longer available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -214,7 +212,11 @@ public class SemanticQueryRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -223,7 +225,8 @@ public class SemanticQueryRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The content of the query that you input.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -232,17 +235,8 @@ public class SemanticQueryRequest extends Request {
         }
 
         /**
-         * SmartClusterIds.
-         */
-        public Builder smartClusterIds(java.util.List < String > smartClusterIds) {
-            String smartClusterIdsShrink = shrink(smartClusterIds, "SmartClusterIds", "json");
-            this.putQueryParameter("SmartClusterIds", smartClusterIdsShrink);
-            this.smartClusterIds = smartClusterIds;
-            return this;
-        }
-
-        /**
-         * WithFields.
+         * <p>The fields that you want to include in the response. Including only necessary metadata fields can help reduce the size of the response.</p>
+         * <p>If you do not specify this parameter or set the value to null, all existing metadata fields are returned.</p>
          */
         public Builder withFields(java.util.List < String > withFields) {
             String withFieldsShrink = shrink(withFields, "WithFields", "json");

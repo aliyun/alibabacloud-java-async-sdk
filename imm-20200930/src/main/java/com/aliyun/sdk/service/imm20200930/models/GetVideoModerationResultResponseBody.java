@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoModerationResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetVideoModerationResultResponseBody</p>
@@ -270,6 +271,12 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoModerationResultResponseBody</p>
+     */
     public static class BlockFrames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -351,6 +358,12 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoModerationResultResponseBody</p>
+     */
     public static class Frames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockFrames")
         private java.util.List < BlockFrames> blockFrames;
@@ -412,6 +425,12 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoModerationResultResponseBody</p>
+     */
     public static class ModerationResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;

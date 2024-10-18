@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompareImageFacesRequest} extends {@link RequestModel}
  *
  * <p>CompareImageFacesRequest</p>
@@ -105,7 +106,8 @@ public class CompareImageFacesRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The configurations of authorization chains. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -115,7 +117,11 @@ public class CompareImageFacesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -124,7 +130,7 @@ public class CompareImageFacesRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The URLs of the two images for compression.</p>
          */
         public Builder source(Source source) {
             String sourceShrink = shrink(source, "Source", "json");
@@ -140,6 +146,12 @@ public class CompareImageFacesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CompareImageFacesRequest} extends {@link TeaModel}
+     *
+     * <p>CompareImageFacesRequest</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("URI1")
         private String URI1;
@@ -179,7 +191,11 @@ public class CompareImageFacesRequest extends Request {
             private String URI2; 
 
             /**
-             * URI1.
+             * <p>The OSS URL of the image file.</p>
+             * <p>Specify the URL in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format. <code>&lt;bucket&gt;</code> specifies the name of the OSS bucket that is in the same region as the current project. <code>&lt;object&gt;</code> specifies path of the object with the extension included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object1</p>
              */
             public Builder URI1(String URI1) {
                 this.URI1 = URI1;
@@ -187,7 +203,11 @@ public class CompareImageFacesRequest extends Request {
             }
 
             /**
-             * URI2.
+             * <p>The OSS URL of the image file.</p>
+             * <p>Specify the URL in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format. <code>&lt;bucket&gt;</code> specifies the name of the OSS bucket that is in the same region as the current project, and <code>&lt;object&gt;</code> specifies the path of the object with the extension included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test-object2</p>
              */
             public Builder URI2(String URI2) {
                 this.URI2 = URI2;

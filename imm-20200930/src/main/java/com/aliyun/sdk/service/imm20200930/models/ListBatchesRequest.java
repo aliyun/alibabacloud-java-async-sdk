@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBatchesRequest} extends {@link RequestModel}
  *
  * <p>ListBatchesRequest</p>
@@ -161,7 +162,11 @@ public class ListBatchesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return. Valid values: 0 to 100.</p>
+         * <p>If you do not specify this parameter or set the parameter to 0, the default value of 100 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -170,7 +175,12 @@ public class ListBatchesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * <p>The pagination token is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter. The next call to the operation returns results lexicographically after the NextToken parameter value.</p>
+         * <p>You do not need to specify this parameter in your initial request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -179,7 +189,14 @@ public class ListBatchesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>ASC: sorts the results in ascending order. This is the default sort order.</li>
+         * <li>DES: sorts the results in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -188,7 +205,11 @@ public class ListBatchesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -197,7 +218,14 @@ public class ListBatchesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field. Valid values:</p>
+         * <ul>
+         * <li>CreateTime</li>
+         * <li>UpdateTime</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-11T06:51:17.5Z</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -206,7 +234,17 @@ public class ListBatchesRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>The task status.</p>
+         * <ul>
+         * <li>Ready: The task is newly created and ready.</li>
+         * <li>Running: The task is running.</li>
+         * <li>Failed: The task failed and cannot be automatically recovered.</li>
+         * <li>Suspended: The task is suspended.</li>
+         * <li>Succeeded: The task is successful.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -215,7 +253,10 @@ public class ListBatchesRequest extends Request {
         }
 
         /**
-         * TagSelector.
+         * <p>The custom tag. You can use this parameter to query tasks that have the specified tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test=val1</p>
          */
         public Builder tagSelector(String tagSelector) {
             this.putQueryParameter("TagSelector", tagSelector);

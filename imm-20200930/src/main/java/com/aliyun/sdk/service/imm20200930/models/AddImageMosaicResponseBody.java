@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddImageMosaicResponseBody} extends {@link TeaModel}
  *
  * <p>AddImageMosaicResponseBody</p>
@@ -37,7 +38,10 @@ public class AddImageMosaicResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA995EFD-083D-4F40-BE8A-BDF75FF*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

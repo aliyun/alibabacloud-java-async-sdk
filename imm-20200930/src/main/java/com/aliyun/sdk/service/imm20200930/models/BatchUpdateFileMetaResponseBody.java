@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchUpdateFileMetaResponseBody} extends {@link TeaModel}
  *
  * <p>BatchUpdateFileMetaResponseBody</p>
@@ -49,7 +50,7 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Files.
+         * <p>The files whose metadata was updated.</p>
          */
         public Builder files(java.util.List < Files> files) {
             this.files = files;
@@ -57,7 +58,10 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5BF215E-3237-0852-B9C6-F233D44A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchUpdateFileMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchUpdateFileMetaResponseBody</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -121,7 +131,10 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
             private String URI; 
 
             /**
-             * Message.
+             * <p>The error message returned when the value of the Success parameter is false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*error.OpError : InvalidArgument | Index KV count exceeded, should be no more than 100.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -129,7 +142,15 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <p>Enumerated values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -137,7 +158,10 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
             }
 
             /**
-             * URI.
+             * <p>The URI of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://examplebucket/example.jpg</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

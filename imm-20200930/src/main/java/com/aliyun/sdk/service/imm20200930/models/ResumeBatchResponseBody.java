@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResumeBatchResponseBody} extends {@link TeaModel}
  *
  * <p>ResumeBatchResponseBody</p>
@@ -37,7 +38,10 @@ public class ResumeBatchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D2C628B8-35DF-473C-8A41-757F30******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
