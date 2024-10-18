@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallSoftwaresRequest} extends {@link RequestModel}
  *
  * <p>InstallSoftwaresRequest</p>
@@ -67,7 +68,7 @@ public class InstallSoftwaresRequest extends Request {
         } 
 
         /**
-         * The information about the software systems that you want to install.
+         * <p>The information about the software systems that you want to install.</p>
          */
         public Builder additionalPackages(java.util.List < AdditionalPackages> additionalPackages) {
             String additionalPackagesShrink = shrink(additionalPackages, "AdditionalPackages", "json");
@@ -77,7 +78,10 @@ public class InstallSoftwaresRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -92,6 +96,12 @@ public class InstallSoftwaresRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InstallSoftwaresRequest} extends {@link TeaModel}
+     *
+     * <p>InstallSoftwaresRequest</p>
+     */
     public static class AdditionalPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -131,7 +141,10 @@ public class InstallSoftwaresRequest extends Request {
             private String version; 
 
             /**
-             * The software name.
+             * <p>The software name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gromacs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -139,7 +152,10 @@ public class InstallSoftwaresRequest extends Request {
             }
 
             /**
-             * The software version.
+             * <p>The software version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024.1</p>
              */
             public Builder version(String version) {
                 this.version = version;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SharedStorageTemplate} extends {@link TeaModel}
  *
  * <p>SharedStorageTemplate</p>

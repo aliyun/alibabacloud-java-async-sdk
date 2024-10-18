@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableImagesRequest} extends {@link RequestModel}
  *
  * <p>ListAvailableImagesRequest</p>
@@ -165,7 +166,7 @@ public class ListAvailableImagesRequest extends Request {
         } 
 
         /**
-         * DirectoryService.
+         * <p>The information about the domain account service.</p>
          */
         public Builder directoryService(DirectoryService directoryService) {
             String directoryServiceShrink = shrink(directoryService, "DirectoryService", "json");
@@ -175,7 +176,10 @@ public class ListAvailableImagesRequest extends Request {
         }
 
         /**
-         * EnableHT.
+         * <p>Specifies whether to return images in which hyper-threading is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableHT(Boolean enableHT) {
             this.putQueryParameter("EnableHT", enableHT);
@@ -184,7 +188,10 @@ public class ListAvailableImagesRequest extends Request {
         }
 
         /**
-         * HPCInterConnect.
+         * <p>The network type of the images that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder HPCInterConnect(String HPCInterConnect) {
             this.putQueryParameter("HPCInterConnect", HPCInterConnect);
@@ -193,7 +200,15 @@ public class ListAvailableImagesRequest extends Request {
         }
 
         /**
-         * ImageOwnerAlias.
+         * <p>The image source. Valid values:</p>
+         * <ul>
+         * <li>system: system images</li>
+         * <li>self: custom images</li>
+         * <li>others: shared images</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>self</p>
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -202,7 +217,10 @@ public class ListAvailableImagesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type for which you want to query available images. If you do not specify the instance type, all available images are returned, regardless of the supported instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c7.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -211,7 +229,15 @@ public class ListAvailableImagesRequest extends Request {
         }
 
         /**
-         * IsPublic.
+         * <p>Specifies whether to return published community images. Valid values:</p>
+         * <ul>
+         * <li>true: returns published community images. If you set the value of this parameter to true, the ImageOwnerAlias parameter must be set to others.</li>
+         * <li>false: returns non-community images. The value of the ImageOwnerAlias parameter prevails.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isPublic(Boolean isPublic) {
             this.putQueryParameter("IsPublic", isPublic);
@@ -220,7 +246,10 @@ public class ListAvailableImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -229,7 +258,10 @@ public class ListAvailableImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -238,7 +270,7 @@ public class ListAvailableImagesRequest extends Request {
         }
 
         /**
-         * Scheduler.
+         * <p>The scheduler information about the images that you want to query.</p>
          */
         public Builder scheduler(Scheduler scheduler) {
             String schedulerShrink = shrink(scheduler, "Scheduler", "json");
@@ -254,6 +286,12 @@ public class ListAvailableImagesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListAvailableImagesRequest} extends {@link TeaModel}
+     *
+     * <p>ListAvailableImagesRequest</p>
+     */
     public static class DirectoryService extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -293,7 +331,10 @@ public class ListAvailableImagesRequest extends Request {
             private String version; 
 
             /**
-             * Type.
+             * <p>The type of the domain account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NIS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -301,7 +342,10 @@ public class ListAvailableImagesRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of the domain account service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -315,6 +359,12 @@ public class ListAvailableImagesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAvailableImagesRequest} extends {@link TeaModel}
+     *
+     * <p>ListAvailableImagesRequest</p>
+     */
     public static class Scheduler extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -354,7 +404,10 @@ public class ListAvailableImagesRequest extends Request {
             private String version; 
 
             /**
-             * Type.
+             * <p>The scheduler type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLURM</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -362,7 +415,10 @@ public class ListAvailableImagesRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The scheduler version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22.05.8</p>
              */
             public Builder version(String version) {
                 this.version = version;

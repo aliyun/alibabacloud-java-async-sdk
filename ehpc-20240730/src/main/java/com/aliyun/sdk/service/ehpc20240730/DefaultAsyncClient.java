@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AttachSharedStorages  AttachSharedStoragesRequest
+     * @return AttachSharedStoragesResponse
+     */
     @Override
     public CompletableFuture<AttachSharedStoragesResponse> attachSharedStorages(AttachSharedStoragesRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCluster  CreateClusterRequest
+     * @return CreateClusterResponse
+     */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
         try {
@@ -67,6 +75,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of E-HPC.</p>
+     * 
+     * @param request the request parameters of CreateJob  CreateJobRequest
+     * @return CreateJobResponse
+     */
+    @Override
+    public CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * 
+     * @param request the request parameters of CreateNodes  CreateNodesRequest
+     * @return CreateNodesResponse
+     */
     @Override
     public CompletableFuture<CreateNodesResponse> createNodes(CreateNodesRequest request) {
         try {
@@ -81,6 +117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateQueue  CreateQueueRequest
+     * @return CreateQueueResponse
+     */
     @Override
     public CompletableFuture<CreateQueueResponse> createQueue(CreateQueueRequest request) {
         try {
@@ -95,6 +135,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUsers  CreateUsersRequest
+     * @return CreateUsersResponse
+     */
     @Override
     public CompletableFuture<CreateUsersResponse> createUsers(CreateUsersRequest request) {
         try {
@@ -109,6 +153,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCluster  DeleteClusterRequest
+     * @return DeleteClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request) {
         try {
@@ -123,24 +171,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DeleteJobsResponse> deleteJobs(DeleteJobsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteJobs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteJobsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteJobsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     /**
-      * ## [](#)Usage notes
-      * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</p>
+     * 
+     * @param request the request parameters of DeleteNodes  DeleteNodesRequest
+     * @return DeleteNodesResponse
      */
     @Override
     public CompletableFuture<DeleteNodesResponse> deleteNodes(DeleteNodesRequest request) {
@@ -157,9 +194,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Usage notes
-      * Before you delete a queue, you must delete all compute nodes in the queue.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Before you delete a queue, you must delete all compute nodes in the queue.</p>
+     * 
+     * @param request the request parameters of DeleteQueues  DeleteQueuesRequest
+     * @return DeleteQueuesResponse
      */
     @Override
     public CompletableFuture<DeleteQueuesResponse> deleteQueues(DeleteQueuesRequest request) {
@@ -175,6 +215,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUsers  DeleteUsersRequest
+     * @return DeleteUsersResponse
+     */
     @Override
     public CompletableFuture<DeleteUsersResponse> deleteUsers(DeleteUsersRequest request) {
         try {
@@ -189,6 +233,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAddonTemplate  DescribeAddonTemplateRequest
+     * @return DescribeAddonTemplateResponse
+     */
     @Override
     public CompletableFuture<DescribeAddonTemplateResponse> describeAddonTemplate(DescribeAddonTemplateRequest request) {
         try {
@@ -203,6 +251,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachSharedStorages  DetachSharedStoragesRequest
+     * @return DetachSharedStoragesResponse
+     */
     @Override
     public CompletableFuture<DetachSharedStoragesResponse> detachSharedStorages(DetachSharedStoragesRequest request) {
         try {
@@ -217,6 +269,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAddon  GetAddonRequest
+     * @return GetAddonResponse
+     */
     @Override
     public CompletableFuture<GetAddonResponse> getAddon(GetAddonRequest request) {
         try {
@@ -231,6 +287,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCluster  GetClusterRequest
+     * @return GetClusterResponse
+     */
     @Override
     public CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request) {
         try {
@@ -245,6 +305,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCommonLogDetail  GetCommonLogDetailRequest
+     * @return GetCommonLogDetailResponse
+     */
     @Override
     public CompletableFuture<GetCommonLogDetailResponse> getCommonLogDetail(GetCommonLogDetailRequest request) {
         try {
@@ -259,6 +323,50 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJob  GetJobRequest
+     * @return GetJobResponse
+     */
+    @Override
+    public CompletableFuture<GetJobResponse> getJob(GetJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Currently, only Slurm and PBS Pro schedulers for Standard Edition clusters are supported.</p>
+     * 
+     * @param request the request parameters of GetJobLog  GetJobLogRequest
+     * @return GetJobLogResponse
+     */
+    @Override
+    public CompletableFuture<GetJobLogResponse> getJobLog(GetJobLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetJobLog").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetJobLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetJobLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetQueue  GetQueueRequest
+     * @return GetQueueResponse
+     */
     @Override
     public CompletableFuture<GetQueueResponse> getQueue(GetQueueRequest request) {
         try {
@@ -273,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallAddon  InstallAddonRequest
+     * @return InstallAddonResponse
+     */
     @Override
     public CompletableFuture<InstallAddonResponse> installAddon(InstallAddonRequest request) {
         try {
@@ -287,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallSoftwares  InstallSoftwaresRequest
+     * @return InstallSoftwaresResponse
+     */
     @Override
     public CompletableFuture<InstallSoftwaresResponse> installSoftwares(InstallSoftwaresRequest request) {
         try {
@@ -301,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAddonTemplates  ListAddonTemplatesRequest
+     * @return ListAddonTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListAddonTemplatesResponse> listAddonTemplates(ListAddonTemplatesRequest request) {
         try {
@@ -315,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAddons  ListAddonsRequest
+     * @return ListAddonsResponse
+     */
     @Override
     public CompletableFuture<ListAddonsResponse> listAddons(ListAddonsRequest request) {
         try {
@@ -329,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAvailableFileSystems  ListAvailableFileSystemsRequest
+     * @return ListAvailableFileSystemsResponse
+     */
     @Override
     public CompletableFuture<ListAvailableFileSystemsResponse> listAvailableFileSystems(ListAvailableFileSystemsRequest request) {
         try {
@@ -343,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAvailableImages  ListAvailableImagesRequest
+     * @return ListAvailableImagesResponse
+     */
     @Override
     public CompletableFuture<ListAvailableImagesResponse> listAvailableImages(ListAvailableImagesRequest request) {
         try {
@@ -357,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusters  ListClustersRequest
+     * @return ListClustersResponse
+     */
     @Override
     public CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request) {
         try {
@@ -371,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCommonLogs  ListCommonLogsRequest
+     * @return ListCommonLogsResponse
+     */
     @Override
     public CompletableFuture<ListCommonLogsResponse> listCommonLogs(ListCommonLogsRequest request) {
         try {
@@ -385,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstalledSoftwares  ListInstalledSoftwaresRequest
+     * @return ListInstalledSoftwaresResponse
+     */
     @Override
     public CompletableFuture<ListInstalledSoftwaresResponse> listInstalledSoftwares(ListInstalledSoftwaresRequest request) {
         try {
@@ -399,6 +543,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobs  ListJobsRequest
+     * @return ListJobsResponse
+     */
+    @Override
+    public CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListJobs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListNodes  ListNodesRequest
+     * @return ListNodesResponse
+     */
     @Override
     public CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request) {
         try {
@@ -413,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListQueues  ListQueuesRequest
+     * @return ListQueuesResponse
+     */
     @Override
     public CompletableFuture<ListQueuesResponse> listQueues(ListQueuesRequest request) {
         try {
@@ -427,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSharedStorages  ListSharedStoragesRequest
+     * @return ListSharedStoragesResponse
+     */
     @Override
     public CompletableFuture<ListSharedStoragesResponse> listSharedStorages(ListSharedStoragesRequest request) {
         try {
@@ -441,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSoftwares  ListSoftwaresRequest
+     * @return ListSoftwaresResponse
+     */
     @Override
     public CompletableFuture<ListSoftwaresResponse> listSoftwares(ListSoftwaresRequest request) {
         try {
@@ -455,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -469,6 +651,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopJobs  StopJobsRequest
+     * @return StopJobsResponse
+     */
+    @Override
+    public CompletableFuture<StopJobsResponse> stopJobs(StopJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopJobs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnInstallAddon  UnInstallAddonRequest
+     * @return UnInstallAddonResponse
+     */
     @Override
     public CompletableFuture<UnInstallAddonResponse> unInstallAddon(UnInstallAddonRequest request) {
         try {
@@ -483,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallSoftwares  UninstallSoftwaresRequest
+     * @return UninstallSoftwaresResponse
+     */
     @Override
     public CompletableFuture<UninstallSoftwaresResponse> uninstallSoftwares(UninstallSoftwaresRequest request) {
         try {
@@ -497,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCluster  UpdateClusterRequest
+     * @return UpdateClusterResponse
+     */
     @Override
     public CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request) {
         try {
@@ -512,9 +724,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Usage notes
-      * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</p>
+     * 
+     * @param request the request parameters of UpdateNodes  UpdateNodesRequest
+     * @return UpdateNodesResponse
      */
     @Override
     public CompletableFuture<UpdateNodesResponse> updateNodes(UpdateNodesRequest request) {
@@ -530,6 +745,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateQueue  UpdateQueueRequest
+     * @return UpdateQueueResponse
+     */
     @Override
     public CompletableFuture<UpdateQueueResponse> updateQueue(UpdateQueueRequest request) {
         try {
@@ -544,6 +763,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUser  UpdateUserRequest
+     * @return UpdateUserResponse
+     */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
         try {

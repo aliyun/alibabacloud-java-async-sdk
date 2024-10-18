@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableFileSystemsRequest} extends {@link RequestModel}
  *
  * <p>ListAvailableFileSystemsRequest</p>
@@ -67,7 +68,10 @@ public class ListAvailableFileSystemsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return. Page starts from page 1. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -76,7 +80,10 @@ public class ListAvailableFileSystemsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

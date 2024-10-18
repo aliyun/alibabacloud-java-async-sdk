@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachSharedStoragesRequest} extends {@link RequestModel}
  *
  * <p>AttachSharedStoragesRequest</p>
@@ -69,7 +70,12 @@ public class AttachSharedStoragesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -78,7 +84,8 @@ public class AttachSharedStoragesRequest extends Request {
         }
 
         /**
-         * SharedStorages.
+         * <p>The information about the shared storage resources that you want to attach to the cluster.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sharedStorages(java.util.List < SharedStorages> sharedStorages) {
             String sharedStoragesShrink = shrink(sharedStorages, "SharedStorages", "json");
@@ -94,6 +101,12 @@ public class AttachSharedStoragesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AttachSharedStoragesRequest} extends {@link TeaModel}
+     *
+     * <p>AttachSharedStoragesRequest</p>
+     */
     public static class SharedStorages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileSystemId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -211,7 +224,11 @@ public class AttachSharedStoragesRequest extends Request {
             private String volumeType; 
 
             /**
-             * FileSystemId.
+             * <p>The ID of the file system to be attached.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0bd504b0**</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -219,7 +236,14 @@ public class AttachSharedStoragesRequest extends Request {
             }
 
             /**
-             * Location.
+             * <p>The storage location of the file system to be attached. Valid values:</p>
+             * <ul>
+             * <li>OnPremise: The file system is deployed on a hybrid cloud.</li>
+             * <li>PublicCloud: The file system is deployed on a public cloud.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PublicCloud</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -227,7 +251,11 @@ public class AttachSharedStoragesRequest extends Request {
             }
 
             /**
-             * MountDirectory.
+             * <p>The local mount directory of the file system that you want to attach.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder mountDirectory(String mountDirectory) {
                 this.mountDirectory = mountDirectory;
@@ -235,7 +263,18 @@ public class AttachSharedStoragesRequest extends Request {
             }
 
             /**
-             * MountOptions.
+             * <p>The attaching options of the file system to be attached. Valid values:</p>
+             * <ul>
+             * <li>-t nfs -o vers=3,nolock,proto=tcp,noresvport</li>
+             * <li>-t nfs -o vers=4.0,noresvport</li>
+             * </ul>
+             * <p>Default value:-t nfs -o vers=3,nolock,proto=tcp,noresvport</p>
+             * <blockquote>
+             * <p> The v3 version is recommended for higher performance if multiple Elastic Compute Service (ECS) instances do not edit the same file at the same time.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>-t nfs -o vers=3,nolock,proto=tcp,noresvport</p>
              */
             public Builder mountOptions(String mountOptions) {
                 this.mountOptions = mountOptions;
@@ -243,7 +282,11 @@ public class AttachSharedStoragesRequest extends Request {
             }
 
             /**
-             * MountTarget.
+             * <p>The address of the mount point of the file system to be attached.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0bd504b***-ngq26.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder mountTarget(String mountTarget) {
                 this.mountTarget = mountTarget;
@@ -251,7 +294,15 @@ public class AttachSharedStoragesRequest extends Request {
             }
 
             /**
-             * ProtocolType.
+             * <p>The protocol type of the file system to be attached. Valid values:</p>
+             * <ul>
+             * <li>NFS</li>
+             * <li>SMB</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -259,7 +310,11 @@ public class AttachSharedStoragesRequest extends Request {
             }
 
             /**
-             * StorageDirectory.
+             * <p>The storage directory of the file system. You can mount any directory in the file system to the specified cluster directory.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/testehpc</p>
              */
             public Builder storageDirectory(String storageDirectory) {
                 this.storageDirectory = storageDirectory;
@@ -267,7 +322,15 @@ public class AttachSharedStoragesRequest extends Request {
             }
 
             /**
-             * VolumeType.
+             * <p>The type of the file system to be attached. Valid values:</p>
+             * <ul>
+             * <li>nas</li>
+             * <li>cpfs</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nas</p>
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;

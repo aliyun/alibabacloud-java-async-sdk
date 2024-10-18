@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUsersRequest} extends {@link RequestModel}
  *
  * <p>DeleteUsersRequest</p>
@@ -69,7 +70,11 @@ public class DeleteUsersRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -78,7 +83,8 @@ public class DeleteUsersRequest extends Request {
         }
 
         /**
-         * The users that you want to delete.
+         * <p>The users that you want to delete.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder user(java.util.List < User> user) {
             String userShrink = shrink(user, "User", "json");
@@ -94,6 +100,12 @@ public class DeleteUsersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteUsersRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteUsersRequest</p>
+     */
     public static class User extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -122,10 +134,12 @@ public class DeleteUsersRequest extends Request {
             private String userName; 
 
             /**
-             * The name of user N that you want to delete.
-             * <p>
+             * <p>The name of user N that you want to delete.</p>
+             * <p>Valid values of N: 1 to 100.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>testuser</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

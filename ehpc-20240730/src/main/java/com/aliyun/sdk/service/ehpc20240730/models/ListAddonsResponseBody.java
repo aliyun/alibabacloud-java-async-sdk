@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAddonsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAddonsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListAddonsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Addons.
+         * <p>The information about the addons.</p>
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.addons = addons;
@@ -93,7 +94,10 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page number of the returned page. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListAddonsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonsResponseBody</p>
+     */
     public static class Addons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddonId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -232,7 +251,11 @@ public class ListAddonsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AddonId.
+             * <p>The addon ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Login-1.0-W4g****</p>
              */
             public Builder addonId(String addonId) {
                 this.addonId = addonId;
@@ -240,7 +263,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The addon description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -248,7 +271,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * InstallTime.
+             * <p>The time when the addon was installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-22 18:11:17</p>
              */
             public Builder installTime(String installTime) {
                 this.installTime = installTime;
@@ -256,7 +282,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The addon label.</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -264,7 +290,11 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The addon name.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Login</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -272,7 +302,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The addon state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -280,7 +313,11 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The addon version.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

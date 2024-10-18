@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQueuesRequest} extends {@link RequestModel}
  *
  * <p>DeleteQueuesRequest</p>
@@ -67,7 +68,10 @@ public class DeleteQueuesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -76,7 +80,7 @@ public class DeleteQueuesRequest extends Request {
         }
 
         /**
-         * The queues that you want to delete.
+         * <p>The queues that you want to delete.</p>
          */
         public Builder queueNames(java.util.List < String > queueNames) {
             String queueNamesShrink = shrink(queueNames, "QueueNames", "json");

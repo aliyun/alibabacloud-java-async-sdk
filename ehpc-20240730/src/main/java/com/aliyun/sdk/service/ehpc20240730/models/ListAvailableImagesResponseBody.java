@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableImagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAvailableImagesResponseBody</p>
@@ -97,7 +98,7 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Images.
+         * <p>The information about the images.</p>
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -105,7 +106,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,14 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +154,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +170,12 @@ public class ListAvailableImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAvailableImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableImagesResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -285,7 +311,14 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             private String size; 
 
             /**
-             * Architecture.
+             * <p>The OS architecture of the image. Valid values:</p>
+             * <ul>
+             * <li>x86_64</li>
+             * <li>arm64</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -293,7 +326,17 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             }
 
             /**
-             * BootMode.
+             * <p>The boot mode of the image. Valid values:</p>
+             * <ul>
+             * <li>BIOS: Basic Input/Output System (BIOS)</li>
+             * <li>UEFI: Unified Extensible Firmware Interface (UEFI)</li>
+             * </ul>
+             * <blockquote>
+             * <p> When you change the OS boot mode of an instance, you must make sure that the boot mode matches the boot mode of the associated image. Otherwise, the instance fails to be booted.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>BIOS</p>
              */
             public Builder bootMode(String bootMode) {
                 this.bootMode = bootMode;
@@ -301,7 +344,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The image description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -309,7 +355,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_7_06_64_20G_alibase_2019071****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -317,7 +366,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHESS5V5.0.27</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -325,7 +377,15 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOwnerAlias.
+             * <p>The image source. Valid values:</p>
+             * <ul>
+             * <li>system: system images</li>
+             * <li>self: custom images</li>
+             * <li>others: shared images</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>self</p>
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -333,7 +393,7 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OSName.
+             * <p>The OS name in Chinese.</p>
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -341,7 +401,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OSNameEn.
+             * <p>The OS name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS  7.9 64 bit</p>
              */
             public Builder OSNameEn(String OSNameEn) {
                 this.OSNameEn = OSNameEn;
@@ -349,7 +412,14 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The OS. Valid values:</p>
+             * <ul>
+             * <li>CentOS</li>
+             * <li>windows</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -357,7 +427,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The image size. Unit: GiB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(String size) {
                 this.size = size;

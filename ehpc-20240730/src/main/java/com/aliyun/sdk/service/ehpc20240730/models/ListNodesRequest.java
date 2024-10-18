@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesRequest} extends {@link RequestModel}
  *
  * <p>ListNodesRequest</p>
@@ -165,7 +166,10 @@ public class ListNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -174,7 +178,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Hostnames.
+         * <p>The hostnames of the compute nodes that you want to query.</p>
          */
         public Builder hostnames(java.util.List < String > hostnames) {
             String hostnamesShrink = shrink(hostnames, "Hostnames", "json");
@@ -184,7 +188,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,7 +200,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +212,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * <p>The IP addresses of the compute nodes that you want to query.</p>
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             String privateIpAddressShrink = shrink(privateIpAddress, "PrivateIpAddress", "json");
@@ -212,7 +222,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * QueueNames.
+         * <p>The queues to which the nodes belong.</p>
          */
         public Builder queueNames(java.util.List < String > queueNames) {
             String queueNamesShrink = shrink(queueNames, "QueueNames", "json");
@@ -222,7 +232,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>Specifies whether the results are sorted in ascending or descending order. Valid values: forward (ascending) and backward (descending).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder sequence(String sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -231,7 +244,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting method of the node list. Valid values: addedtime: sorted by the time when the node was added. hostname: sorted by hostname. Default value: addedtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddedTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -240,7 +256,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The states of the compute nodes to be queried.</p>
          */
         public Builder status(java.util.List < String > status) {
             String statusShrink = shrink(status, "Status", "json");

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeTemplate} extends {@link TeaModel}
  *
  * <p>NodeTemplate</p>
@@ -290,6 +291,12 @@ public class NodeTemplate extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link NodeTemplate} extends {@link TeaModel}
+     *
+     * <p>NodeTemplate</p>
+     */
     public static class DataDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -300,6 +307,9 @@ public class NodeTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
+        @com.aliyun.core.annotation.NameInMap("MountDir")
+        private String mountDir;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
@@ -307,6 +317,7 @@ public class NodeTemplate extends TeaModel {
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
             this.level = builder.level;
+            this.mountDir = builder.mountDir;
             this.size = builder.size;
         }
 
@@ -340,6 +351,13 @@ public class NodeTemplate extends TeaModel {
         }
 
         /**
+         * @return mountDir
+         */
+        public String getMountDir() {
+            return this.mountDir;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -350,6 +368,7 @@ public class NodeTemplate extends TeaModel {
             private String category; 
             private Boolean deleteWithInstance; 
             private String level; 
+            private String mountDir; 
             private Integer size; 
 
             /**
@@ -377,6 +396,14 @@ public class NodeTemplate extends TeaModel {
             }
 
             /**
+             * MountDir.
+             */
+            public Builder mountDir(String mountDir) {
+                this.mountDir = mountDir;
+                return this;
+            }
+
+            /**
              * Size.
              */
             public Builder size(Integer size) {
@@ -391,6 +418,12 @@ public class NodeTemplate extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NodeTemplate} extends {@link TeaModel}
+     *
+     * <p>NodeTemplate</p>
+     */
     public static class SystemDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;

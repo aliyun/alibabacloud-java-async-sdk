@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAddonTemplateRequest} extends {@link RequestModel}
  *
  * <p>DescribeAddonTemplateRequest</p>
@@ -125,7 +126,11 @@ public class DescribeAddonTemplateRequest extends Request {
         } 
 
         /**
-         * AddonName.
+         * <p>The addon name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
@@ -134,7 +139,11 @@ public class DescribeAddonTemplateRequest extends Request {
         }
 
         /**
-         * AddonVersion.
+         * <p>The addon version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder addonVersion(String addonVersion) {
             this.putQueryParameter("AddonVersion", addonVersion);
@@ -143,7 +152,10 @@ public class DescribeAddonTemplateRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page returned. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +164,10 @@ public class DescribeAddonTemplateRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +176,10 @@ public class DescribeAddonTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +188,10 @@ public class DescribeAddonTemplateRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAddonTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAddonTemplatesResponseBody</p>
@@ -85,7 +86,7 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Addons.
+         * <p>The information about the addon templates.</p>
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.addons = addons;
@@ -93,7 +94,10 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAddonTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAddonTemplatesResponseBody</p>
+     */
     public static class Addons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -195,7 +214,7 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Description.
+             * <p>The addon description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -203,7 +222,7 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The addon label</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -211,7 +230,11 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The addon name.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Login</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -219,7 +242,11 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The addon version.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

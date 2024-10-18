@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteClusterResponseBody</p>
@@ -61,7 +62,10 @@ public class DeleteClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1AB6D8D-E185-4D94-859C-7CE7B8B7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,11 +73,14 @@ public class DeleteClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request result. Valid values:
-         * <p>
+         * <p>The request result. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -81,7 +88,10 @@ public class DeleteClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1AB6D8D-E185-4D94-859C-7CE7B8B7****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

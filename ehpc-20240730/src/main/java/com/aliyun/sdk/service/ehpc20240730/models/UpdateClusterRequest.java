@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClusterRequest} extends {@link RequestModel}
  *
  * <p>UpdateClusterRequest</p>
@@ -207,7 +208,10 @@ public class UpdateClusterRequest extends Request {
         } 
 
         /**
-         * ClientVersion.
+         * <p>The client version. By default, the latest version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1.0</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -216,7 +220,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * ClusterCustomConfiguration.
+         * <p>The post-processing script of the cluster.</p>
          */
         public Builder clusterCustomConfiguration(ClusterCustomConfiguration clusterCustomConfiguration) {
             String clusterCustomConfigurationShrink = shrink(clusterCustomConfiguration, "ClusterCustomConfiguration", "json");
@@ -226,7 +230,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * ClusterDescription.
+         * <p>The cluster description. The description must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slurm22.05.8-serverless-cluster-20240805</p>
          */
         public Builder clusterDescription(String clusterDescription) {
             this.putQueryParameter("ClusterDescription", clusterDescription);
@@ -235,7 +242,11 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -244,7 +255,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name. The name must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slurm22.05.8-serverless-cluster-20240805</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -253,7 +267,15 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * <p>Specifies whether to enable deletion protection for the cluster. Deletion protection decides whether the cluster can be deleted in the console or by calling the DeleteCluster operation. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -262,7 +284,14 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * EnableScaleIn.
+         * <p>Specifies whether to enable auto scale-in for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableScaleIn(Boolean enableScaleIn) {
             this.putQueryParameter("EnableScaleIn", enableScaleIn);
@@ -271,7 +300,14 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * EnableScaleOut.
+         * <p>Specifies whether to enable auto scale-out for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableScaleOut(Boolean enableScaleOut) {
             this.putQueryParameter("EnableScaleOut", enableScaleOut);
@@ -280,7 +316,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * GrowInterval.
+         * <p>The interval at which the cluster is automatically scaled out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder growInterval(Integer growInterval) {
             this.putQueryParameter("GrowInterval", growInterval);
@@ -289,7 +328,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * IdleInterval.
+         * <p>The idle duration of the compute nodes allowed by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder idleInterval(Integer idleInterval) {
             this.putQueryParameter("IdleInterval", idleInterval);
@@ -298,7 +340,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * MaxCoreCount.
+         * <p>The total maximum number of vCPUs for use by compute nodes in the cluster. Valid values: 0 to 100,000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder maxCoreCount(Integer maxCoreCount) {
             this.putQueryParameter("MaxCoreCount", maxCoreCount);
@@ -307,7 +352,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * MaxCount.
+         * <p>The maximum number of compute nodes that the cluster can manage. Valid values: 0 to 5,000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxCount(Integer maxCount) {
             this.putQueryParameter("MaxCount", maxCount);
@@ -322,6 +370,12 @@ public class UpdateClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateClusterRequest</p>
+     */
     public static class ClusterCustomConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
         private String args;
@@ -361,7 +415,10 @@ public class UpdateClusterRequest extends Request {
             private String script; 
 
             /**
-             * Args.
+             * <p>The arguments that are used to run the post-processing script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E-HPC cn-hangzhou</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -369,7 +426,10 @@ public class UpdateClusterRequest extends Request {
             }
 
             /**
-             * Script.
+             * <p>The URL that is used to download the post-processing script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://*****</p>
              */
             public Builder script(String script) {
                 this.script = script;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstalledSoftwaresResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstalledSoftwaresResponseBody</p>
@@ -85,7 +86,7 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The list of installed software.
+         * <p>The list of installed software.</p>
          */
         public Builder additionalPackages(AdditionalPackages additionalPackages) {
             this.additionalPackages = additionalPackages;
@@ -93,7 +94,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstalledSoftwaresResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstalledSoftwaresResponseBody</p>
+     */
     public static class AdditionalPackageInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -229,7 +248,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The category into which the software falls.
+             * <p>The category into which the software falls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NWP</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -237,7 +259,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the software was installed.
+             * <p>The time when the software was installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05 18:24:08</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -245,7 +270,7 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The software description.
+             * <p>The software description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -253,7 +278,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the software icon.
+             * <p>The URL of the software icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg">https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -261,7 +289,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The software name.
+             * <p>The software name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gromacs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -269,15 +300,17 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The installation status of the software.
-             * <p>
+             * <p>The installation status of the software.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Installed</li>
+             * <li>Uninstalled</li>
+             * <li>Installing</li>
+             * <li>Exception</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Installed
-             * *   Uninstalled
-             * *   Installing
-             * *   Exception
+             * <strong>example:</strong>
+             * <p>Installed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -285,7 +318,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The software version.
+             * <p>The software version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -299,6 +335,12 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstalledSoftwaresResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstalledSoftwaresResponseBody</p>
+     */
     public static class AdditionalPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdditionalPackageInfos")
         private java.util.List < AdditionalPackageInfos> additionalPackageInfos;

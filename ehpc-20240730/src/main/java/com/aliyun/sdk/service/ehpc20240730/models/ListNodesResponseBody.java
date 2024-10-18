@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ListNodesResponseBody</p>
@@ -85,7 +86,7 @@ public class ListNodesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Nodes.
+         * <p>The information about the nodes.</p>
          */
         public Builder nodes(java.util.List < Nodes> nodes) {
             this.nodes = nodes;
@@ -93,7 +94,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89A1AC0F-4A6C-4F3D-98F9-BEF9A823****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class TotalResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -181,7 +200,10 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer memory; 
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -189,7 +211,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -197,7 +222,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The amount of memory. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -211,6 +239,12 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddTime")
         private String addTime;
@@ -442,7 +476,10 @@ public class ListNodesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AddTime.
+             * <p>The time when the node was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-09T06:22:02.000Z</p>
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
@@ -450,7 +487,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The time when the node expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-09T06:22:02.000Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -458,7 +498,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>The hostname of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas.cn-shanghai.aliyuncs.com</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -466,7 +509,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HtEnabled.
+             * <p>Indicates whether hyper-threading is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder htEnabled(Boolean htEnabled) {
                 this.htEnabled = htEnabled;
@@ -474,7 +520,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp15707mys2rsy0j****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -482,7 +531,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_7_06_64_20G_alibase_20190711.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -490,7 +542,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -498,7 +553,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * <p>The VPC IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>172.16.**.**</code></p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -506,7 +564,14 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * KeepAlive.
+             * <p>Indicates whether deletion protection is enabled for the node. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder keepAlive(Boolean keepAlive) {
                 this.keepAlive = keepAlive;
@@ -514,7 +579,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpAddress.
+             * <p>The public IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>172.16.**.**</code></p>
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -522,7 +590,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * <p>The name of the queue to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autoque3</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -530,7 +601,15 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * <p>The bidding policy of the node. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The instances of the compute node are pay-as-you-go instances.</li>
+             * <li>SpotWithPriceLimit: The instances are created as preemptible instances with a user-defined maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The node is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -538,7 +617,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * StateInSched.
+             * <p>The node state in the scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder stateInSched(String stateInSched) {
                 this.stateInSched = stateInSched;
@@ -546,7 +628,19 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The node state. Valid values:</p>
+             * <ul>
+             * <li>uninit: The node is being installed.</li>
+             * <li>initing: The node is being initialized.</li>
+             * <li>running: The node is running.</li>
+             * <li>releasing: The node is being released.</li>
+             * <li>stopped: The node is stopped.</li>
+             * <li>exception: The node has run into an exception.</li>
+             * <li>untracking: The node is not added to the cluster.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -554,7 +648,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResources.
+             * <p>The hardware configurations of the node.</p>
              */
             public Builder totalResources(TotalResources totalResources) {
                 this.totalResources = totalResources;
@@ -562,7 +656,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1e47optm9g58zcu****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -570,7 +667,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1gnu8br4ay7beb2w****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -578,7 +678,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

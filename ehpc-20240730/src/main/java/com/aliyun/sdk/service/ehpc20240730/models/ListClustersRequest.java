@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClustersRequest} extends {@link RequestModel}
  *
  * <p>ListClustersRequest</p>
@@ -95,7 +96,7 @@ public class ListClustersRequest extends Request {
         } 
 
         /**
-         * ClusterIds.
+         * <p>The cluster IDs. You can specify up to 20 IDs.</p>
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             String clusterIdsShrink = shrink(clusterIds, "ClusterIds", "json");
@@ -105,7 +106,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * ClusterNames.
+         * <p>The cluster names. You can specify up to 20 names.</p>
          */
         public Builder clusterNames(java.util.List < String > clusterNames) {
             String clusterNamesShrink = shrink(clusterNames, "ClusterNames", "json");
@@ -115,7 +116,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +128,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

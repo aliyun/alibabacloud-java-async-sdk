@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueueTemplate} extends {@link TeaModel}
  *
  * <p>QueueTemplate</p>
@@ -302,7 +303,10 @@ public class QueueTemplate extends TeaModel {
         }
 
         /**
-         * QueueName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comp</p>
          */
         public Builder queueName(String queueName) {
             this.queueName = queueName;

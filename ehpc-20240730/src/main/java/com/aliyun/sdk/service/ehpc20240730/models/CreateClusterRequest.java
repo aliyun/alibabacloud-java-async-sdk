@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
@@ -536,6 +537,12 @@ public class CreateClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class AdditionalPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -597,6 +604,12 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Addons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -662,7 +675,10 @@ public class CreateClusterRequest extends Request {
             private String version; 
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Login</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -686,7 +702,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -700,6 +719,12 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class ClusterCredentials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
@@ -761,6 +786,12 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class ClusterCustomConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
         private String args;
@@ -822,6 +853,12 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class DNS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -869,7 +906,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -883,6 +923,12 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class DirectoryService extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -930,7 +976,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -944,6 +993,12 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Scheduler extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -991,7 +1046,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1005,6 +1063,12 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Manager extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DNS")
         private DNS DNS;
@@ -1106,6 +1170,12 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

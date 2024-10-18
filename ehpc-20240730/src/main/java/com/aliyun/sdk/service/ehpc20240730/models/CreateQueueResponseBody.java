@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQueueResponseBody} extends {@link TeaModel}
  *
  * <p>CreateQueueResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateQueueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the created queue.
+         * <p>The name of the created queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -57,7 +61,10 @@ public class CreateQueueResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

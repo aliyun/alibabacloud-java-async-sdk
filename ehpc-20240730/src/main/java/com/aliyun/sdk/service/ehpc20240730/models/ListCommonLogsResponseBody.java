@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCommonLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCommonLogsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListCommonLogsResponseBody extends TeaModel {
         private String uid; 
 
         /**
-         * Logs.
+         * <p>The information about the returned logs.</p>
          */
         public Builder logs(java.util.List < Logs> logs) {
             this.logs = logs;
@@ -105,7 +106,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>464E9919-D04F-4D1D-B375-15989492****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,7 +150,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Uid.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137***</p>
          */
         public Builder uid(String uid) {
             this.uid = uid;
@@ -150,6 +166,12 @@ public class ListCommonLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCommonLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCommonLogsResponseBody</p>
+     */
     public static class Logs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -273,7 +295,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * Action.
+             * <p>The name of the action corresponding to the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreaterCluster</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -281,7 +306,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ehpc-hz-9T3xPNezoS</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -289,7 +317,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogType.
+             * <p>The log type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operation</p>
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -297,7 +328,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -305,7 +339,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorUid.
+             * <p>The ID of the user who performed the action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>137***</p>
              */
             public Builder operatorUid(String operatorUid) {
                 this.operatorUid = operatorUid;
@@ -313,7 +350,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID associated with the action that generated the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -321,7 +361,15 @@ public class ListCommonLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The action state in the log. Valid values:</p>
+             * <ul>
+             * <li>InProgress: The action is being performed.</li>
+             * <li>Finished: The action is completed.</li>
+             * <li>Failed: The action failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -329,7 +377,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The involved resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-abc***</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -337,7 +388,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the log was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-22 14:21:54</p>
              */
             public Builder time(String time) {
                 this.time = time;

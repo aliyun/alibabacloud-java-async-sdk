@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueuesRequest} extends {@link RequestModel}
  *
  * <p>ListQueuesRequest</p>
@@ -67,7 +68,10 @@ public class ListQueuesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -76,7 +80,7 @@ public class ListQueuesRequest extends Request {
         }
 
         /**
-         * QueueNames.
+         * <p>The names of the queues that you want to query. You can specify up to eight names.</p>
          */
         public Builder queueNames(java.util.List < String > queueNames) {
             String queueNamesShrink = shrink(queueNames, "QueueNames", "json");

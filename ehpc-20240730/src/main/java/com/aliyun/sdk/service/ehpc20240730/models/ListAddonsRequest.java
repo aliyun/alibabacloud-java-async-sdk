@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAddonsRequest} extends {@link RequestModel}
  *
  * <p>ListAddonsRequest</p>
@@ -96,7 +97,7 @@ public class ListAddonsRequest extends Request {
         } 
 
         /**
-         * AddonIds.
+         * <p>The addon IDs.</p>
          */
         public Builder addonIds(java.util.List < String > addonIds) {
             String addonIdsShrink = shrink(addonIds, "AddonIds", "json");
@@ -106,7 +107,11 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -115,7 +120,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +132,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueueResponseBody} extends {@link TeaModel}
  *
  * <p>GetQueueResponseBody</p>
@@ -49,7 +50,7 @@ public class GetQueueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Queue.
+         * <p>The information about the queue.</p>
          */
         public Builder queue(Queue queue) {
             this.queue = queue;
@@ -57,7 +58,10 @@ public class GetQueueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetQueueResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueueResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueueResponseBody</p>
+     */
     public static class Queue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
@@ -266,7 +276,10 @@ public class GetQueueResponseBody extends TeaModel {
             private java.util.List < String > vSwitchIds; 
 
             /**
-             * AllocationStrategy.
+             * <p>The auto scale-out policy of the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PriorityInstanceType</p>
              */
             public Builder allocationStrategy(String allocationStrategy) {
                 this.allocationStrategy = allocationStrategy;
@@ -274,7 +287,7 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeNodes.
+             * <p>The hardware configurations of the compute nodes in the queue.</p>
              */
             public Builder computeNodes(java.util.List < NodeTemplate > computeNodes) {
                 this.computeNodes = computeNodes;
@@ -282,7 +295,14 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * EnableScaleIn.
+             * <p>Indicates whether auto scale-in is enabled for the queue. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableScaleIn(Boolean enableScaleIn) {
                 this.enableScaleIn = enableScaleIn;
@@ -290,7 +310,14 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * EnableScaleOut.
+             * <p>Indicates whether auto scale-out is enabled for the queue. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableScaleOut(Boolean enableScaleOut) {
                 this.enableScaleOut = enableScaleOut;
@@ -298,7 +325,10 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * HostnamePrefix.
+             * <p>The hostname prefix of the compute nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compute</p>
              */
             public Builder hostnamePrefix(String hostnamePrefix) {
                 this.hostnamePrefix = hostnamePrefix;
@@ -306,7 +336,10 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * HostnameSuffix.
+             * <p>The hostname suffix of the compute nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder hostnameSuffix(String hostnameSuffix) {
                 this.hostnameSuffix = hostnameSuffix;
@@ -314,7 +347,10 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * InitialCount.
+             * <p>The initial number of nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder initialCount(Integer initialCount) {
                 this.initialCount = initialCount;
@@ -322,7 +358,14 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * InterConnect.
+             * <p>The type of the network between compute nodes in the queue. Valid values:</p>
+             * <ul>
+             * <li>vpc</li>
+             * <li>eRDMA</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>erdma</p>
              */
             public Builder interConnect(String interConnect) {
                 this.interConnect = interConnect;
@@ -330,7 +373,7 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * KeepAliveNodes.
+             * <p>The nodes for which deletion protection is enabled in the queue.</p>
              */
             public Builder keepAliveNodes(java.util.List < String > keepAliveNodes) {
                 this.keepAliveNodes = keepAliveNodes;
@@ -338,7 +381,10 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCount.
+             * <p>The maximum number of compute nodes that the queue can contain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxCount(Integer maxCount) {
                 this.maxCount = maxCount;
@@ -346,7 +392,10 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCountPerCycle.
+             * <p>The minimum number of nodes that are delivered to the queue in each scale-out cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder maxCountPerCycle(Long maxCountPerCycle) {
                 this.maxCountPerCycle = maxCountPerCycle;
@@ -354,7 +403,10 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * MinCount.
+             * <p>The minimum number of compute nodes that the queue must contain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minCount(Integer minCount) {
                 this.minCount = minCount;
@@ -362,7 +414,11 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * <p>The queue name.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comp</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -370,7 +426,10 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * RamRole.
+             * <p>The Resource Access Management (RAM) role that is assumed by compute nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunECSInstanceForEHPCRole</p>
              */
             public Builder ramRole(String ramRole) {
                 this.ramRole = ramRole;
@@ -378,7 +437,7 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The available vSwitches for compute nodes in the queue. Valid values of N: 1 to 5.</p>
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;

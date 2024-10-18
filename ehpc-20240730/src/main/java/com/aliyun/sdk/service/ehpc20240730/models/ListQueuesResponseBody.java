@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListQueuesResponseBody</p>
@@ -97,7 +98,11 @@ public class ListQueuesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -105,7 +110,10 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +121,10 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +132,7 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * Queues.
+         * <p>The information about the queues.</p>
          */
         public Builder queues(java.util.List < Queues> queues) {
             this.queues = queues;
@@ -129,7 +140,10 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6E5005C-00B0-4F27-98BB-95AB88016C22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +151,10 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +167,12 @@ public class ListQueuesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueuesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatingCounts")
         private Integer creatingCounts;
@@ -201,7 +224,10 @@ public class ListQueuesResponseBody extends TeaModel {
             private Integer runningCounts; 
 
             /**
-             * CreatingCounts.
+             * <p>The number of compute nodes that are not ready.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder creatingCounts(Integer creatingCounts) {
                 this.creatingCounts = creatingCounts;
@@ -209,7 +235,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * ExceptionCounts.
+             * <p>The number of malfunctioning compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exceptionCounts(Integer exceptionCounts) {
                 this.exceptionCounts = exceptionCounts;
@@ -217,7 +246,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * RunningCounts.
+             * <p>The number of running compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runningCounts(Integer runningCounts) {
                 this.runningCounts = runningCounts;
@@ -231,6 +263,12 @@ public class ListQueuesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueuesResponseBody</p>
+     */
     public static class Queues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComputeNodes")
         private java.util.List < NodeTemplate > computeNodes;
@@ -390,7 +428,7 @@ public class ListQueuesResponseBody extends TeaModel {
             private java.util.List < String > vSwitchIds; 
 
             /**
-             * ComputeNodes.
+             * <p>The hardware configurations of the compute nodes that are added in auto scale-outs. Up to five nodes are displayed.</p>
              */
             public Builder computeNodes(java.util.List < NodeTemplate > computeNodes) {
                 this.computeNodes = computeNodes;
@@ -398,7 +436,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the queue was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-10T02:04:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -406,7 +447,14 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableScaleIn.
+             * <p>Indicates whether auto scale-in is enabled for the queue. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableScaleIn(Boolean enableScaleIn) {
                 this.enableScaleIn = enableScaleIn;
@@ -414,7 +462,14 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableScaleOut.
+             * <p>Indicates whether auto scale-out is enabled for the queue. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableScaleOut(Boolean enableScaleOut) {
                 this.enableScaleOut = enableScaleOut;
@@ -422,7 +477,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCount.
+             * <p>The maximum number of compute nodes that the queue can contain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxCount(Integer maxCount) {
                 this.maxCount = maxCount;
@@ -430,7 +488,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCountPerCycle.
+             * <p>The minimum number of compute nodes that are added to the queue in each auto scale-out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxCountPerCycle(Integer maxCountPerCycle) {
                 this.maxCountPerCycle = maxCountPerCycle;
@@ -438,7 +499,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * MinCount.
+             * <p>The minimum number of compute nodes that the queue must contain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minCount(Integer minCount) {
                 this.minCount = minCount;
@@ -446,7 +510,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * <p>The statistics about the compute nodes in the queue.</p>
              */
             public Builder nodes(Nodes nodes) {
                 this.nodes = nodes;
@@ -454,7 +518,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comp</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -462,7 +529,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCores.
+             * <p>The total number of vCPUs that are used by all compute nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder totalCores(Integer totalCores) {
                 this.totalCores = totalCores;
@@ -470,7 +540,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the queue was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-25T02:02:32</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -478,7 +551,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitches that can be used for added nodes during auto scale-outs. Up to three vSwitches are displayed.</p>
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;

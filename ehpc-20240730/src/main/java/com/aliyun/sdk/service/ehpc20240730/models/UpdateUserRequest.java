@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
@@ -97,7 +98,11 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -106,7 +111,14 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * Group.
+         * <p>The user group attribute of the user that you want to update. Valid values:</p>
+         * <ul>
+         * <li>users: ordinary permissions, which are suitable for ordinary users that need only to submit and debug jobs.</li>
+         * <li>wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>users</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -115,7 +127,16 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password attribute of the user that you want to update. The password must be 6 to 30 characters in length and must contain three of the following four character types:</p>
+         * <ul>
+         * <li>Uppercase letters</li>
+         * <li>Lowercase letters</li>
+         * <li>Digits</li>
+         * <li>Special characters ()~!@#$%^&amp;*-_+=|{}[]:;&quot;/&lt;&gt;,.?/</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -124,7 +145,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

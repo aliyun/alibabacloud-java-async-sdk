@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQueueRequest} extends {@link RequestModel}
  *
  * <p>CreateQueueRequest</p>
@@ -67,7 +68,10 @@ public class CreateQueueRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -76,7 +80,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * The configurations of the queue to be created.
+         * <p>The configurations of the queue to be created.</p>
          */
         public Builder queue(QueueTemplate queue) {
             String queueShrink = shrink(queue, "Queue", "json");

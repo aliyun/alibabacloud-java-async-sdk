@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterResponseBody</p>
@@ -301,7 +302,10 @@ public class GetClusterResponseBody extends TeaModel {
         private String securityGroupId; 
 
         /**
-         * ClientVersion.
+         * <p>The E-HPC Util version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.31</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.clientVersion = clientVersion;
@@ -309,7 +313,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterCategory.
+         * <p>The cluster type. Valid values:</p>
+         * <ul>
+         * <li>Standard</li>
+         * <li>Serverless</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder clusterCategory(String clusterCategory) {
             this.clusterCategory = clusterCategory;
@@ -317,7 +328,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterCreateTime.
+         * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-06T12:43:01.000Z</p>
          */
         public Builder clusterCreateTime(String clusterCreateTime) {
             this.clusterCreateTime = clusterCreateTime;
@@ -325,7 +339,7 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterCustomConfiguration.
+         * <p>The post-processing script of the cluster.</p>
          */
         public Builder clusterCustomConfiguration(ClusterCustomConfiguration clusterCustomConfiguration) {
             this.clusterCustomConfiguration = clusterCustomConfiguration;
@@ -333,7 +347,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -341,7 +358,15 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterMode.
+         * <p>The deployment type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>Integrated: The cluster is deployed on a public cloud.</li>
+         * <li>Hybrid: The cluster is deployed on a hybrid cloud.</li>
+         * <li>Custom: The cluster is a custom cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Integrated</p>
          */
         public Builder clusterMode(String clusterMode) {
             this.clusterMode = clusterMode;
@@ -349,7 +374,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterModifyTime.
+         * <p>The time when the cluster was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-06T12:43:01.000Z</p>
          */
         public Builder clusterModifyTime(String clusterModifyTime) {
             this.clusterModifyTime = clusterModifyTime;
@@ -357,7 +385,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slurm22.05.8-cluster-20240614</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -365,7 +396,21 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterStatus.
+         * <p>The cluster state. Valid values:</p>
+         * <ul>
+         * <li>uninit: The cluster is being installed.</li>
+         * <li>creating: The cluster is being created.</li>
+         * <li>initing: The cluster is being initialized.</li>
+         * <li>running: The cluster is running.</li>
+         * <li>exception: The cluster has run into an exception.</li>
+         * <li>raleasing: The cluster is being released.</li>
+         * <li>stopping: The cluster is being stopped.</li>
+         * <li>stopped: The cluster is stopped.</li>
+         * <li>pending: The cluster is waiting to be configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder clusterStatus(String clusterStatus) {
             this.clusterStatus = clusterStatus;
@@ -373,7 +418,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterVSwitchId.
+         * <p>The ID of the vSwitch used by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1p2uugqsjppno******</p>
          */
         public Builder clusterVSwitchId(String clusterVSwitchId) {
             this.clusterVSwitchId = clusterVSwitchId;
@@ -381,7 +429,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterVpcId.
+         * <p>The ID of the virtual private cloud (VPC) used by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6u3lk1pjy28eg*****</p>
          */
         public Builder clusterVpcId(String clusterVpcId) {
             this.clusterVpcId = clusterVpcId;
@@ -389,7 +440,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * DeleteProtection.
+         * <p>Indicates whether deletion protection is enabled for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteProtection(String deleteProtection) {
             this.deleteProtection = deleteProtection;
@@ -397,7 +455,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * EhpcVersion.
+         * <p>The E-HPC version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder ehpcVersion(String ehpcVersion) {
             this.ehpcVersion = ehpcVersion;
@@ -405,7 +466,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * EnableScaleIn.
+         * <p>Indicates whether automatic scale-in is enabled for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableScaleIn(Boolean enableScaleIn) {
             this.enableScaleIn = enableScaleIn;
@@ -413,7 +481,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * EnableScaleOut.
+         * <p>Indicates whether automatic scale-out is enabled for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableScaleOut(Boolean enableScaleOut) {
             this.enableScaleOut = enableScaleOut;
@@ -421,7 +496,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * GrowInterval.
+         * <p>The interval at which the cluster is automatically scaled out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder growInterval(Integer growInterval) {
             this.growInterval = growInterval;
@@ -429,7 +507,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * IdleInterval.
+         * <p>The idle duration of the compute nodes allowed by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder idleInterval(Integer idleInterval) {
             this.idleInterval = idleInterval;
@@ -437,7 +518,7 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Manager.
+         * <p>The configurations of the cluster management node.</p>
          */
         public Builder manager(Manager manager) {
             this.manager = manager;
@@ -445,7 +526,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MaxCoreCount.
+         * <p>The maximum total number of vCPUs that can be used by all compute nodes managed by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder maxCoreCount(String maxCoreCount) {
             this.maxCoreCount = maxCoreCount;
@@ -453,7 +537,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MaxCount.
+         * <p>The maximum number of compute nodes that the cluster can manage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxCount(String maxCount) {
             this.maxCount = maxCount;
@@ -461,7 +548,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -469,7 +559,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -477,7 +570,10 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-f8z9vb2zaezpkr69a21k</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -490,6 +586,12 @@ public class GetClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class ClusterCustomConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
         private String args;
@@ -529,7 +631,10 @@ public class GetClusterResponseBody extends TeaModel {
             private String script; 
 
             /**
-             * Args.
+             * <p>The arguments that are used to run the script after the scrip is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E-HPC cn-hangzhou</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -537,7 +642,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Script.
+             * <p>The URL that is used to download the post-processing script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://*****</p>
              */
             public Builder script(String script) {
                 this.script = script;
@@ -551,6 +659,12 @@ public class GetClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class DNS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -602,7 +716,19 @@ public class GetClusterResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Status.
+             * <p>The state of the domain name resolution service. Valid values:</p>
+             * <ul>
+             * <li>uninit: The service is being installed.</li>
+             * <li>initing: The service is being initialized.</li>
+             * <li>running: The service is running.</li>
+             * <li>exception: The service has run into an exception.</li>
+             * <li>releasing: The service is being released.</li>
+             * <li>stopped: The service is stopped.</li>
+             * <li>pending: The service is waiting to be configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -610,7 +736,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The resolution type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nis</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -618,7 +747,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the resolution service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.31</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -632,6 +764,12 @@ public class GetClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class DirectoryService extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -683,7 +821,19 @@ public class GetClusterResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Status.
+             * <p>The state of the domain account service. Valid values:</p>
+             * <ul>
+             * <li>uninit: The service is being installed.</li>
+             * <li>initing: The service is being initialized.</li>
+             * <li>running: The service is running.</li>
+             * <li>exception: The service has run into an exception.</li>
+             * <li>releasing: The service is being released.</li>
+             * <li>stopped: The service is stopped.</li>
+             * <li>pending: The service is waiting to be configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -691,7 +841,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the domain account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nis</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -699,7 +852,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the domain account service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.31</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -713,6 +869,12 @@ public class GetClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class ManagerNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -776,7 +938,10 @@ public class GetClusterResponseBody extends TeaModel {
             private String instanceType; 
 
             /**
-             * ExpiredTime.
+             * <p>The expiration time of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2099-12-31T15:59Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -784,7 +949,14 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * <p>The instance billing method of the management node. Valid values:</p>
+             * <ul>
+             * <li>PostPaid: pay-as-you-go</li>
+             * <li>PrePaid: subscription</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -792,7 +964,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1a170jgea1vl******</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -800,7 +975,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g6.4xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -814,6 +992,12 @@ public class GetClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class Scheduler extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -865,7 +1049,19 @@ public class GetClusterResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Status.
+             * <p>The scheduler state. Valid values:</p>
+             * <ul>
+             * <li>uninit: The scheduler is being installed.</li>
+             * <li>initing: The scheduler is being initialized.</li>
+             * <li>running: The scheduler is running.</li>
+             * <li>exception: The scheduler has run into an exception.</li>
+             * <li>releasing: The scheduler is being released.</li>
+             * <li>stopped: The scheduler is stopped.</li>
+             * <li>pending: The scheduler is waiting to be configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -873,7 +1069,17 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The scheduler type. Valid values:</p>
+             * <ul>
+             * <li>SLURM</li>
+             * <li>PBS</li>
+             * <li>OPENGRIDSCHEDULER</li>
+             * <li>LSF_PLUGIN</li>
+             * <li>PBS_PLUGIN</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SLURM</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -881,7 +1087,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The scheduler version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22.05.8</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -895,6 +1104,12 @@ public class GetClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class Manager extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DNS")
         private DNS DNS;
@@ -958,7 +1173,7 @@ public class GetClusterResponseBody extends TeaModel {
             private Scheduler scheduler; 
 
             /**
-             * DNS.
+             * <p>The configurations of the domain name resolution service.</p>
              */
             public Builder DNS(DNS DNS) {
                 this.DNS = DNS;
@@ -966,7 +1181,7 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryService.
+             * <p>The information about the domain account service.</p>
              */
             public Builder directoryService(DirectoryService directoryService) {
                 this.directoryService = directoryService;
@@ -974,7 +1189,7 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ManagerNode.
+             * <p>The configurations of the management node.</p>
              */
             public Builder managerNode(ManagerNode managerNode) {
                 this.managerNode = managerNode;
@@ -982,7 +1197,7 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Scheduler.
+             * <p>The information about the scheduler.</p>
              */
             public Builder scheduler(Scheduler scheduler) {
                 this.scheduler = scheduler;

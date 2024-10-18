@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueueRequest} extends {@link RequestModel}
  *
  * <p>GetQueueRequest</p>
@@ -67,7 +68,11 @@ public class GetQueueRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -76,7 +81,10 @@ public class GetQueueRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * <p>The queue name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comp</p>
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);

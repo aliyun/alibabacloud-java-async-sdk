@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSoftwaresRequest} extends {@link RequestModel}
  *
  * <p>ListSoftwaresRequest</p>
@@ -123,7 +124,10 @@ public class ListSoftwaresRequest extends Request {
         } 
 
         /**
-         * The application category.
+         * <p>The application category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWP</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -132,7 +136,10 @@ public class ListSoftwaresRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -141,7 +148,10 @@ public class ListSoftwaresRequest extends Request {
         }
 
         /**
-         * The software name.
+         * <p>The software name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gromacs</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -150,7 +160,7 @@ public class ListSoftwaresRequest extends Request {
         }
 
         /**
-         * The operating system (OS) information.
+         * <p>The operating system (OS) information.</p>
          */
         public Builder osInfos(java.util.List < OsInfos> osInfos) {
             this.putQueryParameter("OsInfos", osInfos);
@@ -159,7 +169,10 @@ public class ListSoftwaresRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -168,7 +181,10 @@ public class ListSoftwaresRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,6 +199,12 @@ public class ListSoftwaresRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListSoftwaresRequest} extends {@link TeaModel}
+     *
+     * <p>ListSoftwaresRequest</p>
+     */
     public static class OsInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -222,11 +244,14 @@ public class ListSoftwaresRequest extends Request {
             private String osTag; 
 
             /**
-             * The OS architecture. Valid values:
-             * <p>
+             * <p>The OS architecture. Valid values:</p>
+             * <ul>
+             * <li>x86_64</li>
+             * <li>arm64</li>
+             * </ul>
              * 
-             * *   x86\_64
-             * *   arm64
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -234,7 +259,10 @@ public class ListSoftwaresRequest extends Request {
             }
 
             /**
-             * The image tag.
+             * <p>The image tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.9_64</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;

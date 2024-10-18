@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNodesRequest} extends {@link RequestModel}
  *
  * <p>DeleteNodesRequest</p>
@@ -67,7 +68,10 @@ public class DeleteNodesRequest extends Request {
         } 
 
         /**
-         * The cluster ID. You can call the [listclusters](~~87116~~) operation to query the cluster ID.
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/87116.html">listclusters</a> operation to query the cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -76,7 +80,7 @@ public class DeleteNodesRequest extends Request {
         }
 
         /**
-         * The instance IDs of the compute nodes that you want to delete.
+         * <p>The instance IDs of the compute nodes that you want to delete.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

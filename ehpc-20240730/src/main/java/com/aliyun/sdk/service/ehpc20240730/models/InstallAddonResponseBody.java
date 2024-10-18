@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallAddonResponseBody} extends {@link TeaModel}
  *
  * <p>InstallAddonResponseBody</p>
@@ -62,7 +63,11 @@ public class InstallAddonResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The addon ID.
+         * <p>The addon ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login-1.0-W4g****</p>
          */
         public Builder addonId(String addonId) {
             this.addonId = addonId;
@@ -70,7 +75,10 @@ public class InstallAddonResponseBody extends TeaModel {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -78,7 +86,10 @@ public class InstallAddonResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

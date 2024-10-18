@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNodesRequest} extends {@link RequestModel}
  *
  * <p>UpdateNodesRequest</p>
@@ -67,7 +68,10 @@ public class UpdateNodesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -76,7 +80,7 @@ public class UpdateNodesRequest extends Request {
         }
 
         /**
-         * The information about the compute nodes that you want to update.
+         * <p>The information about the compute nodes that you want to update.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
@@ -92,6 +96,12 @@ public class UpdateNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateNodesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateNodesRequest</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -131,7 +141,10 @@ public class UpdateNodesRequest extends Request {
             private Boolean keepAlive; 
 
             /**
-             * The instance ID of the compute node.
+             * <p>The instance ID of the compute node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1bzqq1ddeemuddn****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -139,7 +152,10 @@ public class UpdateNodesRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable deletion protection for the compute node.
+             * <p>Specifies whether to enable deletion protection for the compute node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder keepAlive(Boolean keepAlive) {
                 this.keepAlive = keepAlive;

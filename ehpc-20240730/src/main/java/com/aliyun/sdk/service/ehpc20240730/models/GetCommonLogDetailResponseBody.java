@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCommonLogDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetCommonLogDetailResponseBody</p>
@@ -109,7 +110,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         private String uid; 
 
         /**
-         * Action.
+         * <p>The action name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateCluster</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -117,7 +121,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-abc***</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -125,7 +132,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * LogDetail.
+         * <p>The information about the logs.</p>
          */
         public Builder logDetail(java.util.List < LogDetail> logDetail) {
             this.logDetail = logDetail;
@@ -133,7 +140,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * LogType.
+         * <p>The log type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation</p>
          */
         public Builder logType(String logType) {
             this.logType = logType;
@@ -141,7 +151,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * OperatorUid.
+         * <p>The ID of the user who performed the action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>239***</p>
          */
         public Builder operatorUid(String operatorUid) {
             this.operatorUid = operatorUid;
@@ -149,7 +162,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>464E9919-D04F-4D1D-B375-15989492****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +173,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Uid.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137***</p>
          */
         public Builder uid(String uid) {
             this.uid = uid;
@@ -170,6 +189,12 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCommonLogDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCommonLogDetailResponseBody</p>
+     */
     public static class Stages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
@@ -269,7 +294,16 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * LogLevel.
+             * <p>The log level.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ERROR</li>
+             * <li>INFO</li>
+             * <li>WARN</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder logLevel(String logLevel) {
                 this.logLevel = logLevel;
@@ -277,7 +311,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The output message of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Successfully created security group sg-bcd***</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -285,7 +322,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>The method involved in the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateSecurityGroup</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -293,7 +333,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID associated with the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -301,7 +344,15 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The action state involved in the log. Valid values:</p>
+             * <ul>
+             * <li>InProgress: The action is being performed.</li>
+             * <li>Finished: The action is completed.</li>
+             * <li>Failed: The action failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -309,7 +360,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The resource involved in the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bcd***</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -317,7 +371,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the log was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-22 14:21:54</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -331,6 +388,12 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCommonLogDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCommonLogDetailResponseBody</p>
+     */
     public static class LogDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
@@ -370,7 +433,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             private java.util.List < Stages> stages; 
 
             /**
-             * StageName.
+             * <p>The stage name of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ConfigNetwork</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -378,7 +444,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Stages.
+             * <p>The information about the log stages.</p>
              */
             public Builder stages(java.util.List < Stages> stages) {
                 this.stages = stages;

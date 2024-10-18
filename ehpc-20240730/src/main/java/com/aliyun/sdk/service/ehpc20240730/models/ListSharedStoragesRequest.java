@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSharedStoragesRequest} extends {@link RequestModel}
  *
  * <p>ListSharedStoragesRequest</p>
@@ -82,10 +83,12 @@ public class ListSharedStoragesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +97,10 @@ public class ListSharedStoragesRequest extends Request {
         }
 
         /**
-         * The ID of the attached file system.
+         * <p>The ID of the attached file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bd504b0**</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -103,11 +109,14 @@ public class ListSharedStoragesRequest extends Request {
         }
 
         /**
-         * The type of the attached file system. Valid values:
-         * <p>
+         * <p>The type of the attached file system. Valid values:</p>
+         * <ul>
+         * <li>nas</li>
+         * <li>cpfs</li>
+         * </ul>
          * 
-         * *   nas
-         * *   cpfs
+         * <strong>example:</strong>
+         * <p>nas</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);

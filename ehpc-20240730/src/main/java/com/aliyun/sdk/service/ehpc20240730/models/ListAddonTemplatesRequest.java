@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAddonTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListAddonTemplatesRequest</p>
@@ -109,7 +110,7 @@ public class ListAddonTemplatesRequest extends Request {
         } 
 
         /**
-         * AddonNames.
+         * <p>The addon names.</p>
          */
         public Builder addonNames(java.util.List < String > addonNames) {
             this.putQueryParameter("AddonNames", addonNames);
@@ -118,7 +119,14 @@ public class ListAddonTemplatesRequest extends Request {
         }
 
         /**
-         * ClusterCategory.
+         * <p>The cluster type. Valid values:</p>
+         * <ul>
+         * <li>Standard</li>
+         * <li>Serverless</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder clusterCategory(String clusterCategory) {
             this.putQueryParameter("ClusterCategory", clusterCategory);
@@ -127,7 +135,10 @@ public class ListAddonTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -136,7 +147,10 @@ public class ListAddonTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,7 +159,10 @@ public class ListAddonTemplatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAddonRequest} extends {@link RequestModel}
  *
  * <p>GetAddonRequest</p>
@@ -69,7 +70,11 @@ public class GetAddonRequest extends Request {
         } 
 
         /**
-         * AddonId.
+         * <p>The addon ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login-1.0-W4g****</p>
          */
         public Builder addonId(String addonId) {
             this.putQueryParameter("AddonId", addonId);
@@ -78,7 +83,11 @@ public class GetAddonRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

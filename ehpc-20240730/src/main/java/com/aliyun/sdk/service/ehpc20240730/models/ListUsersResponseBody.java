@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersResponseBody</p>
@@ -85,7 +86,10 @@ public class ListUsersResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the users.
+         * <p>The information about the users.</p>
          */
         public Builder users(Users users) {
             this.users = users;
@@ -130,6 +143,12 @@ public class ListUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddTime")
         private String addTime;
@@ -205,7 +224,10 @@ public class ListUsersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The time when the user was first added.
+             * <p>The time when the user was first added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-08-22T17:46:47</p>
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
@@ -213,12 +235,12 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission group. Valid values:
-             * <p>
+             * <p>The name of the permission group. Valid values:</p>
+             * <p>users: ordinary permissions, which are suitable for regular users that need only to submit and debug jobs.</p>
+             * <p>wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes.</p>
              * 
-             * users: ordinary permissions, which are suitable for regular users that need only to submit and debug jobs.
-             * 
-             * wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes.
+             * <strong>example:</strong>
+             * <p>users</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -226,7 +248,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The permission group ID.
+             * <p>The permission group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -234,7 +259,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -242,7 +270,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuser</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -256,6 +287,12 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserInfo")
         private java.util.List < UserInfo> userInfo;

@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteJobsResponse} extends {@link TeaModel}
+ * 
+ * {@link StopJobsResponse} extends {@link TeaModel}
  *
- * <p>DeleteJobsResponse</p>
+ * <p>StopJobsResponse</p>
  */
-public class DeleteJobsResponse extends Response {
+public class StopJobsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class DeleteJobsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteJobsResponseBody body;
+    private StopJobsResponseBody body;
 
-    private DeleteJobsResponse(BuilderImpl builder) {
+    private StopJobsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteJobsResponse create() {
+    public static StopJobsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class DeleteJobsResponse extends Response {
     /**
      * @return body
      */
-    public DeleteJobsResponseBody getBody() {
+    public StopJobsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteJobsResponse, Builder> {
+    public interface Builder extends Response.Builder<StopJobsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteJobsResponseBody body);
+        Builder body(StopJobsResponseBody body);
 
         @Override
-        DeleteJobsResponse build();
+        StopJobsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteJobsResponse, Builder>
+            extends Response.BuilderImpl<StopJobsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteJobsResponseBody body; 
+        private StopJobsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteJobsResponse response) {
+        private BuilderImpl(StopJobsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class DeleteJobsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteJobsResponseBody body) {
+        public Builder body(StopJobsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteJobsResponse build() {
-            return new DeleteJobsResponse(this);
+        public StopJobsResponse build() {
+            return new StopJobsResponse(this);
         } 
 
     } 

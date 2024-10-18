@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddonNodeTemplate} extends {@link TeaModel}
  *
  * <p>AddonNodeTemplate</p>
@@ -273,7 +274,10 @@ public class AddonNodeTemplate extends TeaModel {
         }
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_3_x64_20G_alibase_20221102.vhd</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -297,7 +301,10 @@ public class AddonNodeTemplate extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c7.4xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -305,7 +312,10 @@ public class AddonNodeTemplate extends TeaModel {
         }
 
         /**
-         * OsName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS  7.6 64 位</p>
          */
         public Builder osName(String osName) {
             this.osName = osName;
@@ -313,7 +323,10 @@ public class AddonNodeTemplate extends TeaModel {
         }
 
         /**
-         * OsNameEN.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS  7.6 64 bit</p>
          */
         public Builder osNameEN(String osNameEN) {
             this.osNameEN = osNameEN;
@@ -374,6 +387,12 @@ public class AddonNodeTemplate extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddonNodeTemplate} extends {@link TeaModel}
+     *
+     * <p>AddonNodeTemplate</p>
+     */
     public static class DataDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -475,6 +494,12 @@ public class AddonNodeTemplate extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddonNodeTemplate} extends {@link TeaModel}
+     *
+     * <p>AddonNodeTemplate</p>
+     */
     public static class SystemDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;

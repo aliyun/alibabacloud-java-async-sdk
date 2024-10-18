@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSharedStoragesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSharedStoragesResponseBody</p>
@@ -61,7 +62,10 @@ public class ListSharedStoragesResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6757FA4-8FED-4602-B7F5-3550C084****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the attached shared storage.
+         * <p>The information about the attached shared storage.</p>
          */
         public Builder sharedStorages(java.util.List < SharedStorages> sharedStorages) {
             this.sharedStorages = sharedStorages;
@@ -77,11 +81,14 @@ public class ListSharedStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class ListSharedStoragesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSharedStoragesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSharedStoragesResponseBody</p>
+     */
     public static class MountInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountDirectory")
         private String mountDirectory;
@@ -169,7 +182,10 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             private String storageDirectory; 
 
             /**
-             * The local mount directory of the attached file system.
+             * <p>The local mount directory of the attached file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder mountDirectory(String mountDirectory) {
                 this.mountDirectory = mountDirectory;
@@ -177,11 +193,14 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * The mount options for the attached file system. Valid values:
-             * <p>
+             * <p>The mount options for the attached file system. Valid values:</p>
+             * <ul>
+             * <li>-t nfs -o vers=3,nolock,proto=tcp,noresvport</li>
+             * <li>-t nfs -o vers=4.0,noresvport</li>
+             * </ul>
              * 
-             * *   \-t nfs -o vers=3,nolock,proto=tcp,noresvport
-             * *   \-t nfs -o vers=4.0,noresvport
+             * <strong>example:</strong>
+             * <p>-t nfs -o vers=4.0,noresvport</p>
              */
             public Builder mountOptions(String mountOptions) {
                 this.mountOptions = mountOptions;
@@ -189,7 +208,10 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * The mount target of the attached file system.
+             * <p>The mount target of the attached file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0bd504b***-ngq26.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder mountTarget(String mountTarget) {
                 this.mountTarget = mountTarget;
@@ -197,12 +219,15 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol used by the mount target of the attached file system. Valid values:
-             * <p>
+             * <p>The protocol used by the mount target of the attached file system. Valid values:</p>
+             * <ul>
+             * <li>nfs3</li>
+             * <li>nfs4</li>
+             * <li>cpfs</li>
+             * </ul>
              * 
-             * *   nfs3
-             * *   nfs4
-             * *   cpfs
+             * <strong>example:</strong>
+             * <p>nfs3</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -210,7 +235,10 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage directory of the attached file system.
+             * <p>The storage directory of the attached file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/testehpc</p>
              */
             public Builder storageDirectory(String storageDirectory) {
                 this.storageDirectory = storageDirectory;
@@ -224,6 +252,12 @@ public class ListSharedStoragesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSharedStoragesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSharedStoragesResponseBody</p>
+     */
     public static class SharedStorages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
@@ -287,7 +321,10 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             private java.util.List < MountInfo> mountInfo; 
 
             /**
-             * The ID of the attached file system.
+             * <p>The ID of the attached file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08c7f4b***</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -295,12 +332,15 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol used by the attached file system. Valid values:
-             * <p>
+             * <p>The protocol used by the attached file system. Valid values:</p>
+             * <ul>
+             * <li>nfs3</li>
+             * <li>nfs4</li>
+             * <li>cpfs</li>
+             * </ul>
              * 
-             * *   nfs3
-             * *   nfs4
-             * *   cpfs
+             * <strong>example:</strong>
+             * <p>nfs4</p>
              */
             public Builder fileSystemProtocol(String fileSystemProtocol) {
                 this.fileSystemProtocol = fileSystemProtocol;
@@ -308,11 +348,14 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the attached file system. Valid values:
-             * <p>
+             * <p>The type of the attached file system. Valid values:</p>
+             * <ul>
+             * <li>nas</li>
+             * <li>cpfs</li>
+             * </ul>
              * 
-             * *   nas
-             * *   cpfs
+             * <strong>example:</strong>
+             * <p>nas</p>
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -320,7 +363,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * The mount information.
+             * <p>The mount information.</p>
              */
             public Builder mountInfo(java.util.List < MountInfo> mountInfo) {
                 this.mountInfo = mountInfo;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallAddonRequest} extends {@link RequestModel}
  *
  * <p>InstallAddonRequest</p>
@@ -114,7 +115,11 @@ public class InstallAddonRequest extends Request {
         } 
 
         /**
-         * The addon name.
+         * <p>The addon name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
@@ -123,7 +128,11 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The addon version.
+         * <p>The addon version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder addonVersion(String addonVersion) {
             this.putQueryParameter("AddonVersion", addonVersion);
@@ -132,7 +141,11 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -141,7 +154,11 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The resource configurations of the addon.
+         * <p>The resource configurations of the addon.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>{&quot;EipResource&quot;: {&quot;AutoCreate&quot;: true}, &quot;EcsResources&quot;: [{&quot;InstanceType&quot;: &quot;ecs.c7.xlarge&quot;, &quot;ImageId&quot;: &quot;centos_7_6_xxx.vhd&quot;, &quot;SystemDisk&quot;: {&quot;Category&quot;: &quot;cloud_essd&quot;, &quot;Size&quot;: 40, &quot;Level&quot;: &quot;PL0&quot;}]}</code></p>
          */
         public Builder resourcesSpec(String resourcesSpec) {
             this.putQueryParameter("ResourcesSpec", resourcesSpec);
@@ -150,7 +167,11 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The service configurations of the addon.
+         * <p>The service configurations of the addon.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>[{&quot;ServiceName&quot;: &quot;SSH&quot;, &quot;ServiceAccessType&quot;: null, &quot;ServiceAccessUrl&quot;: null, &quot;NetworkACL&quot;: [{&quot;IpProtocol&quot;: &quot;TCP&quot;, &quot;Port&quot;: 22, &quot;SourceCidrIp&quot;: &quot;0.0.0.0/0&quot;}]}, {&quot;ServiceName&quot;: &quot;VNC&quot;, &quot;ServiceAccessType&quot;: null, &quot;ServiceAccessUrl&quot;: null, &quot;NetworkACL&quot;: [{&quot;IpProtocol&quot;: &quot;TCP&quot;, &quot;Port&quot;: 12016, &quot;SourceCidrIp&quot;: &quot;0.0.0.0/0&quot;}]}]</code></p>
          */
         public Builder servicesSpec(String servicesSpec) {
             this.putQueryParameter("ServicesSpec", servicesSpec);

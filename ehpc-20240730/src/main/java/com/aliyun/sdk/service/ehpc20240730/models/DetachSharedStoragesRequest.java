@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachSharedStoragesRequest} extends {@link RequestModel}
  *
  * <p>DetachSharedStoragesRequest</p>
@@ -69,10 +70,12 @@ public class DetachSharedStoragesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -81,7 +84,8 @@ public class DetachSharedStoragesRequest extends Request {
         }
 
         /**
-         * The information about mounted shared storage resources.
+         * <p>The information about mounted shared storage resources.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sharedStorages(java.util.List < SharedStorages> sharedStorages) {
             String sharedStoragesShrink = shrink(sharedStorages, "SharedStorages", "json");
@@ -97,6 +101,12 @@ public class DetachSharedStoragesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DetachSharedStoragesRequest} extends {@link TeaModel}
+     *
+     * <p>DetachSharedStoragesRequest</p>
+     */
     public static class SharedStorages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountDirectory")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -125,7 +135,11 @@ public class DetachSharedStoragesRequest extends Request {
             private String mountDirectory; 
 
             /**
-             * The local mount directory of the mounted file system.
+             * <p>The local mount directory of the mounted file system.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder mountDirectory(String mountDirectory) {
                 this.mountDirectory = mountDirectory;

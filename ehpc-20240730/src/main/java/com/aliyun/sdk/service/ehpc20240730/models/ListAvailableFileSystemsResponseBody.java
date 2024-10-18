@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableFileSystemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAvailableFileSystemsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * FileSystemList.
+         * <p>The file systems.</p>
          */
         public Builder fileSystemList(java.util.List < FileSystemList> fileSystemList) {
             this.fileSystemList = fileSystemList;
@@ -93,7 +94,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF4E8AB1-02A3-5ECF-87CC-3AB7BE98**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAvailableFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableFileSystemsResponseBody</p>
+     */
     public static class MountTargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
         private String mountTargetDomain;
@@ -205,7 +224,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * MountTargetDomain.
+             * <p>The address of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c0967****.cn-hangzhou.cpfs.nas.aliyuncs.com</p>
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -213,7 +235,13 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type. Valid values: Valid values:</p>
+             * <ul>
+             * <li>vpc</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -221,7 +249,16 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the mount target. Valid values:</p>
+             * <ul>
+             * <li>Active: The mount target is available.</li>
+             * <li>Inactive: The mount target is unavailable.</li>
+             * <li>Pending: The mount target is being mounted.</li>
+             * <li>Deleting: The mount target is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -229,7 +266,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2ze0c41hwu7lc29ris***</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -237,7 +277,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vbvb34rtyh6xb3zrehs1****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -251,6 +294,12 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAvailableFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableFileSystemsResponseBody</p>
+     */
     public static class FileSystemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -362,7 +411,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * CreateTime.
+             * <p>The time when the file system was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-7-29 15:43:53</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -370,7 +422,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fa0248***</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -378,7 +433,14 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemType.
+             * <p>The type of the file system. Valid values:</p>
+             * <ul>
+             * <li>standard: general-purpose network-attached storage (NAS) file system</li>
+             * <li>extreme: extreme NAS file system</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cpfs</p>
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -386,7 +448,7 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetList.
+             * <p>The mount targets of the file system.</p>
              */
             public Builder mountTargetList(java.util.List < MountTargetList> mountTargetList) {
                 this.mountTargetList = mountTargetList;
@@ -394,7 +456,15 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>The protocol type of the file system. Valid values:</p>
+             * <ul>
+             * <li>nfs</li>
+             * <li>smb</li>
+             * <li>cpfs</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cpfs</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -402,7 +472,18 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the file system. Valid values:</p>
+             * <ul>
+             * <li>Pending: The file system is processing a task.</li>
+             * <li>Running: The file system is available. You can perform subsequent operations, such as creating a mount target, only when the file system is in the Running state.</li>
+             * <li>Stopped: The file system is unavailable.</li>
+             * <li>Extending: The file system is being scaled out.</li>
+             * <li>Stopping: The file system is being stopped.</li>
+             * <li>Deleting: The file system is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -410,7 +491,14 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type of the file system.</p>
+             * <ul>
+             * <li>Valid values if FileSystemType is set to standard: Capacity and Performance.</li>
+             * <li>Valid values if FileSystemType is set to extreme: standard and advance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Performance</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -418,7 +506,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp132kgui8n0targb****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

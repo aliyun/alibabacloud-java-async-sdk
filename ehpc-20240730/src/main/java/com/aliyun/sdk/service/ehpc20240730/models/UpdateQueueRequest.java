@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQueueRequest} extends {@link RequestModel}
  *
  * <p>UpdateQueueRequest</p>
@@ -67,7 +68,11 @@ public class UpdateQueueRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -76,7 +81,7 @@ public class UpdateQueueRequest extends Request {
         }
 
         /**
-         * Queue.
+         * <p>The information about the queue to be updated.</p>
          */
         public Builder queue(Queue queue) {
             String queueShrink = shrink(queue, "Queue", "json");
@@ -92,6 +97,12 @@ public class UpdateQueueRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateQueueRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateQueueRequest</p>
+     */
     public static class Queue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
@@ -288,7 +299,13 @@ public class UpdateQueueRequest extends Request {
             private java.util.List < String > vSwitchIds; 
 
             /**
-             * AllocationStrategy.
+             * <p>The policy based on which instance types are selected for compute nodes during auto scale-outs. Valid values:</p>
+             * <ul>
+             * <li>PriorityInstanceType</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PriorityInstanceType</p>
              */
             public Builder allocationStrategy(String allocationStrategy) {
                 this.allocationStrategy = allocationStrategy;
@@ -296,7 +313,7 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * ComputeNodes.
+             * <p>The hardware configurations of the compute nodes in the queue. Valid values of N: 1 to 10.</p>
              */
             public Builder computeNodes(java.util.List < NodeTemplate > computeNodes) {
                 this.computeNodes = computeNodes;
@@ -304,7 +321,14 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * EnableScaleIn.
+             * <p>Specifies whether to enable auto scale-in for the queue. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableScaleIn(Boolean enableScaleIn) {
                 this.enableScaleIn = enableScaleIn;
@@ -312,7 +336,14 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * EnableScaleOut.
+             * <p>Specifies whether to enable auto scale-out for the queue. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableScaleOut(Boolean enableScaleOut) {
                 this.enableScaleOut = enableScaleOut;
@@ -320,7 +351,10 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * HostnamePrefix.
+             * <p>The hostname prefix of the compute nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compute</p>
              */
             public Builder hostnamePrefix(String hostnamePrefix) {
                 this.hostnamePrefix = hostnamePrefix;
@@ -328,7 +362,10 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * HostnameSuffix.
+             * <p>The hostname suffix of the compute nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hpc</p>
              */
             public Builder hostnameSuffix(String hostnameSuffix) {
                 this.hostnameSuffix = hostnameSuffix;
@@ -336,7 +373,10 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * InitialCount.
+             * <p>The initial number of compute nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder initialCount(Integer initialCount) {
                 this.initialCount = initialCount;
@@ -344,7 +384,10 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * InterConnect.
+             * <p>The type of the network for interconnecting compute nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>erdma</p>
              */
             public Builder interConnect(String interConnect) {
                 this.interConnect = interConnect;
@@ -352,7 +395,7 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * KeepAliveNodes.
+             * <p>The nodes for which deletion protection is enabled in the queue.</p>
              */
             public Builder keepAliveNodes(java.util.List < String > keepAliveNodes) {
                 this.keepAliveNodes = keepAliveNodes;
@@ -360,7 +403,10 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * MaxCount.
+             * <p>The maximum number of compute nodes that the queue can contain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxCount(Integer maxCount) {
                 this.maxCount = maxCount;
@@ -368,7 +414,10 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * MaxCountPerCycle.
+             * <p>The minimum number of compute nodes that are added to the queue during an automatic scale-out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder maxCountPerCycle(Long maxCountPerCycle) {
                 this.maxCountPerCycle = maxCountPerCycle;
@@ -376,7 +425,10 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * MinCount.
+             * <p>The minimum number of compute nodes that the queue must contain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minCount(Integer minCount) {
                 this.minCount = minCount;
@@ -384,7 +436,11 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * QueueName.
+             * <p>The queue name.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comp</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -392,7 +448,10 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * RamRole.
+             * <p>The Resource Access Management (RAM) role that is assumed by compute nodes in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunECSInstanceForEHPCRole</p>
              */
             public Builder ramRole(String ramRole) {
                 this.ramRole = ramRole;
@@ -400,7 +459,7 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitches available for use by compute nodes in the queue.</p>
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;

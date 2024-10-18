@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCommonLogsRequest} extends {@link RequestModel}
  *
  * <p>ListCommonLogsRequest</p>
@@ -209,7 +210,7 @@ public class ListCommonLogsRequest extends Request {
         } 
 
         /**
-         * ActionName.
+         * <p>The action types.</p>
          */
         public Builder actionName(java.util.List < String > actionName) {
             String actionNameShrink = shrink(actionName, "ActionName", "json");
@@ -219,7 +220,16 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * ActionStatus.
+         * <p>The action status. Logs associated with the specific action status are returned.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Finished: The action is completed.</li>
+         * <li>Failed: The action failed.</li>
+         * <li>InProgress: The action is being performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder actionStatus(String actionStatus) {
             this.putQueryParameter("ActionStatus", actionStatus);
@@ -228,7 +238,10 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -237,7 +250,11 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * From.
+         * <p>The start time of the time range. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1703821542</p>
          */
         public Builder from(Long from) {
             this.putQueryParameter("From", from);
@@ -246,7 +263,11 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * IsReverse.
+         * <p>Specifies whether to display results in reverse order.</p>
+         * <p>Default value: true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isReverse(Boolean isReverse) {
             this.putQueryParameter("IsReverse", isReverse);
@@ -255,7 +276,10 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * LogRequestId.
+         * <p>The request ID of the action. Logs associated with the specific request ID are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder logRequestId(String logRequestId) {
             this.putQueryParameter("LogRequestId", logRequestId);
@@ -264,7 +288,10 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * LogType.
+         * <p>The log type. Logs of the specific type are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation</p>
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
@@ -273,7 +300,10 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * OperatorUid.
+         * <p>The ID of the user who performed the action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137***</p>
          */
         public Builder operatorUid(String operatorUid) {
             this.putQueryParameter("OperatorUid", operatorUid);
@@ -282,7 +312,12 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -291,7 +326,11 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -300,7 +339,10 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>The name of the resource involved in the action. Logs associated with the specific resource are returned. This parameter is not recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-abc***</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -309,7 +351,11 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * To.
+         * <p>The end time of the time range. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1703821666</p>
          */
         public Builder to(Long to) {
             this.putQueryParameter("To", to);

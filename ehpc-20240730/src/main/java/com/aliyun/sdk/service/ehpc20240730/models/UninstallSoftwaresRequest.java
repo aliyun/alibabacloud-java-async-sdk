@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UninstallSoftwaresRequest} extends {@link RequestModel}
  *
  * <p>UninstallSoftwaresRequest</p>
@@ -67,7 +68,7 @@ public class UninstallSoftwaresRequest extends Request {
         } 
 
         /**
-         * The information about the software systems that you want to uninstall.
+         * <p>The information about the software systems that you want to uninstall.</p>
          */
         public Builder additionalPackages(java.util.List < AdditionalPackages> additionalPackages) {
             String additionalPackagesShrink = shrink(additionalPackages, "AdditionalPackages", "json");
@@ -77,10 +78,11 @@ public class UninstallSoftwaresRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -95,6 +97,12 @@ public class UninstallSoftwaresRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UninstallSoftwaresRequest} extends {@link TeaModel}
+     *
+     * <p>UninstallSoftwaresRequest</p>
+     */
     public static class AdditionalPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -134,7 +142,10 @@ public class UninstallSoftwaresRequest extends Request {
             private String version; 
 
             /**
-             * The software name.
+             * <p>The software name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gromacs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -142,7 +153,10 @@ public class UninstallSoftwaresRequest extends Request {
             }
 
             /**
-             * The software version.
+             * <p>The software version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
