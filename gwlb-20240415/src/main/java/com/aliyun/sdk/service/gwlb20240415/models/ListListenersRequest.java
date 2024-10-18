@@ -30,7 +30,7 @@ public class ListListenersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Skip")
-    private Long skip;
+    private Integer skip;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
@@ -90,7 +90,7 @@ public class ListListenersRequest extends Request {
     /**
      * @return skip
      */
-    public Long getSkip() {
+    public Integer getSkip() {
         return this.skip;
     }
 
@@ -106,7 +106,7 @@ public class ListListenersRequest extends Request {
         private java.util.List < String > loadBalancerIds; 
         private Integer maxResults; 
         private String nextToken; 
-        private Long skip; 
+        private Integer skip; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -162,7 +162,7 @@ public class ListListenersRequest extends Request {
         /**
          * Skip.
          */
-        public Builder skip(Long skip) {
+        public Builder skip(Integer skip) {
             this.putBodyParameter("Skip", skip);
             this.skip = skip;
             return this;
