@@ -54,6 +54,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
     @com.aliyun.core.annotation.Body
@@ -310,7 +311,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312312112***</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);
