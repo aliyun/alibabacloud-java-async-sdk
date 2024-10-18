@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserBuyStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserBuyStatusResponseBody</p>
@@ -130,6 +131,12 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserBuyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserBuyStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bid")
         private Long bid;
@@ -181,7 +188,10 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
             private Boolean indebt; 
 
             /**
-             * Bid。
+             * <p>Bid。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder bid(Long bid) {
                 this.bid = bid;

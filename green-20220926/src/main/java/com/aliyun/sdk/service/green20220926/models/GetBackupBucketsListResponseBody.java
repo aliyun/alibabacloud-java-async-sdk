@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBackupBucketsListResponseBody} extends {@link TeaModel}
  *
  * <p>GetBackupBucketsListResponseBody</p>
@@ -70,6 +71,12 @@ public class GetBackupBucketsListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBackupBucketsListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBackupBucketsListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;

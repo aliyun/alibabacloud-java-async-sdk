@@ -7,37 +7,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetJobNameListRequest} extends {@link RequestModel}
+ * {@link ExportOssCheckStatRequest} extends {@link RequestModel}
  *
- * <p>GetJobNameListRequest</p>
+ * <p>ExportOssCheckStatRequest</p>
  */
-public class GetJobNameListRequest extends Request {
-    @com.aliyun.core.annotation.Query
+public class ExportOssCheckStatRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ByMonth")
+    private Boolean byMonth;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Query")
-    private String query;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentTaskId")
+    private String parentTaskId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Sort")
-    private java.util.Map < String, String > sort;
-
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
-    private GetJobNameListRequest(Builder builder) {
+    private ExportOssCheckStatRequest(Builder builder) {
         super(builder);
+        this.byMonth = builder.byMonth;
         this.endDate = builder.endDate;
-        this.query = builder.query;
+        this.parentTaskId = builder.parentTaskId;
         this.regionId = builder.regionId;
-        this.sort = builder.sort;
         this.startDate = builder.startDate;
     }
 
@@ -45,13 +45,20 @@ public class GetJobNameListRequest extends Request {
         return new Builder();
     }
 
-    public static GetJobNameListRequest create() {
+    public static ExportOssCheckStatRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return byMonth
+     */
+    public Boolean getByMonth() {
+        return this.byMonth;
     }
 
     /**
@@ -62,10 +69,10 @@ public class GetJobNameListRequest extends Request {
     }
 
     /**
-     * @return query
+     * @return parentTaskId
      */
-    public String getQuery() {
-        return this.query;
+    public String getParentTaskId() {
+        return this.parentTaskId;
     }
 
     /**
@@ -76,54 +83,56 @@ public class GetJobNameListRequest extends Request {
     }
 
     /**
-     * @return sort
-     */
-    public java.util.Map < String, String > getSort() {
-        return this.sort;
-    }
-
-    /**
      * @return startDate
      */
     public String getStartDate() {
         return this.startDate;
     }
 
-    public static final class Builder extends Request.Builder<GetJobNameListRequest, Builder> {
+    public static final class Builder extends Request.Builder<ExportOssCheckStatRequest, Builder> {
+        private Boolean byMonth; 
         private String endDate; 
-        private String query; 
+        private String parentTaskId; 
         private String regionId; 
-        private java.util.Map < String, String > sort; 
         private String startDate; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetJobNameListRequest request) {
+        private Builder(ExportOssCheckStatRequest request) {
             super(request);
+            this.byMonth = request.byMonth;
             this.endDate = request.endDate;
-            this.query = request.query;
+            this.parentTaskId = request.parentTaskId;
             this.regionId = request.regionId;
-            this.sort = request.sort;
             this.startDate = request.startDate;
         } 
+
+        /**
+         * ByMonth.
+         */
+        public Builder byMonth(Boolean byMonth) {
+            this.putBodyParameter("ByMonth", byMonth);
+            this.byMonth = byMonth;
+            return this;
+        }
 
         /**
          * EndDate.
          */
         public Builder endDate(String endDate) {
-            this.putQueryParameter("EndDate", endDate);
+            this.putBodyParameter("EndDate", endDate);
             this.endDate = endDate;
             return this;
         }
 
         /**
-         * Query.
+         * ParentTaskId.
          */
-        public Builder query(String query) {
-            this.putQueryParameter("Query", query);
-            this.query = query;
+        public Builder parentTaskId(String parentTaskId) {
+            this.putBodyParameter("ParentTaskId", parentTaskId);
+            this.parentTaskId = parentTaskId;
             return this;
         }
 
@@ -137,27 +146,17 @@ public class GetJobNameListRequest extends Request {
         }
 
         /**
-         * Sort.
-         */
-        public Builder sort(java.util.Map < String, String > sort) {
-            String sortShrink = shrink(sort, "Sort", "json");
-            this.putQueryParameter("Sort", sortShrink);
-            this.sort = sort;
-            return this;
-        }
-
-        /**
          * StartDate.
          */
         public Builder startDate(String startDate) {
-            this.putQueryParameter("StartDate", startDate);
+            this.putBodyParameter("StartDate", startDate);
             this.startDate = startDate;
             return this;
         }
 
         @Override
-        public GetJobNameListRequest build() {
-            return new GetJobNameListRequest(this);
+        public ExportOssCheckStatRequest build() {
+            return new ExportOssCheckStatRequest(this);
         } 
 
     } 

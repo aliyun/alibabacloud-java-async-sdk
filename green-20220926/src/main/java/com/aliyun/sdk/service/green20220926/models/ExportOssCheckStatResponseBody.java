@@ -7,18 +7,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetImageSceneLabelListConfResponseBody} extends {@link TeaModel}
+ * {@link ExportOssCheckStatResponseBody} extends {@link TeaModel}
  *
- * <p>GetImageSceneLabelListConfResponseBody</p>
+ * <p>ExportOssCheckStatResponseBody</p>
  */
-public class GetImageSceneLabelListConfResponseBody extends TeaModel {
+public class ExportOssCheckStatResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < ? > data;
+    private String data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetImageSceneLabelListConfResponseBody(Builder builder) {
+    private ExportOssCheckStatResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -27,14 +27,14 @@ public class GetImageSceneLabelListConfResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetImageSceneLabelListConfResponseBody create() {
+    public static ExportOssCheckStatResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return data
      */
-    public java.util.List < ? > getData() {
+    public String getData() {
         return this.data;
     }
 
@@ -46,13 +46,13 @@ public class GetImageSceneLabelListConfResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ? > data; 
+        private String data; 
         private String requestId; 
 
         /**
          * Data.
          */
-        public Builder data(java.util.List < ? > data) {
+        public Builder data(String data) {
             this.data = data;
             return this;
         }
@@ -65,8 +65,8 @@ public class GetImageSceneLabelListConfResponseBody extends TeaModel {
             return this;
         }
 
-        public GetImageSceneLabelListConfResponseBody build() {
-            return new GetImageSceneLabelListConfResponseBody(this);
+        public ExportOssCheckStatResponseBody build() {
+            return new ExportOssCheckStatResponseBody(this);
         } 
 
     } 

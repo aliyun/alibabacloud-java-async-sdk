@@ -58,6 +58,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddImageLib  AddImageLibRequest
+     * @return AddImageLibResponse
+     */
     @Override
     public CompletableFuture<AddImageLibResponse> addImageLib(AddImageLibRequest request) {
         try {
@@ -72,6 +76,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddImages2Lib  AddImages2LibRequest
+     * @return AddImages2LibResponse
+     */
     @Override
     public CompletableFuture<AddImages2LibResponse> addImages2Lib(AddImages2LibRequest request) {
         try {
@@ -86,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddKeywordLib  AddKeywordLibRequest
+     * @return AddKeywordLibResponse
+     */
     @Override
     public CompletableFuture<AddKeywordLibResponse> addKeywordLib(AddKeywordLibRequest request) {
         try {
@@ -100,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddKeywords  AddKeywordsRequest
+     * @return AddKeywordsResponse
+     */
     @Override
     public CompletableFuture<AddKeywordsResponse> addKeywords(AddKeywordsRequest request) {
         try {
@@ -114,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddKeywordsToLib  AddKeywordsToLibRequest
+     * @return AddKeywordsToLibResponse
+     */
     @Override
     public CompletableFuture<AddKeywordsToLibResponse> addKeywordsToLib(AddKeywordsToLibRequest request) {
         try {
@@ -128,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelStockOssCheckTask  CancelStockOssCheckTaskRequest
+     * @return CancelStockOssCheckTaskResponse
+     */
     @Override
     public CompletableFuture<CancelStockOssCheckTaskResponse> cancelStockOssCheckTask(CancelStockOssCheckTaskRequest request) {
         try {
@@ -142,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopyServiceConfig  CopyServiceConfigRequest
+     * @return CopyServiceConfigResponse
+     */
     @Override
     public CompletableFuture<CopyServiceConfigResponse> copyServiceConfig(CopyServiceConfigRequest request) {
         try {
@@ -156,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatStockOssCheckTask  CreatStockOssCheckTaskRequest
+     * @return CreatStockOssCheckTaskResponse
+     */
     @Override
     public CompletableFuture<CreatStockOssCheckTaskResponse> creatStockOssCheckTask(CreatStockOssCheckTaskRequest request) {
         try {
@@ -170,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePreCheck  CreatePreCheckRequest
+     * @return CreatePreCheckResponse
+     */
     @Override
     public CompletableFuture<CreatePreCheckResponse> createPreCheck(CreatePreCheckRequest request) {
         try {
@@ -184,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteImagesFromLib  DeleteImagesFromLibRequest
+     * @return DeleteImagesFromLibResponse
+     */
     @Override
     public CompletableFuture<DeleteImagesFromLibResponse> deleteImagesFromLib(DeleteImagesFromLibRequest request) {
         try {
@@ -198,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteKeyword  DeleteKeywordRequest
+     * @return DeleteKeywordResponse
+     */
     @Override
     public CompletableFuture<DeleteKeywordResponse> deleteKeyword(DeleteKeywordRequest request) {
         try {
@@ -212,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteKeywordLib  DeleteKeywordLibRequest
+     * @return DeleteKeywordLibResponse
+     */
     @Override
     public CompletableFuture<DeleteKeywordLibResponse> deleteKeywordLib(DeleteKeywordLibRequest request) {
         try {
@@ -226,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportCipStats  ExportCipStatsRequest
+     * @return ExportCipStatsResponse
+     */
     @Override
     public CompletableFuture<ExportCipStatsResponse> exportCipStats(ExportCipStatsRequest request) {
         try {
@@ -240,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportKeyword  ExportKeywordRequest
+     * @return ExportKeywordResponse
+     */
     @Override
     public CompletableFuture<ExportKeywordResponse> exportKeyword(ExportKeywordRequest request) {
         try {
@@ -254,6 +310,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportOssCheckStat  ExportOssCheckStatRequest
+     * @return ExportOssCheckStatResponse
+     */
+    @Override
+    public CompletableFuture<ExportOssCheckStatResponse> exportOssCheckStat(ExportOssCheckStatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ExportOssCheckStat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExportOssCheckStatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExportOssCheckStatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ExportResult  ExportResultRequest
+     * @return ExportResultResponse
+     */
     @Override
     public CompletableFuture<ExportResultResponse> exportResult(ExportResultRequest request) {
         try {
@@ -268,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportScanResult  ExportScanResultRequest
+     * @return ExportScanResultResponse
+     */
     @Override
     public CompletableFuture<ExportScanResultResponse> exportScanResult(ExportScanResultRequest request) {
         try {
@@ -282,6 +364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportTextScanResult  ExportTextScanResultRequest
+     * @return ExportTextScanResultResponse
+     */
     @Override
     public CompletableFuture<ExportTextScanResultResponse> exportTextScanResult(ExportTextScanResultRequest request) {
         try {
@@ -296,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBackupBucketsList  GetBackupBucketsListRequest
+     * @return GetBackupBucketsListResponse
+     */
     @Override
     public CompletableFuture<GetBackupBucketsListResponse> getBackupBucketsList(GetBackupBucketsListRequest request) {
         try {
@@ -310,6 +400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBackupConfig  GetBackupConfigRequest
+     * @return GetBackupConfigResponse
+     */
     @Override
     public CompletableFuture<GetBackupConfigResponse> getBackupConfig(GetBackupConfigRequest request) {
         try {
@@ -324,6 +418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBackupStatus  GetBackupStatusRequest
+     * @return GetBackupStatusResponse
+     */
     @Override
     public CompletableFuture<GetBackupStatusResponse> getBackupStatus(GetBackupStatusRequest request) {
         try {
@@ -338,6 +436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBucketsList  GetBucketsListRequest
+     * @return GetBucketsListResponse
+     */
     @Override
     public CompletableFuture<GetBucketsListResponse> getBucketsList(GetBucketsListRequest request) {
         try {
@@ -352,6 +454,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCipStats  GetCipStatsRequest
+     * @return GetCipStatsResponse
+     */
     @Override
     public CompletableFuture<GetCipStatsResponse> getCipStats(GetCipStatsRequest request) {
         try {
@@ -366,6 +472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetExecuteTime  GetExecuteTimeRequest
+     * @return GetExecuteTimeResponse
+     */
     @Override
     public CompletableFuture<GetExecuteTimeResponse> getExecuteTime(GetExecuteTimeRequest request) {
         try {
@@ -380,6 +490,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetImageSceneLabelListConf  GetImageSceneLabelListConfRequest
+     * @return GetImageSceneLabelListConfResponse
+     */
     @Override
     public CompletableFuture<GetImageSceneLabelListConfResponse> getImageSceneLabelListConf(GetImageSceneLabelListConfRequest request) {
         try {
@@ -394,6 +508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobNameList  GetJobNameListRequest
+     * @return GetJobNameListResponse
+     */
     @Override
     public CompletableFuture<GetJobNameListResponse> getJobNameList(GetJobNameListRequest request) {
         try {
@@ -408,6 +526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetKeywordImportResult  GetKeywordImportResultRequest
+     * @return GetKeywordImportResultResponse
+     */
     @Override
     public CompletableFuture<GetKeywordImportResultResponse> getKeywordImportResult(GetKeywordImportResultRequest request) {
         try {
@@ -422,6 +544,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOssCheckStat  GetOssCheckStatRequest
+     * @return GetOssCheckStatResponse
+     */
+    @Override
+    public CompletableFuture<GetOssCheckStatResponse> getOssCheckStat(GetOssCheckStatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetOssCheckStat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetOssCheckStatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetOssCheckStatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetOssCheckStatus  GetOssCheckStatusRequest
+     * @return GetOssCheckStatusResponse
+     */
     @Override
     public CompletableFuture<GetOssCheckStatusResponse> getOssCheckStatus(GetOssCheckStatusRequest request) {
         try {
@@ -436,6 +580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetScanNum  GetScanNumRequest
+     * @return GetScanNumResponse
+     */
     @Override
     public CompletableFuture<GetScanNumResponse> getScanNum(GetScanNumRequest request) {
         try {
@@ -450,6 +598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetScanResult  GetScanResultRequest
+     * @return GetScanResultResponse
+     */
     @Override
     public CompletableFuture<GetScanResultResponse> getScanResult(GetScanResultRequest request) {
         try {
@@ -464,6 +616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceConf  GetServiceConfRequest
+     * @return GetServiceConfResponse
+     */
     @Override
     public CompletableFuture<GetServiceConfResponse> getServiceConf(GetServiceConfRequest request) {
         try {
@@ -478,6 +634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceConfig  GetServiceConfigRequest
+     * @return GetServiceConfigResponse
+     */
     @Override
     public CompletableFuture<GetServiceConfigResponse> getServiceConfig(GetServiceConfigRequest request) {
         try {
@@ -492,6 +652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceLabelConfig  GetServiceLabelConfigRequest
+     * @return GetServiceLabelConfigResponse
+     */
     @Override
     public CompletableFuture<GetServiceLabelConfigResponse> getServiceLabelConfig(GetServiceLabelConfigRequest request) {
         try {
@@ -506,6 +670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStockOssCheckTasksList  GetStockOssCheckTasksListRequest
+     * @return GetStockOssCheckTasksListResponse
+     */
     @Override
     public CompletableFuture<GetStockOssCheckTasksListResponse> getStockOssCheckTasksList(GetStockOssCheckTasksListRequest request) {
         try {
@@ -520,6 +688,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTextScanResult  GetTextScanResultRequest
+     * @return GetTextScanResultResponse
+     */
     @Override
     public CompletableFuture<GetTextScanResultResponse> getTextScanResult(GetTextScanResultRequest request) {
         try {
@@ -534,6 +706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUploadInfo  GetUploadInfoRequest
+     * @return GetUploadInfoResponse
+     */
     @Override
     public CompletableFuture<GetUploadInfoResponse> getUploadInfo(GetUploadInfoRequest request) {
         try {
@@ -548,6 +724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserBuyStatus  GetUserBuyStatusRequest
+     * @return GetUserBuyStatusResponse
+     */
     @Override
     public CompletableFuture<GetUserBuyStatusResponse> getUserBuyStatus(GetUserBuyStatusRequest request) {
         try {
@@ -562,6 +742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListImageLib  ListImageLibRequest
+     * @return ListImageLibResponse
+     */
     @Override
     public CompletableFuture<ListImageLibResponse> listImageLib(ListImageLibRequest request) {
         try {
@@ -576,6 +760,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListImagesFromLib  ListImagesFromLibRequest
+     * @return ListImagesFromLibResponse
+     */
     @Override
     public CompletableFuture<ListImagesFromLibResponse> listImagesFromLib(ListImagesFromLibRequest request) {
         try {
@@ -590,6 +778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListKeywordLibs  ListKeywordLibsRequest
+     * @return ListKeywordLibsResponse
+     */
     @Override
     public CompletableFuture<ListKeywordLibsResponse> listKeywordLibs(ListKeywordLibsRequest request) {
         try {
@@ -604,6 +796,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListKeywords  ListKeywordsRequest
+     * @return ListKeywordsResponse
+     */
     @Override
     public CompletableFuture<ListKeywordsResponse> listKeywords(ListKeywordsRequest request) {
         try {
@@ -618,6 +814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOssCheckResult  ListOssCheckResultRequest
+     * @return ListOssCheckResultResponse
+     */
     @Override
     public CompletableFuture<ListOssCheckResultResponse> listOssCheckResult(ListOssCheckResultRequest request) {
         try {
@@ -632,6 +832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServiceConfigs  ListServiceConfigsRequest
+     * @return ListServiceConfigsResponse
+     */
     @Override
     public CompletableFuture<ListServiceConfigsResponse> listServiceConfigs(ListServiceConfigsRequest request) {
         try {
@@ -646,6 +850,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyServiceInfo  ModifyServiceInfoRequest
+     * @return ModifyServiceInfoResponse
+     */
     @Override
     public CompletableFuture<ModifyServiceInfoResponse> modifyServiceInfo(ModifyServiceInfoRequest request) {
         try {
@@ -660,6 +868,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateBackupConfig  UpdateBackupConfigRequest
+     * @return UpdateBackupConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateBackupConfigResponse> updateBackupConfig(UpdateBackupConfigRequest request) {
         try {
@@ -674,6 +886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateImageLib  UpdateImageLibRequest
+     * @return UpdateImageLibResponse
+     */
     @Override
     public CompletableFuture<UpdateImageLibResponse> updateImageLib(UpdateImageLibRequest request) {
         try {
@@ -688,6 +904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateImageLibFreeInspection  UpdateImageLibFreeInspectionRequest
+     * @return UpdateImageLibFreeInspectionResponse
+     */
     @Override
     public CompletableFuture<UpdateImageLibFreeInspectionResponse> updateImageLibFreeInspection(UpdateImageLibFreeInspectionRequest request) {
         try {
@@ -702,6 +922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateKeywordLib  UpdateKeywordLibRequest
+     * @return UpdateKeywordLibResponse
+     */
     @Override
     public CompletableFuture<UpdateKeywordLibResponse> updateKeywordLib(UpdateKeywordLibRequest request) {
         try {
@@ -716,6 +940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateScanResultFeedback  UpdateScanResultFeedbackRequest
+     * @return UpdateScanResultFeedbackResponse
+     */
     @Override
     public CompletableFuture<UpdateScanResultFeedbackResponse> updateScanResultFeedback(UpdateScanResultFeedbackRequest request) {
         try {
@@ -730,6 +958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateServiceConfig  UpdateServiceConfigRequest
+     * @return UpdateServiceConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateServiceConfigResponse> updateServiceConfig(UpdateServiceConfigRequest request) {
         try {

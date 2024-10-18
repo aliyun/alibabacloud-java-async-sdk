@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKeywordLibsResponseBody} extends {@link TeaModel}
  *
  * <p>ListKeywordLibsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListKeywordLibsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListKeywordLibsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKeywordLibsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
@@ -237,7 +244,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * UID。
+             * <p>UID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19964*****086772</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOssCheckStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetOssCheckStatusResponseBody</p>
@@ -109,7 +110,10 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         private String slsStatus; 
 
         /**
-         * Bid。
+         * <p>Bid。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26842</p>
          */
         public Builder bid(String bid) {
             this.bid = bid;

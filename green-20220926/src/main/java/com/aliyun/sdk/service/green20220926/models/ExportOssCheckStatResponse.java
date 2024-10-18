@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetExecuteTimeResponse} extends {@link TeaModel}
+ * {@link ExportOssCheckStatResponse} extends {@link TeaModel}
  *
- * <p>GetExecuteTimeResponse</p>
+ * <p>ExportOssCheckStatResponse</p>
  */
-public class GetExecuteTimeResponse extends Response {
+public class ExportOssCheckStatResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetExecuteTimeResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetExecuteTimeResponseBody body;
+    private ExportOssCheckStatResponseBody body;
 
-    private GetExecuteTimeResponse(BuilderImpl builder) {
+    private ExportOssCheckStatResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetExecuteTimeResponse create() {
+    public static ExportOssCheckStatResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetExecuteTimeResponse extends Response {
     /**
      * @return body
      */
-    public GetExecuteTimeResponseBody getBody() {
+    public ExportOssCheckStatResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetExecuteTimeResponse, Builder> {
+    public interface Builder extends Response.Builder<ExportOssCheckStatResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetExecuteTimeResponseBody body);
+        Builder body(ExportOssCheckStatResponseBody body);
 
         @Override
-        GetExecuteTimeResponse build();
+        ExportOssCheckStatResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetExecuteTimeResponse, Builder>
+            extends Response.BuilderImpl<ExportOssCheckStatResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetExecuteTimeResponseBody body; 
+        private ExportOssCheckStatResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetExecuteTimeResponse response) {
+        private BuilderImpl(ExportOssCheckStatResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetExecuteTimeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetExecuteTimeResponseBody body) {
+        public Builder body(ExportOssCheckStatResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetExecuteTimeResponse build() {
-            return new GetExecuteTimeResponse(this);
+        public ExportOssCheckStatResponse build() {
+            return new ExportOssCheckStatResponse(this);
         } 
 
     } 

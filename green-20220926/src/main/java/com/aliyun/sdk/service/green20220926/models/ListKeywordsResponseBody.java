@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKeywordsResponseBody} extends {@link TeaModel}
  *
  * <p>ListKeywordsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListKeywordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListKeywordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKeywordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -271,6 +278,12 @@ public class ListKeywordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListKeywordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKeywordsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;

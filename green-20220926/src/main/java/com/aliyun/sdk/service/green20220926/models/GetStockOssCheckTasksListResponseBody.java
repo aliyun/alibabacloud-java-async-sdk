@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStockOssCheckTasksListResponseBody} extends {@link TeaModel}
  *
  * <p>GetStockOssCheckTasksListResponseBody</p>
@@ -130,6 +131,12 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStockOssCheckTasksListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStockOssCheckTasksListResponseBody</p>
+     */
     public static class ScanServiceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CopyFrom")
         private String copyFrom;
@@ -231,6 +238,12 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStockOssCheckTasksListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStockOssCheckTasksListResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallbackId")
         private Long callbackId;
@@ -672,6 +685,12 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStockOssCheckTasksListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStockOssCheckTasksListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Buckets")
         private String buckets;

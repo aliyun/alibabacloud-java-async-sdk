@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTextScanResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetTextScanResultResponseBody</p>
@@ -130,6 +131,12 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTextScanResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextScanResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -191,6 +198,12 @@ public class GetTextScanResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTextScanResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextScanResultResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -472,6 +485,12 @@ public class GetTextScanResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTextScanResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextScanResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;

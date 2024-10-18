@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddKeywordsToLibResponseBody} extends {@link TeaModel}
  *
  * <p>AddKeywordsToLibResponseBody</p>
@@ -70,6 +71,12 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddKeywordsToLibResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddKeywordsToLibResponseBody</p>
+     */
     public static class KeywordsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("I18nKey")
         private String i18nKey;
@@ -291,6 +298,12 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddKeywordsToLibResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddKeywordsToLibResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeywordsResult")
         private KeywordsResult keywordsResult;

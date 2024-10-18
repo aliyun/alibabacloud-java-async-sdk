@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceConfigResponseBody</p>
@@ -130,6 +131,12 @@ public class GetServiceConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceConfigResponseBody</p>
+     */
     public static class CustomServiceConf extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeywordFilterLibs")
         private java.util.List < String > keywordFilterLibs;
@@ -211,6 +218,12 @@ public class GetServiceConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomServiceConf")
         private CustomServiceConf customServiceConf;
@@ -318,7 +331,10 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UID。
+             * <p>UID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165379****31937</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

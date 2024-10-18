@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCipStatsResponseBody} extends {@link TeaModel}
  *
  * <p>GetCipStatsResponseBody</p>
@@ -150,6 +151,12 @@ public class GetCipStatsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCipStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCipStatsResponseBody</p>
+     */
     public static class TreeChart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -211,6 +218,12 @@ public class GetCipStatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCipStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCipStatsResponseBody</p>
+     */
     public static class VoiceTreeChart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -272,6 +285,12 @@ public class GetCipStatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCipStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCipStatsResponseBody</p>
+     */
     public static class Y extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Long > data;
@@ -333,6 +352,12 @@ public class GetCipStatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCipStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCipStatsResponseBody</p>
+     */
     public static class LabelStatChart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceCode")
         private String serviceCode;
@@ -474,6 +499,12 @@ public class GetCipStatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCipStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCipStatsResponseBody</p>
+     */
     public static class DataY extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Long > data;
@@ -535,6 +566,12 @@ public class GetCipStatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCipStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCipStatsResponseBody</p>
+     */
     public static class Z extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Long > data;
@@ -596,6 +633,12 @@ public class GetCipStatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCipStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCipStatsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelStatChart")
         private java.util.List < LabelStatChart> labelStatChart;

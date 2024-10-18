@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceConfResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceConfResponseBody</p>
@@ -217,7 +218,10 @@ public class GetServiceConfResponseBody extends TeaModel {
         }
 
         /**
-         * UID。
+         * <p>UID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17726*****370735</p>
          */
         public Builder uid(String uid) {
             this.uid = uid;

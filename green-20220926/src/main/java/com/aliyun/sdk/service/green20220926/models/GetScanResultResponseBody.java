@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScanResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetScanResultResponseBody</p>
@@ -150,6 +151,12 @@ public class GetScanResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetScanResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScanResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private String confidence;
@@ -211,6 +218,12 @@ public class GetScanResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScanResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScanResultResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -618,7 +631,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * dataId
+             * <p>dataId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4f27b8cc7c4544cb90b41882a5b36326</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -682,7 +698,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * url
+             * <p>url</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyuncs.com/xxx.png">https://www.aliyuncs.com/xxx.png</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -872,6 +891,12 @@ public class GetScanResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScanResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScanResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;

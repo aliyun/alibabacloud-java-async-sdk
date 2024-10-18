@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImagesFromLibResponseBody} extends {@link TeaModel}
  *
  * <p>ListImagesFromLibResponseBody</p>
@@ -210,6 +211,12 @@ public class ListImagesFromLibResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImagesFromLibResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImagesFromLibResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;

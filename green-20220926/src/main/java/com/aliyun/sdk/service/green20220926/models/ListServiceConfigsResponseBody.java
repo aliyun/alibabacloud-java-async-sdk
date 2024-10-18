@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceConfigsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListServiceConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceConfigsResponseBody</p>
+     */
     public static class ImageScanRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Services")
         private java.util.List < String > services;
@@ -171,6 +178,12 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceConfigsResponseBody</p>
+     */
     public static class TextScanRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Services")
         private java.util.List < String > services;
@@ -212,6 +225,12 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceConfigsResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageScanRule")
         private ImageScanRule imageScanRule;
@@ -293,6 +312,12 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceConfigsResponseBody</p>
+     */
     public static class CustomServiceConf extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioService")
         private String audioService;
@@ -434,6 +459,12 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceConfigsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
@@ -673,7 +704,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * UID。
+             * <p>UID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1674*****0071291</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

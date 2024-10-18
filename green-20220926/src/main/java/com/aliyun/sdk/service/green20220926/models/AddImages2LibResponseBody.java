@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddImages2LibResponseBody} extends {@link TeaModel}
  *
  * <p>AddImages2LibResponseBody</p>
@@ -150,6 +151,12 @@ public class AddImages2LibResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddImages2LibResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddImages2LibResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImgId")
         private String imgId;

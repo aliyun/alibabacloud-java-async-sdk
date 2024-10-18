@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImageLibResponseBody} extends {@link TeaModel}
  *
  * <p>ListImageLibResponseBody</p>
@@ -150,6 +151,12 @@ public class ListImageLibResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImageLibResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageLibResponseBody</p>
+     */
     public static class LibList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
