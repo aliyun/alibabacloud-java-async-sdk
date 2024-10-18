@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVerifySchemeResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteVerifySchemeResponseBody</p>
  */
 public class DeleteVerifySchemeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private DeleteVerifySchemeResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The request is successful. For more information about other error codes, see [API response codes](~~85198~~).
+         * <p>The request is successful. For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,10 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +96,10 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3754956-D0B1-5947-962A-AE767D354F01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +107,14 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation. Valid values:
-         * <p>
+         * <p>The result of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The verification service is deleted.</li>
+         * <li><strong>false</strong>: The verification service failed to be deleted.</li>
+         * </ul>
          * 
-         * *   **true**: The verification service is deleted.
-         * *   **false**: The verification service failed to be deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

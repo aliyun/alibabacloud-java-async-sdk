@@ -1,66 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JyCreateVerifySchemeRequest} extends {@link RequestModel}
  *
  * <p>JyCreateVerifySchemeRequest</p>
  */
 public class JyCreateVerifySchemeRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("BundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
     private String bundleId;
 
-    @Query
-    @NameInMap("CmApiCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CmApiCode")
     private Long cmApiCode;
 
-    @Query
-    @NameInMap("CtApiCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CtApiCode")
     private Long ctApiCode;
 
-    @Query
-    @NameInMap("CuApiCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CuApiCode")
     private Long cuApiCode;
 
-    @Query
-    @NameInMap("OsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String osType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PackName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackName")
     private String packName;
 
-    @Query
-    @NameInMap("PackSign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackSign")
     private String packSign;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SchemeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schemeName;
 
     private JyCreateVerifySchemeRequest(Builder builder) {
@@ -211,7 +211,7 @@ public class JyCreateVerifySchemeRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -256,7 +256,7 @@ public class JyCreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * OsType.
+         * <p>This parameter is required.</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -310,7 +310,7 @@ public class JyCreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * SchemeName.
+         * <p>This parameter is required.</p>
          */
         public Builder schemeName(String schemeName) {
             this.putQueryParameter("SchemeName", schemeName);

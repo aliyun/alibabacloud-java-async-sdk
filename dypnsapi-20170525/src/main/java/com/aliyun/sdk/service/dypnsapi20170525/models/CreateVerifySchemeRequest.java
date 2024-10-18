@@ -1,94 +1,106 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVerifySchemeRequest} extends {@link RequestModel}
  *
  * <p>CreateVerifySchemeRequest</p>
  */
 public class CreateVerifySchemeRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("BundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
     private String bundleId;
 
-    @Query
-    @NameInMap("CmApiCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CmApiCode")
     private Long cmApiCode;
 
-    @Query
-    @NameInMap("CtApiCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CtApiCode")
     private Long ctApiCode;
 
-    @Query
-    @NameInMap("CuApiCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CuApiCode")
     private Long cuApiCode;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("IpWhiteList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HmAppIdentifier")
+    private String hmAppIdentifier;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HmPackageName")
+    private String hmPackageName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HmSignName")
+    private String hmSignName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpWhiteList")
     private String ipWhiteList;
 
-    @Query
-    @NameInMap("Origin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Origin")
     private String origin;
 
-    @Query
-    @NameInMap("OsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String osType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PackName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackName")
     private String packName;
 
-    @Query
-    @NameInMap("PackSign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackSign")
     private String packSign;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SceneType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneType")
     private String sceneType;
 
-    @Query
-    @NameInMap("SchemeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schemeName;
 
-    @Query
-    @NameInMap("SmsSignName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsSignName")
     private String smsSignName;
 
-    @Query
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private CreateVerifySchemeRequest(Builder builder) {
@@ -100,6 +112,9 @@ public class CreateVerifySchemeRequest extends Request {
         this.ctApiCode = builder.ctApiCode;
         this.cuApiCode = builder.cuApiCode;
         this.email = builder.email;
+        this.hmAppIdentifier = builder.hmAppIdentifier;
+        this.hmPackageName = builder.hmPackageName;
+        this.hmSignName = builder.hmSignName;
         this.ipWhiteList = builder.ipWhiteList;
         this.origin = builder.origin;
         this.osType = builder.osType;
@@ -174,6 +189,27 @@ public class CreateVerifySchemeRequest extends Request {
      */
     public String getEmail() {
         return this.email;
+    }
+
+    /**
+     * @return hmAppIdentifier
+     */
+    public String getHmAppIdentifier() {
+        return this.hmAppIdentifier;
+    }
+
+    /**
+     * @return hmPackageName
+     */
+    public String getHmPackageName() {
+        return this.hmPackageName;
+    }
+
+    /**
+     * @return hmSignName
+     */
+    public String getHmSignName() {
+        return this.hmSignName;
     }
 
     /**
@@ -268,6 +304,9 @@ public class CreateVerifySchemeRequest extends Request {
         private Long ctApiCode; 
         private Long cuApiCode; 
         private String email; 
+        private String hmAppIdentifier; 
+        private String hmPackageName; 
+        private String hmSignName; 
         private String ipWhiteList; 
         private String origin; 
         private String osType; 
@@ -294,6 +333,9 @@ public class CreateVerifySchemeRequest extends Request {
             this.ctApiCode = request.ctApiCode;
             this.cuApiCode = request.cuApiCode;
             this.email = request.email;
+            this.hmAppIdentifier = request.hmAppIdentifier;
+            this.hmPackageName = request.hmPackageName;
+            this.hmSignName = request.hmSignName;
             this.ipWhiteList = request.ipWhiteList;
             this.origin = request.origin;
             this.osType = request.osType;
@@ -309,7 +351,11 @@ public class CreateVerifySchemeRequest extends Request {
         } 
 
         /**
-         * The app name.
+         * <p>The app name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Communications</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -318,11 +364,14 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The verification type. You can select multiple types only when the phone number verification is supported. Separate multiple types with commas (,).
-         * <p>
+         * <p>The verification type. You can select multiple types only when the phone number verification is supported. Separate multiple types with commas (,).</p>
+         * <ul>
+         * <li><strong>1</strong>: phone number verification</li>
+         * <li><strong>2</strong>: SMS verification</li>
+         * </ul>
          * 
-         * *   **1**: phone number verification
-         * *   **2**: SMS verification
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -331,7 +380,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The bundle ID. This parameter is required when OsType is set to iOS. The bundle ID must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (\_), and periods (.).
+         * <p>The bundle ID. This parameter is required when OsType is set to iOS. The bundle ID must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (_), and periods (.).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -340,7 +392,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The channel code of China Mobile.
+         * <p>The channel code of China Mobile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cmApiCode(Long cmApiCode) {
             this.putQueryParameter("CmApiCode", cmApiCode);
@@ -349,7 +404,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The channel code of China Telecom.
+         * <p>The channel code of China Telecom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder ctApiCode(Long ctApiCode) {
             this.putQueryParameter("CtApiCode", ctApiCode);
@@ -358,7 +416,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The channel code of China Unicom.
+         * <p>The channel code of China Unicom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cuApiCode(Long cuApiCode) {
             this.putQueryParameter("CuApiCode", cuApiCode);
@@ -367,7 +428,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The email address that receives the key.
+         * <p>The email address that receives the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@aliyundoc.com">username@aliyundoc.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -376,7 +440,39 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The IP address whitelist.
+         * HmAppIdentifier.
+         */
+        public Builder hmAppIdentifier(String hmAppIdentifier) {
+            this.putQueryParameter("HmAppIdentifier", hmAppIdentifier);
+            this.hmAppIdentifier = hmAppIdentifier;
+            return this;
+        }
+
+        /**
+         * HmPackageName.
+         */
+        public Builder hmPackageName(String hmPackageName) {
+            this.putQueryParameter("HmPackageName", hmPackageName);
+            this.hmPackageName = hmPackageName;
+            return this;
+        }
+
+        /**
+         * HmSignName.
+         */
+        public Builder hmSignName(String hmSignName) {
+            this.putQueryParameter("HmSignName", hmSignName);
+            this.hmSignName = hmSignName;
+            return this;
+        }
+
+        /**
+         * <p>The IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139.9.167.181
+         * 122.112.210.205
+         * 139.9.172.0/24</p>
          */
         public Builder ipWhiteList(String ipWhiteList) {
             this.putQueryParameter("IpWhiteList", ipWhiteList);
@@ -385,7 +481,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The source URL of the HTML5 app page. We recommend that you specify this parameter as a domain name.
+         * <p>The source URL of the HTML5 app page. We recommend that you specify this parameter as a domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://h5.minexiot.com">https://h5.minexiot.com</a></p>
          */
         public Builder origin(String origin) {
             this.putQueryParameter("Origin", origin);
@@ -394,7 +493,11 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The type of the operating system for the terminal. Valid values: iOS and Android.
+         * <p>The type of the operating system for the terminal. Valid values: iOS and Android.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iOS</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -412,7 +515,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The package name. This parameter is required when OsType is set to Android. The name must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (\_), and periods (.).
+         * <p>The package name. This parameter is required when OsType is set to Android. The name must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (_), and periods (.).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyun</p>
          */
         public Builder packName(String packName) {
             this.putQueryParameter("PackName", packName);
@@ -421,7 +527,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The package signature. This parameter is required when OsType is set to Android. The signature must be 32 characters in length and can contain digits and letters.
+         * <p>The package signature. This parameter is required when OsType is set to Android. The signature must be 32 characters in length and can contain digits and letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123aliyun</p>
          */
         public Builder packSign(String packSign) {
             this.putQueryParameter("PackSign", packSign);
@@ -448,7 +557,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The service type.
+         * <p>The service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sceneType(String sceneType) {
             this.putQueryParameter("SceneType", sceneType);
@@ -457,7 +569,11 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder schemeName(String schemeName) {
             this.putQueryParameter("SchemeName", schemeName);
@@ -466,7 +582,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The bound SMS signature. This parameter is valid only when AuthType is set to 2. The signature must be approved.
+         * <p>The bound SMS signature. This parameter is valid only when AuthType is set to 2. The signature must be approved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun Test</p>
          */
         public Builder smsSignName(String smsSignName) {
             this.putQueryParameter("SmsSignName", smsSignName);
@@ -475,7 +594,10 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The URL of the HTML5 app page.
+         * <p>The URL of the HTML5 app page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://h5.minexiot.com/index.html">https://h5.minexiot.com/index.html</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

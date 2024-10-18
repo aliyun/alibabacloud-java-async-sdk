@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVerifySchemeRequest} extends {@link RequestModel}
  *
  * <p>DeleteVerifySchemeRequest</p>
  */
 public class DeleteVerifySchemeRequest extends Request {
-    @Query
-    @NameInMap("CustomerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerId")
     private Long customerId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SchemeCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemeCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schemeCode;
 
     private DeleteVerifySchemeRequest(Builder builder) {
@@ -111,7 +111,10 @@ public class DeleteVerifySchemeRequest extends Request {
         } 
 
         /**
-         * The user ID.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder customerId(Long customerId) {
             this.putQueryParameter("CustomerId", customerId);
@@ -147,7 +150,11 @@ public class DeleteVerifySchemeRequest extends Request {
         }
 
         /**
-         * The service code.
+         * <p>The service code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC10000014164****</p>
          */
         public Builder schemeCode(String schemeCode) {
             this.putQueryParameter("SchemeCode", schemeCode);

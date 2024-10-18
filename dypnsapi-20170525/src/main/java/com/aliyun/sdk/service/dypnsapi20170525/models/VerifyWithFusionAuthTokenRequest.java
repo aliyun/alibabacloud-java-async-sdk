@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyWithFusionAuthTokenRequest} extends {@link RequestModel}
  *
  * <p>VerifyWithFusionAuthTokenRequest</p>
  */
 public class VerifyWithFusionAuthTokenRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VerifyToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verifyToken;
 
     private VerifyWithFusionAuthTokenRequest(Builder builder) {
@@ -124,7 +124,11 @@ public class VerifyWithFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * The unified verification token that is returned by the client SDKs.
+         * <p>The unified verification token that is returned by the client SDKs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LD108enNdlsl*******sFLKCks1==</p>
          */
         public Builder verifyToken(String verifyToken) {
             this.putQueryParameter("VerifyToken", verifyToken);

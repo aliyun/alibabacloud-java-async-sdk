@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthorizationUrlRequest} extends {@link RequestModel}
  *
  * <p>GetAuthorizationUrlRequest</p>
  */
 public class GetAuthorizationUrlRequest extends Request {
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNo;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SchemeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long schemeId;
 
     private GetAuthorizationUrlRequest(Builder builder) {
@@ -126,7 +126,10 @@ public class GetAuthorizationUrlRequest extends Request {
         } 
 
         /**
-         * The authorization end date, which is in the yyyy-MM-dd format. This parameter is required for services of contract type.
+         * <p>The authorization end date, which is in the yyyy-MM-dd format. This parameter is required for services of contract type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020–12–28</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -144,7 +147,11 @@ public class GetAuthorizationUrlRequest extends Request {
         }
 
         /**
-         * The phone number.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder phoneNo(String phoneNo) {
             this.putQueryParameter("PhoneNo", phoneNo);
@@ -171,7 +178,11 @@ public class GetAuthorizationUrlRequest extends Request {
         }
 
         /**
-         * The ID of the authorization scenario. You can view the ID of the authorization scenario on the **Authorization Scenario Management** page in the **Phone Number Verification Service console**.
+         * <p>The ID of the authorization scenario. You can view the ID of the authorization scenario on the <strong>Authorization Scenario Management</strong> page in the <strong>Phone Number Verification Service console</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234****</p>
          */
         public Builder schemeId(Long schemeId) {
             this.putQueryParameter("SchemeId", schemeId);

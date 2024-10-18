@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGateVerifyStatisticPublicRequest} extends {@link RequestModel}
  *
  * <p>QueryGateVerifyStatisticPublicRequest</p>
  */
 public class QueryGateVerifyStatisticPublicRequest extends Request {
-    @Query
-    @NameInMap("AuthenticationType")
-    @Validation(required = true, maximum = 99)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99)
     private Integer authenticationType;
 
-    @Query
-    @NameInMap("EndDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endDate;
 
-    @Query
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("SceneCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneCode")
     private String sceneCode;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
 
     private QueryGateVerifyStatisticPublicRequest(Builder builder) {
@@ -141,13 +141,17 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         } 
 
         /**
-         * The verification method. Valid values:
-         * <p>
+         * <p>The verification method. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: one-click logon</li>
+         * <li><strong>2</strong>: phone number verification, including the verification of the phone number used in HTML5 pages</li>
+         * <li><strong>3</strong>: SMS verification</li>
+         * <li><strong>4</strong>: facial recognition</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: one-click logon
-         * *   **2**: phone number verification, including the verification of the phone number used in HTML5 pages
-         * *   **3**: SMS verification
-         * *   **4**: facial recognition
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder authenticationType(Integer authenticationType) {
             this.putQueryParameter("AuthenticationType", authenticationType);
@@ -156,7 +160,11 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         }
 
         /**
-         * The end date. Specify this parameter in the YYYYMMDD format. Example: 20220106.
+         * <p>The end date. Specify this parameter in the YYYYMMDD format. Example: 20220106.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20220106</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -165,11 +173,14 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>Android</strong></li>
+         * <li><strong>iOS</strong></li>
+         * </ul>
          * 
-         * *   **Android**
-         * *   **iOS**
+         * <strong>example:</strong>
+         * <p>Android</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -196,7 +207,10 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         }
 
         /**
-         * The service code.
+         * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC100000038194004</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -205,7 +219,11 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         }
 
         /**
-         * The start date. Specify this parameter in the YYYYMMDD format. Example: 20220101.
+         * <p>The start date. Specify this parameter in the YYYYMMDD format. Example: 20220101.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20220101</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

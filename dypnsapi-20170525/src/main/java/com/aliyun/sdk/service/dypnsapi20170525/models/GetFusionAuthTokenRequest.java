@@ -1,54 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFusionAuthTokenRequest} extends {@link RequestModel}
  *
  * <p>GetFusionAuthTokenRequest</p>
  */
 public class GetFusionAuthTokenRequest extends Request {
-    @Query
-    @NameInMap("BundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
     private String bundleId;
 
-    @Query
-    @NameInMap("DurationSeconds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DurationSeconds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long durationSeconds;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PackageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageName")
     private String packageName;
 
-    @Query
-    @NameInMap("PackageSign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageSign")
     private String packageSign;
 
-    @Query
-    @NameInMap("Platform")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String platform;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SchemeCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemeCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schemeCode;
 
     private GetFusionAuthTokenRequest(Builder builder) {
@@ -169,7 +169,10 @@ public class GetFusionAuthTokenRequest extends Request {
         } 
 
         /**
-         * The bundle ID of the app. This parameter is required when Platform is set to iOS.
+         * <p>The bundle ID of the app. This parameter is required when Platform is set to iOS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.example.test</p>
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -178,7 +181,11 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * The validity period of the token. Unit: seconds. Valid values: 900 to 43200.
+         * <p>The validity period of the token. Unit: seconds. Valid values: 900 to 43200.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder durationSeconds(Long durationSeconds) {
             this.putQueryParameter("DurationSeconds", durationSeconds);
@@ -196,7 +203,10 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * The package name of the app. This parameter is required when Platform is set to Android.
+         * <p>The package name of the app. This parameter is required when Platform is set to Android.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.example.test</p>
          */
         public Builder packageName(String packageName) {
             this.putQueryParameter("PackageName", packageName);
@@ -205,7 +215,10 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * The package signature of the app. This parameter is required when Platform is set to Android.
+         * <p>The package signature of the app. This parameter is required when Platform is set to Android.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47fcc************************278</p>
          */
         public Builder packageSign(String packageSign) {
             this.putQueryParameter("PackageSign", packageSign);
@@ -214,7 +227,11 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * The platform type. Valid values: Android and iOS.
+         * <p>The platform type. Valid values: Android and iOS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Android</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -241,7 +258,11 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * The service code.
+         * <p>The service code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA1000*************201</p>
          */
         public Builder schemeCode(String schemeCode) {
             this.putQueryParameter("SchemeCode", schemeCode);

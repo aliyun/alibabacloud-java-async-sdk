@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMobileResponseBody} extends {@link TeaModel}
  *
  * <p>GetMobileResponseBody</p>
  */
 public class GetMobileResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("GetMobileResultDTO")
+    @com.aliyun.core.annotation.NameInMap("GetMobileResultDTO")
     private GetMobileResultDTO getMobileResultDTO;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMobileResponseBody(Builder builder) {
@@ -74,11 +74,14 @@ public class GetMobileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+         * </ul>
          * 
-         * *   If OK is returned, the request is successful.
-         * *   For more information about other error codes, see [API response codes](~~85198~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +89,7 @@ public class GetMobileResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder getMobileResultDTO(GetMobileResultDTO getMobileResultDTO) {
             this.getMobileResultDTO = getMobileResultDTO;
@@ -94,7 +97,10 @@ public class GetMobileResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,10 @@ public class GetMobileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8906582E-6722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,8 +124,14 @@ public class GetMobileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMobileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMobileResponseBody</p>
+     */
     public static class GetMobileResultDTO extends TeaModel {
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
         private GetMobileResultDTO(Builder builder) {
@@ -142,7 +157,10 @@ public class GetMobileResponseBody extends TeaModel {
             private String mobile; 
 
             /**
-             * The phone number,
+             * <p>The phone number,</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13900001234</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;

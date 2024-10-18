@@ -1,63 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSmsAuthTokensRequest} extends {@link RequestModel}
  *
  * <p>GetSmsAuthTokensRequest</p>
  */
 public class GetSmsAuthTokensRequest extends Request {
-    @Query
-    @NameInMap("BundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
     private String bundleId;
 
-    @Query
-    @NameInMap("Expire")
-    @Validation(required = true, maximum = 43200, minimum = 900)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expire")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 43200, minimum = 900)
     private Long expire;
 
-    @Query
-    @NameInMap("OsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String osType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PackageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageName")
     private String packageName;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SceneCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneCode;
 
-    @Query
-    @NameInMap("SignName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignName")
     private String signName;
 
-    @Query
-    @NameInMap("SmsCodeExpire")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsCodeExpire")
     private Integer smsCodeExpire;
 
-    @Query
-    @NameInMap("SmsTemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsTemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String smsTemplateCode;
 
     private GetSmsAuthTokensRequest(Builder builder) {
@@ -198,7 +198,10 @@ public class GetSmsAuthTokensRequest extends Request {
         } 
 
         /**
-         * The ID of the iOS application. This parameter is required if OsType is set to **iOS**.
+         * <p>The ID of the iOS application. This parameter is required if OsType is set to <strong>iOS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345****</p>
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -207,7 +210,11 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * The validity period of the token. Unit: seconds. Valid values: 900 to 43200.
+         * <p>The validity period of the token. Unit: seconds. Valid values: 900 to 43200.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder expire(Long expire) {
             this.putQueryParameter("Expire", expire);
@@ -216,7 +223,11 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values: **Android** and **iOS**.
+         * <p>The type of the operating system. Valid values: <strong>Android</strong> and <strong>iOS</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Android</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -234,7 +245,10 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * The package name. This parameter is required if OsType is set to **Android**.
+         * <p>The package name. This parameter is required if OsType is set to <strong>Android</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliqin.mytel.test</p>
          */
         public Builder packageName(String packageName) {
             this.putQueryParameter("PackageName", packageName);
@@ -261,7 +275,11 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * The service code.
+         * <p>The service code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC100000134840112</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -270,7 +288,10 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * The signature. This parameter is required if OsType is set to **Android**.
+         * <p>The signature. This parameter is required if OsType is set to <strong>Android</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47fcc6615485e83b4100433****</p>
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -279,7 +300,10 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * The validity period of the SMS verification code. Unit: seconds. Default value: 180.
+         * <p>The validity period of the SMS verification code. Unit: seconds. Default value: 180.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder smsCodeExpire(Integer smsCodeExpire) {
             this.putQueryParameter("SmsCodeExpire", smsCodeExpire);
@@ -288,7 +312,11 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * The code of the text message template.
+         * <p>The code of the text message template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS_13987****</p>
          */
         public Builder smsTemplateCode(String smsTemplateCode) {
             this.putQueryParameter("SmsTemplateCode", smsTemplateCode);

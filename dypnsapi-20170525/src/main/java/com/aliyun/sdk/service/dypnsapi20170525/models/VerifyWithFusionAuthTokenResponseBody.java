@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyWithFusionAuthTokenResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyWithFusionAuthTokenResponseBody</p>
  */
 public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private VerifyWithFusionAuthTokenResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see Error codes.
+         * <p>The response code. If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,10 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder model(Model model) {
             this.model = model;
@@ -110,7 +116,10 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID, which is used to troubleshoot issues.
+         * <p>The request ID, which is used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true false
+         * <p>Indicates whether the request is successful. Valid values: true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +143,20 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyWithFusionAuthTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyWithFusionAuthTokenResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("PhoneScore")
+        @com.aliyun.core.annotation.NameInMap("PhoneScore")
         private Long phoneScore;
 
-        @NameInMap("VerifyResult")
+        @com.aliyun.core.annotation.NameInMap("VerifyResult")
         private String verifyResult;
 
         private Model(Builder builder) {
@@ -182,7 +200,10 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             private String verifyResult; 
 
             /**
-             * The phone number, which is returned when the verification is successful.
+             * <p>The phone number, which is returned when the verification is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180********</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -190,7 +211,10 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number score, which is generated only after the phone number scoring node is enabled and the verification is successful. The higher the score, the more risky the phone number. Valid values: 0 to 100.
+             * <p>The phone number score, which is generated only after the phone number scoring node is enabled and the verification is successful. The higher the score, the more risky the phone number. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder phoneScore(Long phoneScore) {
                 this.phoneScore = phoneScore;
@@ -198,7 +222,10 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The verification result. Valid values: PASS and UNKNOWN.
+             * <p>The verification result. Valid values: PASS and UNKNOWN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PASS</p>
              */
             public Builder verifyResult(String verifyResult) {
                 this.verifyResult = verifyResult;

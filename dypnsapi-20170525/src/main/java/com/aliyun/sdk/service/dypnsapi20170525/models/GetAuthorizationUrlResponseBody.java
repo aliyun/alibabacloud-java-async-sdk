@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthorizationUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuthorizationUrlResponseBody</p>
  */
 public class GetAuthorizationUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAuthorizationUrlResponseBody(Builder builder) {
@@ -74,11 +74,14 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+         * </ul>
          * 
-         * *   If OK is returned, the request is successful.
-         * *   For more information about other error codes, see [API response codes](~~85198~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +89,7 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +97,10 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,10 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8906582E-6722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,8 +124,14 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAuthorizationUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthorizationUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AuthorizationUrl")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationUrl")
         private String authorizationUrl;
 
         private Data(Builder builder) {
@@ -142,7 +157,10 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
             private String authorizationUrl; 
 
             /**
-             * The authorization URL.
+             * <p>The authorization URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://render.****.com/p/s/web-call-minapp/auth-bao?page=commauth/index&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJiaXpUeXBlIjoiQ29tbUF1dGgiLCJiaXpJZCI6IjVmNWZjNjAzZDQzMTQ0MWZiYTZiNjYzM2QyMjIyNzU0IiwiZXhwIjoxNjA4MTkxODQxfQ.5IvBj2nKgr60APtotaIB13vtPVrdsPQ6avIfWxte1pA&_env=prod">https://render.****.com/p/s/web-call-minapp/auth-bao?page=commauth/index&amp;token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJiaXpUeXBlIjoiQ29tbUF1dGgiLCJiaXpJZCI6IjVmNWZjNjAzZDQzMTQ0MWZiYTZiNjYzM2QyMjIyNzU0IiwiZXhwIjoxNjA4MTkxODQxfQ.5IvBj2nKgr60APtotaIB13vtPVrdsPQ6avIfWxte1pA&amp;_env=prod</a></p>
              */
             public Builder authorizationUrl(String authorizationUrl) {
                 this.authorizationUrl = authorizationUrl;

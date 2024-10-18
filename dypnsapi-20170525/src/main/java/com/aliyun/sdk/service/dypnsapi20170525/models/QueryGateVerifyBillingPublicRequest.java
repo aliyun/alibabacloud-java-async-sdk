@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGateVerifyBillingPublicRequest} extends {@link RequestModel}
  *
  * <p>QueryGateVerifyBillingPublicRequest</p>
  */
 public class QueryGateVerifyBillingPublicRequest extends Request {
-    @Query
-    @NameInMap("AuthenticationType")
-    @Validation(required = true, maximum = 99)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99)
     private Integer authenticationType;
 
-    @Query
-    @NameInMap("Month")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Month")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String month;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     private QueryGateVerifyBillingPublicRequest(Builder builder) {
@@ -98,14 +98,18 @@ public class QueryGateVerifyBillingPublicRequest extends Request {
         } 
 
         /**
-         * The verification method. Valid values:
-         * <p>
+         * <p>The verification method. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: phone number verification</li>
+         * <li><strong>1</strong>: one-click logon</li>
+         * <li><strong>2</strong>: all</li>
+         * <li><strong>3</strong>: facial recognition</li>
+         * <li><strong>4</strong>: SMS verification</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: phone number verification
-         * *   **1**: one-click logon
-         * *   **2**: all
-         * *   **3**: facial recognition
-         * *   **4**: SMS verification
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder authenticationType(Integer authenticationType) {
             this.putQueryParameter("AuthenticationType", authenticationType);
@@ -114,7 +118,11 @@ public class QueryGateVerifyBillingPublicRequest extends Request {
         }
 
         /**
-         * The month in which the bill is generated. Specify this parameter in the YYYYMM format. Example: 202111.
+         * <p>The month in which the bill is generated. Specify this parameter in the YYYYMM format. Example: 202111.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202111</p>
          */
         public Builder month(String month) {
             this.putQueryParameter("Month", month);

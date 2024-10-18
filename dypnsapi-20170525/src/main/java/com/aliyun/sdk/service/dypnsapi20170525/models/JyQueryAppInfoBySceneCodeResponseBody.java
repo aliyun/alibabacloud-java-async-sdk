@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JyQueryAppInfoBySceneCodeResponseBody} extends {@link TeaModel}
  *
  * <p>JyQueryAppInfoBySceneCodeResponseBody</p>
  */
 public class JyQueryAppInfoBySceneCodeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private JyQueryAppInfoBySceneCodeResponseBody(Builder builder) {
@@ -111,17 +111,23 @@ public class JyQueryAppInfoBySceneCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link JyQueryAppInfoBySceneCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>JyQueryAppInfoBySceneCodeResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CmAppId")
+        @com.aliyun.core.annotation.NameInMap("CmAppId")
         private String cmAppId;
 
-        @NameInMap("CmAppKey")
+        @com.aliyun.core.annotation.NameInMap("CmAppKey")
         private String cmAppKey;
 
-        @NameInMap("CtAppId")
+        @com.aliyun.core.annotation.NameInMap("CtAppId")
         private String ctAppId;
 
-        @NameInMap("CtAppKey")
+        @com.aliyun.core.annotation.NameInMap("CtAppKey")
         private String ctAppKey;
 
         private Data(Builder builder) {

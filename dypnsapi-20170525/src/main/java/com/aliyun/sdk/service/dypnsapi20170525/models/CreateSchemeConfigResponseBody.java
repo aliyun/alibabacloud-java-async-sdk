@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSchemeConfigResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSchemeConfigResponseBody</p>
  */
 public class CreateSchemeConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateSchemeConfigResponseBody(Builder builder) {
@@ -86,11 +86,14 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>For more information about other error codes, see <a href="https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11186623.0.0.5c3a662fbgeAuk">API response codes</a>.</li>
+         * </ul>
          * 
-         * *   If OK is returned, the request is successful.
-         * *   For more information about other error codes, see [API response codes](https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11186623.0.0.5c3a662fbgeAuk).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -98,7 +101,10 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -106,7 +112,7 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder model(Model model) {
             this.model = model;
@@ -114,7 +120,10 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B95B36EC-8108-4479-D3AA-2BB27F9B155A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,11 +131,14 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -139,8 +151,14 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSchemeConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSchemeConfigResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("SchemeCode")
+        @com.aliyun.core.annotation.NameInMap("SchemeCode")
         private String schemeCode;
 
         private Model(Builder builder) {
@@ -166,7 +184,10 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
             private String schemeCode; 
 
             /**
-             * The service code.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FA100000168468035</p>
              */
             public Builder schemeCode(String schemeCode) {
                 this.schemeCode = schemeCode;

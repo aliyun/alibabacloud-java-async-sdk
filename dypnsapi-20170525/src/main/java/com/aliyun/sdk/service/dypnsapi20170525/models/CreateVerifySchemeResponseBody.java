@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVerifySchemeResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVerifySchemeResponseBody</p>
  */
 public class CreateVerifySchemeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("GateVerifySchemeDTO")
+    @com.aliyun.core.annotation.NameInMap("GateVerifySchemeDTO")
     private GateVerifySchemeDTO gateVerifySchemeDTO;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateVerifySchemeResponseBody(Builder builder) {
@@ -98,11 +98,14 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+         * </ul>
          * 
-         * *   If OK is returned, the request is successful.
-         * *   For more information about other error codes, see [API response codes](~~85198~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -110,7 +113,7 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder gateVerifySchemeDTO(GateVerifySchemeDTO gateVerifySchemeDTO) {
             this.gateVerifySchemeDTO = gateVerifySchemeDTO;
@@ -118,7 +121,10 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +132,10 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +143,10 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1E75E69-3049-5FDB-A376-D745837CD2B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,11 +154,14 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,8 +174,14 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVerifySchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVerifySchemeResponseBody</p>
+     */
     public static class GateVerifySchemeDTO extends TeaModel {
-        @NameInMap("SchemeCode")
+        @com.aliyun.core.annotation.NameInMap("SchemeCode")
         private String schemeCode;
 
         private GateVerifySchemeDTO(Builder builder) {
@@ -186,7 +207,10 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
             private String schemeCode; 
 
             /**
-             * The service code.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FC10001287****</p>
              */
             public Builder schemeCode(String schemeCode) {
                 this.schemeCode = schemeCode;

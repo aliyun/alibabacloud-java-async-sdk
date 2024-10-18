@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JyCreateVerifySchemeResponseBody} extends {@link TeaModel}
  *
  * <p>JyCreateVerifySchemeResponseBody</p>
  */
 public class JyCreateVerifySchemeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("GateVerifySchemeData")
+    @com.aliyun.core.annotation.NameInMap("GateVerifySchemeData")
     private GateVerifySchemeData gateVerifySchemeData;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private JyCreateVerifySchemeResponseBody(Builder builder) {
@@ -111,8 +111,14 @@ public class JyCreateVerifySchemeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link JyCreateVerifySchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>JyCreateVerifySchemeResponseBody</p>
+     */
     public static class GateVerifySchemeData extends TeaModel {
-        @NameInMap("SchemeCode")
+        @com.aliyun.core.annotation.NameInMap("SchemeCode")
         private String schemeCode;
 
         private GateVerifySchemeData(Builder builder) {

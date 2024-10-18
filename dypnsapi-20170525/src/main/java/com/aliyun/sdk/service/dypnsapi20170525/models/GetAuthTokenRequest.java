@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthTokenRequest} extends {@link RequestModel}
  *
  * <p>GetAuthTokenRequest</p>
  */
 public class GetAuthTokenRequest extends Request {
-    @Query
-    @NameInMap("Origin")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Origin")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String origin;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SceneCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneCode")
     private String sceneCode;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
     private GetAuthTokenRequest(Builder builder) {
@@ -126,7 +126,11 @@ public class GetAuthTokenRequest extends Request {
         } 
 
         /**
-         * The requested domain name.
+         * <p>The requested domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyundoc.com">https://www.aliyundoc.com</a></p>
          */
         public Builder origin(String origin) {
             this.putQueryParameter("Origin", origin);
@@ -171,7 +175,11 @@ public class GetAuthTokenRequest extends Request {
         }
 
         /**
-         * The URL of the requested web page.
+         * <p>The URL of the requested web page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyundoc.com/">https://www.aliyundoc.com/</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGateVerifyBillingPublicResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGateVerifyBillingPublicResponseBody</p>
  */
 public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryGateVerifyBillingPublicResponseBody(Builder builder) {
@@ -74,11 +74,14 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code. Valid values:
-         * <p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+         * </ul>
          * 
-         * *   If OK is returned, the request is successful.
-         * *   For more information about other error codes, see [API response codes](~~85198~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +89,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         }
 
         /**
-         * The billing information about each verification service.
+         * <p>The billing information about each verification service.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +97,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8906582E-6722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,26 +124,32 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryGateVerifyBillingPublicResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGateVerifyBillingPublicResponseBody</p>
+     */
     public static class SceneBillingList extends TeaModel {
-        @NameInMap("Add")
+        @com.aliyun.core.annotation.NameInMap("Add")
         private String add;
 
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private String amount;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("SceneCode")
+        @com.aliyun.core.annotation.NameInMap("SceneCode")
         private String sceneCode;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("SinglePrice")
+        @com.aliyun.core.annotation.NameInMap("SinglePrice")
         private String singlePrice;
 
         private SceneBillingList(Builder builder) {
@@ -214,7 +229,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             private String singlePrice; 
 
             /**
-             * The billable items.
+             * <p>The billable items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74</p>
              */
             public Builder add(String add) {
                 this.add = add;
@@ -222,7 +240,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * The fees generated for the verification service. Unitrogen: CNY.
+             * <p>The fees generated for the verification service. Unitrogen: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.48</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -230,7 +251,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -238,7 +262,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * The verification method.
+             * <p>The verification method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Verification of local phone number</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -246,7 +273,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FC100000038194004</p>
              */
             public Builder sceneCode(String sceneCode) {
                 this.sceneCode = sceneCode;
@@ -254,7 +284,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * The service name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Communications</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -262,7 +295,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * The unit price. Unit: CNY.
+             * <p>The unit price. Unit: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder singlePrice(String singlePrice) {
                 this.singlePrice = singlePrice;
@@ -276,11 +312,17 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryGateVerifyBillingPublicResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGateVerifyBillingPublicResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AmountSum")
+        @com.aliyun.core.annotation.NameInMap("AmountSum")
         private String amountSum;
 
-        @NameInMap("SceneBillingList")
+        @com.aliyun.core.annotation.NameInMap("SceneBillingList")
         private java.util.List < SceneBillingList> sceneBillingList;
 
         private Data(Builder builder) {
@@ -315,7 +357,10 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             private java.util.List < SceneBillingList> sceneBillingList; 
 
             /**
-             * The fees generated for all verification services. Unitrogen: CNY.
+             * <p>The fees generated for all verification services. Unitrogen: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder amountSum(String amountSum) {
                 this.amountSum = amountSum;
@@ -323,7 +368,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * The details of fees.
+             * <p>The details of fees.</p>
              */
             public Builder sceneBillingList(java.util.List < SceneBillingList> sceneBillingList) {
                 this.sceneBillingList = sceneBillingList;
