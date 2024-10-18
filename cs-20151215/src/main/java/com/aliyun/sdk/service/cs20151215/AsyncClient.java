@@ -58,13 +58,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request);
 
     /**
-     * @deprecated OpenAPI CancelWorkflow is deprecated  * @param request  the request parameters of CancelWorkflow  CancelWorkflowRequest
-     * @return CancelWorkflowResponse
-     */
-    @Deprecated
-    CompletableFuture<CancelWorkflowResponse> cancelWorkflow(CancelWorkflowRequest request);
-
-    /**
      * @param request the request parameters of CheckControlPlaneLogEnable  CheckControlPlaneLogEnableRequest
      * @return CheckControlPlaneLogEnableResponse
      */
@@ -238,13 +231,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeployPolicyInstanceResponse
      */
     CompletableFuture<DeployPolicyInstanceResponse> deployPolicyInstance(DeployPolicyInstanceRequest request);
-
-    /**
-     * @deprecated OpenAPI DescirbeWorkflow is deprecated  * @param request  the request parameters of DescirbeWorkflow  DescirbeWorkflowRequest
-     * @return DescirbeWorkflowResponse
-     */
-    @Deprecated
-    CompletableFuture<DescirbeWorkflowResponse> descirbeWorkflow(DescirbeWorkflowRequest request);
 
     /**
      * @param request the request parameters of DescribeAddon  DescribeAddonRequest
@@ -532,13 +518,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserQuotaResponse> describeUserQuota(DescribeUserQuotaRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeWorkflows is deprecated  * @param request  the request parameters of DescribeWorkflows  DescribeWorkflowsRequest
-     * @return DescribeWorkflowsResponse
-     */
-    @Deprecated
-    CompletableFuture<DescribeWorkflowsResponse> describeWorkflows(DescribeWorkflowsRequest request);
-
-    /**
      * @param request the request parameters of EdgeClusterAddEdgeMachine  EdgeClusterAddEdgeMachineRequest
      * @return EdgeClusterAddEdgeMachineResponse
      */
@@ -798,13 +777,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveNodePoolNodesResponse> removeNodePoolNodes(RemoveNodePoolNodesRequest request);
 
     /**
-     * @deprecated OpenAPI RemoveWorkflow is deprecated  * @param request  the request parameters of RemoveWorkflow  RemoveWorkflowRequest
-     * @return RemoveWorkflowResponse
-     */
-    @Deprecated
-    CompletableFuture<RemoveWorkflowResponse> removeWorkflow(RemoveWorkflowRequest request);
-
-    /**
      * @param request the request parameters of RepairClusterNodePool  RepairClusterNodePoolRequest
      * @return RepairClusterNodePoolResponse
      */
@@ -877,13 +849,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartAlertResponse
      */
     CompletableFuture<StartAlertResponse> startAlert(StartAlertRequest request);
-
-    /**
-     * @deprecated OpenAPI StartWorkflow is deprecated  * @param request  the request parameters of StartWorkflow  StartWorkflowRequest
-     * @return StartWorkflowResponse
-     */
-    @Deprecated
-    CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request);
 
     /**
      * @param request the request parameters of StopAlert  StopAlertRequest

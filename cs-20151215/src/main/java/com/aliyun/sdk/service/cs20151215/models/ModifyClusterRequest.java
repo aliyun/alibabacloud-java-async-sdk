@@ -73,6 +73,10 @@ public class ModifyClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("system_events_logging")
     private SystemEventsLogging systemEventsLogging;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vswitch_ids")
+    private java.util.List < String > vswitchIds;
+
     private ModifyClusterRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -90,6 +94,7 @@ public class ModifyClusterRequest extends Request {
         this.operationPolicy = builder.operationPolicy;
         this.resourceGroupId = builder.resourceGroupId;
         this.systemEventsLogging = builder.systemEventsLogging;
+        this.vswitchIds = builder.vswitchIds;
     }
 
     public static Builder builder() {
@@ -210,6 +215,13 @@ public class ModifyClusterRequest extends Request {
         return this.systemEventsLogging;
     }
 
+    /**
+     * @return vswitchIds
+     */
+    public java.util.List < String > getVswitchIds() {
+        return this.vswitchIds;
+    }
+
     public static final class Builder extends Request.Builder<ModifyClusterRequest, Builder> {
         private String clusterId; 
         private java.util.List < String > accessControlList; 
@@ -226,6 +238,7 @@ public class ModifyClusterRequest extends Request {
         private OperationPolicy operationPolicy; 
         private String resourceGroupId; 
         private SystemEventsLogging systemEventsLogging; 
+        private java.util.List < String > vswitchIds; 
 
         private Builder() {
             super();
@@ -248,6 +261,7 @@ public class ModifyClusterRequest extends Request {
             this.operationPolicy = request.operationPolicy;
             this.resourceGroupId = request.resourceGroupId;
             this.systemEventsLogging = request.systemEventsLogging;
+            this.vswitchIds = request.vswitchIds;
         } 
 
         /**
@@ -437,6 +451,15 @@ public class ModifyClusterRequest extends Request {
         public Builder systemEventsLogging(SystemEventsLogging systemEventsLogging) {
             this.putBodyParameter("system_events_logging", systemEventsLogging);
             this.systemEventsLogging = systemEventsLogging;
+            return this;
+        }
+
+        /**
+         * vswitch_ids.
+         */
+        public Builder vswitchIds(java.util.List < String > vswitchIds) {
+            this.putBodyParameter("vswitch_ids", vswitchIds);
+            this.vswitchIds = vswitchIds;
             return this;
         }
 

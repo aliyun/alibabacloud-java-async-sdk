@@ -181,25 +181,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CancelWorkflow is deprecated  * @param request  the request parameters of CancelWorkflow  CancelWorkflowRequest
-     * @return CancelWorkflowResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<CancelWorkflowResponse> cancelWorkflow(CancelWorkflowRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CancelWorkflow").setMethod(HttpMethod.PUT).setPathRegex("/gs/workflow/{workflowName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelWorkflowResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CancelWorkflowResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of CheckControlPlaneLogEnable  CheckControlPlaneLogEnableRequest
      * @return CheckControlPlaneLogEnableResponse
      */
@@ -645,25 +626,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeployPolicyInstanceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI DescirbeWorkflow is deprecated  * @param request  the request parameters of DescirbeWorkflow  DescirbeWorkflowRequest
-     * @return DescirbeWorkflowResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<DescirbeWorkflowResponse> descirbeWorkflow(DescirbeWorkflowRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescirbeWorkflow").setMethod(HttpMethod.GET).setPathRegex("/gs/workflow/{workflowName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescirbeWorkflowResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescirbeWorkflowResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1471,25 +1433,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeWorkflows is deprecated  * @param request  the request parameters of DescribeWorkflows  DescribeWorkflowsRequest
-     * @return DescribeWorkflowsResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<DescribeWorkflowsResponse> describeWorkflows(DescribeWorkflowsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeWorkflows").setMethod(HttpMethod.GET).setPathRegex("/gs/workflows").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWorkflowsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeWorkflowsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of EdgeClusterAddEdgeMachine  EdgeClusterAddEdgeMachineRequest
      * @return EdgeClusterAddEdgeMachineResponse
      */
@@ -2133,25 +2076,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI RemoveWorkflow is deprecated  * @param request  the request parameters of RemoveWorkflow  RemoveWorkflowRequest
-     * @return RemoveWorkflowResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<RemoveWorkflowResponse> removeWorkflow(RemoveWorkflowRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveWorkflow").setMethod(HttpMethod.DELETE).setPathRegex("/gs/workflow/{workflowName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveWorkflowResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RemoveWorkflowResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of RepairClusterNodePool  RepairClusterNodePoolRequest
      * @return RepairClusterNodePoolResponse
      */
@@ -2352,25 +2276,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartAlertResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI StartWorkflow is deprecated  * @param request  the request parameters of StartWorkflow  StartWorkflowRequest
-     * @return StartWorkflowResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartWorkflow").setMethod(HttpMethod.POST).setPathRegex("/gs/workflow").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartWorkflowResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<StartWorkflowResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

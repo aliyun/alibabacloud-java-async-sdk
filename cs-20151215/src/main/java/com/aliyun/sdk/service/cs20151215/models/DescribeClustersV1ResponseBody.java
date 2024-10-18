@@ -192,6 +192,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
      * <p>DescribeClustersV1ResponseBody</p>
      */
     public static class Clusters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cluster_domain")
+        private String clusterDomain;
+
         @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
@@ -200,6 +203,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("cluster_type")
         private String clusterType;
+
+        @com.aliyun.core.annotation.NameInMap("container_cidr")
+        private String containerCidr;
 
         @com.aliyun.core.annotation.NameInMap("created")
         private String created;
@@ -218,6 +224,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("init_version")
         private String initVersion;
+
+        @com.aliyun.core.annotation.NameInMap("ip_stack")
+        private String ipStack;
 
         @com.aliyun.core.annotation.NameInMap("maintenance_window")
         private MaintenanceWindow maintenanceWindow;
@@ -246,6 +255,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("profile")
         private String profile;
 
+        @com.aliyun.core.annotation.NameInMap("proxy_mode")
+        private String proxyMode;
+
         @com.aliyun.core.annotation.NameInMap("region_id")
         private String regionId;
 
@@ -255,6 +267,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("security_group_id")
         private String securityGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("service_cidr")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String serviceCidr;
+
         @com.aliyun.core.annotation.NameInMap("size")
         private Long size;
 
@@ -262,10 +278,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         private String state;
 
         @com.aliyun.core.annotation.NameInMap("subnet_cidr")
+        @Deprecated
         private String subnetCidr;
 
         @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tag > tags;
+
+        @com.aliyun.core.annotation.NameInMap("timezone")
+        private String timezone;
 
         @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
@@ -274,7 +294,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         private String vpcId;
 
         @com.aliyun.core.annotation.NameInMap("vswitch_id")
+        @Deprecated
         private String vswitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vswitch_ids")
+        private java.util.List < String > vswitchIds;
 
         @com.aliyun.core.annotation.NameInMap("worker_ram_role_name")
         private String workerRamRoleName;
@@ -283,15 +307,18 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         private String zoneId;
 
         private Clusters(Builder builder) {
+            this.clusterDomain = builder.clusterDomain;
             this.clusterId = builder.clusterId;
             this.clusterSpec = builder.clusterSpec;
             this.clusterType = builder.clusterType;
+            this.containerCidr = builder.containerCidr;
             this.created = builder.created;
             this.currentVersion = builder.currentVersion;
             this.deletionProtection = builder.deletionProtection;
             this.dockerVersion = builder.dockerVersion;
             this.externalLoadbalancerId = builder.externalLoadbalancerId;
             this.initVersion = builder.initVersion;
+            this.ipStack = builder.ipStack;
             this.maintenanceWindow = builder.maintenanceWindow;
             this.masterUrl = builder.masterUrl;
             this.metaData = builder.metaData;
@@ -301,16 +328,20 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             this.operationPolicy = builder.operationPolicy;
             this.privateZone = builder.privateZone;
             this.profile = builder.profile;
+            this.proxyMode = builder.proxyMode;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.securityGroupId = builder.securityGroupId;
+            this.serviceCidr = builder.serviceCidr;
             this.size = builder.size;
             this.state = builder.state;
             this.subnetCidr = builder.subnetCidr;
             this.tags = builder.tags;
+            this.timezone = builder.timezone;
             this.updated = builder.updated;
             this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
+            this.vswitchIds = builder.vswitchIds;
             this.workerRamRoleName = builder.workerRamRoleName;
             this.zoneId = builder.zoneId;
         }
@@ -321,6 +352,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
         public static Clusters create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterDomain
+         */
+        public String getClusterDomain() {
+            return this.clusterDomain;
         }
 
         /**
@@ -342,6 +380,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          */
         public String getClusterType() {
             return this.clusterType;
+        }
+
+        /**
+         * @return containerCidr
+         */
+        public String getContainerCidr() {
+            return this.containerCidr;
         }
 
         /**
@@ -384,6 +429,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          */
         public String getInitVersion() {
             return this.initVersion;
+        }
+
+        /**
+         * @return ipStack
+         */
+        public String getIpStack() {
+            return this.ipStack;
         }
 
         /**
@@ -450,6 +502,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
 
         /**
+         * @return proxyMode
+         */
+        public String getProxyMode() {
+            return this.proxyMode;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -468,6 +527,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          */
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        /**
+         * @return serviceCidr
+         */
+        public String getServiceCidr() {
+            return this.serviceCidr;
         }
 
         /**
@@ -499,6 +565,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
 
         /**
+         * @return timezone
+         */
+        public String getTimezone() {
+            return this.timezone;
+        }
+
+        /**
          * @return updated
          */
         public String getUpdated() {
@@ -520,6 +593,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
 
         /**
+         * @return vswitchIds
+         */
+        public java.util.List < String > getVswitchIds() {
+            return this.vswitchIds;
+        }
+
+        /**
          * @return workerRamRoleName
          */
         public String getWorkerRamRoleName() {
@@ -534,15 +614,18 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String clusterDomain; 
             private String clusterId; 
             private String clusterSpec; 
             private String clusterType; 
+            private String containerCidr; 
             private String created; 
             private String currentVersion; 
             private Boolean deletionProtection; 
             private String dockerVersion; 
             private String externalLoadbalancerId; 
             private String initVersion; 
+            private String ipStack; 
             private MaintenanceWindow maintenanceWindow; 
             private String masterUrl; 
             private String metaData; 
@@ -552,18 +635,30 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             private OperationPolicy operationPolicy; 
             private Boolean privateZone; 
             private String profile; 
+            private String proxyMode; 
             private String regionId; 
             private String resourceGroupId; 
             private String securityGroupId; 
+            private String serviceCidr; 
             private Long size; 
             private String state; 
             private String subnetCidr; 
             private java.util.List < Tag > tags; 
+            private String timezone; 
             private String updated; 
             private String vpcId; 
             private String vswitchId; 
+            private java.util.List < String > vswitchIds; 
             private String workerRamRoleName; 
             private String zoneId; 
+
+            /**
+             * cluster_domain.
+             */
+            public Builder clusterDomain(String clusterDomain) {
+                this.clusterDomain = clusterDomain;
+                return this;
+            }
 
             /**
              * <p>The cluster ID.</p>
@@ -603,6 +698,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
+                return this;
+            }
+
+            /**
+             * container_cidr.
+             */
+            public Builder containerCidr(String containerCidr) {
+                this.containerCidr = containerCidr;
                 return this;
             }
 
@@ -675,6 +778,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              */
             public Builder initVersion(String initVersion) {
                 this.initVersion = initVersion;
+                return this;
+            }
+
+            /**
+             * ip_stack.
+             */
+            public Builder ipStack(String ipStack) {
+                this.ipStack = ipStack;
                 return this;
             }
 
@@ -789,6 +900,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
+             * proxy_mode.
+             */
+            public Builder proxyMode(String proxyMode) {
+                this.proxyMode = proxyMode;
+                return this;
+            }
+
+            /**
              * <p>The region ID of the cluster.</p>
              * 
              * <strong>example:</strong>
@@ -818,6 +937,17 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.21.0.0/20</p>
+             */
+            public Builder serviceCidr(String serviceCidr) {
+                this.serviceCidr = serviceCidr;
                 return this;
             }
 
@@ -882,6 +1012,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
+             * timezone.
+             */
+            public Builder timezone(String timezone) {
+                this.timezone = timezone;
+                return this;
+            }
+
+            /**
              * <p>The time when the cluster was updated.</p>
              * 
              * <strong>example:</strong>
@@ -911,6 +1049,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * vswitch_ids.
+             */
+            public Builder vswitchIds(java.util.List < String > vswitchIds) {
+                this.vswitchIds = vswitchIds;
                 return this;
             }
 
