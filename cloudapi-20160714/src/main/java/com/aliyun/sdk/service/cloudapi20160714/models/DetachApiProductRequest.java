@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachApiProductRequest} extends {@link RequestModel}
  *
  * <p>DetachApiProductRequest</p>
@@ -83,7 +84,11 @@ public class DetachApiProductRequest extends Request {
         } 
 
         /**
-         * The ID of the API product.
+         * <p>The ID of the API product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
          */
         public Builder apiProductId(String apiProductId) {
             this.putQueryParameter("ApiProductId", apiProductId);
@@ -92,7 +97,8 @@ public class DetachApiProductRequest extends Request {
         }
 
         /**
-         * The APIs that you want to detach from the API product.
+         * <p>The APIs that you want to detach from the API product.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder apis(java.util.List < Apis> apis) {
             this.putQueryParameter("Apis", apis);
@@ -116,6 +122,12 @@ public class DetachApiProductRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DetachApiProductRequest} extends {@link TeaModel}
+     *
+     * <p>DetachApiProductRequest</p>
+     */
     public static class Apis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -157,7 +169,11 @@ public class DetachApiProductRequest extends Request {
             private String stageName; 
 
             /**
-             * The API ID.
+             * <p>The API ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ba84c55eca46488598da17c0609f3ead</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -165,12 +181,16 @@ public class DetachApiProductRequest extends Request {
             }
 
             /**
-             * The environment to which the API is published. Valid values:
-             * <p>
+             * <p>The environment to which the API is published. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong>: the production environment</li>
+             * <li><strong>PRE</strong>: the pre-release environment</li>
+             * <li><strong>TEST</strong>: the test environment</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **RELEASE**: the production environment
-             * *   **PRE**: the pre-release environment
-             * *   **TEST**: the test environment
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

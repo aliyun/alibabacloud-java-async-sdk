@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByTrafficControlRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisByTrafficControlRequest</p>
@@ -97,7 +98,10 @@ public class DescribeApisByTrafficControlRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -106,7 +110,10 @@ public class DescribeApisByTrafficControlRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -115,7 +122,10 @@ public class DescribeApisByTrafficControlRequest extends Request {
         }
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9abe3317-3e22-4957-ab9f-dd893d0ac956</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -124,7 +134,11 @@ public class DescribeApisByTrafficControlRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy that you want to query.
+         * <p>The ID of the throttling policy that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetVpcAccessRequest} extends {@link RequestModel}
  *
  * <p>SetVpcAccessRequest</p>
@@ -155,7 +156,10 @@ public class SetVpcAccessRequest extends Request {
         } 
 
         /**
-         * The description of the VPC.
+         * <p>The description of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description of the VPC</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -164,7 +168,11 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The ID of an ECS or SLB instance in the VPC.
+         * <p>The ID of an ECS or SLB instance in the VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6bzcg1pr4oh5jjmxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -173,7 +181,11 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The name of the authorization. The name must be unique.
+         * <p>The name of the authorization. The name must be unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -182,7 +194,11 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The port number that corresponds to the instance.
+         * <p>The port number that corresponds to the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -200,7 +216,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -209,7 +225,11 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The ID of the VPC. The VPC must be an available one that belongs to the same account as the API.
+         * <p>The ID of the VPC. The VPC must be an available one that belongs to the same account as the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf657qec7lx42paw3qxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -218,7 +238,10 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The host of the backend service.
+         * <p>The host of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.hu***ng.com</p>
          */
         public Builder vpcTargetHostName(String vpcTargetHostName) {
             this.putQueryParameter("VpcTargetHostName", vpcTargetHostName);
@@ -233,6 +256,12 @@ public class SetVpcAccessRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetVpcAccessRequest} extends {@link TeaModel}
+     *
+     * <p>SetVpcAccessRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -272,7 +301,10 @@ public class SetVpcAccessRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -280,7 +312,10 @@ public class SetVpcAccessRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

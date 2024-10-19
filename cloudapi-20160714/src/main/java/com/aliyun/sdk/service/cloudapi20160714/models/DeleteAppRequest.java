@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAppRequest} extends {@link RequestModel}
  *
  * <p>DeleteAppRequest</p>
@@ -82,7 +83,11 @@ public class DeleteAppRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110840611</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -100,7 +105,10 @@ public class DeleteAppRequest extends Request {
         }
 
         /**
-         * The tags. Up to 20 tags are allowed.
+         * <p>The tags. Up to 20 tags are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -115,6 +123,12 @@ public class DeleteAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteAppRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteAppRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -155,7 +169,11 @@ public class DeleteAppRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appname</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -163,7 +181,10 @@ public class DeleteAppRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testapp</p>
              */
             public Builder value(String value) {
                 this.value = value;

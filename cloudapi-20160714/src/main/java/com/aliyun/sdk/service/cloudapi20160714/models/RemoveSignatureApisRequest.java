@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveSignatureApisRequest} extends {@link RequestModel}
  *
  * <p>RemoveSignatureApisRequest</p>
@@ -112,11 +113,14 @@ public class RemoveSignatureApisRequest extends Request {
         } 
 
         /**
-         * The IDs of the APIs from which you want to unbind the signature key.
-         * <p>
+         * <p>The IDs of the APIs from which you want to unbind the signature key.</p>
+         * <ul>
+         * <li>If this parameter is not specified, the signature key is unbound from all the APIs in the specified environment of the API group.</li>
+         * <li>The IDs of the APIs that you want to manage. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</li>
+         * </ul>
          * 
-         * *   If this parameter is not specified, the signature key is unbound from all the APIs in the specified environment of the API group.
-         * *   The IDs of the APIs that you want to manage. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -125,7 +129,11 @@ public class RemoveSignatureApisRequest extends Request {
         }
 
         /**
-         * The ID of the API group to which the API that you want to manage belongs.
+         * <p>The ID of the API group to which the API that you want to manage belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0009db9c828549768a200320714b8930</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -143,7 +151,11 @@ public class RemoveSignatureApisRequest extends Request {
         }
 
         /**
-         * The ID of the signature key.
+         * <p>The ID of the signature key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);
@@ -152,11 +164,15 @@ public class RemoveSignatureApisRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

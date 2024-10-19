@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTrafficSpecialControlRequest} extends {@link RequestModel}
  *
  * <p>AddTrafficSpecialControlRequest</p>
@@ -113,7 +114,10 @@ public class AddTrafficSpecialControlRequest extends Request {
         } 
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fa876ffb-caab-4f0a-93b3-3409f2fa5199</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -122,7 +126,11 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the app or Alibaba Cloud account. Specify this parameter based on the value of the **SpecialType** parameter. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3f053654YpMPwo#/secure) page.
+         * <p>The ID of the app or Alibaba Cloud account. Specify this parameter based on the value of the <strong>SpecialType</strong> parameter. You can view your account ID on the <a href="https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3f053654YpMPwo#/secure">Account Management</a> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3382463</p>
          */
         public Builder specialKey(String specialKey) {
             this.putQueryParameter("SpecialKey", specialKey);
@@ -131,11 +139,15 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The type of the special throttling policy. Valid values:
-         * <p>
+         * <p>The type of the special throttling policy. Valid values:</p>
+         * <ul>
+         * <li><strong>APP</strong></li>
+         * <li><strong>USER</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **APP**
-         * *   **USER**
+         * <strong>example:</strong>
+         * <p>APP</p>
          */
         public Builder specialType(String specialType) {
             this.putQueryParameter("SpecialType", specialType);
@@ -144,7 +156,11 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the specified throttling policy.
+         * <p>The ID of the specified throttling policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf123456</p>
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);
@@ -153,7 +169,11 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The special throttling value.
+         * <p>The special throttling value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder trafficValue(Integer trafficValue) {
             this.putQueryParameter("TrafficValue", trafficValue);

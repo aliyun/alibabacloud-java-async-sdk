@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiGroupVpcWhitelistRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiGroupVpcWhitelistRequest</p>
@@ -68,7 +69,11 @@ public class DescribeApiGroupVpcWhitelistRequest extends Request {
         } 
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f6c64214dc27400196eef954575d60d3</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

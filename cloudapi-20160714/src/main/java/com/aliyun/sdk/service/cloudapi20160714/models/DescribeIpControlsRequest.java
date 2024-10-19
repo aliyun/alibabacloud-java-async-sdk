@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpControlsRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpControlsRequest</p>
@@ -124,7 +125,10 @@ public class DescribeIpControlsRequest extends Request {
         } 
 
         /**
-         * The ID of the ACL. The ID is unique.
+         * <p>The ID of the ACL. The ID is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -133,7 +137,10 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * The name of the ACL.
+         * <p>The name of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACL test</p>
          */
         public Builder ipControlName(String ipControlName) {
             this.putQueryParameter("IpControlName", ipControlName);
@@ -142,11 +149,14 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * The type of the ACL. Valid values:
-         * <p>
+         * <p>The type of the ACL. Valid values:</p>
+         * <ul>
+         * <li><strong>ALLOW</strong>: a whitelist</li>
+         * <li><strong>REFUSE</strong>: a blacklist</li>
+         * </ul>
          * 
-         * *   **ALLOW**: a whitelist
-         * *   **REFUSE**: a blacklist
+         * <strong>example:</strong>
+         * <p>ALLOW</p>
          */
         public Builder ipControlType(String ipControlType) {
             this.putQueryParameter("IpControlType", ipControlType);
@@ -155,7 +165,10 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -164,7 +177,10 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

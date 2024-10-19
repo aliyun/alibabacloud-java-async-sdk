@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchAbolishApisRequest} extends {@link RequestModel}
  *
  * <p>BatchAbolishApisRequest</p>
@@ -68,7 +69,8 @@ public class BatchAbolishApisRequest extends Request {
         } 
 
         /**
-         * The APIs that you want to operate.
+         * <p>The APIs that you want to operate.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder api(java.util.List < Api> api) {
             this.putQueryParameter("Api", api);
@@ -92,6 +94,12 @@ public class BatchAbolishApisRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchAbolishApisRequest} extends {@link TeaModel}
+     *
+     * <p>BatchAbolishApisRequest</p>
+     */
     public static class Api extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiUid")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -157,7 +165,11 @@ public class BatchAbolishApisRequest extends Request {
             private String stageName; 
 
             /**
-             * The ID of the API.
+             * <p>The ID of the API.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>994f72dcdaf04af0b38022c65fdbd1ac</p>
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -165,7 +177,11 @@ public class BatchAbolishApisRequest extends Request {
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ced5ab777f7b440398ea70e4470124de</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -173,7 +189,10 @@ public class BatchAbolishApisRequest extends Request {
             }
 
             /**
-             * The ID of the environment.
+             * <p>The ID of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>979fd16250644d5b82173534f465ac77</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -181,7 +200,10 @@ public class BatchAbolishApisRequest extends Request {
             }
 
             /**
-             * The name of the environment.
+             * <p>The name of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceDropPacketRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceDropPacketRequest</p>
@@ -113,7 +114,11 @@ public class DescribeInstanceDropPacketRequest extends Request {
         } 
 
         /**
-         * The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+         * <p>The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-16T02:04:36Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -122,7 +127,11 @@ public class DescribeInstanceDropPacketRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cn-v641b9dxc00p</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,12 +140,16 @@ public class DescribeInstanceDropPacketRequest extends Request {
         }
 
         /**
-         * The statistical metric. Valid values:
-         * <p>
+         * <p>The statistical metric. Valid values:</p>
+         * <ul>
+         * <li>Maximum</li>
+         * <li>Minimum</li>
+         * <li>Average</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Maximum
-         * *   Minimum
-         * *   Average
+         * <strong>example:</strong>
+         * <p>Maximum</p>
          */
         public Builder sbcName(String sbcName) {
             this.putQueryParameter("SbcName", sbcName);
@@ -154,7 +167,11 @@ public class DescribeInstanceDropPacketRequest extends Request {
         }
 
         /**
-         * The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+         * <p>The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-06T04:00:36Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

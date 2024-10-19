@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeployedApisRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeployedApisRequest</p>
@@ -193,7 +194,10 @@ public class DescribeDeployedApisRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c076144d7878437b8f82fb85890ce6a0</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -211,7 +215,10 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The name of the API. The name is used for fuzzy match.
+         * <p>The name of the API. The name is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weather</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -229,7 +236,10 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable tag verification.
+         * <p>Specifies whether to enable tag verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
@@ -238,7 +248,10 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63be9002440b4778a61122f14c2b2bbb</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -247,7 +260,10 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -256,7 +272,10 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,11 +293,14 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -287,7 +309,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -302,6 +324,12 @@ public class DescribeDeployedApisRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeployedApisRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDeployedApisRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -341,7 +369,10 @@ public class DescribeDeployedApisRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appname</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -349,7 +380,10 @@ public class DescribeDeployedApisRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testapp</p>
              */
             public Builder value(String value) {
                 this.value = value;

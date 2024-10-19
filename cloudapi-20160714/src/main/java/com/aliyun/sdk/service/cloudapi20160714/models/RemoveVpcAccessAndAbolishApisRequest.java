@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveVpcAccessAndAbolishApisRequest} extends {@link RequestModel}
  *
  * <p>RemoveVpcAccessAndAbolishApisRequest</p>
@@ -112,7 +113,10 @@ public class RemoveVpcAccessAndAbolishApisRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6iaale3gfef9t9cb41</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +134,10 @@ public class RemoveVpcAccessAndAbolishApisRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -148,7 +155,10 @@ public class RemoveVpcAccessAndAbolishApisRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1iw82phcgkvupgfv0o8</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

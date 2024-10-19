@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLogConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteLogConfigRequest</p>
@@ -90,7 +91,10 @@ public class DeleteLogConfigRequest extends Request {
         }
 
         /**
-         * The log type. Valid values: **log** and **survey**.
+         * <p>The log type. Valid values: <strong>log</strong> and <strong>survey</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log</p>
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);

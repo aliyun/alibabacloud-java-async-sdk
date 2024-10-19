@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTrafficControlApisRequest} extends {@link RequestModel}
  *
  * <p>RemoveTrafficControlApisRequest</p>
@@ -112,11 +113,14 @@ public class RemoveTrafficControlApisRequest extends Request {
         } 
 
         /**
-         * The IDs of the APIs from which you want to unbind a specified throttling policy.
-         * <p>
+         * <p>The IDs of the APIs from which you want to unbind a specified throttling policy.</p>
+         * <ul>
+         * <li>If this parameter is not specified, the throttling policy is unbound from all the APIs in the specified environment of the API group.</li>
+         * <li>Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</li>
+         * </ul>
          * 
-         * *   If this parameter is not specified, the throttling policy is unbound from all the APIs in the specified environment of the API group.
-         * *   Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * <strong>example:</strong>
+         * <p>3b81fd160f5645e097cc8855d75a1cf6,46fbb52840d146f186e38e8e70fc8c12</p>
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -125,7 +129,11 @@ public class RemoveTrafficControlApisRequest extends Request {
         }
 
         /**
-         * The ID of the API group containing the APIs from which you want to unbind a specified throttling policy.
+         * <p>The ID of the API group containing the APIs from which you want to unbind a specified throttling policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0009db9c828549768a200320714b8930</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -134,7 +142,10 @@ public class RemoveTrafficControlApisRequest extends Request {
         }
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4223a10e-eed3-46a6-8b7c-23003f488153</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -143,11 +154,15 @@ public class RemoveTrafficControlApisRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -156,7 +171,11 @@ public class RemoveTrafficControlApisRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy that you want to unbind from APIs.
+         * <p>The ID of the throttling policy that you want to unbind from APIs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

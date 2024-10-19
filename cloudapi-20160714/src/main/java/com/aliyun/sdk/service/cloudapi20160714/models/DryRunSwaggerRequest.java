@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DryRunSwaggerRequest} extends {@link RequestModel}
  *
  * <p>DryRunSwaggerRequest</p>
@@ -127,7 +128,11 @@ public class DryRunSwaggerRequest extends Request {
         } 
 
         /**
-         * The Swagger text content.
+         * <p>The Swagger text content.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;A Swagger API definition in YAML&quot;</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -136,11 +141,15 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * The Swagger text format:
-         * <p>
+         * <p>The Swagger text format:</p>
+         * <ul>
+         * <li>json</li>
+         * <li>yaml</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   json
-         * *   yaml
+         * <strong>example:</strong>
+         * <p>yaml</p>
          */
         public Builder dataFormat(String dataFormat) {
             this.putQueryParameter("DataFormat", dataFormat);
@@ -149,7 +158,10 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * The global condition.
+         * <p>The global condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder globalCondition(java.util.Map < String, ? > globalCondition) {
             String globalConditionShrink = shrink(globalCondition, "GlobalCondition", "json");
@@ -159,7 +171,11 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d633cf5524f841b9950e245b191bdabf</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -168,10 +184,12 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * Specifies whether to overwrite the existing API.
-         * <p>
+         * <p>Specifies whether to overwrite the existing API.</p>
+         * <p>APIs with the same HTTP request type and backend request path are considered the same.</p>
+         * <p>This parameter is required.</p>
          * 
-         * APIs with the same HTTP request type and backend request path are considered the same.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);

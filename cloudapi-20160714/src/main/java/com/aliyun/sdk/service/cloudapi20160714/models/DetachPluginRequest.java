@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachPluginRequest} extends {@link RequestModel}
  *
  * <p>DetachPluginRequest</p>
@@ -129,7 +130,10 @@ public class DetachPluginRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05df2b52a3644a3a8b1935ab8ab59e9d</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -147,7 +151,10 @@ public class DetachPluginRequest extends Request {
         }
 
         /**
-         * StageName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

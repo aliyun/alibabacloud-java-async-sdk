@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SdkGenerateByGroupRequest} extends {@link RequestModel}
  *
  * <p>SdkGenerateByGroupRequest</p>
@@ -83,7 +84,10 @@ public class SdkGenerateByGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a991a450b9548a1a3df38fd3af117c2</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -92,7 +96,10 @@ public class SdkGenerateByGroupRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

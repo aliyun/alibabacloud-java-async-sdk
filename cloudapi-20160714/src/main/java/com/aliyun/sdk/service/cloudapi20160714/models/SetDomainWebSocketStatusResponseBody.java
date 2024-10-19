@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDomainWebSocketStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetDomainWebSocketStatusResponseBody</p>
@@ -37,7 +38,10 @@ public class SetDomainWebSocketStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61A16D46-EC04-5288-8A18-811B0F536CC2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

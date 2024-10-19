@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackendRequest} extends {@link RequestModel}
  *
  * <p>DeleteBackendRequest</p>
@@ -67,7 +68,10 @@ public class DeleteBackendRequest extends Request {
         } 
 
         /**
-         * The ID of the backend service.
+         * <p>The ID of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27be0dd9ebbc467b9e86c0d250d0b92e</p>
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);

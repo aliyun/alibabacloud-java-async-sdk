@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDomainWebSocketStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDomainWebSocketStatusRequest</p>
@@ -112,7 +113,11 @@ public class SetDomainWebSocketStatusRequest extends Request {
         } 
 
         /**
-         * The action.
+         * <p>The action.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder actionValue(String actionValue) {
             this.putQueryParameter("ActionValue", actionValue);
@@ -121,7 +126,11 @@ public class SetDomainWebSocketStatusRequest extends Request {
         }
 
         /**
-         * The custom domain name.
+         * <p>The custom domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac.fluvet.cn</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -130,7 +139,11 @@ public class SetDomainWebSocketStatusRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf976e63b70c4993807e7bb9345d4695</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

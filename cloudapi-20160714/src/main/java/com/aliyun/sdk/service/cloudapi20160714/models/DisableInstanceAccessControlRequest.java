@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableInstanceAccessControlRequest} extends {@link RequestModel}
  *
  * <p>DisableInstanceAccessControlRequest</p>
@@ -97,7 +98,11 @@ public class DisableInstanceAccessControlRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * <p>The ID of the access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-grgqc0mnuhkqciwtam</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -106,7 +111,10 @@ public class DisableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * The IP version. Valid values: **ipv4** and **ipv6**.
+         * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);
@@ -115,7 +123,11 @@ public class DisableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cn-v6419k43xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

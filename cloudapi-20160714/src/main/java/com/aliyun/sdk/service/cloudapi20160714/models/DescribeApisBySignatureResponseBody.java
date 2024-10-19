@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisBySignatureResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisBySignatureResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned API information. It is an array consisting of ApiInfo data.
+         * <p>The returned API information. It is an array consisting of ApiInfo data.</p>
          */
         public Builder apiInfos(ApiInfos apiInfos) {
             this.apiInfos = apiInfos;
@@ -93,7 +94,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisBySignatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisBySignatureResponseBody</p>
+     */
     public static class ApiInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
@@ -253,7 +272,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             private String visibility; 
 
             /**
-             * The ID of the API.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b81fd160f5645e097cc8855d75a1cf6</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -261,7 +283,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testapi</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -269,7 +294,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * The binding time of the API.
+             * <p>The binding time of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-23T08:28:48Z</p>
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -277,7 +305,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API.
+             * <p>The description of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -285,7 +316,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0009db9c828549768a200320714b8930</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -293,7 +327,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the API belongs.
+             * <p>The name of the group to which the API belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mygroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -301,7 +338,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the API is located.
+             * <p>The region where the API is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -309,11 +349,14 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment. Valid values:
-             * <p>
+             * <p>The name of the runtime environment. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong></li>
+             * <li><strong>TEST</strong></li>
+             * </ul>
              * 
-             * *   **RELEASE**
-             * *   **TEST**
+             * <strong>example:</strong>
+             * <p>TEST</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -321,11 +364,14 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the API is public. Valid values:
-             * <p>
+             * <p>Indicates whether the API is public. Valid values:</p>
+             * <ul>
+             * <li><strong>PUBLIC</strong></li>
+             * <li><strong>PRIVATE</strong></li>
+             * </ul>
              * 
-             * *   **PUBLIC**
-             * *   **PRIVATE**
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -339,6 +385,12 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApisBySignatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisBySignatureResponseBody</p>
+     */
     public static class ApiInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiInfo")
         private java.util.List < ApiInfo> apiInfo;

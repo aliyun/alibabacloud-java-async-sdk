@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePluginTemplatesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         private Templates templates; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The templates.
+         * <p>The templates.</p>
          */
         public Builder templates(Templates templates) {
             this.templates = templates;
@@ -70,6 +74,12 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePluginTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginTemplatesResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -145,7 +155,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>balabala</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -153,7 +166,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The document anchor point.
+             * <p>The document anchor point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>anchor</p>
              */
             public Builder documentAnchor(String documentAnchor) {
                 this.documentAnchor = documentAnchor;
@@ -161,7 +177,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the document.
+             * <p>The ID of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41079</p>
              */
             public Builder documentId(String documentId) {
                 this.documentId = documentId;
@@ -169,7 +188,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The sample.
+             * <p>The sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -177,7 +199,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the plug-in template title.
+             * <p>The title of the plug-in template title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -191,6 +216,12 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePluginTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Template")
         private java.util.List < Template> template;

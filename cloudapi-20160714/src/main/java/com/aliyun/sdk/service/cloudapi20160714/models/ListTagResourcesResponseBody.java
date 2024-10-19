@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -61,10 +62,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The token that determines the start point of the next query.
-         * <p>
+         * <p>The token that determines the start point of the next query.</p>
+         * <p>A NextToken value of -1 indicates that a next query does not exist.</p>
          * 
-         * A NextToken value of -1 indicates that a next query does not exist.
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -72,7 +74,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D69A58F-345C-4FDE-88E4-BF5189484043</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,7 +85,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The resource list.
+         * <p>The resource list.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -93,6 +98,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -156,7 +167,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>285bb759342649a1b70c2093a772e087</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -164,7 +178,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiGroup</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -172,7 +189,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -180,7 +200,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -194,6 +217,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagResource")
         private java.util.List < TagResource> tagResource;

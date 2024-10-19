@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiMarketAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiMarketAttributesResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6318cd8f6a304cac9318dea8d9a78f7a</p>
          */
         public Builder apiId(String apiId) {
             this.apiId = apiId;
@@ -81,7 +85,10 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method used by the Alibaba Cloud Marketplace.
+         * <p>The billing method used by the Alibaba Cloud Marketplace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAID_BY_USAGE</p>
          */
         public Builder marketChargingMode(String marketChargingMode) {
             this.marketChargingMode = marketChargingMode;
@@ -89,7 +96,10 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether fees are charged.
+         * <p>Indicates whether fees are charged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needCharging(String needCharging) {
             this.needCharging = needCharging;
@@ -97,7 +107,10 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>545D4E52-4F77-5EC4-BB7E-7344CEC7B5E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

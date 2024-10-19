@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatasetItemListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDatasetItemListRequest</p>
@@ -110,7 +111,11 @@ public class DescribeDatasetItemListRequest extends Request {
         } 
 
         /**
-         * The ID of the dataset.
+         * <p>The ID of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>602e1f6b3543200eaab0a89e********</p>
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -119,7 +124,10 @@ public class DescribeDatasetItemListRequest extends Request {
         }
 
         /**
-         * The ID of the data entry. You can enter multiple IDs. Separate them with commas (,).
+         * <p>The ID of the data entry. You can enter multiple IDs. Separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5045****</p>
          */
         public Builder datasetItemIds(String datasetItemIds) {
             this.putQueryParameter("DatasetItemIds", datasetItemIds);
@@ -128,7 +136,10 @@ public class DescribeDatasetItemListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +148,10 @@ public class DescribeDatasetItemListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

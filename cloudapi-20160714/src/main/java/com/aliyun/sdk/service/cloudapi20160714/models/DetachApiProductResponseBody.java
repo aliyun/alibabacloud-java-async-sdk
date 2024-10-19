@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachApiProductResponseBody} extends {@link TeaModel}
  *
  * <p>DetachApiProductResponseBody</p>
@@ -37,7 +38,10 @@ public class DetachApiProductResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98E4A7DC-1EA6-5E6A-ACFE-91B60CE7D4BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

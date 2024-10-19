@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeployApisRequest} extends {@link RequestModel}
  *
  * <p>BatchDeployApisRequest</p>
@@ -97,7 +98,7 @@ public class BatchDeployApisRequest extends Request {
         } 
 
         /**
-         * The APIs that you want to publish.
+         * <p>The APIs that you want to publish.</p>
          */
         public Builder api(java.util.List < Api> api) {
             this.putQueryParameter("Api", api);
@@ -106,7 +107,11 @@ public class BatchDeployApisRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -124,12 +129,16 @@ public class BatchDeployApisRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * <li>PRE: the pre-release environment</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
-         * *   PRE: the pre-release environment
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -144,6 +153,12 @@ public class BatchDeployApisRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchDeployApisRequest} extends {@link TeaModel}
+     *
+     * <p>BatchDeployApisRequest</p>
+     */
     public static class Api extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiUid")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -185,7 +200,11 @@ public class BatchDeployApisRequest extends Request {
             private String groupId; 
 
             /**
-             * The API ID.
+             * <p>The API ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2b35dd68345b472f8051647306a16415</p>
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -193,7 +212,11 @@ public class BatchDeployApisRequest extends Request {
             }
 
             /**
-             * The API group ID.
+             * <p>The API group ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b4f5c342b8bc4ef88ccda0332402e0fa</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;

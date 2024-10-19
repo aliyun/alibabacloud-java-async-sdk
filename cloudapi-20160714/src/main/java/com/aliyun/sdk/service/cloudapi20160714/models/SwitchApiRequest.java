@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchApiRequest} extends {@link RequestModel}
  *
  * <p>SwitchApiRequest</p>
@@ -127,7 +128,11 @@ public class SwitchApiRequest extends Request {
         } 
 
         /**
-         * The API ID.
+         * <p>The API ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d6f679aeb3be4b91b3688e887ca1fe16</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -136,7 +141,11 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The description. The description can be up to 200 characters in length.
+         * <p>The description. The description can be up to 200 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for_demo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -145,7 +154,10 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The API group ID.
+         * <p>The API group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -154,7 +166,11 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The historical version number of the API.
+         * <p>The historical version number of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20160705104552292</p>
          */
         public Builder historyVersion(String historyVersion) {
             this.putQueryParameter("HistoryVersion", historyVersion);
@@ -172,12 +188,16 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The environment. Valid values:
-         * <p>
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong>: the production environment</li>
+         * <li><strong>PRE</strong>: the staging environment</li>
+         * <li><strong>TEST</strong>: the test environment</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**: the production environment
-         * *   **PRE**: the staging environment
-         * *   **TEST**: the test environment
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

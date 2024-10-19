@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppCodeRequest} extends {@link RequestModel}
  *
  * <p>CreateAppCodeRequest</p>
@@ -68,7 +69,10 @@ public class CreateAppCodeRequest extends Request {
         } 
 
         /**
-         * The application AppCode.
+         * <p>The application AppCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3aaf905a0a1f4f0eabc6d891dfa08afc</p>
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -77,7 +81,11 @@ public class CreateAppCodeRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111203109</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

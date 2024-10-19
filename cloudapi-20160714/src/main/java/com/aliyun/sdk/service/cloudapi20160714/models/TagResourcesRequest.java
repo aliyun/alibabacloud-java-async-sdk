@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -98,7 +99,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>285bb759342649a1b70c2093a772e087</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -107,12 +112,16 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:
-         * <p>
+         * <p>The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:</p>
+         * <ul>
+         * <li><strong>apiGroup</strong></li>
+         * <li><strong>plugin</strong></li>
+         * <li><strong>app</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **apiGroup**
-         * *   **plugin**
-         * *   **app**
+         * <strong>example:</strong>
+         * <p>apiGroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -130,7 +139,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the lifecycle rule. You can specify multiple tags.
+         * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021022811</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -145,6 +158,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -186,7 +205,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -194,7 +217,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

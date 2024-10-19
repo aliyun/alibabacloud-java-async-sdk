@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiDocResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiDocResponseBody</p>
@@ -253,7 +254,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         private String visibility; 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b24be7e59a104e52bffbf432cc9272af</p>
          */
         public Builder apiId(String apiId) {
             this.apiId = apiId;
@@ -261,7 +265,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the API
+         * <p>The name of the API</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ObtainKeywordQRCodeAddress</p>
          */
         public Builder apiName(String apiName) {
             this.apiName = apiName;
@@ -269,7 +276,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The security authentication method. Valid values: APP, ANONYMOUS, and APPOPENID, indicating respectively Alibaba Cloud application authentication, anonymous authentication, and third-party OpenID Connect account authentication.
+         * <p>The security authentication method. Valid values: APP, ANONYMOUS, and APPOPENID, indicating respectively Alibaba Cloud application authentication, anonymous authentication, and third-party OpenID Connect account authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP</p>
          */
         public Builder authType(String authType) {
             this.authType = authType;
@@ -277,7 +287,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The publishing time.
+         * <p>The publishing time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-13T16:00:33Z</p>
          */
         public Builder deployedTime(String deployedTime) {
             this.deployedTime = deployedTime;
@@ -285,7 +298,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The API description.
+         * <p>The API description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lynk&amp;Co Digital Mall OMS-UAT</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -293,9 +309,13 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * *   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.
-         * <p>
-         * *   If you set **DisableInternet** to **false**, the limit is lifted. The default value is false when you create an API.
+         * <ul>
+         * <li>Specifies whether to set <strong>DisableInternet</strong> to <strong>true</strong> to limit API calls to within the VPC.</li>
+         * <li>If you set <strong>DisableInternet</strong> to <strong>false</strong>, the limit is lifted. The default value is false when you create an API.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableInternet(Boolean disableInternet) {
             this.disableInternet = disableInternet;
@@ -303,7 +323,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The sample error codes returned by the backend service.
+         * <p>The sample error codes returned by the backend service.</p>
          */
         public Builder errorCodeSamples(ErrorCodeSamples errorCodeSamples) {
             this.errorCodeSamples = errorCodeSamples;
@@ -311,7 +331,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The sample error response from the backend service.
+         * <p>The sample error response from the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;errorCode&quot;:&quot;fail&quot;,&quot;errorMessage&quot;:&quot;param invalid&quot;}</p>
          */
         public Builder failResultSample(String failResultSample) {
             this.failResultSample = failResultSample;
@@ -319,9 +342,13 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
-         * <p>
-         * *   If you set **ForceNonceCheck** to **false**, the check is not performed. The default value is false when you create an API.
+         * <ul>
+         * <li>Specifies whether to set <strong>ForceNonceCheck</strong> to <strong>true</strong> to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</li>
+         * <li>If you set <strong>ForceNonceCheck</strong> to <strong>false</strong>, the check is not performed. The default value is false when you create an API.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceNonceCheck(Boolean forceNonceCheck) {
             this.forceNonceCheck = forceNonceCheck;
@@ -329,7 +356,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f51d08c5b7c84342905544ebaec26d35</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -337,7 +367,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the API group.
+         * <p>The name of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Member Age Transaction Service</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -345,7 +378,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the API group.
+         * <p>The region ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -353,7 +389,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The returned API frontend definition. It is an array consisting of RequestConfig data.
+         * <p>The returned API frontend definition. It is an array consisting of RequestConfig data.</p>
          */
         public Builder requestConfig(RequestConfig requestConfig) {
             this.requestConfig = requestConfig;
@@ -361,7 +397,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F253FB5F-9AE1-5DDA-99B5-46BE00A3719E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -369,7 +408,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The returned frontend input parameters in the API. It is an array consisting of RequestParameter data.
+         * <p>The returned frontend input parameters in the API. It is an array consisting of RequestParameter data.</p>
          */
         public Builder requestParameters(RequestParameters requestParameters) {
             this.requestParameters = requestParameters;
@@ -377,7 +416,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The sample response.
+         * <p>The sample response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\n  &quot;status&quot;: 0,\n  &quot;data&quot;: {\n    &quot;count&quot;: 1,\n    &quot;list&quot;: [\n      &quot;352&quot;\n    ]\n  },\n  &quot;message&quot;: &quot;success&quot;\n}</p>
          */
         public Builder resultSample(String resultSample) {
             this.resultSample = resultSample;
@@ -385,7 +427,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The return value type.
+         * <p>The return value type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         public Builder resultType(String resultType) {
             this.resultType = resultType;
@@ -393,11 +438,14 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.stageName = stageName;
@@ -405,7 +453,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the API is public. Valid values: PUBLIC and PRIVATE.
+         * <p>Indicates whether the API is public. Valid values: PUBLIC and PRIVATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder visibility(String visibility) {
             this.visibility = visibility;
@@ -418,6 +469,12 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiDocResponseBody</p>
+     */
     public static class ErrorCodeSample extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -469,7 +526,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The returned error code.
+             * <p>The returned error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -477,7 +537,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The error description.
+             * <p>The error description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unauthorized</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -485,7 +548,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The returned error message.
+             * <p>The returned error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error message</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -499,6 +565,12 @@ public class DescribeApiDocResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiDocResponseBody</p>
+     */
     public static class ErrorCodeSamples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCodeSample")
         private java.util.List < ErrorCodeSample> errorCodeSample;
@@ -540,6 +612,12 @@ public class DescribeApiDocResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiDocResponseBody</p>
+     */
     public static class RequestConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BodyFormat")
         private String bodyFormat;
@@ -639,10 +717,11 @@ public class DescribeApiDocResponseBody extends TeaModel {
             private String requestProtocol; 
 
             /**
-             * This parameter takes effect only when the RequestMode parameter is set to MAPPING.********
-             * <p>
+             * <p>This parameter takes effect only when the RequestMode parameter is set to MAPPING.********</p>
+             * <p>The server data transmission method used for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data in key-value pairs is transmitted as forms. STREAM indicates that data is transmitted as byte streams.</p>
              * 
-             * The server data transmission method used for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data in key-value pairs is transmitted as forms. STREAM indicates that data is transmitted as byte streams.
+             * <strong>example:</strong>
+             * <p>STREAM</p>
              */
             public Builder bodyFormat(String bodyFormat) {
                 this.bodyFormat = bodyFormat;
@@ -650,7 +729,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * EscapePathParam.
+             * <p>Whether to escape the Path parameter, if true, the [param] on the Path will be treated as a regular character.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder escapePathParam(Boolean escapePathParam) {
                 this.escapePathParam = escapePathParam;
@@ -658,7 +740,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the request body.
+             * <p>The description of the request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fwefwef</p>
              */
             public Builder postBodyDescription(String postBodyDescription) {
                 this.postBodyDescription = postBodyDescription;
@@ -666,7 +751,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method used to make the request. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.
+             * <p>The HTTP method used to make the request. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder requestHttpMethod(String requestHttpMethod) {
                 this.requestHttpMethod = requestHttpMethod;
@@ -674,12 +762,15 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The request mode. Valid values:
-             * <p>
+             * <p>The request mode. Valid values:</p>
+             * <ul>
+             * <li>MAPPING: Parameters are mapped. Unknown parameters are filtered out.</li>
+             * <li>PASSTHROUGH: Parameters are passed through.</li>
+             * <li>MAPPING_PASSTHROUGH: Parameters are mapped. Unknown parameters are passed through.</li>
+             * </ul>
              * 
-             * *   MAPPING: Parameters are mapped. Unknown parameters are filtered out.
-             * *   PASSTHROUGH: Parameters are passed through.
-             * *   MAPPING_PASSTHROUGH: Parameters are mapped. Unknown parameters are passed through.
+             * <strong>example:</strong>
+             * <p>MAPPING</p>
              */
             public Builder requestMode(String requestMode) {
                 this.requestMode = requestMode;
@@ -687,7 +778,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The API request path. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the API request path is ` /object/add  `.
+             * <p>The API request path. If the complete API URL is <code>http://api.a.com:8080/object/add?key1=value1&amp;key2=value2</code>, the API request path is <code>/object/add </code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api/billing/test/[type]</p>
              */
             public Builder requestPath(String requestPath) {
                 this.requestPath = requestPath;
@@ -695,7 +789,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type supported by the API. Valid values: HTTP and HTTPS. Separate multiple values with commas (,), such as "HTTP,HTTPS".
+             * <p>The protocol type supported by the API. Valid values: HTTP and HTTPS. Separate multiple values with commas (,), such as &quot;HTTP,HTTPS&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder requestProtocol(String requestProtocol) {
                 this.requestProtocol = requestProtocol;
@@ -709,6 +806,12 @@ public class DescribeApiDocResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiDocResponseBody</p>
+     */
     public static class RequestParameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiParameterName")
         private String apiParameterName;
@@ -928,7 +1031,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             private String required; 
 
             /**
-             * The name of the parameter in the API request.
+             * <p>The name of the parameter in the API request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Length</p>
              */
             public Builder apiParameterName(String apiParameterName) {
                 this.apiParameterName = apiParameterName;
@@ -936,7 +1042,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the array element.
+             * <p>The type of the array element.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder arrayItemsType(String arrayItemsType) {
                 this.arrayItemsType = arrayItemsType;
@@ -944,7 +1053,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The default value.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -952,7 +1064,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The example value.
+             * <p>The example value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -960,7 +1075,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter description.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Parameters</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -968,7 +1086,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The order in which the parameter is sorted in the document.
+             * <p>The order in which the parameter is sorted in the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder docOrder(Integer docOrder) {
                 this.docOrder = docOrder;
@@ -976,7 +1097,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the document is public. Valid values: **PUBLIC** and **PRIVATE**.
+             * <p>Indicates whether the document is public. Valid values: <strong>PUBLIC</strong> and <strong>PRIVATE</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder docShow(String docShow) {
                 this.docShow = docShow;
@@ -984,7 +1108,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The hash values that are supported when **ParameterType** is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
+             * <p>The hash values that are supported when <strong>ParameterType</strong> is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>boy,girl</p>
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -992,7 +1119,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * JSON scheme
+             * <p>JSON scheme</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder jsonScheme(String jsonScheme) {
                 this.jsonScheme = jsonScheme;
@@ -1000,7 +1130,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.
+             * <p>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HEAD</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1008,7 +1141,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum length.
+             * <p>The maximum length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder maxLength(Long maxLength) {
                 this.maxLength = maxLength;
@@ -1016,7 +1152,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder maxValue(Long maxValue) {
                 this.maxValue = maxValue;
@@ -1024,7 +1163,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum length.
+             * <p>The minimum length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder minLength(Long minLength) {
                 this.minLength = minLength;
@@ -1032,7 +1174,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder minValue(Long minValue) {
                 this.minValue = minValue;
@@ -1040,7 +1185,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter.
+             * <p>The data type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder parameterType(String parameterType) {
                 this.parameterType = parameterType;
@@ -1048,7 +1196,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression that is used for parameter validation when **ParameterType** is set to String.
+             * <p>The regular expression that is used for parameter validation when <strong>ParameterType</strong> is set to String.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder regularExpression(String regularExpression) {
                 this.regularExpression = regularExpression;
@@ -1056,7 +1207,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is required.
+             * <p>Indicates whether the parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPTIONAL</p>
              */
             public Builder required(String required) {
                 this.required = required;
@@ -1070,6 +1224,12 @@ public class DescribeApiDocResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiDocResponseBody</p>
+     */
     public static class RequestParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestParameter")
         private java.util.List < RequestParameter> requestParameter;

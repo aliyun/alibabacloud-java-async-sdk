@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginApisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePluginApisResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about APIs.
+         * <p>The information about APIs.</p>
          */
         public Builder apiSummarys(ApiSummarys apiSummarys) {
             this.apiSummarys = apiSummarys;
@@ -93,7 +94,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F9C5C4A5-BC6C-57A3-839F-AB08********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribePluginApisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePluginApisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginApisResponseBody</p>
+     */
     public static class ApiPluginSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
@@ -265,7 +284,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * The API ID.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accc8c68b7294b1cb4928741********</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -273,7 +295,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * The API name.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fhosQueryDayOfStock_V2</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -281,7 +306,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * The API description.
+             * <p>The API description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -289,7 +317,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5f51f89261854fd9ad5116be********</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -297,7 +328,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * The API group to which the API belongs.
+             * <p>The API group to which the API belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myGroup2</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -305,7 +339,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method of the API.
+             * <p>The HTTP method of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -313,7 +350,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * The request path of the API.
+             * <p>The request path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mqTest</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -321,7 +361,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the API resides.
+             * <p>The ID of the region in which the API resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -329,7 +372,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * The environment alias.
+             * <p>The environment alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Production</p>
              */
             public Builder stageAlias(String stageAlias) {
                 this.stageAlias = stageAlias;
@@ -337,12 +383,15 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * The environment to which the API is published. Valid values:
-             * <p>
+             * <p>The environment to which the API is published. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong>: the production environment</li>
+             * <li><strong>PRE</strong>: the pre-release environment</li>
+             * <li><strong>TEST</strong>: the test environment</li>
+             * </ul>
              * 
-             * *   **RELEASE**: the production environment
-             * *   **PRE**: the pre-release environment
-             * *   **TEST**: the test environment
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -356,6 +405,12 @@ public class DescribePluginApisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePluginApisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginApisResponseBody</p>
+     */
     public static class ApiSummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiPluginSummary")
         private java.util.List < ApiPluginSummary> apiPluginSummary;

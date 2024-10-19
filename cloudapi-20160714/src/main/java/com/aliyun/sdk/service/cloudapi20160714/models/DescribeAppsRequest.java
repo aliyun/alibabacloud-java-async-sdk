@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppsRequest</p>
@@ -110,7 +111,10 @@ public class DescribeAppsRequest extends Request {
         } 
 
         /**
-         * The ID of the app.
+         * <p>The ID of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20112314518278</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -119,7 +123,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account of the app owner. For more information, see [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3a8c196eVWxvQB#/secure).
+         * <p>The Alibaba Cloud account of the app owner. For more information, see <a href="https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3a8c196eVWxvQB#/secure">Account Management</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1546564</p>
          */
         public Builder appOwner(Long appOwner) {
             this.putQueryParameter("AppOwner", appOwner);
@@ -128,7 +135,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +147,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

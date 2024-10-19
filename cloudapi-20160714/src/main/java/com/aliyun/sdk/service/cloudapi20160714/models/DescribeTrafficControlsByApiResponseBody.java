@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrafficControlsByApiResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrafficControlsByApiResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
         private TrafficControlItems trafficControlItems; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
         }
 
         /**
-         * The returned throttling policy information. It is an array consisting of TrafficControlItem data.
+         * <p>The returned throttling policy information. It is an array consisting of TrafficControlItem data.</p>
          */
         public Builder trafficControlItems(TrafficControlItems trafficControlItems) {
             this.trafficControlItems = trafficControlItems;
@@ -70,6 +74,12 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrafficControlsByApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrafficControlsByApiResponseBody</p>
+     */
     public static class TrafficControlItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BoundTime")
         private String boundTime;
@@ -121,7 +131,10 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
             private String trafficControlItemName; 
 
             /**
-             * The binding time of the policy.
+             * <p>The binding time of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-23T08:28:48Z</p>
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -129,7 +142,10 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the throttling policy.
+             * <p>The ID of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
              */
             public Builder trafficControlItemId(String trafficControlItemId) {
                 this.trafficControlItemId = trafficControlItemId;
@@ -137,7 +153,10 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the throttling policy.
+             * <p>The name of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysecret</p>
              */
             public Builder trafficControlItemName(String trafficControlItemName) {
                 this.trafficControlItemName = trafficControlItemName;
@@ -151,6 +170,12 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrafficControlsByApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrafficControlsByApiResponseBody</p>
+     */
     public static class TrafficControlItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficControlItem")
         private java.util.List < TrafficControlItem> trafficControlItem;

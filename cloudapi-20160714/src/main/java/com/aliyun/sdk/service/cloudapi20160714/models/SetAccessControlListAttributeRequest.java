@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetAccessControlListAttributeRequest} extends {@link RequestModel}
  *
  * <p>SetAccessControlListAttributeRequest</p>
@@ -83,7 +84,10 @@ public class SetAccessControlListAttributeRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp1ohqkonqybecf4llbrc</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -92,7 +96,10 @@ public class SetAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * AclName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAcl</p>
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);

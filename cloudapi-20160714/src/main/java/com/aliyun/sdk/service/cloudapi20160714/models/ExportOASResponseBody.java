@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportOASResponseBody} extends {@link TeaModel}
  *
  * <p>ExportOASResponseBody</p>
@@ -49,7 +50,10 @@ public class ExportOASResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The Base64-encoded data of the exported Swagger file. You can obtain the file by using Base64 decoding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UEsDBBQACAAIAABc8FgAAAAAAAAAAAAAAAA...</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class ExportOASResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

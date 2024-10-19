@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePurchasedApiGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePurchasedApiGroupResponseBody</p>
@@ -121,7 +122,10 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The description of the API group.
+         * <p>The description of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api group description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -129,7 +133,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The list of domain names.
+         * <p>The list of domain names.</p>
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -137,7 +141,10 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48977d7b96074966a7c9c2a8872d7e06</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -145,7 +152,10 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the API group.
+         * <p>The name of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Weather</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -153,7 +163,10 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the API group was purchased.
+         * <p>The time when the API group was purchased.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-19T00:00:00</p>
          */
         public Builder purchasedTime(String purchasedTime) {
             this.purchasedTime = purchasedTime;
@@ -161,7 +174,10 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The region where the API group is located.
+         * <p>The region where the API group is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -169,7 +185,10 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61A16D46-EC04-5288-8A18-811B0F536CC2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,11 +196,14 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the API group.
-         * <p>
+         * <p>The status of the API group.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The API group is normal.</li>
+         * <li><strong>DELETE</strong>: The API group is deleted.</li>
+         * </ul>
          * 
-         * *   **NORMAL**: The API group is normal.
-         * *   **DELETE**: The API group is deleted.
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -194,6 +216,12 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePurchasedApiGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePurchasedApiGroupResponseBody</p>
+     */
     public static class DomainItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -221,7 +249,10 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_domain.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -235,6 +266,12 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePurchasedApiGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePurchasedApiGroupResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainItem")
         private java.util.List < DomainItem> domainItem;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetGroupAuthAppCodeRequest} extends {@link RequestModel}
  *
  * <p>SetGroupAuthAppCodeRequest</p>
@@ -83,7 +84,7 @@ public class SetGroupAuthAppCodeRequest extends Request {
         } 
 
         /**
-         * AuthAppCode.
+         * <p>This parameter is required.</p>
          */
         public Builder authAppCode(String authAppCode) {
             this.putQueryParameter("AuthAppCode", authAppCode);
@@ -92,7 +93,7 @@ public class SetGroupAuthAppCodeRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>This parameter is required.</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

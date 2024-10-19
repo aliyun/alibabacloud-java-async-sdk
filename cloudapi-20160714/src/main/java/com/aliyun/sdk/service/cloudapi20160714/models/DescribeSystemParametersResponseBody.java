@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSystemParametersResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         private SystemParams systemParams; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CCDF65E-6050-412D-AD68-FA3D9196836C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information about system parameters. It is an array that consists of SystemParam data.
+         * <p>The returned information about system parameters. It is an array that consists of SystemParam data.</p>
          */
         public Builder systemParams(SystemParams systemParams) {
             this.systemParams = systemParams;
@@ -70,6 +74,12 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSystemParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemParametersResponseBody</p>
+     */
     public static class SystemParamItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DemoValue")
         private String demoValue;
@@ -133,7 +143,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             private String paramType; 
 
             /**
-             * Examples
+             * <p>Examples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -141,7 +154,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of a parameter.
+             * <p>The description of a parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Client IP Address</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -149,7 +165,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CaClientIp</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -157,7 +176,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter.
+             * <p>The type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -171,6 +193,12 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSystemParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemParametersResponseBody</p>
+     */
     public static class SystemParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemParamItem")
         private java.util.List < SystemParamItem> systemParamItem;

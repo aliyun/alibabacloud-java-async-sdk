@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiMarketAttributesRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiMarketAttributesRequest</p>
@@ -83,7 +84,11 @@ public class DescribeApiMarketAttributesRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f9b5e9ba80943099cac52e040b7e160</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -92,7 +97,11 @@ public class DescribeApiMarketAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b693252f3f19445e9a01dac177c4454c</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

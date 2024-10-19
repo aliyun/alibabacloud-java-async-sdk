@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceHttpCodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceHttpCodeResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status codes.
+         * <p>The HTTP status codes.</p>
          */
         public Builder instanceHttpCode(InstanceHttpCode instanceHttpCode) {
             this.instanceHttpCode = instanceHttpCode;
@@ -57,7 +58,10 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD00F8C0-311B-54A9-ADE2-2436771012DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceHttpCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHttpCodeResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
@@ -109,7 +119,10 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The HTTP status code returned.
+             * <p>The HTTP status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -117,7 +130,10 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The corresponding value.
+             * <p>The corresponding value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -131,6 +147,12 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHttpCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHttpCodeResponseBody</p>
+     */
     public static class InstanceHttpCode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySignatureResponseBody} extends {@link TeaModel}
  *
  * <p>ModifySignatureResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifySignatureResponseBody extends TeaModel {
         private String signatureName; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class ModifySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the key.
+         * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
          */
         public Builder signatureId(String signatureId) {
             this.signatureId = signatureId;
@@ -77,7 +84,10 @@ public class ModifySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the key.
+         * <p>The name of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backendsignature</p>
          */
         public Builder signatureName(String signatureName) {
             this.signatureName = signatureName;

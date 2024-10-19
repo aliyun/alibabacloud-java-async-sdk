@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiGroupVpcWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiGroupVpcWhitelistResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeApiGroupVpcWhitelistResponseBody extends TeaModel {
         private String vpcIds; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ016</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DescribeApiGroupVpcWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp11w979o2s9rcr962w25</p>
          */
         public Builder vpcIds(String vpcIds) {
             this.vpcIds = vpcIds;

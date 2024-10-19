@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApiGroupInstanceRequest} extends {@link RequestModel}
  *
  * <p>ModifyApiGroupInstanceRequest</p>
@@ -111,7 +112,10 @@ public class ModifyApiGroupInstanceRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01c97ed08a614118849b00079753d1e2</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -147,7 +151,10 @@ public class ModifyApiGroupInstanceRequest extends Request {
         }
 
         /**
-         * TargetInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-bj-c325375b1ebe</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);
@@ -162,6 +169,12 @@ public class ModifyApiGroupInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyApiGroupInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyApiGroupInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -203,7 +216,10 @@ public class ModifyApiGroupInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -211,7 +227,10 @@ public class ModifyApiGroupInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

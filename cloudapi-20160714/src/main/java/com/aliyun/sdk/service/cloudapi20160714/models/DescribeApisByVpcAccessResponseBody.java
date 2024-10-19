@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByVpcAccessResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisByVpcAccessResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned API information. It is an array consisting of ApiInfo data.
+         * <p>The returned API information. It is an array consisting of ApiInfo data.</p>
          */
         public Builder apiVpcAccessInfos(ApiVpcAccessInfos apiVpcAccessInfos) {
             this.apiVpcAccessInfos = apiVpcAccessInfos;
@@ -93,7 +94,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E707B25-5119-5ACF-9D26-7D2A2762F05C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisByVpcAccessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisByVpcAccessResponseBody</p>
+     */
     public static class ApiVpcAccessInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
@@ -313,7 +332,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * The API ID.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09839002de484e76b5a213b040a6a3ca</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -321,7 +343,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The API name.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iwc</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -329,7 +354,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The description, which can be up to 200 characters in length.
+             * <p>The description, which can be up to 200 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -337,7 +365,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group to which the API belongs.
+             * <p>The ID of the API group to which the API belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41c33748cbfb41f6b00870156203b72a</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -345,7 +376,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group to which the API belongs.
+             * <p>The name of the API group to which the API belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RT_PLU_IP_CTRL_group</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -353,7 +387,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID or IP address in the VPC access authorization.
+             * <p>The instance ID or IP address in the VPC access authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ib-04e41XXXXXd95e9c1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -361,7 +398,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method of the API.
+             * <p>The HTTP request method of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -369,7 +409,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The request path of the API.
+             * <p>The request path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api/v1/friends/rc/status</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -377,7 +420,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -385,7 +431,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -393,7 +442,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The environment ID.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>57e17906a69b4424914fb1e05f67c78a</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -401,12 +453,15 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The environment to which the API is published. Valid values:
-             * <p>
+             * <p>The environment to which the API is published. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong>: the production environment</li>
+             * <li><strong>PRE</strong>: the staging environment</li>
+             * <li><strong>TEST</strong>: the test environment</li>
+             * </ul>
              * 
-             * *   **RELEASE**: the production environment
-             * *   **PRE**: the staging environment
-             * *   **TEST**: the test environment
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -414,7 +469,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * vpc id
+             * <p>vpc id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze7bj64wstznvftrskbk</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -422,7 +480,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC access authorization.
+             * <p>The name of the VPC access authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliYun_service_prod</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -436,6 +497,12 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApisByVpcAccessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisByVpcAccessResponseBody</p>
+     */
     public static class ApiVpcAccessInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiVpcAccessInfo")
         private java.util.List < ApiVpcAccessInfo> apiVpcAccessInfo;

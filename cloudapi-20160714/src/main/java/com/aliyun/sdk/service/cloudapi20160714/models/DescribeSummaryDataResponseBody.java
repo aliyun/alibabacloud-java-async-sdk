@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSummaryDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSummaryDataResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         private Integer usageInstanceNum; 
 
         /**
-         * The number of subscription dedicated instances that expire in 14 days or less.
+         * <p>The number of subscription dedicated instances that expire in 14 days or less.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder expireInstanceNum(Integer expireInstanceNum) {
             this.expireInstanceNum = expireInstanceNum;
@@ -105,7 +109,10 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -113,7 +120,10 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,10 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * The number of APIs.
+         * <p>The number of APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder usageApiNum(Integer usageApiNum) {
             this.usageApiNum = usageApiNum;
@@ -129,7 +142,10 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * The number of API groups.
+         * <p>The number of API groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usageGroupNum(Integer usageGroupNum) {
             this.usageGroupNum = usageGroupNum;
@@ -137,7 +153,10 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * The number of running dedicated instances.
+         * <p>The number of running dedicated instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usageInstanceNum(Integer usageInstanceNum) {
             this.usageInstanceNum = usageInstanceNum;

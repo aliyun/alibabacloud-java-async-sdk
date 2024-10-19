@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatasetItemInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDatasetItemInfoRequest</p>
@@ -96,7 +97,11 @@ public class DescribeDatasetItemInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the dataset.
+         * <p>The ID of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62b91a790a693238********</p>
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -105,7 +110,10 @@ public class DescribeDatasetItemInfoRequest extends Request {
         }
 
         /**
-         * The ID of the data entry.
+         * <p>The ID of the data entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5045****</p>
          */
         public Builder datasetItemId(String datasetItemId) {
             this.putQueryParameter("DatasetItemId", datasetItemId);
@@ -123,7 +131,10 @@ public class DescribeDatasetItemInfoRequest extends Request {
         }
 
         /**
-         * The value of the data entry.
+         * <p>The value of the data entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106.43.XXX.XXX</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

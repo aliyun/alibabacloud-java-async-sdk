@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackendListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackendListResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The backend services.
+         * <p>The backend services.</p>
          */
         public Builder backendInfoList(java.util.List < BackendInfoList> backendInfoList) {
             this.backendInfoList = backendInfoList;
@@ -93,7 +94,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the current page.
+         * <p>The number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>090A0DF9-9144-5236-8CBA-E18DE317722D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeBackendListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackendListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the tag.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>groupName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b881d0-e2d0-4dfb-b1fb-a2a3d1e534b7</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +216,12 @@ public class DescribeBackendListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendListResponseBody</p>
+     */
     public static class BackendInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackendId")
         private String backendId;
@@ -290,7 +321,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ID of the backend service.
+             * <p>The ID of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35bd31d32c9c425ebbe9330db9f8c375</p>
              */
             public Builder backendId(String backendId) {
                 this.backendId = backendId;
@@ -298,7 +332,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backend service.
+             * <p>The name of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder backendName(String backendName) {
                 this.backendName = backendName;
@@ -306,7 +343,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend service.
+             * <p>The type of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder backendType(String backendType) {
                 this.backendType = backendType;
@@ -314,7 +354,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was created.
+             * <p>The time when the backend service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-25T11:22:29Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -322,7 +365,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the backend service.
+             * <p>The description of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,7 +376,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was modified.
+             * <p>The time when the backend service was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-25T11:22:29Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -338,7 +387,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

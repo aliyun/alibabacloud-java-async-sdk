@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginSchemasResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePluginSchemasResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePluginSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginSchemasResponseBody</p>
+     */
     public static class PluginSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -191,6 +198,12 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePluginSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginSchemasResponseBody</p>
+     */
     public static class PluginSchemas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PluginSchema")
         private java.util.List < PluginSchema> pluginSchema;

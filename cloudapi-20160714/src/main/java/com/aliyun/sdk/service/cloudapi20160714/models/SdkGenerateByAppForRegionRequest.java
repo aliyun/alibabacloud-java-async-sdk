@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SdkGenerateByAppForRegionRequest} extends {@link RequestModel}
  *
  * <p>SdkGenerateByAppForRegionRequest</p>
@@ -83,7 +84,10 @@ public class SdkGenerateByAppForRegionRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110906109</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -92,7 +96,10 @@ public class SdkGenerateByAppForRegionRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

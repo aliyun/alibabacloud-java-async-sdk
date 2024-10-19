@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceRequest</p>
@@ -68,7 +69,11 @@ public class DeleteInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-sh-ae502ee79ef8</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -77,7 +82,10 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the lifecycle rule. You can specify multiple tags.
+         * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -92,6 +100,12 @@ public class DeleteInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -133,7 +147,11 @@ public class DeleteInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -141,7 +159,11 @@ public class DeleteInstanceRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

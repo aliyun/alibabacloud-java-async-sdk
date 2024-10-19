@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByAppRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisByAppRequest</p>
@@ -184,7 +185,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>333486644</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupLatencyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupLatencyResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The latency information.
+         * <p>The latency information.</p>
          */
         public Builder latencyPacket(LatencyPacket latencyPacket) {
             this.latencyPacket = latencyPacket;
@@ -57,7 +58,10 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DC3AB0-421C-5371-8170-86AEABF77AD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupLatencyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupLatencyResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
@@ -121,11 +131,14 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The metric. Valid values:
-             * <p>
+             * <p>The metric. Valid values:</p>
+             * <ul>
+             * <li>latency: the backend processing latency</li>
+             * <li>gatewayLatency: the API Gateway processing latency</li>
+             * </ul>
              * 
-             * *   latency: the backend processing latency
-             * *   gatewayLatency: the API Gateway processing latency
+             * <strong>example:</strong>
+             * <p>latency</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -133,7 +146,10 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the latency data was collected. The format is YYYY-MM-DDThh:mm:ssZ.
+             * <p>The point in time when the latency data was collected. The format is YYYY-MM-DDThh:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-30T16:10:00Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -141,7 +157,10 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
             }
 
             /**
-             * The latency. Unit: ms.
+             * <p>The latency. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -155,6 +174,12 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupLatencyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupLatencyResponseBody</p>
+     */
     public static class LatencyPacket extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;

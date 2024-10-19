@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessControlListsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccessControlListsRequest</p>
@@ -109,7 +110,10 @@ public class DescribeAccessControlListsRequest extends Request {
         } 
 
         /**
-         * The name of the access control policy.
+         * <p>The name of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAcl</p>
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -118,7 +122,10 @@ public class DescribeAccessControlListsRequest extends Request {
         }
 
         /**
-         * IP版本，可以设置为**ipv4**或者**ipv6**。
+         * <p>IP版本，可以设置为<strong>ipv4</strong>或者<strong>ipv6</strong>。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6</p>
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);
@@ -127,7 +134,10 @@ public class DescribeAccessControlListsRequest extends Request {
         }
 
         /**
-         * The page number of the current page.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -136,7 +146,10 @@ public class DescribeAccessControlListsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

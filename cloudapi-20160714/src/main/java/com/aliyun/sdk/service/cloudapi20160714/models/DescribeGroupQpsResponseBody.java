@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupQpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupQpsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of requests directed to the API group.
+         * <p>The number of requests directed to the API group.</p>
          */
         public Builder groupQps(GroupQps groupQps) {
             this.groupQps = groupQps;
@@ -57,7 +58,10 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6E46F10-F26C-4AA0-BB69-FE2743D9AE62</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupQpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupQpsResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
@@ -109,7 +119,10 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The point in time.
+             * <p>The point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-02T09:15:00Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -117,7 +130,10 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests at the specified point in time.
+             * <p>The number of requests at the specified point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -131,6 +147,12 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupQpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupQpsResponseBody</p>
+     */
     public static class GroupQps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;

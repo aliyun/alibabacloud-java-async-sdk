@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiSignaturesRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiSignaturesRequest</p>
@@ -126,7 +127,10 @@ public class DescribeApiSignaturesRequest extends Request {
         } 
 
         /**
-         * The IDs of the APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * <p>The IDs of the APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -135,7 +139,11 @@ public class DescribeApiSignaturesRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0009db9c828549768a200320714b8930</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -144,7 +152,10 @@ public class DescribeApiSignaturesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,7 +164,10 @@ public class DescribeApiSignaturesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,11 +185,15 @@ public class DescribeApiSignaturesRequest extends Request {
         }
 
         /**
-         * The runtime environment. Valid values:
-         * <p>
+         * <p>The runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

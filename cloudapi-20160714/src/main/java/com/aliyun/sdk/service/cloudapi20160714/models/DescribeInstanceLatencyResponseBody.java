@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceLatencyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceLatencyResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of average latencies in the instance.
+         * <p>The list of average latencies in the instance.</p>
          */
         public Builder instanceLatency(InstanceLatency instanceLatency) {
             this.instanceLatency = instanceLatency;
@@ -57,7 +58,10 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceLatencyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceLatencyResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
@@ -121,11 +131,14 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The metric. Valid values:
-             * <p>
+             * <p>The metric. Valid values:</p>
+             * <ul>
+             * <li>gatewayLatency API: the processing latency of API Gateway</li>
+             * <li>latency: the processing latency of the backend service.</li>
+             * </ul>
              * 
-             * *   gatewayLatency API: the processing latency of API Gateway
-             * *   latency: the processing latency of the backend service.
+             * <strong>example:</strong>
+             * <p>latency</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -133,7 +146,10 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T02:05:13Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -141,7 +157,10 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the average latency.
+             * <p>The value of the average latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -155,6 +174,12 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceLatencyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceLatencyResponseBody</p>
+     */
     public static class InstanceLatency extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;

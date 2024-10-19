@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateModelRequest} extends {@link RequestModel}
  *
  * <p>CreateModelRequest</p>
@@ -112,7 +113,10 @@ public class CreateModelRequest extends Request {
         } 
 
         /**
-         * The description of the model definition.
+         * <p>The description of the model definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Model Description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -121,7 +125,11 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * The ID of the API group to which the model belongs.
+         * <p>The ID of the API group to which the model belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30e792398d6c4569b04c0e53a3494381</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -130,7 +138,11 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * The name of the model. The name must be unique within the group.
+         * <p>The name of the model. The name must be unique within the group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -139,7 +151,11 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * The definition of the model in JSON Schema.
+         * <p>The definition of the model in JSON Schema.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;id&quot;:{&quot;format&quot;:&quot;int64&quot;,&quot;maximum&quot;:100,&quot;exclusiveMaximum&quot;:true,&quot;type&quot;:&quot;integer&quot;},&quot;name&quot;:{&quot;maxLength&quot;:10,&quot;type&quot;:&quot;string&quot;}}}</p>
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -148,7 +164,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * The object tags that match the lifecycle rule. You can specify multiple tags.
+         * <p>The object tags that match the lifecycle rule. You can specify multiple tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -163,6 +179,12 @@ public class CreateModelRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateModelRequest} extends {@link TeaModel}
+     *
+     * <p>CreateModelRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -202,7 +224,10 @@ public class CreateModelRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +235,10 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * The values of the tag.
+             * <p>The values of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

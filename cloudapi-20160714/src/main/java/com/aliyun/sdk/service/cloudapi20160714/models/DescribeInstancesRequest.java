@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesRequest</p>
@@ -109,7 +110,10 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * Specifies whether tag authorization is enabled.
+         * <p>Specifies whether tag authorization is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableTagAuthorization(Boolean enableTagAuthorization) {
             this.putQueryParameter("EnableTagAuthorization", enableTagAuthorization);
@@ -118,7 +122,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID. If you do not specify this parameter, all instances are returned.
+         * <p>The instance ID. If you do not specify this parameter, all instances are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-shared-vpc-001</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -127,12 +134,15 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The language in which you want the description of the system policy to be returned. Valid values:
-         * <p>
+         * <p>The language in which you want the description of the system policy to be returned. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh: Chinese</li>
+         * <li>ja: Japanese</li>
+         * </ul>
          * 
-         * *   en: English
-         * *   zh: Chinese
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -150,7 +160,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The tag that is bound to the instance.
+         * <p>The tag that is bound to the instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -165,6 +175,12 @@ public class DescribeInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -204,7 +220,10 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +231,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

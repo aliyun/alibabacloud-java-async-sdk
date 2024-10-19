@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrafficControlsByApiRequest} extends {@link RequestModel}
  *
  * <p>DescribeTrafficControlsByApiRequest</p>
@@ -98,7 +99,11 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b81fd160f5645e097cc8855d75a1cf6</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -107,7 +112,11 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         }
 
         /**
-         * The ID of the group to which the API to be queried belongs.
+         * <p>The ID of the group to which the API to be queried belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0009db9c828549768a200320714b8930</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -116,7 +125,10 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         }
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c51b234-48d3-44e1-9b36-e2ddccc738e3</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -125,11 +137,15 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         }
 
         /**
-         * The runtime environment of the API. Valid values:
-         * <p>
+         * <p>The runtime environment of the API. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppSecurityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppSecurityResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The AppCode of the app.
+         * <p>The AppCode of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3aaf905a0a1f4f0eabc6d891dfa08afc</p>
          */
         public Builder appCode(String appCode) {
             this.appCode = appCode;
@@ -105,7 +109,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the app.
+         * <p>The key of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60030986</p>
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -113,7 +120,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * The password of the app.
+         * <p>The password of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1ae97aaa7e45f21d10824bc44678fee</p>
          */
         public Builder appSecret(String appSecret) {
             this.appSecret = appSecret;
@@ -121,7 +131,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * The creation time (UTC) of the key, which is the same as the app creation time.
+         * <p>The creation time (UTC) of the key, which is the same as the app creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-31T04:10:19Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -129,7 +142,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * The modification time (UTC) of the key.
+         * <p>The modification time (UTC) of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-31T04:10:19Z</p>
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -137,7 +153,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddIpControlPolicyItemResponseBody} extends {@link TeaModel}
  *
  * <p>AddIpControlPolicyItemResponseBody</p>
@@ -49,7 +50,10 @@ public class AddIpControlPolicyItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the policy. The ID is unique.
+         * <p>The ID of the policy. The ID is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P151617000829241</p>
          */
         public Builder policyItemId(String policyItemId) {
             this.policyItemId = policyItemId;
@@ -57,7 +61,10 @@ public class AddIpControlPolicyItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

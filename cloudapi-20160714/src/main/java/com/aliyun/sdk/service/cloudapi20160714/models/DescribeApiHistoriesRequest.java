@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiHistoriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiHistoriesRequest</p>
@@ -138,7 +139,10 @@ public class DescribeApiHistoriesRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c076144d7878437b8f82fb85890ce6a0</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -147,7 +151,10 @@ public class DescribeApiHistoriesRequest extends Request {
         }
 
         /**
-         * The name of the API. The name is used for fuzzy match.
+         * <p>The name of the API. The name is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weather</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -156,7 +163,11 @@ public class DescribeApiHistoriesRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1084f9034c744137901057206b39d2b6</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -165,7 +176,10 @@ public class DescribeApiHistoriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +188,10 @@ public class DescribeApiHistoriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,11 +209,14 @@ public class DescribeApiHistoriesRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

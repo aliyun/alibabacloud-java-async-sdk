@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisWithStageNameIntegratedByAppRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisWithStageNameIntegratedByAppRequest</p>
@@ -166,7 +167,10 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         } 
 
         /**
-         * The API name.
+         * <p>The API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiName</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -175,7 +179,10 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * The API ID.
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b19240592b1b4e74961fb8438ed7550c</p>
          */
         public Builder apiUid(String apiUid) {
             this.putQueryParameter("ApiUid", apiUid);
@@ -184,7 +191,11 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2386789</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -193,7 +204,10 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * The API description. The description can be up to 200 characters in length.
+         * <p>The API description. The description can be up to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -202,7 +216,10 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * The request HTTP method of the API.
+         * <p>The request HTTP method of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -211,7 +228,10 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -220,7 +240,10 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +252,10 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * The request path of the API.
+         * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tt</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatasetItemListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatasetItemListResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The Dataset information.
+         * <p>The Dataset information.</p>
          */
         public Builder datasetItemInfoList(java.util.List < DatasetItemInfoList> datasetItemInfoList) {
             this.datasetItemInfoList = datasetItemInfoList;
@@ -93,7 +94,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6E9C6E4-608B-5C0F-9783-E288********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatasetItemListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatasetItemListResponseBody</p>
+     */
     public static class DatasetItemInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -229,7 +248,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The time when the data entry was created.
+             * <p>The time when the data entry was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-21T12:58:43Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -237,7 +259,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dataset.
+             * <p>The ID of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4add6a61804e47858266883e********</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -245,7 +270,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data entry.
+             * <p>The ID of the data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5045****</p>
              */
             public Builder datasetItemId(String datasetItemId) {
                 this.datasetItemId = datasetItemId;
@@ -253,7 +281,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the data entry.
+             * <p>The description of the data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -261,7 +292,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format. If this parameter is empty, the data entry does not expire.
+             * <p>The time in UTC when the data entry expires. The time is in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. If this parameter is empty, the data entry does not expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-22T12:00:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -269,7 +303,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the data entry.
+             * <p>The last modification time (UTC) of the data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-21T12:58:43Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -277,7 +314,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the data entry.
+             * <p>The value of the data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>106.43.XXX.XXX</p>
              */
             public Builder value(String value) {
                 this.value = value;

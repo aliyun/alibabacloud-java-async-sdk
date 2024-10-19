@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSignaturesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSignaturesRequest</p>
@@ -109,7 +110,10 @@ public class DescribeSignaturesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -118,7 +122,10 @@ public class DescribeSignaturesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -136,7 +143,10 @@ public class DescribeSignaturesRequest extends Request {
         }
 
         /**
-         * The IDs of the keys to query.
+         * <p>The IDs of the keys to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);
@@ -145,7 +155,10 @@ public class DescribeSignaturesRequest extends Request {
         }
 
         /**
-         * The names of the keys to query.
+         * <p>The names of the keys to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backendsignature</p>
          */
         public Builder signatureName(String signatureName) {
             this.putQueryParameter("SignatureName", signatureName);

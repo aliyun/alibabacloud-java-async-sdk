@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetAppsAuthToApiProductRequest} extends {@link RequestModel}
  *
  * <p>SetAppsAuthToApiProductRequest</p>
@@ -111,7 +112,10 @@ public class SetAppsAuthToApiProductRequest extends Request {
         } 
 
         /**
-         * ApiProductId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
          */
         public Builder apiProductId(String apiProductId) {
             this.putQueryParameter("ApiProductId", apiProductId);
@@ -120,7 +124,7 @@ public class SetAppsAuthToApiProductRequest extends Request {
         }
 
         /**
-         * AppIds.
+         * <p>This parameter is required.</p>
          */
         public Builder appIds(java.util.List < Long > appIds) {
             this.putQueryParameter("AppIds", appIds);

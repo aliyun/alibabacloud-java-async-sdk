@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiHistoriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiHistoriesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned API information. It is an array consisting of ApiHisItem data.
+         * <p>The returned API information. It is an array consisting of ApiHisItem data.</p>
          */
         public Builder apiHisItems(ApiHisItems apiHisItems) {
             this.apiHisItems = apiHisItems;
@@ -93,7 +94,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ003</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiHistoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiHistoriesResponseBody</p>
+     */
     public static class ApiHisItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
@@ -265,7 +284,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the API.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5af418828f0344a3b588c0cc1331a3bc</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -273,7 +295,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateObject</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -281,7 +306,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The publishing time (UTC) of the API.
+             * <p>The publishing time (UTC) of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-20T08:28:48Z</p>
              */
             public Builder deployedTime(String deployedTime) {
                 this.deployedTime = deployedTime;
@@ -289,7 +317,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API.
+             * <p>The description of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creates an object</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -297,7 +328,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1084f9034c744137901057206b39d2b6</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -305,7 +339,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myGroup2</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -313,7 +350,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The historical version of the API.
+             * <p>The historical version of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20160705104552393</p>
              */
             public Builder historyVersion(String historyVersion) {
                 this.historyVersion = historyVersion;
@@ -321,7 +361,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the API is located.
+             * <p>The region in which the API is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -329,11 +372,14 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment. Valid values:
-             * <p>
+             * <p>The name of the runtime environment. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong></li>
+             * <li><strong>TEST</strong></li>
+             * </ul>
              * 
-             * *   **RELEASE**
-             * *   **TEST**
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -341,7 +387,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an API version is effective. Valid values: **ONLINE** and **OFFLINE**.
+             * <p>Indicates whether an API version is effective. Valid values: <strong>ONLINE</strong> and <strong>OFFLINE</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -355,6 +404,12 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiHistoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiHistoriesResponseBody</p>
+     */
     public static class ApiHisItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiHisItem")
         private java.util.List < ApiHisItem> apiHisItem;

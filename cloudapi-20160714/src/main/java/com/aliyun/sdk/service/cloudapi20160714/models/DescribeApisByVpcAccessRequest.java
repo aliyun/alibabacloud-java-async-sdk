@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByVpcAccessRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisByVpcAccessRequest</p>
@@ -95,7 +96,10 @@ public class DescribeApisByVpcAccessRequest extends Request {
         } 
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -104,7 +108,10 @@ public class DescribeApisByVpcAccessRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -122,7 +129,10 @@ public class DescribeApisByVpcAccessRequest extends Request {
         }
 
         /**
-         * The name of the VPC access authorization.
+         * <p>The name of the VPC access authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lynkco-iov-uat</p>
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);

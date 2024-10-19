@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrafficControlsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrafficControlsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         private TrafficControls trafficControls; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93D91A99-F093-4596-87BA-3C4FBFD3FD8A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned throttling policy information. It is an array consisting of TrafficControl data.
+         * <p>The returned throttling policy information. It is an array consisting of TrafficControl data.</p>
          */
         public Builder trafficControls(TrafficControls trafficControls) {
             this.trafficControls = trafficControls;
@@ -130,6 +143,12 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrafficControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrafficControlsResponseBody</p>
+     */
     public static class Special extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecialKey")
         private String specialKey;
@@ -169,7 +188,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private Integer trafficValue; 
 
             /**
-             * The AppId or user account corresponding to SpecialType.
+             * <p>The AppId or user account corresponding to SpecialType.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test_wg@aliyun.com">test_wg@aliyun.com</a></p>
              */
             public Builder specialKey(String specialKey) {
                 this.specialKey = specialKey;
@@ -177,7 +199,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The throttling value.
+             * <p>The throttling value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder trafficValue(Integer trafficValue) {
                 this.trafficValue = trafficValue;
@@ -191,6 +216,12 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrafficControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrafficControlsResponseBody</p>
+     */
     public static class Specials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Special")
         private java.util.List < Special> special;
@@ -232,6 +263,12 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrafficControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrafficControlsResponseBody</p>
+     */
     public static class SpecialPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecialType")
         private String specialType;
@@ -271,11 +308,14 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private Specials specials; 
 
             /**
-             * The type of the special throttling policy. Valid values:
-             * <p>
+             * <p>The type of the special throttling policy. Valid values:</p>
+             * <ul>
+             * <li><strong>APP</strong></li>
+             * <li><strong>USER</strong></li>
+             * </ul>
              * 
-             * *   **APP**
-             * *   **USER**
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder specialType(String specialType) {
                 this.specialType = specialType;
@@ -283,7 +323,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information about a special throttling policy. It is an array consisting of Special data.
+             * <p>The returned information about a special throttling policy. It is an array consisting of Special data.</p>
              */
             public Builder specials(Specials specials) {
                 this.specials = specials;
@@ -297,6 +337,12 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrafficControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrafficControlsResponseBody</p>
+     */
     public static class SpecialPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecialPolicy")
         private java.util.List < SpecialPolicy> specialPolicy;
@@ -338,6 +384,12 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrafficControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrafficControlsResponseBody</p>
+     */
     public static class TrafficControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiDefault")
         private Integer apiDefault;
@@ -473,7 +525,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private Integer userDefault; 
 
             /**
-             * The default throttling value for each API.
+             * <p>The default throttling value for each API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder apiDefault(Integer apiDefault) {
                 this.apiDefault = apiDefault;
@@ -481,7 +536,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The default throttling value for each app.
+             * <p>The default throttling value for each app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder appDefault(Integer appDefault) {
                 this.appDefault = appDefault;
@@ -489,7 +547,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time (UTC) of the throttling policy.
+             * <p>The creation time (UTC) of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-01-27T10:19:39Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -497,7 +558,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the throttling policy.
+             * <p>The description of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -505,7 +569,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the throttling policy.
+             * <p>The last modification time (UTC) of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-01-27T10:34:38Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -513,7 +580,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information about a special throttling policy. It is an array consisting of SpecialPolicy data.
+             * <p>The returned information about a special throttling policy. It is an array consisting of SpecialPolicy data.</p>
              */
             public Builder specialPolicies(SpecialPolicies specialPolicies) {
                 this.specialPolicies = specialPolicies;
@@ -521,7 +588,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the throttling policy.
+             * <p>The ID of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfed6c970d45481dbe136d6b5ac68c41</p>
              */
             public Builder trafficControlId(String trafficControlId) {
                 this.trafficControlId = trafficControlId;
@@ -529,7 +599,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the throttling policy.
+             * <p>The name of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wulingtestq1</p>
              */
             public Builder trafficControlName(String trafficControlName) {
                 this.trafficControlName = trafficControlName;
@@ -537,12 +610,15 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit to be used in the throttling policy. Valid values:
-             * <p>
+             * <p>The unit to be used in the throttling policy. Valid values:</p>
+             * <ul>
+             * <li>MINUTE</li>
+             * <li>HOUR</li>
+             * <li>DAY</li>
+             * </ul>
              * 
-             * *   MINUTE
-             * *   HOUR
-             * *   DAY
+             * <strong>example:</strong>
+             * <p>Minute</p>
              */
             public Builder trafficControlUnit(String trafficControlUnit) {
                 this.trafficControlUnit = trafficControlUnit;
@@ -550,7 +626,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The default throttling value for each user.
+             * <p>The default throttling value for each user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15000</p>
              */
             public Builder userDefault(Integer userDefault) {
                 this.userDefault = userDefault;
@@ -564,6 +643,12 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrafficControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrafficControlsResponseBody</p>
+     */
     public static class TrafficControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficControl")
         private java.util.List < TrafficControl> trafficControl;

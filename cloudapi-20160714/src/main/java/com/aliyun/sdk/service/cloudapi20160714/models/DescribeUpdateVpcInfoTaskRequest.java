@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpdateVpcInfoTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeUpdateVpcInfoTaskRequest</p>
@@ -68,7 +69,10 @@ public class DescribeUpdateVpcInfoTaskRequest extends Request {
         } 
 
         /**
-         * OperationUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7d341787517a47afaaef9cc1bdb7acce</p>
          */
         public Builder operationUid(String operationUid) {
             this.putQueryParameter("OperationUid", operationUid);

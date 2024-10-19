@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackendRequest} extends {@link RequestModel}
  *
  * <p>CreateBackendRequest</p>
@@ -139,7 +140,11 @@ public class CreateBackendRequest extends Request {
         } 
 
         /**
-         * The name of the backend service.
+         * <p>The name of the backend service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testBackendService</p>
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -148,7 +153,11 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * The type of the backend service.
+         * <p>The type of the backend service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
@@ -157,7 +166,10 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * Specifies to create a EventBridge service-linked role.
+         * <p>Specifies to create a EventBridge service-linked role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder createEventBridgeServiceLinkedRole(Boolean createEventBridgeServiceLinkedRole) {
             this.putQueryParameter("CreateEventBridgeServiceLinkedRole", createEventBridgeServiceLinkedRole);
@@ -166,7 +178,10 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * Specifies to create a service-linked role.
+         * <p>Specifies to create a service-linked role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder createSlr(Boolean createSlr) {
             this.putQueryParameter("CreateSlr", createSlr);
@@ -175,7 +190,10 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release data api 411055691504981</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -193,7 +211,7 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -208,6 +226,12 @@ public class CreateBackendRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBackendRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBackendRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -247,7 +271,10 @@ public class CreateBackendRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,7 +282,10 @@ public class CreateBackendRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

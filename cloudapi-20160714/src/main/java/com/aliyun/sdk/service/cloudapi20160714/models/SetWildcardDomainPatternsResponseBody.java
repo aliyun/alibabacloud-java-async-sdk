@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetWildcardDomainPatternsResponseBody} extends {@link TeaModel}
  *
  * <p>SetWildcardDomainPatternsResponseBody</p>
@@ -37,7 +38,10 @@ public class SetWildcardDomainPatternsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0075BDA-8AED-5073-A70A-FE44E86AB20F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

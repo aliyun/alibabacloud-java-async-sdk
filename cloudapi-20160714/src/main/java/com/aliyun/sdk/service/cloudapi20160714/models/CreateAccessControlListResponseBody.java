@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessControlListResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessControlListResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateAccessControlListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ACL ID.
+         * <p>The ACL ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp1uqwgwmkbutnzq2r59z</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -57,7 +61,10 @@ public class CreateAccessControlListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

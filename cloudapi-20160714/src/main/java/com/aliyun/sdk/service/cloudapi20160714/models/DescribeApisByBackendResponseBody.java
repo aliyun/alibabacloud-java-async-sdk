@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByBackendResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisByBackendResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the returned API list.
+         * <p>The information about the returned API list.</p>
          */
         public Builder apiInfoList(ApiInfoList apiInfoList) {
             this.apiInfoList = apiInfoList;
@@ -93,7 +94,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the current page.
+         * <p>The number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEB6EC62-B6C7-5082-A45A-45A204724AC2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisByBackendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisByBackendResponseBody</p>
+     */
     public static class ApiInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
@@ -229,7 +248,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The ID of the API.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20bcdc9453524b78a8beb1f6de21edb7</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -237,7 +259,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testApi</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -245,7 +270,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API.
+             * <p>The description of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -253,7 +281,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15bcdc9453524b7gs8beb1f6de21edb7</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -261,7 +292,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testApiGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -269,7 +303,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * The request method of the API.
+             * <p>The request method of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -277,7 +314,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * The request path of the API.
+             * <p>The request path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -291,6 +331,12 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApisByBackendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisByBackendResponseBody</p>
+     */
     public static class ApiInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiInfo")
         private java.util.List < ApiInfo> apiInfo;

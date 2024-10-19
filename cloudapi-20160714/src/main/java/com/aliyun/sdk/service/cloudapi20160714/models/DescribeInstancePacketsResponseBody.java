@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancePacketsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancePacketsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of inbound and outbound data packets in the instance.
+         * <p>The list of inbound and outbound data packets in the instance.</p>
          */
         public Builder instancePackets(InstancePackets instancePackets) {
             this.instancePackets = instancePackets;
@@ -57,7 +58,10 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancePacketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancePacketsResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
@@ -121,11 +131,14 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The metric. Valid values:
-             * <p>
+             * <p>The metric. Valid values:</p>
+             * <ul>
+             * <li>InstancePacketRX: inbound data packets</li>
+             * <li>InstancePacketTX: outbound data packets</li>
+             * </ul>
              * 
-             * *   InstancePacketRX: inbound data packets
-             * *   InstancePacketTX: outbound data packets
+             * <strong>example:</strong>
+             * <p>InstancePacketRX</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -133,7 +146,10 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-24T10:14:53Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -141,7 +157,10 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of inbound and outbound data packets in the instance.
+             * <p>The number of inbound and outbound data packets in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -155,6 +174,12 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancePacketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancePacketsResponseBody</p>
+     */
     public static class InstancePackets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;

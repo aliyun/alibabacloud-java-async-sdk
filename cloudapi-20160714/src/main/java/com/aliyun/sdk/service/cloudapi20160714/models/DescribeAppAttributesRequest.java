@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppAttributesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppAttributesRequest</p>
@@ -194,7 +195,10 @@ public class DescribeAppAttributesRequest extends Request {
         } 
 
         /**
-         * The AppCode of the app.
+         * <p>The AppCode of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23552160</p>
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -203,7 +207,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the app.
+         * <p>The ID of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20112314518278</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -212,7 +219,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The app key that is used to make an API call.
+         * <p>The app key that is used to make an API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203708622</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -221,7 +231,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The name of the app.
+         * <p>The name of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -230,7 +243,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable tag verification.
+         * <p>Specifies whether to enable tag verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
@@ -239,7 +255,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * 扩展信息
+         * <p>扩展信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110243810311</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -248,7 +267,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -257,7 +279,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -275,11 +300,14 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The order. Valid values: asc and desc. Default value: desc.
-         * <p>
+         * <p>The order. Valid values: asc and desc. Default value: desc.</p>
+         * <ul>
+         * <li>asc: The apps are displayed in ascending order of modification time.</li>
+         * <li>desc: The apps are displayed in descending order of modification time.</li>
+         * </ul>
          * 
-         * *   asc: The apps are displayed in ascending order of modification time.
-         * *   desc: The apps are displayed in descending order of modification time.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -288,7 +316,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -303,6 +334,12 @@ public class DescribeAppAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAttributesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -343,10 +380,12 @@ public class DescribeAppAttributesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
+             * <p>This parameter is required.</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -354,10 +393,11 @@ public class DescribeAppAttributesRequest extends Request {
             }
 
             /**
-             * The key of the tag.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

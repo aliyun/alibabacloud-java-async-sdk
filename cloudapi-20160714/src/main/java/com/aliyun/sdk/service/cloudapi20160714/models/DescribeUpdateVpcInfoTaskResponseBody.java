@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpdateVpcInfoTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUpdateVpcInfoTaskResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUpdateVpcInfoTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpdateVpcInfoTaskResponseBody</p>
+     */
     public static class ApiUpdateVpcInfoResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
@@ -251,6 +258,12 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUpdateVpcInfoTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpdateVpcInfoTaskResponseBody</p>
+     */
     public static class ApiUpdateVpcInfoResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiUpdateVpcInfoResult")
         private java.util.List < ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult;

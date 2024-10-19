@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -111,11 +112,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete all tags. This parameter is valid only when the **TagKey.N**parameter is not specified. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to delete all tags. This parameter is valid only when the <strong>TagKey.N</strong>parameter is not specified. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -124,7 +128,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * <p>The resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>285bb759342649a1b70c2093a772e087</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -133,12 +141,16 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:
-         * <p>
+         * <p>The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:</p>
+         * <ul>
+         * <li><strong>apiGroup</strong></li>
+         * <li><strong>plugin</strong></li>
+         * <li><strong>app</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **apiGroup**
-         * *   **plugin**
-         * *   **app**
+         * <strong>example:</strong>
+         * <p>apiGroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -147,7 +159,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0f96f124-1276-4f81-b52b-c554240beb4c</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -156,7 +171,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys of the resource.
+         * <p>The tag keys of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

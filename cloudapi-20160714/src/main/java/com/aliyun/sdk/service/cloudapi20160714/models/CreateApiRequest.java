@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApiRequest} extends {@link RequestModel}
  *
  * <p>CreateApiRequest</p>
@@ -436,13 +437,16 @@ public class CreateApiRequest extends Request {
         } 
 
         /**
-         * The type of the two-way communication API.
-         * <p>
+         * <p>The type of the two-way communication API.</p>
+         * <ul>
+         * <li><strong>COMMON</strong>: normal APIs</li>
+         * <li><strong>REGISTER</strong>: registered APIs</li>
+         * <li><strong>UNREGISTER</strong>: unregistered APIs</li>
+         * <li><strong>NOTIFY</strong>: downstream notification APIs</li>
+         * </ul>
          * 
-         * *   **COMMON**: normal APIs
-         * *   **REGISTER**: registered APIs
-         * *   **UNREGISTER**: unregistered APIs
-         * *   **NOTIFY**: downstream notification APIs
+         * <strong>example:</strong>
+         * <p>HmacSHA256</p>
          */
         public Builder allowSignatureMethod(String allowSignatureMethod) {
             this.putQueryParameter("AllowSignatureMethod", allowSignatureMethod);
@@ -451,7 +455,11 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The name of the API that you want to create. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).
+         * <p>The name of the API that you want to create. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiName</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -460,7 +468,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The IDof the backend service
+         * <p>The IDof the backend service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HEADER</p>
          */
         public Builder appCodeAuthType(String appCodeAuthType) {
             this.putQueryParameter("AppCodeAuthType", appCodeAuthType);
@@ -469,10 +480,11 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The configuration items of API requests sent by the consumer to API Gateway.
-         * <p>
+         * <p>The configuration items of API requests sent by the consumer to API Gateway.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43985.html">RequestConfig</a>.</p>
          * 
-         * For more information, see [RequestConfig](~~43985~~).
+         * <strong>example:</strong>
+         * <p>APP</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -481,7 +493,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable backend services.
+         * <p>Specifies whether to enable backend services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder backendEnable(Boolean backendEnable) {
             this.putQueryParameter("BackendEnable", backendEnable);
@@ -490,7 +505,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable backend services.
+         * <p>Specifies whether to enable backend services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a0305308908c4740aba9cbfd63ba99b7</p>
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -508,7 +526,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The description of the API. The description can be up to 180 characters in length.
+         * <p>The description of the API. The description can be up to 180 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Api description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -517,13 +538,16 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * If **AuthType** is set to **APP**, the valid values are:
-         * <p>
+         * <p>If <strong>AuthType</strong> is set to <strong>APP</strong>, the valid values are:</p>
+         * <ul>
+         * <li><strong>DEFAULT</strong>: The default value that is used if no other values are passed. This value means that the setting of the group is used.</li>
+         * <li><strong>DISABLE</strong>: The authentication is disabled.</li>
+         * <li><strong>HEADER</strong>: AppCode can be placed in the Header parameter for authentication.</li>
+         * <li><strong>HEADER_QUERY</strong>: AppCode can be placed in the Header or Query parameter for authentication.</li>
+         * </ul>
          * 
-         * *   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.
-         * *   **DISABLE**: The authentication is disabled.
-         * *   **HEADER**: AppCode can be placed in the Header parameter for authentication.
-         * *   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableInternet(Boolean disableInternet) {
             this.putQueryParameter("DisableInternet", disableInternet);
@@ -550,9 +574,13 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * *   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.
-         * <p>
-         * *   If you set **DisableInternet** to **false**, the limit is lifted. The default value is false when you create an API.
+         * <ul>
+         * <li>Specifies whether to set <strong>DisableInternet</strong> to <strong>true</strong> to limit API calls to within the VPC.</li>
+         * <li>If you set <strong>DisableInternet</strong> to <strong>false</strong>, the limit is lifted. The default value is false when you create an API.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceNonceCheck(Boolean forceNonceCheck) {
             this.putQueryParameter("ForceNonceCheck", forceNonceCheck);
@@ -561,7 +589,11 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08ae4aa0f95e4321849ee57f4e0b3077</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -570,11 +602,14 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * If the **AuthType** is **APP** authentication, you need to pass this value to specify the signature algorithm. If you do not specify this parameter, the default value HmacSHA256 is used. Valid values:
-         * <p>
+         * <p>If the <strong>AuthType</strong> is <strong>APP</strong> authentication, you need to pass this value to specify the signature algorithm. If you do not specify this parameter, the default value HmacSHA256 is used. Valid values:</p>
+         * <ul>
+         * <li>HmacSHA256</li>
+         * <li>HmacSHA1,HmacSHA256</li>
+         * </ul>
          * 
-         * *   HmacSHA256
-         * *   HmacSHA1,HmacSHA256
+         * <strong>example:</strong>
+         * <p>{&quot;openIdApiType&quot;:null,&quot;idTokenParamName&quot;:null,&quot;publicKeyId&quot;:null,&quot;publicKey&quot;:null}</p>
          */
         public Builder openIdConnectConfig(String openIdConnectConfig) {
             this.putQueryParameter("OpenIdConnectConfig", openIdConnectConfig);
@@ -583,10 +618,12 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The configuration items of API requests sent by API Gateway to the backend service.
-         * <p>
+         * <p>The configuration items of API requests sent by API Gateway to the backend service.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43987.html">ServiceConfig</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see [ServiceConfig](~~43987~~).
+         * <strong>example:</strong>
+         * <p>{&quot;RequestProtocol&quot;:&quot;HTTP&quot;,&quot;RequestHttpMethod&quot;:&quot;GET&quot;,&quot;RequestPath&quot;:&quot;/v3/getUserTest/[userId]&quot;,&quot;BodyFormat&quot;:&quot;FORM&quot;,&quot;PostBodyDescription&quot;:&quot;&quot;}</p>
          */
         public Builder requestConfig(String requestConfig) {
             this.putQueryParameter("RequestConfig", requestConfig);
@@ -604,9 +641,13 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
-         * <p>
-         * *   If you set **ForceNonceCheck** to **false**, the check is not performed. The default value is false when you create an API.
+         * <ul>
+         * <li>Specifies whether to set <strong>ForceNonceCheck</strong> to <strong>true</strong> to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</li>
+         * <li>If you set <strong>ForceNonceCheck</strong> to <strong>false</strong>, the check is not performed. The default value is false when you create an API.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder resultBodyModel(String resultBodyModel) {
             this.putQueryParameter("ResultBodyModel", resultBodyModel);
@@ -633,7 +674,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The sample response from the backend service.
+         * <p>The sample response from the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTML</p>
          */
         public Builder resultType(String resultType) {
             this.putQueryParameter("ResultType", resultType);
@@ -651,10 +695,12 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The parameters of API requests sent by the consumer to API Gateway.
-         * <p>
+         * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43986.html">RequestParameter</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see [RequestParameter](~~43986~~).
+         * <strong>example:</strong>
+         * <p>{&quot;ServiceProtocol&quot;:&quot;HTTP&quot;,&quot;ServiceHttpMethod&quot;:&quot;GET&quot;,&quot;ServiceAddress&quot;:&quot;<a href="http://www.customerdomain.com%22,%22ServiceTimeout%22:%221000%22,%22ServicePath%22:%22/v3/getUserTest/%5BuserId%5D%22%7D">http://www.customerdomain.com&quot;,&quot;ServiceTimeout&quot;:&quot;1000&quot;,&quot;ServicePath&quot;:&quot;/v3/getUserTest/[userId]&quot;}</a></p>
          */
         public Builder serviceConfig(String serviceConfig) {
             this.putQueryParameter("ServiceConfig", serviceConfig);
@@ -690,7 +736,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -699,11 +745,15 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * Specifies whether to make the API public. Valid values:
-         * <p>
+         * <p>Specifies whether to make the API public. Valid values:</p>
+         * <ul>
+         * <li><strong>PUBLIC</strong>: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.</li>
+         * <li><strong>PRIVATE</strong>: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
-         * *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -712,7 +762,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The return description of the API.
+         * <p>The return description of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON</p>
          */
         public Builder webSocketApiType(String webSocketApiType) {
             this.putQueryParameter("WebSocketApiType", webSocketApiType);
@@ -727,6 +780,12 @@ public class CreateApiRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApiRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApiRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -766,7 +825,10 @@ public class CreateApiRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -774,7 +836,10 @@ public class CreateApiRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

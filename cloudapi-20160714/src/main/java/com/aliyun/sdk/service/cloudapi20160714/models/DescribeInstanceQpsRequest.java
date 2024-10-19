@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceQpsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceQpsRequest</p>
@@ -113,7 +114,11 @@ public class DescribeInstanceQpsRequest extends Request {
         } 
 
         /**
-         * The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+         * <p>The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-29T06:25:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -122,7 +127,11 @@ public class DescribeInstanceQpsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-bj-6c219f1fd5d4</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,12 +149,16 @@ public class DescribeInstanceQpsRequest extends Request {
         }
 
         /**
-         * The environment in which the API is requested. Valid values:
-         * <p>
+         * <p>The environment in which the API is requested. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong>: the production environment</li>
+         * <li><strong>PRE</strong>: the pre-release environment</li>
+         * <li><strong>TEST</strong>: the test environment</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**: the production environment
-         * *   **PRE**: the pre-release environment
-         * *   **TEST**: the test environment
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -154,7 +167,11 @@ public class DescribeInstanceQpsRequest extends Request {
         }
 
         /**
-         * The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+         * <p>The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-10T06:03:47Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

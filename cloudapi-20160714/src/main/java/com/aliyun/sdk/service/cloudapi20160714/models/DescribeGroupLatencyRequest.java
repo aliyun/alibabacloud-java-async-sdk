@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupLatencyRequest} extends {@link RequestModel}
  *
  * <p>DescribeGroupLatencyRequest</p>
@@ -113,7 +114,11 @@ public class DescribeGroupLatencyRequest extends Request {
         } 
 
         /**
-         * The end time of the time range to query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.
+         * <p>The end time of the time range to query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-14T06:26:14Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -122,7 +127,11 @@ public class DescribeGroupLatencyRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d825094fdd114a869f5adb443d9b7ead</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -140,12 +149,16 @@ public class DescribeGroupLatencyRequest extends Request {
         }
 
         /**
-         * The environment in which you want to perform the query. Valid values:
-         * <p>
+         * <p>The environment in which you want to perform the query. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong>: the production environment</li>
+         * <li><strong>PRE</strong>: the staging environment</li>
+         * <li><strong>TEST</strong>: the test environment</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**: the production environment
-         * *   **PRE**: the staging environment
-         * *   **TEST**: the test environment
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -154,7 +167,11 @@ public class DescribeGroupLatencyRequest extends Request {
         }
 
         /**
-         * The start time of the time range to query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.
+         * <p>The start time of the time range to query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

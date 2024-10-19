@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackendRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackendRequest</p>
@@ -112,7 +113,10 @@ public class ModifyBackendRequest extends Request {
         } 
 
         /**
-         * BackendId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20bcdc9453524b78a8beb1f6de21edb7</p>
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -121,7 +125,10 @@ public class ModifyBackendRequest extends Request {
         }
 
         /**
-         * BackendName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testHttpModify</p>
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -130,7 +137,10 @@ public class ModifyBackendRequest extends Request {
         }
 
         /**
-         * BackendType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);

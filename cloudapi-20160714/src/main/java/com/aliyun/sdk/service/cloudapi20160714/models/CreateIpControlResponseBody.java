@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpControlResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIpControlResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateIpControlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the ACL.
+         * <p>The ID of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
          */
         public Builder ipControlId(String ipControlId) {
             this.ipControlId = ipControlId;
@@ -57,7 +61,10 @@ public class CreateIpControlResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE5722A6-AE78-4741-A9B0-6C817D360510</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

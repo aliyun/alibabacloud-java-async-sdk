@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSignaturesByApiResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSignaturesByApiResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
         private Signatures signatures; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
         }
 
         /**
-         * The returned signature key information. It is an array consisting of SignatureItem data.
+         * <p>The returned signature key information. It is an array consisting of SignatureItem data.</p>
          */
         public Builder signatures(Signatures signatures) {
             this.signatures = signatures;
@@ -70,6 +74,12 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSignaturesByApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSignaturesByApiResponseBody</p>
+     */
     public static class SignatureItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BoundTime")
         private String boundTime;
@@ -121,7 +131,10 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
             private String signatureName; 
 
             /**
-             * The time when the key was bound.
+             * <p>The time when the key was bound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-23T08:28:48Z</p>
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -129,7 +142,10 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backend signature key.
+             * <p>The ID of the backend signature key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
              */
             public Builder signatureId(String signatureId) {
                 this.signatureId = signatureId;
@@ -137,7 +153,10 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backend signature key.
+             * <p>The name of the backend signature key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysecret</p>
              */
             public Builder signatureName(String signatureName) {
                 this.signatureName = signatureName;
@@ -151,6 +170,12 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSignaturesByApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSignaturesByApiResponseBody</p>
+     */
     public static class Signatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SignatureItem")
         private java.util.List < SignatureItem> signatureItem;

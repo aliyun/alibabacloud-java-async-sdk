@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPluginRequest} extends {@link RequestModel}
  *
  * <p>ModifyPluginRequest</p>
@@ -124,7 +125,10 @@ public class ModifyPluginRequest extends Request {
         } 
 
         /**
-         * The description of the plug-in. The description can contain a maximum of 200 characters in length.
+         * <p>The description of the plug-in. The description can contain a maximum of 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modify plugin first</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -133,7 +137,10 @@ public class ModifyPluginRequest extends Request {
         }
 
         /**
-         * The statement that is used to modify the plug-in definition.
+         * <p>The statement that is used to modify the plug-in definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Plugin definition</p>
          */
         public Builder pluginData(String pluginData) {
             this.putQueryParameter("PluginData", pluginData);
@@ -142,7 +149,11 @@ public class ModifyPluginRequest extends Request {
         }
 
         /**
-         * The ID of the plug-in whose information you want to modify.
+         * <p>The ID of the plug-in whose information you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a96926e82f994915a8da40a119374537</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -151,7 +162,10 @@ public class ModifyPluginRequest extends Request {
         }
 
         /**
-         * The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). However, it cannot start with an underscore.
+         * <p>The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). However, it cannot start with an underscore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modifyCors</p>
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);
@@ -169,7 +183,10 @@ public class ModifyPluginRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -184,6 +201,12 @@ public class ModifyPluginRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPluginRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPluginRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -225,10 +248,12 @@ public class ModifyPluginRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
+             * <p>This parameter is required.</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,10 +261,12 @@ public class ModifyPluginRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
+             * <p>This parameter is required.</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

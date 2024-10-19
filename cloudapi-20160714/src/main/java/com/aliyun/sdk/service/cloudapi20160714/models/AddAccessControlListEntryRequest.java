@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAccessControlListEntryRequest} extends {@link RequestModel}
  *
  * <p>AddAccessControlListEntryRequest</p>
@@ -82,13 +83,17 @@ public class AddAccessControlListEntryRequest extends Request {
         } 
 
         /**
-         * The ACL settings.
-         * <p>
+         * <p>The ACL settings.</p>
+         * <ul>
+         * <li>entry: the entries that you want to add to the ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).</li>
+         * <li>comment: the description of the ACL.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can add at most 50 IP addresses or CIDR blocks to an ACL in each call. If the IP address or CIDR block that you want to add to an ACL already exists, the IP address or CIDR block is not added. The entries that you add must be CIDR blocks.</p>
+         * </blockquote>
          * 
-         * *   entry: the entries that you want to add to the ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).
-         * *   comment: the description of the ACL.
-         * 
-         * > You can add at most 50 IP addresses or CIDR blocks to an ACL in each call. If the IP address or CIDR block that you want to add to an ACL already exists, the IP address or CIDR block is not added. The entries that you add must be CIDR blocks.
+         * <strong>example:</strong>
+         * <p>[{&quot;entry&quot;: &quot;192.168.1.0/24&quot;, &quot;comment&quot;: &quot;test&quot;}]</p>
          */
         public Builder aclEntrys(String aclEntrys) {
             this.putQueryParameter("AclEntrys", aclEntrys);
@@ -97,7 +102,11 @@ public class AddAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * The ID of the access control list (ACL).
+         * <p>The ID of the access control list (ACL).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp1ohqkonqybecf4llbrc</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIntranetDomainRequest} extends {@link RequestModel}
  *
  * <p>CreateIntranetDomainRequest</p>
@@ -68,7 +69,11 @@ public class CreateIntranetDomainRequest extends Request {
         } 
 
         /**
-         * The custom domain name.
+         * <p>The custom domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>927d50c0f2e54b359919923d908bb015</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

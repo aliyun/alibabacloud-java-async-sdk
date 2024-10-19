@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpControlPolicyItemsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpControlPolicyItemsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about policies. The information is an array of IpControlPolicyItem data.
+         * <p>The information about policies. The information is an array of IpControlPolicyItem data.</p>
          */
         public Builder ipControlPolicyItems(IpControlPolicyItems ipControlPolicyItems) {
             this.ipControlPolicyItems = ipControlPolicyItems;
@@ -93,7 +94,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpControlPolicyItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpControlPolicyItemsResponseBody</p>
+     */
     public static class IpControlPolicyItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -205,7 +224,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             private String policyItemId; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11112</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -213,7 +235,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses or CIDR blocks.
+             * <p>The IP addresses or CIDR blocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113.125.XX.XX;101.11.XX.XX</p>
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -221,7 +246,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the policy was created. The time is displayed in UTC.
+             * <p>The time when the policy was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-17T06:20:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -229,7 +257,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the policy was modified. The time is displayed in UTC.
+             * <p>The time when the policy was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-17T06:25:13Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -237,7 +268,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P151617000829241</p>
              */
             public Builder policyItemId(String policyItemId) {
                 this.policyItemId = policyItemId;
@@ -251,6 +285,12 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpControlPolicyItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpControlPolicyItemsResponseBody</p>
+     */
     public static class IpControlPolicyItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpControlPolicyItem")
         private java.util.List < IpControlPolicyItem> ipControlPolicyItem;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateModelResponseBody} extends {@link TeaModel}
  *
  * <p>CreateModelResponseBody</p>
@@ -145,7 +146,10 @@ public class CreateModelResponseBody extends TeaModel {
         private String schema; 
 
         /**
-         * The time when the model was created.
+         * <p>The time when the model was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-29T09:33:01Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -153,7 +157,10 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the created model.
+         * <p>The description of the created model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Model Description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -161,7 +168,10 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the API group to which the created model belongs.
+         * <p>The ID of the API group to which the created model belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30e792398d6c4569b04c0e53a3494381</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -169,7 +179,10 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the created model.
+         * <p>The ID of the created model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>766c0b9538a04bdf974953b5576783ba</p>
          */
         public Builder modelId(String modelId) {
             this.modelId = modelId;
@@ -177,7 +190,10 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the created model.
+         * <p>The name of the created model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -185,7 +201,10 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * The URI of the created model.
+         * <p>The URI of the created model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://apigateway.aliyun.com/models/30e792398d6c4569b04c0e53a3494381/766c0b9538a04bdf974953b5576783ba">https://apigateway.aliyun.com/models/30e792398d6c4569b04c0e53a3494381/766c0b9538a04bdf974953b5576783ba</a></p>
          */
         public Builder modelRef(String modelRef) {
             this.modelRef = modelRef;
@@ -193,7 +212,10 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the model is last modified.
+         * <p>The time when the model is last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-29T09:33:01Z</p>
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -201,7 +223,10 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * The region to which the created model belongs.
+         * <p>The region to which the created model belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -209,7 +234,10 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4173F95B-360C-460C-9F6C-4A960B904411</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +245,10 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * The definition of the created model.
+         * <p>The definition of the created model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;id&quot;:{&quot;format&quot;:&quot;int64&quot;,&quot;maximum&quot;:100,&quot;exclusiveMaximum&quot;:true,&quot;type&quot;:&quot;integer&quot;},&quot;name&quot;:{&quot;maxLength&quot;:10,&quot;type&quot;:&quot;string&quot;}}}</p>
          */
         public Builder schema(String schema) {
             this.schema = schema;

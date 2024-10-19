@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteApiStageVariableRequest} extends {@link RequestModel}
  *
  * <p>DeleteApiStageVariableRequest</p>
@@ -98,7 +99,11 @@ public class DeleteApiStageVariableRequest extends Request {
         } 
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>523e8dc7bbe04613b5b1d726c2a7889d</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -116,7 +121,11 @@ public class DeleteApiStageVariableRequest extends Request {
         }
 
         /**
-         * The ID of the environment.
+         * <p>The ID of the environment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
          */
         public Builder stageId(String stageId) {
             this.putQueryParameter("StageId", stageId);
@@ -125,7 +134,11 @@ public class DeleteApiStageVariableRequest extends Request {
         }
 
         /**
-         * The name of the variable to be deleted. This parameter is case-sensitive.
+         * <p>The name of the variable to be deleted. This parameter is case-sensitive.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serverName</p>
          */
         public Builder variableName(String variableName) {
             this.putQueryParameter("VariableName", variableName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatasetRequest} extends {@link RequestModel}
  *
  * <p>CreateDatasetRequest</p>
@@ -97,7 +98,11 @@ public class CreateDatasetRequest extends Request {
         } 
 
         /**
-         * The name of the dataset.
+         * <p>The name of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DatasetName</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -106,12 +111,16 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * The type of the dataset. Valid values:
-         * <p>
+         * <p>The type of the dataset. Valid values:</p>
+         * <ul>
+         * <li>JWT_BLOCKING: a JSON Web Token (JWT) blacklist</li>
+         * <li>IP_WHITELIST_CIDR : an IP address whitelist</li>
+         * <li>PARAMETER_ACCESS : parameter-based access control</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * * JWT_BLOCKING: a JSON Web Token (JWT) blacklist
-         * * IP_WHITELIST_CIDR : an IP address whitelist
-         * * PARAMETER_ACCESS : parameter-based access control
+         * <strong>example:</strong>
+         * <p>JWT_BLOCKING</p>
          */
         public Builder datasetType(String datasetType) {
             this.putQueryParameter("DatasetType", datasetType);
@@ -129,7 +138,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -144,6 +153,12 @@ public class CreateDatasetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDatasetRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -183,7 +198,10 @@ public class CreateDatasetRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -191,7 +209,10 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

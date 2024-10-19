@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveVpcAccessRequest} extends {@link RequestModel}
  *
  * <p>RemoveVpcAccessRequest</p>
@@ -112,7 +113,11 @@ public class RemoveVpcAccessRequest extends Request {
         } 
 
         /**
-         * The ID of an ECS or SLB instance in the VPC.
+         * <p>The ID of an ECS or SLB instance in the VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6bzcg1pr4oh5jjmxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -121,7 +126,10 @@ public class RemoveVpcAccessRequest extends Request {
         }
 
         /**
-         * Specifies whether batch work is required.
+         * <p>Specifies whether batch work is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needBatchWork(Boolean needBatchWork) {
             this.putQueryParameter("NeedBatchWork", needBatchWork);
@@ -130,7 +138,11 @@ public class RemoveVpcAccessRequest extends Request {
         }
 
         /**
-         * The port number that corresponds to the instance.
+         * <p>The port number that corresponds to the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -148,7 +160,11 @@ public class RemoveVpcAccessRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf657qec7lx42paw3qxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

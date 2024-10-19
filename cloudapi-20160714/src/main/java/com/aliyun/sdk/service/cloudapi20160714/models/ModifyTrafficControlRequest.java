@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTrafficControlRequest} extends {@link RequestModel}
  *
  * <p>ModifyTrafficControlRequest</p>
@@ -152,7 +153,10 @@ public class ModifyTrafficControlRequest extends Request {
         } 
 
         /**
-         * The default throttling value for each API.
+         * <p>The default throttling value for each API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder apiDefault(Integer apiDefault) {
             this.putQueryParameter("ApiDefault", apiDefault);
@@ -161,7 +165,10 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * The default throttling value for each app.
+         * <p>The default throttling value for each app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder appDefault(Integer appDefault) {
             this.putQueryParameter("AppDefault", appDefault);
@@ -170,7 +177,10 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * The description of the throttling policy.
+         * <p>The description of the throttling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ThrottlingTestDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -179,7 +189,10 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4223a10e-eed3-46a6-8b7c-23003f488153</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -188,7 +201,11 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy.
+         * <p>The ID of the throttling policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf123456</p>
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);
@@ -197,7 +214,10 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * The throttling policy name. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.
+         * <p>The throttling policy name. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). It cannot start with an underscore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ThrottlingTest</p>
          */
         public Builder trafficControlName(String trafficControlName) {
             this.putQueryParameter("TrafficControlName", trafficControlName);
@@ -206,13 +226,16 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * The unit to be used in the throttling policy. Valid values:
-         * <p>
+         * <p>The unit to be used in the throttling policy. Valid values:</p>
+         * <ul>
+         * <li><strong>SECOND</strong></li>
+         * <li><strong>MINUTE</strong></li>
+         * <li><strong>HOUR</strong></li>
+         * <li><strong>DAY</strong></li>
+         * </ul>
          * 
-         * *   **SECOND**
-         * *   **MINUTE**
-         * *   **HOUR**
-         * *   **DAY**
+         * <strong>example:</strong>
+         * <p>HOUR</p>
          */
         public Builder trafficControlUnit(String trafficControlUnit) {
             this.putQueryParameter("TrafficControlUnit", trafficControlUnit);
@@ -221,7 +244,10 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * The default throttling value for each user.
+         * <p>The default throttling value for each user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder userDefault(Integer userDefault) {
             this.putQueryParameter("UserDefault", userDefault);

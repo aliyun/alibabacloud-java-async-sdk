@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpdateBackendTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeUpdateBackendTaskRequest</p>
@@ -68,7 +69,10 @@ public class DescribeUpdateBackendTaskRequest extends Request {
         } 
 
         /**
-         * OperationUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4e13c3e0c44c4a4ebb5231264eeb9bc1</p>
          */
         public Builder operationUid(String operationUid) {
             this.putQueryParameter("OperationUid", operationUid);

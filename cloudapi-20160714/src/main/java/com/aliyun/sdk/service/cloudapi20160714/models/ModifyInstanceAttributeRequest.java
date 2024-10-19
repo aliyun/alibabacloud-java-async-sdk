@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceAttributeRequest</p>
@@ -244,7 +245,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-ht-8xxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -289,7 +293,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The information about the CIDR block that API Gateway can use to access the virtual private cloud (VPC) of the backend service.
+         * <p>The information about the CIDR block that API Gateway can use to access the virtual private cloud (VPC) of the backend service.</p>
          */
         public Builder toConnectVpcIpBlock(ToConnectVpcIpBlock toConnectVpcIpBlock) {
             String toConnectVpcIpBlockShrink = shrink(toConnectVpcIpBlock, "ToConnectVpcIpBlock", "json");
@@ -323,6 +327,12 @@ public class ModifyInstanceAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceAttributeRequest</p>
+     */
     public static class ToConnectVpcIpBlock extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -386,7 +396,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             private String zoneId; 
 
             /**
-             * The CIDR block of the VSwitch.
+             * <p>The CIDR block of the VSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.0.0/16</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -394,7 +407,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * Specifies whether the CIDR block is a custom CIDR block.
+             * <p>Specifies whether the CIDR block is a custom CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder customized(Boolean customized) {
                 this.customized = customized;
@@ -402,7 +418,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-wz94cqvaoe1ipxxxxxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -410,7 +429,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

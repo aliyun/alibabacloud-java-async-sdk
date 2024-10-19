@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatasetListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDatasetListRequest</p>
@@ -109,7 +110,10 @@ public class DescribeDatasetListRequest extends Request {
         } 
 
         /**
-         * The IDs of the datasets.
+         * <p>The IDs of the datasets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4add6a61804e47858266883e********</p>
          */
         public Builder datasetIds(String datasetIds) {
             this.putQueryParameter("DatasetIds", datasetIds);
@@ -118,7 +122,10 @@ public class DescribeDatasetListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -127,7 +134,10 @@ public class DescribeDatasetListRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,7 +155,7 @@ public class DescribeDatasetListRequest extends Request {
         }
 
         /**
-         * 指定规则所适用的对象标签，可设置多个
+         * <p>指定规则所适用的对象标签，可设置多个</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -160,6 +170,12 @@ public class DescribeDatasetListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatasetListRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDatasetListRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -199,7 +215,10 @@ public class DescribeDatasetListRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * <p>标签键</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -207,7 +226,10 @@ public class DescribeDatasetListRequest extends Request {
             }
 
             /**
-             * 标签值
+             * <p>标签值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

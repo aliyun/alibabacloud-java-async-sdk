@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportOASRequest} extends {@link RequestModel}
  *
  * <p>ExportOASRequest</p>
@@ -151,7 +152,7 @@ public class ExportOASRequest extends Request {
         } 
 
         /**
-         * ApiIdList.
+         * <p>The APIs that you want to export.</p>
          */
         public Builder apiIdList(java.util.List < String > apiIdList) {
             String apiIdListShrink = shrink(apiIdList, "ApiIdList", "json");
@@ -161,7 +162,14 @@ public class ExportOASRequest extends Request {
         }
 
         /**
-         * DataFormat.
+         * <p>The exported format:</p>
+         * <ul>
+         * <li>json</li>
+         * <li>yaml</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yaml</p>
          */
         public Builder dataFormat(String dataFormat) {
             this.putQueryParameter("DataFormat", dataFormat);
@@ -170,7 +178,10 @@ public class ExportOASRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The API group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42925e7f5209438186d5560239af5xxx</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -179,7 +190,14 @@ public class ExportOASRequest extends Request {
         }
 
         /**
-         * OasVersion.
+         * <p>The OAS version. Valid values:</p>
+         * <ul>
+         * <li><strong>oas2</strong></li>
+         * <li><strong>oas3</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oas2</p>
          */
         public Builder oasVersion(String oasVersion) {
             this.putQueryParameter("OasVersion", oasVersion);
@@ -188,7 +206,10 @@ public class ExportOASRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of pages in which you want to export the APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -206,7 +227,15 @@ public class ExportOASRequest extends Request {
         }
 
         /**
-         * StageName.
+         * <p>The environment to which the API is published. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong>: the production environment</li>
+         * <li><strong>PRE</strong>: the pre-release environment</li>
+         * <li><strong>TEST</strong>: the test environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -215,7 +244,10 @@ public class ExportOASRequest extends Request {
         }
 
         /**
-         * WithXExtensions.
+         * <p>Specifies whether to export API Gateway extensions at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withXExtensions(Boolean withXExtensions) {
             this.putQueryParameter("WithXExtensions", withXExtensions);

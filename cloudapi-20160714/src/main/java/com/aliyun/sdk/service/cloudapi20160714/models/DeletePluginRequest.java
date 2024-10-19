@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePluginRequest} extends {@link RequestModel}
  *
  * <p>DeletePluginRequest</p>
@@ -82,7 +83,11 @@ public class DeletePluginRequest extends Request {
         } 
 
         /**
-         * The ID of the plug-in to be deleted.
+         * <p>The ID of the plug-in to be deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9a3f1a5279434f2ba74ccd91c295af9f</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -100,7 +105,7 @@ public class DeletePluginRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -115,6 +120,12 @@ public class DeletePluginRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeletePluginRequest} extends {@link TeaModel}
+     *
+     * <p>DeletePluginRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -156,10 +167,12 @@ public class DeletePluginRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
+             * <p>This parameter is required.</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,10 +180,12 @@ public class DeletePluginRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
+             * <p>This parameter is required.</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

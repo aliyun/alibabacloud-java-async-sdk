@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppsByApiProductRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppsByApiProductRequest</p>
@@ -110,7 +111,11 @@ public class DescribeAppsByApiProductRequest extends Request {
         } 
 
         /**
-         * The ID of the API product.
+         * <p>The ID of the API product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
          */
         public Builder apiProductId(String apiProductId) {
             this.putQueryParameter("ApiProductId", apiProductId);
@@ -119,7 +124,10 @@ public class DescribeAppsByApiProductRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -128,7 +136,10 @@ public class DescribeAppsByApiProductRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +148,10 @@ public class DescribeAppsByApiProductRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

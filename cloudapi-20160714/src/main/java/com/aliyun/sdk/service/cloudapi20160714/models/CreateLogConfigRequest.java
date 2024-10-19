@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLogConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateLogConfigRequest</p>
@@ -138,7 +139,11 @@ public class CreateLogConfigRequest extends Request {
         }
 
         /**
-         * slslogstore
+         * <p>slslogstore</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-gateway</p>
          */
         public Builder slsLogStore(String slsLogStore) {
             this.putQueryParameter("SlsLogStore", slsLogStore);
@@ -147,7 +152,10 @@ public class CreateLogConfigRequest extends Request {
         }
 
         /**
-         * SlsProject.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rec-lq-sls</p>
          */
         public Builder slsProject(String slsProject) {
             this.putQueryParameter("SlsProject", slsProject);

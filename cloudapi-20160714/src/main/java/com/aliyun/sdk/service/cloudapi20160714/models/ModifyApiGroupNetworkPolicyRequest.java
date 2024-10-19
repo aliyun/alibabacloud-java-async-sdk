@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApiGroupNetworkPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyApiGroupNetworkPolicyRequest</p>
@@ -152,7 +153,11 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b0162c75d7d34ff48506f1aff878b05e</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -161,7 +166,10 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * The HTTPS security policy.
+         * <p>The HTTPS security policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS1_1_TLS1_0</p>
          */
         public Builder httpsPolicy(String httpsPolicy) {
             this.putQueryParameter("HttpsPolicy", httpsPolicy);
@@ -170,7 +178,10 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable the public second-level domain name.
+         * <p>Specifies whether to disable the public second-level domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder innerDomainEnable(Boolean innerDomainEnable) {
             this.putQueryParameter("InnerDomainEnable", innerDomainEnable);
@@ -179,7 +190,10 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the virtual private cloud (VPC) second-level domain name.
+         * <p>Specifies whether to enable the virtual private cloud (VPC) second-level domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder internetEnable(Boolean internetEnable) {
             this.putQueryParameter("InternetEnable", internetEnable);
@@ -188,7 +202,10 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable IPv6. Valid values: **true** and **false**.
+         * <p>Specifies whether to enable IPv6. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder internetIPV6Enable(Boolean internetIPV6Enable) {
             this.putQueryParameter("InternetIPV6Enable", internetIPV6Enable);
@@ -206,11 +223,14 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the VPC domain name. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the VPC domain name. Valid values:</p>
+         * <ul>
+         * <li>TRUE</li>
+         * <li>FALSE</li>
+         * </ul>
          * 
-         * *   TRUE
-         * *   FALSE
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder vpcIntranetEnable(Boolean vpcIntranetEnable) {
             this.putQueryParameter("VpcIntranetEnable", vpcIntranetEnable);
@@ -219,7 +239,10 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the self-calling domain name.
+         * <p>Specifies whether to enable the self-calling domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder vpcSlbIntranetEnable(Boolean vpcSlbIntranetEnable) {
             this.putQueryParameter("VpcSlbIntranetEnable", vpcSlbIntranetEnable);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTrafficControlRequest} extends {@link RequestModel}
  *
  * <p>DeleteTrafficControlRequest</p>
@@ -77,7 +78,11 @@ public class DeleteTrafficControlRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy.
+         * <p>The ID of the throttling policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf123456</p>
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppRequest</p>
@@ -124,7 +125,11 @@ public class ModifyAppRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20112314518278</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -133,10 +138,11 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
-         * <p>
+         * <p>The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
+         * <p>If you do not want to modify the existing value, do not specify this parameter.</p>
          * 
-         * If you do not want to modify the existing value, do not specify this parameter.
+         * <strong>example:</strong>
+         * <p>jiedian_pord</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -145,10 +151,11 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * The description of the application. The description can be up to 180 characters in length.
-         * <p>
+         * <p>The description of the application. The description can be up to 180 characters in length.</p>
+         * <p>If you do not want to modify the existing value, do not specify this parameter.</p>
          * 
-         * If you do not want to modify the existing value, do not specify this parameter.
+         * <strong>example:</strong>
+         * <p>modidyTest</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -175,7 +182,10 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -190,6 +200,12 @@ public class ModifyAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAppRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -230,10 +246,12 @@ public class ModifyAppRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>Valid values of n: <code>[1, 20]</code>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of n: `[1, 20]`.
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -241,10 +259,11 @@ public class ModifyAppRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>Valid values of n: <code>[1, 20]</code>.</p>
              * 
-             * Valid values of n: `[1, 20]`.
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

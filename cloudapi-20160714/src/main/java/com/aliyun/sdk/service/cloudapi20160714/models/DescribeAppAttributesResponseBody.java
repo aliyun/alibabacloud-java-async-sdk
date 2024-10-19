@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppAttributesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned app information. It is an array that consists of AppAttribute data.
+         * <p>The returned app information. It is an array that consists of AppAttribute data.</p>
          */
         public Builder apps(Apps apps) {
             this.apps = apps;
@@ -93,7 +94,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8883AC74-259D-4C0B-99FC-0B7F9A588B2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAttributesResponseBody</p>
+     */
     public static class TagInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appid</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +216,12 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAttributesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfo")
         private java.util.List < TagInfo> tagInfo;
@@ -232,6 +263,12 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAttributesResponseBody</p>
+     */
     public static class AppAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
@@ -331,7 +368,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The ID of the app.
+             * <p>The ID of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20112314518278</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -339,7 +379,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the app.
+             * <p>The name of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateApptest</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -347,7 +390,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time (UTC) of the app.
+             * <p>The creation time (UTC) of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-31T04:10:19Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -355,7 +401,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the app.
+             * <p>The description of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>App test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -363,7 +412,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * 扩展信息
+             * <p>扩展信息</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110461946884</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -371,7 +423,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time (UTC) of the app.
+             * <p>The modification time (UTC) of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-31T04:10:19Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -379,7 +434,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -393,6 +448,12 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAttributesResponseBody</p>
+     */
     public static class Apps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppAttribute")
         private java.util.List < AppAttribute> appAttribute;

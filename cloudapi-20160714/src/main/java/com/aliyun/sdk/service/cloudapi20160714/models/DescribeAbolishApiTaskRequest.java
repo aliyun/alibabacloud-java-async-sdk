@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAbolishApiTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeAbolishApiTaskRequest</p>
@@ -68,7 +69,11 @@ public class DescribeAbolishApiTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the unpublishing operation.
+         * <p>The ID of the unpublishing operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc54<em><em><strong>dd4c4</strong></em>ad7edd7</em>***39401</p>
          */
         public Builder operationUid(String operationUid) {
             this.putQueryParameter("OperationUid", operationUid);

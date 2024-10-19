@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessControlListAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccessControlListAttributeRequest</p>
@@ -67,7 +68,10 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * <p>The ID of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-3nsohdozz0ru8fi5onwz1</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

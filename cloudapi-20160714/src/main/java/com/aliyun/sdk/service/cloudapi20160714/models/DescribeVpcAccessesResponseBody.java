@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcAccessesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcAccessesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         private VpcAccessAttributes vpcAccessAttributes; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8883AC74-259D-4C0B-99FC-0B7F9A588B2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the VPC access authorization. The information is an array consisting of VpcAccessAttribute data.
+         * <p>The information about the VPC access authorization. The information is an array consisting of VpcAccessAttribute data.</p>
          */
         public Builder vpcAccessAttributes(VpcAccessAttributes vpcAccessAttributes) {
             this.vpcAccessAttributes = vpcAccessAttributes;
@@ -130,6 +143,12 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcAccessesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAccessesResponseBody</p>
+     */
     public static class TagInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROJECT</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6427a17ae6041d1be62414e4</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +216,12 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAccessesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAccessesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfo")
         private java.util.List < TagInfo> tagInfo;
@@ -232,6 +263,12 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAccessesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAccessesResponseBody</p>
+     */
     public static class VpcAccessAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -367,7 +404,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String vpcTargetHostName; 
 
             /**
-             * The time when the authorization was created.
+             * <p>The time when the authorization was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-30T04:10:19Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -375,7 +415,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the VPC access authorization.
+             * <p>The description of the VPC access authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -383,7 +426,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of an Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.
+             * <p>The ID of an Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6bzcg1pr4oh5jjmxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -391,7 +437,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the authorization.
+             * <p>The name of the authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -399,7 +448,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that corresponds to the instance.
+             * <p>The port number that corresponds to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -407,7 +459,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -415,7 +470,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -423,7 +478,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC access authorization.
+             * <p>The ID of the VPC access authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-*****ssds24</p>
              */
             public Builder vpcAccessId(String vpcAccessId) {
                 this.vpcAccessId = vpcAccessId;
@@ -431,7 +489,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf657qec7lx42paw3qxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -439,7 +500,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The host of the backend service.
+             * <p>The host of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hos-a***.fh-**nc.com</p>
              */
             public Builder vpcTargetHostName(String vpcTargetHostName) {
                 this.vpcTargetHostName = vpcTargetHostName;
@@ -453,6 +517,12 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAccessesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAccessesResponseBody</p>
+     */
     public static class VpcAccessAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcAccessAttribute")
         private java.util.List < VpcAccessAttribute> vpcAccessAttribute;

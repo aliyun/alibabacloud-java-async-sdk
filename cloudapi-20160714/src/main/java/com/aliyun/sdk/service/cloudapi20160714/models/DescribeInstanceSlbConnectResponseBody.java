@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSlbConnectResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSlbConnectResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of concurrent connections in the instance.
+         * <p>The list of concurrent connections in the instance.</p>
          */
         public Builder instanceSlbConnect(InstanceSlbConnect instanceSlbConnect) {
             this.instanceSlbConnect = instanceSlbConnect;
@@ -57,7 +58,10 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7FE7172-AA75-5880-B6F7-C00893E9BC06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSlbConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSlbConnectResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
@@ -121,12 +131,15 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The metric. Valid values:
-             * <p>
+             * <p>The metric. Valid values:</p>
+             * <ul>
+             * <li>InstanceMaxConnection: the maximum number of connections</li>
+             * <li>InstanceInactiveConnection: the number of inactive connections</li>
+             * <li>InstanceActiveConnection: the number of active connections</li>
+             * </ul>
              * 
-             * *   InstanceMaxConnection: the maximum number of connections
-             * *   InstanceInactiveConnection: the number of inactive connections
-             * *   InstanceActiveConnection: the number of active connections
+             * <strong>example:</strong>
+             * <p>InstanceActiveConnection</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -134,7 +147,10 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-15T15:07:06Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -142,7 +158,10 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The number of concurrent connections in the instance.
+             * <p>The number of concurrent connections in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -156,6 +175,12 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceSlbConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSlbConnectResponseBody</p>
+     */
     public static class InstanceSlbConnect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;

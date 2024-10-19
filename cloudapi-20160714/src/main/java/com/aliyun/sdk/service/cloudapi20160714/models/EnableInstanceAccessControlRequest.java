@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableInstanceAccessControlRequest} extends {@link RequestModel}
  *
  * <p>EnableInstanceAccessControlRequest</p>
@@ -112,7 +113,10 @@ public class EnableInstanceAccessControlRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp11escro2et2tioscy52</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -121,7 +125,10 @@ public class EnableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * AclType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>black</p>
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -139,7 +146,10 @@ public class EnableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cn-v6419k43xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetAppCodeRequest} extends {@link RequestModel}
  *
  * <p>ResetAppCodeRequest</p>
@@ -82,7 +83,11 @@ public class ResetAppCodeRequest extends Request {
         } 
 
         /**
-         * The AppCode of the app.
+         * <p>The AppCode of the app.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3aaf905a0a1f4f0eabc6d891dfa08afc</p>
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -91,7 +96,10 @@ public class ResetAppCodeRequest extends Request {
         }
 
         /**
-         * The new AppCode of the app.
+         * <p>The new AppCode of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6f0e7ab2aa5f4b8fb18421e6edf4fb6c2</p>
          */
         public Builder newAppCode(String newAppCode) {
             this.putQueryParameter("NewAppCode", newAppCode);

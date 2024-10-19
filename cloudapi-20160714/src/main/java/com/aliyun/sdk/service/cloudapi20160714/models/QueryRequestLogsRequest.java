@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRequestLogsRequest} extends {@link RequestModel}
  *
  * <p>QueryRequestLogsRequest</p>
@@ -68,7 +69,11 @@ public class QueryRequestLogsRequest extends Request {
         } 
 
         /**
-         * The ID of the request log.
+         * <p>The ID of the request log.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95657ED9-2F6F-426F-BD99-79C8********</p>
          */
         public Builder requestLogId(String requestLogId) {
             this.putQueryParameter("RequestLogId", requestLogId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackendResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBackendResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateBackendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the backend service.
+         * <p>The ID of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d105f80a8f340408bd34954d4e4ff22</p>
          */
         public Builder backendId(String backendId) {
             this.backendId = backendId;
@@ -57,7 +61,10 @@ public class CreateBackendResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66D84355-164D-53ED-81FF-03DCF181DE24</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

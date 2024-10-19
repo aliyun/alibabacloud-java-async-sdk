@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppSecuritiesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppSecuritiesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The associated security policy information.
+         * <p>The associated security policy information.</p>
          */
         public Builder appSecuritys(AppSecuritys appSecuritys) {
             this.appSecuritys = appSecuritys;
@@ -57,7 +58,10 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppSecuritiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppSecuritiesResponseBody</p>
+     */
     public static class AppSecurity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
@@ -145,7 +155,10 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             private String modifiedTime; 
 
             /**
-             * The application AppCode.
+             * <p>The application AppCode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d2350ecd62c44cbfbe35a7f182e35105</p>
              */
             public Builder appCode(String appCode) {
                 this.appCode = appCode;
@@ -153,7 +166,10 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The application AppKey.
+             * <p>The application AppKey.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34379343</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -161,7 +177,10 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The application AppSecret.
+             * <p>The application AppSecret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ea5291a7aff343769eb3139a2f6de8c9</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
@@ -169,7 +188,10 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the AppKey was created.
+             * <p>The time when the AppKey was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-14T18:50:59</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -177,7 +199,10 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the AppSecret was last modified. The time is displayed in UTC.
+             * <p>The time when the AppSecret was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-14T18:03:00+08:00</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -191,6 +216,12 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppSecuritiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppSecuritiesResponseBody</p>
+     */
     public static class AppSecuritys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppSecurity")
         private java.util.List < AppSecurity> appSecurity;

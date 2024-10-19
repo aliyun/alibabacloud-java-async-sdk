@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiDocRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiDocRequest</p>
@@ -96,7 +97,11 @@ public class DescribeApiDocRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b81fd160f5645e097cc8855d75a1cf6</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -105,7 +110,10 @@ public class DescribeApiDocRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -123,13 +131,15 @@ public class DescribeApiDocRequest extends Request {
         }
 
         /**
-         * The environment name. Valid values:
-         * <p>
+         * <p>The environment name. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * <p>If this parameter is not specified, the default value RELEASE is used.</p>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
-         * 
-         * If this parameter is not specified, the default value RELEASE is used.
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

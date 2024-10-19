@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceDropPacketResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceDropPacketResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of dropped packets in the instance.
+         * <p>The list of dropped packets in the instance.</p>
          */
         public Builder instanceDropPacket(InstanceDropPacket instanceDropPacket) {
             this.instanceDropPacket = instanceDropPacket;
@@ -57,7 +58,10 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceDropPacketResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceDropPacketResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
@@ -121,11 +131,14 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The metric. Valid values:
-             * <p>
+             * <p>The metric. Valid values:</p>
+             * <ul>
+             * <li>InstanceDropPacketRX: the number of inbound packets dropped in the instance per second.</li>
+             * <li>InstanceDropPacketTX: the number of outbound packets dropped in the instance per second.</li>
+             * </ul>
              * 
-             * *   InstanceDropPacketRX: the number of inbound packets dropped in the instance per second.
-             * *   InstanceDropPacketTX: the number of outbound packets dropped in the instance per second.
+             * <strong>example:</strong>
+             * <p>InstanceDropPacketRX</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -133,7 +146,10 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring time. The time follows the ISO 8601 standard. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The monitoring time. The time follows the ISO 8601 standard. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T04:00:36Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -141,7 +157,10 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
             }
 
             /**
-             * The number of dropped packets in the instance.
+             * <p>The number of dropped packets in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -155,6 +174,12 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceDropPacketResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceDropPacketResponseBody</p>
+     */
     public static class InstanceDropPacket extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;

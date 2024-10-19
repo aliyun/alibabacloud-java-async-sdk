@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMarketRemainsQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMarketRemainsQuotaResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeMarketRemainsQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The remaining quota.
+         * <p>The remaining quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder remainsQuota(Long remainsQuota) {
             this.remainsQuota = remainsQuota;
@@ -57,7 +61,10 @@ public class DescribeMarketRemainsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7FE7172-AA75-5880-B6F7-C00893E9BC06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySignatureRequest} extends {@link RequestModel}
  *
  * <p>ModifySignatureRequest</p>
@@ -110,7 +111,10 @@ public class ModifySignatureRequest extends Request {
         } 
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>436fa39b-b3b9-40c5-ae5d-ce3e000e38c5</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -119,7 +123,11 @@ public class ModifySignatureRequest extends Request {
         }
 
         /**
-         * The ID of the signature key that you want to manage.
+         * <p>The ID of the signature key that you want to manage.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);
@@ -128,7 +136,10 @@ public class ModifySignatureRequest extends Request {
         }
 
         /**
-         * The new Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
+         * <p>The new Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwertyuiop</p>
          */
         public Builder signatureKey(String signatureKey) {
             this.putQueryParameter("SignatureKey", signatureKey);
@@ -137,7 +148,10 @@ public class ModifySignatureRequest extends Request {
         }
 
         /**
-         * The new name of the key. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
+         * <p>The new name of the key. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backendsignature</p>
          */
         public Builder signatureName(String signatureName) {
             this.putQueryParameter("SignatureName", signatureName);
@@ -146,7 +160,10 @@ public class ModifySignatureRequest extends Request {
         }
 
         /**
-         * The new Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (\_), at signs (@), number signs (#), exclamation points (!), and asterisks (\*). The value must start with a letter.
+         * <p>The new Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (_), at signs (@), number signs (#), exclamation points (!), and asterisks (*). The value must start with a letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfghjkl</p>
          */
         public Builder signatureSecret(String signatureSecret) {
             this.putQueryParameter("SignatureSecret", signatureSecret);

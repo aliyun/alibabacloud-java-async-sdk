@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMarketRemainsQuotaRequest} extends {@link RequestModel}
  *
  * <p>DescribeMarketRemainsQuotaRequest</p>
@@ -68,7 +69,11 @@ public class DescribeMarketRemainsQuotaRequest extends Request {
         } 
 
         /**
-         * The custom domain name.
+         * <p>The custom domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.demo.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

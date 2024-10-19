@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateVpcConnectivityRequest} extends {@link RequestModel}
  *
  * <p>ValidateVpcConnectivityRequest</p>
@@ -83,7 +84,11 @@ public class ValidateVpcConnectivityRequest extends Request {
         } 
 
         /**
-         * The ID of the API Gateway instance.
+         * <p>The ID of the API Gateway instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-hz-72bc18******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +106,11 @@ public class ValidateVpcConnectivityRequest extends Request {
         }
 
         /**
-         * The ID of the VPC access authorization.
+         * <p>The ID of the VPC access authorization.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f1b3216f9********e2c1297b6741dc</p>
          */
         public Builder vpcAccessId(String vpcAccessId) {
             this.putQueryParameter("VpcAccessId", vpcAccessId);

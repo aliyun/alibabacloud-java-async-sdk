@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcAccessAndUpdateApisRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpcAccessAndUpdateApisRequest</p>
@@ -166,7 +167,10 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         } 
 
         /**
-         * The ID of the new instance.
+         * <p>The ID of the new instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6bzcg1pr4oh5jjmxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -175,14 +179,19 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * The name of the VPC authorization.
-         * <p>
+         * <p>The name of the VPC authorization.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The name of a VPC authorization cannot be changed. You cannot use this parameter to change the name of a VPC authorization.</p>
+         * </li>
+         * <li><p>You must set this parameter to the name of the current VPC authorization.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The name of a VPC authorization cannot be changed. You cannot use this parameter to change the name of a VPC authorization.
-         * 
-         * *   You must set this parameter to the name of the current VPC authorization.
+         * <strong>example:</strong>
+         * <p>VpcName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -191,12 +200,12 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * Specifies whether to update the associated API.
-         * <p>
+         * <p>Specifies whether to update the associated API.</p>
+         * <p>**</p>
+         * <p><strong>Warning:</strong> If you want to update the VPC authorization of a published API, you must set this parameter to true. Otherwise, the update will not be synchronized to the backend service of the API.</p>
          * 
-         * **
-         * 
-         * **Warning:** If you want to update the VPC authorization of a published API, you must set this parameter to true. Otherwise, the update will not be synchronized to the backend service of the API.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needBatchWork(Boolean needBatchWork) {
             this.putQueryParameter("NeedBatchWork", needBatchWork);
@@ -205,7 +214,10 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * The new port number.
+         * <p>The new port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -214,12 +226,15 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * Specifies whether to update the VPC authorization.
-         * <p>
+         * <p>Specifies whether to update the VPC authorization.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>If the ID of the instance in your VPC is changed but the IP address of the instance remains unchanged, you can set this parameter to true to update the VPC authorization.</li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If the ID of the instance in your VPC is changed but the IP address of the instance remains unchanged, you can set this parameter to true to update the VPC authorization.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder refresh(Boolean refresh) {
             this.putQueryParameter("Refresh", refresh);
@@ -237,7 +252,10 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * The token of the request.
+         * <p>The token of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c20d86c4-1eb3-4d0b-afe9-c586df1e2136</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -246,7 +264,10 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * The ID of the new VPC.
+         * <p>The ID of the new VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-m5e7jqfppv5wbvmdw5pg2</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -255,7 +276,10 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * The hostname of the backend service.
+         * <p>The hostname of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.hu***ng.com</p>
          */
         public Builder vpcTargetHostName(String vpcTargetHostName) {
             this.putQueryParameter("VpcTargetHostName", vpcTargetHostName);

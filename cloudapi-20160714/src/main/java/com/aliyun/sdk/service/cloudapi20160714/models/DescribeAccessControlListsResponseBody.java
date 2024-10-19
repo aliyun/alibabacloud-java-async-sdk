@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessControlListsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessControlListsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ACLs.
+         * <p>The ACLs.</p>
          */
         public Builder acls(Acls acls) {
             this.acls = acls;
@@ -93,7 +94,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the current page.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessControlListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessControlListsResponseBody</p>
+     */
     public static class Acl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
@@ -181,7 +200,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             private String addressIPVersion; 
 
             /**
-             * The ID of the access control policy.
+             * <p>The ID of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-3nsohdozz0ru8fi5onwz1</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -189,7 +211,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access control policy.
+             * <p>The name of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testAcl</p>
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -197,10 +222,14 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * 访问控制策略组的IP版本。
-             * <p>
-             * - **IPv4**。
-             * - **IPv6**。
+             * <p>访问控制策略组的IP版本。</p>
+             * <ul>
+             * <li><strong>IPv4</strong>。</li>
+             * <li><strong>IPv6</strong>。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -214,6 +243,12 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessControlListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessControlListsResponseBody</p>
+     */
     public static class Acls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Acl")
         private java.util.List < Acl> acl;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeZonesRequest</p>
@@ -67,12 +68,15 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * The language in which you want to use to return the description of the system policy. Valid values:
-         * <p>
+         * <p>The language in which you want to use to return the description of the system policy. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh-CN: Chinese</li>
+         * <li>ja: Japanese</li>
+         * </ul>
          * 
-         * *   en: English
-         * *   zh-CN: Chinese
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

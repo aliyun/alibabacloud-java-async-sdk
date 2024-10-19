@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePurchasedApisRequest} extends {@link RequestModel}
  *
  * <p>DescribePurchasedApisRequest</p>
@@ -151,7 +152,10 @@ public class DescribePurchasedApisRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b81fd160f5645e097cc8855d75a1cf6</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -160,7 +164,10 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * The name of the API.
+         * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cz88IpQuery</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -169,7 +176,10 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d27ad517be5f4c95ac3631780a8f4d50</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -178,7 +188,10 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -187,7 +200,10 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,12 +221,15 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>PRE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
          * 
-         * *   **RELEASE**
-         * *   **PRE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -219,11 +238,14 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * Specifies whether the API is public. Valid values:
-         * <p>
+         * <p>Specifies whether the API is public. Valid values:</p>
+         * <ul>
+         * <li><strong>PUBLIC</strong>: indicates that the API is public. If you set this parameter to PUBLIC, this API is displayed on the API List page in the console for all users after the API is published to the production environment.</li>
+         * <li><strong>PRIVATE</strong>: indicates that the API is private. If you set this parameter to PRIVATE, this API is not displayed in Alibaba Cloud Marketplace after the API group to which this API belongs is made available.</li>
+         * </ul>
          * 
-         * *   **PUBLIC**: indicates that the API is public. If you set this parameter to PUBLIC, this API is displayed on the API List page in the console for all users after the API is published to the production environment.
-         * *   **PRIVATE**: indicates that the API is private. If you set this parameter to PRIVATE, this API is not displayed in Alibaba Cloud Marketplace after the API group to which this API belongs is made available.
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiLatencyDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiLatencyDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned information about API call latency. It is an array consisting of MonitorItem data.
+         * <p>The returned information about API call latency. It is an array consisting of MonitorItem data.</p>
          */
         public Builder callLatencys(CallLatencys callLatencys) {
             this.callLatencys = callLatencys;
@@ -57,7 +58,10 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiLatencyDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiLatencyDataResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
@@ -109,7 +119,10 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-28T08:20:00Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -117,7 +130,10 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
             }
 
             /**
-             * The value corresponding to the monitoring metric.
+             * <p>The value corresponding to the monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -131,6 +147,12 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiLatencyDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiLatencyDataResponseBody</p>
+     */
     public static class CallLatencys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;

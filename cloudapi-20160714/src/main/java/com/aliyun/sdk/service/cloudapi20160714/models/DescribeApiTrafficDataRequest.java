@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiTrafficDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiTrafficDataRequest</p>
@@ -126,7 +127,11 @@ public class DescribeApiTrafficDataRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d6f679aeb3be4b91b3688e887ca1fe16</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -135,7 +140,11 @@ public class DescribeApiTrafficDataRequest extends Request {
         }
 
         /**
-         * The end time in UTC. Format: YYYY-MM-DDThh:mm:ssZ
+         * <p>The end time in UTC. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-23T09:28:48Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -144,7 +153,10 @@ public class DescribeApiTrafficDataRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63be9002440b4778a61122f14c2b2bbb</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -162,12 +174,15 @@ public class DescribeApiTrafficDataRequest extends Request {
         }
 
         /**
-         * The environment. Valid values:
-         * <p>
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong>: the test environment</li>
+         * <li>PRE: the pre-release environment</li>
+         * </ul>
          * 
-         * *   **RELEASE**
-         * *   **TEST**: the test environment
-         * *   PRE: the pre-release environment
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -176,7 +191,11 @@ public class DescribeApiTrafficDataRequest extends Request {
         }
 
         /**
-         * The start time in UTC. Format: YYYY-MM-DDThh:mm:ssZ
+         * <p>The start time in UTC. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-23T08:28:48Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

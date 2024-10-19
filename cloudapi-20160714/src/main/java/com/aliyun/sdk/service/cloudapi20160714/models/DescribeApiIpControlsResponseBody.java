@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiIpControlsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiIpControlsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the ACLs. The information is an array of ApiIpControlItem data.
+         * <p>The information about the ACLs. The information is an array of ApiIpControlItem data.</p>
          */
         public Builder apiIpControls(ApiIpControls apiIpControls) {
             this.apiIpControls = apiIpControls;
@@ -93,7 +94,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiIpControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiIpControlsResponseBody</p>
+     */
     public static class ApiIpControlItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
@@ -205,7 +224,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             private String ipControlName; 
 
             /**
-             * The ID of the API.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46fbb52840d146f186e38e8e70fc8c90</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -213,7 +235,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testapi</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -221,7 +246,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The time of binding.
+             * <p>The time of binding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-23T08:28:48Z</p>
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -229,7 +257,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ACL.
+             * <p>The ID of the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
              */
             public Builder ipControlId(String ipControlId) {
                 this.ipControlId = ipControlId;
@@ -237,7 +268,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ACL.
+             * <p>The name of the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testControlName</p>
              */
             public Builder ipControlName(String ipControlName) {
                 this.ipControlName = ipControlName;
@@ -251,6 +285,12 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiIpControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiIpControlsResponseBody</p>
+     */
     public static class ApiIpControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiIpControlItem")
         private java.util.List < ApiIpControlItem> apiIpControlItem;

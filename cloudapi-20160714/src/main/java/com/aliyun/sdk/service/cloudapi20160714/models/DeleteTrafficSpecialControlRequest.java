@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTrafficSpecialControlRequest} extends {@link RequestModel}
  *
  * <p>DeleteTrafficSpecialControlRequest</p>
@@ -98,7 +99,10 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         } 
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c51b234-48d3-44e1-9b36-e2ddccc738e3</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -107,7 +111,11 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the app or Alibaba Cloud account. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.343130a8sDi8cO#/secure) page.
+         * <p>The ID of the app or Alibaba Cloud account. You can view your account ID on the <a href="https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.343130a8sDi8cO#/secure">Account Management</a> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3382463</p>
          */
         public Builder specialKey(String specialKey) {
             this.putQueryParameter("SpecialKey", specialKey);
@@ -116,11 +124,15 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The type of the special throttling policy. Valid values:
-         * <p>
+         * <p>The type of the special throttling policy. Valid values:</p>
+         * <ul>
+         * <li><strong>APP</strong></li>
+         * <li><strong>USER</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **APP**
-         * *   **USER**
+         * <strong>example:</strong>
+         * <p>APP</p>
          */
         public Builder specialType(String specialType) {
             this.putQueryParameter("SpecialType", specialType);
@@ -129,7 +141,11 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy.
+         * <p>The ID of the throttling policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf123456</p>
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

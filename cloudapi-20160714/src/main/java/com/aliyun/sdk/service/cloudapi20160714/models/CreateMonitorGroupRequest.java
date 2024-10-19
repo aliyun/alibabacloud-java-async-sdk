@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateMonitorGroupRequest</p>
@@ -97,7 +98,11 @@ public class CreateMonitorGroupRequest extends Request {
         } 
 
         /**
-         * The caller authentication status of the API. Valid values: **ok**: The authentication is successful. **mismatch**: The request is redirected. **servicenotfound**: A request error occurred. **Unknown**: An unknown error occurred.
+         * <p>The caller authentication status of the API. Valid values: <strong>ok</strong>: The authentication is successful. <strong>mismatch</strong>: The request is redirected. <strong>servicenotfound</strong>: A request error occurred. <strong>Unknown</strong>: An unknown error occurred.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder auth(String auth) {
             this.putQueryParameter("Auth", auth);
@@ -106,7 +111,11 @@ public class CreateMonitorGroupRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6735211ab9094c818f32f27bc545b6c8</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -115,7 +124,10 @@ public class CreateMonitorGroupRequest extends Request {
         }
 
         /**
-         * The ID of the monitoring group.
+         * <p>The ID of the monitoring group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>166636221</p>
          */
         public Builder rawMonitorGroupId(Long rawMonitorGroupId) {
             this.putQueryParameter("RawMonitorGroupId", rawMonitorGroupId);

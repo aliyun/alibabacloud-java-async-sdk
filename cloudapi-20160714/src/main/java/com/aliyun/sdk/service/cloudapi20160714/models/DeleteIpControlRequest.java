@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIpControlRequest} extends {@link RequestModel}
  *
  * <p>DeleteIpControlRequest</p>
@@ -68,7 +69,11 @@ public class DeleteIpControlRequest extends Request {
         } 
 
         /**
-         * The ID of the ACL. The ID is unique.
+         * <p>The ID of the ACL. The ID is unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);

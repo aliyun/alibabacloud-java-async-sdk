@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginsRequest} extends {@link RequestModel}
  *
  * <p>DescribePluginsRequest</p>
@@ -138,7 +139,10 @@ public class DescribePluginsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -147,7 +151,10 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -156,7 +163,10 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The ID of the plug-in.
+         * <p>The ID of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a96926e82f994915a8da40a119374537</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -165,7 +175,10 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The name of the plug-in.
+         * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPlugin</p>
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);
@@ -174,7 +187,10 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The business type of the plug-in.
+         * <p>The business type of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cors</p>
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -192,7 +208,10 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the lifecycle rule. You can specify multiple tags.
+         * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -207,6 +226,12 @@ public class DescribePluginsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePluginsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePluginsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -246,10 +271,11 @@ public class DescribePluginsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -257,10 +283,11 @@ public class DescribePluginsRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

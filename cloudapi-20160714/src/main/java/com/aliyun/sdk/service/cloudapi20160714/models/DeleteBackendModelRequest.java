@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackendModelRequest} extends {@link RequestModel}
  *
  * <p>DeleteBackendModelRequest</p>
@@ -96,7 +97,10 @@ public class DeleteBackendModelRequest extends Request {
         } 
 
         /**
-         * The ID of the backend service.
+         * <p>The ID of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20bcdc9453524b78a8beb1f6de21edb7</p>
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -105,7 +109,11 @@ public class DeleteBackendModelRequest extends Request {
         }
 
         /**
-         * The ID of the backend model.
+         * <p>The ID of the backend model.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4be6b110b7aa40b0bf0c83cc00b3bd86</p>
          */
         public Builder backendModelId(String backendModelId) {
             this.putQueryParameter("BackendModelId", backendModelId);
@@ -123,12 +131,15 @@ public class DeleteBackendModelRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>PRE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
          * 
-         * *   **RELEASE**
-         * *   **PRE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

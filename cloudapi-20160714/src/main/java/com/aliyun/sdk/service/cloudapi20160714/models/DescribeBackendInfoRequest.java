@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackendInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackendInfoRequest</p>
@@ -67,7 +68,10 @@ public class DescribeBackendInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the backend service.
+         * <p>The ID of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>739b68751c0b4e899e04d0c92b6d0be7</p>
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);

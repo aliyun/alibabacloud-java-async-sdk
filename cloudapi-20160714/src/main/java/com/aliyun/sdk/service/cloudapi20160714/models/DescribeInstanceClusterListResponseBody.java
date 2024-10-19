@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceClusterListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceClusterListResponseBody</p>
@@ -93,7 +94,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceClusterListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceClusterListResponseBody</p>
+     */
     public static class InstanceCluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -241,7 +260,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The time when the cluster was created. The time is displayed in UTC.
+             * <p>The time when the cluster was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-14T17:46:59+08:00</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -249,7 +271,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster description.
+             * <p>The cluster description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test TrafficControl</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -257,7 +282,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apigateway-cluster-hz-xxxxxxxxxxxx</p>
              */
             public Builder instanceClusterId(String instanceClusterId) {
                 this.instanceClusterId = instanceClusterId;
@@ -265,7 +293,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cluster</p>
              */
             public Builder instanceClusterName(String instanceClusterName) {
                 this.instanceClusterName = instanceClusterName;
@@ -273,7 +304,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster status.
+             * <p>The cluster status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder instanceClusterStatus(String instanceClusterStatus) {
                 this.instanceClusterStatus = instanceClusterStatus;
@@ -281,7 +315,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster type.
+             * <p>The cluster type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder instanceClusterType(String instanceClusterType) {
                 this.instanceClusterType = instanceClusterType;
@@ -289,7 +326,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was last modified. The time is displayed in UTC.
+             * <p>The time when the cluster was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-12T10:11:08+08:00</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -297,7 +337,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the cluster.
+             * <p>The region ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -311,6 +354,12 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceClusterListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceClusterListResponseBody</p>
+     */
     public static class InstanceClusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceCluster")
         private java.util.List < InstanceCluster> instanceCluster;

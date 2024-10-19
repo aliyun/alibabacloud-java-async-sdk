@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApiGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateApiGroupRequest</p>
@@ -142,7 +143,10 @@ public class CreateApiGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Weather</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -184,6 +188,12 @@ public class CreateApiGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApiGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApiGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

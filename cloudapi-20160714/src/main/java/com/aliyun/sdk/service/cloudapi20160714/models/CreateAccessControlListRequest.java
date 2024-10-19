@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessControlListRequest} extends {@link RequestModel}
  *
  * <p>CreateAccessControlListRequest</p>
@@ -82,7 +83,11 @@ public class CreateAccessControlListRequest extends Request {
         } 
 
         /**
-         * The name of the ACL. The name must be 1 to 30 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name must be unique within the region.
+         * <p>The name of the ACL. The name must be 1 to 30 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name must be unique within the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAcl</p>
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -91,11 +96,14 @@ public class CreateAccessControlListRequest extends Request {
         }
 
         /**
-         * The IP protocol version of the ACL. Valid values:
-         * <p>
+         * <p>The IP protocol version of the ACL. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>IPv6</strong></li>
+         * </ul>
          * 
-         * *   **IPv4**
-         * *   **IPv6**
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);

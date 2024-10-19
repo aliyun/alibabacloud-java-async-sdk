@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         private Boolean tagStatus; 
 
         /**
-         * Instance ID
+         * <p>Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-hz-b3c5dadd5***</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -69,7 +73,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Request ID
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEB6EC62-B6C7-5082-A45A-45A204724AC2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the tag exists. Valid values: **true** and **false**.
+         * <p>Indicates whether the tag exists. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder tagStatus(Boolean tagStatus) {
             this.tagStatus = tagStatus;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePluginResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePluginResponseBody</p>
@@ -61,7 +62,10 @@ public class CreatePluginResponseBody extends TeaModel {
         private Boolean tagStatus; 
 
         /**
-         * The ID of the plug-in.
+         * <p>The ID of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f3bde29b43d4d53989248327ff737f2</p>
          */
         public Builder pluginId(String pluginId) {
             this.pluginId = pluginId;
@@ -69,7 +73,10 @@ public class CreatePluginResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreatePluginResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the plug-in is successfully marked.
+         * <p>Indicates whether the plug-in is successfully marked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tagStatus(Boolean tagStatus) {
             this.tagStatus = tagStatus;

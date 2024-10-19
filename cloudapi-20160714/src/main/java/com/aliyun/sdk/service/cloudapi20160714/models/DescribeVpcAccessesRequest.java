@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcAccessesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcAccessesRequest</p>
@@ -179,7 +180,10 @@ public class DescribeVpcAccessesRequest extends Request {
         } 
 
         /**
-         * Whether to conduct precise queries
+         * <p>Whether to conduct precise queries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder accurateQuery(Boolean accurateQuery) {
             this.putQueryParameter("AccurateQuery", accurateQuery);
@@ -188,7 +192,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.199.26.***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -197,7 +204,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The name of the authorization. The name must be unique.
+         * <p>The name of the authorization. The name must be unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wuying-edm-svc</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -206,7 +216,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +228,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +240,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The service port.
+         * <p>The service port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -242,7 +261,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The port number.
+         * <p>The port number.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -251,7 +270,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC authorization.
+         * <p>The ID of the VPC authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*****ssds24</p>
          */
         public Builder vpcAccessId(String vpcAccessId) {
             this.putQueryParameter("VpcAccessId", vpcAccessId);
@@ -260,7 +282,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf657qec7lx42paw3qxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -275,6 +300,12 @@ public class DescribeVpcAccessesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcAccessesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAccessesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -314,7 +345,10 @@ public class DescribeVpcAccessesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appname</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -322,7 +356,10 @@ public class DescribeVpcAccessesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

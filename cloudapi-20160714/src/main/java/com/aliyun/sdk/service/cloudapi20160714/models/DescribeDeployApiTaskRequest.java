@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeployApiTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeployApiTaskRequest</p>
@@ -68,7 +69,11 @@ public class DescribeDeployApiTaskRequest extends Request {
         } 
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51524fb8f12846d694d0a1de9a0cf274</p>
          */
         public Builder operationUid(String operationUid) {
             this.putQueryParameter("OperationUid", operationUid);

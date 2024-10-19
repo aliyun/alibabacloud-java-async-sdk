@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceClusterInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceClusterInfoRequest</p>
@@ -67,7 +68,10 @@ public class DescribeInstanceClusterInfoRequest extends Request {
         } 
 
         /**
-         * The name of the dedicated instance cluster.
+         * <p>The name of the dedicated instance cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvpc</p>
          */
         public Builder instanceClusterName(String instanceClusterName) {
             this.putQueryParameter("InstanceClusterName", instanceClusterName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrafficControlsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTrafficControlsRequest</p>
@@ -152,7 +153,10 @@ public class DescribeTrafficControlsRequest extends Request {
         } 
 
         /**
-         * The specified API ID. This parameter must be specified together with GroupId and StageName.
+         * <p>The specified API ID. This parameter must be specified together with GroupId and StageName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b81fd160f5645e097cc8855d75a1cf6</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -161,7 +165,10 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * The specified group ID. This parameter must be specified together with ApiId and StageName.
+         * <p>The specified group ID. This parameter must be specified together with ApiId and StageName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0009db9c828549768a200320714b8930</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -170,7 +177,10 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -179,7 +189,10 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +201,10 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>436fa39b-b3b9-40c5-ae5d-ce3e000e38c5</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -197,11 +213,14 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * The environment name. This parameter must be specified together with GroupId and ApiId. Valid values:********
-         * <p>
+         * <p>The environment name. This parameter must be specified together with GroupId and ApiId. Valid values:********</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -210,7 +229,10 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy.
+         * <p>The ID of the throttling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf123456</p>
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);
@@ -219,7 +241,10 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * The name of the throttling policy.
+         * <p>The name of the throttling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ThrottlingTest</p>
          */
         public Builder trafficControlName(String trafficControlName) {
             this.putQueryParameter("TrafficControlName", trafficControlName);

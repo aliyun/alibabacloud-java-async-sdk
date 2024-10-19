@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceClusterListRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceClusterListRequest</p>
@@ -109,7 +110,10 @@ public class DescribeInstanceClusterListRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cluster-hz-xxxxxxxxxxxx</p>
          */
         public Builder instanceClusterId(String instanceClusterId) {
             this.putQueryParameter("InstanceClusterId", instanceClusterId);
@@ -118,7 +122,10 @@ public class DescribeInstanceClusterListRequest extends Request {
         }
 
         /**
-         * The cluster name.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-cluster</p>
          */
         public Builder instanceClusterName(String instanceClusterName) {
             this.putQueryParameter("InstanceClusterName", instanceClusterName);
@@ -127,7 +134,10 @@ public class DescribeInstanceClusterListRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -136,7 +146,10 @@ public class DescribeInstanceClusterListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

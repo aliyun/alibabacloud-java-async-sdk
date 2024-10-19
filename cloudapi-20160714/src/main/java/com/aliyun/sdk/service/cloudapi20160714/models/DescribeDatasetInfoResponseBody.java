@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatasetInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatasetInfoResponseBody</p>
@@ -57,7 +58,10 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2C8F75E-EE84-5C64-960F-45C8********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatasetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatasetInfoResponseBody</p>
+     */
     public static class DatasetInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -145,7 +155,10 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             private String modifiedTime; 
 
             /**
-             * The creation time (UTC) of the dataset.
+             * <p>The creation time (UTC) of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-21T12:58:43Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -153,7 +166,10 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dataset.
+             * <p>The ID of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62b91a790a693238********</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -161,7 +177,10 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dataset.
+             * <p>The name of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DatasetName</p>
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -169,12 +188,15 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dataset. Valid values:
-             * <p>
+             * <p>The type of the dataset. Valid values:</p>
+             * <ul>
+             * <li>JWT_BLOCKING: a JSON Web Token (JWT) blacklist</li>
+             * <li>IP_WHITELIST_CIDR : an IP address whitelist</li>
+             * <li>PARAMETER_ACCESS : parameter-based access control</li>
+             * </ul>
              * 
-             * *   JWT_BLOCKING: a JSON Web Token (JWT) blacklist
-             * *   IP_WHITELIST_CIDR : an IP address whitelist
-             * *   PARAMETER_ACCESS : parameter-based access control
+             * <strong>example:</strong>
+             * <p>JWT_BLOCKING</p>
              */
             public Builder datasetType(String datasetType) {
                 this.datasetType = datasetType;
@@ -182,7 +204,10 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the dataset.
+             * <p>The last modification time (UTC) of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-21T12:58:43Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;

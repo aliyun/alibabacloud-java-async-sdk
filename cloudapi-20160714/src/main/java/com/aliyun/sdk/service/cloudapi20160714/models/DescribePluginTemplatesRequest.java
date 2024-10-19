@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribePluginTemplatesRequest</p>
@@ -81,12 +82,15 @@ public class DescribePluginTemplatesRequest extends Request {
         } 
 
         /**
-         * The language that is used to return the description of the system policy. Valid values:
-         * <p>
+         * <p>The language that is used to return the description of the system policy. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh-CN: Chinese.</li>
+         * <li>ja: Japanese</li>
+         * </ul>
          * 
-         * *   en: English
-         * *   zh-CN: Chinese.
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -95,7 +99,10 @@ public class DescribePluginTemplatesRequest extends Request {
         }
 
         /**
-         * The name of the plug-in.
+         * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jwtAuth</p>
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);

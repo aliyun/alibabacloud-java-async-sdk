@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginsByApiRequest} extends {@link RequestModel}
  *
  * <p>DescribePluginsByApiRequest</p>
@@ -127,7 +128,11 @@ public class DescribePluginsByApiRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93f4ead4080c4b2da70b7f81f50ae459</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -136,7 +141,11 @@ public class DescribePluginsByApiRequest extends Request {
         }
 
         /**
-         * The ID of the group to which the API belongs.
+         * <p>The ID of the group to which the API belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3c7a38392e764718ad7673e7b7f535d4</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -145,7 +154,10 @@ public class DescribePluginsByApiRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +166,10 @@ public class DescribePluginsByApiRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -172,12 +187,16 @@ public class DescribePluginsByApiRequest extends Request {
         }
 
         /**
-         * The environment in which the API is running. Valid values:
-         * <p>
+         * <p>The environment in which the API is running. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong>: production</li>
+         * <li><strong>PRE</strong>: staging</li>
+         * <li><strong>TEST</strong>: test</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**: production
-         * *   **PRE**: staging
-         * *   **TEST**: test
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

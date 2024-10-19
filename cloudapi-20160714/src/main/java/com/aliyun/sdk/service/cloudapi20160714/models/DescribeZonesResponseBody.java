@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9324B68F-9863-5722-A0FD-0798E2B02A0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The zones available in the current region.
+         * <p>The zones available in the current region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Zone&quot;: [{&quot;ZoneId&quot;: &quot;cn-hangzhou-i&quot;}]}</p>
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -70,6 +77,12 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -109,7 +122,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The name of the zone.
+             * <p>The name of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou) Multi-zone 2(j,g)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -117,7 +133,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-MAZ2(j,g)</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -131,6 +150,12 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < Zone> zone;

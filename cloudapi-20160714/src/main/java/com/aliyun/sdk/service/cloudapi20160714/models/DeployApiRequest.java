@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeployApiRequest} extends {@link RequestModel}
  *
  * <p>DeployApiRequest</p>
@@ -112,7 +113,11 @@ public class DeployApiRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d6f679aeb3be4b91b3688e887ca1fe16</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -121,7 +126,11 @@ public class DeployApiRequest extends Request {
         }
 
         /**
-         * The publishing remarks.
+         * <p>The publishing remarks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for_test1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -130,7 +139,10 @@ public class DeployApiRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63be9002440b4778a61122f14c2b2bbb</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -148,12 +160,16 @@ public class DeployApiRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>PRE</strong>: the pre-release environment</li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**
-         * *   **PRE**: the pre-release environment
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

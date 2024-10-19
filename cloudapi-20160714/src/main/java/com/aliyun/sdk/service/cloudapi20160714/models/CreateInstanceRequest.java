@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
@@ -239,13 +240,15 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * Whether to automatically pay when renewing. Value:
-         * <p>
+         * <p>Whether to automatically pay when renewing. Value:</p>
+         * <ul>
+         * <li>True: Automatic payment. Please ensure that your account has sufficient balance.</li>
+         * <li>False: Console manual payment. The specific operation is to log in to the console, select Expenses in the upper right corner, enter the Expense Center, and find the target order in Order Management to make payment.</li>
+         * </ul>
+         * <p>Default value: False.</p>
          * 
-         * - True: Automatic payment. Please ensure that your account has sufficient balance.
-         * - False: Console manual payment. The specific operation is to log in to the console, select Expenses in the upper right corner, enter the Expense Center, and find the target order in Order Management to make payment.
-         * 
-         * Default value: False.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -254,7 +257,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values: PostPaid (pay-as-you-go) and PrePaid (subscription).
+         * <p>The billing method of the instance. Valid values: PostPaid (pay-as-you-go) and PrePaid (subscription).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid
+         * PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -263,13 +271,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance.
-         * <p>
+         * <p>The subscription duration of the instance.</p>
+         * <ul>
+         * <li>If PricingCycle is set to <strong>Month</strong>, set this parameter to an integer ranges from <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>If PricingCycle is set to <strong>Year</strong>, set this parameter to an integer ranges from <strong>1</strong> to <strong>3</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid and required only if the ChargeType parameter is set to <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   If PricingCycle is set to **Month**, set this parameter to an integer ranges from **1** to **9**.
-         * *   If PricingCycle is set to **Year**, set this parameter to an integer ranges from **1** to **3**.
-         * 
-         * >  This parameter is valid and required only if the ChargeType parameter is set to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -278,7 +290,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The HTTPS policy.
+         * <p>The HTTPS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS2_TLS1_2</p>
          */
         public Builder httpsPolicy(String httpsPolicy) {
             this.putQueryParameter("HttpsPolicy", httpsPolicy);
@@ -287,17 +302,19 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The CIDR block of the VPC integration instance.
-         * <p>
+         * <p>The CIDR block of the VPC integration instance.</p>
+         * <ul>
+         * <li>192.168.0.0/16</li>
+         * <li>172.16.0.0/12</li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Warning</strong> The VPC integration instance is connected to the specified CIDR block. Plan your CIDR block carefully to prevent overlaps with the private IP addresses of cloud services.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and not available for public use.</p>
+         * </blockquote>
          * 
-         * *   192.168.0.0/16
-         * *   172.16.0.0/12
-         * 
-         * **
-         * 
-         * **Warning** The VPC integration instance is connected to the specified CIDR block. Plan your CIDR block carefully to prevent overlaps with the private IP addresses of cloud services.
-         * 
-         * >  This parameter is in invitational preview and not available for public use.
+         * <strong>example:</strong>
+         * <p>172.16.0.0/12</p>
          */
         public Builder instanceCidr(String instanceCidr) {
             this.putQueryParameter("InstanceCidr", instanceCidr);
@@ -306,7 +323,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Instance Name
+         * <p>Instance Name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApigatewayInstance</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -315,7 +336,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Instance specifications
+         * <p>Instance specifications</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.s1.small</p>
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -324,13 +349,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The type of the dedicated instance. Valid values:
-         * <p>
+         * <p>The type of the dedicated instance. Valid values:</p>
+         * <ul>
+         * <li>vpc_connect: a VPC integration instance</li>
+         * <li>normal: a conventional dedicated instance</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and not available for public use.</p>
+         * </blockquote>
          * 
-         * *   vpc_connect: a VPC integration instance
-         * *   normal: a conventional dedicated instance
-         * 
-         * >  This parameter is in invitational preview and not available for public use.
+         * <strong>example:</strong>
+         * <p>vpc_connect</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -339,13 +368,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration of the subscription instance. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration of the subscription instance. Valid values:</p>
+         * <ul>
+         * <li><strong>year</strong></li>
+         * <li><strong>month</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if the ChargeType parameter is set to Prepaid.</p>
+         * </blockquote>
          * 
-         * *   **year**
-         * *   **month**
-         * 
-         * >  This parameter is required if the ChargeType parameter is set to Prepaid.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -354,7 +387,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the instance.
+         * <p>The tags that you want to add to the instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -363,7 +396,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Passwords are used to prevent duplicate requests from being submitted, please do not reuse them.
+         * <p>Passwords are used to prevent duplicate requests from being submitted, please do not reuse them.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c20d86c4-1eb3-4d0b-afe9-c586df1e2136</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -372,10 +409,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the user\"s VPC to be connected by the VPC integration instance.
-         * <p>
+         * <p>The ID of the user&quot;s VPC to be connected by the VPC integration instance.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and not available for public use.</p>
+         * </blockquote>
          * 
-         * >  This parameter is in invitational preview and not available for public use.
+         * <strong>example:</strong>
+         * <p>vpc-m5eo7khlb4h4f8y9egsdg</p>
          */
         public Builder userVpcId(String userVpcId) {
             this.putQueryParameter("UserVpcId", userVpcId);
@@ -384,7 +424,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The zone in which you want to create the instance. This parameter is required for a conventional dedicated instance and optional for a virtual private cloud (VPC) integration instance.
+         * <p>The zone in which you want to create the instance. This parameter is required for a conventional dedicated instance and optional for a virtual private cloud (VPC) integration instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-MAZ3(c,e)</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -393,10 +436,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The network information when the instance is a VPC integration instance, such as the zone, vSwitch, and security group.
-         * <p>
-         * 
-         * >  This parameter is in invitational preview and not available for public use.
+         * <p>The network information when the instance is a VPC integration instance, such as the zone, vSwitch, and security group.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and not available for public use.</p>
+         * </blockquote>
          */
         public Builder zoneVSwitchSecurityGroup(java.util.List < ZoneVSwitchSecurityGroup> zoneVSwitchSecurityGroup) {
             this.putQueryParameter("ZoneVSwitchSecurityGroup", zoneVSwitchSecurityGroup);
@@ -411,6 +454,12 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -450,7 +499,10 @@ public class CreateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -458,7 +510,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -472,6 +527,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class ZoneVSwitchSecurityGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -535,7 +596,10 @@ public class CreateInstanceRequest extends Request {
             private String zoneId; 
 
             /**
-             * The IPv4 CIDR block for the vSwitch.
+             * <p>The IPv4 CIDR block for the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.9.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -543,7 +607,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The ID of the security group. Services in the same security group can access each other.
+             * <p>The ID of the security group. Services in the same security group can access each other.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze2ql9nozv8q7kmlt6e</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -551,7 +618,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-0xi349n11cxogmvm866tb</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -559,7 +629,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

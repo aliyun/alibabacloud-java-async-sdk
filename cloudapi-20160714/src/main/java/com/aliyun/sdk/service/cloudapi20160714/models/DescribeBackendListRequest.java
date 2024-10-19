@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackendListRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackendListRequest</p>
@@ -123,7 +124,10 @@ public class DescribeBackendListRequest extends Request {
         } 
 
         /**
-         * The name of the backend service. You can use \* to perform fuzzy queries.
+         * <p>The name of the backend service. You can use * to perform fuzzy queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -132,7 +136,10 @@ public class DescribeBackendListRequest extends Request {
         }
 
         /**
-         * The type of the backend service.
+         * <p>The type of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
@@ -141,7 +148,10 @@ public class DescribeBackendListRequest extends Request {
         }
 
         /**
-         * The number of the current page.
+         * <p>The number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -150,7 +160,10 @@ public class DescribeBackendListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,7 +181,7 @@ public class DescribeBackendListRequest extends Request {
         }
 
         /**
-         * The list of the tag.
+         * <p>The list of the tag.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -183,6 +196,12 @@ public class DescribeBackendListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackendListRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendListRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -222,7 +241,10 @@ public class DescribeBackendListRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -230,7 +252,10 @@ public class DescribeBackendListRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

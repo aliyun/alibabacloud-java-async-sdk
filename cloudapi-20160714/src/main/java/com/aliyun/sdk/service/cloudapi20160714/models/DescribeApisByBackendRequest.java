@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByBackendRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisByBackendRequest</p>
@@ -110,7 +111,11 @@ public class DescribeApisByBackendRequest extends Request {
         } 
 
         /**
-         * The ID of the backend service.
+         * <p>The ID of the backend service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ac69b7a17524781b275ed4c5eb25c54</p>
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -119,7 +124,10 @@ public class DescribeApisByBackendRequest extends Request {
         }
 
         /**
-         * The number of the current page.
+         * <p>The number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -128,7 +136,10 @@ public class DescribeApisByBackendRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,14 +157,16 @@ public class DescribeApisByBackendRequest extends Request {
         }
 
         /**
-         * The environment to which the API is published. Valid values:
-         * <p>
+         * <p>The environment to which the API is published. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>PRE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * <p>If you do not specify this parameter, APIs in the draft state are returned.</p>
          * 
-         * *   **RELEASE**
-         * *   **PRE**
-         * *   **TEST**
-         * 
-         * If you do not specify this parameter, APIs in the draft state are returned.
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

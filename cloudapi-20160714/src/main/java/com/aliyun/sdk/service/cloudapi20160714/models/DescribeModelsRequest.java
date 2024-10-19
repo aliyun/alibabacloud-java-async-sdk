@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeModelsRequest} extends {@link RequestModel}
  *
  * <p>DescribeModelsRequest</p>
@@ -124,7 +125,11 @@ public class DescribeModelsRequest extends Request {
         } 
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30e792398d6c4569b04c0e53a3494381</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -133,7 +138,10 @@ public class DescribeModelsRequest extends Request {
         }
 
         /**
-         * The ID of the model.
+         * <p>The ID of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder modelId(String modelId) {
             this.putQueryParameter("ModelId", modelId);
@@ -142,7 +150,10 @@ public class DescribeModelsRequest extends Request {
         }
 
         /**
-         * The name of the model.
+         * <p>The name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -151,7 +162,10 @@ public class DescribeModelsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,7 +174,10 @@ public class DescribeModelsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +186,7 @@ public class DescribeModelsRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -184,6 +201,12 @@ public class DescribeModelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeModelsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeModelsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -223,7 +246,10 @@ public class DescribeModelsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +257,10 @@ public class DescribeModelsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

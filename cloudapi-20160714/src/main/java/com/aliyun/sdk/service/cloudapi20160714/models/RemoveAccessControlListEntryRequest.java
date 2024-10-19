@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveAccessControlListEntryRequest} extends {@link RequestModel}
  *
  * <p>RemoveAccessControlListEntryRequest</p>
@@ -91,7 +92,10 @@ public class RemoveAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * AclId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp12ag0xxcfhq1ll68wp9</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

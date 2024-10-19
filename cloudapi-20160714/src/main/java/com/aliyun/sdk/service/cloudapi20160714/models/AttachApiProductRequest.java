@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachApiProductRequest} extends {@link RequestModel}
  *
  * <p>AttachApiProductRequest</p>
@@ -83,7 +84,11 @@ public class AttachApiProductRequest extends Request {
         } 
 
         /**
-         * The ID of the API product.
+         * <p>The ID of the API product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
          */
         public Builder apiProductId(String apiProductId) {
             this.putQueryParameter("ApiProductId", apiProductId);
@@ -92,7 +97,8 @@ public class AttachApiProductRequest extends Request {
         }
 
         /**
-         * The APIs to be attached.
+         * <p>The APIs to be attached.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder apis(java.util.List < Apis> apis) {
             this.putQueryParameter("Apis", apis);
@@ -116,6 +122,12 @@ public class AttachApiProductRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AttachApiProductRequest} extends {@link TeaModel}
+     *
+     * <p>AttachApiProductRequest</p>
+     */
     public static class Apis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -157,7 +169,11 @@ public class AttachApiProductRequest extends Request {
             private String stageName; 
 
             /**
-             * The API ID.
+             * <p>The API ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>551877242a4b4f3a84a56b7c3570e4a7</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -165,12 +181,16 @@ public class AttachApiProductRequest extends Request {
             }
 
             /**
-             * The environment. Valid values:
-             * <p>
+             * <p>The environment. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong>: the production environment</li>
+             * <li><strong>PRE</strong>: the staging environment</li>
+             * <li><strong>TEST</strong>: the test environment</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **RELEASE**: the production environment
-             * *   **PRE**: the staging environment
-             * *   **TEST**: the test environment
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

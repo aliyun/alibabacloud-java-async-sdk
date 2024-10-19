@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportOASResponseBody} extends {@link TeaModel}
  *
  * <p>ImportOASResponseBody</p>
@@ -121,7 +122,7 @@ public class ImportOASResponseBody extends TeaModel {
         private WarningMessages warningMessages; 
 
         /**
-         * The error messages that appear due to the invalid data in the imported file.
+         * <p>The error messages that appear due to the invalid data in the imported file.</p>
          */
         public Builder errorMessages(ErrorMessages errorMessages) {
             this.errorMessages = errorMessages;
@@ -129,7 +130,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The APIs that failed to pass the precheck.
+         * <p>The APIs that failed to pass the precheck.</p>
          */
         public Builder failedApis(FailedApis failedApis) {
             this.failedApis = failedApis;
@@ -137,7 +138,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the models that failed to pass the precheck.
+         * <p>The information about the models that failed to pass the precheck.</p>
          */
         public Builder failedModels(FailedModels failedModels) {
             this.failedModels = failedModels;
@@ -145,7 +146,10 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the asynchronous API import task that was generated during the import operation. This ID is used to query the execution status of the API import task.
+         * <p>The ID of the asynchronous API import task that was generated during the import operation. This ID is used to query the execution status of the API import task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c16a1880f5164d779f6a54f64d997cd9</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -153,7 +157,10 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7FE7172-AA75-5880-B6F7-C00893E9BC06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +168,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the APIs that have passed the precheck.
+         * <p>The information about the APIs that have passed the precheck.</p>
          */
         public Builder successApis(SuccessApis successApis) {
             this.successApis = successApis;
@@ -169,7 +176,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the models that have passed the precheck.
+         * <p>The information about the models that have passed the precheck.</p>
          */
         public Builder successModels(SuccessModels successModels) {
             this.successModels = successModels;
@@ -177,7 +184,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The warning messages that appear due to the invalid data in the imported file.
+         * <p>The warning messages that appear due to the invalid data in the imported file.</p>
          */
         public Builder warningMessages(WarningMessages warningMessages) {
             this.warningMessages = warningMessages;
@@ -190,6 +197,12 @@ public class ImportOASResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class ErrorMessages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private java.util.List < String > errorMessage;
@@ -231,6 +244,12 @@ public class ImportOASResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class FailedApi extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
@@ -282,7 +301,10 @@ public class ImportOASResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Invalid Api Definition.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -290,7 +312,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method configured when you created the API.
+             * <p>The HTTP method configured when you created the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -298,7 +323,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The request path configured when you created the API.
+             * <p>The request path configured when you created the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/st1</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -312,6 +340,12 @@ public class ImportOASResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class FailedApis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedApi")
         private java.util.List < FailedApi> failedApi;
@@ -353,6 +387,12 @@ public class ImportOASResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class FailedModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
@@ -404,7 +444,10 @@ public class ImportOASResponseBody extends TeaModel {
             private String modelName; 
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Invalid Model Definition.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -412,7 +455,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2c1bc62e19614cc68c6b0b484bc9c5db</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -420,7 +466,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * <p>The name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -434,6 +483,12 @@ public class ImportOASResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class FailedModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedModel")
         private java.util.List < FailedModel> failedModel;
@@ -475,6 +530,12 @@ public class ImportOASResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class SuccessApi extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
@@ -538,7 +599,10 @@ public class ImportOASResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The ID of the API.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92af1abffc2443eaa2b815fdbd9c13f1</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -546,7 +610,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates that the operation is CREATE or MODIFY.
+             * <p>Indicates that the operation is CREATE or MODIFY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder apiOperation(String apiOperation) {
                 this.apiOperation = apiOperation;
@@ -554,7 +621,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method configured when you created the API.
+             * <p>The HTTP method configured when you created the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -562,7 +632,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The request path configured when you created the API.
+             * <p>The request path configured when you created the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/st1</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -576,6 +649,12 @@ public class ImportOASResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class SuccessApis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuccessApi")
         private java.util.List < SuccessApi> successApi;
@@ -617,6 +696,12 @@ public class ImportOASResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class SuccessModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
@@ -680,7 +765,10 @@ public class ImportOASResponseBody extends TeaModel {
             private String modelUid; 
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feaccf67040643bcbdedb253e59eb527</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -688,7 +776,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * <p>The name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -696,7 +787,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The operation of the model. Valid values: CREATE and MODIFY.
+             * <p>The operation of the model. Valid values: CREATE and MODIFY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder modelOperation(String modelOperation) {
                 this.modelOperation = modelOperation;
@@ -704,7 +798,10 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the model.
+             * <p>The UID of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1r4efwee19614cc68c6b0b484bc9c5dbs</p>
              */
             public Builder modelUid(String modelUid) {
                 this.modelUid = modelUid;
@@ -718,6 +815,12 @@ public class ImportOASResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class SuccessModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuccessModel")
         private java.util.List < SuccessModel> successModel;
@@ -759,6 +862,12 @@ public class ImportOASResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportOASResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportOASResponseBody</p>
+     */
     public static class WarningMessages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WarningMessage")
         private java.util.List < String > warningMessage;

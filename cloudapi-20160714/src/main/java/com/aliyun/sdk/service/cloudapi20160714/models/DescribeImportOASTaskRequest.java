@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImportOASTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeImportOASTaskRequest</p>
@@ -68,7 +69,11 @@ public class DescribeImportOASTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the asynchronous API import task that was generated during the import operation. This ID is used to query the execution status of the API import task.
+         * <p>The ID of the asynchronous API import task that was generated during the import operation. This ID is used to query the execution status of the API import task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4c53ccf1d40c489686d1adf5c2644a7f</p>
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);

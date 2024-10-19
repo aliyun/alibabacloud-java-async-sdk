@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppSecurityRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppSecurityRequest</p>
@@ -82,7 +83,11 @@ public class DescribeAppSecurityRequest extends Request {
         } 
 
         /**
-         * The ID of the app.
+         * <p>The ID of the app.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20112314518278</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -100,7 +105,10 @@ public class DescribeAppSecurityRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -115,6 +123,12 @@ public class DescribeAppSecurityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppSecurityRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAppSecurityRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -155,7 +169,11 @@ public class DescribeAppSecurityRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -163,7 +181,10 @@ public class DescribeAppSecurityRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

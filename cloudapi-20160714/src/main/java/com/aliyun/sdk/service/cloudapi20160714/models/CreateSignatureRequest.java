@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSignatureRequest} extends {@link RequestModel}
  *
  * <p>CreateSignatureRequest</p>
@@ -98,7 +99,10 @@ public class CreateSignatureRequest extends Request {
         } 
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fa876ffb-caab-4f0a-93b3-3409f2fa5199</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -107,7 +111,11 @@ public class CreateSignatureRequest extends Request {
         }
 
         /**
-         * The Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
+         * <p>The Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwertyuiop</p>
          */
         public Builder signatureKey(String signatureKey) {
             this.putQueryParameter("SignatureKey", signatureKey);
@@ -116,7 +124,11 @@ public class CreateSignatureRequest extends Request {
         }
 
         /**
-         * The displayed name of the key. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
+         * <p>The displayed name of the key. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backendsignature</p>
          */
         public Builder signatureName(String signatureName) {
             this.putQueryParameter("SignatureName", signatureName);
@@ -125,7 +137,11 @@ public class CreateSignatureRequest extends Request {
         }
 
         /**
-         * The Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (\_), at signs (@), number signs (#), exclamation points (!), and asterisks (\*). The value must start with a letter.
+         * <p>The Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (_), at signs (@), number signs (#), exclamation points (!), and asterisks (*). The value must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfghjkl</p>
          */
         public Builder signatureSecret(String signatureSecret) {
             this.putQueryParameter("SignatureSecret", signatureSecret);
