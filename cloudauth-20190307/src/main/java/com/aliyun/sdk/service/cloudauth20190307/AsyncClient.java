@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeepfakeDetectResponse> deepfakeDetect(DeepfakeDetectRequest request);
 
     /**
+     * @param request the request parameters of DeleteFaceVerifyResult  DeleteFaceVerifyResultRequest
+     * @return DeleteFaceVerifyResultResponse
+     */
+    CompletableFuture<DeleteFaceVerifyResultResponse> deleteFaceVerifyResult(DeleteFaceVerifyResultRequest request);
+
+    /**
      * @param request the request parameters of DescribeDeviceInfo  DescribeDeviceInfoRequest
      * @return DescribeDeviceInfoResponse
      */
