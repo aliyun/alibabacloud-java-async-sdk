@@ -3388,7 +3388,14 @@ public class CreateScalingConfigurationRequest extends Request {
             private String confidentialComputingMode; 
 
             /**
-             * ConfidentialComputingMode.
+             * <p>The confidential computing mode. Valid values:</p>
+             * <ul>
+             * <li>Enclave: An enclave-based confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</li>
+             * <li>TDX: A Trust Domain Extensions (TDX) confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TDX</p>
              */
             public Builder confidentialComputingMode(String confidentialComputingMode) {
                 this.confidentialComputingMode = confidentialComputingMode;

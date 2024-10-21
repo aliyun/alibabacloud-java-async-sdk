@@ -86,7 +86,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceRefreshTasks.
+         * <p>The instance refresh tasks.</p>
          */
         public Builder instanceRefreshTasks(java.util.List < InstanceRefreshTasks> instanceRefreshTasks) {
             this.instanceRefreshTasks = instanceRefreshTasks;
@@ -94,7 +94,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +105,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +116,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instance refresh tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -176,7 +188,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             private String scalingConfigurationId; 
 
             /**
-             * ImageId.
+             * <p>The ID of the image file that provides the image resource for Auto Scaling to create instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-uf6g5noisr****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -184,7 +199,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingConfigurationId.
+             * <p>The ID of the scaling configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asc-wz91ibkhfor****</p>
              */
             public Builder scalingConfigurationId(String scalingConfigurationId) {
                 this.scalingConfigurationId = scalingConfigurationId;
@@ -363,7 +381,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             private Integer totalNeedUpdateCapacity; 
 
             /**
-             * DesiredConfiguration.
+             * <p>The desired configurations of the instance refresh task.</p>
              */
             public Builder desiredConfiguration(DesiredConfiguration desiredConfiguration) {
                 this.desiredConfiguration = desiredConfiguration;
@@ -371,7 +389,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The reason why the instance refresh task failed to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The task exceeded its maximum run time of one week. So the task failed.</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -379,7 +400,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the instance refresh task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-22T02:09:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -387,7 +411,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedUpdateCapacity.
+             * <p>The refreshed number of instances in the scaling group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder finishedUpdateCapacity(Integer finishedUpdateCapacity) {
                 this.finishedUpdateCapacity = finishedUpdateCapacity;
@@ -395,7 +422,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRefreshTaskId.
+             * <p>The ID of the instance refresh task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ir-1adfa123****</p>
              */
             public Builder instanceRefreshTaskId(String instanceRefreshTaskId) {
                 this.instanceRefreshTaskId = instanceRefreshTaskId;
@@ -403,7 +433,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxHealthyPercentage.
+             * <p>The ratio by which the number of instances in the scaling group can exceed the upper limit for the number of instances in the scaling group during instance refresh.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder maxHealthyPercentage(Integer maxHealthyPercentage) {
                 this.maxHealthyPercentage = maxHealthyPercentage;
@@ -411,7 +444,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * MinHealthyPercentage.
+             * <p>The ratio of the number of instances that provide services to the total number of instances in the scaling group during instance refresh.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder minHealthyPercentage(Integer minHealthyPercentage) {
                 this.minHealthyPercentage = minHealthyPercentage;
@@ -419,7 +455,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the scaling group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -427,7 +466,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingGroupId.
+             * <p>The ID of the scaling group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-bp16pbfcr8j9*****</p>
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -435,7 +477,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the instance refresh task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-22T01:09:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -443,7 +488,22 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance refresh task. Valid values:</p>
+             * <ul>
+             * <li>Pending: The instance refresh task is created and is waiting to be scheduled.</li>
+             * <li>InProgress: The instance refresh task is being executed.</li>
+             * <li>Paused: The instance refresh task is suspended.</li>
+             * <li>Failed: The instance refresh task failed to be executed.</li>
+             * <li>Successful: The instance refresh task is successful.</li>
+             * <li>Cancelling: The instance refresh task is being canceled.</li>
+             * <li>Cancelled: The instance refresh task is canceled.</li>
+             * <li>RollbackInProgress: The instance refresh task is being rolled back.</li>
+             * <li>RollbackSuccessful: The instance refresh task is rolled back.</li>
+             * <li>RollbackFailed: The instance refresh task fails to be rolled back.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InProgress</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -451,7 +511,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNeedUpdateCapacity.
+             * <p>The total number of instances whose configurations are refreshed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalNeedUpdateCapacity(Integer totalNeedUpdateCapacity) {
                 this.totalNeedUpdateCapacity = totalNeedUpdateCapacity;

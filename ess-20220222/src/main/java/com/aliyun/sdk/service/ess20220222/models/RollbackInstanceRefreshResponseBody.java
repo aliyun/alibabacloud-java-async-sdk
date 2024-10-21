@@ -38,7 +38,10 @@ public class RollbackInstanceRefreshResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B13527BF-1FBD-4334-A512-20F5E9D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -178,12 +178,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you associate an ApsaraDB RDS instance with a scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</p>
+     * <p>Before you attach an ApsaraDB RDS instance to a scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</p>
      * <ul>
-     * <li>The ApsaraDB RDS instance and the scaling group must belong to the same Alibaba Cloud account.</li>
-     * <li>The ApsaraDB RDS instance must be unlocked. For more information about the lock policy, see <a href="https://help.aliyun.com/document_detail/41872.html">ApsaraDB RDS usage notes</a>.</li>
-     * <li>The ApsaraDB RDS instance must be in the Running state.
-     * After an ApsaraDB RDS instance is associated with the scaling group, the default IP address whitelist of the ApsaraDB RDS instance can contain no more than 1,000 IP addresses. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Set the whitelist</a>.</li>
+     * <li>The ApsaraDB RDS instance and the scaling group belong to the same Alibaba Cloud account.</li>
+     * <li>The ApsaraDB RDS instance is unlocked. For information about the lock policy, see <a href="https://help.aliyun.com/document_detail/41872.html">ApsaraDB RDS usage notes</a>.</li>
+     * <li>The ApsaraDB RDS instance is in the Running state.</li>
+     * <li>The ApsaraDB RDS instance exists in the Alibaba Cloud account.</li>
+     * <li>If you reattach an ApsaraDB RDS instance to a scaling group, the total number of attached ApsaraDB RDS instances of the scaling group remains unchanged. But Auto Scaling adds the private IP addresses of all Elastic Compute Service (ECS) instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance.<blockquote>
+     * <p> After you attach an ApsaraDB RDS instance to a scaling group, make sure that the number of IP addresses in the default whitelist of the ApsaraDB RDS instance is limited to 1,000. For information about IP address whitelists, see <a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist</a>.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of AttachDBInstances  AttachDBInstancesRequest
@@ -266,6 +270,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachVServerGroupsResponse> attachVServerGroups(AttachVServerGroupsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot call this operation to cancel instance refresh tasks that are being rolled back.</p>
+     * 
      * @param request the request parameters of CancelInstanceRefresh  CancelInstanceRefreshRequest
      * @return CancelInstanceRefreshResponse
      */
@@ -565,6 +572,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEciScalingConfigurationsResponse> describeEciScalingConfigurations(DescribeEciScalingConfigurationsRequest request);
 
     /**
+     * @param request the request parameters of DescribeElasticStrength  DescribeElasticStrengthRequest
+     * @return DescribeElasticStrengthResponse
+     */
+    CompletableFuture<DescribeElasticStrengthResponse> describeElasticStrength(DescribeElasticStrengthRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstanceRefreshes  DescribeInstanceRefreshesRequest
      * @return DescribeInstanceRefreshesResponse
      */
@@ -631,9 +644,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can specify a scaling group ID to query all scaling activities in the scaling group.
-     * You can filter query results based on the status of scaling activities.
-     * You can query scaling activities that are executed in the previous 30 days.</p>
+     * <p>  You can query all scaling activities in a scaling group by specifying ScalingGroupId.</p>
+     * <ul>
+     * <li>You can filter query results based on the status of scaling activities.</li>
+     * <li>You can query scaling activities within the last 30 days.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeScalingActivities  DescribeScalingActivitiesRequest
      * @return DescribeScalingActivitiesResponse
@@ -1093,8 +1108,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>Once ECS instances enter the Protected state, they become subject to the following restrictions:</p>
      * <ul>
      * <li>ECS instances will persist in the Protected state, unless you deliberately remove them from this state.</li>
-     * <li>Even in scenarios where automatic scale-in actions are initiated due to fluctuations in the number of ECS instances or the execution of event-triggered tasks, Auto Scaling does not remove ECS instances that are in the Protected state from their respective scaling groups. Only after being manually removed from their respective scaling groups can ECS instances that are in the Protected state be released. For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">Remove an ECS instance</a>.</li>
-     * <li>ECS instances in the Protected state maintain their existing health status even when they undergo stopping or restarting processes.</li>
+     * <li>Even in scenarios where automatic scale-in actions are initiated due to fluctuations in the number of ECS instances or the execution of event-triggered tasks, Auto Scaling does not remove ECS instances that are in the Protected state from their respective scaling groups. Only after being manually removed from their respective scaling groups can ECS instances that are in the Protected state be released. For more information, see <a href="https://help.aliyun.com/document_detail/459393.html">Remove an ECS instance</a>.</li>
+     * <li>ECS instances in the Protected state maintain their health status even when they undergo stopping or restarting processes.</li>
      * </ul>
      * 
      * @param request the request parameters of SetInstancesProtection  SetInstancesProtectionRequest
@@ -1103,12 +1118,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetInstancesProtectionResponse> setInstancesProtection(SetInstancesProtectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Only one instance refresh task can be executed at a time in a scaling group.</p>
+     * <ul>
+     * <li>Instance refresh tasks are currently supported only by scaling groups of the Elastic Compute Service (ECS) type and using <strong>the priority policy</strong>. Scaling groups that use the number of vCPUs as the method to calculate the group capacity or scaling groups whose instance reclaim mode is <strong>Economical Mode</strong> or <strong>Forcibly Recycle</strong> do not support instance refresh tasks.</li>
+     * <li>During the execution of an instance refresh task, scaling events can be complete as expected. Take note that instances that are scaled out use the desired configurations provided by the instance refresh task.</li>
+     * <li>Instance refresh tasks does not take effect on instances that are manually added and instances that are in the Standby and Protected states.</li>
+     * </ul>
+     * 
      * @param request the request parameters of StartInstanceRefresh  StartInstanceRefreshRequest
      * @return StartInstanceRefreshResponse
      */
     CompletableFuture<StartInstanceRefreshResponse> startInstanceRefresh(StartInstanceRefreshRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot call this operation to suspend an instance refresh task that is being rolled back.</p>
+     * 
      * @param request the request parameters of SuspendInstanceRefresh  SuspendInstanceRefreshRequest
      * @return SuspendInstanceRefreshResponse
      */

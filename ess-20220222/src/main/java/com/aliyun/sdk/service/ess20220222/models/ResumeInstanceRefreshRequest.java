@@ -113,6 +113,7 @@ public class ResumeInstanceRefreshRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance refresh task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,6 +135,7 @@ public class ResumeInstanceRefreshRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the scaling group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +157,7 @@ public class ResumeInstanceRefreshRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scaling group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

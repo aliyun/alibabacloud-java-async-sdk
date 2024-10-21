@@ -107,7 +107,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the scaling groups.</p>
+         * <p>The scaling group.</p>
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             this.scalingGroup = scalingGroup;
@@ -1694,8 +1694,9 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The health check mode of the scaling group. Valid values:</p>
              * <ul>
-             * <li>NONE: Auto Scaling does not perform health checks in the scaling group.</li>
-             * <li>ECS: Auto Scaling performs health checks on ECS instances in the scaling group.</li>
+             * <li>NONE: Auto Scaling does not perform health checks.</li>
+             * <li>ECS: Auto Scaling checks the health status of instances in the scaling group. If you want to enable instance health check, you can set the value to ECS, regardless of whether the scaling group is of ECS type or Elastic Container Instance type.</li>
+             * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1707,7 +1708,12 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The health check types.</p>
+             * <p>The health check mode of the scaling group. Valid values:</p>
+             * <ul>
+             * <li>NONE: Auto Scaling does not perform health checks.</li>
+             * <li>ECS: Auto Scaling checks the health status of instances in the scaling group. If you want to enable instance health check, you can set the value to ECS, regardless of whether the scaling group is of ECS type or Elastic Container Instance type.</li>
+             * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.</li>
+             * </ul>
              */
             public Builder healthCheckTypes(java.util.List < String > healthCheckTypes) {
                 this.healthCheckTypes = healthCheckTypes;
