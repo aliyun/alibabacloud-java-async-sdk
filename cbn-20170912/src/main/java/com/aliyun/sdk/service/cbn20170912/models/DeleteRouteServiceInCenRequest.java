@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRouteServiceInCenRequest} extends {@link RequestModel}
  *
  * <p>DeleteRouteServiceInCenRequest</p>
@@ -169,7 +170,11 @@ public class DeleteRouteServiceInCenRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the cloud service is accessed.
+         * <p>The ID of the region where the cloud service is accessed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -178,7 +183,11 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -187,7 +196,11 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * The IP addresses or CIDR blocks of the cloud service.
+         * <p>The IP addresses or CIDR blocks of the cloud service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.118.28.0/24</p>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -196,10 +209,12 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * The region ID of the cloud service.
-         * <p>
+         * <p>The region ID of the cloud service.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder hostRegionId(String hostRegionId) {
             this.putQueryParameter("HostRegionId", hostRegionId);
@@ -208,7 +223,10 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) that is associated with the cloud service.
+         * <p>The ID of the virtual private cloud (VPC) that is associated with the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1t36rn9l53iwbsf****</p>
          */
         public Builder hostVpcId(String hostVpcId) {
             this.putQueryParameter("HostVpcId", hostVpcId);

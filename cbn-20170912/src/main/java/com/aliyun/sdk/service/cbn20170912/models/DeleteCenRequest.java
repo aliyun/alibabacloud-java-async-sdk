@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCenRequest} extends {@link RequestModel}
  *
  * <p>DeleteCenRequest</p>
@@ -110,7 +111,11 @@ public class DeleteCenRequest extends Request {
         } 
 
         /**
-         * The CEN instance ID.
+         * <p>The CEN instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);

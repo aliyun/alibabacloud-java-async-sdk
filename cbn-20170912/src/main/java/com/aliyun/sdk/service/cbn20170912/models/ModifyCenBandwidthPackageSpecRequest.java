@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCenBandwidthPackageSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyCenBandwidthPackageSpecRequest</p>
@@ -124,10 +125,11 @@ public class ModifyCenBandwidthPackageSpecRequest extends Request {
         } 
 
         /**
-         * The new maximum bandwidth value of the bandwidth plan. Unit: Mbit/s.
-         * <p>
+         * <p>The new maximum bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10000</strong>.</p>
          * 
-         * Valid values: **2** to **10000**.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -136,7 +138,11 @@ public class ModifyCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * The ID of the bandwidth plan.
+         * <p>The ID of the bandwidth plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenbwp-4c2zaavbvh5x****</p>
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);

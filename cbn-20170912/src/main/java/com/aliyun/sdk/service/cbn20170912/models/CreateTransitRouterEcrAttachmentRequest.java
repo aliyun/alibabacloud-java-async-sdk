@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterEcrAttachmentRequest} extends {@link RequestModel}
  *
  * <p>CreateTransitRouterEcrAttachmentRequest</p>
@@ -236,7 +237,10 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -245,12 +249,14 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -259,11 +265,14 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -272,7 +281,11 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the ECR.
+         * <p>The ID of the ECR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-upyc0viial107r****</p>
          */
         public Builder ecrId(String ecrId) {
             this.putQueryParameter("EcrId", ecrId);
@@ -281,10 +294,13 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the ECR belongs. By default, the ID of the current Alibaba Cloud account is specified.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the ECR belongs. By default, the ID of the current Alibaba Cloud account is specified.</p>
+         * <blockquote>
+         * <p> If you want to connect to a network instance that belongs to a different account, this parameter is required.</p>
+         * </blockquote>
          * 
-         * >  If you want to connect to a network instance that belongs to a different account, this parameter is required.
+         * <strong>example:</strong>
+         * <p>1250123456123456</p>
          */
         public Builder ecrOwnerId(Long ecrOwnerId) {
             this.putQueryParameter("EcrOwnerId", ecrOwnerId);
@@ -311,10 +327,11 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * The region ID of the transit router.
-         * <p>
+         * <p>The region ID of the transit router.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>eu-central-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -341,10 +358,8 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * The tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * <p>The tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -353,10 +368,11 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * The description of the ECR connection.
-         * <p>
+         * <p>The description of the ECR connection.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
-         * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -365,10 +381,11 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * The name of the ECR connection.
-         * <p>
+         * <p>The name of the ECR connection.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -377,7 +394,10 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1su1ytdxtataupl****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -392,6 +412,12 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTransitRouterEcrAttachmentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTransitRouterEcrAttachmentRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -431,12 +457,12 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys in each call.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys in each call.
+             * <strong>example:</strong>
+             * <p>tagtest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -444,12 +470,12 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each key-value pair must be unique. You can specify values for at most 20 tag keys in each call.</p>
              * 
-             * The tag value can be an empty string or up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
-             * 
-             * Each key-value pair must be unique. You can specify values for at most 20 tag keys in each call.
+             * <strong>example:</strong>
+             * <p>tagtest</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCenBandwidthPackageAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyCenBandwidthPackageAttributeRequest</p>
@@ -138,7 +139,11 @@ public class ModifyCenBandwidthPackageAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the bandwidth plan.
+         * <p>The ID of the bandwidth plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenbwp-4c2zaavbvh5fx****</p>
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -147,10 +152,11 @@ public class ModifyCenBandwidthPackageAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the bandwidth plan.
-         * <p>
+         * <p>The new description of the bandwidth plan.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>Bandwidth Plans</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -159,10 +165,11 @@ public class ModifyCenBandwidthPackageAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the bandwidth plan.
-         * <p>
+         * <p>The new name of the bandwidth plan.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

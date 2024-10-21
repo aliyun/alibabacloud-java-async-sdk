@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCenInterRegionTrafficQosQueuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCenInterRegionTrafficQosQueuesResponseBody</p>
@@ -61,11 +62,14 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         private java.util.List < TrafficQosQueues> trafficQosQueues; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value of **NextToken** is returned, the value indicates the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>0151fa6aa1ed****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -73,7 +77,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D1E15D2-416D-54F3-BDD9-BC27DE4C6352</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +88,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the QoS queue.
+         * <p>The information about the QoS queue.</p>
          */
         public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
             this.trafficQosQueues = trafficQosQueues;
@@ -94,6 +101,12 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCenInterRegionTrafficQosQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCenInterRegionTrafficQosQueuesResponseBody</p>
+     */
     public static class TrafficQosQueues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
@@ -249,7 +262,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.
+             * <p>The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.</p>
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
@@ -265,10 +278,11 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the inter-region bandwidth that can be consumed by the QoS queue.
-             * <p>
+             * <p>The percentage of the inter-region bandwidth that can be consumed by the QoS queue.</p>
+             * <p>A value of <strong>1</strong> indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.</p>
              * 
-             * A value of **1** indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder remainBandwidthPercent(Integer remainBandwidthPercent) {
                 this.remainBandwidthPercent = remainBandwidthPercent;
@@ -276,12 +290,15 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the QoS queue. Valid values:
-             * <p>
+             * <p>The status of the QoS queue. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Active</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Active**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -289,7 +306,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the QoS policy.
+             * <p>The ID of the QoS policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-fv2qq9yqrsjowp****</p>
              */
             public Builder trafficQosPolicyId(String trafficQosPolicyId) {
                 this.trafficQosPolicyId = trafficQosPolicyId;
@@ -297,7 +317,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the QoS queue.
+             * <p>The description of the QoS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qosQueueDescription</p>
              */
             public Builder trafficQosQueueDescription(String trafficQosQueueDescription) {
                 this.trafficQosQueueDescription = trafficQosQueueDescription;
@@ -305,7 +328,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the QoS queue.
+             * <p>The ID of the QoS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-queue-siakjb2nn9gz5z****</p>
              */
             public Builder trafficQosQueueId(String trafficQosQueueId) {
                 this.trafficQosQueueId = trafficQosQueueId;
@@ -313,7 +339,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the QoS queue.
+             * <p>The name of the QoS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qosQueueName</p>
              */
             public Builder trafficQosQueueName(String trafficQosQueueName) {
                 this.trafficQosQueueName = trafficQosQueueName;
@@ -321,7 +350,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the inter-region connection.
+             * <p>The ID of the inter-region connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-nzrcv25d7ezt23****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -329,7 +361,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router.
+             * <p>The ID of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-p0wwagjv6fvxt4b7y****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;

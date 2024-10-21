@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCenChildInstanceRouteEntryToCenRequest} extends {@link RequestModel}
  *
  * <p>CreateCenChildInstanceRouteEntryToCenRequest</p>
@@ -199,7 +200,11 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7febra5nqj7jjh****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -208,10 +213,13 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the network instance belongs.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+         * <blockquote>
+         * <p>If the network instance belongs to another Alibaba Cloud account, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > If the network instance belongs to another Alibaba Cloud account, this parameter is required.
+         * <strong>example:</strong>
+         * <p>1787100000000000</p>
          */
         public Builder childInstanceAliUid(Long childInstanceAliUid) {
             this.putQueryParameter("ChildInstanceAliUid", childInstanceAliUid);
@@ -220,7 +228,11 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * <p>The ID of the network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-k1alm2jbuwibhxtx2****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -229,10 +241,12 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
+         * <p>The ID of the region where the network instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>ap-southeast-5</p>
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -241,11 +255,15 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
+         * <li><strong>VBR</strong>: a virtual border router (VBR)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**: a virtual private cloud (VPC)
-         * *   **VBR**: a virtual border router (VBR)
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -254,10 +272,12 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route.
-         * <p>
+         * <p>The destination CIDR block of the route.</p>
+         * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.
+         * <strong>example:</strong>
+         * <p>192.168.22.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -302,7 +322,11 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The ID of the route table configured on the network instance.
+         * <p>The ID of the route table configured on the network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-k1aa8ulqs39f86op8****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

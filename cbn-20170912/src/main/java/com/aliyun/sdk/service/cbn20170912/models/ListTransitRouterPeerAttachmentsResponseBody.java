@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterPeerAttachmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterPeerAttachmentsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         private java.util.List < TransitRouterAttachments> transitRouterAttachments; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +97,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If the <strong>NextToken</strong> parameter is empty, no next page exists.</li>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * </ul>
          * 
-         * *   If the **NextToken** parameter is empty, no next page exists.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * <strong>example:</strong>
+         * <p>dd20****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA97AFA3-8E48-4BD7-9F3E-A9F6176018A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -121,7 +134,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * A list of inter-region connections.
+         * <p>A list of inter-region connections.</p>
          */
         public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -134,6 +147,12 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterPeerAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterPeerAttachmentsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -173,7 +192,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_A1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +203,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -195,6 +220,12 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRouterPeerAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterPeerAttachmentsResponseBody</p>
+     */
     public static class TransitRouterAttachments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
         private Boolean autoPublishRouteEnabled;
@@ -438,11 +469,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:
-             * <p>
+             * <p>Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false** (default)
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
                 this.autoPublishRouteEnabled = autoPublishRouteEnabled;
@@ -450,11 +484,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth value of the inter-region connection. Unit: Mbit/s.
-             * <p>
+             * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+             * <ul>
+             * <li>This parameter specifies the maximum bandwidth value for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>BandwidthPackage</strong>.</li>
+             * <li>This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>.</li>
+             * </ul>
              * 
-             * *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
-             * *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -462,11 +499,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth allocation method. Valid values:
-             * <p>
+             * <p>The bandwidth allocation method. Valid values:</p>
+             * <ul>
+             * <li><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</li>
+             * <li><strong>DataTransfer</strong>: bandwidth is billed based on the pay-by-data-transfer metering method.</li>
+             * </ul>
              * 
-             * *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
-             * *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
+             * <strong>example:</strong>
+             * <p>BandwidthPackage</p>
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -474,7 +514,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
+             * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cenbwp-3xrxupouolw5ou****</p>
              */
             public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
                 this.cenBandwidthPackageId = cenBandwidthPackageId;
@@ -482,7 +525,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The CEN instance ID.
+             * <p>The CEN instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-j3jzhw1zpau2km****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -490,10 +536,11 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the inter-region connection was created.
-             * <p>
+             * <p>The time when the inter-region connection was created.</p>
+             * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2021-06-16T02:50Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -501,11 +548,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The default line type.
-             * <p>
+             * <p>The default line type.</p>
+             * <ul>
+             * <li><strong>Gold</strong> (default)</li>
+             * <li><strong>Platinum</strong></li>
+             * </ul>
              * 
-             * *   **Gold** (default)
-             * *   **Platinum**
+             * <strong>example:</strong>
+             * <p>Gold</p>
              */
             public Builder defaultLinkType(String defaultLinkType) {
                 this.defaultLinkType = defaultLinkType;
@@ -513,7 +563,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The areas that are connected by the bandwidth plan.
+             * <p>The areas that are connected by the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>china_china</p>
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -521,7 +574,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the peer transit router.
+             * <p>The ID of the peer transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-m5eq27g6bndum7e88****</p>
              */
             public Builder peerTransitRouterId(String peerTransitRouterId) {
                 this.peerTransitRouterId = peerTransitRouterId;
@@ -529,7 +585,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the peer transit router belongs.
+             * <p>The ID of the Alibaba Cloud account to which the peer transit router belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253460731706911258</p>
              */
             public Builder peerTransitRouterOwnerId(Long peerTransitRouterOwnerId) {
                 this.peerTransitRouterOwnerId = peerTransitRouterOwnerId;
@@ -537,7 +596,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the peer transit router.
+             * <p>The region ID of the peer transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder peerTransitRouterRegionId(String peerTransitRouterRegionId) {
                 this.peerTransitRouterRegionId = peerTransitRouterRegionId;
@@ -545,7 +607,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Enterprise Edition transit router.
+             * <p>The region ID of the Enterprise Edition transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -553,13 +618,16 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource to which the transit router is connected. Valid values:
-             * <p>
+             * <p>The type of the resource to which the transit router is connected. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+             * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+             * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+             * <li><strong>TR</strong>: transit router</li>
+             * </ul>
              * 
-             * *   **VPC**: virtual private cloud (VPC)
-             * *   **CCN**: Cloud Connect Network (CCN) instance
-             * *   **VBR**: virtual border router (VBR)
-             * *   **TR**: transit router
+             * <strong>example:</strong>
+             * <p>TR</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -567,13 +635,16 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the inter-region connection. Valid values:
-             * <p>
+             * <p>The status of the inter-region connection. Valid values:</p>
+             * <ul>
+             * <li><strong>Attached</strong></li>
+             * <li><strong>Attaching</strong></li>
+             * <li><strong>Detaching</strong></li>
+             * <li><strong>Detached</strong></li>
+             * </ul>
              * 
-             * *   **Attached**
-             * *   **Attaching**
-             * *   **Detaching**
-             * *   **Detached**
+             * <strong>example:</strong>
+             * <p>Attached</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -581,7 +652,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * A list of tags.
+             * <p>A list of tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -589,7 +660,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the inter-region connection.
+             * <p>The description of the inter-region connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdesc</p>
              */
             public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
                 this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
@@ -597,7 +671,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the inter-region connection.
+             * <p>The ID of the inter-region connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-5u4qbayfv2io5v****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -605,7 +682,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the inter-region connection.
+             * <p>The name of the inter-region connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
                 this.transitRouterAttachmentName = transitRouterAttachmentName;
@@ -613,7 +693,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Enterprise Edition transit router.
+             * <p>The ID of the Enterprise Edition transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-bp1su1ytdxtataupl****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;

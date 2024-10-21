@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableCenVbrHealthCheckResponseBody} extends {@link TeaModel}
  *
  * <p>EnableCenVbrHealthCheckResponseBody</p>
@@ -37,7 +38,10 @@ public class EnableCenVbrHealthCheckResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F59F19C-EFD2-40B1-94D5-65B40CA8E34A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

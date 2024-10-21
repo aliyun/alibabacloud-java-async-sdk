@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCenChildInstanceRouteEntryToAttachmentRequest} extends {@link RequestModel}
  *
  * <p>DeleteCenChildInstanceRouteEntryToAttachmentRequest</p>
@@ -183,7 +184,11 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends Request
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-wgcl0ik5o8jakq****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -192,12 +197,14 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +213,11 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * The destination CIDR block of the route.
+         * <p>The destination CIDR block of the route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.1.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -215,13 +226,17 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: performs a dry run and sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is not in use.</p>
+         * </blockquote>
          * 
-         * *   **false**: performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
-         * 
-         * >  This parameter is not in use.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -266,7 +281,11 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * The ID of the route table configured on the network instance.
+         * <p>The ID of the route table configured on the network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1osd9opvegfpowc****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -275,7 +294,11 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * The ID of the network instance connection.
+         * <p>The ID of the network instance connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-r1qhupkc19iadz****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);

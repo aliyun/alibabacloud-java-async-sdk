@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTransitRouterRequest} extends {@link RequestModel}
  *
  * <p>UpdateTransitRouterRequest</p>
@@ -181,12 +182,14 @@ public class UpdateTransitRouterRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -195,11 +198,14 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+         * </ul>
          * 
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -226,10 +232,12 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * The region ID of the transit router.
-         * <p>
+         * <p>The region ID of the transit router.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -256,10 +264,11 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * The description of the transit router.
-         * <p>
+         * <p>The description of the transit router.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         public Builder transitRouterDescription(String transitRouterDescription) {
             this.putQueryParameter("TransitRouterDescription", transitRouterDescription);
@@ -268,7 +277,11 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * The transit router ID.
+         * <p>The transit router ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-uf654ttymmljlvh2x****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -277,10 +290,11 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * The transit router name.
-         * <p>
+         * <p>The transit router name.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterName(String transitRouterName) {
             this.putQueryParameter("TransitRouterName", transitRouterName);

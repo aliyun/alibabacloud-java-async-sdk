@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTransitRouterPeerAttachmentResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteTransitRouterPeerAttachmentResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteTransitRouterPeerAttachmentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A01FEDD7-7D69-4EB3-996D-CF79F6F885CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

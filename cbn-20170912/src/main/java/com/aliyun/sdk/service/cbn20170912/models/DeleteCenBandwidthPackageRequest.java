@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCenBandwidthPackageRequest} extends {@link RequestModel}
  *
  * <p>DeleteCenBandwidthPackageRequest</p>
@@ -110,7 +111,10 @@ public class DeleteCenBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * CenBandwidthPackageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenbwp-4c2zaavbvh5f42****</p>
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);

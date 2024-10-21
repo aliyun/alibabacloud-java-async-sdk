@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantInstanceToTransitRouterRequest} extends {@link RequestModel}
  *
  * <p>GrantInstanceToTransitRouterRequest</p>
@@ -183,7 +184,11 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         } 
 
         /**
-         * Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.
+         * <p>Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-44m0p68spvlrqq****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -192,7 +197,11 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
+         * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1250123456123456</p>
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -201,7 +210,11 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * <p>The ID of the network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1h8vbrbcgohcju5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -210,13 +223,17 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * The type of network instance. Valid values:
-         * <p>
+         * <p>The type of network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>ExpressConnect</strong>: VBR</li>
+         * <li><strong>VPN</strong>: IPsec-VPN connection</li>
+         * <li><strong>ECR</strong>: ECR</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**: VPC
-         * *   **ExpressConnect**: VBR
-         * *   **VPN**: IPsec-VPN connection
-         * *   **ECR**: ECR
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -225,11 +242,14 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * The entity that pays the fees of the network instance. Valid values:
-         * <p>
+         * <p>The entity that pays the fees of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</li>
+         * <li><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</li>
+         * </ul>
          * 
-         * *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
-         * *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
+         * <strong>example:</strong>
+         * <p>PayByCenOwner</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -256,10 +276,11 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
+         * <p>The ID of the region where the network instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

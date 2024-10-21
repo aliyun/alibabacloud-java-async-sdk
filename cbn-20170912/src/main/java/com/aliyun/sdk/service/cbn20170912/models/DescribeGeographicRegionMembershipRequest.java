@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGeographicRegionMembershipRequest} extends {@link RequestModel}
  *
  * <p>DescribeGeographicRegionMembershipRequest</p>
@@ -138,7 +139,10 @@ public class DescribeGeographicRegionMembershipRequest extends Request {
         } 
 
         /**
-         * GeographicRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>china</p>
          */
         public Builder geographicRegionId(String geographicRegionId) {
             this.putQueryParameter("GeographicRegionId", geographicRegionId);

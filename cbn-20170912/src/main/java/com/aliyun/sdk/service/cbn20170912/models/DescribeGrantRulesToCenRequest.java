@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGrantRulesToCenRequest} extends {@link RequestModel}
  *
  * <p>DescribeGrantRulesToCenRequest</p>
@@ -210,7 +211,11 @@ public class DescribeGrantRulesToCenRequest extends Request {
         } 
 
         /**
-         * The CEN instance ID.
+         * <p>The CEN instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-nye53d7p3hzyu4****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -219,7 +224,10 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * The ID of the network instance that you want to query.
+         * <p>The ID of the network instance that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-rj9gt5nll27onu7****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -228,7 +236,10 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the network instance belongs.
+         * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125012345612****</p>
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.putQueryParameter("ChildInstanceOwnerId", childInstanceOwnerId);
@@ -246,9 +257,13 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries returned.
-         * <p>
-         * *   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
+         * <ul>
+         * <li>If you do not set <strong>MaxResults</strong>, it indicates that you do not need to query results in batches. The value of <strong>MaxResults</strong> in the response indicates the total number of entries returned.</li>
+         * <li>If you specify a value for <strong>MaxResults</strong>, it indicates that you need to query results in batches. The value of <strong>MaxResults</strong> indicates the number of entries to return in each batch. Valid values: <strong>1</strong> to <strong>100</strong>. The value of <strong>MaxResults</strong> in the response indicates the number of entries in the current batch. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -257,11 +272,14 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -288,13 +306,17 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>VBR</strong></li>
+         * <li><strong>CCN</strong></li>
+         * <li><strong>VPN</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**
-         * *   **VBR**
-         * *   **CCN**
-         * *   **VPN**
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -303,10 +325,11 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * The region ID of the network instance.
-         * <p>
+         * <p>The region ID of the network instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCenChildInstanceRouteEntriesToAttachmentRequest} extends {@link RequestModel}
  *
  * <p>ListCenChildInstanceRouteEntriesToAttachmentRequest</p>
@@ -195,7 +196,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-dc4vwznpwbobrl****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -204,7 +208,11 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * The ID of the route table configured on the network instance.
+         * <p>The ID of the route table configured on the network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp174d1gje79u1g4t****</p>
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -213,7 +221,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -222,11 +233,14 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no subsequent queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -271,7 +285,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * The filter condition for the destination CIDR block.
+         * <p>The filter condition for the destination CIDR block.</p>
          */
         public Builder routeFilter(java.util.List < RouteFilter> routeFilter) {
             this.putQueryParameter("RouteFilter", routeFilter);
@@ -280,7 +294,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * Specifies whether to host the route. If you leave the parameter empty, the route is not hosted. A value of TR specifies that the route is hosted on a transit router.
+         * <p>Specifies whether to host the route. If you leave the parameter empty, the route is not hosted. A value of TR specifies that the route is hosted on a transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TR</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -289,7 +306,11 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * The ID of the network instance connection.
+         * <p>The ID of the network instance connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-r6g0m3epjehw57****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -304,6 +325,12 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
 
     } 
 
+    /**
+     * 
+     * {@link ListCenChildInstanceRouteEntriesToAttachmentRequest} extends {@link TeaModel}
+     *
+     * <p>ListCenChildInstanceRouteEntriesToAttachmentRequest</p>
+     */
     public static class RouteFilter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -343,10 +370,13 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
             private java.util.List < String > value; 
 
             /**
-             * The match mode of the route.
-             * <p>
+             * <p>The match mode of the route.</p>
+             * <ul>
+             * <li><strong>prefix-exact-match</strong>: exact match.</li>
+             * </ul>
              * 
-             * *   **prefix-exact-match**: exact match.
+             * <strong>example:</strong>
+             * <p>prefix-exact-match</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -354,7 +384,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
             }
 
             /**
-             * The destination CIDR blocks.
+             * <p>The destination CIDR blocks.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

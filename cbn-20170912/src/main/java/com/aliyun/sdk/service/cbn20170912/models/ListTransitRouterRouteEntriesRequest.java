@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterRouteEntriesRequest</p>
@@ -322,7 +323,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -331,11 +335,14 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>fce19****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -362,7 +369,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The prefix list ID.
+         * <p>The prefix list ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-6ehtn5kqxgeyy08fi****</p>
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -389,7 +399,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The filter conditions for route CIDR blocks.
+         * <p>The filter conditions for route CIDR blocks.</p>
          */
         public Builder routeFilter(java.util.List < RouteFilter> routeFilter) {
             this.putQueryParameter("RouteFilter", routeFilter);
@@ -398,7 +408,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route. **This parameter is to be deprecated. We recommend that you use the RouteFilter parameter**.
+         * <p>The destination CIDR block of the route. <strong>This parameter is to be deprecated. We recommend that you use the RouteFilter parameter</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
          */
         public Builder transitRouterRouteEntryDestinationCidrBlock(String transitRouterRouteEntryDestinationCidrBlock) {
             this.putQueryParameter("TransitRouterRouteEntryDestinationCidrBlock", transitRouterRouteEntryDestinationCidrBlock);
@@ -407,7 +420,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The route ID.
+         * <p>The route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-oklkgwmj97z6dn****</p>
          */
         public Builder transitRouterRouteEntryIds(java.util.List < String > transitRouterRouteEntryIds) {
             this.putQueryParameter("TransitRouterRouteEntryIds", transitRouterRouteEntryIds);
@@ -416,7 +432,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The route name.
+         * <p>The route name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterRouteEntryNames(java.util.List < String > transitRouterRouteEntryNames) {
             this.putQueryParameter("TransitRouterRouteEntryNames", transitRouterRouteEntryNames);
@@ -425,7 +444,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the network instance connection that you want to specify as the next hop.
+         * <p>The ID of the network instance connection that you want to specify as the next hop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-nls9fzkfat8934****</p>
          */
         public Builder transitRouterRouteEntryNextHopId(String transitRouterRouteEntryNextHopId) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopId", transitRouterRouteEntryNextHopId);
@@ -434,7 +456,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The next hop ID.
+         * <p>The next hop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-m5ent6du8deaq5*****</p>
          */
         public Builder transitRouterRouteEntryNextHopResourceId(String transitRouterRouteEntryNextHopResourceId) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopResourceId", transitRouterRouteEntryNextHopResourceId);
@@ -443,13 +468,16 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The next hop type. Valid values:
-         * <p>
+         * <p>The next hop type. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>VBR</strong></li>
+         * <li><strong>TR</strong></li>
+         * <li><strong>VPN</strong></li>
+         * </ul>
          * 
-         * *   **VPC**
-         * *   **VBR**
-         * *   **TR**
-         * *   **VPN**
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder transitRouterRouteEntryNextHopResourceType(String transitRouterRouteEntryNextHopResourceType) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopResourceType", transitRouterRouteEntryNextHopResourceType);
@@ -458,11 +486,14 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The next hop type. Valid values:
-         * <p>
+         * <p>The next hop type. Valid values:</p>
+         * <ul>
+         * <li><strong>BlackHole</strong>: routes network traffic to a black hole.</li>
+         * <li><strong>Attachment</strong>: routes network traffic to a network instance connection.</li>
+         * </ul>
          * 
-         * *   **BlackHole**: routes network traffic to a black hole.
-         * *   **Attachment**: routes network traffic to a network instance connection.
+         * <strong>example:</strong>
+         * <p>Attachment</p>
          */
         public Builder transitRouterRouteEntryNextHopType(String transitRouterRouteEntryNextHopType) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopType", transitRouterRouteEntryNextHopType);
@@ -471,7 +502,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The source instance ID.
+         * <p>The source instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-m5ent6du8deaq5*****</p>
          */
         public Builder transitRouterRouteEntryOriginResourceId(String transitRouterRouteEntryOriginResourceId) {
             this.putQueryParameter("TransitRouterRouteEntryOriginResourceId", transitRouterRouteEntryOriginResourceId);
@@ -480,13 +514,16 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The source instance type. Valid values:
-         * <p>
+         * <p>The source instance type. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>VBR</strong></li>
+         * <li><strong>TR</strong></li>
+         * <li><strong>VPN</strong></li>
+         * </ul>
          * 
-         * *   **VPC**
-         * *   **VBR**
-         * *   **TR**
-         * *   **VPN**
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder transitRouterRouteEntryOriginResourceType(String transitRouterRouteEntryOriginResourceType) {
             this.putQueryParameter("TransitRouterRouteEntryOriginResourceType", transitRouterRouteEntryOriginResourceType);
@@ -495,17 +532,19 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The status of the route. Valid values:
-         * <p>
+         * <p>The status of the route. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong></li>
+         * <li><strong>Active</strong> (default)</li>
+         * <li><strong>Rejected</strong></li>
+         * <li><strong>Prohibited</strong></li>
+         * <li><strong>Standby</strong></li>
+         * <li><strong>Candidate</strong></li>
+         * </ul>
+         * <p>If you do not specify a value, routes in the active state are queried.</p>
          * 
-         * *   **All**
-         * *   **Active** (default)
-         * *   **Rejected**
-         * *   **Prohibited**
-         * *   **Standby**
-         * *   **Candidate**
-         * 
-         * If you do not specify a value, routes in the active state are queried.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder transitRouterRouteEntryStatus(String transitRouterRouteEntryStatus) {
             this.putQueryParameter("TransitRouterRouteEntryStatus", transitRouterRouteEntryStatus);
@@ -514,11 +553,14 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The route type. Valid values:
-         * <p>
+         * <p>The route type. Valid values:</p>
+         * <ul>
+         * <li><strong>Propagated</strong>: automatically learned by the route table.</li>
+         * <li><strong>Static</strong>: static routes.</li>
+         * </ul>
          * 
-         * *   **Propagated**: automatically learned by the route table.
-         * *   **Static**: static routes.
+         * <strong>example:</strong>
+         * <p>Propagated</p>
          */
         public Builder transitRouterRouteEntryType(String transitRouterRouteEntryType) {
             this.putQueryParameter("TransitRouterRouteEntryType", transitRouterRouteEntryType);
@@ -527,7 +569,11 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the Enterprise Edition transit router.
+         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1dudbh2d5na6b50****</p>
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);
@@ -542,6 +588,12 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterRouteEntriesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterRouteEntriesRequest</p>
+     */
     public static class RouteFilter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -581,15 +633,17 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The match pattern for filtering CIDR blocks. Valid values:
-             * <p>
+             * <p>The match pattern for filtering CIDR blocks. Valid values:</p>
+             * <ul>
+             * <li><strong>PrefixExactMatchCidrs</strong>: exact matching.</li>
+             * <li><strong>LongestPrefixMatchCidrs</strong>: longest prefix matching. The specified IP address and CIDR block are considered a match.</li>
+             * <li><strong>SubnetOfMatchCidrs</strong>: subnet matching. The specified CIDR block is considered a match.</li>
+             * <li><strong>SupernetOfMatchCidrs</strong>: supernet matching. The specified CIDR block is considered a match.</li>
+             * </ul>
+             * <p>By default, the logical operator among filter conditions is <strong>AND</strong>. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.</p>
              * 
-             * *   **PrefixExactMatchCidrs**: exact matching.
-             * *   **LongestPrefixMatchCidrs**: longest prefix matching. The specified IP address and CIDR block are considered a match.
-             * *   **SubnetOfMatchCidrs**: subnet matching. The specified CIDR block is considered a match.
-             * *   **SupernetOfMatchCidrs**: supernet matching. The specified CIDR block is considered a match.
-             * 
-             * By default, the logical operator among filter conditions is **AND**. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.
+             * <strong>example:</strong>
+             * <p>PrefixExactMatchCidrs</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -597,7 +651,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
             }
 
             /**
-             * The filter value.
+             * <p>The filter value.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

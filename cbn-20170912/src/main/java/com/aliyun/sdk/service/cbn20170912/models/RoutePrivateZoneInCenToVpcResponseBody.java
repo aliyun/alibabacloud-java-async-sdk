@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RoutePrivateZoneInCenToVpcResponseBody} extends {@link TeaModel}
  *
  * <p>RoutePrivateZoneInCenToVpcResponseBody</p>
@@ -37,7 +38,10 @@ public class RoutePrivateZoneInCenToVpcResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0245BEF-52AC-44A8-A776-EF96FD26A5CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

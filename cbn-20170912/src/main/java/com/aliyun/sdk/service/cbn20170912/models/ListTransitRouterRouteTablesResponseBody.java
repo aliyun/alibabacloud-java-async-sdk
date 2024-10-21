@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterRouteTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterRouteTablesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         private java.util.List < TransitRouterRouteTables> transitRouterRouteTables; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +97,14 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If a value of <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+         * </ul>
          * 
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
-         * *   If a value of **NextToken** is not returned, it indicates that no additional results exist.
+         * <strong>example:</strong>
+         * <p>dd20****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82678F4A-C9F7-4CC1-8BF0-D619A63BFC57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -121,7 +134,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * A list of route tables.
+         * <p>A list of route tables.</p>
          */
         public Builder transitRouterRouteTables(java.util.List < TransitRouterRouteTables> transitRouterRouteTables) {
             this.transitRouterRouteTables = transitRouterRouteTables;
@@ -134,6 +147,12 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterRouteTablesResponseBody</p>
+     */
     public static class RouteTableOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MultiRegionECMP")
         private String multiRegionECMP;
@@ -161,11 +180,14 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             private String multiRegionECMP; 
 
             /**
-             * Indicates whether ECMP routing is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether ECMP routing is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>disable</strong> If ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * <li><strong>enable</strong> If ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * </ul>
              * 
-             * *   **disable** If ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
-             * *   **enable** If ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * <strong>example:</strong>
+             * <p>disable</p>
              */
             public Builder multiRegionECMP(String multiRegionECMP) {
                 this.multiRegionECMP = multiRegionECMP;
@@ -179,6 +201,12 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRouterRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterRouteTablesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -218,7 +246,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -226,7 +257,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -240,6 +274,12 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRouterRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterRouteTablesResponseBody</p>
+     */
     public static class TransitRouterRouteTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -375,10 +415,11 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             private String transitRouterRouteTableType; 
 
             /**
-             * The time when the route table was created.
-             * <p>
+             * <p>The time when the route table was created.</p>
+             * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2021-03-15T09:39Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -386,7 +427,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Enterprise Edition transit router.
+             * <p>The region ID of the Enterprise Edition transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -394,7 +438,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The features of the route table.
+             * <p>The features of the route table.</p>
              */
             public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
                 this.routeTableOptions = routeTableOptions;
@@ -402,7 +446,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -410,7 +454,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The transit router ID.
+             * <p>The transit router ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-8vb8bie2koduo5awz****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -418,7 +465,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the route table.
+             * <p>The description of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdesc</p>
              */
             public Builder transitRouterRouteTableDescription(String transitRouterRouteTableDescription) {
                 this.transitRouterRouteTableDescription = transitRouterRouteTableDescription;
@@ -426,7 +476,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp1dudbh2d5na6b50****</p>
              */
             public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
                 this.transitRouterRouteTableId = transitRouterRouteTableId;
@@ -434,7 +487,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route table.
+             * <p>The name of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testname</p>
              */
             public Builder transitRouterRouteTableName(String transitRouterRouteTableName) {
                 this.transitRouterRouteTableName = transitRouterRouteTableName;
@@ -442,12 +498,15 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route table. Valid values:
-             * <p>
+             * <p>The status of the route table. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Active</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Deleting**
-             * *   **Active**
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder transitRouterRouteTableStatus(String transitRouterRouteTableStatus) {
                 this.transitRouterRouteTableStatus = transitRouterRouteTableStatus;
@@ -455,11 +514,14 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route table. Valid values:
-             * <p>
+             * <p>The type of the route table. Valid values:</p>
+             * <ul>
+             * <li><strong>Custom</strong></li>
+             * <li><strong>System</strong></li>
+             * </ul>
              * 
-             * *   **Custom**
-             * *   **System**
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder transitRouterRouteTableType(String transitRouterRouteTableType) {
                 this.transitRouterRouteTableType = transitRouterRouteTableType;

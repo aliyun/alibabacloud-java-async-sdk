@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeInstanceFromTransitRouterResponseBody} extends {@link TeaModel}
  *
  * <p>RevokeInstanceFromTransitRouterResponseBody</p>
@@ -37,7 +38,10 @@ public class RevokeInstanceFromTransitRouterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA4BFFD1-5090-5896-935F-4B353557F1A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

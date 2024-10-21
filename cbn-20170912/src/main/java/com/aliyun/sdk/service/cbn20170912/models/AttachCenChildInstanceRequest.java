@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachCenChildInstanceRequest} extends {@link RequestModel}
  *
  * <p>AttachCenChildInstanceRequest</p>
@@ -169,7 +170,11 @@ public class AttachCenChildInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -178,7 +183,11 @@ public class AttachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the network instance that you want to attach to the CEN instance.
+         * <p>The ID of the network instance that you want to attach to the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp18sth14qii3pnvx****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -187,10 +196,13 @@ public class AttachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the network instance belongs.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+         * <blockquote>
+         * <p>If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
+         * <strong>example:</strong>
+         * <p>1688000000000000</p>
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.putQueryParameter("ChildInstanceOwnerId", childInstanceOwnerId);
@@ -199,10 +211,12 @@ public class AttachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
+         * <p>The ID of the region where the network instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -211,12 +225,16 @@ public class AttachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>CCN</strong>: CCN instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**: VPC
-         * *   **VBR**: VBR
-         * *   **CCN**: CCN instance
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);

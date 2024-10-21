@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChildInstanceRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeChildInstanceRegionsRequest</p>
@@ -123,7 +124,10 @@ public class DescribeChildInstanceRegionsRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values: zh-CN (Chinese, which is the default language), en-US (English), and ja (Japanese).
+         * <p>The language of the response. Valid values: zh-CN (Chinese, which is the default language), en-US (English), and ja (Japanese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -150,12 +154,15 @@ public class DescribeChildInstanceRegionsRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+         * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+         * </ul>
          * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **VBR**: virtual border router (VBR)
-         * *   **CCN**: Cloud Connect Network (CCN) instance
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

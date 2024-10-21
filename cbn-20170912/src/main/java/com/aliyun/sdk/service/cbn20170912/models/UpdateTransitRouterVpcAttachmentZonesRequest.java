@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTransitRouterVpcAttachmentZonesRequest} extends {@link RequestModel}
  *
  * <p>UpdateTransitRouterVpcAttachmentZonesRequest</p>
@@ -166,7 +167,7 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         } 
 
         /**
-         * The zones and vSwitches that you want to add to the VPC connection.
+         * <p>The zones and vSwitches that you want to add to the VPC connection.</p>
          */
         public Builder addZoneMappings(java.util.List < AddZoneMappings> addZoneMappings) {
             this.putQueryParameter("AddZoneMappings", addZoneMappings);
@@ -175,12 +176,14 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -189,11 +192,14 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -220,7 +226,7 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         }
 
         /**
-         * The zones and vSwitches that you want to remove from the VPC connection.
+         * <p>The zones and vSwitches that you want to remove from the VPC connection.</p>
          */
         public Builder removeZoneMappings(java.util.List < RemoveZoneMappings> removeZoneMappings) {
             this.putQueryParameter("RemoveZoneMappings", removeZoneMappings);
@@ -247,7 +253,11 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC connection.
+         * <p>The ID of the VPC connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-9bbqyygouv4cpn****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -262,6 +272,12 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTransitRouterVpcAttachmentZonesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTransitRouterVpcAttachmentZonesRequest</p>
+     */
     public static class AddZoneMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -301,13 +317,15 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
             private String zoneId; 
 
             /**
-             * The ID of the vSwitch that you want to add to the VPC connection.
-             * <p>
+             * <p>The ID of the vSwitch that you want to add to the VPC connection.</p>
+             * <p>You can specify at most 10 vSwitches in each call.</p>
+             * <ul>
+             * <li>If the VPC connection belongs to the current Alibaba Cloud account, you can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the IDs of the vSwitches and zones of the VPC.</li>
+             * <li>If the VPC connection belongs to another Alibaba Cloud account, you can call the <a href="https://help.aliyun.com/document_detail/427599.html">ListGrantVSwitchesToCen</a> operation to query the IDs of the vSwitches and zones of the VPC.</li>
+             * </ul>
              * 
-             * You can specify at most 10 vSwitches in each call.
-             * 
-             * *   If the VPC connection belongs to the current Alibaba Cloud account, you can call the [DescribeVSwitches](~~35748~~) operation to query the IDs of the vSwitches and zones of the VPC.
-             * *   If the VPC connection belongs to another Alibaba Cloud account, you can call the [ListGrantVSwitchesToCen](~~427599~~) operation to query the IDs of the vSwitches and zones of the VPC.
+             * <strong>example:</strong>
+             * <p>vsw-wz988dda8ldm4uvmx****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -315,10 +333,11 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
             }
 
             /**
-             * The ID of the zone where the vSwitch that you want to add to the VPC connection is deployed.
-             * <p>
+             * <p>The ID of the zone where the vSwitch that you want to add to the VPC connection is deployed.</p>
+             * <p>You can specify at most 10 vSwitches in each call.</p>
              * 
-             * You can specify at most 10 vSwitches in each call.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -332,6 +351,12 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTransitRouterVpcAttachmentZonesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTransitRouterVpcAttachmentZonesRequest</p>
+     */
     public static class RemoveZoneMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -371,10 +396,11 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
             private String zoneId; 
 
             /**
-             * The ID of the vSwitch that you want to remove from the VPC connection.
-             * <p>
+             * <p>The ID of the vSwitch that you want to remove from the VPC connection.</p>
+             * <p>You can remove at most 10 vSwitches from a VPC in each call.</p>
              * 
-             * You can remove at most 10 vSwitches from a VPC in each call.
+             * <strong>example:</strong>
+             * <p>vsw-wz9f5izl6wshndmta****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -382,7 +408,10 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
             }
 
             /**
-             * The ID of the zone where the vSwitch that you want to remove from the VPC connection is deployed.
+             * <p>The ID of the zone where the vSwitch that you want to remove from the VPC connection is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

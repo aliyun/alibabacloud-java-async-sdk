@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenRegionDomainRouteEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * A list of route entries.
+         * <p>A list of route entries.</p>
          */
         public Builder cenRouteEntries(CenRouteEntries cenRouteEntries) {
             this.cenRouteEntries = cenRouteEntries;
@@ -93,7 +94,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>004E99FB-E996-5777-888E-BA1D8F215407</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenRegionDomainRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
+     */
     public static class AsPaths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsPath")
         private java.util.List < String > asPath;
@@ -171,6 +190,12 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRegionDomainRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
+     */
     public static class CenOutRouteMapRecord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -210,7 +235,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             private String routeMapId; 
 
             /**
-             * The ID of the region where the routing policy is applied.
+             * <p>The ID of the region where the routing policy is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccn-cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -218,7 +246,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the routing policy.
+             * <p>The ID of the routing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cenrmap-dbarzidzp7ek4k****</p>
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -232,6 +263,12 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRegionDomainRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
+     */
     public static class CenOutRouteMapRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenOutRouteMapRecord")
         private java.util.List < CenOutRouteMapRecord> cenOutRouteMapRecord;
@@ -273,6 +310,12 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRegionDomainRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
+     */
     public static class CenRouteMapRecord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -312,7 +355,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             private String routeMapId; 
 
             /**
-             * The ID of the region where the routing policy is applied.
+             * <p>The ID of the region where the routing policy is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -320,7 +366,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the routing policy.
+             * <p>The ID of the routing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cenrmap-cz5axczdxb7yfu****</p>
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -334,6 +383,12 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRegionDomainRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
+     */
     public static class CenRouteMapRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenRouteMapRecord")
         private java.util.List < CenRouteMapRecord> cenRouteMapRecord;
@@ -375,6 +430,12 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRegionDomainRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
+     */
     public static class Communities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Community")
         private java.util.List < String > community;
@@ -416,6 +477,12 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRegionDomainRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
+     */
     public static class CenRouteEntry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsPaths")
         private AsPaths asPaths;
@@ -575,7 +642,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The AS paths of the route.
+             * <p>The AS paths of the route.</p>
              */
             public Builder asPaths(AsPaths asPaths) {
                 this.asPaths = asPaths;
@@ -583,7 +650,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The routing policy that the routes match in the outbound direction.
+             * <p>The routing policy that the routes match in the outbound direction.</p>
              */
             public Builder cenOutRouteMapRecords(CenOutRouteMapRecords cenOutRouteMapRecords) {
                 this.cenOutRouteMapRecords = cenOutRouteMapRecords;
@@ -591,7 +658,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The routing policy that the routes match in the inbound direction.
+             * <p>The routing policy that the routes match in the inbound direction.</p>
              */
             public Builder cenRouteMapRecords(CenRouteMapRecords cenRouteMapRecords) {
                 this.cenRouteMapRecords = cenRouteMapRecords;
@@ -599,7 +666,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The communities of the route.
+             * <p>The communities of the route.</p>
              */
             public Builder communities(Communities communities) {
                 this.communities = communities;
@@ -607,7 +674,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block of the route.
+             * <p>The destination CIDR block of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -615,7 +685,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance specified as the next hop in the route.
+             * <p>The ID of the instance specified as the next hop in the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1j8728mm6pweeod****</p>
              */
             public Builder nextHopInstanceId(String nextHopInstanceId) {
                 this.nextHopInstanceId = nextHopInstanceId;
@@ -623,7 +696,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the network instance specified as the next hop in the route belongs.
+             * <p>The ID of the region to which the network instance specified as the next hop in the route belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder nextHopRegionId(String nextHopRegionId) {
                 this.nextHopRegionId = nextHopRegionId;
@@ -631,13 +707,16 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance specified as the next hop in the route. Valid values:
-             * <p>
+             * <p>The type of the instance specified as the next hop in the route. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+             * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+             * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+             * <li><strong>local_service</strong>: system route. No next hop is specified.</li>
+             * </ul>
              * 
-             * *   **VPC**: virtual private cloud (VPC)
-             * *   **VBR**: virtual border router (VBR)
-             * *   **CCN**: Cloud Connect Network (CCN) instance
-             * *   **local_service**: system route. No next hop is specified.
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -645,10 +724,11 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The route priority.
-             * <p>
+             * <p>The route priority.</p>
+             * <p>A smaller value indicates a higher priority.</p>
              * 
-             * A smaller value indicates a higher priority.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder preference(Integer preference) {
                 this.preference = preference;
@@ -656,13 +736,16 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The route status. Valid values:
-             * <p>
+             * <p>The route status. Valid values:</p>
+             * <ul>
+             * <li><strong>Active</strong>: available</li>
+             * <li><strong>Candidate</strong>: standby</li>
+             * <li><strong>Rejected</strong>: rejected</li>
+             * <li><strong>Prohibited</strong>: prohibited</li>
+             * </ul>
              * 
-             * *   **Active**: available
-             * *   **Candidate**: standby
-             * *   **Rejected**: rejected
-             * *   **Prohibited**: prohibited
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -670,11 +753,14 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the route can be advertised to other regions. Valid values:
-             * <p>
+             * <p>Indicates whether the route can be advertised to other regions. Valid values:</p>
+             * <ul>
+             * <li><strong>Active</strong>: The route can be advertised to other regions.</li>
+             * <li><strong>Prohibited</strong>: The route cannot be advertised to other regions.</li>
+             * </ul>
              * 
-             * *   **Active**: The route can be advertised to other regions.
-             * *   **Prohibited**: The route cannot be advertised to other regions.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder toOtherRegionStatus(String toOtherRegionStatus) {
                 this.toOtherRegionStatus = toOtherRegionStatus;
@@ -682,12 +768,15 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The route type. Valid values:
-             * <p>
+             * <p>The route type. Valid values:</p>
+             * <ul>
+             * <li><strong>CEN</strong>: route that is advertised through CEN</li>
+             * <li><strong>Custom</strong>: custom route</li>
+             * <li><strong>System</strong>: system route</li>
+             * </ul>
              * 
-             * *   **CEN**: route that is advertised through CEN
-             * *   **Custom**: custom route
-             * *   **System**: system route
+             * <strong>example:</strong>
+             * <p>CEN</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -701,6 +790,12 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRegionDomainRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
+     */
     public static class CenRouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenRouteEntry")
         private java.util.List < CenRouteEntry> cenRouteEntry;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTransitRouterRouteEntryResponse} extends {@link TeaModel}
  *
  * <p>UpdateTransitRouterRouteEntryResponse</p>

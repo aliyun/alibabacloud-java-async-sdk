@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateTransitRouterMulticastDomainRequest} extends {@link RequestModel}
  *
  * <p>AssociateTransitRouterMulticastDomainRequest</p>
@@ -167,10 +168,11 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,11 +181,14 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the API request. Valid values:
-         * <p>
+         * <p>Specifies whether only to precheck the API request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request but does not associate the vSwitch with the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. The vSwitch is associated with the multicast domain after the request passes the precheck.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request but does not associate the vSwitch with the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. The vSwitch is associated with the multicast domain after the request passes the precheck.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -228,7 +233,11 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The ID of the VPC connection.
+         * <p>The ID of the VPC connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-g3kz2k3u76amsk****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -237,7 +246,11 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The ID of the multicast domain.
+         * <p>The ID of the multicast domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
@@ -246,10 +259,8 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The vSwitch IDs.
-         * <p>
-         * 
-         * You can specify at most five vSwitch IDs in each call.
+         * <p>The vSwitch IDs.</p>
+         * <p>You can specify at most five vSwitch IDs in each call.</p>
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);

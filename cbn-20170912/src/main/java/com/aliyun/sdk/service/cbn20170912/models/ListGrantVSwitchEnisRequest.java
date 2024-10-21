@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGrantVSwitchEnisRequest} extends {@link RequestModel}
  *
  * <p>ListGrantVSwitchEnisRequest</p>
@@ -210,7 +211,11 @@ public class ListGrantVSwitchEnisRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance to which the VPC is attached.
+         * <p>The ID of the CEN instance to which the VPC is attached.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-a7syd349kne38g****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -219,13 +224,15 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 10 to 500.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: 10 to 500.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If you do not specify a value, the default value is 20.</li>
+         * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
+         * </ul>
          * 
-         * Default value:
-         * 
-         * *   If you do not specify a value, the default value is 20.
-         * *   If this parameter is set to a value greater than 500, the default value is 500.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -234,7 +241,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The ID of ENI N. Valid values of N: 1 to 100.
+         * <p>The ID of ENI N. Valid values of N: 1 to 100.</p>
          */
         public Builder networkInterfaceId(java.util.List < String > networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -243,7 +250,10 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The name of the ENI.
+         * <p>The name of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-eni-name</p>
          */
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
@@ -252,7 +262,10 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -279,7 +292,10 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The primary private IPv4 address of the ENI.
+         * <p>The primary private IPv4 address of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder primaryIpAddress(String primaryIpAddress) {
             this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
@@ -306,7 +322,11 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.
+         * <p>The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-p0w9s2ig1jnwgrbzl****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -315,7 +335,11 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-p0w9alkte4w2htrqe****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

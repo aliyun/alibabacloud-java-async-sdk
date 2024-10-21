@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCenInterRegionTrafficQosQueueRequest} extends {@link RequestModel}
  *
  * <p>CreateCenInterRegionTrafficQosQueueRequest</p>
@@ -236,7 +237,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * Dscps.
+         * <p>This parameter is required.</p>
          */
         public Builder dscps(java.util.List < Integer > dscps) {
             this.putQueryParameter("Dscps", dscps);
@@ -308,7 +309,10 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * TrafficQosPolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-qdvybn468kaoxx****</p>
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.putQueryParameter("TrafficQosPolicyId", trafficQosPolicyId);

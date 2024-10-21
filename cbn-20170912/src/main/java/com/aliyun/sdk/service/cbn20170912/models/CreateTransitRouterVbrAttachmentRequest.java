@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterVbrAttachmentRequest} extends {@link RequestModel}
  *
  * <p>CreateTransitRouterVbrAttachmentRequest</p>
@@ -250,11 +251,14 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): no</li>
+         * <li><strong>true</strong>: yes</li>
+         * </ul>
          * 
-         * *   **false** (default): no
-         * *   **true**: yes
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -263,7 +267,10 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-j3jzhw1zpau2km****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -272,12 +279,14 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -286,11 +295,14 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Default values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+         * </ul>
          * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -317,10 +329,11 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The region ID of the VBR.
-         * <p>
+         * <p>The region ID of the VBR.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -347,10 +360,8 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The information about the tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * <p>The information about the tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -359,10 +370,11 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The description of the VBR connection.
-         * <p>
+         * <p>The description of the VBR connection.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -371,10 +383,11 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The name of the VBR connection.
-         * <p>
+         * <p>The name of the VBR connection.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -383,7 +396,10 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Enterprise Edition transit router.
+         * <p>The ID of the Enterprise Edition transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1su1ytdxtataupl****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -392,7 +408,11 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp1svadp4lq38janc****</p>
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);
@@ -401,10 +421,13 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VBR belongs. The default value is the ID of the current Alibaba Cloud account.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the VBR belongs. The default value is the ID of the current Alibaba Cloud account.</p>
+         * <blockquote>
+         * <p>If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
+         * <strong>example:</strong>
+         * <p>1250123456123456</p>
          */
         public Builder vbrOwnerId(Long vbrOwnerId) {
             this.putQueryParameter("VbrOwnerId", vbrOwnerId);
@@ -419,6 +442,12 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTransitRouterVbrAttachmentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTransitRouterVbrAttachmentRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -458,12 +487,12 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -471,12 +500,12 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
              * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

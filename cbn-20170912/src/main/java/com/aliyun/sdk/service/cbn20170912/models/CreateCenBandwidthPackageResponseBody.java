@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCenBandwidthPackageResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCenBandwidthPackageResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the bandwidth plan.
+         * <p>The ID of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenbwp-4c2zaavbvh5fx****</p>
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.cenBandwidthPackageId = cenBandwidthPackageId;
@@ -69,7 +73,10 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order for the bandwidth plan.
+         * <p>The ID of the order for the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20156420004****</p>
          */
         public Builder cenBandwidthPackageOrderId(String cenBandwidthPackageOrderId) {
             this.cenBandwidthPackageOrderId = cenBandwidthPackageOrderId;
@@ -77,7 +84,10 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4B345CD-2CBA-4881-AF6D-E5D9BAE1CA7B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

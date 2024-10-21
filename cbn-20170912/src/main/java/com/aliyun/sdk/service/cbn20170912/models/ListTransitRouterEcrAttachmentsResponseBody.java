@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterEcrAttachmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterEcrAttachmentsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         private java.util.List < TransitRouterAttachments> transitRouterAttachments; 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>461EC1B5-04A8-4706-8764-8F5BCEF48A6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the ECR connections.
+         * <p>The information about the ECR connections.</p>
          */
         public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -130,6 +143,12 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterEcrAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterEcrAttachmentsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +216,12 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRouterEcrAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterEcrAttachmentsResponseBody</p>
+     */
     public static class TransitRouterAttachments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
         private Boolean autoPublishRouteEnabled;
@@ -374,10 +405,11 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             private String transitRouterRegionId; 
 
             /**
-             * Indicates whether the Enterprise Edition transit router can automatically advertise routes to ECRs.
-             * <p>
+             * <p>Indicates whether the Enterprise Edition transit router can automatically advertise routes to ECRs.</p>
+             * <p>The value is <strong>true</strong>, which indicates that the Enterprise Edition transit router can automatically advertise routes to ECRs.</p>
              * 
-             * The value is **true**, which indicates that the Enterprise Edition transit router can automatically advertise routes to ECRs.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
                 this.autoPublishRouteEnabled = autoPublishRouteEnabled;
@@ -385,7 +417,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CEN instance.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-j3jzhw1zpau2km****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -393,10 +428,11 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ECR connection was created.
-             * <p>
+             * <p>The time when the ECR connection was created.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2021-06-15T02:14Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -404,7 +440,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECR with which the ECR connection is associated.
+             * <p>The ID of the ECR with which the ECR connection is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-n78omt2qsko06y****</p>
              */
             public Builder ecrId(String ecrId) {
                 this.ecrId = ecrId;
@@ -412,7 +451,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the ECR connection belongs.
+             * <p>The ID of the Alibaba Cloud account to which the ECR connection belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1688111111111111</p>
              */
             public Builder ecrOwnerId(Long ecrOwnerId) {
                 this.ecrOwnerId = ecrOwnerId;
@@ -420,11 +462,14 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The entity that pays the fees of the network instance. Valid values: Valid values:
-             * <p>
+             * <p>The entity that pays the fees of the network instance. Valid values: Valid values:</p>
+             * <ul>
+             * <li><strong>PayByCenOwner</strong>: The Alibaba Cloud account to which the transit router belongs pays the connection and data forwarding fees of the ECR.</li>
+             * <li><strong>PayByResourceOwner</strong>: The Alibaba Cloud account to which the ECR belongs pays the connection and data forwarding fees of the ECR.</li>
+             * </ul>
              * 
-             * *   **PayByCenOwner**: The Alibaba Cloud account to which the transit router belongs pays the connection and data forwarding fees of the ECR.
-             * *   **PayByResourceOwner**: The Alibaba Cloud account to which the ECR belongs pays the connection and data forwarding fees of the ECR.
+             * <strong>example:</strong>
+             * <p>PayByCenOwner</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -432,10 +477,11 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resource to which the transit router is connected. Valid values:
-             * <p>
+             * <p>The type of resource to which the transit router is connected. Valid values:</p>
+             * <p>The value is <strong>ECR</strong>, which indicates ECR connections.</p>
              * 
-             * The value is **ECR**, which indicates ECR connections.
+             * <strong>example:</strong>
+             * <p>ECR</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -443,12 +489,15 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECR connection. Valid values:
-             * <p>
+             * <p>The status of the ECR connection. Valid values:</p>
+             * <ul>
+             * <li><strong>Attached</strong></li>
+             * <li><strong>Attaching</strong></li>
+             * <li><strong>Detaching</strong></li>
+             * </ul>
              * 
-             * *   **Attached**
-             * *   **Attaching**
-             * *   **Detaching**
+             * <strong>example:</strong>
+             * <p>Attached</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -456,7 +505,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -464,7 +513,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the ECR connection.
+             * <p>The description of the ECR connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
                 this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
@@ -472,7 +524,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECR connection.
+             * <p>The ID of the ECR connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-nls9fzkfat8934****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -480,7 +535,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECR connection.
+             * <p>The name of the ECR connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testname</p>
              */
             public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
                 this.transitRouterAttachmentName = transitRouterAttachmentName;
@@ -488,7 +546,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Enterprise Edition transit router.
+             * <p>The ID of the Enterprise Edition transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-bp1su1ytdxtataupl****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -496,10 +557,11 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the transit router.
-             * <p>
+             * <p>The region ID of the transit router.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
              * 
-             * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder transitRouterRegionId(String transitRouterRegionId) {
                 this.transitRouterRegionId = transitRouterRegionId;

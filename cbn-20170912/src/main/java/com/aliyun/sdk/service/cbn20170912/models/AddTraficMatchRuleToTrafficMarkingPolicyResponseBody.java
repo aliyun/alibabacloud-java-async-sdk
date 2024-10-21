@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTraficMatchRuleToTrafficMarkingPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>AddTraficMatchRuleToTrafficMarkingPolicyResponseBody</p>
@@ -37,7 +38,10 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0876E54E-3E36-5C31-89F0-9EE8A9266F9A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGrantVSwitchesToCenRequest} extends {@link RequestModel}
  *
  * <p>ListGrantVSwitchesToCenRequest</p>
@@ -198,7 +199,11 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         } 
 
         /**
-         * The CEN instance ID.
+         * <p>The CEN instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-44m0p68spvlrqq****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -234,7 +239,10 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Default value: **1**.
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -243,7 +251,10 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -252,10 +263,12 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC.
-         * <p>
+         * <p>The region ID of the VPC.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -282,7 +295,11 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The VPC ID.
+         * <p>The VPC ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp12ge2tq5gzdc915****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -291,13 +308,15 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
-         * <p>
+         * <p>The ID of the zone.</p>
+         * <ul>
+         * <li>If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.</li>
+         * <li>If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.</li>
+         * </ul>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
          * 
-         * *   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.
-         * *   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.
-         * 
-         * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

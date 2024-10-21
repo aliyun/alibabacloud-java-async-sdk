@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TempUpgradeCenBandwidthPackageSpecRequest} extends {@link RequestModel}
  *
  * <p>TempUpgradeCenBandwidthPackageSpecRequest</p>
@@ -140,7 +141,10 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -149,7 +153,10 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * CenBandwidthPackageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenbwp-y08yosedeqlpua****</p>
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -158,7 +165,10 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-24T13:00:52Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);

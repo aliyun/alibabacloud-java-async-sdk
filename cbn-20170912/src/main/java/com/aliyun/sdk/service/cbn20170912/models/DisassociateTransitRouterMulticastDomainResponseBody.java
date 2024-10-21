@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisassociateTransitRouterMulticastDomainResponseBody} extends {@link TeaModel}
  *
  * <p>DisassociateTransitRouterMulticastDomainResponseBody</p>
@@ -37,7 +38,10 @@ public class DisassociateTransitRouterMulticastDomainResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F6B3FF0-45D1-5416-B189-C45A42A0222B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

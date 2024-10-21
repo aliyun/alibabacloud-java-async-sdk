@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableCenVbrHealthCheckRequest} extends {@link RequestModel}
  *
  * <p>EnableCenVbrHealthCheckRequest</p>
@@ -241,7 +242,11 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-hahhfskfkseig****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -250,10 +255,11 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The description of the health check.
-         * <p>
+         * <p>The description of the health check.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -262,7 +268,10 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: **2**. Valid values: **2 to 3**.
+         * <p>The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: <strong>2</strong>. Valid values: <strong>2 to 3</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -271,18 +280,22 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable probing during the health check. Valid values:
-         * <p>
+         * <p>Specifies whether to enable probing during the health check. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: yes</p>
+         * <pre><code>If you enable probing, the system does not switch to another route if the detected route is not reachable. 
          * 
-         * *   **true**: yes
+         *   Make sure that a redundant route is available. Otherwise, network disconnections may occur. 
+         * </code></pre>
+         * </li>
+         * <li><p><strong>false</strong> (default): no</p>
+         * <pre><code>Probing is disabled by default. If a redundant route is specified, the system switches to the redundant route if the detected route is not reachable.
+         * </code></pre>
+         * </li>
+         * </ul>
          * 
-         *         If you enable probing, the system does not switch to another route if the detected route is not reachable. 
-         * 
-         *           Make sure that a redundant route is available. Otherwise, network disconnections may occur. 
-         * 
-         * *   **false** (default): no
-         * 
-         *         Probing is disabled by default. If a redundant route is specified, the system switches to the redundant route if the detected route is not reachable.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder healthCheckOnly(Boolean healthCheckOnly) {
             this.putQueryParameter("HealthCheckOnly", healthCheckOnly);
@@ -291,11 +304,14 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The source IP address for the health check. You can set the source IP address in the following ways:
-         * <p>
+         * <p>The source IP address for the health check. You can set the source IP address in the following ways:</p>
+         * <ul>
+         * <li><strong>Automatic IP Address</strong> (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.</li>
+         * <li><strong>Custom IP Address</strong>: You must specify an idle IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot be the IP address of the VBR on the Alibaba Cloud side, the IP address of the VBR on the customer side, or other IP addresses with which the VBR communicates through the CEN instance.</li>
+         * </ul>
          * 
-         * *   **Automatic IP Address** (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.
-         * *   **Custom IP Address**: You must specify an idle IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot be the IP address of the VBR on the Alibaba Cloud side, the IP address of the VBR on the customer side, or other IP addresses with which the VBR communicates through the CEN instance.
+         * <strong>example:</strong>
+         * <p>192.XX.XX.1</p>
          */
         public Builder healthCheckSourceIp(String healthCheckSourceIp) {
             this.putQueryParameter("HealthCheckSourceIp", healthCheckSourceIp);
@@ -304,10 +320,12 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The destination IP address for the health check.
-         * <p>
+         * <p>The destination IP address for the health check.</p>
+         * <p>Set the destination IP address to the IP address of the VBR on the customer side.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the destination IP address to the IP address of the VBR on the customer side.
+         * <strong>example:</strong>
+         * <p>10.XX.XX.1</p>
          */
         public Builder healthCheckTargetIp(String healthCheckTargetIp) {
             this.putQueryParameter("HealthCheckTargetIp", healthCheckTargetIp);
@@ -316,7 +334,10 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The number of probe packets that are sent during a health check. Unit: packets. Valid values: **3 to 8**. Default value: **8**.
+         * <p>The number of probe packets that are sent during a health check. Unit: packets. Valid values: <strong>3 to 8</strong>. Default value: <strong>8</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -361,7 +382,11 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-wz95o9aylj181n5mzk****</p>
          */
         public Builder vbrInstanceId(String vbrInstanceId) {
             this.putQueryParameter("VbrInstanceId", vbrInstanceId);
@@ -370,10 +395,13 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VBR belongs.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <blockquote>
+         * <p>This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>1250123456123456</p>
          */
         public Builder vbrInstanceOwnerId(Long vbrInstanceOwnerId) {
             this.putQueryParameter("VbrInstanceOwnerId", vbrInstanceOwnerId);
@@ -382,10 +410,12 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
-         * <p>
+         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder vbrInstanceRegionId(String vbrInstanceRegionId) {
             this.putQueryParameter("VbrInstanceRegionId", vbrInstanceRegionId);

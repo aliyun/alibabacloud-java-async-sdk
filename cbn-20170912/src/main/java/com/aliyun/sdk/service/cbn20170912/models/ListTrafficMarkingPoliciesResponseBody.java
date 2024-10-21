@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrafficMarkingPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrafficMarkingPoliciesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         private java.util.List < TrafficMarkingPolicies> trafficMarkingPolicies; 
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +97,14 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query.
-         * <p>
+         * <p>The token that determines the start point of the query.</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> was not returned in the previous query, it indicates that no additional results exist.</li>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>699989E4-64A0-5F78-8B93-CDB32D98971F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -121,7 +134,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the traffic marking policy.
+         * <p>The information about the traffic marking policy.</p>
          */
         public Builder trafficMarkingPolicies(java.util.List < TrafficMarkingPolicies> trafficMarkingPolicies) {
             this.trafficMarkingPolicies = trafficMarkingPolicies;
@@ -134,6 +147,12 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrafficMarkingPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrafficMarkingPoliciesResponseBody</p>
+     */
     public static class TrafficMatchRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressFamily")
         private String addressFamily;
@@ -289,7 +308,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block that is used to match packets.
+             * <p>The destination CIDR block that is used to match packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.120.0/24</p>
              */
             public Builder dstCidr(String dstCidr) {
                 this.dstCidr = dstCidr;
@@ -297,7 +319,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination port range used to match data packets.
+             * <p>The destination port range used to match data packets.</p>
              */
             public Builder dstPortRange(java.util.List < Integer > dstPortRange) {
                 this.dstPortRange = dstPortRange;
@@ -305,10 +327,13 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The DSCP value used to match data packets.
-             * <p>
+             * <p>The DSCP value used to match data packets.</p>
+             * <blockquote>
+             * <p> If the value of the <strong>MatchDscp</strong> parameter is -1, data packets are considered a match regardless of the DSCP value.</p>
+             * </blockquote>
              * 
-             * >  If the value of the **MatchDscp** parameter is -1, data packets are considered a match regardless of the DSCP value.
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder matchDscp(Integer matchDscp) {
                 this.matchDscp = matchDscp;
@@ -316,10 +341,13 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used to match packets.
-             * <p>
+             * <p>The protocol that is used to match packets.</p>
+             * <blockquote>
+             * <p> Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</p>
+             * </blockquote>
              * 
-             * >  Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -327,7 +355,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The source CIDR block that is used to match packets.
+             * <p>The source CIDR block that is used to match packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/24</p>
              */
             public Builder srcCidr(String srcCidr) {
                 this.srcCidr = srcCidr;
@@ -335,7 +366,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The source port range used to match data packets.
+             * <p>The source port range used to match data packets.</p>
              */
             public Builder srcPortRange(java.util.List < Integer > srcPortRange) {
                 this.srcPortRange = srcPortRange;
@@ -343,7 +374,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the traffic classification rule.
+             * <p>The description of the traffic classification rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder trafficMatchRuleDescription(String trafficMatchRuleDescription) {
                 this.trafficMatchRuleDescription = trafficMatchRuleDescription;
@@ -351,7 +385,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the traffic classification rule.
+             * <p>The ID of the traffic classification rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tm-rule-fa9kgq1e90rmhc****</p>
              */
             public Builder trafficMatchRuleId(String trafficMatchRuleId) {
                 this.trafficMatchRuleId = trafficMatchRuleId;
@@ -359,7 +396,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the traffic classification rule.
+             * <p>The name of the traffic classification rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder trafficMatchRuleName(String trafficMatchRuleName) {
                 this.trafficMatchRuleName = trafficMatchRuleName;
@@ -367,12 +407,15 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the traffic classification rule. Valid values:
-             * <p>
+             * <p>The status of the traffic classification rule. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong>: The rule is being created.</li>
+             * <li><strong>Active</strong>: The rule is available.</li>
+             * <li><strong>Deleting</strong>: The rule is being deleted.</li>
+             * </ul>
              * 
-             * *   **Creating**: The rule is being created.
-             * *   **Active**: The rule is available.
-             * *   **Deleting**: The rule is being deleted.
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder trafficMatchRuleStatus(String trafficMatchRuleStatus) {
                 this.trafficMatchRuleStatus = trafficMatchRuleStatus;
@@ -386,6 +429,12 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrafficMarkingPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrafficMarkingPoliciesResponseBody</p>
+     */
     public static class TrafficMarkingPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MarkingDscp")
         private Integer markingDscp;
@@ -497,7 +546,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * The Differentiated Service Code Point (DSCP) value of the traffic marking policy.
+             * <p>The Differentiated Service Code Point (DSCP) value of the traffic marking policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder markingDscp(Integer markingDscp) {
                 this.markingDscp = markingDscp;
@@ -505,10 +557,11 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the traffic marking policy.
-             * <p>
+             * <p>The priority of the traffic marking policy.</p>
+             * <p>A lower value indicates a higher priority.</p>
              * 
-             * A lower value indicates a higher priority.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -516,7 +569,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the traffic marking policy.
+             * <p>The description of the traffic marking policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder trafficMarkingPolicyDescription(String trafficMarkingPolicyDescription) {
                 this.trafficMarkingPolicyDescription = trafficMarkingPolicyDescription;
@@ -524,7 +580,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the traffic marking policy.
+             * <p>The ID of the traffic marking policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tm-iz5egnyitxiroq****</p>
              */
             public Builder trafficMarkingPolicyId(String trafficMarkingPolicyId) {
                 this.trafficMarkingPolicyId = trafficMarkingPolicyId;
@@ -532,7 +591,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the traffic marking policy.
+             * <p>The name of the traffic marking policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder trafficMarkingPolicyName(String trafficMarkingPolicyName) {
                 this.trafficMarkingPolicyName = trafficMarkingPolicyName;
@@ -540,13 +602,16 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the traffic marking policy. Valid values:
-             * <p>
+             * <p>The status of the traffic marking policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong>: The policy is being created.</li>
+             * <li><strong>Active</strong>: The policy is available.</li>
+             * <li><strong>Modifying</strong>: The policy is being modified.</li>
+             * <li><strong>Deleting</strong>: The policy is being deleted.</li>
+             * </ul>
              * 
-             * *   **Creating**: The policy is being created.
-             * *   **Active**: The policy is available.
-             * *   **Modifying**: The policy is being modified.
-             * *   **Deleting**: The policy is being deleted.
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder trafficMarkingPolicyStatus(String trafficMarkingPolicyStatus) {
                 this.trafficMarkingPolicyStatus = trafficMarkingPolicyStatus;
@@ -554,7 +619,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic classification rules.
+             * <p>The traffic classification rules.</p>
              */
             public Builder trafficMatchRules(java.util.List < TrafficMatchRules> trafficMatchRules) {
                 this.trafficMatchRules = trafficMatchRules;
@@ -562,7 +627,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router.
+             * <p>The ID of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-ccni***</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;

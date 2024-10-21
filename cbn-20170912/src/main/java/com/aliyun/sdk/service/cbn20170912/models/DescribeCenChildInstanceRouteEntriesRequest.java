@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenChildInstanceRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCenChildInstanceRouteEntriesRequest</p>
@@ -210,7 +211,11 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -219,7 +224,11 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * <p>The ID of the network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp18sth14qii3pnvo****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -228,10 +237,11 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
+         * <p>The ID of the region where the network instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -240,7 +250,10 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the network instance. If you do not specify a route table ID, the system queries the routes in the system route tables of the VPCs by default.
+         * <p>The ID of the route table of the network instance. If you do not specify a route table ID, the system queries the routes in the system route tables of the VPCs by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-p0wxx3apzgn6uqp3r****</p>
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -249,12 +262,16 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+         * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **VBR**: virtual border router (VBR)
-         * *   **CCN**: Cloud Connect Network (CCN) instance
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -281,7 +298,10 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -290,7 +310,10 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1** to **500**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -317,14 +340,17 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * The status of the route. Valid values:
-         * <p>
+         * <p>The status of the route. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong>: available</li>
+         * <li><strong>Candidate</strong>: standby</li>
+         * <li><strong>Rejected</strong>: rejected</li>
+         * <li><strong>Prohibited</strong>: prohibited</li>
+         * <li><strong>All</strong> (default): all routes</li>
+         * </ul>
          * 
-         * *   **Active**: available
-         * *   **Candidate**: standby
-         * *   **Rejected**: rejected
-         * *   **Prohibited**: prohibited
-         * *   **All** (default): all routes
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

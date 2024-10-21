@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGeographicRegionMembershipResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGeographicRegionMembershipResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGeographicRegionMembershipResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGeographicRegionMembershipResponseBody</p>
+     */
     public static class RegionId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -171,6 +178,12 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGeographicRegionMembershipResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGeographicRegionMembershipResponseBody</p>
+     */
     public static class RegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private java.util.List < RegionId> regionId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFlowlogResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteFlowlogResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteFlowlogResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class DeleteFlowlogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
-         * <p>
+         * <p>Indicates whether the call is successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

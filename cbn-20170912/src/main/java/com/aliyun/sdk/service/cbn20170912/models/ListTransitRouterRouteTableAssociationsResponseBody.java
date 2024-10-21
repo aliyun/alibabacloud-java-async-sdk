@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterRouteTableAssociationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterRouteTableAssociationsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         private java.util.List < TransitRouterAssociations> transitRouterAssociations; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +97,14 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** was not returned, it indicates that no additional results exist.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * <strong>example:</strong>
+         * <p>a415****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6B1D9AB-176D-4399-801D-8BC576F4EB0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -121,7 +134,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * A list of associated forwarding correlations.
+         * <p>A list of associated forwarding correlations.</p>
          */
         public Builder transitRouterAssociations(java.util.List < TransitRouterAssociations> transitRouterAssociations) {
             this.transitRouterAssociations = transitRouterAssociations;
@@ -134,6 +147,12 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterRouteTableAssociationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterRouteTableAssociationsResponseBody</p>
+     */
     public static class TransitRouterAssociations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -209,7 +228,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             private String transitRouterRouteTableId; 
 
             /**
-             * The ID of the next hop.
+             * <p>The ID of the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1h8vbrbcgohcju5****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -217,13 +239,16 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * The type of next hop. Valid values:
-             * <p>
+             * <p>The type of next hop. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: VPC</li>
+             * <li><strong>VBR</strong>: VBR</li>
+             * <li><strong>TR</strong>: transit router</li>
+             * <li><strong>VPN</strong> :VPN attachment</li>
+             * </ul>
              * 
-             * *   **VPC**: VPC
-             * *   **VBR**: VBR
-             * *   **TR**: transit router
-             * *   **VPN** :VPN attachment
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -231,13 +256,16 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * The status of the associated forwarding correlation. Valid values:
-             * <p>
+             * <p>The status of the associated forwarding correlation. Valid values:</p>
+             * <ul>
+             * <li><strong>Active</strong>: The associated forwarding correlation is available.</li>
+             * <li><strong>Associating</strong>: The associated forwarding correlation is being created.</li>
+             * <li><strong>Dissociating</strong>: The associated forwarding correlation is being deleted.</li>
+             * <li><strong>Deleted</strong>: The associated forwarding correlation is deleted.</li>
+             * </ul>
              * 
-             * *   **Active**: The associated forwarding correlation is available.
-             * *   **Associating**: The associated forwarding correlation is being created.
-             * *   **Dissociating**: The associated forwarding correlation is being deleted.
-             * *   **Deleted**: The associated forwarding correlation is deleted.
+             * <strong>example:</strong>
+             * <p>Associating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -245,7 +273,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the network instance connection.
+             * <p>The ID of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-nls9fzkfat8934****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -253,7 +284,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the route table of the Enterprise Edition transit router.
+             * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp1dudbh2d5na6b50****</p>
              */
             public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
                 this.transitRouterRouteTableId = transitRouterRouteTableId;

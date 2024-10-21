@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTrafficMarkingPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteTrafficMarkingPolicyResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteTrafficMarkingPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F1F3A57-A753-572B-8F71-4F964398C566</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

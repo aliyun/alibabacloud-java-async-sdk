@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenRouteMapsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCenRouteMapsRequest</p>
@@ -194,7 +195,11 @@ public class DescribeCenRouteMapsRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-wx12mmlt17ld82****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -203,10 +208,11 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The region ID of the routing policy.
-         * <p>
+         * <p>The region ID of the routing policy.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder cenRegionId(String cenRegionId) {
             this.putQueryParameter("CenRegionId", cenRegionId);
@@ -233,7 +239,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -242,7 +251,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -269,7 +281,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The routing policy ID.
+         * <p>The routing policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenrmap-y40mxdvf7joc12****</p>
          */
         public Builder routeMapId(String routeMapId) {
             this.putQueryParameter("RouteMapId", routeMapId);
@@ -278,7 +293,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The route table ID of the transit router with which the routing policy is associated.
+         * <p>The route table ID of the transit router with which the routing policy is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-gw8nx3515m1mbd1z1****</p>
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);
@@ -287,16 +305,18 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The direction in which the routing policy is applied. Valid values:
-         * <p>
+         * <p>The direction in which the routing policy is applied. Valid values:</p>
+         * <ul>
+         * <li><strong>RegionIn</strong>: Routes are advertised to the gateways in the regions that are connected by the CEN instance.</li>
+         * </ul>
+         * <p>For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.</p>
+         * <ul>
+         * <li><strong>RegionOut</strong>: Routes are advertised from the gateways in the regions that are connected by the CEN instance.</li>
+         * </ul>
+         * <p>For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.</p>
          * 
-         * *   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.
-         * 
-         * For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
-         * 
-         * *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
-         * 
-         * For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.
+         * <strong>example:</strong>
+         * <p>RegionOut</p>
          */
         public Builder transmitDirection(String transmitDirection) {
             this.putQueryParameter("TransmitDirection", transmitDirection);

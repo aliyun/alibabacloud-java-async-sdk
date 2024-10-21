@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCenInterRegionTrafficQosQueuesRequest} extends {@link RequestModel}
  *
  * <p>ListCenInterRegionTrafficQosQueuesRequest</p>
@@ -230,7 +231,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -239,11 +243,14 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value of **NextToken** is returned, the value indicates the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>2ca1ed1573cb****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -288,7 +295,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The ID of the QoS policy.
+         * <p>The ID of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-rnghap5gc8155x****</p>
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.putQueryParameter("TrafficQosPolicyId", trafficQosPolicyId);
@@ -297,10 +307,11 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The description of the QoS queue.
-         * <p>
+         * <p>The description of the QoS queue.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
-         * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>qosQueueDescription</p>
          */
         public Builder trafficQosQueueDescription(String trafficQosQueueDescription) {
             this.putQueryParameter("TrafficQosQueueDescription", trafficQosQueueDescription);
@@ -309,7 +320,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The ID of the queue.
+         * <p>The ID of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-queue-siakjb2nn9gz5z****</p>
          */
         public Builder trafficQosQueueId(String trafficQosQueueId) {
             this.putQueryParameter("TrafficQosQueueId", trafficQosQueueId);
@@ -318,10 +332,11 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The name of the QoS queue.
-         * <p>
+         * <p>The name of the QoS queue.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>qosQueueName</p>
          */
         public Builder trafficQosQueueName(String trafficQosQueueName) {
             this.putQueryParameter("TrafficQosQueueName", trafficQosQueueName);
@@ -330,7 +345,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The ID of the inter-region connection.
+         * <p>The ID of the inter-region connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-a6p8voaodog5c0****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -339,7 +357,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1rmwxnk221e3fas****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -354,6 +375,12 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListCenInterRegionTrafficQosQueuesRequest} extends {@link TeaModel}
+     *
+     * <p>ListCenInterRegionTrafficQosQueuesRequest</p>
+     */
     public static class EffectiveBandwidthFilter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Gte")
         private Long gte;

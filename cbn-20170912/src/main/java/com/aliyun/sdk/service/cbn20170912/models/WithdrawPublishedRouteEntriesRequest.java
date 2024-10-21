@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WithdrawPublishedRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>WithdrawPublishedRouteEntriesRequest</p>
@@ -157,7 +158,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-sxjfjkjfkjfiein****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -166,7 +171,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the attached network instance.
+         * <p>The ID of the attached network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-rj9gt5nll27onu7****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -175,7 +184,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the attached network instance is created.
+         * <p>The ID of the region where the attached network instance is created.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -184,7 +197,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the attached network instance.
+         * <p>The ID of the route table of the attached network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp174d1gje79u1g4t****</p>
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -193,10 +210,12 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The type of the attached network instance.
-         * <p>
+         * <p>The type of the attached network instance.</p>
+         * <p>Set the value to <strong>VPC</strong>, which indicates a virtual private cloud (VPC).</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to **VPC**, which indicates a virtual private cloud (VPC).
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -205,7 +224,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route that you want to withdraw.
+         * <p>The destination CIDR block of the route that you want to withdraw.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.XX.XX.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);

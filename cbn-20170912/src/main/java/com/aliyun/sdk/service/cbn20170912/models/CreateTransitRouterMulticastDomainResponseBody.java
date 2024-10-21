@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterMulticastDomainResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTransitRouterMulticastDomainResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateTransitRouterMulticastDomainResponseBody extends TeaModel {
         private String transitRouterMulticastDomainId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94E19C6F-206F-5223-9A63-64B85851BC04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateTransitRouterMulticastDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the multicast domain.
+         * <p>The ID of the multicast domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-40cwj0rgzgdtam****</p>
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.transitRouterMulticastDomainId = transitRouterMulticastDomainId;

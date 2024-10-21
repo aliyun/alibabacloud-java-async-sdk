@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterCidrRequest} extends {@link RequestModel}
  *
  * <p>CreateTransitRouterCidrRequest</p>
@@ -210,7 +211,11 @@ public class CreateTransitRouterCidrRequest extends Request {
         } 
 
         /**
-         * The CIDR block of the transit router.
+         * <p>The CIDR block of the transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.0/24</p>
          */
         public Builder cidr(String cidr) {
             this.putQueryParameter("Cidr", cidr);
@@ -219,12 +224,14 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -233,10 +240,11 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The description of the transit router CIDR block.
-         * <p>
+         * <p>The description of the transit router CIDR block.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -245,11 +253,14 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -258,10 +269,11 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The name of the transit router CIDR block.
-         * <p>
+         * <p>The name of the transit router CIDR block.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -288,16 +300,18 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
-         * <p>
+         * <p>Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default)</p>
+         * <p>If you set the value to true, after you create a VPN attachment on a private VPN gateway and enable route learning for the VPN attachment, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN attachment:</p>
+         * <p>A blackhole route whose destination CIDR block is the transit router CIDR block, which refers to the CIDR block from which gateway IP addresses are allocated to the IPsec-VPN connection. The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.</p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
+         * </ul>
          * 
-         * *   **true** (default)
-         * 
-         *     If you set the value to true, after you create a VPN attachment on a private VPN gateway and enable route learning for the VPN attachment, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN attachment:
-         * 
-         *     A blackhole route whose destination CIDR block is the transit router CIDR block, which refers to the CIDR block from which gateway IP addresses are allocated to the IPsec-VPN connection. The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.
-         * 
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publishCidrRoute(Boolean publishCidrRoute) {
             this.putQueryParameter("PublishCidrRoute", publishCidrRoute);
@@ -306,10 +320,12 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the transfer router belongs.
-         * <p>
+         * <p>The ID of the region to which the transfer router belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -336,7 +352,11 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-p0w3x8c9em72a40nw****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

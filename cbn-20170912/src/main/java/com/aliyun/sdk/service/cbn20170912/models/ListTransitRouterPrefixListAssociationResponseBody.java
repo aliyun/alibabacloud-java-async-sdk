@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterPrefixListAssociationResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterPrefixListAssociationResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         }
 
         /**
-         * A list of prefix lists.
+         * <p>A list of prefix lists.</p>
          */
         public Builder prefixLists(java.util.List < PrefixLists> prefixLists) {
             this.prefixLists = prefixLists;
@@ -109,7 +116,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6005CA94-676E-1FEE-985E-7602EFAADD6A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterPrefixListAssociationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterPrefixListAssociationResponseBody</p>
+     */
     public static class PrefixLists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextHop")
         private String nextHop;
@@ -241,10 +260,13 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             private String transitRouterTableId; 
 
             /**
-             * The ID of the next hop.
-             * <p>
+             * <p>The ID of the next hop.</p>
+             * <blockquote>
+             * <p>A value of <strong>BlackHole</strong> indicates that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</p>
+             * </blockquote>
              * 
-             * > A value of **BlackHole** indicates that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.
+             * <strong>example:</strong>
+             * <p>tr-attach-flbq507rg2ckrj****</p>
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -252,7 +274,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the network instance associated with the next hop connection.
+             * <p>The ID of the network instance associated with the next hop connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-6eh7fp9hdqa2wv85t****</p>
              */
             public Builder nextHopInstanceId(String nextHopInstanceId) {
                 this.nextHopInstanceId = nextHopInstanceId;
@@ -260,13 +285,16 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             }
 
             /**
-             * The type of the next hop. Valid values:
-             * <p>
+             * <p>The type of the next hop. Valid values:</p>
+             * <ul>
+             * <li><strong>BlackHole</strong>: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</li>
+             * <li><strong>VPC</strong>: The next hop of the CIDR blocks in the prefix list is a VPC connection.</li>
+             * <li><strong>VBR</strong>: The next hop of the CIDR blocks in the prefix list is a VBR connection.</li>
+             * <li><strong>TR</strong>: The next hop of the CIDR blocks in the prefix list is an inter-region connection.</li>
+             * </ul>
              * 
-             * *   **BlackHole**: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.
-             * *   **VPC**: The next hop of the CIDR blocks in the prefix list is a VPC connection.
-             * *   **VBR**: The next hop of the CIDR blocks in the prefix list is a VBR connection.
-             * *   **TR**: The next hop of the CIDR blocks in the prefix list is an inter-region connection.
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -274,7 +302,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the prefix list belongs.
+             * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456123456</p>
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -282,7 +313,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the prefix list.
+             * <p>The ID of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-6ehtn5kqxgeyy08fi****</p>
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -290,11 +324,14 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             }
 
             /**
-             * The status of the prefix list. Valid values:
-             * <p>
+             * <p>The status of the prefix list. Valid values:</p>
+             * <ul>
+             * <li><strong>Active</strong>: The prefix list is effective.</li>
+             * <li><strong>Updating</strong>: The prefix list is being updated.</li>
+             * </ul>
              * 
-             * *   **Active**: The prefix list is effective.
-             * *   **Updating**: The prefix list is being updated.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -302,7 +339,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the transit router.
+             * <p>The ID of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-6ehx7q2jze8ch5ji0****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -310,7 +350,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the route table of the transit router.
+             * <p>The ID of the route table of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-6ehgc262hr170qgyc****</p>
              */
             public Builder transitRouterTableId(String transitRouterTableId) {
                 this.transitRouterTableId = transitRouterTableId;

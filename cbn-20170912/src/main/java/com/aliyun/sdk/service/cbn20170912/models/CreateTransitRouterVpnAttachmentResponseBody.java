@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterVpnAttachmentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTransitRouterVpnAttachmentResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateTransitRouterVpnAttachmentResponseBody extends TeaModel {
         private String transitRouterAttachmentId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B5DD40A-3A29-5AC0-B8DA-05FD10D5C893</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateTransitRouterVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPN attachment.
+         * <p>The ID of the VPN attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-y5dup2qwfyh9lu****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.transitRouterAttachmentId = transitRouterAttachmentId;

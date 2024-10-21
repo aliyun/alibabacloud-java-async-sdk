@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterPrefixListAssociationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTransitRouterPrefixListAssociationResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateTransitRouterPrefixListAssociationResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

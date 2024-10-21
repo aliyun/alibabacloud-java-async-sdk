@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenGeographicSpanRemainingBandwidthResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCenGeographicSpanRemainingBandwidthResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeCenGeographicSpanRemainingBandwidthResponseBody extends Tea
         private String requestId; 
 
         /**
-         * The remaining bandwidth of the bandwidth plan. Unit: Mbit/s.
+         * <p>The remaining bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder remainingBandwidth(Long remainingBandwidth) {
             this.remainingBandwidth = remainingBandwidth;
@@ -57,7 +61,10 @@ public class DescribeCenGeographicSpanRemainingBandwidthResponseBody extends Tea
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4B345CD-2CBA-4881-AF6D-E5D9BAE1CA7B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCenChildInstanceRouteEntryToCenResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCenChildInstanceRouteEntryToCenResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteCenChildInstanceRouteEntryToCenResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C05000A4-2FC5-5B2C-9527-954044DE2CF3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

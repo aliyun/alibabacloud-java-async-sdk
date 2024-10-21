@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCenInterRegionTrafficQosPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateCenInterRegionTrafficQosPolicyRequest</p>
@@ -218,10 +219,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -230,11 +232,14 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the API request. Valid values:
-         * <p>
+         * <p>Specifies whether only to precheck the API request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -279,10 +284,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The description of the QoS policy.
-         * <p>
+         * <p>The description of the QoS policy.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         public Builder trafficQosPolicyDescription(String trafficQosPolicyDescription) {
             this.putQueryParameter("TrafficQosPolicyDescription", trafficQosPolicyDescription);
@@ -291,10 +297,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The name of the QoS policy.
-         * <p>
+         * <p>The name of the QoS policy.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder trafficQosPolicyName(String trafficQosPolicyName) {
             this.putQueryParameter("TrafficQosPolicyName", trafficQosPolicyName);
@@ -303,10 +310,8 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The information about the QoS queue.
-         * <p>
-         * 
-         * You can add at most three QoS queues in a QoS policy by calling this operation. To add more QoS queues, call the CreateCenInterRegionTrafficQosQueue operation.
+         * <p>The information about the QoS queue.</p>
+         * <p>You can add at most three QoS queues in a QoS policy by calling this operation. To add more QoS queues, call the CreateCenInterRegionTrafficQosQueue operation.</p>
          */
         public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
             this.putQueryParameter("TrafficQosQueues", trafficQosQueues);
@@ -315,7 +320,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the inter-region connection.
+         * <p>The ID of the inter-region connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-r6g0m3epjehw57****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -324,7 +333,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-8vbuqeo5h5pu3m01d****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -339,6 +352,12 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCenInterRegionTrafficQosPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCenInterRegionTrafficQosPolicyRequest</p>
+     */
     public static class TrafficQosQueues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
@@ -422,10 +441,8 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * The Differentiated Services Code Point (DSCP) value that matches the current queue.
-             * <p>
-             * 
-             * Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).
+             * <p>The Differentiated Services Code Point (DSCP) value that matches the current queue.</p>
+             * <p>Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).</p>
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
@@ -433,12 +450,12 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * The description of the current queue.
-             * <p>
+             * <p>The description of the current queue.</p>
+             * <p>Each QoS policy supports at most three queues. You can specify a description for each queue.</p>
+             * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
              * 
-             * Each QoS policy supports at most three queues. You can specify a description for each queue.
-             * 
-             * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder qosQueueDescription(String qosQueueDescription) {
                 this.qosQueueDescription = qosQueueDescription;
@@ -446,12 +463,12 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * The name of the current queue.
-             * <p>
+             * <p>The name of the current queue.</p>
+             * <p>Each QoS policy supports at most three queues. You can specify a name for each queue.</p>
+             * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
              * 
-             * Each QoS policy supports at most three queues. You can specify a name for each queue.
-             * 
-             * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder qosQueueName(String qosQueueName) {
                 this.qosQueueName = qosQueueName;
@@ -459,14 +476,15 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * The percentage of the inter-region bandwidth that can be used by the queue.
-             * <p>
+             * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
+             * <p>Each QoS policy supports at most three queues. You can specify a valid percentage for each queue.</p>
+             * <p>For example, a value of <strong>1</strong> specifies that the queue can consume 1% of the inter-region bandwidth.</p>
+             * <blockquote>
+             * <p> The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>
+             * </blockquote>
              * 
-             * Each QoS policy supports at most three queues. You can specify a valid percentage for each queue.
-             * 
-             * For example, a value of **1** specifies that the queue can consume 1% of the inter-region bandwidth.
-             * 
-             * >  The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder remainBandwidthPercent(String remainBandwidthPercent) {
                 this.remainBandwidthPercent = remainBandwidthPercent;

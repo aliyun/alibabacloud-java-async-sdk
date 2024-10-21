@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetCenInterRegionBandwidthLimitRequest} extends {@link RequestModel}
  *
  * <p>SetCenInterRegionBandwidthLimitRequest</p>
@@ -169,7 +170,11 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
+         * <p>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder bandwidthLimit(Long bandwidthLimit) {
             this.putQueryParameter("BandwidthLimit", bandwidthLimit);
@@ -178,10 +183,11 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * The bandwidth allocation method. Valid values:
-         * <p>
+         * <p>The bandwidth allocation method. Valid values:</p>
+         * <p><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</p>
          * 
-         * **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+         * <strong>example:</strong>
+         * <p>BandwidthPackage</p>
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -190,7 +196,11 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmx****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -199,10 +209,12 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * The ID of the local region.
-         * <p>
+         * <p>The ID of the local region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query regions where you can attach network instances to a CEN instance.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query regions where you can attach network instances to a CEN instance.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder localRegionId(String localRegionId) {
             this.putQueryParameter("LocalRegionId", localRegionId);
@@ -211,7 +223,11 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * The ID of the peer region.
+         * <p>The ID of the peer region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us-west-1</p>
          */
         public Builder oppositeRegionId(String oppositeRegionId) {
             this.putQueryParameter("OppositeRegionId", oppositeRegionId);

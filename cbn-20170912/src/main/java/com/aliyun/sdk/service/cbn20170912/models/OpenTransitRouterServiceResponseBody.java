@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenTransitRouterServiceResponseBody} extends {@link TeaModel}
  *
  * <p>OpenTransitRouterServiceResponseBody</p>
@@ -49,7 +50,10 @@ public class OpenTransitRouterServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21370700730****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class OpenTransitRouterServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>866DEBE1-6411-51EC-80D8-975349B9FB4A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

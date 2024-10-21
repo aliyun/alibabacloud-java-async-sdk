@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRoutersRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRoutersRequest</p>
@@ -235,7 +236,10 @@ public class ListTransitRoutersRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-j3jzhw1zpau2km****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -244,7 +248,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * The field that is used to enable or disable a feature of the transit router.
+         * <p>The field that is used to enable or disable a feature of the transit router.</p>
          */
         public Builder featureFilter(java.util.List < FeatureFilter> featureFilter) {
             this.putQueryParameter("FeatureFilter", featureFilter);
@@ -271,7 +275,10 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -280,7 +287,10 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -289,10 +299,11 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
-         * <p>
+         * <p>The ID of the region where the transit router is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -319,14 +330,17 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * The status of the transit router. Valid values:
-         * <p>
+         * <p>The status of the transit router. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The transit router is being created.</li>
+         * <li><strong>Active</strong>: The transit router is available.</li>
+         * <li><strong>Modifying</strong>: The transit router is being modified</li>
+         * <li><strong>Deleting</strong>: The transit router is being deleted.</li>
+         * <li><strong>Upgrading</strong>: The transit router is being upgraded.</li>
+         * </ul>
          * 
-         * *   **Creating**: The transit router is being created.
-         * *   **Active**: The transit router is available.
-         * *   **Modifying**: The transit router is being modified
-         * *   **Deleting**: The transit router is being deleted.
-         * *   **Upgrading**: The transit router is being upgraded.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -335,10 +349,8 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * The information about the tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * <p>The information about the tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -347,7 +359,10 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-uf654ttymmljlvh2x****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -356,10 +371,11 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * The name of the Enterprise Edition transit router.
-         * <p>
+         * <p>The name of the Enterprise Edition transit router.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterName(String transitRouterName) {
             this.putQueryParameter("TransitRouterName", transitRouterName);
@@ -368,11 +384,14 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * The edition of the transit router. Valid values:
-         * <p>
+         * <p>The edition of the transit router. Valid values:</p>
+         * <ul>
+         * <li><strong>Enterprise</strong>: Enhance Edition</li>
+         * <li><strong>Basic</strong>: Basic Edition</li>
+         * </ul>
          * 
-         * *   **Enterprise**: Enhance Edition
-         * *   **Basic**: Basic Edition
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -387,6 +406,12 @@ public class ListTransitRoutersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRoutersRequest} extends {@link TeaModel}
+     *
+     * <p>ListTransitRoutersRequest</p>
+     */
     public static class FeatureFilter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -426,10 +451,13 @@ public class ListTransitRoutersRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The value of the field that is used to enable or disable a feature of the transit router. Supported fields:
-             * <p>
+             * <p>The value of the field that is used to enable or disable a feature of the transit router. Supported fields:</p>
+             * <ul>
+             * <li><strong>Multicast</strong>: the multicast feature.</li>
+             * </ul>
              * 
-             * *   **Multicast**: the multicast feature.
+             * <strong>example:</strong>
+             * <p>Multicast</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -437,11 +465,11 @@ public class ListTransitRoutersRequest extends Request {
             }
 
             /**
-             * The fields that are used to enable or disable the features of the transit router. The **Multicast** field supports only one value. Valid values:
-             * <p>
-             * 
-             * *   **Enabled**: enables multicast.
-             * *   **Disabled**: disables multicast.
+             * <p>The fields that are used to enable or disable the features of the transit router. The <strong>Multicast</strong> field supports only one value. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enables multicast.</li>
+             * <li><strong>Disabled</strong>: disables multicast.</li>
+             * </ul>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -455,6 +483,12 @@ public class ListTransitRoutersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRoutersRequest} extends {@link TeaModel}
+     *
+     * <p>ListTransitRoutersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -494,12 +528,12 @@ public class ListTransitRoutersRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -507,12 +541,12 @@ public class ListTransitRoutersRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
              * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

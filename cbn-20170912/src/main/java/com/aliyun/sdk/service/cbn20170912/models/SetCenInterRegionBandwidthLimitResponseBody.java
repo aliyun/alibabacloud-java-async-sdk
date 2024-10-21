@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetCenInterRegionBandwidthLimitResponseBody} extends {@link TeaModel}
  *
  * <p>SetCenInterRegionBandwidthLimitResponseBody</p>
@@ -37,7 +38,10 @@ public class SetCenInterRegionBandwidthLimitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>530BC816-F575-412A-AAB2-435125D26328</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

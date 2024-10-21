@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCenInterRegionTrafficQosPolicyAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateCenInterRegionTrafficQosPolicyAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeResponseBody extends T
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5B8465FF-E697-5D3D-AAD5-0B4EEADFDB27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

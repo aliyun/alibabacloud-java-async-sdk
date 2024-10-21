@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePublishedRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribePublishedRouteEntriesRequest</p>
@@ -183,7 +184,11 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jm****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -192,7 +197,11 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * <p>The ID of the network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp18sth14qii3pnv****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -201,10 +210,12 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
+         * <p>The ID of the region where the network instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -213,7 +224,10 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the network instance.
+         * <p>The ID of the route table of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp174d1gje79u1g4****</p>
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -222,12 +236,16 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**: VPC
-         * *   **VBR**: VBR
-         * *   **CCN**: Cloud Connect Network (CCN) instance
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -236,7 +254,10 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route that you want to query.
+         * <p>The destination CIDR block of the route that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0/16</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -245,7 +266,10 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,7 +278,10 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

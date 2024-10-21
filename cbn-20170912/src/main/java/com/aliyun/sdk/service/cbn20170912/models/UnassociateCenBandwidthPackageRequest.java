@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociateCenBandwidthPackageRequest} extends {@link RequestModel}
  *
  * <p>UnassociateCenBandwidthPackageRequest</p>
@@ -125,7 +126,11 @@ public class UnassociateCenBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * The ID of the bandwidth plan.
+         * <p>The ID of the bandwidth plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenbwp-4c2zaavbvh5****</p>
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -134,7 +139,11 @@ public class UnassociateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6j****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);

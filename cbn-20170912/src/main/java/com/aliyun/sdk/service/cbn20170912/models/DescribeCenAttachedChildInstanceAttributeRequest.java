@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenAttachedChildInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeCenAttachedChildInstanceAttributeRequest</p>
@@ -155,7 +156,11 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-5mv960yjhja0dh****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -164,7 +169,11 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the network instance that is attached to the CEN instance.
+         * <p>The ID of the network instance that is attached to the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zebdboka7d7t37vo****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -173,10 +182,12 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the network instance.
-         * <p>
+         * <p>The region ID of the network instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -185,12 +196,16 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+         * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **VBR**: virtual border router (VBR)
-         * *   **CCN**: Cloud Connect Network (CCN) instance
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);

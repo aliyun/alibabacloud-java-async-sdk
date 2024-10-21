@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterAvailableResourceResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterAvailableResourceResponseBody</p>
@@ -85,7 +86,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         private Boolean supportMulticast; 
 
         /**
-         * A list of zone IDs.
+         * <p>A list of zone IDs.</p>
          */
         public Builder availableZones(java.util.List < String > availableZones) {
             this.availableZones = availableZones;
@@ -93,7 +94,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * A list of primary zones.
+         * <p>A list of primary zones.</p>
          */
         public Builder masterZones(java.util.List < String > masterZones) {
             this.masterZones = masterZones;
@@ -101,7 +102,10 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4F480E0-4E76-5E43-9966-8322C28A158A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +113,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * A list of secondary zone IDs.
+         * <p>A list of secondary zone IDs.</p>
          */
         public Builder slaveZones(java.util.List < String > slaveZones) {
             this.slaveZones = slaveZones;
@@ -117,7 +121,10 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the zone supports the multicast feature.
+         * <p>Indicates whether the zone supports the multicast feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder supportMulticast(Boolean supportMulticast) {
             this.supportMulticast = supportMulticast;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterCidrAllocationRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterCidrAllocationRequest</p>
@@ -266,7 +267,10 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         } 
 
         /**
-         * The ID of the network instance connection.
+         * <p>The ID of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-2nalp6yksc805w****</p>
          */
         public Builder attachmentId(String attachmentId) {
             this.putQueryParameter("AttachmentId", attachmentId);
@@ -275,7 +279,10 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The name of the network instance connection.
+         * <p>The name of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder attachmentName(String attachmentName) {
             this.putQueryParameter("AttachmentName", attachmentName);
@@ -284,7 +291,10 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The CIDR block of the transit router.
+         * <p>The CIDR block of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.0/24</p>
          */
         public Builder cidr(String cidr) {
             this.putQueryParameter("Cidr", cidr);
@@ -293,7 +303,10 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The CIDR blocks that have IP addresses allocated to network instances.
+         * <p>The CIDR blocks that have IP addresses allocated to network instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.0/28</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -302,12 +315,14 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -316,10 +331,11 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The CIDR block that is for exclusive use.
-         * <p>
+         * <p>The CIDR block that is for exclusive use.</p>
+         * <p>Set the value to <strong>VPN</strong>, which specifies the CIDR block that is reserved for VPN connections.</p>
          * 
-         * Set the value to **VPN**, which specifies the CIDR block that is reserved for VPN connections.
+         * <strong>example:</strong>
+         * <p>VPN</p>
          */
         public Builder dedicatedOwnerId(String dedicatedOwnerId) {
             this.putQueryParameter("DedicatedOwnerId", dedicatedOwnerId);
@@ -328,11 +344,14 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -341,14 +360,17 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li><p>If you do not specify a value for <strong>MaxResults</strong>, entries are returned in one response. After you send the request, the value of <strong>MaxResults</strong> includes all entries.</p>
+         * </li>
+         * <li><p>If you specify a value for <strong>MaxResults</strong>, entries are returned in batches. Valid values: <strong>1</strong> to <strong>100</strong>. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.</p>
+         * <p>The value of <strong>MaxResults</strong> in the response indicates that number of entries in the current batch.</p>
+         * </li>
+         * </ul>
          * 
-         * *   If you do not specify a value for **MaxResults**, entries are returned in one response. After you send the request, the value of **MaxResults** includes all entries.
-         * 
-         * *   If you specify a value for **MaxResults**, entries are returned in batches. Valid values: **1** to **100**. We recommend that you set **MaxResults** to **20**.
-         * 
-         *     The value of **MaxResults** in the response indicates that number of entries in the current batch.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -357,11 +379,14 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -388,10 +413,12 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The region ID of the transit router.
-         * <p>
+         * <p>The region ID of the transit router.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -418,10 +445,11 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The ID of the CIDR block.
-         * <p>
+         * <p>The ID of the CIDR block.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the ID of a CIDR block.</p>
          * 
-         * You can call the [ListTransitRouterCidr](~~462772~~) operation to query the ID of a CIDR block.
+         * <strong>example:</strong>
+         * <p>cidr-0zv0q9crqpntzz****</p>
          */
         public Builder transitRouterCidrId(String transitRouterCidrId) {
             this.putQueryParameter("TransitRouterCidrId", transitRouterCidrId);
@@ -430,7 +458,11 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-p0w3x8c9em72a40nw****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenRegionDomainRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCenRegionDomainRouteEntriesRequest</p>
@@ -167,7 +168,11 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         } 
 
         /**
-         * The CEN instance ID.
+         * <p>The CEN instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6j****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -176,10 +181,12 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder cenRegionId(String cenRegionId) {
             this.putQueryParameter("CenRegionId", cenRegionId);
@@ -206,7 +213,10 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +225,10 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1** to **500**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,14 +255,17 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * The route status. Valid values:
-         * <p>
+         * <p>The route status. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong> (default): available</li>
+         * <li><strong>Candidate</strong>: standby</li>
+         * <li><strong>Rejected</strong>: rejected</li>
+         * <li><strong>Prohibited</strong>: prohibited</li>
+         * <li><strong>All</strong> (default value): all routes</li>
+         * </ul>
          * 
-         * *   **Active** (default): available
-         * *   **Candidate**: standby
-         * *   **Rejected**: rejected
-         * *   **Prohibited**: prohibited
-         * *   **All** (default value): all routes
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

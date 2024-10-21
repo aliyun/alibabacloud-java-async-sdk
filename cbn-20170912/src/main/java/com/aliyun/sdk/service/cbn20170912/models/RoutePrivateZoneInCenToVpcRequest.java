@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RoutePrivateZoneInCenToVpcRequest} extends {@link RequestModel}
  *
  * <p>RoutePrivateZoneInCenToVpcRequest</p>
@@ -155,12 +156,13 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         } 
 
         /**
-         * The ID of the region where PrivateZone is accessed.
-         * <p>
+         * <p>The ID of the region where PrivateZone is accessed.</p>
+         * <p>This region refers to the region in which PrivateZone is accessed by clients.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This region refers to the region in which PrivateZone is accessed by clients.
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -169,7 +171,11 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -178,7 +184,11 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * The ID of the region where PrivateZone is deployed.
+         * <p>The ID of the region where PrivateZone is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder hostRegionId(String hostRegionId) {
             this.putQueryParameter("HostRegionId", hostRegionId);
@@ -187,7 +197,11 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * The ID of the VPC that is associated with PrivateZone.
+         * <p>The ID of the VPC that is associated with PrivateZone.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1h8vbrbcgohcju5****</p>
          */
         public Builder hostVpcId(String hostVpcId) {
             this.putQueryParameter("HostVpcId", hostVpcId);

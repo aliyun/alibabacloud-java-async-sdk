@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterRouteEntryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTransitRouterRouteEntryResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateTransitRouterRouteEntryResponseBody extends TeaModel {
         private String transitRouterRouteEntryId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>835E7F4B-B380-4E0F-96A5-6EA572388047</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateTransitRouterRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the route.
+         * <p>The ID of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-75eg4jprkvk0pw****</p>
          */
         public Builder transitRouterRouteEntryId(String transitRouterRouteEntryId) {
             this.transitRouterRouteEntryId = transitRouterRouteEntryId;

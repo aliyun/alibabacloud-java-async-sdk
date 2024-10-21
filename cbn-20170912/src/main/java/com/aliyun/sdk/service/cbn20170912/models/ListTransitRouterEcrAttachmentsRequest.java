@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterEcrAttachmentsRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterEcrAttachmentsRequest</p>
@@ -193,7 +194,10 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -202,7 +206,10 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -211,11 +218,14 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -242,10 +252,11 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * The region ID of the transit router.
-         * <p>
+         * <p>The region ID of the transit router.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,10 +283,8 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * The tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags.
+         * <p>The tags.</p>
+         * <p>You can specify at most 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -284,7 +293,10 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * The ID of the ECR connection.
+         * <p>The ID of the ECR connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-nls9fzkfat8934****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -293,7 +305,10 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-6ehx7q2jze8ch5ji0****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -308,6 +323,12 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterEcrAttachmentsRequest} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterEcrAttachmentsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -347,12 +368,12 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys in each call.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys in each call.
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -360,12 +381,12 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
              * 
-             * The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
-             * 
-             * Each key-value must be unique. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

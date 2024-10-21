@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChildInstanceRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChildInstanceRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * A list of regions.
+         * <p>A list of regions.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D5CEED59-36AA-47CC-9D81-16F71C46BD80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChildInstanceRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChildInstanceRegionsResponseBody</p>
+     */
     public static class Region extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -109,7 +119,10 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -117,7 +130,10 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -131,6 +147,12 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChildInstanceRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChildInstanceRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < Region> region;

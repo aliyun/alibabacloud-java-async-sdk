@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterMulticastDomainAssociationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterMulticastDomainAssociationsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         private java.util.List < TransitRouterMulticastAssociations> transitRouterMulticastAssociations; 
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +97,14 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, it indicates that no subsequent query is to be sent.</li>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, it indicates that no subsequent query is to be sent.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CD0969B-A605-5D2D-BFF0-699FD182FB7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -121,7 +134,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         }
 
         /**
-         * The information about the resource associated with the multicast domain.
+         * <p>The information about the resource associated with the multicast domain.</p>
          */
         public Builder transitRouterMulticastAssociations(java.util.List < TransitRouterMulticastAssociations> transitRouterMulticastAssociations) {
             this.transitRouterMulticastAssociations = transitRouterMulticastAssociations;
@@ -134,6 +147,12 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterMulticastDomainAssociationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterMulticastDomainAssociationsResponseBody</p>
+     */
     public static class TransitRouterMulticastAssociations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -233,7 +252,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             private String vSwitchId; 
 
             /**
-             * The ID of the resource associated with the multicast domain.
+             * <p>The ID of the resource associated with the multicast domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-p0w9b7g9l90yofr0n****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -241,7 +263,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource associated with the multicast domain belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource associated with the multicast domain belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456123456</p>
              */
             public Builder resourceOwnerId(Long resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -249,10 +274,11 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * The type of resource associated with the multicast domain.
-             * <p>
+             * <p>The type of resource associated with the multicast domain.</p>
+             * <p>Valid value: <strong>VPC</strong>.</p>
              * 
-             * Valid value: **VPC**.
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -260,12 +286,15 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * The association status. Valid values:
-             * <p>
+             * <p>The association status. Valid values:</p>
+             * <ul>
+             * <li><strong>Associated</strong>: The resource is associated with the multicast domain.</li>
+             * <li><strong>Associating</strong>: The resource is being associated with the multicast domain.</li>
+             * <li><strong>Dissociating</strong>: The resource is being disassociated from the multicast domain.</li>
+             * </ul>
              * 
-             * *   **Associated**: The resource is associated with the multicast domain.
-             * *   **Associating**: The resource is being associated with the multicast domain.
-             * *   **Dissociating**: The resource is being disassociated from the multicast domain.
+             * <strong>example:</strong>
+             * <p>Dissociating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -273,7 +302,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * The ID of the network instance connection.
+             * <p>The ID of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-p90y3ymbbwuvy5****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -281,7 +313,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * The ID of the multicast domain.
+             * <p>The ID of the multicast domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
              */
             public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
                 this.transitRouterMulticastDomainId = transitRouterMulticastDomainId;
@@ -289,7 +324,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-p0wxk12u6okfkr8xy****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

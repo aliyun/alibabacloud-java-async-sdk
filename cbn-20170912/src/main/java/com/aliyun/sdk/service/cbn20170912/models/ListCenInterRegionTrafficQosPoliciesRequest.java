@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCenInterRegionTrafficQosPoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListCenInterRegionTrafficQosPoliciesRequest</p>
@@ -193,7 +194,10 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -202,11 +206,14 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
+         * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -251,10 +258,11 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * The description of the QoS policy.
-         * <p>
+         * <p>The description of the QoS policy.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         public Builder trafficQosPolicyDescription(String trafficQosPolicyDescription) {
             this.putQueryParameter("TrafficQosPolicyDescription", trafficQosPolicyDescription);
@@ -263,7 +271,10 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the QoS policy.
+         * <p>The ID of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-rnghap5gc8155x****</p>
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.putQueryParameter("TrafficQosPolicyId", trafficQosPolicyId);
@@ -272,10 +283,11 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * The name of the QoS policy.
-         * <p>
+         * <p>The name of the QoS policy.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder trafficQosPolicyName(String trafficQosPolicyName) {
             this.putQueryParameter("TrafficQosPolicyName", trafficQosPolicyName);
@@ -284,7 +296,10 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the inter-region connection.
+         * <p>The ID of the inter-region connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-r6g0m3epjehw57****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -293,7 +308,10 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1rmwxnk221e3fas****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

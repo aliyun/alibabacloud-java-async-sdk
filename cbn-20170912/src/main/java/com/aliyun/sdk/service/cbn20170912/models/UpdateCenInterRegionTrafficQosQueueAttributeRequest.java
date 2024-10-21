@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCenInterRegionTrafficQosQueueAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateCenInterRegionTrafficQosQueueAttributeRequest</p>
@@ -217,10 +218,11 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -229,11 +231,14 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -242,7 +247,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The differentiated services code point (DSCP) value used to match packets in the queue.
+         * <p>The differentiated services code point (DSCP) value used to match packets in the queue.</p>
          */
         public Builder dscps(java.util.List < Integer > dscps) {
             this.putQueryParameter("Dscps", dscps);
@@ -269,10 +274,11 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The new description of the queue.
-         * <p>
+         * <p>The new description of the queue.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         public Builder qosQueueDescription(String qosQueueDescription) {
             this.putQueryParameter("QosQueueDescription", qosQueueDescription);
@@ -281,7 +287,11 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The queue ID.
+         * <p>The queue ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-queue-nv2vfzqkewhk4t****</p>
          */
         public Builder qosQueueId(String qosQueueId) {
             this.putQueryParameter("QosQueueId", qosQueueId);
@@ -290,10 +300,11 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The new name of the queue.
-         * <p>
+         * <p>The new name of the queue.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder qosQueueName(String qosQueueName) {
             this.putQueryParameter("QosQueueName", qosQueueName);
@@ -302,10 +313,11 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The percentage of the inter-region bandwidth that can be used by the queue.
-         * <p>
+         * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
+         * <p>Enter a number. You do not need to enter a percent sign (%).</p>
          * 
-         * Enter a number. You do not need to enter a percent sign (%).
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder remainBandwidthPercent(String remainBandwidthPercent) {
             this.putQueryParameter("RemainBandwidthPercent", remainBandwidthPercent);

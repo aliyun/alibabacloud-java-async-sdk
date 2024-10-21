@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTransitRouterVpnAttachmentAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateTransitRouterVpnAttachmentAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateTransitRouterVpnAttachmentAttributeResponseBody extends TeaMo
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AB038F2-96E5-560B-9F6E-734311D466FA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

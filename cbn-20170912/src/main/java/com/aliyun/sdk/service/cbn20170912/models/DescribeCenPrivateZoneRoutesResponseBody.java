@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenPrivateZoneRoutesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCenPrivateZoneRoutesResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -117,7 +121,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -125,7 +132,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -133,7 +143,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the DNS server used by PrivateZone.
+         * <p>The IP address of the DNS server used by PrivateZone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.100.XX.XX/32,100.100.XX.XX/32</p>
          */
         public Builder privateZoneDnsServers(String privateZoneDnsServers) {
             this.privateZoneDnsServers = privateZoneDnsServers;
@@ -141,7 +154,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed configuration of PrivateZone.
+         * <p>The detailed configuration of PrivateZone.</p>
          */
         public Builder privateZoneInfos(PrivateZoneInfos privateZoneInfos) {
             this.privateZoneInfos = privateZoneInfos;
@@ -149,7 +162,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>461EC1B5-04A8-4706-8764-8F5BCEF48A6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +173,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,6 +189,12 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenPrivateZoneRoutesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenPrivateZoneRoutesResponseBody</p>
+     */
     public static class PrivateZoneInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessRegionId")
         private String accessRegionId;
@@ -233,7 +258,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the region where PrivateZone is accessed.
+             * <p>The ID of the region where PrivateZone is accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder accessRegionId(String accessRegionId) {
                 this.accessRegionId = accessRegionId;
@@ -241,7 +269,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where PrivateZone is deployed.
+             * <p>The ID of the region where PrivateZone is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder hostRegionId(String hostRegionId) {
                 this.hostRegionId = hostRegionId;
@@ -249,7 +280,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC that is associated with PrivateZone.
+             * <p>The ID of the VPC that is associated with PrivateZone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp18sth14qii3pnvo****</p>
              */
             public Builder hostVpcId(String hostVpcId) {
                 this.hostVpcId = hostVpcId;
@@ -257,12 +291,15 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of PrivateZone. Valid values:
-             * <p>
+             * <p>The status of PrivateZone. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong>: being created</li>
+             * <li><strong>Active</strong>: available</li>
+             * <li><strong>Deleting</strong>: being deleted</li>
+             * </ul>
              * 
-             * *   **Creating**: being created
-             * *   **Active**: available
-             * *   **Deleting**: being deleted
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -276,6 +313,12 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenPrivateZoneRoutesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenPrivateZoneRoutesResponseBody</p>
+     */
     public static class PrivateZoneInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateZoneInfo")
         private java.util.List < PrivateZoneInfo> privateZoneInfo;

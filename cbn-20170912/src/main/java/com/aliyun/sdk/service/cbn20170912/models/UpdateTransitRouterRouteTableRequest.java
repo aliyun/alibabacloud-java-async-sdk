@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTransitRouterRouteTableRequest} extends {@link RequestModel}
  *
  * <p>UpdateTransitRouterRouteTableRequest</p>
@@ -180,12 +181,14 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -194,11 +197,14 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Default values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * </ul>
          * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -243,7 +249,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * The features of the route table.
+         * <p>The features of the route table.</p>
          */
         public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
             this.putQueryParameter("RouteTableOptions", routeTableOptions);
@@ -252,10 +258,11 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * The description of the route table.
-         * <p>
+         * <p>The description of the route table.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         public Builder transitRouterRouteTableDescription(String transitRouterRouteTableDescription) {
             this.putQueryParameter("TransitRouterRouteTableDescription", transitRouterRouteTableDescription);
@@ -264,7 +271,11 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the Enterprise Edition transit router.
+         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1dudbh2d5na6b50****</p>
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);
@@ -273,10 +284,11 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * The name of the route table.
-         * <p>
+         * <p>The name of the route table.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterRouteTableName(String transitRouterRouteTableName) {
             this.putQueryParameter("TransitRouterRouteTableName", transitRouterRouteTableName);
@@ -291,6 +303,12 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTransitRouterRouteTableRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTransitRouterRouteTableRequest</p>
+     */
     public static class RouteTableOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MultiRegionECMP")
         private String multiRegionECMP;
@@ -318,11 +336,14 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
             private String multiRegionECMP; 
 
             /**
-             * Indicates whether multi-region ECMP routing is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether multi-region ECMP routing is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>disable</strong>: If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * <li><strong>enable</strong>: If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * </ul>
              * 
-             * - **disable**: If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
-             * - **enable**: If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * <strong>example:</strong>
+             * <p>disable</p>
              */
             public Builder multiRegionECMP(String multiRegionECMP) {
                 this.multiRegionECMP = multiRegionECMP;

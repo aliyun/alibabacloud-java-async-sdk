@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterEcrAttachmentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTransitRouterEcrAttachmentResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateTransitRouterEcrAttachmentResponseBody extends TeaModel {
         private String transitRouterAttachmentId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0245BEF-52AC-44A8-A776-EF96FD26A5CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateTransitRouterEcrAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ECR connection.
+         * <p>The ID of the ECR connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-qieks13jnt1cchy***</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.transitRouterAttachmentId = transitRouterAttachmentId;

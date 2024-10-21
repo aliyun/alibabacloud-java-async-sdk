@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterMulticastDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterMulticastDomainsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         private java.util.List < TransitRouterMulticastDomains> transitRouterMulticastDomains; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +97,14 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8A0F93D1-FD6C-56FC-B6D2-668FC92D12D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -121,7 +134,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the multicast domain.
+         * <p>The information about the multicast domain.</p>
          */
         public Builder transitRouterMulticastDomains(java.util.List < TransitRouterMulticastDomains> transitRouterMulticastDomains) {
             this.transitRouterMulticastDomains = transitRouterMulticastDomains;
@@ -134,6 +147,12 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterMulticastDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterMulticastDomainsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -173,7 +192,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +203,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -195,6 +220,12 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRouterMulticastDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterMulticastDomainsResponseBody</p>
+     */
     public static class TransitRouterMulticastDomains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
@@ -306,7 +337,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             private String transitRouterMulticastDomainName; 
 
             /**
-             * The CEN instance ID.
+             * <p>The CEN instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-a7syd349kne38g****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -314,10 +348,11 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the transit router.
-             * <p>
+             * <p>The region ID of the transit router.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
              * 
-             * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -325,10 +360,11 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the multicast domain.
-             * <p>
+             * <p>The status of the multicast domain.</p>
+             * <p>The valid value is <strong>Active</strong>, which indicates that the multicast domain is available.</p>
              * 
-             * The valid value is **Active**, which indicates that the multicast domain is available.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -336,7 +372,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -344,7 +380,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The transit router ID.
+             * <p>The transit router ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-bp1c23ijrl6d6c226h***</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -352,7 +391,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the multicast domain.
+             * <p>The description of the multicast domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder transitRouterMulticastDomainDescription(String transitRouterMulticastDomainDescription) {
                 this.transitRouterMulticastDomainDescription = transitRouterMulticastDomainDescription;
@@ -360,7 +402,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the multicast domain.
+             * <p>The ID of the multicast domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-mcast-domain-3r3bvbypxqheej****</p>
              */
             public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
                 this.transitRouterMulticastDomainId = transitRouterMulticastDomainId;
@@ -368,7 +413,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the multicast domain.
+             * <p>The name of the multicast domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder transitRouterMulticastDomainName(String transitRouterMulticastDomainName) {
                 this.transitRouterMulticastDomainName = transitRouterMulticastDomainName;

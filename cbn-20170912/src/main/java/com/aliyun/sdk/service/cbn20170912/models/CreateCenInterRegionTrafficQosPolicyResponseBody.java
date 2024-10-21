@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCenInterRegionTrafficQosPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCenInterRegionTrafficQosPolicyResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateCenInterRegionTrafficQosPolicyResponseBody extends TeaModel {
         private String trafficQosPolicyId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6DF9A765-BCD2-5C7E-8C32-C35C8A361A39</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateCenInterRegionTrafficQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the QoS policy.
+         * <p>The ID of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-eczzew0v1kzrb5****</p>
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.trafficQosPolicyId = trafficQosPolicyId;

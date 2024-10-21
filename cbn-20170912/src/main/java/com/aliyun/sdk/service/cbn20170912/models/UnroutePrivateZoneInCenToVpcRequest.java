@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnroutePrivateZoneInCenToVpcRequest} extends {@link RequestModel}
  *
  * <p>UnroutePrivateZoneInCenToVpcRequest</p>
@@ -125,7 +126,10 @@ public class UnroutePrivateZoneInCenToVpcRequest extends Request {
         } 
 
         /**
-         * AccessRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -134,7 +138,10 @@ public class UnroutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * CenId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);

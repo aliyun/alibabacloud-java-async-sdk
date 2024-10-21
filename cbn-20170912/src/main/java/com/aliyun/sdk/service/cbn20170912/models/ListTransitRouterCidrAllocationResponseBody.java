@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterCidrAllocationResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterCidrAllocationResponseBody</p>
@@ -85,11 +86,14 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         private java.util.List < TransitRouterCidrAllocations> transitRouterCidrAllocations; 
 
         /**
-         * The number of entries returned per page.
-         * <p>
+         * <p>The number of entries returned per page.</p>
+         * <ul>
+         * <li>If no value is specified for <strong>MaxResults</strong>, query results are returned in one batch. The value of <strong>MaxResults</strong> indicates the total number of entries.</li>
+         * <li>If a value is specified for <strong>MaxResults</strong>, query results are returned in batches. The value of <strong>MaxResults</strong> in the response indicates the number of entries in the current batch.</li>
+         * </ul>
          * 
-         * *   If no value is specified for **MaxResults**, query results are returned in one batch. The value of **MaxResults** indicates the total number of entries.
-         * *   If a value is specified for **MaxResults**, query results are returned in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -97,11 +101,14 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** was not returned, it indicates that no additional results exist.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0876E54E-3E36-5C31-89F0-9EE8A9266F9A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -125,7 +138,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the CIDR blocks that have IP addresses allocated to network instances.
+         * <p>The information about the CIDR blocks that have IP addresses allocated to network instances.</p>
          */
         public Builder transitRouterCidrAllocations(java.util.List < TransitRouterCidrAllocations> transitRouterCidrAllocations) {
             this.transitRouterCidrAllocations = transitRouterCidrAllocations;
@@ -138,6 +151,12 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterCidrAllocationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterCidrAllocationResponseBody</p>
+     */
     public static class TransitRouterCidrAllocations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocatedCidrBlock")
         private String allocatedCidrBlock;
@@ -213,7 +232,10 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
             private String transitRouterCidrId; 
 
             /**
-             * The CIDR blocks that have IP addresses allocated to network instances.
+             * <p>The CIDR blocks that have IP addresses allocated to network instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/28</p>
              */
             public Builder allocatedCidrBlock(String allocatedCidrBlock) {
                 this.allocatedCidrBlock = allocatedCidrBlock;
@@ -221,7 +243,10 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network instance connection.
+             * <p>The ID of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-2nalp6yksc805w****</p>
              */
             public Builder attachmentId(String attachmentId) {
                 this.attachmentId = attachmentId;
@@ -229,7 +254,10 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the network instance connection.
+             * <p>The name of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -237,7 +265,10 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block of the transit router.
+             * <p>The CIDR block of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/24</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -245,7 +276,10 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CIDR block.
+             * <p>The ID of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cidr-0zv0q9crqpntzz****</p>
              */
             public Builder transitRouterCidrId(String transitRouterCidrId) {
                 this.transitRouterCidrId = transitRouterCidrId;

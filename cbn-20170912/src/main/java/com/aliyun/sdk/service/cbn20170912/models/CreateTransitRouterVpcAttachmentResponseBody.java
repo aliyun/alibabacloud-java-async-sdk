@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterVpcAttachmentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTransitRouterVpcAttachmentResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateTransitRouterVpcAttachmentResponseBody extends TeaModel {
         private String transitRouterAttachmentId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C087A369-82B9-43EF-91F4-4B63A9C6E6B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateTransitRouterVpcAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC connection.
+         * <p>The ID of the VPC connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-ia340z7xis7t5s****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.transitRouterAttachmentId = transitRouterAttachmentId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouteServicesInCenResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRouteServicesInCenResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>196C99CA-6997-5951-9721-AE89720DF856</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the cloud services.
+         * <p>The information about the cloud services.</p>
          */
         public Builder routeServiceEntries(RouteServiceEntries routeServiceEntries) {
             this.routeServiceEntries = routeServiceEntries;
@@ -117,7 +127,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouteServicesInCenResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteServicesInCenResponseBody</p>
+     */
     public static class Cidrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cidr")
         private java.util.List < String > cidr;
@@ -171,6 +190,12 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteServicesInCenResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteServicesInCenResponseBody</p>
+     */
     public static class RouteServiceEntry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessRegionId")
         private String accessRegionId;
@@ -282,7 +307,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the region where the cloud service is accessed.
+             * <p>The ID of the region where the cloud service is accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder accessRegionId(String accessRegionId) {
                 this.accessRegionId = accessRegionId;
@@ -290,7 +318,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CEN instance.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-pfa6ugf3xl0qsd****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -298,7 +329,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * The service addresses of the cloud service.
+             * <p>The service addresses of the cloud service.</p>
              */
             public Builder cidrs(Cidrs cidrs) {
                 this.cidrs = cidrs;
@@ -306,7 +337,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cloud service.
+             * <p>The description of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>descname</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +348,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * The service address of the cloud service.
+             * <p>The service address of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.118.28.0/24</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -322,7 +359,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the cloud service.
+             * <p>The region ID of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder hostRegionId(String hostRegionId) {
                 this.hostRegionId = hostRegionId;
@@ -330,7 +370,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC associated with the cloud service.
+             * <p>The ID of the VPC associated with the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1h8vbrbcgohcju5****</p>
              */
             public Builder hostVpcId(String hostVpcId) {
                 this.hostVpcId = hostVpcId;
@@ -338,12 +381,15 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud service. Valid values:
-             * <p>
+             * <p>The status of the cloud service. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Active</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Active**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -357,6 +403,12 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteServicesInCenResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteServicesInCenResponseBody</p>
+     */
     public static class RouteServiceEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteServiceEntry")
         private java.util.List < RouteServiceEntry> routeServiceEntry;

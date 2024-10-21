@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterMulticastDomainVSwitchesRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterMulticastDomainVSwitchesRequest</p>
@@ -167,7 +168,10 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-44m0p68spvlrqq****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -239,7 +243,10 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-p0wr1cd4fcuxy3ui0****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

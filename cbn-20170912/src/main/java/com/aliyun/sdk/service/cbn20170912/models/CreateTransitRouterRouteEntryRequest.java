@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateTransitRouterRouteEntryRequest</p>
@@ -210,12 +211,14 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** is different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,11 +227,14 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * </ul>
          * 
-         * *   **false** (default): performs a dry run and performs the actual request.
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -273,10 +279,11 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The description of the route.
-         * <p>
+         * <p>The description of the route.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         public Builder transitRouterRouteEntryDescription(String transitRouterRouteEntryDescription) {
             this.putQueryParameter("TransitRouterRouteEntryDescription", transitRouterRouteEntryDescription);
@@ -285,7 +292,11 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route.
+         * <p>The destination CIDR block of the route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
          */
         public Builder transitRouterRouteEntryDestinationCidrBlock(String transitRouterRouteEntryDestinationCidrBlock) {
             this.putQueryParameter("TransitRouterRouteEntryDestinationCidrBlock", transitRouterRouteEntryDestinationCidrBlock);
@@ -294,10 +305,11 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The name of the route.
-         * <p>
+         * <p>The name of the route.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterRouteEntryName(String transitRouterRouteEntryName) {
             this.putQueryParameter("TransitRouterRouteEntryName", transitRouterRouteEntryName);
@@ -306,7 +318,10 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the network instance connection that you want to specify as the next hop.
+         * <p>The ID of the network instance connection that you want to specify as the next hop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-nls9fzkfat8934****</p>
          */
         public Builder transitRouterRouteEntryNextHopId(String transitRouterRouteEntryNextHopId) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopId", transitRouterRouteEntryNextHopId);
@@ -315,11 +330,15 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The type of the next hop. Valid values:
-         * <p>
+         * <p>The type of the next hop. Valid values:</p>
+         * <ul>
+         * <li><strong>BlackHole</strong>: routes network traffic to a black hole. All packets that match this route are dropped. If you select this option, you do not need to specify the next hop information.</li>
+         * <li><strong>Attachment</strong>: routes network traffic to a network instance connection. If you select this option, you must specify the ID of the network instance connection. All packets that match this route are routed to the specified network instance connection.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **BlackHole**: routes network traffic to a black hole. All packets that match this route are dropped. If you select this option, you do not need to specify the next hop information.
-         * *   **Attachment**: routes network traffic to a network instance connection. If you select this option, you must specify the ID of the network instance connection. All packets that match this route are routed to the specified network instance connection.
+         * <strong>example:</strong>
+         * <p>BlackHole</p>
          */
         public Builder transitRouterRouteEntryNextHopType(String transitRouterRouteEntryNextHopType) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopType", transitRouterRouteEntryNextHopType);
@@ -328,7 +347,11 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the Enterprise Edition transit router.
+         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1dudbh2d5na6b50****</p>
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

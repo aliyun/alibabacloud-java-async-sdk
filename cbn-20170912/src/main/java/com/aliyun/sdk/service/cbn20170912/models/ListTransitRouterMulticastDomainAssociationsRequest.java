@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterMulticastDomainAssociationsRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterMulticastDomainAssociationsRequest</p>
@@ -207,10 +208,11 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-4266****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -219,7 +221,10 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -228,11 +233,14 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -259,7 +267,10 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * The ID of the resource associated with the multicast domain.
+         * <p>The ID of the resource associated with the multicast domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-p0w9alkte4w2htrqe****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -286,10 +297,11 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * The type of resource associated with the multicast domain.
-         * <p>
+         * <p>The type of resource associated with the multicast domain.</p>
+         * <p>Valid value: <strong>VPC</strong>.</p>
          * 
-         * Valid value: **VPC**.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -298,7 +310,10 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * The ID of the network instance connection.
+         * <p>The ID of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-p90y3ymbbwuvy5****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -307,7 +322,10 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * The ID of the multicast domain.
+         * <p>The ID of the multicast domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
@@ -316,7 +334,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * The IDs of vSwitches.
+         * <p>The IDs of vSwitches.</p>
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshTransitRouteTableAggregationRequest} extends {@link RequestModel}
  *
  * <p>RefreshTransitRouteTableAggregationRequest</p>
@@ -184,7 +185,10 @@ public class RefreshTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * TransitRouteTableAggregationCidr.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.53.0/24</p>
          */
         public Builder transitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
             this.putQueryParameter("TransitRouteTableAggregationCidr", transitRouteTableAggregationCidr);
@@ -193,7 +197,10 @@ public class RefreshTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * TransitRouteTableId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-iq8qgruq1ry8jc7vt****</p>
          */
         public Builder transitRouteTableId(String transitRouteTableId) {
             this.putQueryParameter("TransitRouteTableId", transitRouteTableId);

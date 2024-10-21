@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCenResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCenResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateCenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The CEN instance ID.
+         * <p>The CEN instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-dc4vwznpwbobrl****</p>
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -57,7 +61,10 @@ public class CreateCenResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
