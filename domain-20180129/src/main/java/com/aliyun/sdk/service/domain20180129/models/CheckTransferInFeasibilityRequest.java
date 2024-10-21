@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckTransferInFeasibilityRequest} extends {@link RequestModel}
  *
  * <p>CheckTransferInFeasibilityRequest</p>
@@ -96,7 +97,10 @@ public class CheckTransferInFeasibilityRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

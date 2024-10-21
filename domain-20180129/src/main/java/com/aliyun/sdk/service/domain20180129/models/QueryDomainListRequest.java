@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainListRequest} extends {@link RequestModel}
  *
  * <p>QueryDomainListRequest</p>
@@ -279,7 +280,10 @@ public class QueryDomainListRequest extends Request {
         } 
 
         /**
-         * The name of the domain name registrant.
+         * <p>The name of the domain name registrant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Guangzhou Jinye Renewable Resources Recycling Co., Ltd</p>
          */
         public Builder ccompany(String ccompany) {
             this.putQueryParameter("Ccompany", ccompany);
@@ -288,7 +292,10 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The ID of the domain name group.
+         * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder domainGroupId(String domainGroupId) {
             this.putQueryParameter("DomainGroupId", domainGroupId);
@@ -297,7 +304,10 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The domain name that you want to search for.
+         * <p>The domain name that you want to search for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -306,7 +316,10 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.
+         * <p>The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder endExpirationDate(Long endExpirationDate) {
             this.putQueryParameter("EndExpirationDate", endExpirationDate);
@@ -315,7 +328,10 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The end of the time range to query domain names based on registration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.
+         * <p>The end of the time range to query domain names based on registration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder endRegistrationDate(Long endRegistrationDate) {
             this.putQueryParameter("EndRegistrationDate", endRegistrationDate);
@@ -324,13 +340,15 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The language of the error message to return if the request fails. Valid values:
-         * <p>
+         * <p>The language of the error message to return if the request fails. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
-         * 
-         * Default value: **en**.
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -339,13 +357,17 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The order of the information based on which the domain names are sorted, such as the registration date and expiration date. Valid values:
-         * <p>
+         * <p>The order of the information based on which the domain names are sorted, such as the registration date and expiration date. Valid values:</p>
+         * <ul>
+         * <li><strong>ASC</strong>: ascending order</li>
+         * <li><strong>DESC</strong>: descending order</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this parameter is not specified, the default value <strong>DESC</strong> is used.</p>
+         * </blockquote>
          * 
-         * *   **ASC**: ascending order
-         * *   **DESC**: descending order
-         * 
-         * >  If this parameter is not specified, the default value **DESC** is used.
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderByType(String orderByType) {
             this.putQueryParameter("OrderByType", orderByType);
@@ -354,13 +376,17 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The field that you use to sort the domain names. Valid values:
-         * <p>
+         * <p>The field that you use to sort the domain names. Valid values:</p>
+         * <ul>
+         * <li><strong>RegistrationDate</strong>: registration date</li>
+         * <li><strong>ExpirationDate</strong>: expiration date</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this parameter is not specified, the domain names are sorted by the time when they were added to the database.</p>
+         * </blockquote>
          * 
-         * *   **RegistrationDate**: registration date
-         * *   **ExpirationDate**: expiration date
-         * 
-         * >  If this parameter is not specified, the domain names are sorted by the time when they were added to the database.
+         * <strong>example:</strong>
+         * <p>RegistrationDate</p>
          */
         public Builder orderKeyType(String orderKeyType) {
             this.putQueryParameter("OrderKeyType", orderKeyType);
@@ -369,7 +395,11 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -378,7 +408,11 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -387,12 +421,15 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The type of the domain name. Valid values:
-         * <p>
+         * <p>The type of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>New gTLD</strong>: new generic top-level domain names</li>
+         * <li><strong>gTLD</strong>: generic top-level domain names</li>
+         * <li><strong>ccTLD</strong>: country code top-level domain names</li>
+         * </ul>
          * 
-         * *   **New gTLD**: new generic top-level domain names
-         * *   **gTLD**: generic top-level domain names
-         * *   **ccTLD**: country code top-level domain names
+         * <strong>example:</strong>
+         * <p>New gTLD</p>
          */
         public Builder productDomainType(String productDomainType) {
             this.putQueryParameter("ProductDomainType", productDomainType);
@@ -401,11 +438,14 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The category of the domain names that you want to query. Valid values:
-         * <p>
+         * <p>The category of the domain names that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: the domain names that need to be renewed</li>
+         * <li><strong>2</strong>: the domain names that need to be redeemed</li>
+         * </ul>
          * 
-         * *   **1**: the domain names that need to be renewed
-         * *   **2**: the domain names that need to be redeemed
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -414,7 +454,10 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2indvyxgpfti</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -423,7 +466,10 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.
+         * <p>The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder startExpirationDate(Long startExpirationDate) {
             this.putQueryParameter("StartExpirationDate", startExpirationDate);
@@ -432,7 +478,10 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query domain names based on registration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.
+         * <p>The beginning of the time range to query domain names based on registration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder startRegistrationDate(Long startRegistrationDate) {
             this.putQueryParameter("StartRegistrationDate", startRegistrationDate);
@@ -441,7 +490,7 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The tags to add to the resource.
+         * <p>The tags to add to the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -450,7 +499,10 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
-         * The IP address of the client. Set the value to **127.0.0.1**.
+         * <p>The IP address of the client. Set the value to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -465,6 +517,12 @@ public class QueryDomainListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainListRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDomainListRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -504,7 +562,10 @@ public class QueryDomainListRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag to add to the resource.
+             * <p>The key of the tag to add to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -512,7 +573,10 @@ public class QueryDomainListRequest extends Request {
             }
 
             /**
-             * The value of the tag to add to the resource.
+             * <p>The value of the tag to add to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

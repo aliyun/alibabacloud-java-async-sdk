@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOperationOssUploadPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetOperationOssUploadPolicyResponseBody</p>
@@ -141,7 +142,10 @@ public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * OSS Endpoint。
+         * <p>OSS Endpoint。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>//<em><strong>-basic-cert.oss-cn-</strong></em>.aliyuncs.com/</p>
          */
         public Builder host(String host) {
             this.host = host;

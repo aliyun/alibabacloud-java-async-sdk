@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LookupTmchNoticeRequest} extends {@link RequestModel}
  *
  * <p>LookupTmchNoticeRequest</p>
@@ -82,7 +83,10 @@ public class LookupTmchNoticeRequest extends Request {
         } 
 
         /**
-         * ClaimKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017092100/8/2/1/kDfu9htHGEx_y-LJ3XSlKMZ70000020001</p>
          */
         public Builder claimKey(String claimKey) {
             this.putQueryParameter("ClaimKey", claimKey);

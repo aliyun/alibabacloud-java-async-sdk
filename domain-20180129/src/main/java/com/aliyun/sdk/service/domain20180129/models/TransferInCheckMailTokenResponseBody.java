@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferInCheckMailTokenResponseBody} extends {@link TeaModel}
  *
  * <p>TransferInCheckMailTokenResponseBody</p>
@@ -90,6 +91,12 @@ public class TransferInCheckMailTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TransferInCheckMailTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>TransferInCheckMailTokenResponseBody</p>
+     */
     public static class FailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailDomain")
         private java.util.List < String > failDomain;
@@ -131,6 +138,12 @@ public class TransferInCheckMailTokenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TransferInCheckMailTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>TransferInCheckMailTokenResponseBody</p>
+     */
     public static class SuccessList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuccessDomain")
         private java.util.List < String > successDomain;

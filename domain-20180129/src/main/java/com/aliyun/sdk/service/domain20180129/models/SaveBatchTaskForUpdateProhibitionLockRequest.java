@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForUpdateProhibitionLockRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForUpdateProhibitionLockRequest</p>
@@ -97,7 +98,10 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyundoc.com</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -115,7 +119,10 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);

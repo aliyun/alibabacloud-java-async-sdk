@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest} extends {@link RequestModel}
  *
  * <p>SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest</p>
@@ -127,7 +128,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -136,7 +137,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
-         * IdentityCredential.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredential(String identityCredential) {
             this.putBodyParameter("IdentityCredential", identityCredential);
@@ -145,7 +146,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
-         * IdentityCredentialNo.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
             this.putQueryParameter("IdentityCredentialNo", identityCredentialNo);
@@ -154,7 +155,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
-         * IdentityCredentialType.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
             this.putQueryParameter("IdentityCredentialType", identityCredentialType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTaskDetailHistoryResponseBody</p>
@@ -150,6 +151,12 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailHistoryResponseBody</p>
+     */
     public static class CurrentPageCursor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -411,6 +418,12 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailHistoryResponseBody</p>
+     */
     public static class NextPageCursor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -672,6 +685,12 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailHistoryResponseBody</p>
+     */
     public static class Objects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -933,6 +952,12 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskDetailHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskDetailHistoryResponseBody</p>
+     */
     public static class PrePageCursor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

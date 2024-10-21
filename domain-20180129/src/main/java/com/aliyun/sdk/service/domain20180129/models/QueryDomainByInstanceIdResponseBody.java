@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainByInstanceIdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainByInstanceIdResponseBody</p>
@@ -710,6 +711,12 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainByInstanceIdResponseBody</p>
+     */
     public static class DnsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dns")
         private java.util.List < String > dns;
@@ -751,6 +758,12 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainByInstanceIdResponseBody</p>
+     */
     public static class TagTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -812,6 +825,12 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainByInstanceIdResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < TagTag> tag;

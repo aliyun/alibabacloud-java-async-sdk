@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDnsHostResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDnsHostResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryDnsHostResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDnsHostResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDnsHostResponseBody</p>
+     */
     public static class DnsHostList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsName")
         private String dnsName;

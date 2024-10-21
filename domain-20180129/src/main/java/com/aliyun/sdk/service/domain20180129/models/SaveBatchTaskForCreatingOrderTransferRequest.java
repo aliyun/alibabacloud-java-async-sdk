@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForCreatingOrderTransferRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForCreatingOrderTransferRequest</p>
@@ -156,7 +157,7 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * OrderTransferParam.
+         * <p>This parameter is required.</p>
          */
         public Builder orderTransferParam(java.util.List < OrderTransferParam> orderTransferParam) {
             this.putQueryParameter("OrderTransferParam", orderTransferParam);
@@ -207,6 +208,12 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForCreatingOrderTransferRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForCreatingOrderTransferRequest</p>
+     */
     public static class OrderTransferParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizationCode")
         private String authorizationCode;

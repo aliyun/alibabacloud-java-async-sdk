@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOperationAuditInfoDetailRequest} extends {@link RequestModel}
  *
  * <p>QueryOperationAuditInfoDetailRequest</p>
@@ -68,7 +69,10 @@ public class QueryOperationAuditInfoDetailRequest extends Request {
         } 
 
         /**
-         * AuditRecordId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditRecordId(Long auditRecordId) {
             this.putQueryParameter("AuditRecordId", auditRecordId);

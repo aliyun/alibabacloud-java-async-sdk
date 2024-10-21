@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FuzzyMatchDomainSensitiveWordRequest} extends {@link RequestModel}
  *
  * <p>FuzzyMatchDomainSensitiveWordRequest</p>
@@ -82,7 +83,10 @@ public class FuzzyMatchDomainSensitiveWordRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx**.cn</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

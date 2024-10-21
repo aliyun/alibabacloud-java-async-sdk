@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainGroupListResponse} extends {@link TeaModel}
  *
  * <p>QueryDomainGroupListResponse</p>

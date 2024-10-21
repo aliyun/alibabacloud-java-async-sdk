@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAdvancedDomainListRequest} extends {@link RequestModel}
  *
  * <p>QueryAdvancedDomainListRequest</p>
@@ -591,7 +592,10 @@ public class QueryAdvancedDomainListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -600,7 +604,10 @@ public class QueryAdvancedDomainListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -714,6 +721,12 @@ public class QueryAdvancedDomainListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAdvancedDomainListRequest} extends {@link TeaModel}
+     *
+     * <p>QueryAdvancedDomainListRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

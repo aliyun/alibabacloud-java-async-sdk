@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForAddingDSRecordRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForAddingDSRecordRequest</p>
@@ -142,7 +143,10 @@ public class SaveSingleTaskForAddingDSRecordRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder algorithm(Integer algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -151,7 +155,10 @@ public class SaveSingleTaskForAddingDSRecordRequest extends Request {
         }
 
         /**
-         * Digest.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f58fa917424383934c7b0cf1a90f61d692745680fa06f5ecdbe0924e86de9598</p>
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -160,7 +167,10 @@ public class SaveSingleTaskForAddingDSRecordRequest extends Request {
         }
 
         /**
-         * DigestType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder digestType(Integer digestType) {
             this.putQueryParameter("DigestType", digestType);
@@ -169,7 +179,10 @@ public class SaveSingleTaskForAddingDSRecordRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -178,7 +191,10 @@ public class SaveSingleTaskForAddingDSRecordRequest extends Request {
         }
 
         /**
-         * KeyTag.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder keyTag(Integer keyTag) {
             this.putQueryParameter("KeyTag", keyTag);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmTransferInEmailRequest} extends {@link RequestModel}
  *
  * <p>ConfirmTransferInEmailRequest</p>
@@ -97,7 +98,10 @@ public class ConfirmTransferInEmailRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.com</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,7 +110,10 @@ public class ConfirmTransferInEmailRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.com">test@test.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);

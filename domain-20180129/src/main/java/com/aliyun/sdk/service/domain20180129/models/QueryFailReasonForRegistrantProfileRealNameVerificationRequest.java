@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFailReasonForRegistrantProfileRealNameVerificationRequest} extends {@link RequestModel}
  *
  * <p>QueryFailReasonForRegistrantProfileRealNameVerificationRequest</p>
@@ -91,7 +92,10 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationRequest exte
         }
 
         /**
-         * RegistrantProfileID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder registrantProfileID(Long registrantProfileID) {
             this.putQueryParameter("RegistrantProfileID", registrantProfileID);

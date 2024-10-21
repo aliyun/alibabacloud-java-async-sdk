@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AcknowledgeTaskResult  AcknowledgeTaskResultRequest
+     * @return AcknowledgeTaskResultResponse
+     */
     @Override
     public CompletableFuture<AcknowledgeTaskResultResponse> acknowledgeTaskResult(AcknowledgeTaskResultRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchFuzzyMatchDomainSensitiveWord  BatchFuzzyMatchDomainSensitiveWordRequest
+     * @return BatchFuzzyMatchDomainSensitiveWordResponse
+     */
     @Override
     public CompletableFuture<BatchFuzzyMatchDomainSensitiveWordResponse> batchFuzzyMatchDomainSensitiveWord(BatchFuzzyMatchDomainSensitiveWordRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelDomainVerification  CancelDomainVerificationRequest
+     * @return CancelDomainVerificationResponse
+     */
     @Override
     public CompletableFuture<CancelDomainVerificationResponse> cancelDomainVerification(CancelDomainVerificationRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelOperationAudit  CancelOperationAuditRequest
+     * @return CancelOperationAuditResponse
+     */
     @Override
     public CompletableFuture<CancelOperationAuditResponse> cancelOperationAudit(CancelOperationAuditRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelQualificationVerification  CancelQualificationVerificationRequest
+     * @return CancelQualificationVerificationResponse
+     */
     @Override
     public CompletableFuture<CancelQualificationVerificationResponse> cancelQualificationVerification(CancelQualificationVerificationRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelTask  CancelTaskRequest
+     * @return CancelTaskResponse
+     */
     @Override
     public CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckDomain  CheckDomainRequest
+     * @return CheckDomainResponse
+     */
     @Override
     public CompletableFuture<CheckDomainResponse> checkDomain(CheckDomainRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckDomainSunriseClaim  CheckDomainSunriseClaimRequest
+     * @return CheckDomainSunriseClaimResponse
+     */
     @Override
     public CompletableFuture<CheckDomainSunriseClaimResponse> checkDomainSunriseClaim(CheckDomainSunriseClaimRequest request) {
         try {
@@ -165,6 +201,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckIntlFixPriceDomainStatus  CheckIntlFixPriceDomainStatusRequest
+     * @return CheckIntlFixPriceDomainStatusResponse
+     */
+    @Override
+    public CompletableFuture<CheckIntlFixPriceDomainStatusResponse> checkIntlFixPriceDomainStatus(CheckIntlFixPriceDomainStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckIntlFixPriceDomainStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckIntlFixPriceDomainStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckIntlFixPriceDomainStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CheckMaxYearOfServerLock  CheckMaxYearOfServerLockRequest
+     * @return CheckMaxYearOfServerLockResponse
+     */
     @Override
     public CompletableFuture<CheckMaxYearOfServerLockResponse> checkMaxYearOfServerLock(CheckMaxYearOfServerLockRequest request) {
         try {
@@ -179,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckProcessingServerLockApply  CheckProcessingServerLockApplyRequest
+     * @return CheckProcessingServerLockApplyResponse
+     */
     @Override
     public CompletableFuture<CheckProcessingServerLockApplyResponse> checkProcessingServerLockApply(CheckProcessingServerLockApplyRequest request) {
         try {
@@ -193,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckTransferInFeasibility  CheckTransferInFeasibilityRequest
+     * @return CheckTransferInFeasibilityResponse
+     */
     @Override
     public CompletableFuture<CheckTransferInFeasibilityResponse> checkTransferInFeasibility(CheckTransferInFeasibilityRequest request) {
         try {
@@ -207,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfirmTransferInEmail  ConfirmTransferInEmailRequest
+     * @return ConfirmTransferInEmailResponse
+     */
     @Override
     public CompletableFuture<ConfirmTransferInEmailResponse> confirmTransferInEmail(ConfirmTransferInEmailRequest request) {
         try {
@@ -221,6 +291,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIntlFixedPriceDomainOrder  CreateIntlFixedPriceDomainOrderRequest
+     * @return CreateIntlFixedPriceDomainOrderResponse
+     */
+    @Override
+    public CompletableFuture<CreateIntlFixedPriceDomainOrderResponse> createIntlFixedPriceDomainOrder(CreateIntlFixedPriceDomainOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateIntlFixedPriceDomainOrder").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateIntlFixedPriceDomainOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateIntlFixedPriceDomainOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteContactTemplates  DeleteContactTemplatesRequest
+     * @return DeleteContactTemplatesResponse
+     */
     @Override
     public CompletableFuture<DeleteContactTemplatesResponse> deleteContactTemplates(DeleteContactTemplatesRequest request) {
         try {
@@ -235,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDomainGroup  DeleteDomainGroupRequest
+     * @return DeleteDomainGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteDomainGroupResponse> deleteDomainGroup(DeleteDomainGroupRequest request) {
         try {
@@ -249,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEmailVerification  DeleteEmailVerificationRequest
+     * @return DeleteEmailVerificationResponse
+     */
     @Override
     public CompletableFuture<DeleteEmailVerificationResponse> deleteEmailVerification(DeleteEmailVerificationRequest request) {
         try {
@@ -263,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRegistrantProfile  DeleteRegistrantProfileRequest
+     * @return DeleteRegistrantProfileResponse
+     */
     @Override
     public CompletableFuture<DeleteRegistrantProfileResponse> deleteRegistrantProfile(DeleteRegistrantProfileRequest request) {
         try {
@@ -277,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DomainSpecialBizCancel  DomainSpecialBizCancelRequest
+     * @return DomainSpecialBizCancelResponse
+     */
     @Override
     public CompletableFuture<DomainSpecialBizCancelResponse> domainSpecialBizCancel(DomainSpecialBizCancelRequest request) {
         try {
@@ -291,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EmailVerified  EmailVerifiedRequest
+     * @return EmailVerifiedResponse
+     */
     @Override
     public CompletableFuture<EmailVerifiedResponse> emailVerified(EmailVerifiedRequest request) {
         try {
@@ -305,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FuzzyMatchDomainSensitiveWord  FuzzyMatchDomainSensitiveWordRequest
+     * @return FuzzyMatchDomainSensitiveWordResponse
+     */
     @Override
     public CompletableFuture<FuzzyMatchDomainSensitiveWordResponse> fuzzyMatchDomainSensitiveWord(FuzzyMatchDomainSensitiveWordRequest request) {
         try {
@@ -319,6 +435,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIntlFixPriceDomainListUrl  GetIntlFixPriceDomainListUrlRequest
+     * @return GetIntlFixPriceDomainListUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetIntlFixPriceDomainListUrlResponse> getIntlFixPriceDomainListUrl(GetIntlFixPriceDomainListUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetIntlFixPriceDomainListUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIntlFixPriceDomainListUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIntlFixPriceDomainListUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetOperationOssUploadPolicy  GetOperationOssUploadPolicyRequest
+     * @return GetOperationOssUploadPolicyResponse
+     */
     @Override
     public CompletableFuture<GetOperationOssUploadPolicyResponse> getOperationOssUploadPolicy(GetOperationOssUploadPolicyRequest request) {
         try {
@@ -333,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQualificationUploadPolicy  GetQualificationUploadPolicyRequest
+     * @return GetQualificationUploadPolicyResponse
+     */
     @Override
     public CompletableFuture<GetQualificationUploadPolicyResponse> getQualificationUploadPolicy(GetQualificationUploadPolicyRequest request) {
         try {
@@ -347,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEmailVerification  ListEmailVerificationRequest
+     * @return ListEmailVerificationResponse
+     */
     @Override
     public CompletableFuture<ListEmailVerificationResponse> listEmailVerification(ListEmailVerificationRequest request) {
         try {
@@ -361,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServerLock  ListServerLockRequest
+     * @return ListServerLockResponse
+     */
     @Override
     public CompletableFuture<ListServerLockResponse> listServerLock(ListServerLockRequest request) {
         try {
@@ -375,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LookupTmchNotice  LookupTmchNoticeRequest
+     * @return LookupTmchNoticeResponse
+     */
     @Override
     public CompletableFuture<LookupTmchNoticeResponse> lookupTmchNotice(LookupTmchNoticeRequest request) {
         try {
@@ -389,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PollTaskResult  PollTaskResultRequest
+     * @return PollTaskResultResponse
+     */
     @Override
     public CompletableFuture<PollTaskResultResponse> pollTaskResult(PollTaskResultRequest request) {
         try {
@@ -403,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAdvancedDomainList  QueryAdvancedDomainListRequest
+     * @return QueryAdvancedDomainListResponse
+     */
     @Override
     public CompletableFuture<QueryAdvancedDomainListResponse> queryAdvancedDomainList(QueryAdvancedDomainListRequest request) {
         try {
@@ -417,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryArtExtension  QueryArtExtensionRequest
+     * @return QueryArtExtensionResponse
+     */
     @Override
     public CompletableFuture<QueryArtExtensionResponse> queryArtExtension(QueryArtExtensionRequest request) {
         try {
@@ -431,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryChangeLogList  QueryChangeLogListRequest
+     * @return QueryChangeLogListResponse
+     */
     @Override
     public CompletableFuture<QueryChangeLogListResponse> queryChangeLogList(QueryChangeLogListRequest request) {
         try {
@@ -445,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryContactInfo  QueryContactInfoRequest
+     * @return QueryContactInfoResponse
+     */
     @Override
     public CompletableFuture<QueryContactInfoResponse> queryContactInfo(QueryContactInfoRequest request) {
         try {
@@ -459,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDSRecord  QueryDSRecordRequest
+     * @return QueryDSRecordResponse
+     */
     @Override
     public CompletableFuture<QueryDSRecordResponse> queryDSRecord(QueryDSRecordRequest request) {
         try {
@@ -473,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDnsHost  QueryDnsHostRequest
+     * @return QueryDnsHostResponse
+     */
     @Override
     public CompletableFuture<QueryDnsHostResponse> queryDnsHost(QueryDnsHostRequest request) {
         try {
@@ -487,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainAdminDivision  QueryDomainAdminDivisionRequest
+     * @return QueryDomainAdminDivisionResponse
+     */
     @Override
     public CompletableFuture<QueryDomainAdminDivisionResponse> queryDomainAdminDivision(QueryDomainAdminDivisionRequest request) {
         try {
@@ -501,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainByDomainName  QueryDomainByDomainNameRequest
+     * @return QueryDomainByDomainNameResponse
+     */
     @Override
     public CompletableFuture<QueryDomainByDomainNameResponse> queryDomainByDomainName(QueryDomainByDomainNameRequest request) {
         try {
@@ -515,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainByInstanceId  QueryDomainByInstanceIdRequest
+     * @return QueryDomainByInstanceIdResponse
+     */
     @Override
     public CompletableFuture<QueryDomainByInstanceIdResponse> queryDomainByInstanceId(QueryDomainByInstanceIdRequest request) {
         try {
@@ -529,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainGroupList  QueryDomainGroupListRequest
+     * @return QueryDomainGroupListResponse
+     */
     @Override
     public CompletableFuture<QueryDomainGroupListResponse> queryDomainGroupList(QueryDomainGroupListRequest request) {
         try {
@@ -543,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainList  QueryDomainListRequest
+     * @return QueryDomainListResponse
+     */
     @Override
     public CompletableFuture<QueryDomainListResponse> queryDomainList(QueryDomainListRequest request) {
         try {
@@ -557,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainRealNameVerificationInfo  QueryDomainRealNameVerificationInfoRequest
+     * @return QueryDomainRealNameVerificationInfoResponse
+     */
     @Override
     public CompletableFuture<QueryDomainRealNameVerificationInfoResponse> queryDomainRealNameVerificationInfo(QueryDomainRealNameVerificationInfoRequest request) {
         try {
@@ -571,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainSpecialBizDetail  QueryDomainSpecialBizDetailRequest
+     * @return QueryDomainSpecialBizDetailResponse
+     */
     @Override
     public CompletableFuture<QueryDomainSpecialBizDetailResponse> queryDomainSpecialBizDetail(QueryDomainSpecialBizDetailRequest request) {
         try {
@@ -585,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainSpecialBizInfoByDomain  QueryDomainSpecialBizInfoByDomainRequest
+     * @return QueryDomainSpecialBizInfoByDomainResponse
+     */
     @Override
     public CompletableFuture<QueryDomainSpecialBizInfoByDomainResponse> queryDomainSpecialBizInfoByDomain(QueryDomainSpecialBizInfoByDomainRequest request) {
         try {
@@ -599,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainSuffix  QueryDomainSuffixRequest
+     * @return QueryDomainSuffixResponse
+     */
     @Override
     public CompletableFuture<QueryDomainSuffixResponse> queryDomainSuffix(QueryDomainSuffixRequest request) {
         try {
@@ -613,6 +831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEmailVerification  QueryEmailVerificationRequest
+     * @return QueryEmailVerificationResponse
+     */
     @Override
     public CompletableFuture<QueryEmailVerificationResponse> queryEmailVerification(QueryEmailVerificationRequest request) {
         try {
@@ -627,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEnsAssociation  QueryEnsAssociationRequest
+     * @return QueryEnsAssociationResponse
+     */
     @Override
     public CompletableFuture<QueryEnsAssociationResponse> queryEnsAssociation(QueryEnsAssociationRequest request) {
         try {
@@ -641,6 +867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFailReasonForDomainRealNameVerification  QueryFailReasonForDomainRealNameVerificationRequest
+     * @return QueryFailReasonForDomainRealNameVerificationResponse
+     */
     @Override
     public CompletableFuture<QueryFailReasonForDomainRealNameVerificationResponse> queryFailReasonForDomainRealNameVerification(QueryFailReasonForDomainRealNameVerificationRequest request) {
         try {
@@ -655,6 +885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFailReasonForRegistrantProfileRealNameVerification  QueryFailReasonForRegistrantProfileRealNameVerificationRequest
+     * @return QueryFailReasonForRegistrantProfileRealNameVerificationResponse
+     */
     @Override
     public CompletableFuture<QueryFailReasonForRegistrantProfileRealNameVerificationResponse> queryFailReasonForRegistrantProfileRealNameVerification(QueryFailReasonForRegistrantProfileRealNameVerificationRequest request) {
         try {
@@ -669,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFailingReasonListForQualification  QueryFailingReasonListForQualificationRequest
+     * @return QueryFailingReasonListForQualificationResponse
+     */
     @Override
     public CompletableFuture<QueryFailingReasonListForQualificationResponse> queryFailingReasonListForQualification(QueryFailingReasonListForQualificationRequest request) {
         try {
@@ -683,6 +921,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryIntlFixedPriceOrderList  QueryIntlFixedPriceOrderListRequest
+     * @return QueryIntlFixedPriceOrderListResponse
+     */
+    @Override
+    public CompletableFuture<QueryIntlFixedPriceOrderListResponse> queryIntlFixedPriceOrderList(QueryIntlFixedPriceOrderListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryIntlFixedPriceOrderList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryIntlFixedPriceOrderListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryIntlFixedPriceOrderListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryLocalEnsAssociation  QueryLocalEnsAssociationRequest
+     * @return QueryLocalEnsAssociationResponse
+     */
     @Override
     public CompletableFuture<QueryLocalEnsAssociationResponse> queryLocalEnsAssociation(QueryLocalEnsAssociationRequest request) {
         try {
@@ -697,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOperationAuditInfoDetail  QueryOperationAuditInfoDetailRequest
+     * @return QueryOperationAuditInfoDetailResponse
+     */
     @Override
     public CompletableFuture<QueryOperationAuditInfoDetailResponse> queryOperationAuditInfoDetail(QueryOperationAuditInfoDetailRequest request) {
         try {
@@ -711,6 +975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOperationAuditInfoList  QueryOperationAuditInfoListRequest
+     * @return QueryOperationAuditInfoListResponse
+     */
     @Override
     public CompletableFuture<QueryOperationAuditInfoListResponse> queryOperationAuditInfoList(QueryOperationAuditInfoListRequest request) {
         try {
@@ -725,6 +993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryQualificationDetail  QueryQualificationDetailRequest
+     * @return QueryQualificationDetailResponse
+     */
     @Override
     public CompletableFuture<QueryQualificationDetailResponse> queryQualificationDetail(QueryQualificationDetailRequest request) {
         try {
@@ -739,6 +1011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRegistrantProfileRealNameVerificationInfo  QueryRegistrantProfileRealNameVerificationInfoRequest
+     * @return QueryRegistrantProfileRealNameVerificationInfoResponse
+     */
     @Override
     public CompletableFuture<QueryRegistrantProfileRealNameVerificationInfoResponse> queryRegistrantProfileRealNameVerificationInfo(QueryRegistrantProfileRealNameVerificationInfoRequest request) {
         try {
@@ -753,6 +1029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRegistrantProfiles  QueryRegistrantProfilesRequest
+     * @return QueryRegistrantProfilesResponse
+     */
     @Override
     public CompletableFuture<QueryRegistrantProfilesResponse> queryRegistrantProfiles(QueryRegistrantProfilesRequest request) {
         try {
@@ -767,6 +1047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryServerLock  QueryServerLockRequest
+     * @return QueryServerLockResponse
+     */
     @Override
     public CompletableFuture<QueryServerLockResponse> queryServerLock(QueryServerLockRequest request) {
         try {
@@ -781,6 +1065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTaskDetailHistory  QueryTaskDetailHistoryRequest
+     * @return QueryTaskDetailHistoryResponse
+     */
     @Override
     public CompletableFuture<QueryTaskDetailHistoryResponse> queryTaskDetailHistory(QueryTaskDetailHistoryRequest request) {
         try {
@@ -795,6 +1083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTaskDetailList  QueryTaskDetailListRequest
+     * @return QueryTaskDetailListResponse
+     */
     @Override
     public CompletableFuture<QueryTaskDetailListResponse> queryTaskDetailList(QueryTaskDetailListRequest request) {
         try {
@@ -809,6 +1101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTaskInfoHistory  QueryTaskInfoHistoryRequest
+     * @return QueryTaskInfoHistoryResponse
+     */
     @Override
     public CompletableFuture<QueryTaskInfoHistoryResponse> queryTaskInfoHistory(QueryTaskInfoHistoryRequest request) {
         try {
@@ -823,6 +1119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTaskList  QueryTaskListRequest
+     * @return QueryTaskListResponse
+     */
     @Override
     public CompletableFuture<QueryTaskListResponse> queryTaskList(QueryTaskListRequest request) {
         try {
@@ -837,6 +1137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTransferInByInstanceId  QueryTransferInByInstanceIdRequest
+     * @return QueryTransferInByInstanceIdResponse
+     */
     @Override
     public CompletableFuture<QueryTransferInByInstanceIdResponse> queryTransferInByInstanceId(QueryTransferInByInstanceIdRequest request) {
         try {
@@ -851,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTransferInList  QueryTransferInListRequest
+     * @return QueryTransferInListResponse
+     */
     @Override
     public CompletableFuture<QueryTransferInListResponse> queryTransferInList(QueryTransferInListRequest request) {
         try {
@@ -865,6 +1173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTransferOutInfo  QueryTransferOutInfoRequest
+     * @return QueryTransferOutInfoResponse
+     */
     @Override
     public CompletableFuture<QueryTransferOutInfoResponse> queryTransferOutInfo(QueryTransferOutInfoRequest request) {
         try {
@@ -879,6 +1191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RegistrantProfileRealNameVerification  RegistrantProfileRealNameVerificationRequest
+     * @return RegistrantProfileRealNameVerificationResponse
+     */
     @Override
     public CompletableFuture<RegistrantProfileRealNameVerificationResponse> registrantProfileRealNameVerification(RegistrantProfileRealNameVerificationRequest request) {
         try {
@@ -893,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResendEmailVerification  ResendEmailVerificationRequest
+     * @return ResendEmailVerificationResponse
+     */
     @Override
     public CompletableFuture<ResendEmailVerificationResponse> resendEmailVerification(ResendEmailVerificationRequest request) {
         try {
@@ -907,6 +1227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetQualificationVerification  ResetQualificationVerificationRequest
+     * @return ResetQualificationVerificationResponse
+     */
     @Override
     public CompletableFuture<ResetQualificationVerificationResponse> resetQualificationVerification(ResetQualificationVerificationRequest request) {
         try {
@@ -921,6 +1245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchDomainRemark  SaveBatchDomainRemarkRequest
+     * @return SaveBatchDomainRemarkResponse
+     */
     @Override
     public CompletableFuture<SaveBatchDomainRemarkResponse> saveBatchDomainRemark(SaveBatchDomainRemarkRequest request) {
         try {
@@ -935,6 +1263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForApplyQuickTransferOutOpenly  SaveBatchTaskForApplyQuickTransferOutOpenlyRequest
+     * @return SaveBatchTaskForApplyQuickTransferOutOpenlyResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForApplyQuickTransferOutOpenlyResponse> saveBatchTaskForApplyQuickTransferOutOpenly(SaveBatchTaskForApplyQuickTransferOutOpenlyRequest request) {
         try {
@@ -949,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForCreatingOrderActivate  SaveBatchTaskForCreatingOrderActivateRequest
+     * @return SaveBatchTaskForCreatingOrderActivateResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForCreatingOrderActivateResponse> saveBatchTaskForCreatingOrderActivate(SaveBatchTaskForCreatingOrderActivateRequest request) {
         try {
@@ -963,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForCreatingOrderRedeem  SaveBatchTaskForCreatingOrderRedeemRequest
+     * @return SaveBatchTaskForCreatingOrderRedeemResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForCreatingOrderRedeemResponse> saveBatchTaskForCreatingOrderRedeem(SaveBatchTaskForCreatingOrderRedeemRequest request) {
         try {
@@ -977,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForCreatingOrderRenew  SaveBatchTaskForCreatingOrderRenewRequest
+     * @return SaveBatchTaskForCreatingOrderRenewResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForCreatingOrderRenewResponse> saveBatchTaskForCreatingOrderRenew(SaveBatchTaskForCreatingOrderRenewRequest request) {
         try {
@@ -991,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForCreatingOrderTransfer  SaveBatchTaskForCreatingOrderTransferRequest
+     * @return SaveBatchTaskForCreatingOrderTransferResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForCreatingOrderTransferResponse> saveBatchTaskForCreatingOrderTransfer(SaveBatchTaskForCreatingOrderTransferRequest request) {
         try {
@@ -1005,6 +1353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForDomainNameProxyService  SaveBatchTaskForDomainNameProxyServiceRequest
+     * @return SaveBatchTaskForDomainNameProxyServiceResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForDomainNameProxyServiceResponse> saveBatchTaskForDomainNameProxyService(SaveBatchTaskForDomainNameProxyServiceRequest request) {
         try {
@@ -1019,6 +1371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForGenerateDomainCertificate  SaveBatchTaskForGenerateDomainCertificateRequest
+     * @return SaveBatchTaskForGenerateDomainCertificateResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForGenerateDomainCertificateResponse> saveBatchTaskForGenerateDomainCertificate(SaveBatchTaskForGenerateDomainCertificateRequest request) {
         try {
@@ -1033,6 +1389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForModifyingDomainDns  SaveBatchTaskForModifyingDomainDnsRequest
+     * @return SaveBatchTaskForModifyingDomainDnsResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForModifyingDomainDnsResponse> saveBatchTaskForModifyingDomainDns(SaveBatchTaskForModifyingDomainDnsRequest request) {
         try {
@@ -1047,6 +1407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForReserveDropListDomain  SaveBatchTaskForReserveDropListDomainRequest
+     * @return SaveBatchTaskForReserveDropListDomainResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForReserveDropListDomainResponse> saveBatchTaskForReserveDropListDomain(SaveBatchTaskForReserveDropListDomainRequest request) {
         try {
@@ -1061,6 +1425,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForTransferOutByAuthorizationCode  SaveBatchTaskForTransferOutByAuthorizationCodeRequest
+     * @return SaveBatchTaskForTransferOutByAuthorizationCodeResponse
+     */
+    @Override
+    public CompletableFuture<SaveBatchTaskForTransferOutByAuthorizationCodeResponse> saveBatchTaskForTransferOutByAuthorizationCode(SaveBatchTaskForTransferOutByAuthorizationCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SaveBatchTaskForTransferOutByAuthorizationCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveBatchTaskForTransferOutByAuthorizationCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SaveBatchTaskForTransferOutByAuthorizationCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SaveBatchTaskForTransferProhibitionLock  SaveBatchTaskForTransferProhibitionLockRequest
+     * @return SaveBatchTaskForTransferProhibitionLockResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForTransferProhibitionLockResponse> saveBatchTaskForTransferProhibitionLock(SaveBatchTaskForTransferProhibitionLockRequest request) {
         try {
@@ -1075,6 +1461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForUpdateProhibitionLock  SaveBatchTaskForUpdateProhibitionLockRequest
+     * @return SaveBatchTaskForUpdateProhibitionLockResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForUpdateProhibitionLockResponse> saveBatchTaskForUpdateProhibitionLock(SaveBatchTaskForUpdateProhibitionLockRequest request) {
         try {
@@ -1089,6 +1479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForUpdatingContactInfoByNewContact  SaveBatchTaskForUpdatingContactInfoByNewContactRequest
+     * @return SaveBatchTaskForUpdatingContactInfoByNewContactResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForUpdatingContactInfoByNewContactResponse> saveBatchTaskForUpdatingContactInfoByNewContact(SaveBatchTaskForUpdatingContactInfoByNewContactRequest request) {
         try {
@@ -1103,6 +1497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId  SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest
+     * @return SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdResponse
+     */
     @Override
     public CompletableFuture<SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdResponse> saveBatchTaskForUpdatingContactInfoByRegistrantProfileId(SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest request) {
         try {
@@ -1117,6 +1515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveDomainGroup  SaveDomainGroupRequest
+     * @return SaveDomainGroupResponse
+     */
     @Override
     public CompletableFuture<SaveDomainGroupResponse> saveDomainGroup(SaveDomainGroupRequest request) {
         try {
@@ -1131,6 +1533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveRegistrantProfile  SaveRegistrantProfileRequest
+     * @return SaveRegistrantProfileResponse
+     */
     @Override
     public CompletableFuture<SaveRegistrantProfileResponse> saveRegistrantProfile(SaveRegistrantProfileRequest request) {
         try {
@@ -1145,6 +1551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveRegistrantProfileRealNameVerification  SaveRegistrantProfileRealNameVerificationRequest
+     * @return SaveRegistrantProfileRealNameVerificationResponse
+     */
     @Override
     public CompletableFuture<SaveRegistrantProfileRealNameVerificationResponse> saveRegistrantProfileRealNameVerification(SaveRegistrantProfileRealNameVerificationRequest request) {
         try {
@@ -1159,6 +1569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForAddingDSRecord  SaveSingleTaskForAddingDSRecordRequest
+     * @return SaveSingleTaskForAddingDSRecordResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForAddingDSRecordResponse> saveSingleTaskForAddingDSRecord(SaveSingleTaskForAddingDSRecordRequest request) {
         try {
@@ -1173,6 +1587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForApplyQuickTransferOutOpenly  SaveSingleTaskForApplyQuickTransferOutOpenlyRequest
+     * @return SaveSingleTaskForApplyQuickTransferOutOpenlyResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForApplyQuickTransferOutOpenlyResponse> saveSingleTaskForApplyQuickTransferOutOpenly(SaveSingleTaskForApplyQuickTransferOutOpenlyRequest request) {
         try {
@@ -1187,6 +1605,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForApprovingTransferOut  SaveSingleTaskForApprovingTransferOutRequest
+     * @return SaveSingleTaskForApprovingTransferOutResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForApprovingTransferOutResponse> saveSingleTaskForApprovingTransferOut(SaveSingleTaskForApprovingTransferOutRequest request) {
         try {
@@ -1201,6 +1623,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForAssociatingEns  SaveSingleTaskForAssociatingEnsRequest
+     * @return SaveSingleTaskForAssociatingEnsResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForAssociatingEnsResponse> saveSingleTaskForAssociatingEns(SaveSingleTaskForAssociatingEnsRequest request) {
         try {
@@ -1215,6 +1641,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForCancelingTransferIn  SaveSingleTaskForCancelingTransferInRequest
+     * @return SaveSingleTaskForCancelingTransferInResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForCancelingTransferInResponse> saveSingleTaskForCancelingTransferIn(SaveSingleTaskForCancelingTransferInRequest request) {
         try {
@@ -1229,6 +1659,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForCancelingTransferOut  SaveSingleTaskForCancelingTransferOutRequest
+     * @return SaveSingleTaskForCancelingTransferOutResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForCancelingTransferOutResponse> saveSingleTaskForCancelingTransferOut(SaveSingleTaskForCancelingTransferOutRequest request) {
         try {
@@ -1243,6 +1677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForCreatingDnsHost  SaveSingleTaskForCreatingDnsHostRequest
+     * @return SaveSingleTaskForCreatingDnsHostResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForCreatingDnsHostResponse> saveSingleTaskForCreatingDnsHost(SaveSingleTaskForCreatingDnsHostRequest request) {
         try {
@@ -1257,6 +1695,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForCreatingOrderActivate  SaveSingleTaskForCreatingOrderActivateRequest
+     * @return SaveSingleTaskForCreatingOrderActivateResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForCreatingOrderActivateResponse> saveSingleTaskForCreatingOrderActivate(SaveSingleTaskForCreatingOrderActivateRequest request) {
         try {
@@ -1271,6 +1713,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForCreatingOrderRedeem  SaveSingleTaskForCreatingOrderRedeemRequest
+     * @return SaveSingleTaskForCreatingOrderRedeemResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForCreatingOrderRedeemResponse> saveSingleTaskForCreatingOrderRedeem(SaveSingleTaskForCreatingOrderRedeemRequest request) {
         try {
@@ -1285,6 +1731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForCreatingOrderRenew  SaveSingleTaskForCreatingOrderRenewRequest
+     * @return SaveSingleTaskForCreatingOrderRenewResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForCreatingOrderRenewResponse> saveSingleTaskForCreatingOrderRenew(SaveSingleTaskForCreatingOrderRenewRequest request) {
         try {
@@ -1299,6 +1749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForCreatingOrderTransfer  SaveSingleTaskForCreatingOrderTransferRequest
+     * @return SaveSingleTaskForCreatingOrderTransferResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForCreatingOrderTransferResponse> saveSingleTaskForCreatingOrderTransfer(SaveSingleTaskForCreatingOrderTransferRequest request) {
         try {
@@ -1313,6 +1767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForDeletingDSRecord  SaveSingleTaskForDeletingDSRecordRequest
+     * @return SaveSingleTaskForDeletingDSRecordResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForDeletingDSRecordResponse> saveSingleTaskForDeletingDSRecord(SaveSingleTaskForDeletingDSRecordRequest request) {
         try {
@@ -1327,6 +1785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForDeletingDnsHost  SaveSingleTaskForDeletingDnsHostRequest
+     * @return SaveSingleTaskForDeletingDnsHostResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForDeletingDnsHostResponse> saveSingleTaskForDeletingDnsHost(SaveSingleTaskForDeletingDnsHostRequest request) {
         try {
@@ -1341,6 +1803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForDisassociatingEns  SaveSingleTaskForDisassociatingEnsRequest
+     * @return SaveSingleTaskForDisassociatingEnsResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForDisassociatingEnsResponse> saveSingleTaskForDisassociatingEns(SaveSingleTaskForDisassociatingEnsRequest request) {
         try {
@@ -1355,6 +1821,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForDomainNameProxyService  SaveSingleTaskForDomainNameProxyServiceRequest
+     * @return SaveSingleTaskForDomainNameProxyServiceResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForDomainNameProxyServiceResponse> saveSingleTaskForDomainNameProxyService(SaveSingleTaskForDomainNameProxyServiceRequest request) {
         try {
@@ -1369,6 +1839,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForGenerateDomainCertificate  SaveSingleTaskForGenerateDomainCertificateRequest
+     * @return SaveSingleTaskForGenerateDomainCertificateResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForGenerateDomainCertificateResponse> saveSingleTaskForGenerateDomainCertificate(SaveSingleTaskForGenerateDomainCertificateRequest request) {
         try {
@@ -1383,6 +1857,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForModifyingDSRecord  SaveSingleTaskForModifyingDSRecordRequest
+     * @return SaveSingleTaskForModifyingDSRecordResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForModifyingDSRecordResponse> saveSingleTaskForModifyingDSRecord(SaveSingleTaskForModifyingDSRecordRequest request) {
         try {
@@ -1397,6 +1875,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForModifyingDnsHost  SaveSingleTaskForModifyingDnsHostRequest
+     * @return SaveSingleTaskForModifyingDnsHostResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForModifyingDnsHostResponse> saveSingleTaskForModifyingDnsHost(SaveSingleTaskForModifyingDnsHostRequest request) {
         try {
@@ -1411,6 +1893,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForQueryingTransferAuthorizationCode  SaveSingleTaskForQueryingTransferAuthorizationCodeRequest
+     * @return SaveSingleTaskForQueryingTransferAuthorizationCodeResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForQueryingTransferAuthorizationCodeResponse> saveSingleTaskForQueryingTransferAuthorizationCode(SaveSingleTaskForQueryingTransferAuthorizationCodeRequest request) {
         try {
@@ -1425,6 +1911,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForReserveDropListDomain  SaveSingleTaskForReserveDropListDomainRequest
+     * @return SaveSingleTaskForReserveDropListDomainResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForReserveDropListDomainResponse> saveSingleTaskForReserveDropListDomain(SaveSingleTaskForReserveDropListDomainRequest request) {
         try {
@@ -1439,6 +1929,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForSaveArtExtension  SaveSingleTaskForSaveArtExtensionRequest
+     * @return SaveSingleTaskForSaveArtExtensionResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForSaveArtExtensionResponse> saveSingleTaskForSaveArtExtension(SaveSingleTaskForSaveArtExtensionRequest request) {
         try {
@@ -1453,6 +1947,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForSynchronizingDSRecord  SaveSingleTaskForSynchronizingDSRecordRequest
+     * @return SaveSingleTaskForSynchronizingDSRecordResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForSynchronizingDSRecordResponse> saveSingleTaskForSynchronizingDSRecord(SaveSingleTaskForSynchronizingDSRecordRequest request) {
         try {
@@ -1467,6 +1965,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForSynchronizingDnsHost  SaveSingleTaskForSynchronizingDnsHostRequest
+     * @return SaveSingleTaskForSynchronizingDnsHostResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForSynchronizingDnsHostResponse> saveSingleTaskForSynchronizingDnsHost(SaveSingleTaskForSynchronizingDnsHostRequest request) {
         try {
@@ -1481,6 +1983,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForTransferOutByAuthorizationCode  SaveSingleTaskForTransferOutByAuthorizationCodeRequest
+     * @return SaveSingleTaskForTransferOutByAuthorizationCodeResponse
+     */
+    @Override
+    public CompletableFuture<SaveSingleTaskForTransferOutByAuthorizationCodeResponse> saveSingleTaskForTransferOutByAuthorizationCode(SaveSingleTaskForTransferOutByAuthorizationCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SaveSingleTaskForTransferOutByAuthorizationCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveSingleTaskForTransferOutByAuthorizationCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SaveSingleTaskForTransferOutByAuthorizationCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SaveSingleTaskForTransferProhibitionLock  SaveSingleTaskForTransferProhibitionLockRequest
+     * @return SaveSingleTaskForTransferProhibitionLockResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForTransferProhibitionLockResponse> saveSingleTaskForTransferProhibitionLock(SaveSingleTaskForTransferProhibitionLockRequest request) {
         try {
@@ -1495,6 +2019,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForUpdateProhibitionLock  SaveSingleTaskForUpdateProhibitionLockRequest
+     * @return SaveSingleTaskForUpdateProhibitionLockResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForUpdateProhibitionLockResponse> saveSingleTaskForUpdateProhibitionLock(SaveSingleTaskForUpdateProhibitionLockRequest request) {
         try {
@@ -1509,6 +2037,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSingleTaskForUpdatingContactInfo  SaveSingleTaskForUpdatingContactInfoRequest
+     * @return SaveSingleTaskForUpdatingContactInfoResponse
+     */
     @Override
     public CompletableFuture<SaveSingleTaskForUpdatingContactInfoResponse> saveSingleTaskForUpdatingContactInfo(SaveSingleTaskForUpdatingContactInfoRequest request) {
         try {
@@ -1523,6 +2055,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveTaskForSubmittingDomainDelete  SaveTaskForSubmittingDomainDeleteRequest
+     * @return SaveTaskForSubmittingDomainDeleteResponse
+     */
     @Override
     public CompletableFuture<SaveTaskForSubmittingDomainDeleteResponse> saveTaskForSubmittingDomainDelete(SaveTaskForSubmittingDomainDeleteRequest request) {
         try {
@@ -1537,6 +2073,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential  SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest
+     * @return SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialResponse
+     */
     @Override
     public CompletableFuture<SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialResponse> saveTaskForSubmittingDomainRealNameVerificationByIdentityCredential(SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest request) {
         try {
@@ -1551,6 +2091,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID  SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest
+     * @return SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDResponse
+     */
     @Override
     public CompletableFuture<SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDResponse> saveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID(SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest request) {
         try {
@@ -1565,6 +2109,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveTaskForUpdatingRegistrantInfoByIdentityCredential  SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest
+     * @return SaveTaskForUpdatingRegistrantInfoByIdentityCredentialResponse
+     */
     @Override
     public CompletableFuture<SaveTaskForUpdatingRegistrantInfoByIdentityCredentialResponse> saveTaskForUpdatingRegistrantInfoByIdentityCredential(SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest request) {
         try {
@@ -1579,6 +2127,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID  SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest
+     * @return SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse
+     */
     @Override
     public CompletableFuture<SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse> saveTaskForUpdatingRegistrantInfoByRegistrantProfileID(SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest request) {
         try {
@@ -1594,8 +2146,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you have a large number of domain names, a slow response may occur when you call an API operation to query domain names. In this case, you can call this operation to query domain names more quickly. When you call this operation for the first time, specify the request parameters except ScrollId. A scroll ID is returned without other data. In the second request, use the scroll ID obtained from the previous response. In subsequent requests, the newly specified request parameters do not take effect, and the request parameters that are specified in the first request prevail.
-      *
+     * <b>description</b> :
+     * <p>If you have a large number of domain names, a slow response may occur when you call an API operation to query domain names. In this case, you can call this operation to query domain names more quickly. When you call this operation for the first time, specify the request parameters except ScrollId. A scroll ID is returned without other data. In the second request, use the scroll ID obtained from the previous response. In subsequent requests, the newly specified request parameters do not take effect, and the request parameters that are specified in the first request prevail.</p>
+     * 
+     * @param request the request parameters of ScrollDomainList  ScrollDomainListRequest
+     * @return ScrollDomainListResponse
      */
     @Override
     public CompletableFuture<ScrollDomainListResponse> scrollDomainList(ScrollDomainListRequest request) {
@@ -1611,6 +2166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDefaultRegistrantProfile  SetDefaultRegistrantProfileRequest
+     * @return SetDefaultRegistrantProfileResponse
+     */
     @Override
     public CompletableFuture<SetDefaultRegistrantProfileResponse> setDefaultRegistrantProfile(SetDefaultRegistrantProfileRequest request) {
         try {
@@ -1625,6 +2184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetupDomainAutoRenew  SetupDomainAutoRenewRequest
+     * @return SetupDomainAutoRenewResponse
+     */
     @Override
     public CompletableFuture<SetupDomainAutoRenewResponse> setupDomainAutoRenew(SetupDomainAutoRenewRequest request) {
         try {
@@ -1639,6 +2202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitDomainSpecialBizCredentials  SubmitDomainSpecialBizCredentialsRequest
+     * @return SubmitDomainSpecialBizCredentialsResponse
+     */
     @Override
     public CompletableFuture<SubmitDomainSpecialBizCredentialsResponse> submitDomainSpecialBizCredentials(SubmitDomainSpecialBizCredentialsRequest request) {
         try {
@@ -1653,6 +2220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitEmailVerification  SubmitEmailVerificationRequest
+     * @return SubmitEmailVerificationResponse
+     */
     @Override
     public CompletableFuture<SubmitEmailVerificationResponse> submitEmailVerification(SubmitEmailVerificationRequest request) {
         try {
@@ -1667,6 +2238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitOperationAuditInfo  SubmitOperationAuditInfoRequest
+     * @return SubmitOperationAuditInfoResponse
+     */
     @Override
     public CompletableFuture<SubmitOperationAuditInfoResponse> submitOperationAuditInfo(SubmitOperationAuditInfoRequest request) {
         try {
@@ -1681,6 +2256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitOperationCredentials  SubmitOperationCredentialsRequest
+     * @return SubmitOperationCredentialsResponse
+     */
     @Override
     public CompletableFuture<SubmitOperationCredentialsResponse> submitOperationCredentials(SubmitOperationCredentialsRequest request) {
         try {
@@ -1695,6 +2274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TransferInCheckMailToken  TransferInCheckMailTokenRequest
+     * @return TransferInCheckMailTokenResponse
+     */
     @Override
     public CompletableFuture<TransferInCheckMailTokenResponse> transferInCheckMailToken(TransferInCheckMailTokenRequest request) {
         try {
@@ -1709,6 +2292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TransferInReenterTransferAuthorizationCode  TransferInReenterTransferAuthorizationCodeRequest
+     * @return TransferInReenterTransferAuthorizationCodeResponse
+     */
     @Override
     public CompletableFuture<TransferInReenterTransferAuthorizationCodeResponse> transferInReenterTransferAuthorizationCode(TransferInReenterTransferAuthorizationCodeRequest request) {
         try {
@@ -1723,6 +2310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TransferInRefetchWhoisEmail  TransferInRefetchWhoisEmailRequest
+     * @return TransferInRefetchWhoisEmailResponse
+     */
     @Override
     public CompletableFuture<TransferInRefetchWhoisEmailResponse> transferInRefetchWhoisEmail(TransferInRefetchWhoisEmailRequest request) {
         try {
@@ -1737,6 +2328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TransferInResendMailToken  TransferInResendMailTokenRequest
+     * @return TransferInResendMailTokenResponse
+     */
     @Override
     public CompletableFuture<TransferInResendMailTokenResponse> transferInResendMailToken(TransferInResendMailTokenRequest request) {
         try {
@@ -1751,6 +2346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDomainToDomainGroup  UpdateDomainToDomainGroupRequest
+     * @return UpdateDomainToDomainGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateDomainToDomainGroupResponse> updateDomainToDomainGroup(UpdateDomainToDomainGroupRequest request) {
         try {
@@ -1765,6 +2364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyContactField  VerifyContactFieldRequest
+     * @return VerifyContactFieldResponse
+     */
     @Override
     public CompletableFuture<VerifyContactFieldResponse> verifyContactField(VerifyContactFieldRequest request) {
         try {
@@ -1779,6 +2382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyEmail  VerifyEmailRequest
+     * @return VerifyEmailResponse
+     */
     @Override
     public CompletableFuture<VerifyEmailResponse> verifyEmail(VerifyEmailRequest request) {
         try {

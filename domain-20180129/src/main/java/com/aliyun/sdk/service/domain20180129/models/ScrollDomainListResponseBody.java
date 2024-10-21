@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScrollDomainListResponseBody} extends {@link TeaModel}
  *
  * <p>ScrollDomainListResponseBody</p>
@@ -85,7 +86,7 @@ public class ScrollDomainListResponseBody extends TeaModel {
         private Integer totalItemNum; 
 
         /**
-         * The domain names.
+         * <p>The domain names.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +94,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +105,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>722AB7F5-61F0-408C-A012-4784AFD34083</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The scroll ID.
+         * <p>The scroll ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder scrollId(String scrollId) {
             this.scrollId = scrollId;
@@ -117,7 +127,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of remaining domain names to be queried.
+         * <p>The number of remaining domain names to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -130,6 +143,12 @@ public class ScrollDomainListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ScrollDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ScrollDomainListResponseBody</p>
+     */
     public static class DnsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dns")
         private java.util.List < String > dns;
@@ -171,6 +190,12 @@ public class ScrollDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ScrollDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ScrollDomainListResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -210,7 +235,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -218,7 +246,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -232,6 +263,12 @@ public class ScrollDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ScrollDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ScrollDomainListResponseBody</p>
+     */
     public static class DomainTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -273,6 +310,12 @@ public class ScrollDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ScrollDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ScrollDomainListResponseBody</p>
+     */
     public static class Domain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsList")
         private DnsList dnsList;
@@ -564,7 +607,7 @@ public class ScrollDomainListResponseBody extends TeaModel {
             private String zhRegistrantOrganization; 
 
             /**
-             * The Domain Name System (DNS) servers of the domain name.
+             * <p>The Domain Name System (DNS) servers of the domain name.</p>
              */
             public Builder dnsList(DnsList dnsList) {
                 this.dnsList = dnsList;
@@ -572,13 +615,16 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of real-name verification for the domain name. Valid values:
-             * <p>
+             * <p>The status of real-name verification for the domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>FAILED</strong>: Real-name verification for the domain name fails.</li>
+             * <li><strong>SUCCEED</strong>: Real-name verification for the domain name is successful.</li>
+             * <li><strong>NONAUDIT</strong>: Real-name verification for the domain name is not performed.</li>
+             * <li><strong>AUDITING</strong>: Real-name verification for the domain name is in progress.</li>
+             * </ul>
              * 
-             * *   **FAILED**: Real-name verification for the domain name fails.
-             * *   **SUCCEED**: Real-name verification for the domain name is successful.
-             * *   **NONAUDIT**: Real-name verification for the domain name is not performed.
-             * *   **AUDITING**: Real-name verification for the domain name is in progress.
+             * <strong>example:</strong>
+             * <p>NONAUDIT</p>
              */
             public Builder domainAuditStatus(String domainAuditStatus) {
                 this.domainAuditStatus = domainAuditStatus;
@@ -586,7 +632,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name group.
+             * <p>The ID of the domain name group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder domainGroupId(String domainGroupId) {
                 this.domainGroupId = domainGroupId;
@@ -594,7 +643,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the domain name group.
+             * <p>The name of the domain name group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test group</p>
              */
             public Builder domainGroupName(String domainGroupName) {
                 this.domainGroupName = domainGroupName;
@@ -602,7 +654,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -610,17 +665,20 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name. Valid values:
-             * <p>
+             * <p>The status of the domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The domain name needs to be renewed.</li>
+             * <li><strong>2</strong>: The domain name needs to be redeemed.</li>
+             * <li><strong>3</strong>: The domain name is normal.</li>
+             * <li><strong>4</strong>: The domain name is being transferred out.</li>
+             * <li><strong>5</strong>: The information about the domain name registrant is being modified.</li>
+             * <li><strong>6</strong>: Real-name verification is not performed on the domain name.</li>
+             * <li><strong>7</strong>: Real-name verification for the domain name fails.</li>
+             * <li><strong>8</strong>: The real-name verification is being reviewed.</li>
+             * </ul>
              * 
-             * *   **1**: The domain name needs to be renewed.
-             * *   **2**: The domain name needs to be redeemed.
-             * *   **3**: The domain name is normal.
-             * *   **4**: The domain name is being transferred out.
-             * *   **5**: The information about the domain name registrant is being modified.
-             * *   **6**: Real-name verification is not performed on the domain name.
-             * *   **7**: Real-name verification for the domain name fails.
-             * *   **8**: The real-name verification is being reviewed.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -628,12 +686,15 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the domain name. Valid values:
-             * <p>
+             * <p>The type of the domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>New gTLD</strong></li>
+             * <li><strong>gTLD</strong></li>
+             * <li><strong>ccTLD</strong></li>
+             * </ul>
              * 
-             * *   **New gTLD**
-             * *   **gTLD**
-             * *   **ccTLD**
+             * <strong>example:</strong>
+             * <p>gTLD</p>
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
@@ -641,7 +702,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The email address.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -649,7 +713,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days from the expiration date of the domain name to the current date.
+             * <p>The number of days from the expiration date of the domain name to the current date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder expirationCurrDateDiff(Integer expirationCurrDateDiff) {
                 this.expirationCurrDateDiff = expirationCurrDateDiff;
@@ -657,7 +724,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name expires.
+             * <p>The time when the domain name expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-15 17:30:35</p>
              */
             public Builder expirationDate(String expirationDate) {
                 this.expirationDate = expirationDate;
@@ -665,7 +735,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the domain name expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1550223035000</p>
              */
             public Builder expirationDateLong(Long expirationDateLong) {
                 this.expirationDateLong = expirationDateLong;
@@ -673,11 +746,14 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the domain name expires. Valid values:
-             * <p>
+             * <p>Indicates whether the domain name expires. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The domain name does not expire.</li>
+             * <li><strong>2</strong>: The domain name expires.</li>
+             * </ul>
              * 
-             * *   **1**: The domain name does not expire.
-             * *   **2**: The domain name expires.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder expirationDateStatus(String expirationDateStatus) {
                 this.expirationDateStatus = expirationDateStatus;
@@ -685,7 +761,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the domain name.
+             * <p>The instance ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S1234</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -693,7 +772,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the domain name is a premium domain name.
+             * <p>Indicates whether the domain name is a premium domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder premium(Boolean premium) {
                 this.premium = premium;
@@ -701,7 +783,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2a</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -709,7 +794,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The registrant of the domain name.
+             * <p>The registrant of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba cloud</p>
              */
             public Builder registrantOrganization(String registrantOrganization) {
                 this.registrantOrganization = registrantOrganization;
@@ -717,11 +805,14 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The registration type of the domain name. Valid values:
-             * <p>
+             * <p>The registration type of the domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: individual.</li>
+             * <li><strong>2</strong>: enterprise.</li>
+             * </ul>
              * 
-             * *   **1**: individual.
-             * *   **2**: enterprise.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder registrantType(String registrantType) {
                 this.registrantType = registrantType;
@@ -729,7 +820,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was registered.
+             * <p>The time when the domain name was registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-02-15 00:00:00</p>
              */
             public Builder registrationDate(String registrationDate) {
                 this.registrationDate = registrationDate;
@@ -737,7 +831,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was registered. This value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the domain name was registered. This value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1487088000000</p>
              */
             public Builder registrationDateLong(Long registrationDateLong) {
                 this.registrationDateLong = registrationDateLong;
@@ -745,7 +842,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks on the domain name.
+             * <p>The remarks on the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test domain</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -753,7 +853,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2yyciz557g3q</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -761,7 +864,7 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The resource tag.
+             * <p>The resource tag.</p>
              */
             public Builder tag(DomainTag tag) {
                 this.tag = tag;
@@ -769,7 +872,10 @@ public class ScrollDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the domain name registrant.
+             * <p>The Chinese name of the domain name registrant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>阿里云</p>
              */
             public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
                 this.zhRegistrantOrganization = zhRegistrantOrganization;
@@ -783,6 +889,12 @@ public class ScrollDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ScrollDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ScrollDomainListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private java.util.List < Domain> domain;

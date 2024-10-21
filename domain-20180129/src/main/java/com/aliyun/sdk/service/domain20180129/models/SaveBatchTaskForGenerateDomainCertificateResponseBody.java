@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForGenerateDomainCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>SaveBatchTaskForGenerateDomainCertificateResponseBody</p>
@@ -49,7 +50,10 @@ public class SaveBatchTaskForGenerateDomainCertificateResponseBody extends TeaMo
         private String taskNo; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class SaveBatchTaskForGenerateDomainCertificateResponseBody extends TeaMo
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8b1cd755-4928-4b02-adee-e5d41d7b1939</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDSRecordResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDSRecordResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryDSRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDSRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDSRecordResponseBody</p>
+     */
     public static class DSRecordList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Algorithm")
         private Integer algorithm;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryQualificationDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryQualificationDetailResponseBody</p>
@@ -110,6 +111,12 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryQualificationDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryQualificationDetailResponseBody</p>
+     */
     public static class QualificationCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CredentialNo")
         private String credentialNo;
@@ -191,6 +198,12 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryQualificationDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryQualificationDetailResponseBody</p>
+     */
     public static class Credentials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QualificationCredential")
         private java.util.List < QualificationCredential> qualificationCredential;

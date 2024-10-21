@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PollTaskResultResponseBody} extends {@link TeaModel}
  *
  * <p>PollTaskResultResponseBody</p>
@@ -190,6 +191,12 @@ public class PollTaskResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PollTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollTaskResultResponseBody</p>
+     */
     public static class TaskDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -471,6 +478,12 @@ public class PollTaskResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollTaskResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskDetail")
         private java.util.List < TaskDetail> taskDetail;

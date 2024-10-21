@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferInReenterTransferAuthorizationCodeRequest} extends {@link RequestModel}
  *
  * <p>TransferInReenterTransferAuthorizationCodeRequest</p>
@@ -97,7 +98,10 @@ public class TransferInReenterTransferAuthorizationCodeRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -115,7 +119,10 @@ public class TransferInReenterTransferAuthorizationCodeRequest extends Request {
         }
 
         /**
-         * TransferAuthorizationCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testCode</p>
          */
         public Builder transferAuthorizationCode(String transferAuthorizationCode) {
             this.putQueryParameter("TransferAuthorizationCode", transferAuthorizationCode);

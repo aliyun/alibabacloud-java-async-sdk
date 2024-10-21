@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainSuffixResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainSuffixResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryDomainSuffixResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainSuffixResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainSuffixResponseBody</p>
+     */
     public static class SuffixList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Suffix")
         private java.util.List < String > suffix;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AcknowledgeTaskResultRequest} extends {@link RequestModel}
  *
  * <p>AcknowledgeTaskResultRequest</p>
@@ -91,7 +92,10 @@ public class AcknowledgeTaskResultRequest extends Request {
         }
 
         /**
-         * TaskDetailNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2659c29493e94416b297a7691340ccc4</p>
          */
         public Builder taskDetailNo(java.util.List < String > taskDetailNo) {
             this.putQueryParameter("TaskDetailNo", taskDetailNo);

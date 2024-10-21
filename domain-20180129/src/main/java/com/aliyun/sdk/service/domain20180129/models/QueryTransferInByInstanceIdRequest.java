@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTransferInByInstanceIdRequest} extends {@link RequestModel}
  *
  * <p>QueryTransferInByInstanceIdRequest</p>
@@ -82,7 +83,10 @@ public class QueryTransferInByInstanceIdRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20181T0WLI85212</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

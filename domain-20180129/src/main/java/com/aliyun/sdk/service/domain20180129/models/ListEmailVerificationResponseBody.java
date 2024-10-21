@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEmailVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>ListEmailVerificationResponseBody</p>
@@ -190,6 +191,12 @@ public class ListEmailVerificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEmailVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEmailVerificationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfirmIp")
         private String confirmIp;

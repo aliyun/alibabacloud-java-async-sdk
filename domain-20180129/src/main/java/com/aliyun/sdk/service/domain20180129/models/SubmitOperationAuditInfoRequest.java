@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitOperationAuditInfoRequest} extends {@link RequestModel}
  *
  * <p>SubmitOperationAuditInfoRequest</p>
@@ -120,7 +121,10 @@ public class SubmitOperationAuditInfoRequest extends Request {
         }
 
         /**
-         * AuditType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditType(Integer auditType) {
             this.putQueryParameter("AuditType", auditType);
@@ -129,7 +133,10 @@ public class SubmitOperationAuditInfoRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,example.org</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

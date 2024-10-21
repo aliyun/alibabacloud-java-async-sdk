@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForReserveDropListDomainRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForReserveDropListDomainRequest</p>
@@ -97,7 +98,7 @@ public class SaveSingleTaskForReserveDropListDomainRequest extends Request {
         } 
 
         /**
-         * ContactTemplateId.
+         * <p>This parameter is required.</p>
          */
         public Builder contactTemplateId(String contactTemplateId) {
             this.putQueryParameter("ContactTemplateId", contactTemplateId);
@@ -124,7 +125,7 @@ public class SaveSingleTaskForReserveDropListDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyEmailRequest} extends {@link RequestModel}
  *
  * <p>VerifyEmailRequest</p>
@@ -91,7 +92,10 @@ public class VerifyEmailRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b32247496409441e9e179ea7c2e0****</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

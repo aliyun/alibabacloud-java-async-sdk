@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest} extends {@link RequestModel}
  *
  * <p>SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest</p>
@@ -112,7 +113,10 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -130,7 +134,10 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);
@@ -139,7 +146,10 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
         }
 
         /**
-         * TransferOutProhibited.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder transferOutProhibited(Boolean transferOutProhibited) {
             this.putQueryParameter("TransferOutProhibited", transferOutProhibited);

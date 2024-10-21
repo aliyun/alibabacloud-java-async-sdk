@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryChangeLogListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryChangeLogListResponseBody</p>
@@ -210,6 +211,12 @@ public class QueryChangeLogListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryChangeLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryChangeLogListResponseBody</p>
+     */
     public static class ChangeLog extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Details")
         private String details;
@@ -351,6 +358,12 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryChangeLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryChangeLogListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeLog")
         private java.util.List < ChangeLog> changeLog;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEnsAssociationRequest} extends {@link RequestModel}
  *
  * <p>QueryEnsAssociationRequest</p>
@@ -82,7 +83,10 @@ public class QueryEnsAssociationRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.luxe</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

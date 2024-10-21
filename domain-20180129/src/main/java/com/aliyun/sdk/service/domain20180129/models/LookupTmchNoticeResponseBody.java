@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
  *
  * <p>LookupTmchNoticeResponseBody</p>
@@ -150,6 +151,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class ClassDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassNum")
         private Integer classNum;
@@ -211,6 +218,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class ClassDescs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassDesc")
         private java.util.List < ClassDesc> classDesc;
@@ -252,6 +265,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Street extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Street")
         private java.util.List < String > street;
@@ -293,6 +312,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Addr extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cc")
         private String cc;
@@ -414,6 +439,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Contact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
         private Addr addr;
@@ -575,6 +606,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contact")
         private java.util.List < Contact> contact;
@@ -616,6 +653,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class AddrStreet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Street")
         private java.util.List < String > street;
@@ -657,6 +700,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class HolderAddr extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cc")
         private String cc;
@@ -778,6 +827,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Holder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
         private HolderAddr addr;
@@ -859,6 +914,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Holders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Holder")
         private java.util.List < Holder> holder;
@@ -900,6 +961,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class JurDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
@@ -961,6 +1028,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Claim extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassDescs")
         private ClassDescs classDescs;
@@ -1102,6 +1175,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LookupTmchNoticeResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupTmchNoticeResponseBody</p>
+     */
     public static class Claims extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Claim")
         private java.util.List < Claim> claim;

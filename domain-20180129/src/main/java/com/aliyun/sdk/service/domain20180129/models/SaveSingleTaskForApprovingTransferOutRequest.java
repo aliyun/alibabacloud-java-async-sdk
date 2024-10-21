@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForApprovingTransferOutRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForApprovingTransferOutRequest</p>
@@ -82,7 +83,7 @@ public class SaveSingleTaskForApprovingTransferOutRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

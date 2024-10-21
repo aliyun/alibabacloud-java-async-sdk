@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForReserveDropListDomainRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForReserveDropListDomainRequest</p>
@@ -69,7 +70,10 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         } 
 
         /**
-         * ContactTemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder contactTemplateId(String contactTemplateId) {
             this.putQueryParameter("ContactTemplateId", contactTemplateId);
@@ -78,7 +82,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         /**
-         * Domains.
+         * <p>This parameter is required.</p>
          */
         public Builder domains(java.util.List < Domains> domains) {
             this.putQueryParameter("Domains", domains);
@@ -93,6 +97,12 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForReserveDropListDomainRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForReserveDropListDomainRequest</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dns1")
         private String dns1;
@@ -161,7 +171,10 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
             }
 
             /**
-             * DomainName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest} extends {@link RequestModel}
  *
  * <p>SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest</p>
@@ -112,7 +113,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -121,7 +122,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,7 +140,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);

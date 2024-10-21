@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDomainResponseBody} extends {@link TeaModel}
  *
  * <p>CheckDomainResponseBody</p>
@@ -190,6 +191,12 @@ public class CheckDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckDomainResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("action")
         private String action;
@@ -271,6 +278,12 @@ public class CheckDomainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CheckDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckDomainResponseBody</p>
+     */
     public static class StaticPriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PriceInfo")
         private java.util.List < PriceInfo> priceInfo;

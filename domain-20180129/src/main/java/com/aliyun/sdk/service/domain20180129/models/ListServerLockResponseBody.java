@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServerLockResponseBody} extends {@link TeaModel}
  *
  * <p>ListServerLockResponseBody</p>
@@ -121,7 +122,10 @@ public class ListServerLockResponseBody extends TeaModel {
         private Integer totalPageNum; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -129,7 +133,7 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -137,7 +141,10 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the current page is followed by a page.
+         * <p>Indicates whether the current page is followed by a page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -145,7 +152,10 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -153,7 +163,10 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the current page is preceded by a page.
+         * <p>Indicates whether the current page is preceded by a page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -161,7 +174,10 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +185,10 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -177,7 +196,10 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;
@@ -190,6 +212,12 @@ public class ListServerLockResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServerLockResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServerLockResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainInstanceId")
         private String domainInstanceId;
@@ -325,7 +353,10 @@ public class ListServerLockResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The instance ID of the domain name.
+             * <p>The instance ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S20190N1DAI4****</p>
              */
             public Builder domainInstanceId(String domainInstanceId) {
                 this.domainInstanceId = domainInstanceId;
@@ -333,7 +364,10 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that has valid registry lock information.
+             * <p>The domain name that has valid registry lock information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -341,7 +375,10 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2030-07-10 17:37:36</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -349,7 +386,10 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-19 16:38:07</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -357,7 +397,10 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was last modified.
+             * <p>The time when the domain name was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-19 16:40:38</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -365,7 +408,10 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the domain name for which the registry lock is enabled.
+             * <p>The instance ID of the domain name for which the registry lock is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S2021591IQ28****</p>
              */
             public Builder lockInstanceId(String lockInstanceId) {
                 this.lockInstanceId = lockInstanceId;
@@ -373,7 +419,10 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product to which the domain name with the registry lock enabled belongs.
+             * <p>The ID of the product to which the domain name with the registry lock enabled belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1807**</p>
              */
             public Builder lockProductId(String lockProductId) {
                 this.lockProductId = lockProductId;
@@ -381,7 +430,10 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the registry lock.
+             * <p>The status of the registry lock.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder serverLockStatus(String serverLockStatus) {
                 this.serverLockStatus = serverLockStatus;
@@ -389,7 +441,10 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-10 17:37:36</p>
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -397,7 +452,10 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121000000****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

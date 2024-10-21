@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForSynchronizingDSRecordRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForSynchronizingDSRecordRequest</p>
@@ -82,7 +83,10 @@ public class SaveSingleTaskForSynchronizingDSRecordRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

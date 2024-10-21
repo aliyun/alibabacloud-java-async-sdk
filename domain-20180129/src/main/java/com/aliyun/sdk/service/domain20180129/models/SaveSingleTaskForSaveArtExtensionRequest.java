@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForSaveArtExtensionRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForSaveArtExtensionRequest</p>
@@ -226,7 +227,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.art</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

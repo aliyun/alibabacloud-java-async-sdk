@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainSpecialBizInfoByDomainResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainSpecialBizInfoByDomainResponseBody</p>
@@ -169,7 +170,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         private Boolean synchro; 
 
         /**
-         * Indicates whether retries are allowed.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -177,7 +181,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the application for which the error code is returned.
+         * <p>The name of the application for which the error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-com</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -185,7 +192,12 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -193,7 +205,12 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -201,7 +218,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The array of error parameters that are returned.
+         * <p>The array of error parameters that are returned.</p>
          */
         public Builder errorArgs(java.util.List < ? > errorArgs) {
             this.errorArgs = errorArgs;
@@ -209,7 +226,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -217,7 +234,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110001</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -225,7 +245,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is directly returned.
+         * <p>The HTTP status code that is directly returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -233,7 +256,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -241,7 +264,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97663DFF-D24D-55AE-A577-6CC5AF20B732</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -249,7 +275,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false
+         * <p>Indicates whether the request is successful. Valid values: true and false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -257,7 +286,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether to perform synchronous processing.
+         * <p>Indicates whether to perform synchronous processing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -270,6 +302,12 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainSpecialBizInfoByDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainSpecialBizInfoByDomainResponseBody</p>
+     */
     public static class DomainSpecialBizContact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizId")
         private Long bizId;
@@ -585,7 +623,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             private String vspContactId; 
 
             /**
-             * The business ID.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>258</p>
              */
             public Builder bizId(Long bizId) {
                 this.bizId = bizId;
@@ -593,7 +634,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The city.
+             * <p>The city.</p>
              */
             public Builder cCity(String cCity) {
                 this.cCity = cCity;
@@ -601,7 +642,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The organization name.
+             * <p>The organization name.</p>
              */
             public Builder cCompany(String cCompany) {
                 this.cCompany = cCompany;
@@ -609,7 +650,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The country code.
+             * <p>The country code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder cCountry(String cCountry) {
                 this.cCountry = cCountry;
@@ -617,7 +661,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The contact name.
+             * <p>The contact name.</p>
              */
             public Builder cName(String cName) {
                 this.cName = cName;
@@ -625,7 +669,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The province.
+             * <p>The province.</p>
              */
             public Builder cProvince(String cProvince) {
                 this.cProvince = cProvince;
@@ -633,7 +677,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The address.
+             * <p>The address.</p>
              */
             public Builder cVenu(String cVenu) {
                 this.cVenu = cVenu;
@@ -641,7 +685,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The city in English.
+             * <p>The city in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>an shan Shi</p>
              */
             public Builder eCity(String eCity) {
                 this.eCity = eCity;
@@ -649,7 +696,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The organization name in English.
+             * <p>The organization name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hebeihuiheguandaozhizaoyouxiangongsi</p>
              */
             public Builder eCompany(String eCompany) {
                 this.eCompany = eCompany;
@@ -657,7 +707,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The contact name in English.
+             * <p>The contact name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tong da wei</p>
              */
             public Builder eName(String eName) {
                 this.eName = eName;
@@ -665,7 +718,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The province in English.
+             * <p>The province in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liao ning</p>
              */
             public Builder eProvince(String eProvince) {
                 this.eProvince = eProvince;
@@ -673,7 +729,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The address in English.
+             * <p>The address in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tie xi qu xin kai jie 59-4 hao</p>
              */
             public Builder eVenu(String eVenu) {
                 this.eVenu = eVenu;
@@ -681,7 +740,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The email address.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -689,7 +751,12 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information.
+             * <p>The extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -697,7 +764,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The fax country code.
+             * <p>The fax country code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder faxArea(String faxArea) {
                 this.faxArea = faxArea;
@@ -705,7 +775,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The fax extension number.
+             * <p>The fax extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61284565</p>
              */
             public Builder faxExt(String faxExt) {
                 this.faxExt = faxExt;
@@ -713,7 +786,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The fax number with an area code or mobile number.
+             * <p>The fax number with an area code or mobile number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16604121234</p>
              */
             public Builder faxMain(String faxMain) {
                 this.faxMain = faxMain;
@@ -721,7 +797,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number.
+             * <p>The mobile number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>156********</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -729,7 +808,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The zip code.
+             * <p>The zip code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder postalcode(String postalcode) {
                 this.postalcode = postalcode;
@@ -737,7 +819,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The contact type. Valid values: 1: individual. 2: enterprise.
+             * <p>The contact type. Valid values: 1: individual. 2: enterprise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder regType(Integer regType) {
                 this.regType = regType;
@@ -745,7 +830,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The registrant ID.
+             * <p>The registrant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121000002****</p>
              */
             public Builder registrantId(String registrantId) {
                 this.registrantId = registrantId;
@@ -753,7 +841,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The calling code of the country or region where the domain name contact is located.
+             * <p>The calling code of the country or region where the domain name contact is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder telArea(String telArea) {
                 this.telArea = telArea;
@@ -761,7 +852,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The telephone extension number.
+             * <p>The telephone extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2756</p>
              */
             public Builder telExt(String telExt) {
                 this.telExt = telExt;
@@ -769,7 +863,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The landline number with an area code or mobile number.
+             * <p>The landline number with an area code or mobile number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16604121234</p>
              */
             public Builder telMain(String telMain) {
                 this.telMain = telMain;
@@ -777,7 +874,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The VSP contact ID.
+             * <p>The VSP contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121000001****</p>
              */
             public Builder vspContactId(String vspContactId) {
                 this.vspContactId = vspContactId;
@@ -791,6 +891,12 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainSpecialBizInfoByDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainSpecialBizInfoByDomainResponseBody</p>
+     */
     public static class DomainSpecialBizCredentials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizId")
         private Long bizId;
@@ -890,7 +996,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             private String saleId; 
 
             /**
-             * The ID of the associated workflow.
+             * <p>The ID of the associated workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T20220831150014000001</p>
              */
             public Builder bizId(Long bizId) {
                 this.bizId = bizId;
@@ -898,7 +1007,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate number.
+             * <p>The certificate number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4111111111111110**</p>
              */
             public Builder credentialNo(String credentialNo) {
                 this.credentialNo = credentialNo;
@@ -906,7 +1018,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate type.
+             * <p>The certificate type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SFZ</p>
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -914,7 +1029,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate URL.
+             * <p>The certificate URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg">http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg</a></p>
              */
             public Builder credentialUrl(String credentialUrl) {
                 this.credentialUrl = credentialUrl;
@@ -922,7 +1040,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test003.cn</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -930,7 +1051,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate belongs to the registrant.
+             * <p>Indicates whether the certificate belongs to the registrant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder holderCert(Integer holderCert) {
                 this.holderCert = holderCert;
@@ -938,7 +1062,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S20172315BJ37809</p>
              */
             public Builder saleId(String saleId) {
                 this.saleId = saleId;
@@ -952,6 +1079,12 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainSpecialBizInfoByDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainSpecialBizInfoByDomainResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditMsg")
         private String auditMsg;
@@ -1195,7 +1328,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The review information.
+             * <p>The review information.</p>
              */
             public Builder auditMsg(String auditMsg) {
                 this.auditMsg = auditMsg;
@@ -1203,7 +1336,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The business name.
+             * <p>The business name.</p>
              */
             public Builder bizName(String bizName) {
                 this.bizName = bizName;
@@ -1211,7 +1344,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The business ID.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A83E1D74-E46B-505C-947A-8C6B7E41C012</p>
              */
             public Builder bizNo(String bizNo) {
                 this.bizNo = bizNo;
@@ -1219,7 +1355,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The business status.
+             * <p>The business status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REGISTRANT_VSP_AUDIT_SUCCESS</p>
              */
             public Builder bizStatus(String bizStatus) {
                 this.bizStatus = bizStatus;
@@ -1227,7 +1366,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The business type.
+             * <p>The business type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>govRegister</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -1235,7 +1377,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business was created.
+             * <p>The time when the business was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-17 11:31:10</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1243,7 +1388,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test003.cn</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -1251,7 +1399,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The contact information.
+             * <p>The contact information.</p>
              */
             public Builder domainSpecialBizContact(DomainSpecialBizContact domainSpecialBizContact) {
                 this.domainSpecialBizContact = domainSpecialBizContact;
@@ -1259,7 +1407,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate information.
+             * <p>The certificate information.</p>
              */
             public Builder domainSpecialBizCredentials(java.util.List < DomainSpecialBizCredentials> domainSpecialBizCredentials) {
                 this.domainSpecialBizCredentials = domainSpecialBizCredentials;
@@ -1267,7 +1415,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business was created.
+             * <p>The time when the business was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-21 15:10:04.0</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1275,7 +1426,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business was modified.
+             * <p>The time when the business was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-21 15:10:04.0</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1283,7 +1437,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34083</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1291,7 +1448,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The order ID.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -1299,7 +1459,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -1307,7 +1470,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S20172315BJ37809</p>
              */
             public Builder saleId(String saleId) {
                 this.saleId = saleId;
@@ -1315,7 +1481,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The business status.
+             * <p>The business status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1323,7 +1492,7 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The description of business status.
+             * <p>The description of business status.</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -1331,7 +1500,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business was updated.
+             * <p>The time when the business was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-17 18:11:15</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -1339,7 +1511,10 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121000000****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

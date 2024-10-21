@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse} extends {@link TeaModel}
  *
  * <p>SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDResponse</p>

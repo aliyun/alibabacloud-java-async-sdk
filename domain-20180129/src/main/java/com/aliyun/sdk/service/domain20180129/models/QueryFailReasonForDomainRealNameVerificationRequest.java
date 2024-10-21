@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFailReasonForDomainRealNameVerificationRequest} extends {@link RequestModel}
  *
  * <p>QueryFailReasonForDomainRealNameVerificationRequest</p>
@@ -97,7 +98,10 @@ public class QueryFailReasonForDomainRealNameVerificationRequest extends Request
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -115,7 +119,10 @@ public class QueryFailReasonForDomainRealNameVerificationRequest extends Request
         }
 
         /**
-         * RealNameVerificationAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATE</p>
          */
         public Builder realNameVerificationAction(String realNameVerificationAction) {
             this.putQueryParameter("RealNameVerificationAction", realNameVerificationAction);

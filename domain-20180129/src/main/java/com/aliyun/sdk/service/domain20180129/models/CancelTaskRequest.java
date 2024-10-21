@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelTaskRequest} extends {@link RequestModel}
  *
  * <p>CancelTaskRequest</p>
@@ -91,7 +92,10 @@ public class CancelTaskRequest extends Request {
         }
 
         /**
-         * TaskNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7f217ae0-61f5-42e2-a1c3-42bad0124****</p>
          */
         public Builder taskNo(String taskNo) {
             this.putQueryParameter("TaskNo", taskNo);

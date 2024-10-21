@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitEmailVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitEmailVerificationResponseBody</p>
@@ -110,6 +111,12 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitEmailVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitEmailVerificationResponseBody</p>
+     */
     public static class ExistList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -191,6 +198,12 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitEmailVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitEmailVerificationResponseBody</p>
+     */
     public static class FailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -272,6 +285,12 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitEmailVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitEmailVerificationResponseBody</p>
+     */
     public static class SuccessList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;

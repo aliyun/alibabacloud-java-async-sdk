@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServerLockRequest} extends {@link RequestModel}
  *
  * <p>ListServerLockRequest</p>
@@ -221,7 +222,10 @@ public class ListServerLockRequest extends Request {
         } 
 
         /**
-         * The start of the time range to query.
+         * <p>The start of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-10 17:37:36</p>
          */
         public Builder beginStartDate(Long beginStartDate) {
             this.putQueryParameter("BeginStartDate", beginStartDate);
@@ -230,7 +234,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The domain name for which you want to query the enabled registry lock.
+         * <p>The domain name for which you want to query the enabled registry lock.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -239,7 +246,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The end of the expiration time.
+         * <p>The end of the expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-10 17:37:36</p>
          */
         public Builder endExpireDate(Long endExpireDate) {
             this.putQueryParameter("EndExpireDate", endExpireDate);
@@ -248,7 +258,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-10 17:37:36</p>
          */
         public Builder endStartDate(Long endStartDate) {
             this.putQueryParameter("EndStartDate", endStartDate);
@@ -257,13 +270,15 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The language of the error message to return if the request fails. Valid values:
-         * <p>
+         * <p>The language of the error message to return if the request fails. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
          * 
-         * *   zh: Chinese
-         * *   en: English
-         * 
-         * Default value: en.
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -272,7 +287,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The ID of the product to which the domain name with the registry lock enabled belongs.
+         * <p>The ID of the product to which the domain name with the registry lock enabled belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1807**</p>
          */
         public Builder lockProductId(String lockProductId) {
             this.putQueryParameter("LockProductId", lockProductId);
@@ -281,12 +299,14 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The field that you use to sort the query results.
-         * <p>
+         * <p>The field that you use to sort the query results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>EXPIRE_DATE</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   EXPIRE_DATE
+         * <strong>example:</strong>
+         * <p>EXPIRE_DATE</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -295,7 +315,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The order of the information based on which you want to sort the domain names, such as the registration date and expiration date. Valid values: ASC and DESC. The value ASC specifies the ascending order. The value DESC specifies the descending order. If this parameter is not configured, the default value DESC is used.
+         * <p>The order of the information based on which you want to sort the domain names, such as the registration date and expiration date. Valid values: ASC and DESC. The value ASC specifies the ascending order. The value DESC specifies the descending order. If this parameter is not configured, the default value DESC is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderByType(String orderByType) {
             this.putQueryParameter("OrderByType", orderByType);
@@ -304,7 +327,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -313,7 +339,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -322,12 +351,15 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The status of the registry lock. Valid values:
-         * <p>
+         * <p>The status of the registry lock. Valid values:</p>
+         * <ul>
+         * <li>1: The registry lock is not enabled.</li>
+         * <li>2: The registry lock is enabled.</li>
+         * <li>3: The registry lock is disabled.</li>
+         * </ul>
          * 
-         * *   1: The registry lock is not enabled.
-         * *   2: The registry lock is enabled.
-         * *   3: The registry lock is disabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serverLockStatus(Integer serverLockStatus) {
             this.putQueryParameter("ServerLockStatus", serverLockStatus);
@@ -336,7 +368,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The start of the expiration time.
+         * <p>The start of the expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-10 17:37:36</p>
          */
         public Builder startExpireDate(Long startExpireDate) {
             this.putQueryParameter("StartExpireDate", startExpireDate);
@@ -345,7 +380,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * The IP address of the client. For example, you can set the value to **127.0.0.1**.
+         * <p>The IP address of the client. For example, you can set the value to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

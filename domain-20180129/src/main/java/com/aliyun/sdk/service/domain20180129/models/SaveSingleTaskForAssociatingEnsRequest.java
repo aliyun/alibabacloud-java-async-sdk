@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForAssociatingEnsRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForAssociatingEnsRequest</p>
@@ -97,7 +98,10 @@ public class SaveSingleTaskForAssociatingEnsRequest extends Request {
         } 
 
         /**
-         * Address.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x1234567890123456789012345678901234567890</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -106,7 +110,10 @@ public class SaveSingleTaskForAssociatingEnsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.luxe</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

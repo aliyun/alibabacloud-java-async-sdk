@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckMaxYearOfServerLockRequest} extends {@link RequestModel}
  *
  * <p>CheckMaxYearOfServerLockRequest</p>
@@ -97,7 +98,10 @@ public class CheckMaxYearOfServerLockRequest extends Request {
         } 
 
         /**
-         * CheckAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>activate</p>
          */
         public Builder checkAction(String checkAction) {
             this.putQueryParameter("CheckAction", checkAction);
@@ -106,7 +110,10 @@ public class CheckMaxYearOfServerLockRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

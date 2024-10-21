@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForCreatingOrderTransferRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForCreatingOrderTransferRequest</p>
@@ -182,7 +183,10 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         } 
 
         /**
-         * AuthorizationCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testCode</p>
          */
         public Builder authorizationCode(String authorizationCode) {
             this.putQueryParameter("AuthorizationCode", authorizationCode);
@@ -200,7 +204,10 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -236,7 +243,10 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainByDomainNameRequest} extends {@link RequestModel}
  *
  * <p>QueryDomainByDomainNameRequest</p>
@@ -82,7 +83,11 @@ public class QueryDomainByDomainNameRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -91,13 +96,15 @@ public class QueryDomainByDomainNameRequest extends Request {
         }
 
         /**
-         * The language of the error message to return if the request fails. Valid values:
-         * <p>
+         * <p>The language of the error message to return if the request fails. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
-         * 
-         * Default value: **en**.
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +113,10 @@ public class QueryDomainByDomainNameRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

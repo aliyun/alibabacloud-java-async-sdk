@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForUpdatingContactInfoByNewContactRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForUpdatingContactInfoByNewContactRequest</p>
@@ -368,7 +369,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * ContactType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registrant</p>
          */
         public Builder contactType(String contactType) {
             this.putQueryParameter("ContactType", contactType);
@@ -386,7 +390,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibabacloud.com</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -449,7 +456,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * RegistrantType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);

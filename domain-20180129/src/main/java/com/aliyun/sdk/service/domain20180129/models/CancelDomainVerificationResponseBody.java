@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelDomainVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>CancelDomainVerificationResponseBody</p>
@@ -37,7 +38,10 @@ public class CancelDomainVerificationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AC0AF67-D303-4EB9-B20E-B4D4B2C3F97B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

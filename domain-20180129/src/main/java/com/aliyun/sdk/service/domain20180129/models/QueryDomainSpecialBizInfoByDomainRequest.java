@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainSpecialBizInfoByDomainRequest} extends {@link RequestModel}
  *
  * <p>QueryDomainSpecialBizInfoByDomainRequest</p>
@@ -83,7 +84,11 @@ public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
         } 
 
         /**
-         * The business type.
+         * <p>The business type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>govRegister</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -92,7 +97,11 @@ public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test003.cn</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -101,7 +110,10 @@ public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDomainToDomainGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateDomainToDomainGroupRequest</p>
@@ -140,7 +141,10 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         } 
 
         /**
-         * DataSource.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataSource(Integer dataSource) {
             this.putQueryParameter("DataSource", dataSource);
@@ -149,7 +153,10 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         }
 
         /**
-         * DomainGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder domainGroupId(Long domainGroupId) {
             this.putQueryParameter("DomainGroupId", domainGroupId);
@@ -185,7 +192,10 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         }
 
         /**
-         * Replace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder replace(Boolean replace) {
             this.putQueryParameter("Replace", replace);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForCreatingOrderActivateRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForCreatingOrderActivateRequest</p>
@@ -156,7 +157,7 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * OrderActivateParam.
+         * <p>This parameter is required.</p>
          */
         public Builder orderActivateParam(java.util.List < OrderActivateParam> orderActivateParam) {
             this.putQueryParameter("OrderActivateParam", orderActivateParam);
@@ -207,6 +208,12 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForCreatingOrderActivateRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForCreatingOrderActivateRequest</p>
+     */
     public static class OrderActivateParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -595,7 +602,10 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
             }
 
             /**
-             * DomainName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

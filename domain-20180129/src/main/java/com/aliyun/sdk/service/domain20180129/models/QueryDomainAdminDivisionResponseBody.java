@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainAdminDivisionResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainAdminDivisionResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainAdminDivisionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainAdminDivisionResponseBody</p>
+     */
     public static class Children extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChildDivisionName")
         private String childDivisionName;
@@ -111,6 +118,12 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainAdminDivisionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainAdminDivisionResponseBody</p>
+     */
     public static class AdminDivisionChildren extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Children")
         private java.util.List < Children> children;
@@ -152,6 +165,12 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainAdminDivisionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainAdminDivisionResponseBody</p>
+     */
     public static class AdminDivision extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Children")
         private AdminDivisionChildren children;
@@ -213,6 +232,12 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainAdminDivisionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainAdminDivisionResponseBody</p>
+     */
     public static class AdminDivisions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdminDivision")
         private java.util.List < AdminDivision> adminDivision;

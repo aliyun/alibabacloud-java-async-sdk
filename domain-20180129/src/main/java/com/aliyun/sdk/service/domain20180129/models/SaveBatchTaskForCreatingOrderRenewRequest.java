@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForCreatingOrderRenewRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForCreatingOrderRenewRequest</p>
@@ -156,7 +157,7 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * OrderRenewParam.
+         * <p>This parameter is required.</p>
          */
         public Builder orderRenewParam(java.util.List < OrderRenewParam> orderRenewParam) {
             this.putQueryParameter("OrderRenewParam", orderRenewParam);
@@ -207,6 +208,12 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForCreatingOrderRenewRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForCreatingOrderRenewRequest</p>
+     */
     public static class OrderRenewParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentExpirationDate")
         private Long currentExpirationDate;

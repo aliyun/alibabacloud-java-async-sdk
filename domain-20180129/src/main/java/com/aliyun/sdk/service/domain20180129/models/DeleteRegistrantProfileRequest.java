@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRegistrantProfileRequest} extends {@link RequestModel}
  *
  * <p>DeleteRegistrantProfileRequest</p>
@@ -91,7 +92,10 @@ public class DeleteRegistrantProfileRequest extends Request {
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600000</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);

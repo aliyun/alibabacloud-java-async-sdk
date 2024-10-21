@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForModifyingDomainDnsRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForModifyingDomainDnsRequest</p>
@@ -111,7 +112,10 @@ public class SaveBatchTaskForModifyingDomainDnsRequest extends Request {
         } 
 
         /**
-         * AliyunDns.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder aliyunDns(Boolean aliyunDns) {
             this.putQueryParameter("AliyunDns", aliyunDns);
@@ -120,7 +124,10 @@ public class SaveBatchTaskForModifyingDomainDnsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);

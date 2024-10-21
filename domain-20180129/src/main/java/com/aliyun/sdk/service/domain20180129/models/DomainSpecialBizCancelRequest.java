@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DomainSpecialBizCancelRequest} extends {@link RequestModel}
  *
  * <p>DomainSpecialBizCancelRequest</p>
@@ -68,7 +69,11 @@ public class DomainSpecialBizCancelRequest extends Request {
         } 
 
         /**
-         * The business ID.
+         * <p>The business ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3666</p>
          */
         public Builder bizId(Long bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -77,7 +82,10 @@ public class DomainSpecialBizCancelRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

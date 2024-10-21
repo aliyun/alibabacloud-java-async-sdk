@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskDetailHistoryRequest} extends {@link RequestModel}
  *
  * <p>QueryTaskDetailHistoryRequest</p>
@@ -180,7 +181,10 @@ public class QueryTaskDetailHistoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +202,10 @@ public class QueryTaskDetailHistoryRequest extends Request {
         }
 
         /**
-         * TaskNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-test</p>
          */
         public Builder taskNo(String taskNo) {
             this.putQueryParameter("TaskNo", taskNo);

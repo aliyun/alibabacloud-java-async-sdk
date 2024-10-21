@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveDomainGroupRequest} extends {@link RequestModel}
  *
  * <p>SaveDomainGroupRequest</p>
@@ -105,7 +106,7 @@ public class SaveDomainGroupRequest extends Request {
         }
 
         /**
-         * DomainGroupName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainGroupName(String domainGroupName) {
             this.putQueryParameter("DomainGroupName", domainGroupName);

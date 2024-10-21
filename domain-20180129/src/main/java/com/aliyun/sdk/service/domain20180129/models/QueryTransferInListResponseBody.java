@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTransferInListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTransferInListResponseBody</p>
@@ -190,6 +191,12 @@ public class QueryTransferInListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTransferInListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTransferInListResponseBody</p>
+     */
     public static class TransferInInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -631,6 +638,12 @@ public class QueryTransferInListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTransferInListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTransferInListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TransferInInfo")
         private java.util.List < TransferInInfo> transferInInfo;

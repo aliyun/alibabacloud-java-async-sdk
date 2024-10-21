@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchFuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
  *
  * <p>BatchFuzzyMatchDomainSensitiveWordResponseBody</p>
@@ -70,6 +71,12 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchFuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchFuzzyMatchDomainSensitiveWordResponseBody</p>
+     */
     public static class MatchedSensitiveWord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
@@ -111,6 +118,12 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchFuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchFuzzyMatchDomainSensitiveWordResponseBody</p>
+     */
     public static class MatchedSentiveWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchedSensitiveWord")
         private java.util.List < MatchedSensitiveWord> matchedSensitiveWord;
@@ -152,6 +165,12 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchFuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchFuzzyMatchDomainSensitiveWordResponseBody</p>
+     */
     public static class SensitiveWordMatchResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Exist")
         private Boolean exist;
@@ -233,6 +252,12 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchFuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchFuzzyMatchDomainSensitiveWordResponseBody</p>
+     */
     public static class SensitiveWordMatchResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SensitiveWordMatchResult")
         private java.util.List < SensitiveWordMatchResult> sensitiveWordMatchResult;

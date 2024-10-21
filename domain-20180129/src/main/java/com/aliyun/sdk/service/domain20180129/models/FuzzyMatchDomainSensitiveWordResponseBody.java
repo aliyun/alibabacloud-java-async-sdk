@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
  *
  * <p>FuzzyMatchDomainSensitiveWordResponseBody</p>
@@ -110,6 +111,12 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
+     *
+     * <p>FuzzyMatchDomainSensitiveWordResponseBody</p>
+     */
     public static class MatchedSensitiveWord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
@@ -151,6 +158,12 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FuzzyMatchDomainSensitiveWordResponseBody} extends {@link TeaModel}
+     *
+     * <p>FuzzyMatchDomainSensitiveWordResponseBody</p>
+     */
     public static class MatchedSentiveWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchedSensitiveWord")
         private java.util.List < MatchedSensitiveWord> matchedSensitiveWord;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetupDomainAutoRenewRequest} extends {@link RequestModel}
  *
  * <p>SetupDomainAutoRenewRequest</p>
@@ -69,7 +70,10 @@ public class SetupDomainAutoRenewRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S2019270W570xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +82,10 @@ public class SetupDomainAutoRenewRequest extends Request {
         }
 
         /**
-         * Operation.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SET</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);

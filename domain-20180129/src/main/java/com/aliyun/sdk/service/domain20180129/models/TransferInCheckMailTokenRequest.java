@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferInCheckMailTokenRequest} extends {@link RequestModel}
  *
  * <p>TransferInCheckMailTokenRequest</p>
@@ -91,7 +92,10 @@ public class TransferInCheckMailTokenRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3bdbaa0e-faa2-4ad2-98f4-bcfeb0237054</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

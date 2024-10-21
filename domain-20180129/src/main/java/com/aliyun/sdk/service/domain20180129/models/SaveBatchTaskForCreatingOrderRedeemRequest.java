@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForCreatingOrderRedeemRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForCreatingOrderRedeemRequest</p>
@@ -156,7 +157,7 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * OrderRedeemParam.
+         * <p>This parameter is required.</p>
          */
         public Builder orderRedeemParam(java.util.List < OrderRedeemParam> orderRedeemParam) {
             this.putQueryParameter("OrderRedeemParam", orderRedeemParam);
@@ -207,6 +208,12 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForCreatingOrderRedeemRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForCreatingOrderRedeemRequest</p>
+     */
     public static class OrderRedeemParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentExpirationDate")
         private Long currentExpirationDate;

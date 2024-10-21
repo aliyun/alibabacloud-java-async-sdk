@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelDomainVerificationRequest} extends {@link RequestModel}
  *
  * <p>CancelDomainVerificationRequest</p>
@@ -97,11 +98,15 @@ public class CancelDomainVerificationRequest extends Request {
         } 
 
         /**
-         * The action type. Valid values:
-         * <p>
+         * <p>The action type. Valid values:</p>
+         * <ul>
+         * <li><strong>DOMAINAUDIT</strong>: review a domain name review.</li>
+         * <li><strong>AUDITCONTACT</strong>: review a contact.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **DOMAINAUDIT**: review a domain name review.
-         * *   **AUDITCONTACT**: review a contact.
+         * <strong>example:</strong>
+         * <p>AUDITCONTACT</p>
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -110,7 +115,11 @@ public class CancelDomainVerificationRequest extends Request {
         }
 
         /**
-         * Thee instance ID of the domain name. You can call the [QueryDomainList](~~67712~~) operation to query the instance ID.
+         * <p>Thee instance ID of the domain name. You can call the <a href="https://help.aliyun.com/document_detail/67712.html">QueryDomainList</a> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S2019270W570xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -119,13 +128,15 @@ public class CancelDomainVerificationRequest extends Request {
         }
 
         /**
-         * The language of the error message to return if the request fails. Valid values:
-         * <p>
+         * <p>The language of the error message to return if the request fails. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
-         * 
-         * Default value: **en**.
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -134,7 +145,10 @@ public class CancelDomainVerificationRequest extends Request {
         }
 
         /**
-         * The IP address of the client. Set the value to **127.0.0.1**.
+         * <p>The IP address of the client. Set the value to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

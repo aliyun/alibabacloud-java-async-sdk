@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOperationOssUploadPolicyRequest} extends {@link RequestModel}
  *
  * <p>GetOperationOssUploadPolicyRequest</p>
@@ -68,7 +69,10 @@ public class GetOperationOssUploadPolicyRequest extends Request {
         } 
 
         /**
-         * AuditType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditType(Integer auditType) {
             this.putQueryParameter("AuditType", auditType);

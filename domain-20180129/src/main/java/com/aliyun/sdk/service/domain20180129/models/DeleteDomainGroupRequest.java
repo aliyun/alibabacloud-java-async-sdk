@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDomainGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteDomainGroupRequest</p>
@@ -82,7 +83,10 @@ public class DeleteDomainGroupRequest extends Request {
         } 
 
         /**
-         * DomainGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder domainGroupId(Long domainGroupId) {
             this.putQueryParameter("DomainGroupId", domainGroupId);

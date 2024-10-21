@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForCancelingTransferInRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForCancelingTransferInRequest</p>
@@ -82,7 +83,10 @@ public class SaveSingleTaskForCancelingTransferInRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

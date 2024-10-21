@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTaskListResponseBody</p>
@@ -190,6 +191,12 @@ public class QueryTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskListResponseBody</p>
+     */
     public static class TaskInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Clientip")
         private String clientip;
@@ -411,6 +418,12 @@ public class QueryTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskInfo")
         private java.util.List < TaskInfo> taskInfo;

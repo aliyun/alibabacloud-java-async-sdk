@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchDomainRemarkRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchDomainRemarkRequest</p>
@@ -96,7 +97,10 @@ public class SaveBatchDomainRemarkRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S12344567</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

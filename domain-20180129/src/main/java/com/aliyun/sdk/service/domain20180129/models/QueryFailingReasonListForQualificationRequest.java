@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFailingReasonListForQualificationRequest} extends {@link RequestModel}
  *
  * <p>QueryFailingReasonListForQualificationRequest</p>
@@ -112,7 +113,10 @@ public class QueryFailingReasonListForQualificationRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20181*****85212</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +134,10 @@ public class QueryFailingReasonListForQualificationRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -139,7 +146,10 @@ public class QueryFailingReasonListForQualificationRequest extends Request {
         }
 
         /**
-         * QualificationType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>knet</p>
          */
         public Builder qualificationType(String qualificationType) {
             this.putQueryParameter("QualificationType", qualificationType);

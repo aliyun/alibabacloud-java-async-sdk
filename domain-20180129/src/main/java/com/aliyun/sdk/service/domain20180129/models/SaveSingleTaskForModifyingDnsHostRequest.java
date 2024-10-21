@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForModifyingDnsHostRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForModifyingDnsHostRequest</p>
@@ -112,7 +113,10 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
         } 
 
         /**
-         * DnsName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns1</p>
          */
         public Builder dnsName(String dnsName) {
             this.putQueryParameter("DnsName", dnsName);
@@ -121,7 +125,10 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S123456789</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +137,10 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>218.xx.xx.236</p>
          */
         public Builder ip(java.util.List < String > ip) {
             this.putQueryParameter("Ip", ip);

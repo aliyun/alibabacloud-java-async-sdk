@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAdvancedDomainListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAdvancedDomainListResponseBody</p>
@@ -190,6 +191,12 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAdvancedDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAdvancedDomainListResponseBody</p>
+     */
     public static class DnsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dns")
         private java.util.List < String > dns;
@@ -231,6 +238,12 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAdvancedDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAdvancedDomainListResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -292,6 +305,12 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAdvancedDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAdvancedDomainListResponseBody</p>
+     */
     public static class DomainTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -333,6 +352,12 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAdvancedDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAdvancedDomainListResponseBody</p>
+     */
     public static class Domain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsList")
         private DnsList dnsList;
@@ -814,6 +839,12 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAdvancedDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAdvancedDomainListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private java.util.List < Domain> domain;

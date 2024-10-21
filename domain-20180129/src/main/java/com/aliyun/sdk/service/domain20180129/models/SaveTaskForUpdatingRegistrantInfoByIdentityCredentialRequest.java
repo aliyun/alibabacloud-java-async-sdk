@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest} extends {@link RequestModel}
  *
  * <p>SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest</p>
@@ -410,7 +411,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibabacloud.com</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -428,7 +432,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * IdentityCredential.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>h6UPhXz/ADP/2Q==</p>
          */
         public Builder identityCredential(String identityCredential) {
             this.putBodyParameter("IdentityCredential", identityCredential);
@@ -437,7 +444,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * IdentityCredentialNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5****************9</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
             this.putQueryParameter("IdentityCredentialNo", identityCredentialNo);
@@ -446,7 +456,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * IdentityCredentialType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SFZ</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
             this.putQueryParameter("IdentityCredentialType", identityCredentialType);
@@ -500,7 +513,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * RegistrantType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
@@ -509,7 +525,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * TelArea.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder telArea(String telArea) {
             this.putQueryParameter("TelArea", telArea);
@@ -527,7 +546,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * Telephone.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder telephone(String telephone) {
             this.putQueryParameter("Telephone", telephone);
@@ -536,7 +558,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * TransferOutProhibited.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder transferOutProhibited(Boolean transferOutProhibited) {
             this.putQueryParameter("TransferOutProhibited", transferOutProhibited);

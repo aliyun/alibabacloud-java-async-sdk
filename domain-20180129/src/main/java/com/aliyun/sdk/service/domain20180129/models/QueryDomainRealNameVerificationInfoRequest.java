@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainRealNameVerificationInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryDomainRealNameVerificationInfoRequest</p>
@@ -96,7 +97,10 @@ public class QueryDomainRealNameVerificationInfoRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

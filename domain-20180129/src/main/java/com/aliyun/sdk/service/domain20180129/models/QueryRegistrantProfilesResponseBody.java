@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRegistrantProfilesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRegistrantProfilesResponseBody</p>
@@ -190,6 +191,12 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRegistrantProfilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRegistrantProfilesResponseBody</p>
+     */
     public static class RegistrantProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -751,6 +758,12 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRegistrantProfilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRegistrantProfilesResponseBody</p>
+     */
     public static class RegistrantProfiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegistrantProfile")
         private java.util.List < RegistrantProfile> registrantProfile;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForCreatingOrderRenewRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForCreatingOrderRenewRequest</p>
@@ -177,7 +178,10 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * CurrentExpirationDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000</p>
          */
         public Builder currentExpirationDate(Long currentExpirationDate) {
             this.putQueryParameter("CurrentExpirationDate", currentExpirationDate);
@@ -186,7 +190,10 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -213,7 +220,10 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * SubscriptionDuration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subscriptionDuration(Integer subscriptionDuration) {
             this.putQueryParameter("SubscriptionDuration", subscriptionDuration);

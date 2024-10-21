@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForUpdatingContactInfoRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForUpdatingContactInfoRequest</p>
@@ -149,7 +150,10 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
-         * ContactType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registrant</p>
          */
         public Builder contactType(String contactType) {
             this.putQueryParameter("ContactType", contactType);
@@ -158,7 +162,10 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -185,7 +192,10 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);

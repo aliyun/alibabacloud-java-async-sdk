@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEmailVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEmailVerificationResponseBody</p>

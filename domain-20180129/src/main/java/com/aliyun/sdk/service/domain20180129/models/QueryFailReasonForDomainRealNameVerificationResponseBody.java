@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFailReasonForDomainRealNameVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFailReasonForDomainRealNameVerificationResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link QueryFailReasonForDomainRealNameVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFailReasonForDomainRealNameVerificationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;

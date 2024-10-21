@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainGroupListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainGroupListResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainGroupListResponseBody</p>
+     */
     public static class DomainGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeingDeleted")
         private Boolean beingDeleted;
@@ -231,6 +238,12 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainGroupListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainGroup")
         private java.util.List < DomainGroup> domainGroup;
