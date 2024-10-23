@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunLegalAdviceConsultationRequest} extends {@link RequestModel}
  *
  * <p>RunLegalAdviceConsultationRequest</p>
@@ -162,6 +163,12 @@ public class RunLegalAdviceConsultationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunLegalAdviceConsultationRequest} extends {@link TeaModel}
+     *
+     * <p>RunLegalAdviceConsultationRequest</p>
+     */
     public static class Assistant extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -263,6 +270,12 @@ public class RunLegalAdviceConsultationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunLegalAdviceConsultationRequest} extends {@link TeaModel}
+     *
+     * <p>RunLegalAdviceConsultationRequest</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -324,6 +337,12 @@ public class RunLegalAdviceConsultationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunLegalAdviceConsultationRequest} extends {@link TeaModel}
+     *
+     * <p>RunLegalAdviceConsultationRequest</p>
+     */
     public static class Thread extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("messages")
         private java.util.List < Messages> messages;

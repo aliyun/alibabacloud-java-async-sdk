@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunContractResultGenerationResponseBody} extends {@link TeaModel}
  *
  * <p>RunContractResultGenerationResponseBody</p>
@@ -170,6 +171,12 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunContractResultGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunContractResultGenerationResponseBody</p>
+     */
     public static class SubRisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("originalContent")
         private String originalContent;
@@ -311,6 +318,12 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractResultGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunContractResultGenerationResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("examineBrief")
         private String examineBrief;
@@ -472,6 +485,12 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractResultGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunContractResultGenerationResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("result")
         private Result result;
@@ -533,6 +552,12 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractResultGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunContractResultGenerationResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("input")
         private Long input;

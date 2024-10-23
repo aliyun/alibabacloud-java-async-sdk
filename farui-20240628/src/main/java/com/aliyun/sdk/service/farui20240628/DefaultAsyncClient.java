@@ -40,6 +40,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of RunContractResultGeneration  RunContractResultGenerationRequest
+     * @return RunContractResultGenerationResponse
+     */
     @Override
     public CompletableFuture<RunContractResultGenerationResponse> runContractResultGeneration(RunContractResultGenerationRequest request) {
         try {
@@ -64,6 +68,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunContractRuleGeneration  RunContractRuleGenerationRequest
+     * @return RunContractRuleGenerationResponse
+     */
     @Override
     public CompletableFuture<RunContractRuleGenerationResponse> runContractRuleGeneration(RunContractRuleGenerationRequest request) {
         try {
@@ -88,6 +96,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunLegalAdviceConsultation  RunLegalAdviceConsultationRequest
+     * @return RunLegalAdviceConsultationResponse
+     */
     @Override
     public CompletableFuture<RunLegalAdviceConsultationResponse> runLegalAdviceConsultation(RunLegalAdviceConsultationRequest request) {
         try {

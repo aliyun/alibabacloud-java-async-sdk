@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunContractRuleGenerationResponseBody} extends {@link TeaModel}
  *
  * <p>RunContractRuleGenerationResponseBody</p>
@@ -170,6 +171,12 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunContractRuleGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunContractRuleGenerationResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("riskLevel")
         private String riskLevel;
@@ -271,6 +278,12 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractRuleGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunContractRuleGenerationResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ruleTaskId")
         private String ruleTaskId;
@@ -332,6 +345,12 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractRuleGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunContractRuleGenerationResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("input")
         private Long input;

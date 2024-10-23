@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunContractResultGenerationRequest} extends {@link RequestModel}
  *
  * <p>RunContractResultGenerationRequest</p>
@@ -96,7 +97,10 @@ public class RunContractResultGenerationRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-kqtrcpdee4xm29xc</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -139,6 +143,12 @@ public class RunContractResultGenerationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunContractResultGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunContractResultGenerationRequest</p>
+     */
     public static class CustomRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("riskLevel")
         private String riskLevel;
@@ -220,6 +230,12 @@ public class RunContractResultGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractResultGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunContractResultGenerationRequest</p>
+     */
     public static class CustomRuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("customRules")
         private java.util.List < CustomRules> customRules;
@@ -261,6 +277,12 @@ public class RunContractResultGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractResultGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunContractResultGenerationRequest</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("riskLevel")
         private String riskLevel;
@@ -362,6 +384,12 @@ public class RunContractResultGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractResultGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunContractResultGenerationRequest</p>
+     */
     public static class MetaData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("customRuleConfig")
         private CustomRuleConfig customRuleConfig;
@@ -483,6 +511,12 @@ public class RunContractResultGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractResultGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunContractResultGenerationRequest</p>
+     */
     public static class Assistant extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("metaData")
         private MetaData metaData;

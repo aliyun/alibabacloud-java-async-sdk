@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunLegalAdviceConsultationResponseBody} extends {@link TeaModel}
  *
  * <p>RunLegalAdviceConsultationResponseBody</p>
@@ -210,6 +211,12 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunLegalAdviceConsultationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunLegalAdviceConsultationResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputTokens")
         private Integer inputTokens;

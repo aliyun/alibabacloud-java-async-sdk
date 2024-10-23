@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunContractRuleGenerationRequest} extends {@link RequestModel}
  *
  * <p>RunContractRuleGenerationRequest</p>
@@ -138,6 +139,12 @@ public class RunContractRuleGenerationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunContractRuleGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunContractRuleGenerationRequest</p>
+     */
     public static class MetaData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileId")
         private String fileId;
@@ -199,6 +206,12 @@ public class RunContractRuleGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunContractRuleGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunContractRuleGenerationRequest</p>
+     */
     public static class Assistant extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("metaData")
         private MetaData metaData;

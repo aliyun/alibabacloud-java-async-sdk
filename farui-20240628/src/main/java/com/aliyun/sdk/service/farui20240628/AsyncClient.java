@@ -19,14 +19,26 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of RunContractResultGeneration  RunContractResultGenerationRequest
+     * @return RunContractResultGenerationResponse
+     */
     CompletableFuture<RunContractResultGenerationResponse> runContractResultGeneration(RunContractResultGenerationRequest request);
 
     ResponseIterable<RunContractResultGenerationResponseBody> runContractResultGenerationWithResponseIterable(RunContractResultGenerationRequest request);
 
+    /**
+     * @param request the request parameters of RunContractRuleGeneration  RunContractRuleGenerationRequest
+     * @return RunContractRuleGenerationResponse
+     */
     CompletableFuture<RunContractRuleGenerationResponse> runContractRuleGeneration(RunContractRuleGenerationRequest request);
 
     ResponseIterable<RunContractRuleGenerationResponseBody> runContractRuleGenerationWithResponseIterable(RunContractRuleGenerationRequest request);
 
+    /**
+     * @param request the request parameters of RunLegalAdviceConsultation  RunLegalAdviceConsultationRequest
+     * @return RunLegalAdviceConsultationResponse
+     */
     CompletableFuture<RunLegalAdviceConsultationResponse> runLegalAdviceConsultation(RunLegalAdviceConsultationRequest request);
 
     ResponseIterable<RunLegalAdviceConsultationResponseBody> runLegalAdviceConsultationWithResponseIterable(RunLegalAdviceConsultationRequest request);
