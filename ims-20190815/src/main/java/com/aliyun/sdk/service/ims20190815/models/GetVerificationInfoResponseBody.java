@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVerificationInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetVerificationInfoResponseBody</p>
@@ -90,6 +91,12 @@ public class GetVerificationInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVerificationInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVerificationInfoResponseBody</p>
+     */
     public static class SecurityEmailDevice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
@@ -151,6 +158,12 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVerificationInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVerificationInfoResponseBody</p>
+     */
     public static class SecurityPhoneDevice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AreaCode")
         private String areaCode;

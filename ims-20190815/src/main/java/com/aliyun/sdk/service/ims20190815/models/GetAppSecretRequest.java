@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppSecretRequest} extends {@link RequestModel}
  *
  * <p>GetAppSecretRequest</p>
@@ -69,7 +70,11 @@ public class GetAppSecretRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>472457090344041****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +83,11 @@ public class GetAppSecretRequest extends Request {
         }
 
         /**
-         * The ID of the application secret.
+         * <p>The ID of the application secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2efd5004-005c-4f05-83c6-5b1dd176****</p>
          */
         public Builder appSecretId(String appSecretId) {
             this.putQueryParameter("AppSecretId", appSecretId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSAMLProviderResponseBody} extends {@link TeaModel}
  *
  * <p>GetSAMLProviderResponseBody</p>
@@ -49,7 +50,10 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         private SAMLProvider SAMLProvider; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAADB995-0C7A-476D-B293-7E94568EEDFB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the IdP.
+         * <p>The information about the IdP.</p>
          */
         public Builder SAMLProvider(SAMLProvider SAMLProvider) {
             this.SAMLProvider = SAMLProvider;
@@ -70,6 +74,12 @@ public class GetSAMLProviderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSAMLProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSAMLProviderResponseBody</p>
+     */
     public static class SAMLProvider extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -157,7 +167,10 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the IdP.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -165,7 +178,10 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T02:37:05Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -173,7 +189,10 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a provider.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -181,7 +200,10 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata file, which is Base64 encoded.
+             * <p>The metadata file, which is Base64 encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PD94bWwgdmVy****</p>
              */
             public Builder encodedSAMLMetadataDocument(String encodedSAMLMetadataDocument) {
                 this.encodedSAMLMetadataDocument = encodedSAMLMetadataDocument;
@@ -189,7 +211,10 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IdP.
+             * <p>The name of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-provider</p>
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -197,7 +222,10 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T02:51:20Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

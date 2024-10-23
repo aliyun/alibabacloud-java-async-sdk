@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserSsoSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserSsoSettingsResponseBody</p>
@@ -49,7 +50,10 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         private UserSsoSettings userSsoSettings; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69FC3E5E-D3D9-434B-90CA-BBA8E0551A47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of user-based SSO.
+         * <p>The configurations of user-based SSO.</p>
          */
         public Builder userSsoSettings(UserSsoSettings userSsoSettings) {
             this.userSsoSettings = userSsoSettings;
@@ -70,6 +74,12 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserSsoSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserSsoSettingsResponseBody</p>
+     */
     public static class UserSsoSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuxiliaryDomain")
         private String auxiliaryDomain;
@@ -121,7 +131,10 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
             private Boolean ssoEnabled; 
 
             /**
-             * The auxiliary domain name.
+             * <p>The auxiliary domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder auxiliaryDomain(String auxiliaryDomain) {
                 this.auxiliaryDomain = auxiliaryDomain;
@@ -129,7 +142,10 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata file, which is Base64-encoded.
+             * <p>The metadata file, which is Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PD94bWwgdmVy****</p>
              */
             public Builder metadataDocument(String metadataDocument) {
                 this.metadataDocument = metadataDocument;
@@ -137,7 +153,10 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether user-based SSO is enabled.
+             * <p>Indicates whether user-based SSO is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ssoEnabled(Boolean ssoEnabled) {
                 this.ssoEnabled = ssoEnabled;

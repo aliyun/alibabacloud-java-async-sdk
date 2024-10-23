@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetUserSsoSettingsRequest} extends {@link RequestModel}
  *
  * <p>SetUserSsoSettingsRequest</p>
@@ -81,7 +82,10 @@ public class SetUserSsoSettingsRequest extends Request {
         } 
 
         /**
-         * The auxiliary domain name.
+         * <p>The auxiliary domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder auxiliaryDomain(String auxiliaryDomain) {
             this.putQueryParameter("AuxiliaryDomain", auxiliaryDomain);
@@ -90,10 +94,11 @@ public class SetUserSsoSettingsRequest extends Request {
         }
 
         /**
-         * The metadata file, which is Base64-encoded.
-         * <p>
+         * <p>The metadata file, which is Base64-encoded.</p>
+         * <p>The file is provided by an IdP that supports SAML 2.0.</p>
          * 
-         * The file is provided by an IdP that supports SAML 2.0.
+         * <strong>example:</strong>
+         * <p>PD94bWwgdmVy****</p>
          */
         public Builder metadataDocument(String metadataDocument) {
             this.putQueryParameter("MetadataDocument", metadataDocument);
@@ -102,11 +107,14 @@ public class SetUserSsoSettingsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable SSO for the RAM user. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable SSO for the RAM user. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ssoEnabled(Boolean ssoEnabled) {
             this.putQueryParameter("SsoEnabled", ssoEnabled);

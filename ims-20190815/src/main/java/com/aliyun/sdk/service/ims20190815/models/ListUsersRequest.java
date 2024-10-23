@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersRequest} extends {@link RequestModel}
  *
  * <p>ListUsersRequest</p>
@@ -20,6 +21,10 @@ public class ListUsersRequest extends Request {
     private Integer maxItems;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -27,6 +32,7 @@ public class ListUsersRequest extends Request {
         super(builder);
         this.marker = builder.marker;
         this.maxItems = builder.maxItems;
+        this.status = builder.status;
         this.tag = builder.tag;
     }
 
@@ -58,6 +64,13 @@ public class ListUsersRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -67,6 +80,7 @@ public class ListUsersRequest extends Request {
     public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
         private String marker; 
         private Integer maxItems; 
+        private String status; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -77,11 +91,15 @@ public class ListUsersRequest extends Request {
             super(request);
             this.marker = request.marker;
             this.maxItems = request.maxItems;
+            this.status = request.status;
             this.tag = request.tag;
         } 
 
         /**
-         * The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.
+         * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -90,10 +108,11 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.
-         * <p>
+         * <p>The number of entries per page. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> will be true.</p>
+         * <p>Valid values: 1 to 1000. Default value: 1000.</p>
          * 
-         * Valid values: 1 to 1000. Default value: 1000.
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);
@@ -102,7 +121,16 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The tags. A maximum number of 20 tags are supported.
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The tags. A maximum number of 20 tags are supported.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -117,6 +145,12 @@ public class ListUsersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersRequest} extends {@link TeaModel}
+     *
+     * <p>ListUsersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -156,10 +190,11 @@ public class ListUsersRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
-             * <p>
+             * <p>The key of tag N.</p>
+             * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
              * 
-             * Valid values of N: 1 to 20. N must be consecutive.
+             * <strong>example:</strong>
+             * <p>operator</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,10 +202,11 @@ public class ListUsersRequest extends Request {
             }
 
             /**
-             * The value of tag N.
-             * <p>
+             * <p>The value of tag N.</p>
+             * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
              * 
-             * Valid values of N: 1 to 20. N must be consecutive.
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLoginProfileResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateLoginProfileResponseBody</p>
@@ -49,7 +50,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The logon information.
+         * <p>The logon information.</p>
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -57,7 +58,10 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCDB6A7F-2199-41D9-B577-4FA536A5ADE1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLoginProfileResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateLoginProfileResponseBody</p>
+     */
     public static class LoginProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MFABindRequired")
         private Boolean MFABindRequired;
@@ -145,7 +155,10 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * Indicates whether MFA must be enabled.
+             * <p>Indicates whether MFA must be enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder MFABindRequired(Boolean MFABindRequired) {
                 this.MFABindRequired = MFABindRequired;
@@ -153,7 +166,10 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the RAM user must reset the password at the next logon.
+             * <p>Indicates whether the RAM user must reset the password at the next logon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder passwordResetRequired(Boolean passwordResetRequired) {
                 this.passwordResetRequired = passwordResetRequired;
@@ -161,7 +177,10 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The status of password-based logon.
+             * <p>The status of password-based logon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -169,7 +188,10 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-14T07:48:41Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -177,7 +199,10 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The logon name of the RAM user.
+             * <p>The logon name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example11.onaliyun.com">test@example11.onaliyun.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

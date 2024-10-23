@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSAMLProviderRequest} extends {@link RequestModel}
  *
  * <p>UpdateSAMLProviderRequest</p>
@@ -82,10 +83,13 @@ public class UpdateSAMLProviderRequest extends Request {
         } 
 
         /**
-         * The new description.
-         * <p>
+         * <p>The new description.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <code>NewDescription</code> and <code>NewEncodedSAMLMetadataDocument</code> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.
+         * <strong>example:</strong>
+         * <p>This is a new provider.</p>
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -94,10 +98,13 @@ public class UpdateSAMLProviderRequest extends Request {
         }
 
         /**
-         * The new metadata file.
-         * <p>
+         * <p>The new metadata file.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <code>NewDescription</code> and <code>NewEncodedSAMLMetadataDocument</code> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.
+         * <strong>example:</strong>
+         * <p>PD94bWwgdmVy****</p>
          */
         public Builder newEncodedSAMLMetadataDocument(String newEncodedSAMLMetadataDocument) {
             this.putQueryParameter("NewEncodedSAMLMetadataDocument", newEncodedSAMLMetadataDocument);
@@ -106,7 +113,11 @@ public class UpdateSAMLProviderRequest extends Request {
         }
 
         /**
-         * The name of the IdP whose information you want to modify.
+         * <p>The name of the IdP whose information you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-provider</p>
          */
         public Builder SAMLProviderName(String SAMLProviderName) {
             this.putQueryParameter("SAMLProviderName", SAMLProviderName);

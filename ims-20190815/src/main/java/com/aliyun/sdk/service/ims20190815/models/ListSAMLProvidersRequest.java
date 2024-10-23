@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSAMLProvidersRequest} extends {@link RequestModel}
  *
  * <p>ListSAMLProvidersRequest</p>
@@ -67,7 +68,10 @@ public class ListSAMLProvidersRequest extends Request {
         } 
 
         /**
-         * The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.
+         * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -76,10 +80,11 @@ public class ListSAMLProvidersRequest extends Request {
         }
 
         /**
-         * The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.
-         * <p>
+         * <p>The number of entries to return. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> will be <code>true</code>.</p>
+         * <p>Valid values: 1 to 100. Default value: 100.</p>
          * 
-         * Valid values: 1 to 100. Default value: 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);

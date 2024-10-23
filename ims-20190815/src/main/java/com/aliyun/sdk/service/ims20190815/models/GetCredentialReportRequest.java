@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCredentialReportRequest} extends {@link RequestModel}
  *
  * <p>GetCredentialReportRequest</p>
@@ -67,10 +68,11 @@ public class GetCredentialReportRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.
-         * <p>
+         * <p>The number of entries per page. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> will be true.</p>
+         * <p>Valid values: 1 to 3501. Default value: 3501.</p>
          * 
-         * Valid values: 1 to 3501. Default value: 3501.
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxItems(String maxItems) {
             this.putQueryParameter("MaxItems", maxItems);
@@ -79,7 +81,10 @@ public class GetCredentialReportRequest extends Request {
         }
 
         /**
-         * The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``
+         * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteOIDCProviderRequest} extends {@link RequestModel}
  *
  * <p>DeleteOIDCProviderRequest</p>
@@ -53,7 +54,10 @@ public class DeleteOIDCProviderRequest extends Request {
         } 
 
         /**
-         * The name of the OIDC IdP.
+         * <p>The name of the OIDC IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestOIDCProvider</p>
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);

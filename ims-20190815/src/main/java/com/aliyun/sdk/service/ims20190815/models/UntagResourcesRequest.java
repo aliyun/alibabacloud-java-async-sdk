@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -109,13 +110,17 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resource. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
+         * <ul>
+         * <li>true: remove all tags from the resources.</li>
+         * <li>false (default): does not remove all tags from the resources.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter takes effect only when TagKey.N is not set in the request.</p>
+         * </blockquote>
          * 
-         * *   true: remove all tags from the resources.
-         * *   false (default): does not remove all tags from the resources.
-         * 
-         * > This parameter takes effect only when TagKey.N is not set in the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -124,12 +129,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of resources.
-         * <p>
+         * <p>The IDs of resources.</p>
+         * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.</p>
+         * <blockquote>
+         * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+         * </blockquote>
          * 
-         * Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.
-         * 
-         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+         * <strong>example:</strong>
+         * <p>UntagResources</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -138,12 +145,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The names of resources.
-         * <p>
-         * 
-         * Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.
-         * 
-         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+         * <p>The names of resources.</p>
+         * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.</p>
+         * <blockquote>
+         * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+         * </blockquote>
          */
         public Builder resourcePrincipalName(java.util.List < String > resourcePrincipalName) {
             this.putQueryParameter("ResourcePrincipalName", resourcePrincipalName);
@@ -152,10 +158,13 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid value:
-         * <p>
+         * <p>The type of the resource. Valid value:</p>
+         * <ul>
+         * <li>user: a RAM user</li>
+         * </ul>
          * 
-         * *   user: a RAM user
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -164,10 +173,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys of resources.
-         * <p>
-         * 
-         * Valid values of N: 1 to 20. N must be consecutive.
+         * <p>The tag keys of resources.</p>
+         * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

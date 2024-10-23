@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDefaultDomainResponseBody} extends {@link TeaModel}
  *
  * <p>SetDefaultDomainResponseBody</p>
@@ -49,7 +50,10 @@ public class SetDefaultDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The default domain name.
+         * <p>The default domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>examplecompany.onaliyun.com</p>
          */
         public Builder defaultDomainName(String defaultDomainName) {
             this.defaultDomainName = defaultDomainName;
@@ -57,7 +61,10 @@ public class SetDefaultDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66815255-7CCE-4759-AC37-9755794C3626</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

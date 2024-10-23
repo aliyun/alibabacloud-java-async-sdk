@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPredefinedScopesRequest} extends {@link RequestModel}
  *
  * <p>ListPredefinedScopesRequest</p>
@@ -53,14 +54,16 @@ public class ListPredefinedScopesRequest extends Request {
         } 
 
         /**
-         * The type of the application. Valid values:
-         * <p>
+         * <p>The type of the application. Valid values:</p>
+         * <ul>
+         * <li>WebApp</li>
+         * <li>NativeApp</li>
+         * <li>ServerApp</li>
+         * </ul>
+         * <p>If this parameter is empty, the permissions on all types of applications are queried.</p>
          * 
-         * *   WebApp
-         * *   NativeApp
-         * *   ServerApp
-         * 
-         * If this parameter is empty, the permissions on all types of applications are queried.
+         * <strong>example:</strong>
+         * <p>WebApp</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);

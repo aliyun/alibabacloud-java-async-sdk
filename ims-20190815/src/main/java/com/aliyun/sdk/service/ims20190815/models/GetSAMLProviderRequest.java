@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSAMLProviderRequest} extends {@link RequestModel}
  *
  * <p>GetSAMLProviderRequest</p>
@@ -54,7 +55,11 @@ public class GetSAMLProviderRequest extends Request {
         } 
 
         /**
-         * The name of the IdP.
+         * <p>The name of the IdP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-provider</p>
          */
         public Builder SAMLProviderName(String SAMLProviderName) {
             this.putQueryParameter("SAMLProviderName", SAMLProviderName);

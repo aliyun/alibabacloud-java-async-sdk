@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessKeysRequest} extends {@link RequestModel}
  *
  * <p>ListAccessKeysRequest</p>
@@ -53,10 +54,11 @@ public class ListAccessKeysRequest extends Request {
         } 
 
         /**
-         * The logon name of the RAM user.
-         * <p>
+         * <p>The logon name of the RAM user.</p>
+         * <p>If this parameter is empty, the AccessKey pairs of the current user are queried.</p>
          * 
-         * If this parameter is empty, the AccessKey pairs of the current user are queried.
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

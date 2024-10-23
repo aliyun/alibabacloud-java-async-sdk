@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualMFADeviceRequest} extends {@link RequestModel}
  *
  * <p>CreateVirtualMFADeviceRequest</p>
@@ -54,10 +55,12 @@ public class CreateVirtualMFADeviceRequest extends Request {
         } 
 
         /**
-         * The name of the MFA device.
-         * <p>
+         * <p>The name of the MFA device.</p>
+         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>device001</p>
          */
         public Builder virtualMFADeviceName(String virtualMFADeviceName) {
             this.putQueryParameter("VirtualMFADeviceName", virtualMFADeviceName);

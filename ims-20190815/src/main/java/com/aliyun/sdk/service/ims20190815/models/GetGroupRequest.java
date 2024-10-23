@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGroupRequest} extends {@link RequestModel}
  *
  * <p>GetGroupRequest</p>
@@ -53,7 +54,10 @@ public class GetGroupRequest extends Request {
         } 
 
         /**
-         * The name of the RAM user group.
+         * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

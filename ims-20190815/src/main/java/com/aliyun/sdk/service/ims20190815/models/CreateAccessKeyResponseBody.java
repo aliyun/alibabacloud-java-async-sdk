@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessKeyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessKeyResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the AccessKey pair.
+         * <p>The information of the AccessKey pair.</p>
          */
         public Builder accessKey(AccessKey accessKey) {
             this.accessKey = accessKey;
@@ -57,7 +58,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19DDD9F7-AFCC-4D72-8CBA-CCE5A142E7AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateAccessKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccessKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAccessKeyResponseBody</p>
+     */
     public static class AccessKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
@@ -133,7 +143,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The AccessKey ID provided to you by Alibaba Cloud.
+             * <p>The AccessKey ID provided to you by Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI4G3HaMmeHpay2gcq****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -141,7 +154,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret provided to you by Alibaba Cloud.
+             * <p>The AccessKey secret provided to you by Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y3MSLE6OgizS4qrz5LVFDoyZEL****</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -149,7 +165,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the AccessKey pair was created.
+             * <p>The time when the AccessKey pair was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-15T08:08:54Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -157,11 +176,14 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the AccessKey pair. Valid values:
-             * <p>
+             * <p>The status of the AccessKey pair. Valid values:</p>
+             * <ul>
+             * <li>Active</li>
+             * <li>Inactive</li>
+             * </ul>
              * 
-             * *   Active
-             * *   Inactive
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersForGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersForGroupResponseBody</p>
@@ -73,11 +74,14 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * Indicates whether the response is truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the response is truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -85,7 +89,13 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -93,7 +103,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>789FF581-B3C8-43A8-9115-54304B46D05C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +114,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information of RAM users.
+         * <p>The information about the RAM users.</p>
          */
         public Builder users(Users users) {
             this.users = users;
@@ -114,6 +127,12 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersForGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersForGroupResponseBody</p>
+     */
     public static class User extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -177,7 +196,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * The display name of the RAM user.
+             * <p>The display name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -185,7 +207,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the RAM user was added.
+             * <p>The time when the RAM user was added to the RAM user group. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-20T06:57:00Z</p>
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;
@@ -193,7 +218,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user.
+             * <p>The ID of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20732900249392****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -201,7 +229,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The logon name of the RAM user.
+             * <p>The logon name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;
@@ -215,6 +246,12 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersForGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersForGroupResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("User")
         private java.util.List < User> user;

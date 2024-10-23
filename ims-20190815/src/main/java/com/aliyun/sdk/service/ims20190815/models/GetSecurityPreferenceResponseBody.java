@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
  *
  * <p>GetSecurityPreferenceResponseBody</p>
@@ -49,7 +50,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         private SecurityPreference securityPreference; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30C9068D-FBAA-4998-9986-8A562FED0BC3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of security preferences.
+         * <p>The details of security preferences.</p>
          */
         public Builder securityPreference(SecurityPreference securityPreference) {
             this.securityPreference = securityPreference;
@@ -70,6 +74,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class AccessKeyPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToManageAccessKeys")
         private Boolean allowUserToManageAccessKeys;
@@ -97,11 +107,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManageAccessKeys; 
 
             /**
-             * Indicates whether RAM users can manage their AccessKey pairs. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can manage their AccessKey pairs. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
                 this.allowUserToManageAccessKeys = allowUserToManageAccessKeys;
@@ -115,6 +128,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class LoginProfilePreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToChangePassword")
         private Boolean allowUserToChangePassword;
@@ -202,11 +221,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private String operationForRiskLogin; 
 
             /**
-             * Indicates whether RAM users can change their passwords. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can change their passwords. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowUserToChangePassword(Boolean allowUserToChangePassword) {
                 this.allowUserToChangePassword = allowUserToChangePassword;
@@ -214,11 +236,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM users can remember the multi-factor authentication (MFA) devices for seven days. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can remember the multi-factor authentication (MFA) devices for seven days. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableSaveMFATicket(Boolean enableSaveMFATicket) {
                 this.enableSaveMFATicket = enableSaveMFATicket;
@@ -226,7 +251,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The subnet mask.
+             * <p>The subnet mask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder loginNetworkMasks(String loginNetworkMasks) {
                 this.loginNetworkMasks = loginNetworkMasks;
@@ -234,7 +262,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the logon session of RAM users. Unit: hours.
+             * <p>The validity period of the logon session of RAM users. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder loginSessionDuration(Integer loginSessionDuration) {
                 this.loginSessionDuration = loginSessionDuration;
@@ -242,12 +273,15 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. Valid values:
-             * <p>
+             * <p>Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. Valid values:</p>
+             * <ul>
+             * <li>mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.</li>
+             * <li>independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.</li>
+             * <li>adaptive: MFA is required only for RAM users who initiated unusual logons.</li>
+             * </ul>
              * 
-             * *   mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.
-             * *   independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.
-             * *   adaptive: MFA is required only for RAM users who initiated unusual logons.
+             * <strong>example:</strong>
+             * <p>adaptive</p>
              */
             public Builder MFAOperationForLogin(String MFAOperationForLogin) {
                 this.MFAOperationForLogin = MFAOperationForLogin;
@@ -255,11 +289,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable MFA for RAM users who initiated unusual logons. Valid values:
-             * <p>
+             * <p>Indicates whether to enable MFA for RAM users who initiated unusual logons. Valid values:</p>
+             * <ul>
+             * <li>autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.</li>
+             * <li>enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.</li>
+             * </ul>
              * 
-             * *   autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.
-             * *   enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.
+             * <strong>example:</strong>
+             * <p>autonomous</p>
              */
             public Builder operationForRiskLogin(String operationForRiskLogin) {
                 this.operationForRiskLogin = operationForRiskLogin;
@@ -273,6 +310,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class MFAPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToManageMFADevices")
         private Boolean allowUserToManageMFADevices;
@@ -300,11 +343,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManageMFADevices; 
 
             /**
-             * Indicates whether RAM users can manage their MFA devices. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
                 this.allowUserToManageMFADevices = allowUserToManageMFADevices;
@@ -318,6 +364,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class PersonalInfoPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToManagePersonalDingTalk")
         private Boolean allowUserToManagePersonalDingTalk;
@@ -345,11 +397,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManagePersonalDingTalk; 
 
             /**
-             * Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
                 this.allowUserToManagePersonalDingTalk = allowUserToManagePersonalDingTalk;
@@ -363,6 +418,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class VerificationPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VerificationTypes")
         private java.util.List < String > verificationTypes;
@@ -390,7 +451,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private java.util.List < String > verificationTypes; 
 
             /**
-             * The MFA methods.
+             * <p>The MFA methods.</p>
              */
             public Builder verificationTypes(java.util.List < String > verificationTypes) {
                 this.verificationTypes = verificationTypes;
@@ -404,6 +465,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class SecurityPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyPreference")
         private AccessKeyPreference accessKeyPreference;
@@ -479,7 +546,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private VerificationPreference verificationPreference; 
 
             /**
-             * The AccessKey pair preference.
+             * <p>The AccessKey pair preference.</p>
              */
             public Builder accessKeyPreference(AccessKeyPreference accessKeyPreference) {
                 this.accessKeyPreference = accessKeyPreference;
@@ -487,7 +554,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The logon preference.
+             * <p>The logon preference.</p>
              */
             public Builder loginProfilePreference(LoginProfilePreference loginProfilePreference) {
                 this.loginProfilePreference = loginProfilePreference;
@@ -495,7 +562,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The MFA preference.
+             * <p>The MFA preference.</p>
              */
             public Builder MFAPreference(MFAPreference MFAPreference) {
                 this.MFAPreference = MFAPreference;
@@ -503,7 +570,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The personal information preference.
+             * <p>The personal information preference.</p>
              */
             public Builder personalInfoPreference(PersonalInfoPreference personalInfoPreference) {
                 this.personalInfoPreference = personalInfoPreference;
@@ -511,7 +578,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The MFA method preference.
+             * <p>The MFA method preference.</p>
              */
             public Builder verificationPreference(VerificationPreference verificationPreference) {
                 this.verificationPreference = verificationPreference;

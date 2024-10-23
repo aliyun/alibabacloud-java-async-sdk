@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableVirtualMFAResponseBody} extends {@link TeaModel}
  *
  * <p>DisableVirtualMFAResponseBody</p>
@@ -37,7 +38,10 @@ public class DisableVirtualMFAResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B9AF80E4-1565-42D9-9256-0B8B0D9FD3EC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

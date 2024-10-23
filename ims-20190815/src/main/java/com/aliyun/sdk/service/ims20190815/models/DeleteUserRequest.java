@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserRequest</p>
@@ -67,10 +68,13 @@ public class DeleteUserRequest extends Request {
         } 
 
         /**
-         * The ID of the RAM user.
-         * <p>
+         * <p>The ID of the RAM user.</p>
+         * <blockquote>
+         * <p> You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
+         * </blockquote>
          * 
-         * >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
+         * <strong>example:</strong>
+         * <p>20732900249392****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -79,10 +83,13 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * The logon name of the RAM user.
-         * <p>
+         * <p>The logon name of the RAM user.</p>
+         * <blockquote>
+         * <p> You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
+         * </blockquote>
          * 
-         * >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangePasswordRequest} extends {@link RequestModel}
  *
  * <p>ChangePasswordRequest</p>
@@ -69,10 +70,12 @@ public class ChangePasswordRequest extends Request {
         } 
 
         /**
-         * The new password that is used to log on to the console.
-         * <p>
+         * <p>The new password that is used to log on to the console.</p>
+         * <p>The password must meet the complexity requirements. For more information, see <a href="https://help.aliyun.com/document_detail/186691.html">GetPasswordPolicy</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The password must meet the complexity requirements. For more information, see [GetPasswordPolicy](~~186691~~).
+         * <strong>example:</strong>
+         * <p>newpassword</p>
          */
         public Builder newPassword(String newPassword) {
             this.putQueryParameter("NewPassword", newPassword);
@@ -81,7 +84,11 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
-         * The old password that is used to log on to the console.
+         * <p>The old password that is used to log on to the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mypassword</p>
          */
         public Builder oldPassword(String oldPassword) {
             this.putQueryParameter("OldPassword", oldPassword);

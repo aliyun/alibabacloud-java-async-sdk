@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateGroupRequest</p>
@@ -81,10 +82,11 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * The description.
-         * <p>
+         * <p>The description.</p>
+         * <p>The value can be up to 128 characters in length.</p>
          * 
-         * The value can be up to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -93,10 +95,11 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The display name of the RAM user group.
-         * <p>
+         * <p>The display name of the RAM user group.</p>
+         * <p>The name can be up to 24 characters in length.</p>
          * 
-         * The name can be up to 24 characters in length.
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -105,10 +108,11 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The name of the RAM user group. You must specify this parameter.
-         * <p>
+         * <p>The name of the RAM user group. You must specify this parameter.</p>
+         * <p>The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
-         * The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

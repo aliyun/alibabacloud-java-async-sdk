@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -123,7 +124,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.
+         * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -132,7 +136,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true. Valid values: 1 to 100. Default value: 100.
+         * <p>The number of entries per page. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -141,12 +148,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of resource N.
-         * <p>
-         * 
-         * Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.
-         * 
-         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+         * <p>The ID of resource N.</p>
+         * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.</p>
+         * <blockquote>
+         * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+         * </blockquote>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -155,12 +161,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The name of resource N.
-         * <p>
-         * 
-         * Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.
-         * 
-         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+         * <p>The name of resource N.</p>
+         * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.</p>
+         * <blockquote>
+         * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+         * </blockquote>
          */
         public Builder resourcePrincipalName(java.util.List < String > resourcePrincipalName) {
             this.putQueryParameter("ResourcePrincipalName", resourcePrincipalName);
@@ -169,10 +174,13 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid value:
-         * <p>
+         * <p>The type of the resource. Valid value:</p>
+         * <ul>
+         * <li>user: a RAM user</li>
+         * </ul>
          * 
-         * *   user: a RAM user
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -181,10 +189,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tag value.
-         * <p>
-         * 
-         * Valid values of N: 1 to 20. N must be consecutive.
+         * <p>The tag value.</p>
+         * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -199,6 +205,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -238,10 +250,11 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
-             * <p>
+             * <p>The key of tag N.</p>
+             * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
              * 
-             * Valid values of N: 1 to 20. N must be consecutive.
+             * <strong>example:</strong>
+             * <p>operator</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -249,10 +262,11 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N.
-             * <p>
+             * <p>The value of tag N.</p>
+             * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
              * 
-             * Valid values of N: 1 to 20. N must be consecutive.
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder value(String value) {
                 this.value = value;

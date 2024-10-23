@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccessKeyRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccessKeyRequest</p>
@@ -68,7 +69,11 @@ public class DeleteAccessKeyRequest extends Request {
         } 
 
         /**
-         * The ID of the AccessKey pair that you want to delete.
+         * <p>The ID of the AccessKey pair that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4GFTgcR8m8cZQDTH****</p>
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);
@@ -77,10 +82,11 @@ public class DeleteAccessKeyRequest extends Request {
         }
 
         /**
-         * The logon name of the RAM user.
-         * <p>
+         * <p>The logon name of the RAM user.</p>
+         * <p>If this parameter is empty, the AccessKey pair of the current user is deleted.</p>
          * 
-         * If this parameter is empty, the AccessKey pair of the current user is deleted.
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

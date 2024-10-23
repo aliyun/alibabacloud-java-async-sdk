@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLoginProfileRequest} extends {@link RequestModel}
  *
  * <p>DeleteLoginProfileRequest</p>
@@ -54,7 +55,11 @@ public class DeleteLoginProfileRequest extends Request {
         } 
 
         /**
-         * The logon name of the RAM user.
+         * <p>The logon name of the RAM user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

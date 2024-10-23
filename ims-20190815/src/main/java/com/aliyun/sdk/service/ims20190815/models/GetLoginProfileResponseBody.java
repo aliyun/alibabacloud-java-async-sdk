@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLoginProfileResponseBody} extends {@link TeaModel}
  *
  * <p>GetLoginProfileResponseBody</p>
@@ -49,7 +50,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The logon information.
+         * <p>The logon information.</p>
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -57,7 +58,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E517F18B-632C-48FC-93F1-CDCBCC6F8444</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetLoginProfileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLoginProfileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLoginProfileResponseBody</p>
+     */
     public static class LoginProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastLoginTime")
         private String lastLoginTime;
@@ -157,7 +167,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * The last time when the RAM user logged on to the console.
+             * <p>The last time when the RAM user logged on to the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-14T07:25:25Z</p>
              */
             public Builder lastLoginTime(String lastLoginTime) {
                 this.lastLoginTime = lastLoginTime;
@@ -165,7 +178,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether multi-factor authentication (MFA) must be enabled.
+             * <p>Indicates whether multi-factor authentication (MFA) must be enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder MFABindRequired(Boolean MFABindRequired) {
                 this.MFABindRequired = MFABindRequired;
@@ -173,7 +189,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the RAM user must reset the password at the next logon.
+             * <p>Indicates whether the RAM user must reset the password at the next logon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder passwordResetRequired(Boolean passwordResetRequired) {
                 this.passwordResetRequired = passwordResetRequired;
@@ -181,7 +200,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The status of password-based logon.
+             * <p>The status of password-based logon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -189,7 +211,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-14T06:56:45Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -197,7 +222,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The logon name of the RAM user.
+             * <p>The logon name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

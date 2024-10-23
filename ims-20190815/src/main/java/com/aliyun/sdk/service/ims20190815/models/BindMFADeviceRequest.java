@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindMFADeviceRequest} extends {@link RequestModel}
  *
  * <p>BindMFADeviceRequest</p>
@@ -96,10 +97,13 @@ public class BindMFADeviceRequest extends Request {
         } 
 
         /**
-         * The first verification code.
-         * <p>
+         * <p>The first verification code.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/186179.html">CreateVirtualMFADevice</a> operation to create an MFA device and generate a key (value of <code>Base32StringSeed</code>). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateVirtualMFADevice](~~186179~~) operation to create an MFA device and generate a key (value of `Base32StringSeed`). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder authenticationCode1(String authenticationCode1) {
             this.putQueryParameter("AuthenticationCode1", authenticationCode1);
@@ -108,10 +112,13 @@ public class BindMFADeviceRequest extends Request {
         }
 
         /**
-         * The second verification code.
-         * <p>
+         * <p>The second verification code.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/186179.html">CreateVirtualMFADevice</a> operation to create an MFA device and generate a key (value of <code>Base32StringSeed</code>). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateVirtualMFADevice](~~186179~~) operation to create an MFA device and generate a key (value of `Base32StringSeed`). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.
+         * <strong>example:</strong>
+         * <p>654321</p>
          */
         public Builder authenticationCode2(String authenticationCode2) {
             this.putQueryParameter("AuthenticationCode2", authenticationCode2);
@@ -120,10 +127,13 @@ public class BindMFADeviceRequest extends Request {
         }
 
         /**
-         * The serial number of the MFA device.
-         * <p>
+         * <p>The serial number of the MFA device.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/186179.html">CreateVirtualMFADevice</a> operation to obtain the serial number of the MFA device.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateVirtualMFADevice](~~186179~~) operation to obtain the serial number of the MFA device.
+         * <strong>example:</strong>
+         * <p>acs:ram::177242285274****:mfa/device001</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);
@@ -132,7 +142,11 @@ public class BindMFADeviceRequest extends Request {
         }
 
         /**
-         * The logon name of the RAM user.
+         * <p>The logon name of the RAM user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

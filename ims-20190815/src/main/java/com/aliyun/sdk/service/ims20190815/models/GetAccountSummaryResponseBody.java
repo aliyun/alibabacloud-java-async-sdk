@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountSummaryResponseBody</p>
@@ -49,7 +50,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         private SummaryMap summaryMap; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81313F5E-3C85-478F-BCC9-E1B70E4556DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The overview information of the Alibaba Cloud account.
+         * <p>The overview information of the Alibaba Cloud account.</p>
          */
         public Builder summaryMap(SummaryMap summaryMap) {
             this.summaryMap = summaryMap;
@@ -70,6 +74,12 @@ public class GetAccountSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountSummaryResponseBody</p>
+     */
     public static class SummaryMap extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeysPerUserQuota")
         private Integer accessKeysPerUserQuota;
@@ -337,7 +347,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             private Integer virtualMFADevicesQuota; 
 
             /**
-             * The maximum number of AccessKey pairs that a RAM user can have.
+             * <p>The maximum number of AccessKey pairs that a RAM user can have.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder accessKeysPerUserQuota(Integer accessKeysPerUserQuota) {
                 this.accessKeysPerUserQuota = accessKeysPerUserQuota;
@@ -345,7 +358,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of custom policies that can be added to a RAM user group.
+             * <p>The maximum number of custom policies that can be added to a RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder attachedPoliciesPerGroupQuota(Integer attachedPoliciesPerGroupQuota) {
                 this.attachedPoliciesPerGroupQuota = attachedPoliciesPerGroupQuota;
@@ -353,7 +369,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of custom policies that can be added to a RAM role.
+             * <p>The maximum number of custom policies that can be added to a RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder attachedPoliciesPerRoleQuota(Integer attachedPoliciesPerRoleQuota) {
                 this.attachedPoliciesPerRoleQuota = attachedPoliciesPerRoleQuota;
@@ -361,7 +380,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of custom policies that can be added to a RAM user.
+             * <p>The maximum number of custom policies that can be added to a RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder attachedPoliciesPerUserQuota(Integer attachedPoliciesPerUserQuota) {
                 this.attachedPoliciesPerUserQuota = attachedPoliciesPerUserQuota;
@@ -369,7 +391,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of system policies that can be added to a RAM user group.
+             * <p>The maximum number of system policies that can be added to a RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder attachedSystemPoliciesPerGroupQuota(Integer attachedSystemPoliciesPerGroupQuota) {
                 this.attachedSystemPoliciesPerGroupQuota = attachedSystemPoliciesPerGroupQuota;
@@ -377,7 +402,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of system policies that can be added to a RAM role.
+             * <p>The maximum number of system policies that can be added to a RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder attachedSystemPoliciesPerRoleQuota(Integer attachedSystemPoliciesPerRoleQuota) {
                 this.attachedSystemPoliciesPerRoleQuota = attachedSystemPoliciesPerRoleQuota;
@@ -385,7 +413,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of system policies that can be added to a RAM user.
+             * <p>The maximum number of system policies that can be added to a RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder attachedSystemPoliciesPerUserQuota(Integer attachedSystemPoliciesPerUserQuota) {
                 this.attachedSystemPoliciesPerUserQuota = attachedSystemPoliciesPerUserQuota;
@@ -393,7 +424,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of RAM user groups.
+             * <p>The number of RAM user groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder groups(Integer groups) {
                 this.groups = groups;
@@ -401,7 +435,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of RAM user groups to which a RAM user can be added.
+             * <p>The maximum number of RAM user groups to which a RAM user can be added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder groupsPerUserQuota(Integer groupsPerUserQuota) {
                 this.groupsPerUserQuota = groupsPerUserQuota;
@@ -409,7 +446,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of RAM user groups that can be created.
+             * <p>The maximum number of RAM user groups that can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder groupsQuota(Integer groupsQuota) {
                 this.groupsQuota = groupsQuota;
@@ -417,7 +457,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of virtual multi-factor authentication (MFA) devices.
+             * <p>The number of virtual multi-factor authentication (MFA) devices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder MFADevices(Integer MFADevices) {
                 this.MFADevices = MFADevices;
@@ -425,7 +468,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of virtual MFA devices in use.
+             * <p>The number of virtual MFA devices in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder MFADevicesInUse(Integer MFADevicesInUse) {
                 this.MFADevicesInUse = MFADevicesInUse;
@@ -433,7 +479,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of custom policies.
+             * <p>The number of custom policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder policies(Integer policies) {
                 this.policies = policies;
@@ -441,7 +490,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of custom policies that can be created.
+             * <p>The maximum number of custom policies that can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder policiesQuota(Integer policiesQuota) {
                 this.policiesQuota = policiesQuota;
@@ -449,7 +501,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum length of the policy content.
+             * <p>The maximum length of the policy content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder policySizeQuota(Integer policySizeQuota) {
                 this.policySizeQuota = policySizeQuota;
@@ -457,7 +512,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of RAM roles.
+             * <p>The number of RAM roles.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder roles(Integer roles) {
                 this.roles = roles;
@@ -465,7 +523,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of RAM roles that can be created.
+             * <p>The maximum number of RAM roles that can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder rolesQuota(Integer rolesQuota) {
                 this.rolesQuota = rolesQuota;
@@ -473,7 +534,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of RAM users.
+             * <p>The number of RAM users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder users(Integer users) {
                 this.users = users;
@@ -481,7 +545,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of RAM users that can be created.
+             * <p>The maximum number of RAM users that can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder usersQuota(Integer usersQuota) {
                 this.usersQuota = usersQuota;
@@ -489,7 +556,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of policy versions.
+             * <p>The maximum number of policy versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder versionsPerPolicyQuota(Integer versionsPerPolicyQuota) {
                 this.versionsPerPolicyQuota = versionsPerPolicyQuota;
@@ -497,7 +567,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of virtual MFA devices that can be created.
+             * <p>The maximum number of virtual MFA devices that can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder virtualMFADevicesQuota(Integer virtualMFADevicesQuota) {
                 this.virtualMFADevicesQuota = virtualMFADevicesQuota;

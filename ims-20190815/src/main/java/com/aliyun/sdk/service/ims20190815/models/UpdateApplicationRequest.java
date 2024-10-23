@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationRequest</p>
@@ -166,7 +167,11 @@ public class UpdateApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>472457090344041****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -175,10 +180,11 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The validity period of the access token.
-         * <p>
+         * <p>The validity period of the access token.</p>
+         * <p>Valid values: 900 to 10800. Unit: seconds.</p>
          * 
-         * Valid values: 900 to 10800. Unit: seconds.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder newAccessTokenValidity(Integer newAccessTokenValidity) {
             this.putQueryParameter("NewAccessTokenValidity", newAccessTokenValidity);
@@ -187,7 +193,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The display name.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewApp</p>
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -196,11 +205,14 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether the application can be installed by using other Alibaba Cloud accounts. Valid values:
-         * <p>
+         * <p>Specifies whether the application can be installed by using other Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder newIsMultiTenant(Boolean newIsMultiTenant) {
             this.putQueryParameter("NewIsMultiTenant", newIsMultiTenant);
@@ -209,14 +221,13 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The permission that is granted on the application.
-         * <p>
+         * <p>The permission that is granted on the application.</p>
+         * <p>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">OAuth scopes</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to query the permissions that are supported by different types of applications.</p>
+         * <p>If you enter multiple permissions, separate them with semicolons (;).</p>
+         * <p>The new value of this parameter overwrites the original value, and the permission specified by the new value takes effect. For example, if the original value is <code>/acs/ccc</code>, and the new value is <code>/acs/alidns</code>, <code>/acs/alidns</code> takes effect. If you want to retain the original permission and the <code>/acs/alidns</code> permission, set the value to <code>/acs/ccc;/acs/alidns</code>.</p>
          * 
-         * For more information about the application permission scope, see [OAuth scopes](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to query the permissions that are supported by different types of applications.
-         * 
-         * If you enter multiple permissions, separate them with semicolons (;).
-         * 
-         * The new value of this parameter overwrites the original value, and the permission specified by the new value takes effect. For example, if the original value is `/acs/ccc`, and the new value is `/acs/alidns`, `/acs/alidns` takes effect. If you want to retain the original permission and the `/acs/alidns` permission, set the value to `/acs/ccc;/acs/alidns`.
+         * <strong>example:</strong>
+         * <p>openid</p>
          */
         public Builder newPredefinedScopes(String newPredefinedScopes) {
             this.putQueryParameter("NewPredefinedScopes", newPredefinedScopes);
@@ -225,10 +236,11 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The callback URL.
-         * <p>
+         * <p>The callback URL.</p>
+         * <p>If you enter multiple callback URLs, separate them with semicolons (;).</p>
          * 
-         * If you enter multiple callback URLs, separate them with semicolons (;).
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */
         public Builder newRedirectUris(String newRedirectUris) {
             this.putQueryParameter("NewRedirectUris", newRedirectUris);
@@ -237,10 +249,11 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The validity period of the refresh token.
-         * <p>
+         * <p>The validity period of the refresh token.</p>
+         * <p>Valid values: 7200 to 31536000. Unit: seconds.</p>
          * 
-         * Valid values: 7200 to 31536000. Unit: seconds.
+         * <strong>example:</strong>
+         * <p>7776000</p>
          */
         public Builder newRefreshTokenValidity(Integer newRefreshTokenValidity) {
             this.putQueryParameter("NewRefreshTokenValidity", newRefreshTokenValidity);
@@ -249,18 +262,17 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The required permission.
-         * <p>
+         * <p>The required permission.</p>
+         * <p>You can specify one or more permissions for the <code>RequiredScopes</code> parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.</p>
+         * <p>If you also specify the <code>NewPredefinedScopes</code> parameter, the <code>NewPredefinedScopes</code> parameter specifies the permissions that can be granted on the application, and this parameter specifies the required permissions.</p>
+         * <p>If you enter multiple permissions, separate them with semicolons (;).</p>
+         * <p>The new value of this parameter overwrites the original value, and the required permission specified by the new value takes effect.</p>
+         * <blockquote>
+         * <p> If the permission that you specify for the <code>RequiredScopes</code> parameter is not included in value of the <code>PredefinedScopes</code> parameter, the permission does not take effect.</p>
+         * </blockquote>
          * 
-         * You can specify one or more permissions for the `RequiredScopes` parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.
-         * 
-         * If you also specify the `NewPredefinedScopes` parameter, the `NewPredefinedScopes` parameter specifies the permissions that can be granted on the application, and this parameter specifies the required permissions.
-         * 
-         * If you enter multiple permissions, separate them with semicolons (;).
-         * 
-         * The new value of this parameter overwrites the original value, and the required permission specified by the new value takes effect.
-         * 
-         * >  If the permission that you specify for the `RequiredScopes` parameter is not included in value of the `PredefinedScopes` parameter, the permission does not take effect.
+         * <strong>example:</strong>
+         * <p>profile;aliuid</p>
          */
         public Builder newRequiredScopes(String newRequiredScopes) {
             this.putQueryParameter("NewRequiredScopes", newRequiredScopes);
@@ -269,16 +281,20 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether a secret is required. Valid values:
-         * <p>
+         * <p>Specifies whether a secret is required. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.</li>
+         * <li>For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Use an application of the NativeApp type to log on to Alibaba Cloud</a>.</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
-         * 
-         * > 
-         * 
-         * *   For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.
-         * *   For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see [Use an application of the NativeApp type to log on to Alibaba Cloud](~~93697~~).
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder newSecretRequired(Boolean newSecretRequired) {
             this.putQueryParameter("NewSecretRequired", newSecretRequired);

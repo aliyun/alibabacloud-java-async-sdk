@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppSecretResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAppSecretResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateAppSecretResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the application secret.
+         * <p>The information of the application secret.</p>
          */
         public Builder appSecret(AppSecret appSecret) {
             this.appSecret = appSecret;
@@ -57,7 +58,10 @@ public class CreateAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE46FC3C-3BDE-4771-B531-27B7B6EB533D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateAppSecretResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppSecretResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAppSecretResponseBody</p>
+     */
     public static class AppSecret extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -133,7 +143,10 @@ public class CreateAppSecretResponseBody extends TeaModel {
             private String createDate; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>472457090344041****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -141,7 +154,10 @@ public class CreateAppSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application secret.
+             * <p>The ID of the application secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2efd5004-005c-4f05-83c6-5b1dd176****</p>
              */
             public Builder appSecretId(String appSecretId) {
                 this.appSecretId = appSecretId;
@@ -149,7 +165,10 @@ public class CreateAppSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the application secret. This value can be used as the client secret for open authorization.
+             * <p>The content of the application secret. This value can be used as the client secret for open authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai78ZmmxnlUG1jXlBZRDFKos9DIjY4m17Q7dCpMwn1rqXsTGb1X1XmrmveMp****</p>
              */
             public Builder appSecretValue(String appSecretValue) {
                 this.appSecretValue = appSecretValue;
@@ -157,7 +176,10 @@ public class CreateAppSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-26T02:52:31Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;

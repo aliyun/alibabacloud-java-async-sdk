@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddClientIdToOIDCProviderRequest} extends {@link RequestModel}
  *
  * <p>AddClientIdToOIDCProviderRequest</p>
@@ -67,12 +68,12 @@ public class AddClientIdToOIDCProviderRequest extends Request {
         } 
 
         /**
-         * The client ID that you want to add.
-         * <p>
+         * <p>The client ID that you want to add.</p>
+         * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/). </p>
+         * <p>The client ID can be up to 64 characters in length.</p>
          * 
-         * The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/). 
-         * 
-         * The client ID can be up to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>598469743454717****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -81,7 +82,10 @@ public class AddClientIdToOIDCProviderRequest extends Request {
         }
 
         /**
-         * The name of the OIDC IdP.
+         * <p>The name of the OIDC IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestOIDCProvider</p>
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);

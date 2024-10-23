@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserBasicInfosResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserBasicInfosResponseBody</p>
@@ -73,11 +74,14 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         private UserBasicInfos userBasicInfos; 
 
         /**
-         * Indicates whether the response is truncated. Valid value:
-         * <p>
+         * <p>Indicates whether the response is truncated. Valid value:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -85,7 +89,10 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.
+         * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -93,7 +100,10 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF2B25FD-CADE-445B-BE4D-E082E0FF1A0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +111,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the RAM user.
+         * <p>An array that consists of the information about the RAM user.</p>
          */
         public Builder userBasicInfos(UserBasicInfos userBasicInfos) {
             this.userBasicInfos = userBasicInfos;
@@ -114,9 +124,18 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserBasicInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserBasicInfosResponseBody</p>
+     */
     public static class UserBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -126,6 +145,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
 
         private UserBasicInfo(Builder builder) {
             this.displayName = builder.displayName;
+            this.status = builder.status;
             this.userId = builder.userId;
             this.userPrincipalName = builder.userPrincipalName;
         }
@@ -146,6 +166,13 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -161,11 +188,15 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayName; 
+            private String status; 
             private String userId; 
             private String userPrincipalName; 
 
             /**
-             * The display name of the RAM user.
+             * <p>The display name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -173,7 +204,18 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user.
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20732900249392****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -181,7 +223,10 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The logon name of the RAM user.
+             * <p>The logon name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;
@@ -195,6 +240,12 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserBasicInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserBasicInfosResponseBody</p>
+     */
     public static class UserBasicInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserBasicInfo")
         private java.util.List < UserBasicInfo> userBasicInfo;

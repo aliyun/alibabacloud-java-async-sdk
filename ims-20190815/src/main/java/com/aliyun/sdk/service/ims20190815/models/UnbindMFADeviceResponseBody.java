@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindMFADeviceResponseBody} extends {@link TeaModel}
  *
  * <p>UnbindMFADeviceResponseBody</p>
@@ -49,7 +50,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the MFA device.
+         * <p>The information of the MFA device.</p>
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -57,7 +58,10 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A26CB3E9-1021-452A-AC57-3134B3BA0E4C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UnbindMFADeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnbindMFADeviceResponseBody</p>
+     */
     public static class MFADevice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
@@ -97,7 +107,10 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * The serial number of the MFA device.
+             * <p>The serial number of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::151298381312****:mfa/device001</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

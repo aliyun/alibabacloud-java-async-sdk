@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteGroupRequest</p>
@@ -53,7 +54,10 @@ public class DeleteGroupRequest extends Request {
         } 
 
         /**
-         * The name of the RAM user group.
+         * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

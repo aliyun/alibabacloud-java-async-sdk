@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPredefinedScopesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPredefinedScopesResponseBody</p>
@@ -49,7 +50,7 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of application permissions.
+         * <p>The information of application permissions.</p>
          */
         public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
             this.predefinedScopes = predefinedScopes;
@@ -57,7 +58,10 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>955C096D-EC99-480B-AF37-3921109107D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPredefinedScopesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPredefinedScopesResponseBody</p>
+     */
     public static class PredefinedScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -109,7 +119,10 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the permission scope.
+             * <p>The description of the permission scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -117,7 +130,10 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scope.
+             * <p>The name of the scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openid</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -131,6 +147,12 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPredefinedScopesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPredefinedScopesResponseBody</p>
+     */
     public static class PredefinedScopes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PredefinedScope")
         private java.util.List < PredefinedScope> predefinedScope;

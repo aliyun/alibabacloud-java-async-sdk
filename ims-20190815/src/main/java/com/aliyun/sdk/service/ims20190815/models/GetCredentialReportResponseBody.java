@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCredentialReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetCredentialReportResponseBody</p>
@@ -85,10 +86,11 @@ public class GetCredentialReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the user credential report.
-         * <p>
+         * <p>The content of the user credential report.</p>
+         * <p>The report is Base64-encoded. After you decode the report, the credential report is in the CSV format.</p>
          * 
-         * The report is Base64-encoded. After you decode the report, the credential report is in the CSV format.
+         * <strong>example:</strong>
+         * <p>OVZWK4RMOVZW****</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -96,7 +98,10 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the user credential report was generated.
+         * <p>The time when the user credential report was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-19T15:06:52Z</p>
          */
         public Builder generatedTime(String generatedTime) {
             this.generatedTime = generatedTime;
@@ -104,11 +109,14 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the response is truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the response is truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(String isTruncated) {
             this.isTruncated = isTruncated;
@@ -116,7 +124,10 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * The parameter that is used to obtain the truncated part. This parameter takes effect only when `IsTruncated` is set to true.
+         * <p>The parameter that is used to obtain the truncated part. This parameter takes effect only when <code>IsTruncated</code> is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -124,7 +135,10 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A01826E-7601-44B0-B4DF-2B0C509836DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

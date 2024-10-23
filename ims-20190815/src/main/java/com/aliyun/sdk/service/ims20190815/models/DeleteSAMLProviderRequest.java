@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSAMLProviderRequest} extends {@link RequestModel}
  *
  * <p>DeleteSAMLProviderRequest</p>
@@ -54,7 +55,11 @@ public class DeleteSAMLProviderRequest extends Request {
         } 
 
         /**
-         * The name of the IdP that you want to delete.
+         * <p>The name of the IdP that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-provider</p>
          */
         public Builder SAMLProviderName(String SAMLProviderName) {
             this.putQueryParameter("SAMLProviderName", SAMLProviderName);

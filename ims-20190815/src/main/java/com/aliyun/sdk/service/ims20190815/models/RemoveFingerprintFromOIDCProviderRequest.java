@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveFingerprintFromOIDCProviderRequest} extends {@link RequestModel}
  *
  * <p>RemoveFingerprintFromOIDCProviderRequest</p>
@@ -67,7 +68,10 @@ public class RemoveFingerprintFromOIDCProviderRequest extends Request {
         } 
 
         /**
-         * The fingerprint that you want to remove.
+         * <p>The fingerprint that you want to remove.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6938fd4d98bab03faadb97b34396831e3780****</p>
          */
         public Builder fingerprint(String fingerprint) {
             this.putQueryParameter("Fingerprint", fingerprint);
@@ -76,7 +80,10 @@ public class RemoveFingerprintFromOIDCProviderRequest extends Request {
         }
 
         /**
-         * The name of the OIDC IdP.
+         * <p>The name of the OIDC IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestOIDCProvider</p>
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);
