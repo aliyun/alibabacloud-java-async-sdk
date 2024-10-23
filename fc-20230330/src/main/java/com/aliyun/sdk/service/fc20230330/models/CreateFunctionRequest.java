@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFunctionRequest} extends {@link RequestModel}
  *
  * <p>CreateFunctionRequest</p>
@@ -54,7 +55,8 @@ public class CreateFunctionRequest extends Request {
         } 
 
         /**
-         * The information about function configurations.
+         * <p>The information about function configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(CreateFunctionInput body) {
             this.putBodyParameter("body", body);

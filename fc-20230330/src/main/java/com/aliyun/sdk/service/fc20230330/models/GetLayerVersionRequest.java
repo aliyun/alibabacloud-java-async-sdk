@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLayerVersionRequest} extends {@link RequestModel}
  *
  * <p>GetLayerVersionRequest</p>
@@ -69,7 +70,11 @@ public class GetLayerVersionRequest extends Request {
         } 
 
         /**
-         * The name of the layer.
+         * <p>The name of the layer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-layer</p>
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -78,7 +83,11 @@ public class GetLayerVersionRequest extends Request {
         }
 
         /**
-         * The version of the layer.
+         * <p>The version of the layer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder version(Integer version) {
             this.putPathParameter("version", version);

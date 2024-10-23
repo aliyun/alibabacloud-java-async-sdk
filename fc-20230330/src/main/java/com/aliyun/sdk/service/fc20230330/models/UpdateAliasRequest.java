@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAliasRequest} extends {@link RequestModel}
  *
  * <p>UpdateAliasRequest</p>
@@ -84,7 +85,11 @@ public class UpdateAliasRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -93,7 +98,11 @@ public class UpdateAliasRequest extends Request {
         }
 
         /**
-         * The function alias name.
+         * <p>The function alias name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-alias</p>
          */
         public Builder aliasName(String aliasName) {
             this.putPathParameter("aliasName", aliasName);
@@ -102,7 +111,8 @@ public class UpdateAliasRequest extends Request {
         }
 
         /**
-         * The alias information to be updated.
+         * <p>The alias information to be updated.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(UpdateAliasInput body) {
             this.putBodyParameter("body", body);

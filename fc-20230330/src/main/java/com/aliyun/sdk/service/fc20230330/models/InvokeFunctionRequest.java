@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvokeFunctionRequest} extends {@link RequestModel}
  *
  * <p>InvokeFunctionRequest</p>
@@ -124,7 +125,11 @@ public class InvokeFunctionRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -133,7 +138,10 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * The request parameters of function invocation.
+         * <p>The request parameters of function invocation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event</p>
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);
@@ -142,7 +150,10 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * The version or alias of the function.
+         * <p>The version or alias of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -151,10 +162,13 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * The ID of the asynchronous task. You must enable the asynchronous task feature in advance.
-         * <p>
+         * <p>The ID of the asynchronous task. You must enable the asynchronous task feature in advance.</p>
+         * <blockquote>
+         * <p> If you use an SDK to invoke a function, we recommend that you specify a business-related ID to facilitate subsequent operations. For example, a video processing function can use video file names as invocation IDs. This way, you can easily check whether a video is successfully processed or terminated before it is processed. The ID can start only with letters or underscores. An ID can contain <em>letters, digits (0 - 9), underscores</em>, and hyphens (-). It can be up to 128 characters in length. If you do not specify the ID of the asynchronous invocation, the system automatically generates an ID.</p>
+         * </blockquote>
          * 
-         * >  If you use an SDK to invoke a function, we recommend that you specify a business-related ID to facilitate subsequent operations. For example, a video processing function can use video file names as invocation IDs. This way, you can easily check whether a video is successfully processed or terminated before it is processed. The ID can start only with letters or underscores. An ID can contain *letters, digits (0 - 9), underscores*, and hyphens (-). It can be up to 128 characters in length. If you do not specify the ID of the asynchronous invocation, the system automatically generates an ID.
+         * <strong>example:</strong>
+         * <p>test-id</p>
          */
         public Builder xFcAsyncTaskId(String xFcAsyncTaskId) {
             this.putHeaderParameter("x-fc-async-task-id", xFcAsyncTaskId);
@@ -163,7 +177,10 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * The type of function invocation. Valid values: Sync and Async.
+         * <p>The type of function invocation. Valid values: Sync and Async.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sync</p>
          */
         public Builder xFcInvocationType(String xFcInvocationType) {
             this.putHeaderParameter("x-fc-invocation-type", xFcInvocationType);
@@ -172,7 +189,10 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * The log type of function invocation. Valid values: None and Tail.
+         * <p>The log type of function invocation. Valid values: None and Tail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tail</p>
          */
         public Builder xFcLogType(String xFcLogType) {
             this.putHeaderParameter("x-fc-log-type", xFcLogType);

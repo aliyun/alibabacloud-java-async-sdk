@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EqualRule} extends {@link TeaModel}
  *
  * <p>EqualRule</p>
@@ -51,7 +52,10 @@ public class EqualRule extends TeaModel {
         private String replacement; 
 
         /**
-         * match.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/old</p>
          */
         public Builder match(String match) {
             this.match = match;
@@ -59,7 +63,10 @@ public class EqualRule extends TeaModel {
         }
 
         /**
-         * replacement.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/new</p>
          */
         public Builder replacement(String replacement) {
             this.replacement = replacement;

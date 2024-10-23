@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFunctionInput} extends {@link TeaModel}
  *
  * <p>CreateFunctionInput</p>
@@ -382,7 +383,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * functionName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-function-1</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -398,7 +402,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * handler.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index.handler</p>
          */
         public Builder handler(String handler) {
             this.handler = handler;
@@ -478,7 +485,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * runtime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3.10</p>
          */
         public Builder runtime(String runtime) {
             this.runtime = runtime;

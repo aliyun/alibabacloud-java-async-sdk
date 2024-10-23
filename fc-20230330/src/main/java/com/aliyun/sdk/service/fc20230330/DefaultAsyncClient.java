@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateAlias  CreateAliasRequest
+     * @return CreateAliasResponse
+     */
     @Override
     public CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request) {
         try {
@@ -54,8 +58,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you wish to access applications or functions created in Function Compute via a fixed domain name in a production environment, or if you need to address the forced download behavior when accessing HTTP triggers, you can achieve this by binding a custom domain to your application or function.
-      *
+     * <b>description</b> :
+     * <p>If you want to use a fixed domain name to access an application or function in a production environment of Function Compute, or to resolve the issue of forced downloads when accessing an HTTP trigger, you can bind a custom domain name to the application or function.</p>
+     * 
+     * @param request the request parameters of CreateCustomDomain  CreateCustomDomainRequest
+     * @return CreateCustomDomainResponse
      */
     @Override
     public CompletableFuture<CreateCustomDomainResponse> createCustomDomain(CreateCustomDomainRequest request) {
@@ -72,8 +79,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * In Function Compute, a function serves as the smallest unit of resource scheduling and execution, typically referring to a piece of code written by users that can execute independently in response to specific events or requests.
-      *
+     * <b>description</b> :
+     * <p>Resources of Function Compute are scheduled and run based on functions. A function usually refers to a code snippet that is written by a user and can be independently executed to respond to events and requests.</p>
+     * 
+     * @param request the request parameters of CreateFunction  CreateFunctionRequest
+     * @return CreateFunctionResponse
      */
     @Override
     public CompletableFuture<CreateFunctionResponse> createFunction(CreateFunctionRequest request) {
@@ -89,6 +99,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLayerVersion  CreateLayerVersionRequest
+     * @return CreateLayerVersionResponse
+     */
     @Override
     public CompletableFuture<CreateLayerVersionResponse> createLayerVersion(CreateLayerVersionRequest request) {
         try {
@@ -103,6 +117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTrigger  CreateTriggerRequest
+     * @return CreateTriggerResponse
+     */
     @Override
     public CompletableFuture<CreateTriggerResponse> createTrigger(CreateTriggerRequest request) {
         try {
@@ -117,6 +135,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVpcBinding  CreateVpcBindingRequest
+     * @return CreateVpcBindingResponse
+     */
     @Override
     public CompletableFuture<CreateVpcBindingResponse> createVpcBinding(CreateVpcBindingRequest request) {
         try {
@@ -131,6 +153,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAlias  DeleteAliasRequest
+     * @return DeleteAliasResponse
+     */
     @Override
     public CompletableFuture<DeleteAliasResponse> deleteAlias(DeleteAliasRequest request) {
         try {
@@ -145,6 +171,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAsyncInvokeConfig  DeleteAsyncInvokeConfigRequest
+     * @return DeleteAsyncInvokeConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteAsyncInvokeConfigResponse> deleteAsyncInvokeConfig(DeleteAsyncInvokeConfigRequest request) {
         try {
@@ -159,6 +189,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteConcurrencyConfig  DeleteConcurrencyConfigRequest
+     * @return DeleteConcurrencyConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteConcurrencyConfigResponse> deleteConcurrencyConfig(DeleteConcurrencyConfigRequest request) {
         try {
@@ -173,6 +207,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomDomain  DeleteCustomDomainRequest
+     * @return DeleteCustomDomainResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomDomainResponse> deleteCustomDomain(DeleteCustomDomainRequest request) {
         try {
@@ -187,6 +225,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFunction  DeleteFunctionRequest
+     * @return DeleteFunctionResponse
+     */
     @Override
     public CompletableFuture<DeleteFunctionResponse> deleteFunction(DeleteFunctionRequest request) {
         try {
@@ -201,6 +243,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFunctionVersion  DeleteFunctionVersionRequest
+     * @return DeleteFunctionVersionResponse
+     */
     @Override
     public CompletableFuture<DeleteFunctionVersionResponse> deleteFunctionVersion(DeleteFunctionVersionRequest request) {
         try {
@@ -215,6 +261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLayerVersion  DeleteLayerVersionRequest
+     * @return DeleteLayerVersionResponse
+     */
     @Override
     public CompletableFuture<DeleteLayerVersionResponse> deleteLayerVersion(DeleteLayerVersionRequest request) {
         try {
@@ -229,6 +279,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteProvisionConfig  DeleteProvisionConfigRequest
+     * @return DeleteProvisionConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteProvisionConfigResponse> deleteProvisionConfig(DeleteProvisionConfigRequest request) {
         try {
@@ -243,6 +297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTrigger  DeleteTriggerRequest
+     * @return DeleteTriggerResponse
+     */
     @Override
     public CompletableFuture<DeleteTriggerResponse> deleteTrigger(DeleteTriggerRequest request) {
         try {
@@ -257,6 +315,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVpcBinding  DeleteVpcBindingRequest
+     * @return DeleteVpcBindingResponse
+     */
     @Override
     public CompletableFuture<DeleteVpcBindingResponse> deleteVpcBinding(DeleteVpcBindingRequest request) {
         try {
@@ -271,6 +333,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAlias  GetAliasRequest
+     * @return GetAliasResponse
+     */
     @Override
     public CompletableFuture<GetAliasResponse> getAlias(GetAliasRequest request) {
         try {
@@ -285,6 +351,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAsyncInvokeConfig  GetAsyncInvokeConfigRequest
+     * @return GetAsyncInvokeConfigResponse
+     */
     @Override
     public CompletableFuture<GetAsyncInvokeConfigResponse> getAsyncInvokeConfig(GetAsyncInvokeConfigRequest request) {
         try {
@@ -299,6 +369,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAsyncTask  GetAsyncTaskRequest
+     * @return GetAsyncTaskResponse
+     */
     @Override
     public CompletableFuture<GetAsyncTaskResponse> getAsyncTask(GetAsyncTaskRequest request) {
         try {
@@ -313,6 +387,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetConcurrencyConfig  GetConcurrencyConfigRequest
+     * @return GetConcurrencyConfigResponse
+     */
     @Override
     public CompletableFuture<GetConcurrencyConfigResponse> getConcurrencyConfig(GetConcurrencyConfigRequest request) {
         try {
@@ -327,6 +405,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomDomain  GetCustomDomainRequest
+     * @return GetCustomDomainResponse
+     */
     @Override
     public CompletableFuture<GetCustomDomainResponse> getCustomDomain(GetCustomDomainRequest request) {
         try {
@@ -341,6 +423,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFunction  GetFunctionRequest
+     * @return GetFunctionResponse
+     */
     @Override
     public CompletableFuture<GetFunctionResponse> getFunction(GetFunctionRequest request) {
         try {
@@ -355,6 +441,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFunctionCode  GetFunctionCodeRequest
+     * @return GetFunctionCodeResponse
+     */
     @Override
     public CompletableFuture<GetFunctionCodeResponse> getFunctionCode(GetFunctionCodeRequest request) {
         try {
@@ -369,6 +459,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLayerVersion  GetLayerVersionRequest
+     * @return GetLayerVersionResponse
+     */
     @Override
     public CompletableFuture<GetLayerVersionResponse> getLayerVersion(GetLayerVersionRequest request) {
         try {
@@ -383,6 +477,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLayerVersionByArn  GetLayerVersionByArnRequest
+     * @return GetLayerVersionByArnResponse
+     */
     @Override
     public CompletableFuture<GetLayerVersionByArnResponse> getLayerVersionByArn(GetLayerVersionByArnRequest request) {
         try {
@@ -397,6 +495,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProvisionConfig  GetProvisionConfigRequest
+     * @return GetProvisionConfigResponse
+     */
     @Override
     public CompletableFuture<GetProvisionConfigResponse> getProvisionConfig(GetProvisionConfigRequest request) {
         try {
@@ -411,6 +513,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTrigger  GetTriggerRequest
+     * @return GetTriggerResponse
+     */
     @Override
     public CompletableFuture<GetTriggerResponse> getTrigger(GetTriggerRequest request) {
         try {
@@ -425,6 +531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvokeFunction  InvokeFunctionRequest
+     * @return InvokeFunctionResponse
+     */
     @Override
     public CompletableFuture<InvokeFunctionResponse> invokeFunction(InvokeFunctionRequest request) {
         try {
@@ -468,6 +578,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAliases  ListAliasesRequest
+     * @return ListAliasesResponse
+     */
     @Override
     public CompletableFuture<ListAliasesResponse> listAliases(ListAliasesRequest request) {
         try {
@@ -482,6 +596,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAsyncInvokeConfigs  ListAsyncInvokeConfigsRequest
+     * @return ListAsyncInvokeConfigsResponse
+     */
     @Override
     public CompletableFuture<ListAsyncInvokeConfigsResponse> listAsyncInvokeConfigs(ListAsyncInvokeConfigsRequest request) {
         try {
@@ -496,6 +614,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAsyncTasks  ListAsyncTasksRequest
+     * @return ListAsyncTasksResponse
+     */
     @Override
     public CompletableFuture<ListAsyncTasksResponse> listAsyncTasks(ListAsyncTasksRequest request) {
         try {
@@ -510,6 +632,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListConcurrencyConfigs  ListConcurrencyConfigsRequest
+     * @return ListConcurrencyConfigsResponse
+     */
     @Override
     public CompletableFuture<ListConcurrencyConfigsResponse> listConcurrencyConfigs(ListConcurrencyConfigsRequest request) {
         try {
@@ -524,6 +650,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCustomDomains  ListCustomDomainsRequest
+     * @return ListCustomDomainsResponse
+     */
     @Override
     public CompletableFuture<ListCustomDomainsResponse> listCustomDomains(ListCustomDomainsRequest request) {
         try {
@@ -538,6 +668,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFunctionVersions  ListFunctionVersionsRequest
+     * @return ListFunctionVersionsResponse
+     */
     @Override
     public CompletableFuture<ListFunctionVersionsResponse> listFunctionVersions(ListFunctionVersionsRequest request) {
         try {
@@ -552,6 +686,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFunctions  ListFunctionsRequest
+     * @return ListFunctionsResponse
+     */
     @Override
     public CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request) {
         try {
@@ -566,6 +704,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
     @Override
     public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
         try {
@@ -580,6 +722,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLayerVersions  ListLayerVersionsRequest
+     * @return ListLayerVersionsResponse
+     */
     @Override
     public CompletableFuture<ListLayerVersionsResponse> listLayerVersions(ListLayerVersionsRequest request) {
         try {
@@ -594,6 +740,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLayers  ListLayersRequest
+     * @return ListLayersResponse
+     */
     @Override
     public CompletableFuture<ListLayersResponse> listLayers(ListLayersRequest request) {
         try {
@@ -608,6 +758,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProvisionConfigs  ListProvisionConfigsRequest
+     * @return ListProvisionConfigsResponse
+     */
     @Override
     public CompletableFuture<ListProvisionConfigsResponse> listProvisionConfigs(ListProvisionConfigsRequest request) {
         try {
@@ -622,6 +776,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -636,6 +794,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTriggers  ListTriggersRequest
+     * @return ListTriggersResponse
+     */
     @Override
     public CompletableFuture<ListTriggersResponse> listTriggers(ListTriggersRequest request) {
         try {
@@ -650,6 +812,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVpcBindings  ListVpcBindingsRequest
+     * @return ListVpcBindingsResponse
+     */
     @Override
     public CompletableFuture<ListVpcBindingsResponse> listVpcBindings(ListVpcBindingsRequest request) {
         try {
@@ -664,6 +830,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishFunctionVersion  PublishFunctionVersionRequest
+     * @return PublishFunctionVersionResponse
+     */
     @Override
     public CompletableFuture<PublishFunctionVersionResponse> publishFunctionVersion(PublishFunctionVersionRequest request) {
         try {
@@ -678,6 +848,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PutAsyncInvokeConfig  PutAsyncInvokeConfigRequest
+     * @return PutAsyncInvokeConfigResponse
+     */
     @Override
     public CompletableFuture<PutAsyncInvokeConfigResponse> putAsyncInvokeConfig(PutAsyncInvokeConfigRequest request) {
         try {
@@ -692,6 +866,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PutConcurrencyConfig  PutConcurrencyConfigRequest
+     * @return PutConcurrencyConfigResponse
+     */
     @Override
     public CompletableFuture<PutConcurrencyConfigResponse> putConcurrencyConfig(PutConcurrencyConfigRequest request) {
         try {
@@ -706,6 +884,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PutLayerACL  PutLayerACLRequest
+     * @return PutLayerACLResponse
+     */
     @Override
     public CompletableFuture<PutLayerACLResponse> putLayerACL(PutLayerACLRequest request) {
         try {
@@ -720,6 +902,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PutProvisionConfig  PutProvisionConfigRequest
+     * @return PutProvisionConfigResponse
+     */
     @Override
     public CompletableFuture<PutProvisionConfigResponse> putProvisionConfig(PutProvisionConfigRequest request) {
         try {
@@ -734,6 +920,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopAsyncTask  StopAsyncTaskRequest
+     * @return StopAsyncTaskResponse
+     */
     @Override
     public CompletableFuture<StopAsyncTaskResponse> stopAsyncTask(StopAsyncTaskRequest request) {
         try {
@@ -749,8 +939,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](~~156983~~).
-      *
+     * <b>description</b> :
+     * <p>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</p>
+     * 
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
      */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
@@ -766,6 +959,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -780,6 +977,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAlias  UpdateAliasRequest
+     * @return UpdateAliasResponse
+     */
     @Override
     public CompletableFuture<UpdateAliasResponse> updateAlias(UpdateAliasRequest request) {
         try {
@@ -794,6 +995,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomDomain  UpdateCustomDomainRequest
+     * @return UpdateCustomDomainResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomDomainResponse> updateCustomDomain(UpdateCustomDomainRequest request) {
         try {
@@ -808,6 +1013,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFunction  UpdateFunctionRequest
+     * @return UpdateFunctionResponse
+     */
     @Override
     public CompletableFuture<UpdateFunctionResponse> updateFunction(UpdateFunctionRequest request) {
         try {
@@ -822,6 +1031,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTrigger  UpdateTriggerRequest
+     * @return UpdateTriggerResponse
+     */
     @Override
     public CompletableFuture<UpdateTriggerResponse> updateTrigger(UpdateTriggerRequest request) {
         try {

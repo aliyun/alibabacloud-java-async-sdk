@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutProvisionConfigInput} extends {@link TeaModel}
  *
  * <p>PutProvisionConfigInput</p>
@@ -110,7 +111,10 @@ public class PutProvisionConfigInput extends TeaModel {
         }
 
         /**
-         * target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder target(Long target) {
             this.target = target;

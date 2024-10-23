@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAsyncInvokeConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListAsyncInvokeConfigsRequest</p>
@@ -81,7 +82,10 @@ public class ListAsyncInvokeConfigsRequest extends Request {
         } 
 
         /**
-         * The function name. If you do not configure this parameter, the asynchronous invocation configurations of all functions are displayed.
+         * <p>The function name. If you do not configure this parameter, the asynchronous invocation configurations of all functions are displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -90,7 +94,10 @@ public class ListAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to be returned.
+         * <p>The maximum number of entries to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -99,7 +106,10 @@ public class ListAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The paging information. This parameter specifies the start point of the query.
+         * <p>The paging information. This parameter specifies the start point of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

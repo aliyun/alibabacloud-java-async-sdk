@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -54,7 +55,8 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The configuration of the resource tag.
+         * <p>The configuration of the resource tag.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(TagResourcesInput body) {
             this.putBodyParameter("body", body);

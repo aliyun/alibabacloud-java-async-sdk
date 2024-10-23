@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutConcurrencyInput} extends {@link TeaModel}
  *
  * <p>PutConcurrencyInput</p>
@@ -38,7 +39,10 @@ public class PutConcurrencyInput extends TeaModel {
         private Long reservedConcurrency; 
 
         /**
-         * reservedConcurrency.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder reservedConcurrency(Long reservedConcurrency) {
             this.reservedConcurrency = reservedConcurrency;

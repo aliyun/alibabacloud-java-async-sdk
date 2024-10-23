@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLayerVersionByArnRequest} extends {@link RequestModel}
  *
  * <p>GetLayerVersionByArnRequest</p>
@@ -54,7 +55,11 @@ public class GetLayerVersionByArnRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the layer.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the layer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:1234:layers/my-layer/versions/1</p>
          */
         public Builder arn(String arn) {
             this.putPathParameter("arn", arn);

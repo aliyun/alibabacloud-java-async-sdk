@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAsyncTasksRequest} extends {@link RequestModel}
  *
  * <p>ListAsyncTasksRequest</p>
@@ -180,7 +181,11 @@ public class ListAsyncTasksRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -189,13 +194,17 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * Specifies whether to return input parameters of the asynchronous tasks. Valid values:
-         * <p>
+         * <p>Specifies whether to return input parameters of the asynchronous tasks. Valid values:</p>
+         * <ul>
+         * <li>true: returns the <code>invocationPayload</code> parameter in the response.</li>
+         * <li>false: does not return the <code>invocationPayload</code> parameter in the response.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The <code>invocationPayload</code> parameter indicates the input parameters of an asynchronous task.</p>
+         * </blockquote>
          * 
-         * *   true: returns the `invocationPayload` parameter in the response.
-         * *   false: does not return the `invocationPayload` parameter in the response.
-         * 
-         * >  The `invocationPayload` parameter indicates the input parameters of an asynchronous task.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includePayload(Boolean includePayload) {
             this.putQueryParameter("includePayload", includePayload);
@@ -204,7 +213,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The number of asynchronous tasks to return. Valid values: \[1,100]. Default value: 50.
+         * <p>The number of asynchronous tasks to return. Valid values: [1,100]. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -213,7 +225,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -222,7 +237,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The ID prefix of asynchronous tasks. If this parameter is specified, a list of asynchronous tasks whose IDs match the prefix is returned.
+         * <p>The ID prefix of asynchronous tasks. If this parameter is specified, a list of asynchronous tasks whose IDs match the prefix is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -231,7 +249,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The version or alias of the function.
+         * <p>The version or alias of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -240,11 +261,14 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The order in which the returned asynchronous tasks are sorted.
-         * <p>
+         * <p>The order in which the returned asynchronous tasks are sorted.</p>
+         * <ul>
+         * <li>asc: in ascending order.</li>
+         * <li>desc: in descending order.</li>
+         * </ul>
          * 
-         * *   asc: in ascending order.
-         * *   desc: in descending order.
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortOrderByTime(String sortOrderByTime) {
             this.putQueryParameter("sortOrderByTime", sortOrderByTime);
@@ -253,7 +277,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The start time of the period during which the asynchronous tasks are initiated.
+         * <p>The start time of the period during which the asynchronous tasks are initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640966400000</p>
          */
         public Builder startedTimeBegin(Long startedTimeBegin) {
             this.putQueryParameter("startedTimeBegin", startedTimeBegin);
@@ -262,7 +289,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The end time of the period during which the asynchronous tasks are initiated.
+         * <p>The end time of the period during which the asynchronous tasks are initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640966400000</p>
          */
         public Builder startedTimeEnd(Long startedTimeEnd) {
             this.putQueryParameter("startedTimeEnd", startedTimeEnd);
@@ -271,18 +301,21 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The state of asynchronous tasks. The following items list the states of an asynchronous task:
-         * <p>
+         * <p>The state of asynchronous tasks. The following items list the states of an asynchronous task:</p>
+         * <ul>
+         * <li>Enqueued: The asynchronous invocation is enqueued and is waiting to be executed.</li>
+         * <li>Succeeded: The invocation is successful.</li>
+         * <li>Failed: The invocation fails.</li>
+         * <li>Running: The invocation is being executed.</li>
+         * <li>Stopped: The invocation is terminated.</li>
+         * <li>Stopping: The invocation is being terminated.</li>
+         * <li>Invalid: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.</li>
+         * <li>Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period has elapsed.</li>
+         * <li>Retrying: The asynchronous invocation is being retried due to an execution error.</li>
+         * </ul>
          * 
-         * *   Enqueued: The asynchronous invocation is enqueued and is waiting to be executed.
-         * *   Succeeded: The invocation is successful.
-         * *   Failed: The invocation fails.
-         * *   Running: The invocation is being executed.
-         * *   Stopped: The invocation is terminated.
-         * *   Stopping: The invocation is being terminated.
-         * *   Invalid: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.
-         * *   Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period has elapsed.
-         * *   Retrying: The asynchronous invocation is being retried due to an execution error.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

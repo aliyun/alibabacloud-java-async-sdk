@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Layer} extends {@link TeaModel}
  *
  * <p>Layer</p>
@@ -215,7 +216,10 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * layerName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyLayer</p>
          */
         public Builder layerName(String layerName) {
             this.layerName = layerName;

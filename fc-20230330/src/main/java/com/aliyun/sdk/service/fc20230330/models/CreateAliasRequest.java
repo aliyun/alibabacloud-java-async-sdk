@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAliasRequest} extends {@link RequestModel}
  *
  * <p>CreateAliasRequest</p>
@@ -69,7 +70,11 @@ public class CreateAliasRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +83,8 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * The request parameters for creating an alias.
+         * <p>The request parameters for creating an alias.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(CreateAliasInput body) {
             this.putBodyParameter("body", body);

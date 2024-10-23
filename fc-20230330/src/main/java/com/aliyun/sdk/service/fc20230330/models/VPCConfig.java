@@ -6,11 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VPCConfig} extends {@link TeaModel}
  *
  * <p>VPCConfig</p>
  */
 public class VPCConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("role")
+    private String role;
+
     @com.aliyun.core.annotation.NameInMap("securityGroupId")
     @com.aliyun.core.annotation.Validation(maxLength = 50)
     private String securityGroupId;
@@ -23,6 +27,7 @@ public class VPCConfig extends TeaModel {
     private String vpcId;
 
     private VPCConfig(Builder builder) {
+        this.role = builder.role;
         this.securityGroupId = builder.securityGroupId;
         this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
@@ -34,6 +39,13 @@ public class VPCConfig extends TeaModel {
 
     public static VPCConfig create() {
         return builder().build();
+    }
+
+    /**
+     * @return role
+     */
+    public String getRole() {
+        return this.role;
     }
 
     /**
@@ -58,9 +70,18 @@ public class VPCConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private String role; 
         private String securityGroupId; 
         private java.util.List < String > vSwitchIds; 
         private String vpcId; 
+
+        /**
+         * role.
+         */
+        public Builder role(String role) {
+            this.role = role;
+            return this;
+        }
 
         /**
          * securityGroupId.

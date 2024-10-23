@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -97,7 +98,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete all tags.
+         * <p>Specifies whether to delete all tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -106,7 +110,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource identifiers.
+         * <p>The resource identifiers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             String resourceIdShrink = shrink(resourceId, "ResourceId", "json");
@@ -116,7 +121,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * <p>The resource type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -125,7 +134,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag to remove. You can specify a maximum of 50 tags.
+         * <p>The tag to remove. You can specify a maximum of 50 tags.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             String tagKeyShrink = shrink(tagKey, "TagKey", "json");

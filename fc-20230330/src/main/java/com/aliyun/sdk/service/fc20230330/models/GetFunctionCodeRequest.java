@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFunctionCodeRequest} extends {@link RequestModel}
  *
  * <p>GetFunctionCodeRequest</p>
@@ -68,7 +69,11 @@ public class GetFunctionCodeRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -77,7 +82,10 @@ public class GetFunctionCodeRequest extends Request {
         }
 
         /**
-         * The version or alias of the function.
+         * <p>The version or alias of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

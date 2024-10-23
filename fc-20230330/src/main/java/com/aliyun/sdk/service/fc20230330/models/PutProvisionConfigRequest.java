@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutProvisionConfigRequest} extends {@link RequestModel}
  *
  * <p>PutProvisionConfigRequest</p>
@@ -83,7 +84,11 @@ public class PutProvisionConfigRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -92,7 +97,8 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * The information about the provisioned configuration.
+         * <p>The information about the provisioned configuration.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(PutProvisionConfigInput body) {
             this.putBodyParameter("body", body);
@@ -101,7 +107,10 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * The function alias or LATEST.
+         * <p>The function alias or LATEST.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

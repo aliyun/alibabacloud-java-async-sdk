@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesInput} extends {@link TeaModel}
  *
  * <p>TagResourcesInput</p>
@@ -63,7 +64,7 @@ public class TagResourcesInput extends TeaModel {
         private java.util.List < Tag > tag; 
 
         /**
-         * ResourceId.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.resourceId = resourceId;
@@ -79,7 +80,7 @@ public class TagResourcesInput extends TeaModel {
         }
 
         /**
-         * Tag.
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag > tag) {
             this.tag = tag;

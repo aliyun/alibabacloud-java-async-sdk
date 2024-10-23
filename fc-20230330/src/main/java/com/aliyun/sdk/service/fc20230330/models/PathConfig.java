@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PathConfig} extends {@link TeaModel}
  *
  * <p>PathConfig</p>
@@ -87,7 +88,10 @@ public class PathConfig extends TeaModel {
         private RewriteConfig rewriteConfig; 
 
         /**
-         * functionName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myFunction</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -103,7 +107,10 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * path.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api/*</p>
          */
         public Builder path(String path) {
             this.path = path;

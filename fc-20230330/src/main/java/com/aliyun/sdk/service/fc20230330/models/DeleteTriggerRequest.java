@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTriggerRequest} extends {@link RequestModel}
  *
  * <p>DeleteTriggerRequest</p>
@@ -69,7 +70,11 @@ public class DeleteTriggerRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +83,11 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * The trigger name.
+         * <p>The trigger name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-trigger</p>
          */
         public Builder triggerName(String triggerName) {
             this.putPathParameter("triggerName", triggerName);

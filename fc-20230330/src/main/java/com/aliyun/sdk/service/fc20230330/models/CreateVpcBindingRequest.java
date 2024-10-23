@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcBindingRequest} extends {@link RequestModel}
  *
  * <p>CreateVpcBindingRequest</p>
@@ -69,7 +70,11 @@ public class CreateVpcBindingRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +83,8 @@ public class CreateVpcBindingRequest extends Request {
         }
 
         /**
-         * The configurations of the virtual private cloud (VPC) binding.
+         * <p>The VPC binding configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(CreateVpcBindingInput body) {
             this.putBodyParameter("body", body);

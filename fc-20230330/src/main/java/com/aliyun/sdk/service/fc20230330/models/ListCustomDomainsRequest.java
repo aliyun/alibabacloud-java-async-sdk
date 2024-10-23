@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomDomainsRequest} extends {@link RequestModel}
  *
  * <p>ListCustomDomainsRequest</p>
@@ -81,7 +82,10 @@ public class ListCustomDomainsRequest extends Request {
         } 
 
         /**
-         * The number of custom domain names returned.
+         * <p>The number of custom domain names returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -90,7 +94,10 @@ public class ListCustomDomainsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -99,7 +106,10 @@ public class ListCustomDomainsRequest extends Request {
         }
 
         /**
-         * The domain name prefix.
+         * <p>The domain name prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);

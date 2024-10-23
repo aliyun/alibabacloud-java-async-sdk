@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CertConfig} extends {@link TeaModel}
  *
  * <p>CertConfig</p>
@@ -64,7 +65,10 @@ public class CertConfig extends TeaModel {
         private String privateKey; 
 
         /**
-         * certName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-cert</p>
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -72,7 +76,10 @@ public class CertConfig extends TeaModel {
         }
 
         /**
-         * certificate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM format</p>
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -80,7 +87,10 @@ public class CertConfig extends TeaModel {
         }
 
         /**
-         * privateKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM format</p>
          */
         public Builder privateKey(String privateKey) {
             this.privateKey = privateKey;

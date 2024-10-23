@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcBindingInput} extends {@link TeaModel}
  *
  * <p>CreateVpcBindingInput</p>
@@ -38,7 +39,10 @@ public class CreateVpcBindingInput extends TeaModel {
         private String vpcId; 
 
         /**
-         * vpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vb8x8dggvr0axxxxxxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

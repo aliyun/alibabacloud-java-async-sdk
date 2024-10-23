@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutConcurrencyConfigRequest} extends {@link RequestModel}
  *
  * <p>PutConcurrencyConfigRequest</p>
@@ -69,7 +70,11 @@ public class PutConcurrencyConfigRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +83,8 @@ public class PutConcurrencyConfigRequest extends Request {
         }
 
         /**
-         * The concurrency configurations.
+         * <p>The concurrency configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(PutConcurrencyInput body) {
             this.putBodyParameter("body", body);

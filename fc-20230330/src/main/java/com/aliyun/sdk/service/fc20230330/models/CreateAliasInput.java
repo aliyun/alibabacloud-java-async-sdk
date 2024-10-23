@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAliasInput} extends {@link TeaModel}
  *
  * <p>CreateAliasInput</p>
@@ -84,7 +85,10 @@ public class CreateAliasInput extends TeaModel {
         }
 
         /**
-         * aliasName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder aliasName(String aliasName) {
             this.aliasName = aliasName;
@@ -100,7 +104,10 @@ public class CreateAliasInput extends TeaModel {
         }
 
         /**
-         * versionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

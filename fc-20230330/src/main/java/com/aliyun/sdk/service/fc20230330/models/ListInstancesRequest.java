@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancesRequest</p>
@@ -82,7 +83,11 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -91,7 +96,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The function version or alias.
+         * <p>The function version or alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -100,7 +108,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to list all instances. Valid values: true and false.
+         * <p>Specifies whether to list all instances. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withAllActive(Boolean withAllActive) {
             this.putQueryParameter("withAllActive", withAllActive);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcBindingRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpcBindingRequest</p>
@@ -69,7 +70,11 @@ public class DeleteVpcBindingRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +83,11 @@ public class DeleteVpcBindingRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp106zxlfj1fqc9</p>
          */
         public Builder vpcId(String vpcId) {
             this.putPathParameter("vpcId", vpcId);

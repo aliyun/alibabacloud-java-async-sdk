@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegexRule} extends {@link TeaModel}
  *
  * <p>RegexRule</p>
@@ -51,7 +52,10 @@ public class RegexRule extends TeaModel {
         private String replacement; 
 
         /**
-         * match.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^/api/.+?/(.*)</p>
          */
         public Builder match(String match) {
             this.match = match;
@@ -59,7 +63,10 @@ public class RegexRule extends TeaModel {
         }
 
         /**
-         * replacement.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api/v2/$1</p>
          */
         public Builder replacement(String replacement) {
             this.replacement = replacement;

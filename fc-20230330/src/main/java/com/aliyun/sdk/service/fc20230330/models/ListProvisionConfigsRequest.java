@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProvisionConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListProvisionConfigsRequest</p>
@@ -81,7 +82,10 @@ public class ListProvisionConfigsRequest extends Request {
         } 
 
         /**
-         * The name of the function. If this parameter is not specified, the provisioned configurations of all functions are listed.
+         * <p>The name of the function. If this parameter is not specified, the provisioned configurations of all functions are listed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -90,7 +94,10 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * Number of provisioned configurations to return.
+         * <p>Number of provisioned configurations to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -99,7 +106,10 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

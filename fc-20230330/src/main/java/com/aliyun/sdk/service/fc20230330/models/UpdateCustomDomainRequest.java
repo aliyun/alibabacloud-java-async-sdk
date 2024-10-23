@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomDomainRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomDomainRequest</p>
@@ -69,7 +70,11 @@ public class UpdateCustomDomainRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo.bar.com</p>
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);
@@ -78,7 +83,8 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * The information about the custom domain name.
+         * <p>The information about the custom domain name.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(UpdateCustomDomainInput body) {
             this.putBodyParameter("body", body);

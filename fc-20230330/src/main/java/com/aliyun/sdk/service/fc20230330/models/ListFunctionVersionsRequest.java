@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFunctionVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListFunctionVersionsRequest</p>
@@ -96,7 +97,11 @@ public class ListFunctionVersionsRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -105,7 +110,10 @@ public class ListFunctionVersionsRequest extends Request {
         }
 
         /**
-         * The sorting mode of function versions. Valid values: BACKWARD and FORWARD.
+         * <p>The sorting mode of function versions. Valid values: BACKWARD and FORWARD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BACKWARD</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -114,7 +122,10 @@ public class ListFunctionVersionsRequest extends Request {
         }
 
         /**
-         * The number of function versions that are returned.
+         * <p>The number of function versions that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -123,7 +134,10 @@ public class ListFunctionVersionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

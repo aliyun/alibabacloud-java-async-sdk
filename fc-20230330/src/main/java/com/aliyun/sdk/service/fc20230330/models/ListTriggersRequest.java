@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTriggersRequest} extends {@link RequestModel}
  *
  * <p>ListTriggersRequest</p>
@@ -96,7 +97,11 @@ public class ListTriggersRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -105,7 +110,10 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The number of triggers returned.
+         * <p>The number of triggers returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -114,7 +122,10 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The token for the next page.
+         * <p>The token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -123,7 +134,10 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The trigger name prefix.
+         * <p>The trigger name prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-trigger</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);

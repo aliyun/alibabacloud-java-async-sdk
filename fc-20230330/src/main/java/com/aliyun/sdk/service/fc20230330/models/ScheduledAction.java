@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScheduledAction} extends {@link TeaModel}
  *
  * <p>ScheduledAction</p>
@@ -108,7 +109,10 @@ public class ScheduledAction extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -116,7 +120,10 @@ public class ScheduledAction extends TeaModel {
         }
 
         /**
-         * scheduleExpression.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cron(0 0 22 * * *)</p>
          */
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
@@ -132,7 +139,10 @@ public class ScheduledAction extends TeaModel {
         }
 
         /**
-         * target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder target(Long target) {
             this.target = target;

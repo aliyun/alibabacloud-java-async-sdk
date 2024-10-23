@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLayerVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListLayerVersionsRequest</p>
@@ -82,7 +83,11 @@ public class ListLayerVersionsRequest extends Request {
         } 
 
         /**
-         * The layer name.
+         * <p>The layer name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-layer</p>
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -91,7 +96,10 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * The number of versions to be returned.
+         * <p>The number of versions to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -100,7 +108,10 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * The initial version of the layer.
+         * <p>The initial version of the layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder startVersion(String startVersion) {
             this.putQueryParameter("startVersion", startVersion);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TLSConfig} extends {@link TeaModel}
  *
  * <p>TLSConfig</p>
@@ -63,7 +64,7 @@ public class TLSConfig extends TeaModel {
         private String minVersion; 
 
         /**
-         * cipherSuites.
+         * <p>This parameter is required.</p>
          */
         public Builder cipherSuites(java.util.List < String > cipherSuites) {
             this.cipherSuites = cipherSuites;
@@ -79,7 +80,10 @@ public class TLSConfig extends TeaModel {
         }
 
         /**
-         * minVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLSv1.0</p>
          */
         public Builder minVersion(String minVersion) {
             this.minVersion = minVersion;

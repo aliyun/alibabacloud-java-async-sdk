@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTriggerInput} extends {@link TeaModel}
  *
  * <p>CreateTriggerInput</p>
@@ -147,7 +148,10 @@ public class CreateTriggerInput extends TeaModel {
         }
 
         /**
-         * triggerConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;events&quot;:[&quot;oss:ObjectCreated:*&quot;],&quot;filter&quot;:{&quot;key&quot;:{&quot;prefix&quot;:&quot;/prefix&quot;,&quot;suffix&quot;:&quot;.zip&quot;}}}</p>
          */
         public Builder triggerConfig(String triggerConfig) {
             this.triggerConfig = triggerConfig;
@@ -155,7 +159,10 @@ public class CreateTriggerInput extends TeaModel {
         }
 
         /**
-         * triggerName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss_create_object_demo</p>
          */
         public Builder triggerName(String triggerName) {
             this.triggerName = triggerName;
@@ -163,7 +170,10 @@ public class CreateTriggerInput extends TeaModel {
         }
 
         /**
-         * triggerType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;

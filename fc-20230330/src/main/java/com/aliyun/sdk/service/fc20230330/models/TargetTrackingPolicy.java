@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TargetTrackingPolicy} extends {@link TeaModel}
  *
  * <p>TargetTrackingPolicy</p>
@@ -134,7 +135,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * maxCapacity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxCapacity(Long maxCapacity) {
             this.maxCapacity = maxCapacity;
@@ -142,7 +146,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * metricTarget.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
          */
         public Builder metricTarget(Float metricTarget) {
             this.metricTarget = metricTarget;
@@ -150,7 +157,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * metricType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPUUtilization</p>
          */
         public Builder metricType(String metricType) {
             this.metricType = metricType;
@@ -158,7 +168,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * minCapacity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minCapacity(Long minCapacity) {
             this.minCapacity = minCapacity;
@@ -166,7 +179,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_1</p>
          */
         public Builder name(String name) {
             this.name = name;

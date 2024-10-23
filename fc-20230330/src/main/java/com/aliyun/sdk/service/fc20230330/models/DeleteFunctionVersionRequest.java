@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFunctionVersionRequest} extends {@link RequestModel}
  *
  * <p>DeleteFunctionVersionRequest</p>
@@ -69,7 +70,11 @@ public class DeleteFunctionVersionRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +83,11 @@ public class DeleteFunctionVersionRequest extends Request {
         }
 
         /**
-         * The function version.
+         * <p>The function version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionId(Integer versionId) {
             this.putPathParameter("versionId", versionId);
