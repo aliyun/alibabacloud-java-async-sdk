@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTableAccessCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTableAccessCountResponseBody</p>
  */
 public class DescribeTableAccessCountResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTableAccessCountResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the table usage.
+         * <p>Details about the table usage.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C242707A-01D1-54DA-A5F6-671557******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +143,26 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTableAccessCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTableAccessCountResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AccessCount")
+        @com.aliyun.core.annotation.NameInMap("AccessCount")
         private String accessCount;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("ReportDate")
+        @com.aliyun.core.annotation.NameInMap("ReportDate")
         private String reportDate;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableSchema")
+        @com.aliyun.core.annotation.NameInMap("TableSchema")
         private String tableSchema;
 
         private Items(Builder builder) {
@@ -206,7 +224,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             private String tableSchema; 
 
             /**
-             * The number of accesses to the table.
+             * <p>The number of accesses to the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder accessCount(String accessCount) {
                 this.accessCount = accessCount;
@@ -214,7 +235,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster to which the table belongs.
+             * <p>The ID of the cluster to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>am-bp1r053byu48p****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -222,7 +246,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             }
 
             /**
-             * The date when the table was used.
+             * <p>The date when the table was used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-30</p>
              */
             public Builder reportDate(String reportDate) {
                 this.reportDate = reportDate;
@@ -230,7 +257,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMER</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -238,7 +268,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             }
 
             /**
-             * The database to which the table belongs.
+             * <p>The database to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tpch</p>
              */
             public Builder tableSchema(String tableSchema) {
                 this.tableSchema = tableSchema;

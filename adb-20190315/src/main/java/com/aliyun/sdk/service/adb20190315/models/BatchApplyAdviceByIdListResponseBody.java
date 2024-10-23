@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchApplyAdviceByIdListResponseBody} extends {@link TeaModel}
  *
  * <p>BatchApplyAdviceByIdListResponseBody</p>
  */
 public class BatchApplyAdviceByIdListResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchApplyAdviceByIdListResponseBody(Builder builder) {
@@ -50,7 +50,14 @@ public class BatchApplyAdviceByIdListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * <p>The message returned for the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong> is returned if the operation is successful.</li>
+         * <li>An error message is returned if the operation fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +65,10 @@ public class BatchApplyAdviceByIdListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86F92D26-B774-5FA1-8E53-82CBEEEBB012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

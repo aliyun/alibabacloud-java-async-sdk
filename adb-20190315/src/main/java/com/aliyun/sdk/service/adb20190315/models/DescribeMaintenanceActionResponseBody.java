@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMaintenanceActionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMaintenanceActionResponseBody</p>
  */
 public class DescribeMaintenanceActionResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeMaintenanceActionResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The queried O\&M events.
+         * <p>The queried O&amp;M events.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E774C8A9-8819-4A09-9E91-07C078******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,47 +143,53 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMaintenanceActionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMaintenanceActionResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("Deadline")
+        @com.aliyun.core.annotation.NameInMap("Deadline")
         private String deadline;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PrepareInterval")
+        @com.aliyun.core.annotation.NameInMap("PrepareInterval")
         private String prepareInterval;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResultInfo")
+        @com.aliyun.core.annotation.NameInMap("ResultInfo")
         private String resultInfo;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SwitchTime")
+        @com.aliyun.core.annotation.NameInMap("SwitchTime")
         private String switchTime;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private Items(Builder builder) {
@@ -314,7 +332,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the O\&M event was created. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the O&amp;M event was created. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-30T02:44:27Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -322,7 +343,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster that is involved in the O\&M event.
+             * <p>The ID of the cluster that is involved in the O&amp;M event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>am-****************</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -330,7 +354,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine.
+             * <p>The database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>analyticdb</p>
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -338,7 +365,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * <p>The version of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.0</p>
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -346,7 +376,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The deadline before which the event can be executed. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The deadline before which the event can be executed. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-04T15:59:59Z</p>
              */
             public Builder deadline(String deadline) {
                 this.deadline = deadline;
@@ -354,7 +387,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the O\&M event.
+             * <p>The ID of the O&amp;M event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -362,7 +398,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time at which the switchover time of the O\&M event was modified. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The point in time at which the switchover time of the O&amp;M event was modified. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-03T06:33:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -370,7 +409,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The preparation time that is required before the pending O\&M event can be switched. The time is in the `HH:mm:ss` format.
+             * <p>The preparation time that is required before the pending O&amp;M event can be switched. The time is in the <code>HH:mm:ss</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00:00</p>
              */
             public Builder prepareInterval(String prepareInterval) {
                 this.prepareInterval = prepareInterval;
@@ -378,7 +420,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the O\&M event occurs.
+             * <p>The ID of the region where the O&amp;M event occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -386,10 +431,13 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the O\&M event.
-             * <p>
+             * <p>The execution result of the O&amp;M event.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when the value of <code>Status</code> is <strong>FAILED</strong> or <strong>CANCEL</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when the value of `Status` is **FAILED** or **CANCEL**.
+             * <strong>example:</strong>
+             * <p>autoCancel</p>
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -397,7 +445,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was executed in the backend. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the task was executed in the backend. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-03T04:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -405,20 +456,26 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the event.
-             * <p>
+             * <p>The state of the event.</p>
+             * <ul>
+             * <li><p>If you set <code>IsHistory</code> to <strong>0</strong>, the state of the pending O&amp;M event is returned. Valid values:</p>
+             * <ul>
+             * <li><strong>WAITING_MODIFY</strong>: The start time of the O&amp;M event is waiting to be set.</li>
+             * <li><strong>WAITING</strong>: The O&amp;M event is waiting to be processed.</li>
+             * <li><strong>PROCESSING</strong>: The O&amp;M event is being processed. The switchover time of an event in this state cannot be changed.</li>
+             * </ul>
+             * </li>
+             * <li><p>If you set <code>IsHistory</code> to <strong>1</strong>, the state of the historical O&amp;M event is returned. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCESS</strong>: The event ended and the execution succeeded.</li>
+             * <li><strong>FAILED</strong>: The event ended but the execution failed.</li>
+             * <li><strong>CANCEL</strong>: The event was canceled.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   If you set `IsHistory` to **0**, the state of the pending O\&M event is returned. Valid values:
-             * 
-             *     *   **WAITING_MODIFY**: The start time of the O\&M event is waiting to be set.
-             *     *   **WAITING**: The O\&M event is waiting to be processed.
-             *     *   **PROCESSING**: The O\&M event is being processed. The switchover time of an event in this state cannot be changed.
-             * 
-             * *   If you set `IsHistory` to **1**, the state of the historical O\&M event is returned. Valid values:
-             * 
-             *     *   **SUCCESS**: The event ended and the execution succeeded.
-             *     *   **FAILED**: The event ended but the execution failed.
-             *     *   **CANCEL**: The event was canceled.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -426,7 +483,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the pending O\&M event is switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the pending O&amp;M event is switched. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-03T06:00:00Z</p>
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -434,7 +494,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the O\&M event.
+             * <p>The type of the O&amp;M event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_apsaradb_upgrade</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

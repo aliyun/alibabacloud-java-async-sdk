@@ -1,54 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterResourcePoolPerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterResourcePoolPerformanceRequest</p>
  */
 public class DescribeDBClusterResourcePoolPerformanceRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourcePools")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcePools")
     private String resourcePools;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeDBClusterResourcePoolPerformanceRequest(Builder builder) {
@@ -169,10 +169,14 @@ public class DescribeDBClusterResourcePoolPerformanceRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
+         * <strong>example:</strong>
+         * <p>am-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -181,7 +185,11 @@ public class DescribeDBClusterResourcePoolPerformanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to monitor the resource group. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
+         * <p>The end of the time range to monitor the resource group. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-10T07:01Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -190,23 +198,28 @@ public class DescribeDBClusterResourcePoolPerformanceRequest extends Request {
         }
 
         /**
-         * The metrics of the resource group. You can enter multiple metrics at the same time to query the monitoring information. Separate multiple metrics with commas (,). Valid values:
-         * <p>
+         * <p>The metrics of the resource group. You can enter multiple metrics at the same time to query the monitoring information. Separate multiple metrics with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>AnalyticDB_RP_CPU</strong>: the average CPU utilization. Unit: %.</li>
+         * <li><strong>AnalyticDB_RP_RT</strong>: the query response time (RT). Unit: milliseconds.</li>
+         * <li><strong>AnalyticDB_RP_QPS</strong>: the queries per second (QPS). The value of this parameter must be a numeric value.</li>
+         * <li><strong>AnalyticDB_RP_WaitTime</strong>: the query waiting time. Unit: milliseconds.</li>
+         * <li><strong>AnalyticDB_RP_OriginalNode</strong>: the number of basic nodes in the resource group.</li>
+         * <li><strong>AnalyticDB_RP_ActualNode</strong>: the number of scheduled nodes that are scaled out in the resource group.</li>
+         * <li><strong>AnalyticDB_RP_PlanNode</strong>: the number of scheduled nodes to be scaled out in the resource group.</li>
+         * <li><strong>AnalyticDB_RP_TotalNode</strong>: the total number of nodes in the resource group. Total number of nodes = Number of basic nodes + Number of scheduled nodes that are scaled out.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you leave this parameter empty, the monitoring information about all metrics is returned.</p>
+         * </li>
+         * <li><p>For more information about scaling plans, see <a href="https://help.aliyun.com/document_detail/189507.html">Create a resource scaling plan</a>.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **AnalyticDB_RP_CPU**: the average CPU utilization. Unit: %.
-         * *   **AnalyticDB_RP_RT**: the query response time (RT). Unit: milliseconds.
-         * *   **AnalyticDB_RP_QPS**: the queries per second (QPS). The value of this parameter must be a numeric value.
-         * *   **AnalyticDB_RP_WaitTime**: the query waiting time. Unit: milliseconds.
-         * *   **AnalyticDB_RP_OriginalNode**: the number of basic nodes in the resource group.
-         * *   **AnalyticDB_RP_ActualNode**: the number of scheduled nodes that are scaled out in the resource group.
-         * *   **AnalyticDB_RP_PlanNode**: the number of scheduled nodes to be scaled out in the resource group.
-         * *   **AnalyticDB_RP_TotalNode**: the total number of nodes in the resource group. Total number of nodes = Number of basic nodes + Number of scheduled nodes that are scaled out.
-         * 
-         * > 
-         * 
-         * *   If you leave this parameter empty, the monitoring information about all metrics is returned.
-         * 
-         * *   For more information about scaling plans, see [Create a resource scaling plan](~~189507~~).
+         * <strong>example:</strong>
+         * <p>AnalyticDB_RP_CPU</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -251,14 +264,18 @@ public class DescribeDBClusterResourcePoolPerformanceRequest extends Request {
         }
 
         /**
-         * The names of the resource groups that you want to query. You can enter multiple names of resource groups. Separate multiple names with commas (,).
-         * <p>
+         * <p>The names of the resource groups that you want to query. You can enter multiple names of resource groups. Separate multiple names with commas (,).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value of this parameter is case-insensitive. For example, <code>USER_DEFAULT</code> and <code>user_default</code> specify the same resource group.</p>
+         * </li>
+         * <li><p>If you leave this parameter empty, the monitoring information about the <code>USER_DEFAULT</code> resource group is returned.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   The value of this parameter is case-insensitive. For example, `USER_DEFAULT` and `user_default` specify the same resource group.
-         * 
-         * *   If you leave this parameter empty, the monitoring information about the `USER_DEFAULT` resource group is returned.
+         * <strong>example:</strong>
+         * <p>TEST_POOL</p>
          */
         public Builder resourcePools(String resourcePools) {
             this.putQueryParameter("ResourcePools", resourcePools);
@@ -267,10 +284,14 @@ public class DescribeDBClusterResourcePoolPerformanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to monitor the resource group. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to monitor the resource group. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>You can view only the monitoring information about the resource groups within the last two days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can view only the monitoring information about the resource groups within the last two days.
+         * <strong>example:</strong>
+         * <p>2021-06-10T07:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

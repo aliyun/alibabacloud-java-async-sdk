@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterStatusResponseBody</p>
  */
 public class DescribeDBClusterStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private java.util.List < String > status;
 
     private DescribeDBClusterStatusResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeDBClusterStatusResponseBody extends TeaModel {
         private java.util.List < String > status; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEAU</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,19 +61,7 @@ public class DescribeDBClusterStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The states of clusters. Valid values:
-         * <p>
-         * 
-         * *   **Preparing**: The cluster is being prepared.
-         * *   **Creating**: The cluster is being created.
-         * *   **Restoring**: The cluster is being restored from a backup.
-         * *   **Running**: The cluster is running.
-         * *   **Deleting**: The cluster is being deleted.
-         * *   **ClassChanging**: The cluster configurations are being changed.
-         * *   **NetAddressCreating**: A network connection is being created.
-         * *   **NetAddressDeleting**: A network connection is being released.
-         * *   **NetAddressModifying**: A network connection is being modified.
-         * *   **EngineVersionUpgrading**: The engine version is being updated.
+         * <p>The status of clusters.</p>
          */
         public Builder status(java.util.List < String > status) {
             this.status = status;

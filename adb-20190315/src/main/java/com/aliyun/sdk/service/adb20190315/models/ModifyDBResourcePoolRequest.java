@@ -1,50 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBResourcePoolRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBResourcePoolRequest</p>
  */
 public class ModifyDBResourcePoolRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("NodeNum")
-    @Validation(maximum = 4294967296D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeNum")
+    @com.aliyun.core.annotation.Validation(maximum = 4294967296D)
     private Integer nodeNum;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PoolName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolName;
 
-    @Query
-    @NameInMap("QueryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
     private String queryType;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBResourcePoolRequest(Builder builder) {
@@ -155,10 +155,14 @@ public class ModifyDBResourcePoolRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>am-bp1ub9grke1****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -167,14 +171,20 @@ public class ModifyDBResourcePoolRequest extends Request {
         }
 
         /**
-         * The number of nodes.
-         * <p>
+         * <p>The number of nodes.</p>
+         * <ul>
+         * <li>Each node provides 16 cores and 64 GB memory.</li>
+         * <li>The amount of resources that you want to add to or remove from the cluster cannot exceed the total amount of resources in the cluster.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you do not specify this parameter, the original value is retained.</li>
+         * <li>You must specify at least one of the QueryType and NodeNum parameters.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   Each node provides 16 cores and 64 GB memory.
-         * *   The amount of resources that you want to add to or remove from the cluster cannot exceed the total amount of resources in the cluster.
-         * 
-         * > - If you do not specify this parameter, the original value is retained.
-         * > - You must specify at least one of the QueryType and NodeNum parameters.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeNum(Integer nodeNum) {
             this.putQueryParameter("NodeNum", nodeNum);
@@ -201,7 +211,11 @@ public class ModifyDBResourcePoolRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
+         * <p>The name of the resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder poolName(String poolName) {
             this.putQueryParameter("PoolName", poolName);
@@ -210,13 +224,17 @@ public class ModifyDBResourcePoolRequest extends Request {
         }
 
         /**
-         * The mode in which SQL statements are executed. Valid values:
-         * <p>
+         * <p>The mode in which SQL statements are executed. Valid values:</p>
+         * <ul>
+         * <li><strong>batch</strong></li>
+         * <li><strong>interactive</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the original value is retained.</p>
+         * </blockquote>
          * 
-         * *   **batch**
-         * *   **interactive**
-         * 
-         * > If you do not specify this parameter, the original value is retained.
+         * <strong>example:</strong>
+         * <p>batch</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);

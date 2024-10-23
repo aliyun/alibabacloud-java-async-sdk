@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAllAccountsResponseBody</p>
  */
 public class DescribeAllAccountsResponseBody extends TeaModel {
-    @NameInMap("AccountList")
+    @com.aliyun.core.annotation.NameInMap("AccountList")
     private java.util.List < AccountList> accountList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAllAccountsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of accounts.
+         * <p>The queried database accounts.</p>
          */
         public Builder accountList(java.util.List < AccountList> accountList) {
             this.accountList = accountList;
@@ -58,7 +58,10 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +74,14 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAllAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllAccountsResponseBody</p>
+     */
     public static class AccountList extends TeaModel {
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private AccountList(Builder builder) {
@@ -98,7 +107,10 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The name of the account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rdsdt_dts_adb</p>
              */
             public Builder user(String user) {
                 this.user = user;

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTableDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTableDetailResponseBody</p>
  */
 public class DescribeTableDetailResponseBody extends TeaModel {
-    @NameInMap("AvgSize")
+    @com.aliyun.core.annotation.NameInMap("AvgSize")
     private Long avgSize;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTableDetailResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The average number of rows in partitions.
+         * <p>The average number of rows in partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder avgSize(Long avgSize) {
             this.avgSize = avgSize;
@@ -70,7 +73,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The list of partitions.
+         * <p>The list of partitions.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -78,7 +81,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +97,17 @@ public class DescribeTableDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTableDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTableDetailResponseBody</p>
+     */
     public static class Shard extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private Shard(Builder builder) {
@@ -130,7 +142,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * The ID of the partition. Only the numeric part of the partition name is returned.
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -138,7 +150,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows in the table.
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -152,8 +164,14 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTableDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTableDetailResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Shard")
+        @com.aliyun.core.annotation.NameInMap("Shard")
         private java.util.List < Shard> shard;
 
         private Items(Builder builder) {

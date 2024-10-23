@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantOperatorPermissionRequest} extends {@link RequestModel}
  *
  * <p>GrantOperatorPermissionRequest</p>
  */
 public class GrantOperatorPermissionRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("ExpiredTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String expiredTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Privileges")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Privileges")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String privileges;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private GrantOperatorPermissionRequest(Builder builder) {
@@ -141,10 +141,14 @@ public class GrantOperatorPermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query cluster IDs.
+         * <strong>example:</strong>
+         * <p>am-bp1565u55p32****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -153,7 +157,11 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * The expiration time of the service account permissions. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The expiration time of the service account permissions. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-30T00:00:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -180,11 +188,15 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * The name of the permissions. Valid values:
-         * <p>
+         * <p>The name of the permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>Control</strong>: configuration permissions. The service account is granted permissions to query and modify cluster configurations.</li>
+         * <li><strong>Data</strong>: data permissions. The service account is granted permissions to query schemas, indexes, and SQL statements.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Control**: configuration permissions. The service account is granted permissions to query and modify cluster configurations.
-         * *   **Data**: data permissions. The service account is granted permissions to query schemas, indexes, and SQL statements.
+         * <strong>example:</strong>
+         * <p>Control</p>
          */
         public Builder privileges(String privileges) {
             this.putQueryParameter("Privileges", privileges);

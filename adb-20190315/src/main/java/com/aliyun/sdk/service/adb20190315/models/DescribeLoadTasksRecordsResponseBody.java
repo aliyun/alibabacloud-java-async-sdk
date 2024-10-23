@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadTasksRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoadTasksRecordsResponseBody</p>
  */
 public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("LoadTasksRecords")
+    @com.aliyun.core.annotation.NameInMap("LoadTasksRecords")
     private java.util.List < LoadTasksRecords> loadTasksRecords;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeLoadTasksRecordsResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp2590j****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -106,7 +109,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried asynchronous import and export tasks.
+         * <p>The queried asynchronous import and export tasks.</p>
          */
         public Builder loadTasksRecords(java.util.List < LoadTasksRecords> loadTasksRecords) {
             this.loadTasksRecords = loadTasksRecords;
@@ -114,7 +117,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +128,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +139,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C60B05DB-2B77-421A-98E9-92C20E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -151,29 +166,35 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoadTasksRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadTasksRecordsResponseBody</p>
+     */
     public static class LoadTasksRecords extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("ProcessID")
+        @com.aliyun.core.annotation.NameInMap("ProcessID")
         private String processID;
 
-        @NameInMap("ProcessRows")
+        @com.aliyun.core.annotation.NameInMap("ProcessRows")
         private Long processRows;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private LoadTasksRecords(Builder builder) {
@@ -262,7 +283,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The start time of the task. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ss.SSSZ* format. The time is displayed in UTC.
+             * <p>The start time of the task. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ss.SSSZ</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-18 18:47:27.0</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +294,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database that is involved in the import or export task.
+             * <p>The name of the database that is involved in the import or export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -278,7 +305,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021051818472717201616624903453******</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -286,7 +316,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID.
+             * <p>The process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021051818472717201616624903453******</p>
              */
             public Builder processID(String processID) {
                 this.processID = processID;
@@ -294,7 +327,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are processed in the asynchronous import or export task.
+             * <p>The number of rows that are processed in the asynchronous import or export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder processRows(Long processRows) {
                 this.processRows = processRows;
@@ -302,7 +338,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement that is used in the asynchronous import or export task.
+             * <p>The SQL statement that is used in the asynchronous import or export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>insert overwrite into courses_external_table\nselect * from courses</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -310,7 +349,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the task.
+             * <p>The state of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISH</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -318,7 +360,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task state was updated. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ss.SSSZ* format. The time is displayed in UTC.
+             * <p>The time when the task state was updated. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ss.SSSZ</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-18 18:47:31.0</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

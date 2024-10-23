@@ -1,50 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateDBResourceGroupRequest</p>
  */
 public class CreateDBResourceGroupRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("GroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupType")
     private String groupType;
 
-    @Query
-    @NameInMap("NodeNum")
-    @Validation(maximum = 4294967296D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeNum")
+    @com.aliyun.core.annotation.Validation(maximum = 4294967296D)
     private Integer nodeNum;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateDBResourceGroupRequest(Builder builder) {
@@ -155,10 +155,14 @@ public class CreateDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+         * <strong>example:</strong>
+         * <p>am-bp1ub9grke1****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -167,12 +171,16 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <ul>
+         * <li>The name can be up to 255 characters in length.</li>
+         * <li>The name must start with an uppercase letter or a digit.</li>
+         * <li>The name can contain uppercase letters, digits, hyphens (-), and underscores (_).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can be up to 255 characters in length.
-         * *   The name must start with a letter or a digit.
-         * *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -181,11 +189,14 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The query execution mode. Default value: batch. Valid values:
-         * <p>
+         * <p>The query execution mode. Valid values:</p>
+         * <ul>
+         * <li><strong>interactive</strong> (default)</li>
+         * <li><strong>batch</strong></li>
+         * </ul>
          * 
-         * *   **interactive**
-         * *   **batch**
+         * <strong>example:</strong>
+         * <p>interactive</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -194,11 +205,14 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The number of nodes. Default value: 0.
-         * <p>
+         * <p>The number of nodes. Default value: 0.</p>
+         * <ul>
+         * <li>Each node is configured with the resources of 16 cores and 64 GB memory.</li>
+         * <li>Make sure that the amount of resources of the nodes (Number of nodes × 16 cores and 64 GB memory) is less than or equal to the amount of unused resources of the cluster.</li>
+         * </ul>
          * 
-         * *   Each node is configured with the resources of 16 cores and 64 GB memory.
-         * *   Make sure that the amount of resources of the nodes (Number of nodes × 16 cores and 64 GB memory) is less than or equal to the amount of unused resources of the cluster.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeNum(Integer nodeNum) {
             this.putQueryParameter("NodeNum", nodeNum);

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterResourcePoolPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterResourcePoolPerformanceResponseBody</p>
  */
 public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Performances")
+    @com.aliyun.core.annotation.NameInMap("Performances")
     private java.util.List < Performances> performances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBClusterResourcePoolPerformanceResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         private String startTime; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -94,7 +97,10 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         }
 
         /**
-         * The end of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+         * <p>The end of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-10T07:01:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -102,7 +108,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         }
 
         /**
-         * The queried monitoring information about the metrics.
+         * <p>The queried monitoring information about the metrics.</p>
          */
         public Builder performances(java.util.List < Performances> performances) {
             this.performances = performances;
@@ -110,7 +116,10 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7EDB8E4-9769-4233-88C7-DCA4C9******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         }
 
         /**
-         * The beginning of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+         * <p>The beginning of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-10T07:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -131,11 +143,17 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterResourcePoolPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterResourcePoolPerformanceResponseBody</p>
+     */
     public static class ResourcePoolSeries extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private ResourcePoolSeries(Builder builder) {
@@ -170,7 +188,10 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             private java.util.List < String > values; 
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +199,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -192,11 +213,17 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterResourcePoolPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterResourcePoolPerformanceResponseBody</p>
+     */
     public static class ResourcePoolPerformances extends TeaModel {
-        @NameInMap("ResourcePoolName")
+        @com.aliyun.core.annotation.NameInMap("ResourcePoolName")
         private String resourcePoolName;
 
-        @NameInMap("ResourcePoolSeries")
+        @com.aliyun.core.annotation.NameInMap("ResourcePoolSeries")
         private java.util.List < ResourcePoolSeries> resourcePoolSeries;
 
         private ResourcePoolPerformances(Builder builder) {
@@ -231,7 +258,10 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             private java.util.List < ResourcePoolSeries> resourcePoolSeries; 
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_pool</p>
              */
             public Builder resourcePoolName(String resourcePoolName) {
                 this.resourcePoolName = resourcePoolName;
@@ -239,7 +269,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             }
 
             /**
-             * The sequential monitoring information about the resource groups.
+             * <p>The sequential monitoring information about the resource groups.</p>
              */
             public Builder resourcePoolSeries(java.util.List < ResourcePoolSeries> resourcePoolSeries) {
                 this.resourcePoolSeries = resourcePoolSeries;
@@ -253,14 +283,20 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterResourcePoolPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterResourcePoolPerformanceResponseBody</p>
+     */
     public static class Performances extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ResourcePoolPerformances")
+        @com.aliyun.core.annotation.NameInMap("ResourcePoolPerformances")
         private java.util.List < ResourcePoolPerformances> resourcePoolPerformances;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Performances(Builder builder) {
@@ -304,7 +340,10 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             private String unit; 
 
             /**
-             * The metric of the resource group.
+             * <p>The metric of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AnalyticDB_RP_CPU</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,7 +351,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             }
 
             /**
-             * The queried monitoring information about the resource groups.
+             * <p>The queried monitoring information about the resource groups.</p>
              */
             public Builder resourcePoolPerformances(java.util.List < ResourcePoolPerformances> resourcePoolPerformances) {
                 this.resourcePoolPerformances = resourcePoolPerformances;
@@ -320,7 +359,10 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             }
 
             /**
-             * The unit of the metric value.
+             * <p>The unit of the metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

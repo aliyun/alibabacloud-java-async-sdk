@@ -1,33 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInclinedTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInclinedTablesResponseBody</p>
  */
 public class DescribeInclinedTablesResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("DetectionItems")
+    private java.util.List < DetectionItems> detectionItems;
+
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeInclinedTablesResponseBody(Builder builder) {
+        this.detectionItems = builder.detectionItems;
         this.items = builder.items;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -41,6 +45,13 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
 
     public static DescribeInclinedTablesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return detectionItems
+     */
+    public java.util.List < DetectionItems> getDetectionItems() {
+        return this.detectionItems;
     }
 
     /**
@@ -79,6 +90,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < DetectionItems> detectionItems; 
         private Items items; 
         private String pageNumber; 
         private String pageSize; 
@@ -86,7 +98,15 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The monitoring information about tables.
+         * DetectionItems.
+         */
+        public Builder detectionItems(java.util.List < DetectionItems> detectionItems) {
+            this.detectionItems = detectionItems;
+            return this;
+        }
+
+        /**
+         * <p>The monitoring information about tables.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +114,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +125,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +136,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -131,27 +163,132 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
 
     } 
 
-    public static class Table extends TeaModel {
-        @NameInMap("IsIncline")
-        private Boolean isIncline;
+    /**
+     * 
+     * {@link DescribeInclinedTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInclinedTablesResponseBody</p>
+     */
+    public static class DetectionItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private DetectionItems(Builder builder) {
+            this.message = builder.message;
+            this.name = builder.name;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DetectionItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String message; 
+            private String name; 
+            private String status; 
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public DetectionItems build() {
+                return new DetectionItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInclinedTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInclinedTablesResponseBody</p>
+     */
+    public static class Table extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsIncline")
+        private String isIncline;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("RowCount")
+        private Long rowCount;
+
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("Size")
-        private Long size;
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private String size;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("SpaceRatio")
+        private Double spaceRatio;
+
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
+        private Long totalSize;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Table(Builder builder) {
             this.isIncline = builder.isIncline;
             this.name = builder.name;
+            this.rowCount = builder.rowCount;
             this.schema = builder.schema;
             this.size = builder.size;
+            this.spaceRatio = builder.spaceRatio;
+            this.totalSize = builder.totalSize;
             this.type = builder.type;
         }
 
@@ -166,7 +303,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         /**
          * @return isIncline
          */
-        public Boolean getIsIncline() {
+        public String getIsIncline() {
             return this.isIncline;
         }
 
@@ -175,6 +312,13 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return rowCount
+         */
+        public Long getRowCount() {
+            return this.rowCount;
         }
 
         /**
@@ -187,8 +331,22 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         /**
          * @return size
          */
-        public Long getSize() {
+        public String getSize() {
             return this.size;
+        }
+
+        /**
+         * @return spaceRatio
+         */
+        public Double getSpaceRatio() {
+            return this.spaceRatio;
+        }
+
+        /**
+         * @return totalSize
+         */
+        public Long getTotalSize() {
+            return this.totalSize;
         }
 
         /**
@@ -199,26 +357,25 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Boolean isIncline; 
+            private String isIncline; 
             private String name; 
+            private Long rowCount; 
             private String schema; 
-            private Long size; 
+            private String size; 
+            private Double spaceRatio; 
+            private Long totalSize; 
             private String type; 
 
             /**
-             * Indicates whether data is skewed in partitions of the table. Valid values:
-             * <p>
-             * 
-             * *   **true**
-             * *   **false**
+             * IsIncline.
              */
-            public Builder isIncline(Boolean isIncline) {
+            public Builder isIncline(String isIncline) {
                 this.isIncline = isIncline;
                 return this;
             }
 
             /**
-             * The name of the table.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -226,7 +383,15 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * RowCount.
+             */
+            public Builder rowCount(Long rowCount) {
+                this.rowCount = rowCount;
+                return this;
+            }
+
+            /**
+             * Schema.
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -234,19 +399,31 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows in the table.
+             * Size.
              */
-            public Builder size(Long size) {
+            public Builder size(String size) {
                 this.size = size;
                 return this;
             }
 
             /**
-             * The type of the table. Valid values:
-             * <p>
-             * 
-             * *   **FactTable**
-             * *   **DimensionTable**
+             * SpaceRatio.
+             */
+            public Builder spaceRatio(Double spaceRatio) {
+                this.spaceRatio = spaceRatio;
+                return this;
+            }
+
+            /**
+             * TotalSize.
+             */
+            public Builder totalSize(Long totalSize) {
+                this.totalSize = totalSize;
+                return this;
+            }
+
+            /**
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -260,8 +437,14 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInclinedTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInclinedTablesResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private java.util.List < Table> table;
 
         private Items(Builder builder) {

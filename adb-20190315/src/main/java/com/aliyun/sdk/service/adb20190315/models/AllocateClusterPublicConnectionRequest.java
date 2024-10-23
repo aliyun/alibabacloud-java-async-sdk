@@ -1,40 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateClusterPublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateClusterPublicConnectionRequest</p>
  */
 public class AllocateClusterPublicConnectionRequest extends Request {
-    @Query
-    @NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private AllocateClusterPublicConnectionRequest(Builder builder) {
@@ -125,12 +125,15 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         } 
 
         /**
-         * The prefix of the public endpoint.
-         * <p>
+         * <p>The prefix of the public endpoint.</p>
+         * <ul>
+         * <li>The prefix must contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</li>
+         * <li>The prefix can be up to 30 characters in length.</li>
+         * <li>By default, the cluster name is used as the prefix of the public endpoint.</li>
+         * </ul>
          * 
-         * *   The prefix must contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.
-         * *   The prefix can be up to 30 characters in length.
-         * *   By default, the cluster name is used as the prefix of the public endpoint.
+         * <strong>example:</strong>
+         * <p>am-bp278jg9****.ads.aliyuncs.com</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -139,10 +142,12 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+         * <strong>example:</strong>
+         * <p>am-bp278jg9****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

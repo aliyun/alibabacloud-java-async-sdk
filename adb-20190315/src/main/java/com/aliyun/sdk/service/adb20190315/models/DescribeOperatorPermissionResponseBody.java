@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOperatorPermissionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOperatorPermissionResponseBody</p>
  */
 public class DescribeOperatorPermissionResponseBody extends TeaModel {
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("Privileges")
+    @com.aliyun.core.annotation.NameInMap("Privileges")
     private String privileges;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOperatorPermissionResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The time when the authorization takes effect.
+         * <p>The time when the authorization takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-20T05:41:19Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -94,7 +97,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -102,7 +108,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the authorization expires.
+         * <p>The time when the authorization expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-20T07:41:19Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -110,7 +119,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The type of authorization. Valid values: Control | Data.
+         * <p>The type of authorization. Valid values: Control | Data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Control,Data</p>
          */
         public Builder privileges(String privileges) {
             this.privileges = privileges;
@@ -118,7 +130,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

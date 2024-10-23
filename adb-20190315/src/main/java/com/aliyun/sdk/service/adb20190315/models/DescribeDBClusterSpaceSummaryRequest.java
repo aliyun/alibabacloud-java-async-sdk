@@ -1,69 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeSlowLogTrendRequest} extends {@link RequestModel}
+ * 
+ * {@link DescribeDBClusterSpaceSummaryRequest} extends {@link RequestModel}
  *
- * <p>DescribeSlowLogTrendRequest</p>
+ * <p>DescribeDBClusterSpaceSummaryRequest</p>
  */
-public class DescribeSlowLogTrendRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+public class DescribeDBClusterSpaceSummaryRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBName")
-    private String DBName;
-
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    private String endTime;
-
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
-    private String startTime;
-
-    private DescribeSlowLogTrendRequest(Builder builder) {
+    private DescribeDBClusterSpaceSummaryRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.DBName = builder.DBName;
-        this.endTime = builder.endTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeSlowLogTrendRequest create() {
+    public static DescribeDBClusterSpaceSummaryRequest create() {
         return builder().build();
     }
 
@@ -77,20 +66,6 @@ public class DescribeSlowLogTrendRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
-    }
-
-    /**
-     * @return DBName
-     */
-    public String getDBName() {
-        return this.DBName;
-    }
-
-    /**
-     * @return endTime
-     */
-    public String getEndTime() {
-        return this.endTime;
     }
 
     /**
@@ -108,6 +83,13 @@ public class DescribeSlowLogTrendRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -121,63 +103,41 @@ public class DescribeSlowLogTrendRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return startTime
-     */
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeSlowLogTrendRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeDBClusterSpaceSummaryRequest, Builder> {
         private String DBClusterId; 
-        private String DBName; 
-        private String endTime; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeSlowLogTrendRequest request) {
+        private Builder(DescribeDBClusterSpaceSummaryRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
-            this.DBName = request.DBName;
-            this.endTime = request.endTime;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.startTime = request.startTime;
         } 
 
         /**
-         * The cluster ID.
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1u8c0mgfg58****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
-            return this;
-        }
-
-        /**
-         * The name of the database.
-         */
-        public Builder DBName(String DBName) {
-            this.putQueryParameter("DBName", DBName);
-            this.DBName = DBName;
-            return this;
-        }
-
-        /**
-         * The end of the time range to query. The end time must be later than the start time. The maximum time range that can be specified is seven days. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
             return this;
         }
 
@@ -200,6 +160,22 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -217,18 +193,9 @@ public class DescribeSlowLogTrendRequest extends Request {
             return this;
         }
 
-        /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         */
-        public Builder startTime(String startTime) {
-            this.putQueryParameter("StartTime", startTime);
-            this.startTime = startTime;
-            return this;
-        }
-
         @Override
-        public DescribeSlowLogTrendRequest build() {
-            return new DescribeSlowLogTrendRequest(this);
+        public DescribeDBClusterSpaceSummaryRequest build() {
+            return new DescribeDBClusterSpaceSummaryRequest(this);
         } 
 
     } 

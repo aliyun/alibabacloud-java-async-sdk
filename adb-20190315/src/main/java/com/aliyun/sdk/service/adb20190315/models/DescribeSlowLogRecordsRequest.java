@@ -1,76 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSlowLogRecordsRequest</p>
  */
 public class DescribeSlowLogRecordsRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 30)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProcessID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessID")
     private String processID;
 
-    @Query
-    @NameInMap("Range")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Range")
     private String range;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private DescribeSlowLogRecordsRequest(Builder builder) {
@@ -241,10 +241,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+         * <strong>example:</strong>
+         * <p>am-bp1rqvm70uh2****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -253,7 +257,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -262,10 +269,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The specified time range must be less than seven days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time. The specified time range must be less than seven days.
+         * <strong>example:</strong>
+         * <p>2021-05-27T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -274,27 +285,33 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The order in which to sort the retrieved entries by field. Specify this parameter in the JSON format. The value is an ordered array that uses the order of the input array and contains `Field` and `Type`. Example: `[{"Field":"ExecutionStartTime","Type":"Desc"},{"Field":"ScanRows","Type":"Asc"}]`.
-         * <p>
+         * <p>The order in which to sort the retrieved entries by field. Specify this parameter in the JSON format. The value is an ordered array that uses the order of the input array and contains <code>Field</code> and <code>Type</code>. Example: <code>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
+         * <ul>
+         * <li><p><code>Field</code>: the field that is used to sort the retrieved entries. Valid values:</p>
+         * <ul>
+         * <li><strong>HostAddress</strong>: the IP address of the client that is used to connect to the database.</li>
+         * <li><strong>UserName</strong>: the username.</li>
+         * <li><strong>ExecutionStartTime</strong>: the start time of the query execution.</li>
+         * <li><strong>QueryTime</strong>: the amount of time consumed to execute the SQL statement.</li>
+         * <li><strong>PeakMemoryUsage</strong>: the maximum memory usage when the SQL statement is executed.</li>
+         * <li><strong>ScanRows</strong>: the number of rows to be scanned from a data source in the task.</li>
+         * <li><strong>ScanSize</strong>: the amount of data to be scanned.</li>
+         * <li><strong>ScanTime</strong>: the total amount of time consumed to scan data.</li>
+         * <li><strong>PlanningTime</strong>: the amount of time consumed to generate execution plans.</li>
+         * <li><strong>WallTime</strong>: the accumulated CPU Time values of all operators in the query on each node.</li>
+         * <li><strong>ProcessID</strong>: the ID of the process.</li>
+         * </ul>
+         * </li>
+         * <li><p><code>Type</code>: the sorting type of the retrieved entries. Valid values:</p>
+         * <ul>
+         * <li><strong>Desc</strong>: descending order</li>
+         * <li><strong>Asc</strong>: ascending order</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   `Field`: the field that is used to sort the retrieved entries. Valid values:
-         * 
-         *     *   **HostAddress**: the IP address of the client that is used to connect to the database.
-         *     *   **UserName**: the username.
-         *     *   **ExecutionStartTime**: the start time of the query execution.
-         *     *   **QueryTime**: the amount of time consumed to execute the SQL statement.
-         *     *   **PeakMemoryUsage**: the maximum memory usage when the SQL statement is executed.
-         *     *   **ScanRows**: the number of rows to be scanned from a data source in the task.
-         *     *   **ScanSize**: the amount of data to be scanned.
-         *     *   **ScanTime**: the total amount of time consumed to scan data.
-         *     *   **PlanningTime**: the amount of time consumed to generate execution plans.
-         *     *   **WallTime**: the accumulated CPU Time values of all operators in the query on each node.
-         *     *   **ProcessID**: the ID of the process.
-         * 
-         * *   `Type`: the sorting type of the retrieved entries. Valid values:
-         * 
-         *     *   **Desc**: descending order
-         *     *   **Asc**: ascending order
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -321,7 +338,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -330,7 +350,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -339,7 +362,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the process.
+         * <p>The ID of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021052716044317201616624903453******</p>
          */
         public Builder processID(String processID) {
             this.putQueryParameter("ProcessID", processID);
@@ -348,16 +374,19 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The range conditions used to filter specified fields, including `Max` and `Min`. Specify this parameter in the JSON format. Example: `[{"Field":"ScanSize","Min":"1000000","Max":"10000000"},{"Field":"QueryTime","Min":"1000","Max":"10000"}]`.
-         * <p>
+         * <p>The range conditions used to filter specified fields, including <code>Max</code> and <code>Min</code>. Specify this parameter in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;ScanSize&quot;,&quot;Min&quot;:&quot;1000000&quot;,&quot;Max&quot;:&quot;10000000&quot;},{&quot;Field&quot;:&quot;QueryTime&quot;,&quot;Min&quot;:&quot;1000&quot;,&quot;Max&quot;:&quot;10000&quot;}]</code>.</p>
+         * <p><code>Field</code>: the field to be filtered. Valid values:</p>
+         * <ul>
+         * <li><strong>ScanSize</strong>: the amount of data to be scanned. Unit: KB.</li>
+         * <li><strong>QueryTime</strong>: the amount of time consumed to execute the statement. Unit: milliseconds.</li>
+         * <li><strong>PeakMemoryUsage</strong>: the maximum memory usage when the SQL statement is executed. Unit: KB.</li>
+         * </ul>
+         * <blockquote>
+         * <p> <code>Min</code> indicates the minimum value of the query range (left operand). <code>Max</code> indicates the maximum value of the query range (right operand). Max and Min are both of the String type.</p>
+         * </blockquote>
          * 
-         * `Field`: the field to be filtered. Valid values:
-         * 
-         * *   **ScanSize**: the amount of data to be scanned. Unit: KB.
-         * *   **QueryTime**: the amount of time consumed to execute the statement. Unit: milliseconds.
-         * *   **PeakMemoryUsage**: the maximum memory usage when the SQL statement is executed. Unit: KB.
-         * 
-         * >  `Min` indicates the minimum value of the query range (left operand). `Max` indicates the maximum value of the query range (right operand). Max and Min are both of the String type.
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;ScanSize&quot;,&quot;Min&quot;:&quot;1000000&quot;,&quot;Max&quot;:&quot;10000000&quot;},{&quot;Field&quot;:&quot;QueryTime&quot;,&quot;Min&quot;:&quot;1000&quot;,&quot;Max&quot;:&quot;10000&quot;}]</p>
          */
         public Builder range(String range) {
             this.putQueryParameter("Range", range);
@@ -384,7 +413,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -393,11 +426,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The state of the query. Valid values:
-         * <p>
+         * <p>The state of the query. Valid values:</p>
+         * <ul>
+         * <li><strong>Successed</strong>: successful</li>
+         * <li><strong>Failed</strong>: failed</li>
+         * </ul>
          * 
-         * *   **Successed**: successful
-         * *   **Failed**: failed
+         * <strong>example:</strong>
+         * <p>Successed</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

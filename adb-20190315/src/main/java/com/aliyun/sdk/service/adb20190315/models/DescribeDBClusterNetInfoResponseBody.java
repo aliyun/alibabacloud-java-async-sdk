@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterNetInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterNetInfoResponseBody</p>
  */
 public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
-    @NameInMap("ClusterNetworkType")
+    @com.aliyun.core.annotation.NameInMap("ClusterNetworkType")
     private String clusterNetworkType;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterNetInfoResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The network type of the cluster.
+         * <p>The network type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.clusterNetworkType = clusterNetworkType;
@@ -70,7 +73,7 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network information of the cluster.
+         * <p>The queried network information about the cluster.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -78,7 +81,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,26 +97,32 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterNetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterNetInfoResponseBody</p>
+     */
     public static class Address extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("ConnectionStringPrefix")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
         private String connectionStringPrefix;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private Address(Builder builder) {
@@ -190,7 +202,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The endpoint of the cluster.
+             * <p>The endpoint of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>am-bpxxxxxxxx.ads.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -198,7 +213,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the cluster endpoint.
+             * <p>The prefix of the cluster endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>am-bpxxxxxxxx89k51380</p>
              */
             public Builder connectionStringPrefix(String connectionStringPrefix) {
                 this.connectionStringPrefix = connectionStringPrefix;
@@ -206,7 +224,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.x.x</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -214,11 +235,14 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the endpoint. Valid values:
-             * <p>
+             * <p>The network type of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: public endpoint.</li>
+             * <li><strong>VPC</strong>: Virtual Private Cloud (VPC) endpoint.</li>
+             * </ul>
              * 
-             * *   **Public**: public endpoint
-             * *   **VPC**: Virtual Private Cloud (VPC) endpoint
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -226,7 +250,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to connect to the cluster.
+             * <p>The port number that is used to connect to the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -234,10 +261,13 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
-             * <p>
+             * <p>The VPC ID.</p>
+             * <blockquote>
+             * <p> If NetType is set to Public, an empty string is returned for this parameter.</p>
+             * </blockquote>
              * 
-             * >  This parameter is empty when Public is returned for NetType.
+             * <strong>example:</strong>
+             * <p>vpc-xxxxxxxxx</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -245,10 +275,13 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
-             * <p>
+             * <p>The vSwitch ID.</p>
+             * <blockquote>
+             * <p> If NetType is set to Public, an empty string is returned for this parameter.</p>
+             * </blockquote>
              * 
-             * >  This parameter is empty when Public is returned for NetType.
+             * <strong>example:</strong>
+             * <p>vsw-xxxxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -262,8 +295,14 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterNetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterNetInfoResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private java.util.List < Address> address;
 
         private Items(Builder builder) {

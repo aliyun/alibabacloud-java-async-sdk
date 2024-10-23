@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQAConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQAConfigResponseBody</p>
  */
 public class DescribeSQAConfigResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQAStatus")
+    @com.aliyun.core.annotation.NameInMap("SQAStatus")
     private String SQAStatus;
 
     private DescribeSQAConfigResponseBody(Builder builder) {
@@ -74,10 +74,13 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         private String SQAStatus; 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>am-8vbyw9awuj141haf9</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -85,7 +88,10 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the resource group.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -93,7 +99,10 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBE843D8-964D-5EA3-9D31-822125611B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +110,10 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether short query acceleration (SQA) is enabled.
+         * <p>Indicates whether short query acceleration (SQA) is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder SQAStatus(String SQAStatus) {
             this.SQAStatus = SQAStatus;

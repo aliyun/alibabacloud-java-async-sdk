@@ -1,54 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosisTasksRequest</p>
  */
 public class DescribeDiagnosisTasksRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProcessId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String processId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("StageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stageId;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private DescribeDiagnosisTasksRequest(Builder builder) {
@@ -169,10 +169,14 @@ public class DescribeDiagnosisTasksRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>am-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -181,7 +185,10 @@ public class DescribeDiagnosisTasksRequest extends Request {
         }
 
         /**
-         * The IP address from which the query was initiated.
+         * <p>The IP address from which the query was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -190,14 +197,18 @@ public class DescribeDiagnosisTasksRequest extends Request {
         }
 
         /**
-         * The order in which to sort the tasks by field. Specify the value in the JSON format. Example: `[{"Field":"CreateTime", "Type":"desc"}]`.
-         * <p>
+         * <p>The order in which to sort the tasks by field. Specify the value in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;CreateTime&quot;, &quot;Type&quot;:&quot;desc&quot;}]</code>.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p><code>Field</code> specifies the field that is used to sort the tasks. Valid values of Field: <code>State</code>, <code>CreateTime</code>, <code>DBName</code>, <code>ProcessID</code>, <code>UpdateTime</code>, <code>JobName</code>, and <code>ProcessRows</code>.</p>
+         * </li>
+         * <li><p><code>Type</code> specifies the sort order. Valid values of Type: <code>Desc</code> and <code>Asc</code>. The values are case-insensitive.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   `Field` indicates the field that is used to sort the tasks. Valid values of Field: `State`, `CreateTime`, `DBName`, `ProcessID`, `UpdateTime`, `JobName`, and `ProcessRows`.
-         * 
-         * *   `Type` indicates the sort type. Valid values of Type: `Desc` and `Asc`. The values are case-insensitive.
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;StartTime&quot;, &quot;Type&quot;: &quot;desc&quot; }]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -206,7 +217,10 @@ public class DescribeDiagnosisTasksRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,12 +229,15 @@ public class DescribeDiagnosisTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li>30 (default)</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
          * 
-         * *   30 (default)
-         * *   50
-         * *   100
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,10 +246,14 @@ public class DescribeDiagnosisTasksRequest extends Request {
         }
 
         /**
-         * The query ID.
-         * <p>
+         * <p>The query ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/190092.html">DescribeProcessList</a> operation to query the IDs of queries that are being executed.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeProcessList](~~190092~~) operation to query the IDs of queries that are being executed.
+         * <strong>example:</strong>
+         * <p>202011191048151921681492420315100****</p>
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);
@@ -241,10 +262,13 @@ public class DescribeDiagnosisTasksRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +277,11 @@ public class DescribeDiagnosisTasksRequest extends Request {
         }
 
         /**
-         * The ID of a stage in the query that is specified by the `ProcessId` parameter.
+         * <p>The ID of a stage in the query that is specified by the <code>ProcessId</code> parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stage[26]</p>
          */
         public Builder stageId(String stageId) {
             this.putQueryParameter("StageId", stageId);
@@ -262,12 +290,15 @@ public class DescribeDiagnosisTasksRequest extends Request {
         }
 
         /**
-         * The state of the asynchronous import or export task to be queried. Valid values:
-         * <p>
+         * <p>The state of the asynchronous import or export task to be queried. Valid values:</p>
+         * <ul>
+         * <li><strong>RUNNING</strong></li>
+         * <li><strong>FINISHED</strong></li>
+         * <li><strong>FAILED</strong></li>
+         * </ul>
          * 
-         * *   **RUNNING**
-         * *   **FINISHED**
-         * *   **FAILED**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

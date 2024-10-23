@@ -1,62 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEIURangeRequest} extends {@link RequestModel}
  *
  * <p>DescribeEIURangeRequest</p>
  */
 public class DescribeEIURangeRequest extends Request {
-    @Query
-    @NameInMap("ComputeResource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private String computeResource;
 
-    @Query
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBClusterVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterVersion")
     private String DBClusterVersion;
 
-    @Query
-    @NameInMap("Operation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Operation")
     private String operation;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSize")
+    private String storageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubOperation")
+    private String subOperation;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeEIURangeRequest(Builder builder) {
@@ -71,6 +77,8 @@ public class DescribeEIURangeRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.storageSize = builder.storageSize;
+        this.subOperation = builder.subOperation;
         this.zoneId = builder.zoneId;
     }
 
@@ -158,6 +166,20 @@ public class DescribeEIURangeRequest extends Request {
     }
 
     /**
+     * @return storageSize
+     */
+    public String getStorageSize() {
+        return this.storageSize;
+    }
+
+    /**
+     * @return subOperation
+     */
+    public String getSubOperation() {
+        return this.subOperation;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -175,6 +197,8 @@ public class DescribeEIURangeRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String storageSize; 
+        private String subOperation; 
         private String zoneId; 
 
         private Builder() {
@@ -193,14 +217,22 @@ public class DescribeEIURangeRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.storageSize = request.storageSize;
+            this.subOperation = request.subOperation;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * The specifications of computing resources.
-         * <p>
+         * <p>The specifications of computing resources.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/469002.html">DescribeComputeResource</a> operation to query the specifications of computing resources.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeComputeResource](~~469002~~) operation to query the specifications of computing resources.
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;RealValue&quot;: &quot;32Core128GBNEW&quot;,
+         *       &quot;DisplayValue&quot;: &quot;32Core128GB&quot;
+         *     }</p>
          */
         public Builder computeResource(String computeResource) {
             this.putQueryParameter("ComputeResource", computeResource);
@@ -209,13 +241,17 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <ul>
+         * <li>This parameter can be left empty when <strong>Operation</strong> is set to <strong>Buy</strong>.</li>
+         * <li>This parameter must be specified when <strong>Operation</strong> is set to <strong>Upgrade</strong> or <strong>Downgrade</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
          * 
-         * *   This parameter can be left empty when **Operation** is set to **Buy**.
-         * *   This parameter must be specified when **Operation** is set to **Upgrade** or **Downgrade**.
-         * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>am-bp16t5ci7r74s****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -224,7 +260,10 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to **3.0**.
+         * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to <strong>3.0</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.0</p>
          */
         public Builder DBClusterVersion(String DBClusterVersion) {
             this.putQueryParameter("DBClusterVersion", DBClusterVersion);
@@ -233,12 +272,14 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * The type of the operation. Valid values:
-         * <p>
+         * <p>The type of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>Buy</strong>: purchases a cluster.</li>
+         * <li><strong>Modify</strong>: changes configurations of a cluster.</li>
+         * </ul>
          * 
-         * *   **Buy**: purchases a cluster.
-         * *   **Upgrade**: upgrades a cluster.
-         * *   **Downgrade**: downgrades a cluster.
+         * <strong>example:</strong>
+         * <p>Buy</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -265,10 +306,14 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,7 +322,10 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -304,10 +352,46 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * The zone ID of the cluster.
-         * <p>
+         * <p>The specifications of storage resources. Default value: <strong>8ACU</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>8ACU</strong></li>
+         * <li><strong>12ACU</strong></li>
+         * <li><strong>16ACU</strong></li>
+         * </ul>
          * 
-         * >  You can call the [DescribeRegions](~~612293~~) operation to query the most recent zone list.
+         * <strong>example:</strong>
+         * <p>8ACU</p>
+         */
+        public Builder storageSize(String storageSize) {
+            this.putQueryParameter("StorageSize", storageSize);
+            this.storageSize = storageSize;
+            return this;
+        }
+
+        /**
+         * <p>The type of the sub-operation. Valid values:</p>
+         * <ul>
+         * <li><strong>Upgrade</strong>: upgrades a cluster.</li>
+         * <li><strong>Downgrade</strong>: downgrades a cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Upgrade</p>
+         */
+        public Builder subOperation(String subOperation) {
+            this.putQueryParameter("SubOperation", subOperation);
+            this.subOperation = subOperation;
+            return this;
+        }
+
+        /**
+         * <p>The zone ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

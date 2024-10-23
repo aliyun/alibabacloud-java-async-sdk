@@ -84,6 +84,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AllocateClusterPublicConnection  AllocateClusterPublicConnectionRequest
+     * @return AllocateClusterPublicConnectionResponse
+     */
     @Override
     public CompletableFuture<AllocateClusterPublicConnectionResponse> allocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request) {
         try {
@@ -98,6 +102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyAdviceById  ApplyAdviceByIdRequest
+     * @return ApplyAdviceByIdResponse
+     */
     @Override
     public CompletableFuture<ApplyAdviceByIdResponse> applyAdviceById(ApplyAdviceByIdRequest request) {
         try {
@@ -113,8 +121,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.</p>
+     * 
+     * @param request the request parameters of AttachUserENI  AttachUserENIRequest
+     * @return AttachUserENIResponse
      */
     @Override
     public CompletableFuture<AttachUserENIResponse> attachUserENI(AttachUserENIRequest request) {
@@ -130,6 +141,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchApplyAdviceByIdList  BatchApplyAdviceByIdListRequest
+     * @return BatchApplyAdviceByIdListResponse
+     */
     @Override
     public CompletableFuture<BatchApplyAdviceByIdListResponse> batchApplyAdviceByIdList(BatchApplyAdviceByIdListRequest request) {
         try {
@@ -145,10 +160,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Precautions
-      * *   This operation is applicable only for elastic clusters of 32 cores or more.
-      * *   The default resource group USER_DEFAULT cannot be associated with a database account.
-      *
+     * <b>description</b> :
+     * <h2>Precautions</h2>
+     * <ul>
+     * <li>This operation is applicable only for elastic clusters of 32 cores or more.</li>
+     * <li>The default resource group USER_DEFAULT cannot be associated with a database account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of BindDBResourceGroupWithUser  BindDBResourceGroupWithUserRequest
+     * @return BindDBResourceGroupWithUserResponse
      */
     @Override
     public CompletableFuture<BindDBResourceGroupWithUserResponse> bindDBResourceGroupWithUser(BindDBResourceGroupWithUserRequest request) {
@@ -165,9 +185,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
-      * *   The default resource group USER_DEFAULT cannot be associated with a database account.
-      *
+     * <b>description</b> :
+     * <p>  This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</p>
+     * <ul>
+     * <li>The default resource group USER_DEFAULT cannot be associated with a database account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of BindDBResourcePoolWithUser  BindDBResourcePoolWithUserRequest
+     * @return BindDBResourcePoolWithUserResponse
      */
     @Override
     public CompletableFuture<BindDBResourcePoolWithUserResponse> bindDBResourcePoolWithUser(BindDBResourcePoolWithUserRequest request) {
@@ -183,6 +208,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccount  CreateAccountRequest
+     * @return CreateAccountResponse
+     */
     @Override
     public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request) {
         try {
@@ -198,8 +227,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition (V3.0) clusters, see [Billable items of Data Warehouse Edition (V3.0)](~~303131~~) and [Pricing for Data Warehouse Edition (V3.0)](~~135229~~).
-      *
+     * <b>description</b> :
+     * <p>After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition (V3.0) clusters, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items of Data Warehouse Edition (V3.0)</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition (V3.0)</a>.</p>
+     * 
+     * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
+     * @return CreateDBClusterResponse
      */
     @Override
     public CompletableFuture<CreateDBClusterResponse> createDBCluster(CreateDBClusterRequest request) {
@@ -216,9 +248,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Precautions
-      * This operation is applicable only for elastic clusters of 32 cores or more.
-      *
+     * <b>description</b> :
+     * <h2>Precautions</h2>
+     * <p>This operation is applicable only for elastic clusters of 32 cores or more.</p>
+     * 
+     * @param request the request parameters of CreateDBResourceGroup  CreateDBResourceGroupRequest
+     * @return CreateDBResourceGroupResponse
      */
     @Override
     public CompletableFuture<CreateDBResourceGroupResponse> createDBResourceGroup(CreateDBResourceGroupRequest request) {
@@ -235,8 +270,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is applicable only for elastic clusters of 32 cores or more.
-      *
+     * <b>description</b> :
+     * <p>This operation is applicable only for elastic clusters of 32 cores or more.</p>
+     * 
+     * @param request the request parameters of CreateDBResourcePool  CreateDBResourcePoolRequest
+     * @return CreateDBResourcePoolResponse
      */
     @Override
     public CompletableFuture<CreateDBResourcePoolResponse> createDBResourcePool(CreateDBResourcePoolRequest request) {
@@ -253,9 +291,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ###
-      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
-      *
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.</p>
+     * 
+     * @param request the request parameters of CreateElasticPlan  CreateElasticPlanRequest
+     * @return CreateElasticPlanResponse
      */
     @Override
     public CompletableFuture<CreateElasticPlanResponse> createElasticPlan(CreateElasticPlanRequest request) {
@@ -271,6 +312,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAccount  DeleteAccountRequest
+     * @return DeleteAccountResponse
+     */
     @Override
     public CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request) {
         try {
@@ -286,9 +331,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Subscription clusters cannot be deleted by using API operations. After expiration, subscription clusters are automatically released. If you no longer need a cluster, you can submit a request to unsubscribe from the cluster in the Billing Management console. For more information about cluster refunds, see [Refund policy](~~471477~~).
-      * *   After you delete a cluster, resources of the cluster are immediately released, and data of the cluster is no longer retained and cannot be recovered. Proceed with caution.
-      *
+     * <b>description</b> :
+     * <p>  Subscription clusters cannot be deleted by using API operations. After expiration, subscription clusters are automatically released. If you no longer need a cluster, you can submit a request to unsubscribe from the cluster in the Billing Management console. For more information about cluster refunds, see <a href="https://help.aliyun.com/document_detail/471477.html">Refund policy</a>.</p>
+     * <ul>
+     * <li>After you delete a cluster, resources of the cluster are immediately released, and data of the cluster is no longer retained and cannot be recovered. Proceed with caution.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteDBCluster  DeleteDBClusterRequest
+     * @return DeleteDBClusterResponse
      */
     @Override
     public CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request) {
@@ -305,10 +355,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Precautions
-      * *   You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
-      * *   The default resource group USER_DEFAULT cannot be deleted.
-      *
+     * <b>description</b> :
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</li>
+     * <li>The default resource group USER_DEFAULT cannot be deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteDBResourceGroup  DeleteDBResourceGroupRequest
+     * @return DeleteDBResourceGroupResponse
      */
     @Override
     public CompletableFuture<DeleteDBResourceGroupResponse> deleteDBResourceGroup(DeleteDBResourceGroupRequest request) {
@@ -325,10 +380,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **Precautions**
-      * *   This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
-      * *   The default resource group USER_DEFAULT cannot be deleted.
-      *
+     * <b>description</b> :
+     * <p><em>Precautions</em>*</p>
+     * <ul>
+     * <li>This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</li>
+     * <li>The default resource group USER_DEFAULT cannot be deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteDBResourcePool  DeleteDBResourcePoolRequest
+     * @return DeleteDBResourcePoolResponse
      */
     @Override
     public CompletableFuture<DeleteDBResourcePoolResponse> deleteDBResourcePool(DeleteDBResourcePoolRequest request) {
@@ -344,6 +404,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteElasticPlan  DeleteElasticPlanRequest
+     * @return DeleteElasticPlanResponse
+     */
     @Override
     public CompletableFuture<DeleteElasticPlanResponse> deleteElasticPlan(DeleteElasticPlanRequest request) {
         try {
@@ -358,6 +422,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     */
     @Override
     public CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request) {
         try {
@@ -372,6 +440,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAdviceServiceEnabled  DescribeAdviceServiceEnabledRequest
+     * @return DescribeAdviceServiceEnabledResponse
+     */
     @Override
     public CompletableFuture<DescribeAdviceServiceEnabledResponse> describeAdviceServiceEnabled(DescribeAdviceServiceEnabledRequest request) {
         try {
@@ -386,6 +458,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllAccounts  DescribeAllAccountsRequest
+     * @return DescribeAllAccountsResponse
+     */
     @Override
     public CompletableFuture<DescribeAllAccountsResponse> describeAllAccounts(DescribeAllAccountsRequest request) {
         try {
@@ -400,6 +476,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllDataSource  DescribeAllDataSourceRequest
+     * @return DescribeAllDataSourceResponse
+     */
     @Override
     public CompletableFuture<DescribeAllDataSourceResponse> describeAllDataSource(DescribeAllDataSourceRequest request) {
         try {
@@ -414,6 +494,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppliedAdvices  DescribeAppliedAdvicesRequest
+     * @return DescribeAppliedAdvicesResponse
+     */
     @Override
     public CompletableFuture<DescribeAppliedAdvicesResponse> describeAppliedAdvices(DescribeAppliedAdvicesRequest request) {
         try {
@@ -428,6 +512,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAuditLogConfig  DescribeAuditLogConfigRequest
+     * @return DescribeAuditLogConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeAuditLogConfigResponse> describeAuditLogConfig(DescribeAuditLogConfigRequest request) {
         try {
@@ -443,10 +531,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the DescribeAuditLogRecords operation to query the SQL audit logs of an AnalyticDB for MySQL cluster, you must enable SQL audit for the cluster. You can call the [DescribeAuditLogConfig](~~190628~~) operation to query the status of SQL audit. If SQL audit is disabled, you can call the [ModifyAuditLogConfig](~~190629~~) operation to enable SQL audit.
-      * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
-      *
-     * @tags Perth
+     * <b>description</b> :
+     * <p>Before you call the DescribeAuditLogRecords operation to query the SQL audit logs of an AnalyticDB for MySQL cluster, you must enable SQL audit for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/190628.html">DescribeAuditLogConfig</a> operation to query the status of SQL audit. If SQL audit is disabled, you can call the <a href="https://help.aliyun.com/document_detail/190629.html">ModifyAuditLogConfig</a> operation to enable SQL audit.
+     * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: <strong>INSERT INTO VALUES</strong>, <strong>REPLACE INTO VALUES</strong>, and <strong>UPSERT INTO VALUES</strong>.</p>
+     * 
+     * @param request the request parameters of DescribeAuditLogRecords  DescribeAuditLogRecordsRequest
+     * @return DescribeAuditLogRecordsResponse
      */
     @Override
     public CompletableFuture<DescribeAuditLogRecordsResponse> describeAuditLogRecords(DescribeAuditLogRecordsRequest request) {
@@ -462,6 +552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAutoRenewAttribute  DescribeAutoRenewAttributeRequest
+     * @return DescribeAutoRenewAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeAutoRenewAttributeResponse> describeAutoRenewAttribute(DescribeAutoRenewAttributeRequest request) {
         try {
@@ -476,6 +570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAvailableAdvices  DescribeAvailableAdvicesRequest
+     * @return DescribeAvailableAdvicesResponse
+     */
     @Override
     public CompletableFuture<DescribeAvailableAdvicesResponse> describeAvailableAdvices(DescribeAvailableAdvicesRequest request) {
         try {
@@ -490,6 +588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAvailableResource  DescribeAvailableResourceRequest
+     * @return DescribeAvailableResourceResponse
+     */
     @Override
     public CompletableFuture<DescribeAvailableResourceResponse> describeAvailableResource(DescribeAvailableResourceRequest request) {
         try {
@@ -504,6 +606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
         try {
@@ -518,6 +624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
+     * @return DescribeBackupsResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request) {
         try {
@@ -532,6 +642,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeColumns  DescribeColumnsRequest
+     * @return DescribeColumnsResponse
+     */
     @Override
     public CompletableFuture<DescribeColumnsResponse> describeColumns(DescribeColumnsRequest request) {
         try {
@@ -546,6 +660,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeComputeResource  DescribeComputeResourceRequest
+     * @return DescribeComputeResourceResponse
+     */
     @Override
     public CompletableFuture<DescribeComputeResourceResponse> describeComputeResource(DescribeComputeResourceRequest request) {
         try {
@@ -560,6 +678,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeConnectionCountRecords  DescribeConnectionCountRecordsRequest
+     * @return DescribeConnectionCountRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeConnectionCountRecordsResponse> describeConnectionCountRecords(DescribeConnectionCountRecordsRequest request) {
         try {
@@ -574,6 +696,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterAccessWhiteList  DescribeDBClusterAccessWhiteListRequest
+     * @return DescribeDBClusterAccessWhiteListResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterAccessWhiteListResponse> describeDBClusterAccessWhiteList(DescribeDBClusterAccessWhiteListRequest request) {
         try {
@@ -588,6 +714,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterAttribute  DescribeDBClusterAttributeRequest
+     * @return DescribeDBClusterAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterAttributeResponse> describeDBClusterAttribute(DescribeDBClusterAttributeRequest request) {
         try {
@@ -602,6 +732,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterHealthStatus  DescribeDBClusterHealthStatusRequest
+     * @return DescribeDBClusterHealthStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterHealthStatusResponse> describeDBClusterHealthStatus(DescribeDBClusterHealthStatusRequest request) {
         try {
@@ -616,6 +750,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterNetInfo  DescribeDBClusterNetInfoRequest
+     * @return DescribeDBClusterNetInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterNetInfoResponse> describeDBClusterNetInfo(DescribeDBClusterNetInfoRequest request) {
         try {
@@ -631,8 +769,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the performance data of a cluster over a time range based on its performance metrics. The data is collected every 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the performance data of a cluster over a time range based on its performance metrics. The data is collected every 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</p>
+     * 
+     * @param request the request parameters of DescribeDBClusterPerformance  DescribeDBClusterPerformanceRequest
+     * @return DescribeDBClusterPerformanceResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request) {
@@ -649,8 +790,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can also view the monitoring information about resource groups within an AnalyticDB for MySQL cluster in elastic mode for Cluster Edition in the form of graphs in the console. For more information, see [View monitoring information](~~188721~~).
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can also view the monitoring information about resource groups within an AnalyticDB for MySQL cluster in elastic mode for Cluster Edition in the form of graphs in the console. For more information, see <a href="https://help.aliyun.com/document_detail/188721.html">View monitoring information</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDBClusterResourcePoolPerformance  DescribeDBClusterResourcePoolPerformanceRequest
+     * @return DescribeDBClusterResourcePoolPerformanceResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterResourcePoolPerformanceResponse> describeDBClusterResourcePoolPerformance(DescribeDBClusterResourcePoolPerformanceRequest request) {
@@ -666,6 +812,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterSSL  DescribeDBClusterSSLRequest
+     * @return DescribeDBClusterSSLResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDBClusterSSLResponse> describeDBClusterSSL(DescribeDBClusterSSLRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDBClusterSSL").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDBClusterSSLResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDBClusterSSLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDBClusterSpaceSummary  DescribeDBClusterSpaceSummaryRequest
+     * @return DescribeDBClusterSpaceSummaryResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDBClusterSpaceSummaryResponse> describeDBClusterSpaceSummary(DescribeDBClusterSpaceSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDBClusterSpaceSummary").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDBClusterSpaceSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDBClusterSpaceSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDBClusterStatus  DescribeDBClusterStatusRequest
+     * @return DescribeDBClusterStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterStatusResponse> describeDBClusterStatus(DescribeDBClusterStatusRequest request) {
         try {
@@ -680,6 +866,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusters  DescribeDBClustersRequest
+     * @return DescribeDBClustersResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClustersResponse> describeDBClusters(DescribeDBClustersRequest request) {
         try {
@@ -695,9 +885,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ###
-      * You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
-      *
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</p>
+     * 
+     * @param request the request parameters of DescribeDBResourceGroup  DescribeDBResourceGroupRequest
+     * @return DescribeDBResourceGroupResponse
      */
     @Override
     public CompletableFuture<DescribeDBResourceGroupResponse> describeDBResourceGroup(DescribeDBResourceGroupRequest request) {
@@ -714,8 +907,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is applicable only for elastic clusters of 32 cores or more.
-      *
+     * <b>description</b> :
+     * <p>This operation is applicable only for elastic clusters of 32 cores or more.</p>
+     * 
+     * @param request the request parameters of DescribeDBResourcePool  DescribeDBResourcePoolRequest
+     * @return DescribeDBResourcePoolResponse
      */
     @Override
     public CompletableFuture<DescribeDBResourcePoolResponse> describeDBResourcePool(DescribeDBResourcePoolRequest request) {
@@ -731,6 +927,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDiagnosisDimensions  DescribeDiagnosisDimensionsRequest
+     * @return DescribeDiagnosisDimensionsResponse
+     */
     @Override
     public CompletableFuture<DescribeDiagnosisDimensionsResponse> describeDiagnosisDimensions(DescribeDiagnosisDimensionsRequest request) {
         try {
@@ -745,6 +945,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDiagnosisMonitorPerformance  DescribeDiagnosisMonitorPerformanceRequest
+     * @return DescribeDiagnosisMonitorPerformanceResponse
+     */
     @Override
     public CompletableFuture<DescribeDiagnosisMonitorPerformanceResponse> describeDiagnosisMonitorPerformance(DescribeDiagnosisMonitorPerformanceRequest request) {
         try {
@@ -759,6 +963,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDiagnosisRecords  DescribeDiagnosisRecordsRequest
+     * @return DescribeDiagnosisRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeDiagnosisRecordsResponse> describeDiagnosisRecords(DescribeDiagnosisRecordsRequest request) {
         try {
@@ -773,6 +981,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDiagnosisSQLInfo  DescribeDiagnosisSQLInfoRequest
+     * @return DescribeDiagnosisSQLInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeDiagnosisSQLInfoResponse> describeDiagnosisSQLInfo(DescribeDiagnosisSQLInfoRequest request) {
         try {
@@ -787,6 +999,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDiagnosisTasks  DescribeDiagnosisTasksRequest
+     * @return DescribeDiagnosisTasksResponse
+     */
     @Override
     public CompletableFuture<DescribeDiagnosisTasksResponse> describeDiagnosisTasks(DescribeDiagnosisTasksRequest request) {
         try {
@@ -801,6 +1017,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDownloadRecords  DescribeDownloadRecordsRequest
+     * @return DescribeDownloadRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeDownloadRecordsResponse> describeDownloadRecords(DescribeDownloadRecordsRequest request) {
         try {
@@ -815,6 +1035,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEIURange  DescribeEIURangeRequest
+     * @return DescribeEIURangeResponse
+     */
     @Override
     public CompletableFuture<DescribeEIURangeResponse> describeEIURange(DescribeEIURangeRequest request) {
         try {
@@ -830,8 +1054,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
-      *
+     * <b>description</b> :
+     * <p>This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.</p>
+     * 
+     * @param request the request parameters of DescribeElasticDailyPlan  DescribeElasticDailyPlanRequest
+     * @return DescribeElasticDailyPlanResponse
      */
     @Override
     public CompletableFuture<DescribeElasticDailyPlanResponse> describeElasticDailyPlan(DescribeElasticDailyPlanRequest request) {
@@ -848,9 +1075,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ###
-      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
-      *
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.</p>
+     * 
+     * @param request the request parameters of DescribeElasticPlan  DescribeElasticPlanRequest
+     * @return DescribeElasticPlanResponse
      */
     @Override
     public CompletableFuture<DescribeElasticPlanResponse> describeElasticPlan(DescribeElasticPlanRequest request) {
@@ -866,6 +1096,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExcessivePrimaryKeys  DescribeExcessivePrimaryKeysRequest
+     * @return DescribeExcessivePrimaryKeysResponse
+     */
+    @Override
+    public CompletableFuture<DescribeExcessivePrimaryKeysResponse> describeExcessivePrimaryKeys(DescribeExcessivePrimaryKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeExcessivePrimaryKeys").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeExcessivePrimaryKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeExcessivePrimaryKeysResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInclinedTables  DescribeInclinedTablesRequest
+     * @return DescribeInclinedTablesResponse
+     */
     @Override
     public CompletableFuture<DescribeInclinedTablesResponse> describeInclinedTables(DescribeInclinedTablesRequest request) {
         try {
@@ -881,8 +1133,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about how to asynchronously submit import and export tasks, see [Asynchronously submit an import or export task](~~160291~~).
-      *
+     * @param request the request parameters of DescribeKernelVersion  DescribeKernelVersionRequest
+     * @return DescribeKernelVersionResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKernelVersionResponse> describeKernelVersion(DescribeKernelVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKernelVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKernelVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKernelVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For information about how to asynchronously submit import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit an import or export task</a>.</p>
+     * 
+     * @param request the request parameters of DescribeLoadTasksRecords  DescribeLoadTasksRecordsRequest
+     * @return DescribeLoadTasksRecordsResponse
      */
     @Override
     public CompletableFuture<DescribeLoadTasksRecordsResponse> describeLoadTasksRecords(DescribeLoadTasksRecordsRequest request) {
@@ -898,6 +1171,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMaintenanceAction  DescribeMaintenanceActionRequest
+     * @return DescribeMaintenanceActionResponse
+     */
     @Override
     public CompletableFuture<DescribeMaintenanceActionResponse> describeMaintenanceAction(DescribeMaintenanceActionRequest request) {
         try {
@@ -912,6 +1189,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeOperatorPermission  DescribeOperatorPermissionRequest
+     * @return DescribeOperatorPermissionResponse
+     */
     @Override
     public CompletableFuture<DescribeOperatorPermissionResponse> describeOperatorPermission(DescribeOperatorPermissionRequest request) {
         try {
@@ -926,6 +1207,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePatternPerformance  DescribePatternPerformanceRequest
+     * @return DescribePatternPerformanceResponse
+     */
     @Override
     public CompletableFuture<DescribePatternPerformanceResponse> describePatternPerformance(DescribePatternPerformanceRequest request) {
         try {
@@ -940,6 +1225,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeProcessList  DescribeProcessListRequest
+     * @return DescribeProcessListResponse
+     */
     @Override
     public CompletableFuture<DescribeProcessListResponse> describeProcessList(DescribeProcessListRequest request) {
         try {
@@ -954,6 +1243,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -968,6 +1261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResubmitConfig  DescribeResubmitConfigRequest
+     * @return DescribeResubmitConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeResubmitConfigResponse> describeResubmitConfig(DescribeResubmitConfigRequest request) {
         try {
@@ -982,6 +1279,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSQAConfig  DescribeSQAConfigRequest
+     * @return DescribeSQAConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeSQAConfigResponse> describeSQAConfig(DescribeSQAConfigRequest request) {
         try {
@@ -996,6 +1297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSQLPatterns  DescribeSQLPatternsRequest
+     * @return DescribeSQLPatternsResponse
+     */
     @Override
     public CompletableFuture<DescribeSQLPatternsResponse> describeSQLPatterns(DescribeSQLPatternsRequest request) {
         try {
@@ -1010,6 +1315,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSQLPlan  DescribeSQLPlanRequest
+     * @return DescribeSQLPlanResponse
+     */
     @Override
     public CompletableFuture<DescribeSQLPlanResponse> describeSQLPlan(DescribeSQLPlanRequest request) {
         try {
@@ -1024,6 +1333,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSQLPlanTask  DescribeSQLPlanTaskRequest
+     * @return DescribeSQLPlanTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeSQLPlanTaskResponse> describeSQLPlanTask(DescribeSQLPlanTaskRequest request) {
         try {
@@ -1038,6 +1351,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSchemas  DescribeSchemasRequest
+     * @return DescribeSchemasResponse
+     */
     @Override
     public CompletableFuture<DescribeSchemasResponse> describeSchemas(DescribeSchemasRequest request) {
         try {
@@ -1052,6 +1369,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
+     * @return DescribeSlowLogRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request) {
         try {
@@ -1066,20 +1387,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeSlowLogTrendResponse> describeSlowLogTrend(DescribeSlowLogTrendRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSlowLogTrend").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSlowLogTrendResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeSlowLogTrendResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeSqlPattern  DescribeSqlPatternRequest
+     * @return DescribeSqlPatternResponse
+     */
     @Override
     public CompletableFuture<DescribeSqlPatternResponse> describeSqlPattern(DescribeSqlPatternRequest request) {
         try {
@@ -1094,6 +1405,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTableAccessCount  DescribeTableAccessCountRequest
+     * @return DescribeTableAccessCountResponse
+     */
     @Override
     public CompletableFuture<DescribeTableAccessCountResponse> describeTableAccessCount(DescribeTableAccessCountRequest request) {
         try {
@@ -1108,6 +1423,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTableDetail  DescribeTableDetailRequest
+     * @return DescribeTableDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeTableDetailResponse> describeTableDetail(DescribeTableDetailRequest request) {
         try {
@@ -1122,6 +1441,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTablePartitionDiagnose  DescribeTablePartitionDiagnoseRequest
+     * @return DescribeTablePartitionDiagnoseResponse
+     */
     @Override
     public CompletableFuture<DescribeTablePartitionDiagnoseResponse> describeTablePartitionDiagnose(DescribeTablePartitionDiagnoseRequest request) {
         try {
@@ -1137,9 +1460,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  For more information about table statistics, see [View monitoring information of resource pools](~~188721~~).
-      *
-     * @tags Perth
+     * @param request the request parameters of DescribeTableStatistics  DescribeTableStatisticsRequest
+     * @return DescribeTableStatisticsResponse
      */
     @Override
     public CompletableFuture<DescribeTableStatisticsResponse> describeTableStatistics(DescribeTableStatisticsRequest request) {
@@ -1155,6 +1477,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTables  DescribeTablesRequest
+     * @return DescribeTablesResponse
+     */
     @Override
     public CompletableFuture<DescribeTablesResponse> describeTables(DescribeTablesRequest request) {
         try {
@@ -1169,6 +1495,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTaskInfo  DescribeTaskInfoRequest
+     * @return DescribeTaskInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeTaskInfoResponse> describeTaskInfo(DescribeTaskInfoRequest request) {
         try {
@@ -1183,6 +1513,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
+     * @return DescribeVSwitchesResponse
+     */
     @Override
     public CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request) {
         try {
@@ -1198,8 +1532,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.</p>
+     * 
+     * @param request the request parameters of DetachUserENI  DetachUserENIRequest
+     * @return DetachUserENIResponse
      */
     @Override
     public CompletableFuture<DetachUserENIResponse> detachUserENI(DetachUserENIRequest request) {
@@ -1215,6 +1552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableAdviceService  DisableAdviceServiceRequest
+     * @return DisableAdviceServiceResponse
+     */
     @Override
     public CompletableFuture<DisableAdviceServiceResponse> disableAdviceService(DisableAdviceServiceRequest request) {
         try {
@@ -1229,6 +1570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadDiagnosisRecords  DownloadDiagnosisRecordsRequest
+     * @return DownloadDiagnosisRecordsResponse
+     */
     @Override
     public CompletableFuture<DownloadDiagnosisRecordsResponse> downloadDiagnosisRecords(DownloadDiagnosisRecordsRequest request) {
         try {
@@ -1243,6 +1588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableAdviceService  EnableAdviceServiceRequest
+     * @return EnableAdviceServiceResponse
+     */
     @Override
     public CompletableFuture<EnableAdviceServiceResponse> enableAdviceService(EnableAdviceServiceRequest request) {
         try {
@@ -1258,9 +1607,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ###
-      * If you need Alibaba Cloud technical support to perform operations on your AnalyticDB for MySQL cluster, you must grant permissions to the service account of your cluster. When the validity period of the authorization ends, the granted permissions are automatically revoked.
-      *
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>If you need Alibaba Cloud technical support to perform operations on your AnalyticDB for MySQL cluster, you must grant permissions to the service account of your cluster. When the validity period of the authorization ends, the granted permissions are automatically revoked.</p>
+     * 
+     * @param request the request parameters of GrantOperatorPermission  GrantOperatorPermissionRequest
+     * @return GrantOperatorPermissionResponse
      */
     @Override
     public CompletableFuture<GrantOperatorPermissionResponse> grantOperatorPermission(GrantOperatorPermissionRequest request) {
@@ -1276,6 +1628,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of KillProcess  KillProcessRequest
+     * @return KillProcessResponse
+     */
     @Override
     public CompletableFuture<KillProcessResponse> killProcess(KillProcessRequest request) {
         try {
@@ -1290,6 +1646,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1304,6 +1664,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MigrateDBCluster  MigrateDBClusterRequest
+     * @return MigrateDBClusterResponse
+     */
     @Override
     public CompletableFuture<MigrateDBClusterResponse> migrateDBCluster(MigrateDBClusterRequest request) {
         try {
@@ -1318,6 +1682,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
+     * @return ModifyAccountDescriptionResponse
+     */
     @Override
     public CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request) {
         try {
@@ -1332,6 +1700,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAuditLogConfig  ModifyAuditLogConfigRequest
+     * @return ModifyAuditLogConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyAuditLogConfigResponse> modifyAuditLogConfig(ModifyAuditLogConfigRequest request) {
         try {
@@ -1346,6 +1718,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAutoRenewAttribute  ModifyAutoRenewAttributeRequest
+     * @return ModifyAutoRenewAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyAutoRenewAttributeResponse> modifyAutoRenewAttribute(ModifyAutoRenewAttributeRequest request) {
         try {
@@ -1360,6 +1736,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
+     * @return ModifyBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request) {
         try {
@@ -1374,6 +1754,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClusterConnectionString  ModifyClusterConnectionStringRequest
+     * @return ModifyClusterConnectionStringResponse
+     */
     @Override
     public CompletableFuture<ModifyClusterConnectionStringResponse> modifyClusterConnectionString(ModifyClusterConnectionStringRequest request) {
         try {
@@ -1388,6 +1772,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBCluster  ModifyDBClusterRequest
+     * @return ModifyDBClusterResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterResponse> modifyDBCluster(ModifyDBClusterRequest request) {
         try {
@@ -1402,6 +1790,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterAccessWhiteList  ModifyDBClusterAccessWhiteListRequest
+     * @return ModifyDBClusterAccessWhiteListResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterAccessWhiteListResponse> modifyDBClusterAccessWhiteList(ModifyDBClusterAccessWhiteListRequest request) {
         try {
@@ -1416,6 +1808,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterDescription  ModifyDBClusterDescriptionRequest
+     * @return ModifyDBClusterDescriptionResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterDescriptionResponse> modifyDBClusterDescription(ModifyDBClusterDescriptionRequest request) {
         try {
@@ -1430,6 +1826,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterMaintainTime  ModifyDBClusterMaintainTimeRequest
+     * @return ModifyDBClusterMaintainTimeResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterMaintainTimeResponse> modifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request) {
         try {
@@ -1444,6 +1844,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterPayType  ModifyDBClusterPayTypeRequest
+     * @return ModifyDBClusterPayTypeResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterPayTypeResponse> modifyDBClusterPayType(ModifyDBClusterPayTypeRequest request) {
         try {
@@ -1459,8 +1863,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475#concept-zyn-3p1-dhb~~ "Resource Management provides a collection of resource management services that support enterprise IT administration. The services include Resource Directory, Resource Group, and Tag. Resource Directory allows you to build an organizational structure for resources based on your business requirements. Resource Group and Tag allow you to hierarchically manage the resources. Resource Sharing allows you to share the resources among your accounts.")
-      *
+     * <b>description</b> :
+     * <p>Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see <a href="~~94475#concept-zyn-3p1-dhb~~" title="Resource Management provides a collection of resource management services that support enterprise IT administration. The services include Resource Directory, Resource Group, and Tag. Resource Directory allows you to build an organizational structure for resources based on your business requirements. Resource Group and Tag allow you to hierarchically manage the resources. Resource Sharing allows you to share the resources among your accounts.">What is Resource Management?</a></p>
+     * 
+     * @param request the request parameters of ModifyDBClusterResourceGroup  ModifyDBClusterResourceGroupRequest
+     * @return ModifyDBClusterResourceGroupResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterResourceGroupResponse> modifyDBClusterResourceGroup(ModifyDBClusterResourceGroupRequest request) {
@@ -1477,10 +1884,33 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Precautions
-      * *   This operation is applicable only for elastic clusters of 32 cores or more.
-      * *   The number of nodes cannot be changed for the default resource group USER_DEFAULT.
-      *
+     * @param request the request parameters of ModifyDBClusterSSL  ModifyDBClusterSSLRequest
+     * @return ModifyDBClusterSSLResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDBClusterSSLResponse> modifyDBClusterSSL(ModifyDBClusterSSLRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDBClusterSSL").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDBClusterSSLResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDBClusterSSLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Precautions</h2>
+     * <ul>
+     * <li>This operation is applicable only for elastic clusters of 32 cores or more.</li>
+     * <li>The number of nodes cannot be changed for the default resource group USER_DEFAULT.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyDBResourceGroup  ModifyDBResourceGroupRequest
+     * @return ModifyDBResourceGroupResponse
      */
     @Override
     public CompletableFuture<ModifyDBResourceGroupResponse> modifyDBResourceGroup(ModifyDBResourceGroupRequest request) {
@@ -1497,10 +1927,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ###
-      * *   You can call this operation only for elastic clusters of 32 cores or more.
-      * *   You cannot change the number of nodes for the USER_DEFAULT resource group.
-      *
+     * <b>description</b> :
+     * <h3></h3>
+     * <ul>
+     * <li>You can call this operation only for elastic clusters of 32 cores or more.</li>
+     * <li>You cannot change the number of nodes for the USER_DEFAULT resource group.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyDBResourcePool  ModifyDBResourcePoolRequest
+     * @return ModifyDBResourcePoolResponse
      */
     @Override
     public CompletableFuture<ModifyDBResourcePoolResponse> modifyDBResourcePool(ModifyDBResourcePoolRequest request) {
@@ -1517,8 +1952,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.</p>
+     * 
+     * @param request the request parameters of ModifyElasticPlan  ModifyElasticPlanRequest
+     * @return ModifyElasticPlanResponse
      */
     @Override
     public CompletableFuture<ModifyElasticPlanResponse> modifyElasticPlan(ModifyElasticPlanRequest request) {
@@ -1534,6 +1972,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyLogBackupPolicy  ModifyLogBackupPolicyRequest
+     * @return ModifyLogBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyLogBackupPolicyResponse> modifyLogBackupPolicy(ModifyLogBackupPolicyRequest request) {
         try {
@@ -1548,6 +1990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyMaintenanceAction  ModifyMaintenanceActionRequest
+     * @return ModifyMaintenanceActionResponse
+     */
     @Override
     public CompletableFuture<ModifyMaintenanceActionResponse> modifyMaintenanceAction(ModifyMaintenanceActionRequest request) {
         try {
@@ -1562,6 +2008,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyResubmitConfig  ModifyResubmitConfigRequest
+     * @return ModifyResubmitConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyResubmitConfigResponse> modifyResubmitConfig(ModifyResubmitConfigRequest request) {
         try {
@@ -1576,6 +2026,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySQAConfig  ModifySQAConfigRequest
+     * @return ModifySQAConfigResponse
+     */
     @Override
     public CompletableFuture<ModifySQAConfigResponse> modifySQAConfig(ModifySQAConfigRequest request) {
         try {
@@ -1590,6 +2044,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseClusterPublicConnection  ReleaseClusterPublicConnectionRequest
+     * @return ReleaseClusterPublicConnectionResponse
+     */
     @Override
     public CompletableFuture<ReleaseClusterPublicConnectionResponse> releaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request) {
         try {
@@ -1604,6 +2062,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     */
     @Override
     public CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request) {
         try {
@@ -1618,6 +2080,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeOperatorPermission  RevokeOperatorPermissionRequest
+     * @return RevokeOperatorPermissionResponse
+     */
     @Override
     public CompletableFuture<RevokeOperatorPermissionResponse> revokeOperatorPermission(RevokeOperatorPermissionRequest request) {
         try {
@@ -1632,6 +2098,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1646,6 +2116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindDBResourceGroupWithUser  UnbindDBResourceGroupWithUserRequest
+     * @return UnbindDBResourceGroupWithUserResponse
+     */
     @Override
     public CompletableFuture<UnbindDBResourceGroupWithUserResponse> unbindDBResourceGroupWithUser(UnbindDBResourceGroupWithUserRequest request) {
         try {
@@ -1660,6 +2134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindDBResourcePoolWithUser  UnbindDBResourcePoolWithUserRequest
+     * @return UnbindDBResourcePoolWithUserResponse
+     */
     @Override
     public CompletableFuture<UnbindDBResourcePoolWithUserResponse> unbindDBResourcePoolWithUser(UnbindDBResourcePoolWithUserRequest request) {
         try {
@@ -1674,6 +2152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -1683,6 +2165,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UntagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpgradeKernelVersion  UpgradeKernelVersionRequest
+     * @return UpgradeKernelVersionResponse
+     */
+    @Override
+    public CompletableFuture<UpgradeKernelVersionResponse> upgradeKernelVersion(UpgradeKernelVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeKernelVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeKernelVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpgradeKernelVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditLogConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyAuditLogConfigRequest</p>
  */
 public class ModifyAuditLogConfigRequest extends Request {
-    @Query
-    @NameInMap("AuditLogStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditLogStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auditLogStatus;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyAuditLogConfigRequest(Builder builder) {
@@ -141,11 +141,15 @@ public class ModifyAuditLogConfigRequest extends Request {
         } 
 
         /**
-         * The status of SQL audit. Valid values:
-         * <p>
+         * <p>The status of SQL audit. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: SQL audit is enabled.</li>
+         * <li><strong>off</strong>: SQL audit is disabled.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: SQL audit is enabled.
-         * *   **off**: SQL audit is disabled.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder auditLogStatus(String auditLogStatus) {
             this.putQueryParameter("AuditLogStatus", auditLogStatus);
@@ -154,7 +158,11 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-t4nj8619bz2w3****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -181,7 +189,11 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

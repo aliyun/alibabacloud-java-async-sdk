@@ -1,80 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadDiagnosisRecordsRequest} extends {@link RequestModel}
  *
  * <p>DownloadDiagnosisRecordsRequest</p>
  */
 public class DownloadDiagnosisRecordsRequest extends Request {
-    @Query
-    @NameInMap("ClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIp")
     private String clientIp;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MaxPeakMemory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPeakMemory")
     private Long maxPeakMemory;
 
-    @Query
-    @NameInMap("MaxScanSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxScanSize")
     private Long maxScanSize;
 
-    @Query
-    @NameInMap("MinPeakMemory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinPeakMemory")
     private Long minPeakMemory;
 
-    @Query
-    @NameInMap("MinScanSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinScanSize")
     private Long minScanSize;
 
-    @Query
-    @NameInMap("QueryCondition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryCondition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queryCondition;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroup")
     private String resourceGroup;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private DownloadDiagnosisRecordsRequest(Builder builder) {
@@ -255,10 +255,13 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         } 
 
         /**
-         * The source IP addresses.
-         * <p>
+         * <p>The source IP addresses.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.
+         * <strong>example:</strong>
+         * <p>106.11.XX.XX</p>
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);
@@ -267,10 +270,14 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
+         * <strong>example:</strong>
+         * <p>am-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -279,10 +286,13 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database on which the SQL statements are executed.
-         * <p>
+         * <p>The name of the database on which the SQL statements are executed.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -291,14 +301,19 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The end time must be later than the start time.</p>
+         * </li>
+         * <li><p>The maximum time range that can be specified is 24 hours.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The end time must be later than the start time.
-         * 
-         * *   The maximum time range that can be specified is 24 hours.
+         * <strong>example:</strong>
+         * <p>1625220213000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -307,7 +322,10 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The keyword that is used for the query.
+         * <p>The keyword that is used for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -316,13 +334,16 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The language of file titles and error messages. Valid values:
-         * <p>
+         * <p>The language of file titles and error messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+         * </ul>
          * 
-         * *   **zh** (default): simplified Chinese.
-         * *   **en**: English.
-         * *   **ja**: Japanese.
-         * *   **zh-tw**: traditional Chinese.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -331,7 +352,10 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The maximum peak memory of the SQL statements. Unit: bytes.
+         * <p>The maximum peak memory of the SQL statements. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88000000</p>
          */
         public Builder maxPeakMemory(Long maxPeakMemory) {
             this.putQueryParameter("MaxPeakMemory", maxPeakMemory);
@@ -340,7 +364,10 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The maximum scan size of the SQL statements. Unit: bytes.
+         * <p>The maximum scan size of the SQL statements. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110000000</p>
          */
         public Builder maxScanSize(Long maxScanSize) {
             this.putQueryParameter("MaxScanSize", maxScanSize);
@@ -349,7 +376,10 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The minimum peak memory of the SQL statements. Unit: bytes.
+         * <p>The minimum peak memory of the SQL statements. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88000000</p>
          */
         public Builder minPeakMemory(Long minPeakMemory) {
             this.putQueryParameter("MinPeakMemory", minPeakMemory);
@@ -358,7 +388,10 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The minimum scan size of the SQL statements. Unit: bytes.
+         * <p>The minimum scan size of the SQL statements. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000</p>
          */
         public Builder minScanSize(Long minScanSize) {
             this.putQueryParameter("MinScanSize", minScanSize);
@@ -367,12 +400,16 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The SQL query condition, which can be a combination of the `Type` and `Value` fields or a combination of the Type, `Min`, and `Max` fields. Specify the condition in the JSON format. `Type` specifies the SQL query dimension. Valid values for Type: `maxCost`, `status`, and `cost`. `Value`, `Min`, or `Max` specifies the SQL query range for the dimension. Valid values:
-         * <p>
+         * <p>The SQL query condition, which can be a combination of the <code>Type</code> and <code>Value</code> fields or a combination of the Type, <code>Min</code>, and <code>Max</code> fields. Specify the condition in the JSON format. <code>Type</code> specifies the SQL query dimension. Valid values for Type: <code>maxCost</code>, <code>status</code>, and <code>cost</code>. <code>Value</code>, <code>Min</code>, or <code>Max</code> specifies the SQL query range for the dimension. Valid values:</p>
+         * <ul>
+         * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;100&quot;}</code>: queries the top 100 most time-consuming SQL statements. Set <code>Value</code> to 100.</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: queries executed SQL statements. You can set <code>Value</code> to <code>running</code> to query SQL statements that are being executed. You can also set Value to <code>failed</code> to query SQL statements that failed to be executed.</li>
+         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</code>: queries SQL statements whose execution durations are in the range of 10 to 200 milliseconds. You can also customize the maximum and minimum execution durations.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `{"Type":"maxCost","Value":"100"}`: queries the top 100 most time-consuming SQL statements. Set `Value` to 100.
-         * *   `{"Type":"status","Value":"finished"}`: queries executed SQL statements. You can set `Value` to `running` to query SQL statements that are being executed. You can also set Value to `failed` to query SQL statements that failed to be executed.
-         * *   `{"Type":"cost","Min":"10","Max":"200"}`: queries SQL statements whose execution durations are in the range of 10 to 200 milliseconds. You can also customize the maximum and minimum execution durations.
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</p>
          */
         public Builder queryCondition(String queryCondition) {
             this.putQueryParameter("QueryCondition", queryCondition);
@@ -381,10 +418,14 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -393,10 +434,13 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The resource group to which the SQL statements belong.
-         * <p>
+         * <p>The resource group to which the SQL statements belong.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.
+         * <strong>example:</strong>
+         * <p>user_default</p>
          */
         public Builder resourceGroup(String resourceGroup) {
             this.putQueryParameter("ResourceGroup", resourceGroup);
@@ -405,10 +449,14 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p>Only data within the last 14 days can be queried.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Only data within the last 14 days can be queried.
+         * <strong>example:</strong>
+         * <p>1625220210000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -417,10 +465,13 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The username that is used to execute the SQL statements.
-         * <p>
+         * <p>The username that is used to execute the SQL statements.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

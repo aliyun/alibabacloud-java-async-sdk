@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountsResponseBody</p>
  */
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("AccountList")
+    @com.aliyun.core.annotation.NameInMap("AccountList")
     private AccountList accountList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccountsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried database accounts.
+         * <p>The queried database accounts.</p>
          */
         public Builder accountList(AccountList accountList) {
             this.accountList = accountList;
@@ -58,7 +58,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64E37E6F-C363-41F3-867A-70EF5DC60EA4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class DBAccount extends TeaModel {
-        @NameInMap("AccountDescription")
+        @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
         private DBAccount(Builder builder) {
@@ -134,7 +143,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountType; 
 
             /**
-             * The description of the database account.
+             * <p>The description of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C@test</p>
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -142,7 +154,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -150,12 +165,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the database account. Valid values:
-             * <p>
+             * <p>The state of the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Available**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -163,11 +181,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database account. Valid values:
-             * <p>
+             * <p>The type of the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: standard account.</li>
+             * <li><strong>Super</strong>: privileged account.</li>
+             * </ul>
              * 
-             * *   **Normal**: standard account.
-             * *   **Super**: privileged account.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -181,8 +202,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class AccountList extends TeaModel {
-        @NameInMap("DBAccount")
+        @com.aliyun.core.annotation.NameInMap("DBAccount")
         private java.util.List < DBAccount> DBAccount;
 
         private AccountList(Builder builder) {

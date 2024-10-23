@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdviceServiceEnabledResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdviceServiceEnabledResponseBody</p>
  */
 public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private DescribeAdviceServiceEnabledResponseBody(Builder builder) {
@@ -62,11 +62,14 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request was successful, <strong>Success</strong> is returned.</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request was successful, **Success** is returned.
-         * *   If the request failed, an error message is returned.
+         * <strong>example:</strong>
+         * <p>[Advisor] Advisor feature is not available for instance: am-2ze0vp0j6t3to****</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -74,7 +77,10 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E031AABF-BD56-5966-A063-4283EF18DB45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,11 +88,14 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the suggestion feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the suggestion feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
          * 
-         * *   **True**
-         * *   **False**
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyResubmitConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyResubmitConfigRequest</p>
  */
 public class ModifyResubmitConfigRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Rules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Rules> rules;
 
     private ModifyResubmitConfigRequest(Builder builder) {
@@ -140,10 +140,14 @@ public class ModifyResubmitConfigRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
+         * <strong>example:</strong>
+         * <p>am-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -170,7 +174,10 @@ public class ModifyResubmitConfigRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -197,7 +204,8 @@ public class ModifyResubmitConfigRequest extends Request {
         }
 
         /**
-         * The job resubmission rules.
+         * <p>The job resubmission rules.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
@@ -213,20 +221,26 @@ public class ModifyResubmitConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyResubmitConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyResubmitConfigRequest</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("ExceedMemoryException")
+        @com.aliyun.core.annotation.NameInMap("ExceedMemoryException")
         private Boolean exceedMemoryException;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private String peakMemory;
 
-        @NameInMap("QueryTime")
+        @com.aliyun.core.annotation.NameInMap("QueryTime")
         private String queryTime;
 
-        @NameInMap("TargetGroupName")
+        @com.aliyun.core.annotation.NameInMap("TargetGroupName")
         private String targetGroupName;
 
         private Rules(Builder builder) {
@@ -288,7 +302,10 @@ public class ModifyResubmitConfigRequest extends Request {
             private String targetGroupName; 
 
             /**
-             * Specifies whether to configure out-of-memory (OOM) check.
+             * <p>Specifies whether to configure out-of-memory (OOM) check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder exceedMemoryException(Boolean exceedMemoryException) {
                 this.exceedMemoryException = exceedMemoryException;
@@ -296,7 +313,10 @@ public class ModifyResubmitConfigRequest extends Request {
             }
 
             /**
-             * The name of the source resource group.
+             * <p>The name of the source resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -304,7 +324,10 @@ public class ModifyResubmitConfigRequest extends Request {
             }
 
             /**
-             * The peak memory usage.
+             * <p>The peak memory usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder peakMemory(String peakMemory) {
                 this.peakMemory = peakMemory;
@@ -312,7 +335,10 @@ public class ModifyResubmitConfigRequest extends Request {
             }
 
             /**
-             * The duration of the SQL statement. Unit: milliseconds.
+             * <p>The duration of the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -320,7 +346,10 @@ public class ModifyResubmitConfigRequest extends Request {
             }
 
             /**
-             * The name of the destination resource group.
+             * <p>The name of the destination resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_target_group</p>
              */
             public Builder targetGroupName(String targetGroupName) {
                 this.targetGroupName = targetGroupName;

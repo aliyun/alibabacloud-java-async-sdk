@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAuditLogConfigResponseBody</p>
  */
 public class ModifyAuditLogConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UpdateSucceed")
+    @com.aliyun.core.annotation.NameInMap("UpdateSucceed")
     private Boolean updateSucceed;
 
     private ModifyAuditLogConfigResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
         private Boolean updateSucceed; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +61,14 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the status of SQL audit is updated. Valid values:
-         * <p>
+         * <p>Indicates whether the status of SQL audit is updated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The status of SQL audit is updated.</li>
+         * <li><strong>false</strong>: The status of SQL audit is not updated.</li>
+         * </ul>
          * 
-         * *   **true**: The status of SQL audit is updated.
-         * *   **false**: The status of SQL audit is not updated.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder updateSucceed(Boolean updateSucceed) {
             this.updateSucceed = updateSucceed;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticDailyPlanResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticDailyPlanResponseBody</p>
  */
 public class DescribeElasticDailyPlanResponseBody extends TeaModel {
-    @NameInMap("ElasticDailyPlanList")
+    @com.aliyun.core.annotation.NameInMap("ElasticDailyPlanList")
     private java.util.List < ElasticDailyPlanList> elasticDailyPlanList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeElasticDailyPlanResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the current-day scaling plans.
+         * <p>Details of the current-day scaling plans.</p>
          */
         public Builder elasticDailyPlanList(java.util.List < ElasticDailyPlanList> elasticDailyPlanList) {
             this.elasticDailyPlanList = elasticDailyPlanList;
@@ -58,7 +58,10 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +74,44 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticDailyPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticDailyPlanResponseBody</p>
+     */
     public static class ElasticDailyPlanList extends TeaModel {
-        @NameInMap("Day")
+        @com.aliyun.core.annotation.NameInMap("Day")
         private String day;
 
-        @NameInMap("ElasticNodeNum")
+        @com.aliyun.core.annotation.NameInMap("ElasticNodeNum")
         private Integer elasticNodeNum;
 
-        @NameInMap("ElasticPlanType")
+        @com.aliyun.core.annotation.NameInMap("ElasticPlanType")
         private String elasticPlanType;
 
-        @NameInMap("ElasticPlanWorkerSpec")
+        @com.aliyun.core.annotation.NameInMap("ElasticPlanWorkerSpec")
         private String elasticPlanWorkerSpec;
 
-        @NameInMap("EndTs")
+        @com.aliyun.core.annotation.NameInMap("EndTs")
         private String endTs;
 
-        @NameInMap("PlanEndTs")
+        @com.aliyun.core.annotation.NameInMap("PlanEndTs")
         private String planEndTs;
 
-        @NameInMap("PlanName")
+        @com.aliyun.core.annotation.NameInMap("PlanName")
         private String planName;
 
-        @NameInMap("PlanStartTs")
+        @com.aliyun.core.annotation.NameInMap("PlanStartTs")
         private String planStartTs;
 
-        @NameInMap("ResourcePoolName")
+        @com.aliyun.core.annotation.NameInMap("ResourcePoolName")
         private String resourcePoolName;
 
-        @NameInMap("StartTs")
+        @com.aliyun.core.annotation.NameInMap("StartTs")
         private String startTs;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private ElasticDailyPlanList(Builder builder) {
@@ -218,7 +227,10 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The start date of the current-day scaling plan. The date is in the yyyy-MM-dd format.
+             * <p>The start date of the current-day scaling plan. The date is in the yyyy-MM-dd format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-02</p>
              */
             public Builder day(String day) {
                 this.day = day;
@@ -226,11 +238,14 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes involved in the scaling plan.
-             * <p>
+             * <p>The number of nodes involved in the scaling plan.</p>
+             * <ul>
+             * <li>If ElasticPlanType is set to <strong>worker</strong>, a value of 0 or null is returned.</li>
+             * <li>If ElasticPlanType is set to <strong>executorcombineworker</strong> or <strong>executor</strong>, a value greater than 0 is returned.</li>
+             * </ul>
              * 
-             * *   If ElasticPlanType is set to **worker**, a value of 0 or null is returned.
-             * *   If ElasticPlanType is set to **executorcombineworker** or **executor**, a value greater than 0 is returned.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder elasticNodeNum(Integer elasticNodeNum) {
                 this.elasticNodeNum = elasticNodeNum;
@@ -238,12 +253,15 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling plan. Default value: executorcombineworker. Valid values:
-             * <p>
+             * <p>The type of the scaling plan. Default value: executorcombineworker. Valid values:</p>
+             * <ul>
+             * <li><strong>worker</strong>: scales only elastic I/O resources.</li>
+             * <li><strong>executor</strong>: scales only computing resources.</li>
+             * <li><strong>executorcombineworker</strong>: scales both elastic I/O resources and computing resources by proportion.</li>
+             * </ul>
              * 
-             * *   **worker**: scales only elastic I/O resources.
-             * *   **executor**: scales only computing resources.
-             * *   **executorcombineworker**: scales both elastic I/O resources and computing resources by proportion.
+             * <strong>example:</strong>
+             * <p>worker</p>
              */
             public Builder elasticPlanType(String elasticPlanType) {
                 this.elasticPlanType = elasticPlanType;
@@ -251,16 +269,19 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specifications that can be scaled up by the scaling plan. Default value: 8 Core 64 GB. Valid values:
-             * <p>
+             * <p>The resource specifications that can be scaled up by the scaling plan. Default value: 8 Core 64 GB. Valid values:</p>
+             * <ul>
+             * <li>8 Core 64 GB</li>
+             * <li>16 Core 64 GB</li>
+             * <li>32 Core 64 GB</li>
+             * <li>64 Core 128 GB</li>
+             * <li>12 Core 96 GB</li>
+             * <li>24 Core 96 GB</li>
+             * <li>52 Core 86 GB</li>
+             * </ul>
              * 
-             * *   8 Core 64 GB
-             * *   16 Core 64 GB
-             * *   32 Core 64 GB
-             * *   64 Core 128 GB
-             * *   12 Core 96 GB
-             * *   24 Core 96 GB
-             * *   52 Core 86 GB
+             * <strong>example:</strong>
+             * <p>16 Core 64 GB</p>
              */
             public Builder elasticPlanWorkerSpec(String elasticPlanWorkerSpec) {
                 this.elasticPlanWorkerSpec = elasticPlanWorkerSpec;
@@ -268,7 +289,10 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The actual restoration time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.
+             * <p>The actual restoration time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-02 16:00:00</p>
              */
             public Builder endTs(String endTs) {
                 this.endTs = endTs;
@@ -276,7 +300,10 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled restoration time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.
+             * <p>The scheduled restoration time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-02 16:00:00</p>
              */
             public Builder planEndTs(String planEndTs) {
                 this.planEndTs = planEndTs;
@@ -284,7 +311,10 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scaling plan.
+             * <p>The name of the scaling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>realtimeplan</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -292,7 +322,10 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled scale-up time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.
+             * <p>The scheduled scale-up time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-02 15:00:00</p>
              */
             public Builder planStartTs(String planStartTs) {
                 this.planStartTs = planStartTs;
@@ -300,7 +333,10 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourcePoolName(String resourcePoolName) {
                 this.resourcePoolName = resourcePoolName;
@@ -308,7 +344,10 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The actual scale-up time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.
+             * <p>The actual scale-up time. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-02 16:00:00</p>
              */
             public Builder startTs(String startTs) {
                 this.startTs = startTs;
@@ -316,13 +355,16 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the current-day scaling plan. Multiple values are separated by commas (,). Valid values:
-             * <p>
+             * <p>The execution state of the current-day scaling plan. Multiple values are separated by commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The scaling plan is not executed.</li>
+             * <li><strong>2</strong>: The scaling plan is being executed.</li>
+             * <li><strong>3</strong>: The scaling plan is executed.</li>
+             * <li><strong>4</strong>: The scaling plan fails to be executed.</li>
+             * </ul>
              * 
-             * *   **1**: The scaling plan is not executed.
-             * *   **2**: The scaling plan is being executed.
-             * *   **3**: The scaling plan is executed.
-             * *   **4**: The scaling plan fails to be executed.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
