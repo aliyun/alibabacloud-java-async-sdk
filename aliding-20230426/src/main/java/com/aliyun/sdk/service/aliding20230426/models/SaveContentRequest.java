@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveContentRequest} extends {@link RequestModel}
  *
  * <p>SaveContentRequest</p>
@@ -122,7 +123,10 @@ public class SaveContentRequest extends Request {
         }
 
         /**
-         * Contents.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder contents(java.util.List < Contents> contents) {
             String contentsShrink = shrink(contents, "Contents", "json");
@@ -132,7 +136,10 @@ public class SaveContentRequest extends Request {
         }
 
         /**
-         * DdFrom.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client</p>
          */
         public Builder ddFrom(String ddFrom) {
             this.putBodyParameter("DdFrom", ddFrom);
@@ -141,7 +148,10 @@ public class SaveContentRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdfafdsfsafdfsaf</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -166,6 +176,12 @@ public class SaveContentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveContentRequest} extends {@link TeaModel}
+     *
+     * <p>SaveContentRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -194,7 +210,10 @@ public class SaveContentRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -208,6 +227,12 @@ public class SaveContentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SaveContentRequest} extends {@link TeaModel}
+     *
+     * <p>SaveContentRequest</p>
+     */
     public static class Contents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -288,7 +313,10 @@ public class SaveContentRequest extends Request {
             private Long type; 
 
             /**
-             * Content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <h3>序号1</h3>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -296,7 +324,10 @@ public class SaveContentRequest extends Request {
             }
 
             /**
-             * ContentType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>markdown</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -304,7 +335,10 @@ public class SaveContentRequest extends Request {
             }
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>今日完成工作</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,7 +346,10 @@ public class SaveContentRequest extends Request {
             }
 
             /**
-             * Sort.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sort(Long sort) {
                 this.sort = sort;
@@ -320,7 +357,10 @@ public class SaveContentRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -334,6 +374,12 @@ public class SaveContentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SaveContentRequest} extends {@link TeaModel}
+     *
+     * <p>SaveContentRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

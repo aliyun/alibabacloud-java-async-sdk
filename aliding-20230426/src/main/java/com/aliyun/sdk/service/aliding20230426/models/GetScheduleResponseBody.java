@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScheduleResponseBody} extends {@link TeaModel}
  *
  * <p>GetScheduleResponseBody</p>
@@ -110,6 +111,12 @@ public class GetScheduleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScheduleResponseBody</p>
+     */
     public static class End extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -191,6 +198,12 @@ public class GetScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScheduleResponseBody</p>
+     */
     public static class Start extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -272,6 +285,12 @@ public class GetScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScheduleResponseBody</p>
+     */
     public static class ScheduleItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private End end;
@@ -353,6 +372,12 @@ public class GetScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScheduleResponseBody</p>
+     */
     public static class ScheduleInformation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Error")
         private String error;

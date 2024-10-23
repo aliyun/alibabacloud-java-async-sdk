@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecallHonorRequest} extends {@link RequestModel}
  *
  * <p>RecallHonorRequest</p>
@@ -132,7 +133,10 @@ public class RecallHonorRequest extends Request {
         }
 
         /**
-         * honorId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21660610</p>
          */
         public Builder honorId(String honorId) {
             this.putBodyParameter("honorId", honorId);
@@ -141,7 +145,10 @@ public class RecallHonorRequest extends Request {
         }
 
         /**
-         * orgId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>345391052</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -150,7 +157,10 @@ public class RecallHonorRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>363784</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);
@@ -165,6 +175,12 @@ public class RecallHonorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RecallHonorRequest} extends {@link TeaModel}
+     *
+     * <p>RecallHonorRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -206,6 +222,12 @@ public class RecallHonorRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallHonorRequest} extends {@link TeaModel}
+     *
+     * <p>RecallHonorRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

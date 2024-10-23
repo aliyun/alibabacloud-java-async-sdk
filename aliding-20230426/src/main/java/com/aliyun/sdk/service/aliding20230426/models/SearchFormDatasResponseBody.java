@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchFormDatasResponseBody} extends {@link TeaModel}
  *
  * <p>SearchFormDatasResponseBody</p>
@@ -150,6 +151,12 @@ public class SearchFormDatasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchFormDatasResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDatasResponseBody</p>
+     */
     public static class UserName extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -231,6 +238,12 @@ public class SearchFormDatasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchFormDatasResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDatasResponseBody</p>
+     */
     public static class ModifyUser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -292,6 +305,12 @@ public class SearchFormDatasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchFormDatasResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDatasResponseBody</p>
+     */
     public static class OriginatorUserName extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -373,6 +392,12 @@ public class SearchFormDatasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchFormDatasResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDatasResponseBody</p>
+     */
     public static class Originator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -434,6 +459,12 @@ public class SearchFormDatasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchFormDatasResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDatasResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTimeGMT")
         private String createdTimeGMT;

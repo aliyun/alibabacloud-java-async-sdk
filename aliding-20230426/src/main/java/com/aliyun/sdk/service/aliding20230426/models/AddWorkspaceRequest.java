@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>AddWorkspaceRequest</p>
@@ -106,7 +107,7 @@ public class AddWorkspaceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -141,6 +142,12 @@ public class AddWorkspaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddWorkspaceRequest} extends {@link TeaModel}
+     *
+     * <p>AddWorkspaceRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -169,7 +176,10 @@ public class AddWorkspaceRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -183,6 +193,12 @@ public class AddWorkspaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddWorkspaceRequest} extends {@link TeaModel}
+     *
+     * <p>AddWorkspaceRequest</p>
+     */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -244,6 +260,12 @@ public class AddWorkspaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddWorkspaceRequest} extends {@link TeaModel}
+     *
+     * <p>AddWorkspaceRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

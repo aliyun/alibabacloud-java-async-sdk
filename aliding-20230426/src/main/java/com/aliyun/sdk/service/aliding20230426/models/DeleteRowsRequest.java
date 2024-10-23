@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRowsRequest} extends {@link RequestModel}
  *
  * <p>DeleteRowsRequest</p>
@@ -137,7 +138,10 @@ public class DeleteRowsRequest extends Request {
         }
 
         /**
-         * Row.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder row(Long row) {
             this.putBodyParameter("Row", row);
@@ -146,7 +150,10 @@ public class DeleteRowsRequest extends Request {
         }
 
         /**
-         * RowCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder rowCount(Long rowCount) {
             this.putBodyParameter("RowCount", rowCount);
@@ -155,7 +162,10 @@ public class DeleteRowsRequest extends Request {
         }
 
         /**
-         * SheetId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sheet1</p>
          */
         public Builder sheetId(String sheetId) {
             this.putBodyParameter("SheetId", sheetId);
@@ -174,7 +184,10 @@ public class DeleteRowsRequest extends Request {
         }
 
         /**
-         * WorkbookId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stxxxx</p>
          */
         public Builder workbookId(String workbookId) {
             this.putBodyParameter("WorkbookId", workbookId);
@@ -189,6 +202,12 @@ public class DeleteRowsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteRowsRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteRowsRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -230,6 +249,12 @@ public class DeleteRowsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteRowsRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteRowsRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteBatchTaskRequest} extends {@link RequestModel}
  *
  * <p>ExecuteBatchTaskRequest</p>
@@ -137,7 +138,10 @@ public class ExecuteBatchTaskRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKTxxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -146,7 +150,10 @@ public class ExecuteBatchTaskRequest extends Request {
         }
 
         /**
-         * OutResult.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disagree</p>
          */
         public Builder outResult(String outResult) {
             this.putBodyParameter("OutResult", outResult);
@@ -164,7 +171,10 @@ public class ExecuteBatchTaskRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -173,7 +183,10 @@ public class ExecuteBatchTaskRequest extends Request {
         }
 
         /**
-         * TaskInformationList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;taskId&quot;:&quot;2291xxx&quot;,&quot;formInstId&quot;:&quot;d84a79xxx&quot;}, {&quot;taskId&quot;:&quot;2291xxx&quot;,&quot;formInstId&quot;:&quot;f8035e2axxx&quot;}]</p>
          */
         public Builder taskInformationList(String taskInformationList) {
             this.putBodyParameter("TaskInformationList", taskInformationList);
@@ -188,6 +201,12 @@ public class ExecuteBatchTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteBatchTaskRequest} extends {@link TeaModel}
+     *
+     * <p>ExecuteBatchTaskRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -216,7 +235,10 @@ public class ExecuteBatchTaskRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

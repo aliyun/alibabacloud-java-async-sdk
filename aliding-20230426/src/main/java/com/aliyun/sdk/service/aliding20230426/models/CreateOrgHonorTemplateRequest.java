@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrgHonorTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateOrgHonorTemplateRequest</p>
@@ -192,7 +193,10 @@ public class CreateOrgHonorTemplateRequest extends Request {
         }
 
         /**
-         * avatarFrameMediaId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fsdfasdjf132342d</p>
          */
         public Builder avatarFrameMediaId(String avatarFrameMediaId) {
             this.putBodyParameter("avatarFrameMediaId", avatarFrameMediaId);
@@ -201,7 +205,10 @@ public class CreateOrgHonorTemplateRequest extends Request {
         }
 
         /**
-         * defaultBgColor.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#FFFBB4</p>
          */
         public Builder defaultBgColor(String defaultBgColor) {
             this.putBodyParameter("defaultBgColor", defaultBgColor);
@@ -210,7 +217,7 @@ public class CreateOrgHonorTemplateRequest extends Request {
         }
 
         /**
-         * medalDesc.
+         * <p>This parameter is required.</p>
          */
         public Builder medalDesc(String medalDesc) {
             this.putBodyParameter("medalDesc", medalDesc);
@@ -219,7 +226,10 @@ public class CreateOrgHonorTemplateRequest extends Request {
         }
 
         /**
-         * medalMediaId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1273adf23</p>
          */
         public Builder medalMediaId(String medalMediaId) {
             this.putBodyParameter("medalMediaId", medalMediaId);
@@ -228,7 +238,7 @@ public class CreateOrgHonorTemplateRequest extends Request {
         }
 
         /**
-         * medalName.
+         * <p>This parameter is required.</p>
          */
         public Builder medalName(String medalName) {
             this.putBodyParameter("medalName", medalName);
@@ -237,7 +247,10 @@ public class CreateOrgHonorTemplateRequest extends Request {
         }
 
         /**
-         * orgId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -246,7 +259,10 @@ public class CreateOrgHonorTemplateRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>363784</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);
@@ -261,6 +277,12 @@ public class CreateOrgHonorTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrgHonorTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrgHonorTemplateRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -302,6 +324,12 @@ public class CreateOrgHonorTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrgHonorTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrgHonorTemplateRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

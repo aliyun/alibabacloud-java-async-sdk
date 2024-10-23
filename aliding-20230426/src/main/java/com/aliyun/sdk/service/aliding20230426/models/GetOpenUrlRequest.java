@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpenUrlRequest} extends {@link RequestModel}
  *
  * <p>GetOpenUrlRequest</p>
@@ -136,7 +137,10 @@ public class GetOpenUrlRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKT0xxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -145,7 +149,10 @@ public class GetOpenUrlRequest extends Request {
         }
 
         /**
-         * FileUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliwork.com/fileHandle?appType=APP_VN7I6xxx&fileName=fileName.xlsx&instId=&type=download">https://www.aliwork.com/fileHandle?appType=APP_VN7I6xxx&amp;fileName=fileName.xlsx&amp;instId=&amp;type=download</a></p>
          */
         public Builder fileUrl(String fileUrl) {
             this.putBodyParameter("FileUrl", fileUrl);
@@ -163,7 +170,10 @@ public class GetOpenUrlRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -187,6 +197,12 @@ public class GetOpenUrlRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpenUrlRequest} extends {@link TeaModel}
+     *
+     * <p>GetOpenUrlRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -215,7 +231,10 @@ public class GetOpenUrlRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDentryResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDentryResponseBody</p>
@@ -349,7 +350,10 @@ public class QueryDentryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -410,6 +414,12 @@ public class QueryDentryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class Creator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -471,6 +481,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class IconUrl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
@@ -532,6 +548,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class LinkSourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
@@ -653,6 +675,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class HdIconVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
@@ -714,6 +742,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class IconVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
@@ -775,6 +809,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class Owner extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -836,6 +876,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class RecentListCreator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -897,6 +943,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class LinkSourceInfoIconUrl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
@@ -958,6 +1010,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class RecentListLinkSourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
@@ -1079,6 +1137,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class StatisticalInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WordCount")
         private Long wordCount;
@@ -1120,6 +1184,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class RecentListUpdater extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1181,6 +1251,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class RecentListVisitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DentryActions")
         private java.util.List < String > dentryActions;
@@ -1262,6 +1338,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class RecentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
@@ -1663,6 +1745,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class SpaceVisitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DentryActions")
         private java.util.List < String > dentryActions;
@@ -1744,6 +1832,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class Space extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cover")
         private String cover;
@@ -1985,6 +2079,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class Updater extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -2046,6 +2146,12 @@ public class QueryDentryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDentryResponseBody</p>
+     */
     public static class VisitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DentryActions")
         private java.util.List < String > dentryActions;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConversaionSpaceRequest} extends {@link RequestModel}
  *
  * <p>GetConversaionSpaceRequest</p>
@@ -92,7 +93,10 @@ public class GetConversaionSpaceRequest extends Request {
         }
 
         /**
-         * OpenConversationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cidB8Pzg****FIWPv2PMA==</p>
          */
         public Builder openConversationId(String openConversationId) {
             this.putBodyParameter("OpenConversationId", openConversationId);
@@ -117,6 +121,12 @@ public class GetConversaionSpaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetConversaionSpaceRequest} extends {@link TeaModel}
+     *
+     * <p>GetConversaionSpaceRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +155,10 @@ public class GetConversaionSpaceRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -159,6 +172,12 @@ public class GetConversaionSpaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConversaionSpaceRequest} extends {@link TeaModel}
+     *
+     * <p>GetConversaionSpaceRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

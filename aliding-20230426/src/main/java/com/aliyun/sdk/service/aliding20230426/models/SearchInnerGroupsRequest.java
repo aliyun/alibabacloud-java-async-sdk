@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchInnerGroupsRequest} extends {@link RequestModel}
  *
  * <p>SearchInnerGroupsRequest</p>
@@ -115,6 +116,12 @@ public class SearchInnerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchInnerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>SearchInnerGroupsRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -143,7 +150,10 @@ public class SearchInnerGroupsRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetReportTemplateByNameResponseBody} extends {@link TeaModel}
  *
  * <p>GetReportTemplateByNameResponseBody</p>
@@ -161,7 +162,10 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,6 +194,12 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetReportTemplateByNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetReportTemplateByNameResponseBody</p>
+     */
     public static class DefaultReceivedConvs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConversationId")
         private String conversationId;
@@ -251,6 +261,12 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetReportTemplateByNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetReportTemplateByNameResponseBody</p>
+     */
     public static class DefaultReceivers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
@@ -312,6 +328,12 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetReportTemplateByNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetReportTemplateByNameResponseBody</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;

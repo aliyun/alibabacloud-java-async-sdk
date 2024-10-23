@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMeetingRoomsRequest} extends {@link RequestModel}
  *
  * <p>AddMeetingRoomsRequest</p>
@@ -108,7 +109,10 @@ public class AddMeetingRoomsRequest extends Request {
         }
 
         /**
-         * CalendarId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("CalendarId", calendarId);
@@ -117,7 +121,10 @@ public class AddMeetingRoomsRequest extends Request {
         }
 
         /**
-         * EventId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U5Kxxxxx</p>
          */
         public Builder eventId(String eventId) {
             this.putBodyParameter("EventId", eventId);
@@ -126,7 +133,7 @@ public class AddMeetingRoomsRequest extends Request {
         }
 
         /**
-         * MeetingRoomsToAdd.
+         * <p>This parameter is required.</p>
          */
         public Builder meetingRoomsToAdd(java.util.List < MeetingRoomsToAdd> meetingRoomsToAdd) {
             String meetingRoomsToAddShrink = shrink(meetingRoomsToAdd, "MeetingRoomsToAdd", "json");
@@ -142,6 +149,12 @@ public class AddMeetingRoomsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddMeetingRoomsRequest} extends {@link TeaModel}
+     *
+     * <p>AddMeetingRoomsRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -170,7 +183,10 @@ public class AddMeetingRoomsRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -184,6 +200,12 @@ public class AddMeetingRoomsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddMeetingRoomsRequest} extends {@link TeaModel}
+     *
+     * <p>AddMeetingRoomsRequest</p>
+     */
     public static class MeetingRoomsToAdd extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoomId")
         private String roomId;

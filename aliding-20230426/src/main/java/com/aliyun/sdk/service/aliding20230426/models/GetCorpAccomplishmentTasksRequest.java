@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCorpAccomplishmentTasksRequest} extends {@link RequestModel}
  *
  * <p>GetCorpAccomplishmentTasksRequest</p>
@@ -214,7 +215,10 @@ public class GetCorpAccomplishmentTasksRequest extends Request {
         }
 
         /**
-         * CorpId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>corpIdxxx</p>
          */
         public Builder corpId(String corpId) {
             this.putBodyParameter("CorpId", corpId);
@@ -286,7 +290,10 @@ public class GetCorpAccomplishmentTasksRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder token(String token) {
             this.putBodyParameter("Token", token);
@@ -301,6 +308,12 @@ public class GetCorpAccomplishmentTasksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetCorpAccomplishmentTasksRequest} extends {@link TeaModel}
+     *
+     * <p>GetCorpAccomplishmentTasksRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -329,7 +342,10 @@ public class GetCorpAccomplishmentTasksRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMinutesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMinutesResponseBody</p>
@@ -110,6 +111,12 @@ public class QueryMinutesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMinutesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesResponseBody</p>
+     */
     public static class AudioList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;

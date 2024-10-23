@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodesRequest} extends {@link RequestModel}
  *
  * <p>GetNodesRequest</p>
@@ -106,7 +107,7 @@ public class GetNodesRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>This parameter is required.</p>
          */
         public Builder nodeIds(java.util.List < String > nodeIds) {
             String nodeIdsShrink = shrink(nodeIds, "NodeIds", "json");
@@ -142,6 +143,12 @@ public class GetNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodesRequest} extends {@link TeaModel}
+     *
+     * <p>GetNodesRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -170,7 +177,10 @@ public class GetNodesRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -184,6 +194,12 @@ public class GetNodesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNodesRequest} extends {@link TeaModel}
+     *
+     * <p>GetNodesRequest</p>
+     */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WithPermissionRole")
         private Boolean withPermissionRole;
@@ -245,6 +261,12 @@ public class GetNodesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNodesRequest} extends {@link TeaModel}
+     *
+     * <p>GetNodesRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

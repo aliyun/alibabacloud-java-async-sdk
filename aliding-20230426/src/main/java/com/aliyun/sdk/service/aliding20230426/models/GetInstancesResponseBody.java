@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstancesResponseBody</p>
@@ -150,6 +151,12 @@ public class GetInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesResponseBody</p>
+     */
     public static class Name extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -231,6 +238,12 @@ public class GetInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesResponseBody</p>
+     */
     public static class ActionExecutor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
@@ -332,6 +345,12 @@ public class GetInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesResponseBody</p>
+     */
     public static class OriginatorName extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -413,6 +432,12 @@ public class GetInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesResponseBody</p>
+     */
     public static class Originator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
@@ -514,6 +539,12 @@ public class GetInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionExecutor")
         private java.util.List < ActionExecutor> actionExecutor;

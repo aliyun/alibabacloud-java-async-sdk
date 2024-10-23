@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationRequest</p>
@@ -167,7 +168,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * CorpId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>corpid</p>
          */
         public Builder corpId(String corpId) {
             this.putBodyParameter("CorpId", corpId);
@@ -194,7 +198,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keyword</p>
          */
         public Builder token(String token) {
             this.putBodyParameter("Token", token);
@@ -209,6 +216,12 @@ public class ListApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>ListApplicationRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -237,7 +250,10 @@ public class ListApplicationRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

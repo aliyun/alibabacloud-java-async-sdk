@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetFormDataByIdListResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetFormDataByIdListResponseBody</p>
@@ -110,6 +111,12 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetFormDataByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetFormDataByIdListResponseBody</p>
+     */
     public static class Name extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -171,6 +178,12 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetFormDataByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetFormDataByIdListResponseBody</p>
+     */
     public static class ModifyUser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private Name name;
@@ -232,6 +245,12 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetFormDataByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetFormDataByIdListResponseBody</p>
+     */
     public static class OriginatorName extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -293,6 +312,12 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetFormDataByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetFormDataByIdListResponseBody</p>
+     */
     public static class Originator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private OriginatorName name;
@@ -354,6 +379,12 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetFormDataByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetFormDataByIdListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimeGMT")
         private String createTimeGMT;

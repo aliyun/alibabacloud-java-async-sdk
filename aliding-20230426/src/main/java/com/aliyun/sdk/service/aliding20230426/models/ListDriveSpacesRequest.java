@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDriveSpacesRequest} extends {@link RequestModel}
  *
  * <p>ListDriveSpacesRequest</p>
@@ -112,7 +113,7 @@ public class ListDriveSpacesRequest extends Request {
         } 
 
         /**
-         * AccountContext.
+         * <p>This parameter is required.</p>
          */
         public Builder accountContext(AccountContext accountContext) {
             String accountContextShrink = shrink(accountContext, "AccountContext", "json");
@@ -122,7 +123,10 @@ public class ListDriveSpacesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -140,7 +144,10 @@ public class ListDriveSpacesRequest extends Request {
         }
 
         /**
-         * SpaceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org</p>
          */
         public Builder spaceType(String spaceType) {
             this.putBodyParameter("SpaceType", spaceType);
@@ -165,6 +172,12 @@ public class ListDriveSpacesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListDriveSpacesRequest} extends {@link TeaModel}
+     *
+     * <p>ListDriveSpacesRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -193,7 +206,10 @@ public class ListDriveSpacesRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -207,6 +223,12 @@ public class ListDriveSpacesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDriveSpacesRequest} extends {@link TeaModel}
+     *
+     * <p>ListDriveSpacesRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOperationRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>GetOperationRecordsResponseBody</p>
@@ -110,6 +111,12 @@ public class GetOperationRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOperationRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOperationRecordsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;

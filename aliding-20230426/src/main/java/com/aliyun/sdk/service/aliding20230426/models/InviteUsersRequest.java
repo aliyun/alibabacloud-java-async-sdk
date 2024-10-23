@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InviteUsersRequest} extends {@link RequestModel}
  *
  * <p>InviteUsersRequest</p>
@@ -140,7 +141,10 @@ public class InviteUsersRequest extends Request {
         }
 
         /**
-         * conferenceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61289fxxx</p>
          */
         public Builder conferenceId(String conferenceId) {
             this.putBodyParameter("conferenceId", conferenceId);
@@ -165,6 +169,12 @@ public class InviteUsersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InviteUsersRequest} extends {@link TeaModel}
+     *
+     * <p>InviteUsersRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -193,7 +203,10 @@ public class InviteUsersRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -207,6 +220,12 @@ public class InviteUsersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InviteUsersRequest} extends {@link TeaModel}
+     *
+     * <p>InviteUsersRequest</p>
+     */
     public static class InviteeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nick")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -247,7 +266,10 @@ public class InviteUsersRequest extends Request {
             private String userId; 
 
             /**
-             * Nick.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试用户</p>
              */
             public Builder nick(String nick) {
                 this.nick = nick;
@@ -269,6 +291,12 @@ public class InviteUsersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InviteUsersRequest} extends {@link TeaModel}
+     *
+     * <p>InviteUsersRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
@@ -310,6 +338,12 @@ public class InviteUsersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InviteUsersRequest} extends {@link TeaModel}
+     *
+     * <p>InviteUsersRequest</p>
+     */
     public static class PhoneInviteeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InviteClient")
         private Boolean inviteClient;
@@ -381,7 +415,10 @@ public class InviteUsersRequest extends Request {
             }
 
             /**
-             * Nick.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试用户</p>
              */
             public Builder nick(String nick) {
                 this.nick = nick;

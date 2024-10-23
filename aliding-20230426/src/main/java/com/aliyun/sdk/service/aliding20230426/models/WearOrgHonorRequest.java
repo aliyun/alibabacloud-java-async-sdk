@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WearOrgHonorRequest} extends {@link RequestModel}
  *
  * <p>WearOrgHonorRequest</p>
@@ -147,7 +148,10 @@ public class WearOrgHonorRequest extends Request {
         }
 
         /**
-         * honorId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21659595</p>
          */
         public Builder honorId(String honorId) {
             this.putBodyParameter("honorId", honorId);
@@ -156,7 +160,10 @@ public class WearOrgHonorRequest extends Request {
         }
 
         /**
-         * orgId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -165,7 +172,10 @@ public class WearOrgHonorRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>363784</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);
@@ -174,7 +184,10 @@ public class WearOrgHonorRequest extends Request {
         }
 
         /**
-         * wear.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder wear(Boolean wear) {
             this.putBodyParameter("wear", wear);
@@ -189,6 +202,12 @@ public class WearOrgHonorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link WearOrgHonorRequest} extends {@link TeaModel}
+     *
+     * <p>WearOrgHonorRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -230,6 +249,12 @@ public class WearOrgHonorRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link WearOrgHonorRequest} extends {@link TeaModel}
+     *
+     * <p>WearOrgHonorRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

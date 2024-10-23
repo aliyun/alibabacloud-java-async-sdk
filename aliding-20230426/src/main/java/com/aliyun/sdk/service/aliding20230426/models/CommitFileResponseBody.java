@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitFileResponseBody} extends {@link TeaModel}
  *
  * <p>CommitFileResponseBody</p>
@@ -110,6 +111,12 @@ public class CommitFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CommitFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>CommitFileResponseBody</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
@@ -151,6 +158,12 @@ public class CommitFileResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CommitFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>CommitFileResponseBody</p>
+     */
     public static class Thumbnail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
@@ -232,6 +245,12 @@ public class CommitFileResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CommitFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>CommitFileResponseBody</p>
+     */
     public static class Dentry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppProperties")
         private java.util.Map < String, java.util.List<DentryAppPropertiesValue>> appProperties;

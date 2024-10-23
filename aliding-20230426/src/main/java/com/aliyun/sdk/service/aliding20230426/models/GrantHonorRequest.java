@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantHonorRequest} extends {@link RequestModel}
  *
  * <p>GrantHonorRequest</p>
@@ -242,7 +243,7 @@ public class GrantHonorRequest extends Request {
         }
 
         /**
-         * grantReason.
+         * <p>This parameter is required.</p>
          */
         public Builder grantReason(String grantReason) {
             this.putBodyParameter("grantReason", grantReason);
@@ -251,7 +252,7 @@ public class GrantHonorRequest extends Request {
         }
 
         /**
-         * granterName.
+         * <p>This parameter is required.</p>
          */
         public Builder granterName(String granterName) {
             this.putBodyParameter("granterName", granterName);
@@ -260,7 +261,10 @@ public class GrantHonorRequest extends Request {
         }
 
         /**
-         * honorId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21659398</p>
          */
         public Builder honorId(String honorId) {
             this.putBodyParameter("honorId", honorId);
@@ -297,7 +301,10 @@ public class GrantHonorRequest extends Request {
         }
 
         /**
-         * orgId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>345391052</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -306,7 +313,7 @@ public class GrantHonorRequest extends Request {
         }
 
         /**
-         * receiverUserIds.
+         * <p>This parameter is required.</p>
          */
         public Builder receiverUserIds(java.util.List < String > receiverUserIds) {
             String receiverUserIdsShrink = shrink(receiverUserIds, "receiverUserIds", "json");
@@ -316,7 +323,10 @@ public class GrantHonorRequest extends Request {
         }
 
         /**
-         * senderUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>363784</p>
          */
         public Builder senderUserId(String senderUserId) {
             this.putBodyParameter("senderUserId", senderUserId);
@@ -331,6 +341,12 @@ public class GrantHonorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GrantHonorRequest} extends {@link TeaModel}
+     *
+     * <p>GrantHonorRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -372,6 +388,12 @@ public class GrantHonorRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GrantHonorRequest} extends {@link TeaModel}
+     *
+     * <p>GrantHonorRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveRequest</p>
@@ -92,7 +93,10 @@ public class DeleteLiveRequest extends Request {
         }
 
         /**
-         * LiveId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4d38xxxxx</p>
          */
         public Builder liveId(String liveId) {
             this.putBodyParameter("LiveId", liveId);
@@ -117,6 +121,12 @@ public class DeleteLiveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteLiveRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteLiveRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +155,10 @@ public class DeleteLiveRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -159,6 +172,12 @@ public class DeleteLiveRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteLiveRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteLiveRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

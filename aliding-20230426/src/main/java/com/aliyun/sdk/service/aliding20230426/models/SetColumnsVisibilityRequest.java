@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetColumnsVisibilityRequest} extends {@link RequestModel}
  *
  * <p>SetColumnsVisibilityRequest</p>
@@ -152,7 +153,10 @@ public class SetColumnsVisibilityRequest extends Request {
         }
 
         /**
-         * Column.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder column(Long column) {
             this.putBodyParameter("Column", column);
@@ -161,7 +165,10 @@ public class SetColumnsVisibilityRequest extends Request {
         }
 
         /**
-         * ColumnCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder columnCount(Long columnCount) {
             this.putBodyParameter("ColumnCount", columnCount);
@@ -170,7 +177,10 @@ public class SetColumnsVisibilityRequest extends Request {
         }
 
         /**
-         * SheetId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sheet1</p>
          */
         public Builder sheetId(String sheetId) {
             this.putBodyParameter("SheetId", sheetId);
@@ -189,7 +199,10 @@ public class SetColumnsVisibilityRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hidden</p>
          */
         public Builder visibility(String visibility) {
             this.putBodyParameter("Visibility", visibility);
@@ -198,7 +211,10 @@ public class SetColumnsVisibilityRequest extends Request {
         }
 
         /**
-         * WorkbookId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stxxxx</p>
          */
         public Builder workbookId(String workbookId) {
             this.putBodyParameter("WorkbookId", workbookId);
@@ -213,6 +229,12 @@ public class SetColumnsVisibilityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetColumnsVisibilityRequest} extends {@link TeaModel}
+     *
+     * <p>SetColumnsVisibilityRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -254,6 +276,12 @@ public class SetColumnsVisibilityRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetColumnsVisibilityRequest} extends {@link TeaModel}
+     *
+     * <p>SetColumnsVisibilityRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

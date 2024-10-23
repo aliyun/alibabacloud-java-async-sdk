@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEventResponseBody} extends {@link TeaModel}
  *
  * <p>GetEventResponseBody</p>
@@ -409,7 +410,10 @@ public class GetEventResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>requestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -470,6 +474,12 @@ public class GetEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class Attendees extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -591,6 +601,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class Categories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -632,6 +648,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class End extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -713,6 +735,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class SharedProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BelongCorpId")
         private String belongCorpId;
@@ -774,6 +802,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class ExtendedProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SharedProperties")
         private SharedProperties sharedProperties;
@@ -815,6 +849,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class Location extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -862,7 +902,7 @@ public class GetEventResponseBody extends TeaModel {
             }
 
             /**
-             * --
+             * <p>--</p>
              */
             public Builder meetingRooms(java.util.List < String > meetingRooms) {
                 this.meetingRooms = meetingRooms;
@@ -876,6 +916,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class MeetingRooms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -957,6 +1003,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class OnlineMeetingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConferenceId")
         private String conferenceId;
@@ -1058,6 +1110,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class Organizer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -1159,6 +1217,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class OriginStart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
@@ -1200,6 +1264,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class Pattern extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DayOfMonth")
         private Integer dayOfMonth;
@@ -1321,6 +1391,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class Range extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
@@ -1402,6 +1478,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class Recurrence extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pattern")
         private Pattern pattern;
@@ -1463,6 +1545,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class Reminders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
@@ -1524,6 +1612,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class RichTextDescription extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
@@ -1565,6 +1659,12 @@ public class GetEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventResponseBody</p>
+     */
     public static class Start extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;

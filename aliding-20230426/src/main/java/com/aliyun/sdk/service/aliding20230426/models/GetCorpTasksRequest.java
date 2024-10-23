@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCorpTasksRequest} extends {@link RequestModel}
  *
  * <p>GetCorpTasksRequest</p>
@@ -206,7 +207,10 @@ public class GetCorpTasksRequest extends Request {
         }
 
         /**
-         * AppTypes.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKxxx</p>
          */
         public Builder appTypes(String appTypes) {
             this.putBodyParameter("AppTypes", appTypes);
@@ -215,7 +219,10 @@ public class GetCorpTasksRequest extends Request {
         }
 
         /**
-         * CorpId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>corpId</p>
          */
         public Builder corpId(String corpId) {
             this.putBodyParameter("CorpId", corpId);
@@ -287,7 +294,10 @@ public class GetCorpTasksRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder token(String token) {
             this.putBodyParameter("Token", token);
@@ -302,6 +312,12 @@ public class GetCorpTasksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetCorpTasksRequest} extends {@link TeaModel}
+     *
+     * <p>GetCorpTasksRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -330,7 +346,10 @@ public class GetCorpTasksRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRecordMinutesUrlResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRecordMinutesUrlResponseBody</p>
@@ -110,6 +111,12 @@ public class QueryRecordMinutesUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRecordMinutesUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRecordMinutesUrlResponseBody</p>
+     */
     public static class RecordMinutesUrls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordMinutesUrl")
         private String recordMinutesUrl;

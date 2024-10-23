@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMeetingRoomResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMeetingRoomResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateMeetingRoomResponseBody extends TeaModel {
         private String vendorType; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

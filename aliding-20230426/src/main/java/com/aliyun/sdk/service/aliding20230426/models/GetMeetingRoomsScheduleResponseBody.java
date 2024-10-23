@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMeetingRoomsScheduleResponseBody} extends {@link TeaModel}
  *
  * <p>GetMeetingRoomsScheduleResponseBody</p>
@@ -49,7 +50,10 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         private java.util.List < ScheduleInformation> scheduleInformation; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMeetingRoomsScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMeetingRoomsScheduleResponseBody</p>
+     */
     public static class End extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
@@ -131,6 +141,12 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMeetingRoomsScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMeetingRoomsScheduleResponseBody</p>
+     */
     public static class Organizer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -172,6 +188,12 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMeetingRoomsScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMeetingRoomsScheduleResponseBody</p>
+     */
     public static class Start extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
@@ -233,6 +255,12 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMeetingRoomsScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMeetingRoomsScheduleResponseBody</p>
+     */
     public static class ScheduleItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private End end;
@@ -354,6 +382,12 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMeetingRoomsScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMeetingRoomsScheduleResponseBody</p>
+     */
     public static class ScheduleInformation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Error")
         private String error;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLiveRequest} extends {@link RequestModel}
  *
  * <p>CreateLiveRequest</p>
@@ -182,7 +183,10 @@ public class CreateLiveRequest extends Request {
         }
 
         /**
-         * PreEndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698596800000</p>
          */
         public Builder preEndTime(Long preEndTime) {
             this.putBodyParameter("PreEndTime", preEndTime);
@@ -191,7 +195,10 @@ public class CreateLiveRequest extends Request {
         }
 
         /**
-         * PreStartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1691596800000</p>
          */
         public Builder preStartTime(Long preStartTime) {
             this.putBodyParameter("PreStartTime", preStartTime);
@@ -219,7 +226,10 @@ public class CreateLiveRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);
@@ -234,6 +244,12 @@ public class CreateLiveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLiveRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLiveRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -262,7 +278,10 @@ public class CreateLiveRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -276,6 +295,12 @@ public class CreateLiveRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLiveRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLiveRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

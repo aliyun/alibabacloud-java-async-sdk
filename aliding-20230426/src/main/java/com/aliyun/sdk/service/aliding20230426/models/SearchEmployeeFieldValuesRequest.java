@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchEmployeeFieldValuesRequest} extends {@link RequestModel}
  *
  * <p>SearchEmployeeFieldValuesRequest</p>
@@ -322,6 +323,12 @@ public class SearchEmployeeFieldValuesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchEmployeeFieldValuesRequest} extends {@link TeaModel}
+     *
+     * <p>SearchEmployeeFieldValuesRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -350,7 +357,10 @@ public class SearchEmployeeFieldValuesRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocContentRequest} extends {@link RequestModel}
  *
  * <p>GetDocContentRequest</p>
@@ -121,7 +122,10 @@ public class GetDocContentRequest extends Request {
         }
 
         /**
-         * DentryUuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dentry_uuid</p>
          */
         public Builder dentryUuid(String dentryUuid) {
             this.putBodyParameter("DentryUuid", dentryUuid);
@@ -149,7 +153,7 @@ public class GetDocContentRequest extends Request {
         }
 
         /**
-         * userToken.
+         * <p>This parameter is required.</p>
          */
         public Builder userToken(String userToken) {
             this.putBodyParameter("userToken", userToken);
@@ -164,6 +168,12 @@ public class GetDocContentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocContentRequest} extends {@link TeaModel}
+     *
+     * <p>GetDocContentRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -192,7 +202,10 @@ public class GetDocContentRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ba3a9b612345678d8fedf544ef69d19e</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -206,6 +219,12 @@ public class GetDocContentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocContentRequest} extends {@link TeaModel}
+     *
+     * <p>GetDocContentRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

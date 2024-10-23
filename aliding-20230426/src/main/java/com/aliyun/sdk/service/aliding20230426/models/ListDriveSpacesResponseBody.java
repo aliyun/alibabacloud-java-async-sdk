@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDriveSpacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDriveSpacesResponseBody</p>
@@ -130,6 +131,12 @@ public class ListDriveSpacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDriveSpacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDriveSpacesResponseBody</p>
+     */
     public static class Spaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

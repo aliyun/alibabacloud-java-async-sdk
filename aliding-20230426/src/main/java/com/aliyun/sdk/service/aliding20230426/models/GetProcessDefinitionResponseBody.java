@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProcessDefinitionResponseBody} extends {@link TeaModel}
  *
  * <p>GetProcessDefinitionResponseBody</p>
@@ -290,6 +291,12 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetProcessDefinitionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProcessDefinitionResponseBody</p>
+     */
     public static class MasterDataDepartments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
@@ -471,6 +478,12 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProcessDefinitionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProcessDefinitionResponseBody</p>
+     */
     public static class Originator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DepartmentDescription")
         private String departmentDescription;
@@ -692,6 +705,12 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProcessDefinitionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProcessDefinitionResponseBody</p>
+     */
     public static class OwnersMasterDataDepartments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
@@ -873,6 +892,12 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProcessDefinitionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProcessDefinitionResponseBody</p>
+     */
     public static class Owners extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DepartmentDescription")
         private String departmentDescription;
@@ -1094,6 +1119,12 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProcessDefinitionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProcessDefinitionResponseBody</p>
+     */
     public static class Activity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
@@ -1215,6 +1246,12 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProcessDefinitionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProcessDefinitionResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionerId")
         private String actionerId;

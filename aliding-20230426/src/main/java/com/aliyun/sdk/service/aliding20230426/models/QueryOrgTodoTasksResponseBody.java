@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrgTodoTasksResponseBody} extends {@link TeaModel}
  *
  * <p>QueryOrgTodoTasksResponseBody</p>
@@ -69,7 +70,10 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrgTodoTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrgTodoTasksResponseBody</p>
+     */
     public static class DetailUrl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appUrl")
         private String appUrl;
@@ -151,6 +161,12 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrgTodoTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrgTodoTasksResponseBody</p>
+     */
     public static class TodoCards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bizTag")
         private String bizTag;

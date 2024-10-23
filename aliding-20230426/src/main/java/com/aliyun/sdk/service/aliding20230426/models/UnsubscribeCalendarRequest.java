@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnsubscribeCalendarRequest} extends {@link RequestModel}
  *
  * <p>UnsubscribeCalendarRequest</p>
@@ -78,7 +79,10 @@ public class UnsubscribeCalendarRequest extends Request {
         }
 
         /**
-         * CalendarId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MzM5Mxxx</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("CalendarId", calendarId);
@@ -93,6 +97,12 @@ public class UnsubscribeCalendarRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UnsubscribeCalendarRequest} extends {@link TeaModel}
+     *
+     * <p>UnsubscribeCalendarRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -121,7 +131,10 @@ public class UnsubscribeCalendarRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

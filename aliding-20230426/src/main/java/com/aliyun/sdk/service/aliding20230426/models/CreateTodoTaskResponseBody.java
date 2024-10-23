@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTodoTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTodoTaskResponseBody</p>
@@ -425,7 +426,10 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -470,6 +474,12 @@ public class CreateTodoTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTodoTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskResponseBody</p>
+     */
     public static class ContentFieldList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fieldKey")
         private String fieldKey;
@@ -509,7 +519,10 @@ public class CreateTodoTaskResponseBody extends TeaModel {
             private String fieldValue; 
 
             /**
-             * fieldKey
+             * <p>fieldKey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fieldKey</p>
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -517,7 +530,10 @@ public class CreateTodoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * fieldValue
+             * <p>fieldValue</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fieldValue</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -531,6 +547,12 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTodoTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskResponseBody</p>
+     */
     public static class DetailUrl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appUrl")
         private String appUrl;
@@ -592,6 +614,12 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTodoTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskResponseBody</p>
+     */
     public static class NotifyConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dingNotify")
         private String dingNotify;

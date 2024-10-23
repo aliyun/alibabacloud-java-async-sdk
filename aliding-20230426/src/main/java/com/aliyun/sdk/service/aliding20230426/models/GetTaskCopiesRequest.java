@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskCopiesRequest} extends {@link RequestModel}
  *
  * <p>GetTaskCopiesRequest</p>
@@ -262,7 +263,10 @@ public class GetTaskCopiesRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -277,6 +281,12 @@ public class GetTaskCopiesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskCopiesRequest} extends {@link TeaModel}
+     *
+     * <p>GetTaskCopiesRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -305,7 +315,10 @@ public class GetTaskCopiesRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

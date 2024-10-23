@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WearOrgHonorResponseBody} extends {@link TeaModel}
  *
  * <p>WearOrgHonorResponseBody</p>
@@ -170,6 +171,12 @@ public class WearOrgHonorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link WearOrgHonorResponseBody} extends {@link TeaModel}
+     *
+     * <p>WearOrgHonorResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
         private Object data;

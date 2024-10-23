@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryConferenceMembersResponseBody} extends {@link TeaModel}
  *
  * <p>QueryConferenceMembersResponseBody</p>
@@ -89,7 +90,10 @@ public class QueryConferenceMembersResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class QueryConferenceMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryConferenceMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryConferenceMembersResponseBody</p>
+     */
     public static class MemberModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttendStatus")
         private Integer attendStatus;

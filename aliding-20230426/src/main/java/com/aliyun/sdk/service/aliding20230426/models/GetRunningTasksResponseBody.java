@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRunningTasksResponseBody} extends {@link TeaModel}
  *
  * <p>GetRunningTasksResponseBody</p>
@@ -110,6 +111,12 @@ public class GetRunningTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRunningTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRunningTasksResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveTimeGMT")
         private String activeTimeGMT;

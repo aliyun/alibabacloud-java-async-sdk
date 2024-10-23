@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryLiveWatchUserListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryLiveWatchUserListResponseBody</p>
@@ -77,7 +78,10 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryLiveWatchUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLiveWatchUserListResponseBody</p>
+     */
     public static class OrgUsesList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
@@ -231,6 +241,12 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryLiveWatchUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLiveWatchUserListResponseBody</p>
+     */
     public static class OutOrgUserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;

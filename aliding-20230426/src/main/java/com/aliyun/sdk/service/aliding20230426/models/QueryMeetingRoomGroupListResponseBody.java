@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMeetingRoomGroupListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMeetingRoomGroupListResponseBody</p>
@@ -49,7 +50,10 @@ public class QueryMeetingRoomGroupListResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class QueryMeetingRoomGroupListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMeetingRoomGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMeetingRoomGroupListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;

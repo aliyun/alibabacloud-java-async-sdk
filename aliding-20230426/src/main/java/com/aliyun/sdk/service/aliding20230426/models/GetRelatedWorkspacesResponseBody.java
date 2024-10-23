@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRelatedWorkspacesResponseBody} extends {@link TeaModel}
  *
  * <p>GetRelatedWorkspacesResponseBody</p>
@@ -110,6 +111,12 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRelatedWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRelatedWorkspacesResponseBody</p>
+     */
     public static class RecentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastEditTime")
         private Long lastEditTime;
@@ -211,6 +218,12 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRelatedWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRelatedWorkspacesResponseBody</p>
+     */
     public static class Workspaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;

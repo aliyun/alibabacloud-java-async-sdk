@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileDownloadInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileDownloadInfoResponseBody</p>
@@ -130,6 +131,12 @@ public class GetFileDownloadInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileDownloadInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileDownloadInfoResponseBody</p>
+     */
     public static class HeaderSignatureInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpirationSeconds")
         private Integer expirationSeconds;

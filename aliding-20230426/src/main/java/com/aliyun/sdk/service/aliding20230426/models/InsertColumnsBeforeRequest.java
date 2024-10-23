@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertColumnsBeforeRequest} extends {@link RequestModel}
  *
  * <p>InsertColumnsBeforeRequest</p>
@@ -137,7 +138,10 @@ public class InsertColumnsBeforeRequest extends Request {
         }
 
         /**
-         * Column.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder column(Long column) {
             this.putBodyParameter("Column", column);
@@ -146,7 +150,10 @@ public class InsertColumnsBeforeRequest extends Request {
         }
 
         /**
-         * ColumnCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder columnCount(Long columnCount) {
             this.putBodyParameter("ColumnCount", columnCount);
@@ -155,7 +162,10 @@ public class InsertColumnsBeforeRequest extends Request {
         }
 
         /**
-         * SheetId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sheet1</p>
          */
         public Builder sheetId(String sheetId) {
             this.putBodyParameter("SheetId", sheetId);
@@ -174,7 +184,10 @@ public class InsertColumnsBeforeRequest extends Request {
         }
 
         /**
-         * WorkbookId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stxxxx</p>
          */
         public Builder workbookId(String workbookId) {
             this.putBodyParameter("WorkbookId", workbookId);
@@ -189,6 +202,12 @@ public class InsertColumnsBeforeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InsertColumnsBeforeRequest} extends {@link TeaModel}
+     *
+     * <p>InsertColumnsBeforeRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -230,6 +249,12 @@ public class InsertColumnsBeforeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsertColumnsBeforeRequest} extends {@link TeaModel}
+     *
+     * <p>InsertColumnsBeforeRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

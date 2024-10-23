@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryScheduleConferenceInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryScheduleConferenceInfoRequest</p>
@@ -162,6 +163,12 @@ public class QueryScheduleConferenceInfoRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryScheduleConferenceInfoRequest} extends {@link TeaModel}
+     *
+     * <p>QueryScheduleConferenceInfoRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -203,6 +210,12 @@ public class QueryScheduleConferenceInfoRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryScheduleConferenceInfoRequest} extends {@link TeaModel}
+     *
+     * <p>QueryScheduleConferenceInfoRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

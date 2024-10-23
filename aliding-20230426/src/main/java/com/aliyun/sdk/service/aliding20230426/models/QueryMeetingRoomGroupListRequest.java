@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMeetingRoomGroupListRequest} extends {@link RequestModel}
  *
  * <p>QueryMeetingRoomGroupListRequest</p>
@@ -117,6 +118,12 @@ public class QueryMeetingRoomGroupListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMeetingRoomGroupListRequest} extends {@link TeaModel}
+     *
+     * <p>QueryMeetingRoomGroupListRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +152,10 @@ public class QueryMeetingRoomGroupListRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -159,6 +169,12 @@ public class QueryMeetingRoomGroupListRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMeetingRoomGroupListRequest} extends {@link TeaModel}
+     *
+     * <p>QueryMeetingRoomGroupListRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

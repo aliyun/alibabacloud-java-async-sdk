@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSearchKeywordRequest} extends {@link RequestModel}
  *
  * <p>CreateSearchKeywordRequest</p>
@@ -209,6 +210,12 @@ public class CreateSearchKeywordRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSearchKeywordRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSearchKeywordRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("userToken")
         private String userToken;
@@ -250,6 +257,12 @@ public class CreateSearchKeywordRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSearchKeywordRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSearchKeywordRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEventsViewResponseBody} extends {@link TeaModel}
  *
  * <p>ListEventsViewResponseBody</p>
@@ -77,7 +78,10 @@ public class ListEventsViewResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListEventsViewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class Attendees extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -211,6 +221,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class Categories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -252,6 +268,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class End extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -333,6 +355,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class SharedProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BelongCorpId")
         private String belongCorpId;
@@ -394,6 +422,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class ExtendedProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SharedProperties")
         private SharedProperties sharedProperties;
@@ -435,6 +469,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class Location extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -496,6 +536,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class MeetingRooms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -577,6 +623,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class OnlineMeetingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConferenceId")
         private String conferenceId;
@@ -678,6 +730,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class Organizer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -779,6 +837,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class OriginStart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
@@ -820,6 +884,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class Pattern extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DayOfMonth")
         private Integer dayOfMonth;
@@ -941,6 +1011,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class Range extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
@@ -1022,6 +1098,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class Recurrence extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pattern")
         private Pattern pattern;
@@ -1083,6 +1165,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class RichTextDescription extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
@@ -1124,6 +1212,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class Start extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -1205,6 +1299,12 @@ public class ListEventsViewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEventsViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventsViewResponseBody</p>
+     */
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attendees")
         private java.util.List < Attendees> attendees;

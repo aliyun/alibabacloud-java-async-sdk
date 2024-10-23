@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserHonorsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserHonorsResponseBody</p>
@@ -77,7 +78,10 @@ public class QueryUserHonorsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class QueryUserHonorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserHonorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserHonorsResponseBody</p>
+     */
     public static class GrantHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("grantTime")
         private Long grantTime;
@@ -151,6 +161,12 @@ public class QueryUserHonorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryUserHonorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserHonorsResponseBody</p>
+     */
     public static class Honors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expirationTime")
         private Long expirationTime;

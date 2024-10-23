@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVideoConferenceRequest} extends {@link RequestModel}
  *
  * <p>CreateVideoConferenceRequest</p>
@@ -106,7 +107,7 @@ public class CreateVideoConferenceRequest extends Request {
         }
 
         /**
-         * ConfTitle.
+         * <p>This parameter is required.</p>
          */
         public Builder confTitle(String confTitle) {
             this.putBodyParameter("ConfTitle", confTitle);
@@ -140,6 +141,12 @@ public class CreateVideoConferenceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVideoConferenceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVideoConferenceRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -168,7 +175,7 @@ public class CreateVideoConferenceRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

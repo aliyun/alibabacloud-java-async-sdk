@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFormListInAppRequest} extends {@link RequestModel}
  *
  * <p>GetFormListInAppRequest</p>
@@ -135,7 +136,10 @@ public class GetFormListInAppRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKT0xxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -171,7 +175,10 @@ public class GetFormListInAppRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -186,6 +193,12 @@ public class GetFormListInAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetFormListInAppRequest} extends {@link TeaModel}
+     *
+     * <p>GetFormListInAppRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -214,7 +227,10 @@ public class GetFormListInAppRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

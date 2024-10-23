@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveFormDataRequest} extends {@link RequestModel}
  *
  * <p>SaveFormDataRequest</p>
@@ -137,7 +138,10 @@ public class SaveFormDataRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKxxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -146,7 +150,10 @@ public class SaveFormDataRequest extends Request {
         }
 
         /**
-         * FormDataJson.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;textField_jcpm6agt&quot;: &quot;单行&quot;,&quot;employeeField_jcos0sar&quot;: [&quot;workno&quot;]}</p>
          */
         public Builder formDataJson(String formDataJson) {
             this.putBodyParameter("FormDataJson", formDataJson);
@@ -155,7 +162,10 @@ public class SaveFormDataRequest extends Request {
         }
 
         /**
-         * FormUuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORM-EF6Y4G8WO2FN0SUB43TDQ3CGC3FMFQ1G9400RCJ3</p>
          */
         public Builder formUuid(String formUuid) {
             this.putBodyParameter("FormUuid", formUuid);
@@ -173,7 +183,10 @@ public class SaveFormDataRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -188,6 +201,12 @@ public class SaveFormDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveFormDataRequest} extends {@link TeaModel}
+     *
+     * <p>SaveFormDataRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -216,7 +235,10 @@ public class SaveFormDataRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

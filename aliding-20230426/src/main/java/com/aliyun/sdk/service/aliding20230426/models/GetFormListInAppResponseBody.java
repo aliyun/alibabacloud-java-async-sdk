@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFormListInAppResponseBody} extends {@link TeaModel}
  *
  * <p>GetFormListInAppResponseBody</p>
@@ -170,6 +171,12 @@ public class GetFormListInAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFormListInAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFormListInAppResponseBody</p>
+     */
     public static class Title extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnUS")
         private String enUS;
@@ -231,6 +238,12 @@ public class GetFormListInAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFormListInAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFormListInAppResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskCopiesResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskCopiesResponseBody</p>
@@ -150,6 +151,12 @@ public class GetTaskCopiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskCopiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskCopiesResponseBody</p>
+     */
     public static class CurrentActivityInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
@@ -271,6 +278,12 @@ public class GetTaskCopiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskCopiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskCopiesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionExecutorId")
         private java.util.List < String > actionExecutorId;

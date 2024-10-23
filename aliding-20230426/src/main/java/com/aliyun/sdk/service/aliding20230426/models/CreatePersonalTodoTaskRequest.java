@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePersonalTodoTaskRequest} extends {@link RequestModel}
  *
  * <p>CreatePersonalTodoTaskRequest</p>
@@ -181,7 +182,10 @@ public class CreatePersonalTodoTaskRequest extends Request {
         }
 
         /**
-         * ExecutorIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ &quot;012345&quot; ]</p>
          */
         public Builder executorIds(java.util.List < String > executorIds) {
             String executorIdsShrink = shrink(executorIds, "ExecutorIds", "json");
@@ -211,7 +215,10 @@ public class CreatePersonalTodoTaskRequest extends Request {
         }
 
         /**
-         * Subject.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>待办标题</p>
          */
         public Builder subject(String subject) {
             this.putBodyParameter("Subject", subject);
@@ -236,6 +243,12 @@ public class CreatePersonalTodoTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePersonalTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePersonalTodoTaskRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -264,7 +277,10 @@ public class CreatePersonalTodoTaskRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ba3a9b612345678d8fedf544ef69d19e</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -278,6 +294,12 @@ public class CreatePersonalTodoTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePersonalTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePersonalTodoTaskRequest</p>
+     */
     public static class NotifyConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DingNotify")
         private String dingNotify;
@@ -319,6 +341,12 @@ public class CreatePersonalTodoTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePersonalTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePersonalTodoTaskRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

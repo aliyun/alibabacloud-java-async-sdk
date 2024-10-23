@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StatisticsListByTypeReportRequest} extends {@link RequestModel}
  *
  * <p>StatisticsListByTypeReportRequest</p>
@@ -137,7 +138,10 @@ public class StatisticsListByTypeReportRequest extends Request {
         }
 
         /**
-         * Offset.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder offset(Long offset) {
             this.putBodyParameter("Offset", offset);
@@ -146,7 +150,10 @@ public class StatisticsListByTypeReportRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173xxxx</p>
          */
         public Builder reportId(String reportId) {
             this.putBodyParameter("ReportId", reportId);
@@ -155,7 +162,10 @@ public class StatisticsListByTypeReportRequest extends Request {
         }
 
         /**
-         * Size.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Long size) {
             this.putBodyParameter("Size", size);
@@ -174,7 +184,10 @@ public class StatisticsListByTypeReportRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173xxxx</p>
          */
         public Builder type(Long type) {
             this.putBodyParameter("Type", type);
@@ -189,6 +202,12 @@ public class StatisticsListByTypeReportRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StatisticsListByTypeReportRequest} extends {@link TeaModel}
+     *
+     * <p>StatisticsListByTypeReportRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -217,7 +236,10 @@ public class StatisticsListByTypeReportRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -231,6 +253,12 @@ public class StatisticsListByTypeReportRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StatisticsListByTypeReportRequest} extends {@link TeaModel}
+     *
+     * <p>StatisticsListByTypeReportRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

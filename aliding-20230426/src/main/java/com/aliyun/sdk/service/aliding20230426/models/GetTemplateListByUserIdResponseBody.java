@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateListByUserIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateListByUserIdResponseBody</p>
@@ -69,7 +70,10 @@ public class GetTemplateListByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class GetTemplateListByUserIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateListByUserIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateListByUserIdResponseBody</p>
+     */
     public static class TemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IconUrl")
         private String iconUrl;

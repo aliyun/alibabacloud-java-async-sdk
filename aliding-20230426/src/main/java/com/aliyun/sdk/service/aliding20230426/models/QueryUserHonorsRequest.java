@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserHonorsRequest} extends {@link RequestModel}
  *
  * <p>QueryUserHonorsRequest</p>
@@ -155,7 +156,10 @@ public class QueryUserHonorsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("nextToken", nextToken);
@@ -164,7 +168,10 @@ public class QueryUserHonorsRequest extends Request {
         }
 
         /**
-         * orgId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -173,7 +180,10 @@ public class QueryUserHonorsRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);
@@ -188,6 +198,12 @@ public class QueryUserHonorsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserHonorsRequest} extends {@link TeaModel}
+     *
+     * <p>QueryUserHonorsRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -229,6 +245,12 @@ public class QueryUserHonorsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryUserHonorsRequest} extends {@link TeaModel}
+     *
+     * <p>QueryUserHonorsRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

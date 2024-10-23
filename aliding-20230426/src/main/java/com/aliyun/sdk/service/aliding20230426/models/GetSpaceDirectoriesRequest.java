@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSpaceDirectoriesRequest} extends {@link RequestModel}
  *
  * <p>GetSpaceDirectoriesRequest</p>
@@ -144,7 +145,10 @@ public class GetSpaceDirectoriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -162,7 +166,10 @@ public class GetSpaceDirectoriesRequest extends Request {
         }
 
         /**
-         * SpaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qweqwe</p>
          */
         public Builder spaceId(String spaceId) {
             this.putBodyParameter("SpaceId", spaceId);
@@ -187,6 +194,12 @@ public class GetSpaceDirectoriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetSpaceDirectoriesRequest} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -215,7 +228,10 @@ public class GetSpaceDirectoriesRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -229,6 +245,12 @@ public class GetSpaceDirectoriesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesRequest} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

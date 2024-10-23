@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConversaionSpaceResponseBody} extends {@link TeaModel}
  *
  * <p>GetConversaionSpaceResponseBody</p>
@@ -110,6 +111,12 @@ public class GetConversaionSpaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConversaionSpaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConversaionSpaceResponseBody</p>
+     */
     public static class Space extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;

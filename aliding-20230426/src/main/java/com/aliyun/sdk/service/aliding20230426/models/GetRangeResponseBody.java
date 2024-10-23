@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRangeResponseBody} extends {@link TeaModel}
  *
  * <p>GetRangeResponseBody</p>
@@ -109,7 +110,10 @@ public class GetRangeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class GetRangeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRangeResponseBody</p>
+     */
     public static class BackgroundColors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Red")
         private Integer red;
@@ -193,7 +203,10 @@ public class GetRangeResponseBody extends TeaModel {
             private String hexString; 
 
             /**
-             * red
+             * <p>red</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder red(Integer red) {
                 this.red = red;
@@ -201,7 +214,10 @@ public class GetRangeResponseBody extends TeaModel {
             }
 
             /**
-             * green
+             * <p>green</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder green(Integer green) {
                 this.green = green;
@@ -209,7 +225,10 @@ public class GetRangeResponseBody extends TeaModel {
             }
 
             /**
-             * blue
+             * <p>blue</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder blue(Integer blue) {
                 this.blue = blue;
@@ -217,7 +236,10 @@ public class GetRangeResponseBody extends TeaModel {
             }
 
             /**
-             * hexString
+             * <p>hexString</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#000000</p>
              */
             public Builder hexString(String hexString) {
                 this.hexString = hexString;

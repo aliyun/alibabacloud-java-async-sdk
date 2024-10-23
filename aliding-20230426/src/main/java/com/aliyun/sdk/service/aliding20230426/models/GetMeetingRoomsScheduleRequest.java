@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMeetingRoomsScheduleRequest} extends {@link RequestModel}
  *
  * <p>GetMeetingRoomsScheduleRequest</p>
@@ -108,7 +109,10 @@ public class GetMeetingRoomsScheduleRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -117,7 +121,10 @@ public class GetMeetingRoomsScheduleRequest extends Request {
         }
 
         /**
-         * RoomIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;4002xxxxx&quot;]</p>
          */
         public Builder roomIds(java.util.List < String > roomIds) {
             String roomIdsShrink = shrink(roomIds, "RoomIds", "json");
@@ -127,7 +134,10 @@ public class GetMeetingRoomsScheduleRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -142,6 +152,12 @@ public class GetMeetingRoomsScheduleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetMeetingRoomsScheduleRequest} extends {@link TeaModel}
+     *
+     * <p>GetMeetingRoomsScheduleRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -170,7 +186,10 @@ public class GetMeetingRoomsScheduleRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

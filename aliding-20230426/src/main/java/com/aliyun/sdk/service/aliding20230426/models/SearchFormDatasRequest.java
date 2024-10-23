@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchFormDatasRequest} extends {@link RequestModel}
  *
  * <p>SearchFormDatasRequest</p>
@@ -248,7 +249,10 @@ public class SearchFormDatasRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKT0xxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -293,7 +297,10 @@ public class SearchFormDatasRequest extends Request {
         }
 
         /**
-         * FormUuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORM-xxxxx</p>
          */
         public Builder formUuid(String formUuid) {
             this.putBodyParameter("FormUuid", formUuid);
@@ -356,7 +363,10 @@ public class SearchFormDatasRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -371,6 +381,12 @@ public class SearchFormDatasRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchFormDatasRequest} extends {@link TeaModel}
+     *
+     * <p>SearchFormDatasRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -399,7 +415,10 @@ public class SearchFormDatasRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

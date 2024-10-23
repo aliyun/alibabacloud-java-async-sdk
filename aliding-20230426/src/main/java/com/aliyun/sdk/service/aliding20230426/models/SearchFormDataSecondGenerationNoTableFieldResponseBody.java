@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchFormDataSecondGenerationNoTableFieldResponseBody} extends {@link TeaModel}
  *
  * <p>SearchFormDataSecondGenerationNoTableFieldResponseBody</p>
@@ -150,6 +151,12 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
 
     } 
 
+    /**
+     * 
+     * {@link SearchFormDataSecondGenerationNoTableFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDataSecondGenerationNoTableFieldResponseBody</p>
+     */
     public static class Name extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -211,6 +218,12 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
         } 
 
     }
+    /**
+     * 
+     * {@link SearchFormDataSecondGenerationNoTableFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDataSecondGenerationNoTableFieldResponseBody</p>
+     */
     public static class ModifyUser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private Name name;
@@ -272,6 +285,12 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
         } 
 
     }
+    /**
+     * 
+     * {@link SearchFormDataSecondGenerationNoTableFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDataSecondGenerationNoTableFieldResponseBody</p>
+     */
     public static class OriginatorName extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -333,6 +352,12 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
         } 
 
     }
+    /**
+     * 
+     * {@link SearchFormDataSecondGenerationNoTableFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDataSecondGenerationNoTableFieldResponseBody</p>
+     */
     public static class Originator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private OriginatorName name;
@@ -394,6 +419,12 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
         } 
 
     }
+    /**
+     * 
+     * {@link SearchFormDataSecondGenerationNoTableFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFormDataSecondGenerationNoTableFieldResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimeGMT")
         private String createTimeGMT;

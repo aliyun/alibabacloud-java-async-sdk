@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFormRemarksRequest} extends {@link RequestModel}
  *
  * <p>ListFormRemarksRequest</p>
@@ -123,7 +124,10 @@ public class ListFormRemarksRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKT0xxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -132,7 +136,10 @@ public class ListFormRemarksRequest extends Request {
         }
 
         /**
-         * FormInstanceIdList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORM-xxxxx</p>
          */
         public Builder formInstanceIdList(java.util.List < String > formInstanceIdList) {
             String formInstanceIdListShrink = shrink(formInstanceIdList, "FormInstanceIdList", "json");
@@ -142,7 +149,10 @@ public class ListFormRemarksRequest extends Request {
         }
 
         /**
-         * FormUuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORM-xxxxx</p>
          */
         public Builder formUuid(String formUuid) {
             this.putBodyParameter("FormUuid", formUuid);
@@ -151,7 +161,10 @@ public class ListFormRemarksRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -166,6 +179,12 @@ public class ListFormRemarksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListFormRemarksRequest} extends {@link TeaModel}
+     *
+     * <p>ListFormRemarksRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -194,7 +213,10 @@ public class ListFormRemarksRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

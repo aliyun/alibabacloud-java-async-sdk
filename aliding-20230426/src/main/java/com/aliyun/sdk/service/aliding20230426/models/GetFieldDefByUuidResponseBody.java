@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFieldDefByUuidResponseBody} extends {@link TeaModel}
  *
  * <p>GetFieldDefByUuidResponseBody</p>
@@ -130,6 +131,12 @@ public class GetFieldDefByUuidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFieldDefByUuidResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFieldDefByUuidResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Behavior")
         private String behavior;

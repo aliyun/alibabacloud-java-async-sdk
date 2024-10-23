@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetReportUnReadCountRequest} extends {@link RequestModel}
  *
  * <p>GetReportUnReadCountRequest</p>
@@ -117,6 +118,12 @@ public class GetReportUnReadCountRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetReportUnReadCountRequest} extends {@link TeaModel}
+     *
+     * <p>GetReportUnReadCountRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -158,6 +165,12 @@ public class GetReportUnReadCountRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetReportUnReadCountRequest} extends {@link TeaModel}
+     *
+     * <p>GetReportUnReadCountRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

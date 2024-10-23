@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNavigationByFormTypeRequest} extends {@link RequestModel}
  *
  * <p>ListNavigationByFormTypeRequest</p>
@@ -122,7 +123,10 @@ public class ListNavigationByFormTypeRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKTxxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -131,7 +135,10 @@ public class ListNavigationByFormTypeRequest extends Request {
         }
 
         /**
-         * FormType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>receipt</p>
          */
         public Builder formType(String formType) {
             this.putBodyParameter("FormType", formType);
@@ -149,7 +156,10 @@ public class ListNavigationByFormTypeRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -164,6 +174,12 @@ public class ListNavigationByFormTypeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListNavigationByFormTypeRequest} extends {@link TeaModel}
+     *
+     * <p>ListNavigationByFormTypeRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -192,7 +208,10 @@ public class ListNavigationByFormTypeRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

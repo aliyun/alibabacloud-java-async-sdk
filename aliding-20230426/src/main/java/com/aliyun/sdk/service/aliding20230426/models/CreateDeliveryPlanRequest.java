@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeliveryPlanRequest} extends {@link RequestModel}
  *
  * <p>CreateDeliveryPlanRequest</p>
@@ -210,6 +211,12 @@ public class CreateDeliveryPlanRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDeliveryPlanRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDeliveryPlanRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("userToken")
         private String userToken;
@@ -251,6 +258,12 @@ public class CreateDeliveryPlanRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDeliveryPlanRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDeliveryPlanRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

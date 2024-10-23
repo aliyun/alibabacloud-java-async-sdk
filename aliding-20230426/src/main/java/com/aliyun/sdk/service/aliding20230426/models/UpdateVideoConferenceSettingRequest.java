@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVideoConferenceSettingRequest} extends {@link RequestModel}
  *
  * <p>UpdateVideoConferenceSettingRequest</p>
@@ -240,7 +241,10 @@ public class UpdateVideoConferenceSettingRequest extends Request {
         }
 
         /**
-         * conferenceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61289fxxx</p>
          */
         public Builder conferenceId(String conferenceId) {
             this.putBodyParameter("conferenceId", conferenceId);
@@ -255,6 +259,12 @@ public class UpdateVideoConferenceSettingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateVideoConferenceSettingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateVideoConferenceSettingRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -296,6 +306,12 @@ public class UpdateVideoConferenceSettingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateVideoConferenceSettingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateVideoConferenceSettingRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRangeRequest} extends {@link RequestModel}
  *
  * <p>GetRangeRequest</p>
@@ -136,7 +137,10 @@ public class GetRangeRequest extends Request {
         }
 
         /**
-         * RangeAddress.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3:C3</p>
          */
         public Builder rangeAddress(String rangeAddress) {
             this.putBodyParameter("RangeAddress", rangeAddress);
@@ -154,7 +158,10 @@ public class GetRangeRequest extends Request {
         }
 
         /**
-         * SheetId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sheet1</p>
          */
         public Builder sheetId(String sheetId) {
             this.putBodyParameter("SheetId", sheetId);
@@ -173,7 +180,10 @@ public class GetRangeRequest extends Request {
         }
 
         /**
-         * WorkbookId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stxxxx</p>
          */
         public Builder workbookId(String workbookId) {
             this.putBodyParameter("WorkbookId", workbookId);
@@ -188,6 +198,12 @@ public class GetRangeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetRangeRequest} extends {@link TeaModel}
+     *
+     * <p>GetRangeRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -229,6 +245,12 @@ public class GetRangeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRangeRequest} extends {@link TeaModel}
+     *
+     * <p>GetRangeRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

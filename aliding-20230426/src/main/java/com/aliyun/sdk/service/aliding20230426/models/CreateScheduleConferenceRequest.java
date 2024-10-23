@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScheduleConferenceRequest} extends {@link RequestModel}
  *
  * <p>CreateScheduleConferenceRequest</p>
@@ -122,7 +123,10 @@ public class CreateScheduleConferenceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687928400000L</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -131,7 +135,10 @@ public class CreateScheduleConferenceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687924800000L</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -150,7 +157,10 @@ public class CreateScheduleConferenceRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>预约会议标题</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);
@@ -165,6 +175,12 @@ public class CreateScheduleConferenceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateScheduleConferenceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScheduleConferenceRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -193,7 +209,10 @@ public class CreateScheduleConferenceRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -207,6 +226,12 @@ public class CreateScheduleConferenceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateScheduleConferenceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScheduleConferenceRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTodoTaskExecutorStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateTodoTaskExecutorStatusRequest</p>
@@ -149,7 +150,10 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15002141</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("taskId", taskId);
@@ -164,6 +168,12 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTodoTaskExecutorStatusRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTodoTaskExecutorStatusRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -205,6 +215,12 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTodoTaskExecutorStatusRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTodoTaskExecutorStatusRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
@@ -246,6 +262,12 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTodoTaskExecutorStatusRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTodoTaskExecutorStatusRequest</p>
+     */
     public static class ExecutorStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;

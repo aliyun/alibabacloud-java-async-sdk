@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceByIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceByIdResponseBody</p>
@@ -330,6 +331,12 @@ public class GetInstanceByIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceByIdResponseBody</p>
+     */
     public static class Name extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -411,6 +418,12 @@ public class GetInstanceByIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceByIdResponseBody</p>
+     */
     public static class ActionExecutor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
@@ -512,6 +525,12 @@ public class GetInstanceByIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceByIdResponseBody</p>
+     */
     public static class OriginatorName extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -593,6 +612,12 @@ public class GetInstanceByIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceByIdResponseBody</p>
+     */
     public static class Originator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDentryRequest} extends {@link RequestModel}
  *
  * <p>QueryDentryRequest</p>
@@ -121,7 +122,10 @@ public class QueryDentryRequest extends Request {
         }
 
         /**
-         * DentryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder dentryId(String dentryId) {
             this.putBodyParameter("DentryId", dentryId);
@@ -139,7 +143,10 @@ public class QueryDentryRequest extends Request {
         }
 
         /**
-         * SpaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>space-fxhb96vuddz8htqt</p>
          */
         public Builder spaceId(String spaceId) {
             this.putBodyParameter("SpaceId", spaceId);
@@ -164,6 +171,12 @@ public class QueryDentryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDentryRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDentryRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -192,7 +205,10 @@ public class QueryDentryRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -206,6 +222,12 @@ public class QueryDentryRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDentryRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDentryRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

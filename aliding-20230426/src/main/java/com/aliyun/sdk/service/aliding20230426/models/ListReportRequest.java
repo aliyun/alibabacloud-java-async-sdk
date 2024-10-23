@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListReportRequest} extends {@link RequestModel}
  *
  * <p>ListReportRequest</p>
@@ -179,7 +180,10 @@ public class ListReportRequest extends Request {
         }
 
         /**
-         * Cursor.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cursor(Long cursor) {
             this.putBodyParameter("Cursor", cursor);
@@ -188,7 +192,10 @@ public class ListReportRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1507564800000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -215,7 +222,10 @@ public class ListReportRequest extends Request {
         }
 
         /**
-         * Size.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Long size) {
             this.putBodyParameter("Size", size);
@@ -224,7 +234,10 @@ public class ListReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1507564800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -258,6 +271,12 @@ public class ListReportRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListReportRequest} extends {@link TeaModel}
+     *
+     * <p>ListReportRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -299,6 +318,12 @@ public class ListReportRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListReportRequest} extends {@link TeaModel}
+     *
+     * <p>ListReportRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

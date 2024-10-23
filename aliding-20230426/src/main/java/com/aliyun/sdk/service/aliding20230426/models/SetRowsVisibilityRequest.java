@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetRowsVisibilityRequest} extends {@link RequestModel}
  *
  * <p>SetRowsVisibilityRequest</p>
@@ -152,7 +153,10 @@ public class SetRowsVisibilityRequest extends Request {
         }
 
         /**
-         * Row.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder row(Long row) {
             this.putBodyParameter("Row", row);
@@ -161,7 +165,10 @@ public class SetRowsVisibilityRequest extends Request {
         }
 
         /**
-         * RowCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder rowCount(Long rowCount) {
             this.putBodyParameter("RowCount", rowCount);
@@ -170,7 +177,10 @@ public class SetRowsVisibilityRequest extends Request {
         }
 
         /**
-         * SheetId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sheet1</p>
          */
         public Builder sheetId(String sheetId) {
             this.putBodyParameter("SheetId", sheetId);
@@ -189,7 +199,10 @@ public class SetRowsVisibilityRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hidden</p>
          */
         public Builder visibility(String visibility) {
             this.putBodyParameter("Visibility", visibility);
@@ -198,7 +211,10 @@ public class SetRowsVisibilityRequest extends Request {
         }
 
         /**
-         * WorkbookId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stxxxx</p>
          */
         public Builder workbookId(String workbookId) {
             this.putBodyParameter("WorkbookId", workbookId);
@@ -213,6 +229,12 @@ public class SetRowsVisibilityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetRowsVisibilityRequest} extends {@link TeaModel}
+     *
+     * <p>SetRowsVisibilityRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -254,6 +276,12 @@ public class SetRowsVisibilityRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetRowsVisibilityRequest} extends {@link TeaModel}
+     *
+     * <p>SetRowsVisibilityRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

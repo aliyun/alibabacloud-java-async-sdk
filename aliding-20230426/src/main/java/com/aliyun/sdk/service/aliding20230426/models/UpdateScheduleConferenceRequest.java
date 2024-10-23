@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateScheduleConferenceRequest} extends {@link RequestModel}
  *
  * <p>UpdateScheduleConferenceRequest</p>
@@ -137,7 +138,10 @@ public class UpdateScheduleConferenceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687928400000L</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -146,7 +150,10 @@ public class UpdateScheduleConferenceRequest extends Request {
         }
 
         /**
-         * ScheduleConferenceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2a489xxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder scheduleConferenceId(String scheduleConferenceId) {
             this.putBodyParameter("ScheduleConferenceId", scheduleConferenceId);
@@ -155,7 +162,10 @@ public class UpdateScheduleConferenceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687924800000L</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -174,7 +184,10 @@ public class UpdateScheduleConferenceRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>预约会议标题</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);
@@ -189,6 +202,12 @@ public class UpdateScheduleConferenceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateScheduleConferenceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateScheduleConferenceRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -217,7 +236,10 @@ public class UpdateScheduleConferenceRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -231,6 +253,12 @@ public class UpdateScheduleConferenceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateScheduleConferenceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateScheduleConferenceRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

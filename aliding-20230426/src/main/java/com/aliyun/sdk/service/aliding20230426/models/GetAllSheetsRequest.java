@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAllSheetsRequest} extends {@link RequestModel}
  *
  * <p>GetAllSheetsRequest</p>
@@ -102,7 +103,10 @@ public class GetAllSheetsRequest extends Request {
         }
 
         /**
-         * WorkbookId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stxxxx</p>
          */
         public Builder workbookId(String workbookId) {
             this.putBodyParameter("WorkbookId", workbookId);
@@ -117,6 +121,12 @@ public class GetAllSheetsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetAllSheetsRequest} extends {@link TeaModel}
+     *
+     * <p>GetAllSheetsRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -158,6 +168,12 @@ public class GetAllSheetsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAllSheetsRequest} extends {@link TeaModel}
+     *
+     * <p>GetAllSheetsRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

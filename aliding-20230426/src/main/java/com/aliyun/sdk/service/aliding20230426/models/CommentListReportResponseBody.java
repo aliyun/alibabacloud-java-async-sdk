@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommentListReportResponseBody} extends {@link TeaModel}
  *
  * <p>CommentListReportResponseBody</p>
@@ -97,7 +98,10 @@ public class CommentListReportResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class CommentListReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CommentListReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>CommentListReportResponseBody</p>
+     */
     public static class Comments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;

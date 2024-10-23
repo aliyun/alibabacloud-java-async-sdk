@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitFileRequest} extends {@link RequestModel}
  *
  * <p>CommitFileRequest</p>
@@ -186,6 +187,12 @@ public class CommitFileRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CommitFileRequest} extends {@link TeaModel}
+     *
+     * <p>CommitFileRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -214,7 +221,10 @@ public class CommitFileRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -228,6 +238,12 @@ public class CommitFileRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CommitFileRequest} extends {@link TeaModel}
+     *
+     * <p>CommitFileRequest</p>
+     */
     public static class AppProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -309,6 +325,12 @@ public class CommitFileRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CommitFileRequest} extends {@link TeaModel}
+     *
+     * <p>CommitFileRequest</p>
+     */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppProperties")
         private java.util.List < AppProperties> appProperties;
@@ -430,6 +452,12 @@ public class CommitFileRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CommitFileRequest} extends {@link TeaModel}
+     *
+     * <p>CommitFileRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

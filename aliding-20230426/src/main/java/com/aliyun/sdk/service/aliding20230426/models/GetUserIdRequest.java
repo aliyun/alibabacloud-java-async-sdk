@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserIdRequest} extends {@link RequestModel}
  *
  * <p>GetUserIdRequest</p>
@@ -101,7 +102,10 @@ public class GetUserIdRequest extends Request {
         }
 
         /**
-         * unionId
+         * <p>unionId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****iE</p>
          */
         public Builder unionId(String unionId) {
             this.putBodyParameter("UnionId", unionId);
@@ -116,6 +120,12 @@ public class GetUserIdRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserIdRequest} extends {@link TeaModel}
+     *
+     * <p>GetUserIdRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -144,7 +154,10 @@ public class GetUserIdRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -158,6 +171,12 @@ public class GetUserIdRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserIdRequest} extends {@link TeaModel}
+     *
+     * <p>GetUserIdRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

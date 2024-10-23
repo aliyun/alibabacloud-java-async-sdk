@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddScenegroupMemberRequest} extends {@link RequestModel}
  *
  * <p>AddScenegroupMemberRequest</p>
@@ -93,7 +94,10 @@ public class AddScenegroupMemberRequest extends Request {
         }
 
         /**
-         * OpenConversationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cidt*****Xa4K10w==</p>
          */
         public Builder openConversationId(String openConversationId) {
             this.putBodyParameter("OpenConversationId", openConversationId);
@@ -102,7 +106,10 @@ public class AddScenegroupMemberRequest extends Request {
         }
 
         /**
-         * UserIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xx,224xx</p>
          */
         public Builder userIds(String userIds) {
             this.putBodyParameter("UserIds", userIds);
@@ -117,6 +124,12 @@ public class AddScenegroupMemberRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddScenegroupMemberRequest} extends {@link TeaModel}
+     *
+     * <p>AddScenegroupMemberRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +158,10 @@ public class AddScenegroupMemberRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

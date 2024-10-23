@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetActivityListResponseBody} extends {@link TeaModel}
  *
  * <p>GetActivityListResponseBody</p>
@@ -110,6 +111,12 @@ public class GetActivityListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetActivityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetActivityListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;

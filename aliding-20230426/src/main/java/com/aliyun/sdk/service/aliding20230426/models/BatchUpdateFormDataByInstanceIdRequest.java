@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchUpdateFormDataByInstanceIdRequest} extends {@link RequestModel}
  *
  * <p>BatchUpdateFormDataByInstanceIdRequest</p>
@@ -211,7 +212,10 @@ public class BatchUpdateFormDataByInstanceIdRequest extends Request {
         }
 
         /**
-         * FormInstanceIdList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ &quot;FINST-J8766S91O2UYN87ZX3XOF1MY8MBA2912BSV0L24&quot; ]</p>
          */
         public Builder formInstanceIdList(java.util.List < String > formInstanceIdList) {
             String formInstanceIdListShrink = shrink(formInstanceIdList, "FormInstanceIdList", "json");
@@ -221,7 +225,10 @@ public class BatchUpdateFormDataByInstanceIdRequest extends Request {
         }
 
         /**
-         * FormUuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORM-GX866MC1NC1VOFF6WVQW33FD16E23L3CPMKVKA</p>
          */
         public Builder formUuid(String formUuid) {
             this.putBodyParameter("FormUuid", formUuid);
@@ -248,7 +255,10 @@ public class BatchUpdateFormDataByInstanceIdRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09866181UTZVVD4R3DC955FNKIM52HVPU5WWK7</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -257,7 +267,10 @@ public class BatchUpdateFormDataByInstanceIdRequest extends Request {
         }
 
         /**
-         * UpdateFormDataJson.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;countrySelectField_l0c1cwiu&quot;:[{&quot;value&quot;:&quot;US&quot;}],&quot;addressField_l0c1cwiy&quot;:{&quot;address&quot;:&quot;111&quot;,&quot;regionIds&quot;:[460000,469027,469023401],&quot;regionText&quot;:[{&quot;en_US&quot;:&quot;hai+nan+sheng&quot;,&quot;zh_CN&quot;:&quot;海南省&quot;},{&quot;en_US&quot;:&quot;cheng+mai+xian&quot;,&quot;zh_CN&quot;:&quot;澄迈县&quot;},{&quot;en_US&quot;:&quot;guo+ying+hong+gang+nong+chang&quot;,&quot;zh_CN&quot;:&quot;国营红岗农场&quot;}]}}</p>
          */
         public Builder updateFormDataJson(String updateFormDataJson) {
             this.putBodyParameter("UpdateFormDataJson", updateFormDataJson);
@@ -281,6 +294,12 @@ public class BatchUpdateFormDataByInstanceIdRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchUpdateFormDataByInstanceIdRequest} extends {@link TeaModel}
+     *
+     * <p>BatchUpdateFormDataByInstanceIdRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -309,7 +328,10 @@ public class BatchUpdateFormDataByInstanceIdRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

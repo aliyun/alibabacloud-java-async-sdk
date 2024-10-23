@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMinutesSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMinutesSummaryResponseBody</p>
@@ -110,6 +111,12 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMinutesSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesSummaryResponseBody</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
@@ -231,6 +238,12 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMinutesSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesSummaryResponseBody</p>
+     */
     public static class AutoChapters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
@@ -352,6 +365,12 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMinutesSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesSummaryResponseBody</p>
+     */
     public static class ConversationalSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpeakerId")
         private String speakerId;
@@ -433,6 +452,12 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMinutesSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesSummaryResponseBody</p>
+     */
     public static class KeySentences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
@@ -554,6 +579,12 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMinutesSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesSummaryResponseBody</p>
+     */
     public static class QuestionsAnsweringSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Answer")
         private String answer;
@@ -655,6 +686,12 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMinutesSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesSummaryResponseBody</p>
+     */
     public static class Summary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Actions")
         private Actions actions;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReportRequest} extends {@link RequestModel}
  *
  * <p>CreateReportRequest</p>
@@ -165,7 +166,10 @@ public class CreateReportRequest extends Request {
         }
 
         /**
-         * Contents.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder contents(java.util.List < Contents> contents) {
             String contentsShrink = shrink(contents, "Contents", "json");
@@ -175,7 +179,10 @@ public class CreateReportRequest extends Request {
         }
 
         /**
-         * DdFrom.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client</p>
          */
         public Builder ddFrom(String ddFrom) {
             this.putBodyParameter("DdFrom", ddFrom);
@@ -184,7 +191,10 @@ public class CreateReportRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdfafdsfsafdfsaf</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -203,7 +213,10 @@ public class CreateReportRequest extends Request {
         }
 
         /**
-         * ToChat.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder toChat(Boolean toChat) {
             this.putBodyParameter("ToChat", toChat);
@@ -238,6 +251,12 @@ public class CreateReportRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateReportRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReportRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -266,7 +285,10 @@ public class CreateReportRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -280,6 +302,12 @@ public class CreateReportRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateReportRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReportRequest</p>
+     */
     public static class Contents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -360,7 +388,10 @@ public class CreateReportRequest extends Request {
             private Long type; 
 
             /**
-             * Content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <h3>序号1</h3>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -368,7 +399,10 @@ public class CreateReportRequest extends Request {
             }
 
             /**
-             * ContentType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>markdown</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -376,7 +410,10 @@ public class CreateReportRequest extends Request {
             }
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>今日完成工作</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -384,7 +421,10 @@ public class CreateReportRequest extends Request {
             }
 
             /**
-             * Sort.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sort(Long sort) {
                 this.sort = sort;
@@ -392,7 +432,10 @@ public class CreateReportRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -406,6 +449,12 @@ public class CreateReportRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateReportRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReportRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

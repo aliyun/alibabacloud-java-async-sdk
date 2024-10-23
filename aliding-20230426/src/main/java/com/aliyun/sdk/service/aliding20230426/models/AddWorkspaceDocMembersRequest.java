@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddWorkspaceDocMembersRequest} extends {@link RequestModel}
  *
  * <p>AddWorkspaceDocMembersRequest</p>
@@ -122,7 +123,7 @@ public class AddWorkspaceDocMembersRequest extends Request {
         }
 
         /**
-         * Members.
+         * <p>This parameter is required.</p>
          */
         public Builder members(java.util.List < Members> members) {
             String membersShrink = shrink(members, "Members", "json");
@@ -132,7 +133,10 @@ public class AddWorkspaceDocMembersRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -151,7 +155,10 @@ public class AddWorkspaceDocMembersRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -166,6 +173,12 @@ public class AddWorkspaceDocMembersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddWorkspaceDocMembersRequest} extends {@link TeaModel}
+     *
+     * <p>AddWorkspaceDocMembersRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -194,7 +207,10 @@ public class AddWorkspaceDocMembersRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -208,6 +224,12 @@ public class AddWorkspaceDocMembersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddWorkspaceDocMembersRequest} extends {@link TeaModel}
+     *
+     * <p>AddWorkspaceDocMembersRequest</p>
+     */
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemberId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -262,7 +284,10 @@ public class AddWorkspaceDocMembersRequest extends Request {
             private String roleType; 
 
             /**
-             * MemberId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -270,7 +295,10 @@ public class AddWorkspaceDocMembersRequest extends Request {
             }
 
             /**
-             * MemberType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder memberType(String memberType) {
                 this.memberType = memberType;
@@ -278,7 +306,10 @@ public class AddWorkspaceDocMembersRequest extends Request {
             }
 
             /**
-             * RoleType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EDITOR</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -292,6 +323,12 @@ public class AddWorkspaceDocMembersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddWorkspaceDocMembersRequest} extends {@link TeaModel}
+     *
+     * <p>AddWorkspaceDocMembersRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

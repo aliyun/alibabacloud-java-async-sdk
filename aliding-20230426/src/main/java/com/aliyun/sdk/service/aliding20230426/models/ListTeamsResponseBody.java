@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTeamsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTeamsResponseBody</p>
@@ -130,6 +131,12 @@ public class ListTeamsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTeamsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTeamsResponseBody</p>
+     */
     public static class Icon extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -191,6 +198,12 @@ public class ListTeamsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTeamsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTeamsResponseBody</p>
+     */
     public static class Teams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;

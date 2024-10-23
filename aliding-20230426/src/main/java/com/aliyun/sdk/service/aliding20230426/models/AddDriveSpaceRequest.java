@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDriveSpaceRequest} extends {@link RequestModel}
  *
  * <p>AddDriveSpaceRequest</p>
@@ -83,7 +84,7 @@ public class AddDriveSpaceRequest extends Request {
         } 
 
         /**
-         * AccountContext.
+         * <p>This parameter is required.</p>
          */
         public Builder accountContext(AccountContext accountContext) {
             String accountContextShrink = shrink(accountContext, "AccountContext", "json");
@@ -93,7 +94,7 @@ public class AddDriveSpaceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -118,6 +119,12 @@ public class AddDriveSpaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddDriveSpaceRequest} extends {@link TeaModel}
+     *
+     * <p>AddDriveSpaceRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -146,7 +153,10 @@ public class AddDriveSpaceRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -160,6 +170,12 @@ public class AddDriveSpaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddDriveSpaceRequest} extends {@link TeaModel}
+     *
+     * <p>AddDriveSpaceRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

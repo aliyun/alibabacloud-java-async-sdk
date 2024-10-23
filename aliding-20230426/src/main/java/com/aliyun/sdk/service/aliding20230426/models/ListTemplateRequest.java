@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateRequest} extends {@link RequestModel}
  *
  * <p>ListTemplateRequest</p>
@@ -135,7 +136,10 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -153,7 +157,10 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public_template</p>
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("TemplateType", templateType);
@@ -187,6 +194,12 @@ public class ListTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ListTemplateRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -215,7 +228,10 @@ public class ListTemplateRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -229,6 +245,12 @@ public class ListTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ListTemplateRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

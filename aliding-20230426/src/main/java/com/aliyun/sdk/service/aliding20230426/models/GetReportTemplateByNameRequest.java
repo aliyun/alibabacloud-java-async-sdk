@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetReportTemplateByNameRequest} extends {@link RequestModel}
  *
  * <p>GetReportTemplateByNameRequest</p>
@@ -92,7 +93,10 @@ public class GetReportTemplateByNameRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我管理的模版</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);
@@ -117,6 +121,12 @@ public class GetReportTemplateByNameRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetReportTemplateByNameRequest} extends {@link TeaModel}
+     *
+     * <p>GetReportTemplateByNameRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +155,10 @@ public class GetReportTemplateByNameRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -159,6 +172,12 @@ public class GetReportTemplateByNameRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetReportTemplateByNameRequest} extends {@link TeaModel}
+     *
+     * <p>GetReportTemplateByNameRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

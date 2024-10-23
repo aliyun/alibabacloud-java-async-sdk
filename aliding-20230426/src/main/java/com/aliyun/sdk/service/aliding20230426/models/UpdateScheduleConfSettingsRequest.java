@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateScheduleConfSettingsRequest} extends {@link RequestModel}
  *
  * <p>UpdateScheduleConfSettingsRequest</p>
@@ -140,6 +141,12 @@ public class UpdateScheduleConfSettingsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateScheduleConfSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateScheduleConfSettingsRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -168,7 +175,10 @@ public class UpdateScheduleConfSettingsRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -182,6 +192,12 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateScheduleConfSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateScheduleConfSettingsRequest</p>
+     */
     public static class MoziConfVirtualExtraSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudRecordOwnerUserId")
         private String cloudRecordOwnerUserId;
@@ -423,6 +439,12 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateScheduleConfSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateScheduleConfSettingsRequest</p>
+     */
     public static class ScheduleConfSettingModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CohostUserIds")
         private java.util.List < String > cohostUserIds;
@@ -584,6 +606,12 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateScheduleConfSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateScheduleConfSettingsRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

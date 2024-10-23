@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDentriesRequest} extends {@link RequestModel}
  *
  * <p>ListDentriesRequest</p>
@@ -213,7 +214,10 @@ public class ListDentriesRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder parentId(String parentId) {
             this.putBodyParameter("ParentId", parentId);
@@ -222,7 +226,10 @@ public class ListDentriesRequest extends Request {
         }
 
         /**
-         * SpaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>854xxxxx</p>
          */
         public Builder spaceId(String spaceId) {
             this.putBodyParameter("SpaceId", spaceId);
@@ -256,6 +263,12 @@ public class ListDentriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListDentriesRequest} extends {@link TeaModel}
+     *
+     * <p>ListDentriesRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -284,7 +297,10 @@ public class ListDentriesRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -298,6 +314,12 @@ public class ListDentriesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDentriesRequest} extends {@link TeaModel}
+     *
+     * <p>ListDentriesRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileUploadInfoRequest} extends {@link RequestModel}
  *
  * <p>GetFileUploadInfoRequest</p>
@@ -163,6 +164,12 @@ public class GetFileUploadInfoRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileUploadInfoRequest} extends {@link TeaModel}
+     *
+     * <p>GetFileUploadInfoRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -191,7 +198,10 @@ public class GetFileUploadInfoRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -205,6 +215,12 @@ public class GetFileUploadInfoRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFileUploadInfoRequest} extends {@link TeaModel}
+     *
+     * <p>GetFileUploadInfoRequest</p>
+     */
     public static class PreCheckParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -266,6 +282,12 @@ public class GetFileUploadInfoRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFileUploadInfoRequest} extends {@link TeaModel}
+     *
+     * <p>GetFileUploadInfoRequest</p>
+     */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PreCheckParam")
         private PreCheckParam preCheckParam;
@@ -367,6 +389,12 @@ public class GetFileUploadInfoRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFileUploadInfoRequest} extends {@link TeaModel}
+     *
+     * <p>GetFileUploadInfoRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

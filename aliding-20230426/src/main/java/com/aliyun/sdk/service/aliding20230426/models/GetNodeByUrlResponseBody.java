@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeByUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetNodeByUrlResponseBody</p>
@@ -57,7 +58,10 @@ public class GetNodeByUrlResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetNodeByUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodeByUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeByUrlResponseBody</p>
+     */
     public static class StatisticalInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WordCount")
         private Long wordCount;
@@ -111,6 +121,12 @@ public class GetNodeByUrlResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNodeByUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeByUrlResponseBody</p>
+     */
     public static class Node extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;

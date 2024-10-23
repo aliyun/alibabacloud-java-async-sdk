@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspacesRequest} extends {@link RequestModel}
  *
  * <p>ListWorkspacesRequest</p>
@@ -208,6 +209,12 @@ public class ListWorkspacesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkspacesRequest} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -236,7 +243,10 @@ public class ListWorkspacesRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -250,6 +260,12 @@ public class ListWorkspacesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkspacesRequest} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

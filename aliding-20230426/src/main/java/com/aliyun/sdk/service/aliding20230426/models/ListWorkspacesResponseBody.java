@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkspacesResponseBody</p>
@@ -69,7 +70,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesResponseBody</p>
+     */
     public static class Icon extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -151,6 +161,12 @@ public class ListWorkspacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesResponseBody</p>
+     */
     public static class Workspaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;

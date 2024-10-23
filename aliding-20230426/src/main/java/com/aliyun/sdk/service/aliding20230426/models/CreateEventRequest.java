@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEventRequest} extends {@link RequestModel}
  *
  * <p>CreateEventRequest</p>
@@ -384,7 +385,7 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * Summary.
+         * <p>This parameter is required.</p>
          */
         public Builder summary(String summary) {
             this.putBodyParameter("Summary", summary);
@@ -403,7 +404,10 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * calendarId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("calendarId", calendarId);
@@ -412,7 +416,7 @@ public class CreateEventRequest extends Request {
         }
 
         /**
-         * start.
+         * <p>This parameter is required.</p>
          */
         public Builder start(Start start) {
             String startShrink = shrink(start, "start", "json");
@@ -428,6 +432,12 @@ public class CreateEventRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -456,7 +466,10 @@ public class CreateEventRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>208579</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -470,6 +483,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class Attendees extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -531,6 +550,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class CardInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutTrackId")
         private String outTrackId;
@@ -592,6 +617,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class End extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("date")
         private String date;
@@ -673,6 +704,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class Location extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
@@ -714,6 +751,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class OnlineMeetingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -755,6 +798,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class Pattern extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dayOfMonth")
         private Integer dayOfMonth;
@@ -876,6 +925,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class Range extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endDate")
         private String endDate;
@@ -957,6 +1012,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class Recurrence extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pattern")
         private Pattern pattern;
@@ -1018,6 +1079,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class Reminders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("method")
         private String method;
@@ -1079,6 +1146,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class RichTextDescription extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
@@ -1120,6 +1193,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class UiConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("uiName")
         private String uiName;
@@ -1181,6 +1260,12 @@ public class CreateEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventRequest</p>
+     */
     public static class Start extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("date")
         private String date;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SimpleListReportResponseBody} extends {@link TeaModel}
  *
  * <p>SimpleListReportResponseBody</p>
@@ -109,7 +110,10 @@ public class SimpleListReportResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class SimpleListReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SimpleListReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>SimpleListReportResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;

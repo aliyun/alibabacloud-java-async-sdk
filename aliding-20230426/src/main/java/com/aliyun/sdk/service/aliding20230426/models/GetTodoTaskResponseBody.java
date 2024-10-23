@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTodoTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetTodoTaskResponseBody</p>
@@ -530,6 +531,12 @@ public class GetTodoTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTodoTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTodoTaskResponseBody</p>
+     */
     public static class DetailUrl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppUrl")
         private String appUrl;

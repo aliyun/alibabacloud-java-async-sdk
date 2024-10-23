@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocContentTakIdRequest} extends {@link RequestModel}
  *
  * <p>GetDocContentTakIdRequest</p>
@@ -120,7 +121,10 @@ public class GetDocContentTakIdRequest extends Request {
         }
 
         /**
-         * DentryUuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qnYMoO1rWxrkmoj2I5L2PYkoJ47Z3je9</p>
          */
         public Builder dentryUuid(String dentryUuid) {
             this.putBodyParameter("DentryUuid", dentryUuid);
@@ -163,6 +167,12 @@ public class GetDocContentTakIdRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocContentTakIdRequest} extends {@link TeaModel}
+     *
+     * <p>GetDocContentTakIdRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -191,7 +201,10 @@ public class GetDocContentTakIdRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -205,6 +218,12 @@ public class GetDocContentTakIdRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocContentTakIdRequest} extends {@link TeaModel}
+     *
+     * <p>GetDocContentTakIdRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopCloudRecordRequest} extends {@link RequestModel}
  *
  * <p>StopCloudRecordRequest</p>
@@ -102,7 +103,10 @@ public class StopCloudRecordRequest extends Request {
         }
 
         /**
-         * conferenceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61289fxxx</p>
          */
         public Builder conferenceId(String conferenceId) {
             this.putBodyParameter("conferenceId", conferenceId);
@@ -117,6 +121,12 @@ public class StopCloudRecordRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StopCloudRecordRequest} extends {@link TeaModel}
+     *
+     * <p>StopCloudRecordRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +155,10 @@ public class StopCloudRecordRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -159,6 +172,12 @@ public class StopCloudRecordRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StopCloudRecordRequest} extends {@link TeaModel}
+     *
+     * <p>StopCloudRecordRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

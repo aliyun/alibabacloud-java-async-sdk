@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMultipartFileUploadInfosRequest} extends {@link RequestModel}
  *
  * <p>GetMultipartFileUploadInfosRequest</p>
@@ -164,6 +165,12 @@ public class GetMultipartFileUploadInfosRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetMultipartFileUploadInfosRequest} extends {@link TeaModel}
+     *
+     * <p>GetMultipartFileUploadInfosRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -192,7 +199,10 @@ public class GetMultipartFileUploadInfosRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -206,6 +216,12 @@ public class GetMultipartFileUploadInfosRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMultipartFileUploadInfosRequest} extends {@link TeaModel}
+     *
+     * <p>GetMultipartFileUploadInfosRequest</p>
+     */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PreferIntranet")
         private Boolean preferIntranet;
@@ -247,6 +263,12 @@ public class GetMultipartFileUploadInfosRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMultipartFileUploadInfosRequest} extends {@link TeaModel}
+     *
+     * <p>GetMultipartFileUploadInfosRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

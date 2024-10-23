@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNewestInnerGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>GetNewestInnerGroupsResponseBody</p>
@@ -110,6 +111,12 @@ public class GetNewestInnerGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNewestInnerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNewestInnerGroupsResponseBody</p>
+     */
     public static class GroupInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;

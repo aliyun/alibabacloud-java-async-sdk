@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTodoTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateTodoTaskRequest</p>
@@ -242,7 +243,10 @@ public class UpdateTodoTaskRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>taskId</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("taskId", taskId);
@@ -257,6 +261,12 @@ public class UpdateTodoTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTodoTaskRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -298,6 +308,12 @@ public class UpdateTodoTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTodoTaskRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

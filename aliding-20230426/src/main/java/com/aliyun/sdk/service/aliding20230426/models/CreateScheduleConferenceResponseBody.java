@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScheduleConferenceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateScheduleConferenceResponseBody</p>
@@ -93,7 +94,10 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

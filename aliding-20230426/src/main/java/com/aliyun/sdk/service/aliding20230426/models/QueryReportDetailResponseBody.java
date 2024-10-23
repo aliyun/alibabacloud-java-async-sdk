@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReportDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryReportDetailResponseBody</p>
@@ -270,6 +271,12 @@ public class QueryReportDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryReportDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReportDetailResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Images")
         private java.util.List < String > images;

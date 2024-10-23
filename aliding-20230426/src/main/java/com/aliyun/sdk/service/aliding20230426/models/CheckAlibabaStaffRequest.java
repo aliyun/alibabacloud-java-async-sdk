@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckAlibabaStaffRequest} extends {@link RequestModel}
  *
  * <p>CheckAlibabaStaffRequest</p>
@@ -116,6 +117,12 @@ public class CheckAlibabaStaffRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CheckAlibabaStaffRequest} extends {@link TeaModel}
+     *
+     * <p>CheckAlibabaStaffRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -157,6 +164,12 @@ public class CheckAlibabaStaffRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CheckAlibabaStaffRequest} extends {@link TeaModel}
+     *
+     * <p>CheckAlibabaStaffRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

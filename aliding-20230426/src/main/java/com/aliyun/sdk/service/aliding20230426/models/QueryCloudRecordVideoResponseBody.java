@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCloudRecordVideoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCloudRecordVideoResponseBody</p>
@@ -49,7 +50,10 @@ public class QueryCloudRecordVideoResponseBody extends TeaModel {
         private java.util.List < VideoList> videoList; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class QueryCloudRecordVideoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCloudRecordVideoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCloudRecordVideoResponseBody</p>
+     */
     public static class VideoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;

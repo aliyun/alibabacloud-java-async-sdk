@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserResponseBody</p>
@@ -690,6 +691,12 @@ public class GetUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class DeptOrderList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("deptId")
         private Long deptId;
@@ -751,6 +758,12 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class LeaderInDept extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("deptId")
         private Long deptId;
@@ -812,6 +825,12 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class RoleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
@@ -893,6 +912,12 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class UnionEmpMapList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cropId")
         private String cropId;
@@ -954,6 +979,12 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class UnionEmpExt extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("corpId")
         private String corpId;

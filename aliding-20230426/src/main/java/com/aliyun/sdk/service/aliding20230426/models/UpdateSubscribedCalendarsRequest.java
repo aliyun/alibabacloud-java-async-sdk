@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSubscribedCalendarsRequest} extends {@link RequestModel}
  *
  * <p>UpdateSubscribedCalendarsRequest</p>
@@ -134,7 +135,10 @@ public class UpdateSubscribedCalendarsRequest extends Request {
         }
 
         /**
-         * CalendarId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>M5MjkxNDUxQHVzZXJzLmRpbmd0YWxrLmNv</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("CalendarId", calendarId);
@@ -187,6 +191,12 @@ public class UpdateSubscribedCalendarsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSubscribedCalendarsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSubscribedCalendarsRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -215,7 +225,10 @@ public class UpdateSubscribedCalendarsRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -229,6 +242,12 @@ public class UpdateSubscribedCalendarsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateSubscribedCalendarsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSubscribedCalendarsRequest</p>
+     */
     public static class SubscribeScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserIds")
         private java.util.List < String > userIds;

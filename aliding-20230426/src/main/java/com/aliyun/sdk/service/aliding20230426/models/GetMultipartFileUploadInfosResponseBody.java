@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMultipartFileUploadInfosResponseBody} extends {@link TeaModel}
  *
  * <p>GetMultipartFileUploadInfosResponseBody</p>
@@ -110,6 +111,12 @@ public class GetMultipartFileUploadInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMultipartFileUploadInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMultipartFileUploadInfosResponseBody</p>
+     */
     public static class HeaderSignatureInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpirationSeconds")
         private Integer expirationSeconds;
@@ -231,6 +238,12 @@ public class GetMultipartFileUploadInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMultipartFileUploadInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMultipartFileUploadInfosResponseBody</p>
+     */
     public static class MultipartHeaderSignatureInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderSignatureInfo")
         private HeaderSignatureInfo headerSignatureInfo;

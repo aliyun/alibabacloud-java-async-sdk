@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCalendarsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCalendarsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListCalendarsResponseBody extends TeaModel {
         private Response response; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListCalendarsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCalendarsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCalendarsResponseBody</p>
+     */
     public static class Calendars extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -231,6 +241,12 @@ public class ListCalendarsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCalendarsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCalendarsResponseBody</p>
+     */
     public static class Response extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Calendars")
         private java.util.List < Calendars> calendars;

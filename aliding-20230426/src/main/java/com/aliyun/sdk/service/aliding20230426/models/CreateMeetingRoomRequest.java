@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMeetingRoomRequest} extends {@link RequestModel}
  *
  * <p>CreateMeetingRoomRequest</p>
@@ -326,6 +327,12 @@ public class CreateMeetingRoomRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMeetingRoomRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMeetingRoomRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -354,7 +361,10 @@ public class CreateMeetingRoomRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -368,6 +378,12 @@ public class CreateMeetingRoomRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMeetingRoomRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMeetingRoomRequest</p>
+     */
     public static class AuthorizedMembers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemberId")
         private String memberId;
@@ -449,6 +465,12 @@ public class CreateMeetingRoomRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMeetingRoomRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMeetingRoomRequest</p>
+     */
     public static class ReservationAuthority extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizedMembers")
         private java.util.List < AuthorizedMembers> authorizedMembers;
@@ -490,6 +512,12 @@ public class CreateMeetingRoomRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMeetingRoomRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMeetingRoomRequest</p>
+     */
     public static class RoomLocation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
@@ -551,6 +579,12 @@ public class CreateMeetingRoomRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMeetingRoomRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMeetingRoomRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

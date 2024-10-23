@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAttendeeResponseBody} extends {@link TeaModel}
  *
  * <p>AddAttendeeResponseBody</p>
@@ -149,7 +150,10 @@ public class AddAttendeeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9BCC17ED-0187-54A0-BD31-56FDBE865447</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,6 +174,12 @@ public class AddAttendeeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddAttendeeResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddAttendeeResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Object data;

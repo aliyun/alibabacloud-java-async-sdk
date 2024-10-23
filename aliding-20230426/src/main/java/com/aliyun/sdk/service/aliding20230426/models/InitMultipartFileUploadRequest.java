@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitMultipartFileUploadRequest} extends {@link RequestModel}
  *
  * <p>InitMultipartFileUploadRequest</p>
@@ -140,6 +141,12 @@ public class InitMultipartFileUploadRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InitMultipartFileUploadRequest} extends {@link TeaModel}
+     *
+     * <p>InitMultipartFileUploadRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -168,7 +175,10 @@ public class InitMultipartFileUploadRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -182,6 +192,12 @@ public class InitMultipartFileUploadRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InitMultipartFileUploadRequest} extends {@link TeaModel}
+     *
+     * <p>InitMultipartFileUploadRequest</p>
+     */
     public static class PreCheckParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
@@ -283,6 +299,12 @@ public class InitMultipartFileUploadRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InitMultipartFileUploadRequest} extends {@link TeaModel}
+     *
+     * <p>InitMultipartFileUploadRequest</p>
+     */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PreCheckParam")
         private PreCheckParam preCheckParam;
@@ -364,6 +386,12 @@ public class InitMultipartFileUploadRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InitMultipartFileUploadRequest} extends {@link TeaModel}
+     *
+     * <p>InitMultipartFileUploadRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMinutesTextResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMinutesTextResponseBody</p>
@@ -150,6 +151,12 @@ public class QueryMinutesTextResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMinutesTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesTextResponseBody</p>
+     */
     public static class WordList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -251,6 +258,12 @@ public class QueryMinutesTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMinutesTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesTextResponseBody</p>
+     */
     public static class SentenceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -372,6 +385,12 @@ public class QueryMinutesTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMinutesTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMinutesTextResponseBody</p>
+     */
     public static class ParagraphList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;

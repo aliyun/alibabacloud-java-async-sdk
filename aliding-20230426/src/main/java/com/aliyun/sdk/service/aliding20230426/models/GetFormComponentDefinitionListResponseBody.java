@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFormComponentDefinitionListResponseBody} extends {@link TeaModel}
  *
  * <p>GetFormComponentDefinitionListResponseBody</p>
@@ -110,6 +111,12 @@ public class GetFormComponentDefinitionListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFormComponentDefinitionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFormComponentDefinitionListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;

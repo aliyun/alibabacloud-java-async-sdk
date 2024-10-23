@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadMediaRequest} extends {@link RequestModel}
  *
  * <p>UploadMediaRequest</p>
@@ -155,7 +156,10 @@ public class UploadMediaRequest extends Request {
         }
 
         /**
-         * mediaType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder mediaType(String mediaType) {
             this.putBodyParameter("mediaType", mediaType);
@@ -164,7 +168,10 @@ public class UploadMediaRequest extends Request {
         }
 
         /**
-         * orgId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -173,7 +180,10 @@ public class UploadMediaRequest extends Request {
         }
 
         /**
-         * url.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://alicdn.com/xxx.jpg">https://alicdn.com/xxx.jpg</a></p>
          */
         public Builder url(String url) {
             this.putBodyParameter("url", url);
@@ -188,6 +198,12 @@ public class UploadMediaRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UploadMediaRequest} extends {@link TeaModel}
+     *
+     * <p>UploadMediaRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -229,6 +245,12 @@ public class UploadMediaRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UploadMediaRequest} extends {@link TeaModel}
+     *
+     * <p>UploadMediaRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

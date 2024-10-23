@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrgHonorsRequest} extends {@link RequestModel}
  *
  * <p>QueryOrgHonorsRequest</p>
@@ -140,7 +141,10 @@ public class QueryOrgHonorsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("nextToken", nextToken);
@@ -149,7 +153,10 @@ public class QueryOrgHonorsRequest extends Request {
         }
 
         /**
-         * orgId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -164,6 +171,12 @@ public class QueryOrgHonorsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrgHonorsRequest} extends {@link TeaModel}
+     *
+     * <p>QueryOrgHonorsRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -205,6 +218,12 @@ public class QueryOrgHonorsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrgHonorsRequest} extends {@link TeaModel}
+     *
+     * <p>QueryOrgHonorsRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

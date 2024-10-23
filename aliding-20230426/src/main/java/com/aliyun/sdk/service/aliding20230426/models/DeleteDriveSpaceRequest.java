@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDriveSpaceRequest} extends {@link RequestModel}
  *
  * <p>DeleteDriveSpaceRequest</p>
@@ -83,7 +84,7 @@ public class DeleteDriveSpaceRequest extends Request {
         } 
 
         /**
-         * AccountContext.
+         * <p>This parameter is required.</p>
          */
         public Builder accountContext(AccountContext accountContext) {
             String accountContextShrink = shrink(accountContext, "AccountContext", "json");
@@ -93,7 +94,10 @@ public class DeleteDriveSpaceRequest extends Request {
         }
 
         /**
-         * SpaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder spaceId(String spaceId) {
             this.putBodyParameter("SpaceId", spaceId);
@@ -118,6 +122,12 @@ public class DeleteDriveSpaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteDriveSpaceRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteDriveSpaceRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -146,7 +156,10 @@ public class DeleteDriveSpaceRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -160,6 +173,12 @@ public class DeleteDriveSpaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteDriveSpaceRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteDriveSpaceRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

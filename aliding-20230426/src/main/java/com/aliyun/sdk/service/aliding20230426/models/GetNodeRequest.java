@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeRequest} extends {@link RequestModel}
  *
  * <p>GetNodeRequest</p>
@@ -120,7 +121,10 @@ public class GetNodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a9E05BDRVQ9K600yf1NplNDxV63zgkYA</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -163,6 +167,12 @@ public class GetNodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodeRequest} extends {@link TeaModel}
+     *
+     * <p>GetNodeRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -191,7 +201,10 @@ public class GetNodeRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -205,6 +218,12 @@ public class GetNodeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNodeRequest} extends {@link TeaModel}
+     *
+     * <p>GetNodeRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ListTemplateResponseBody</p>
@@ -150,6 +151,12 @@ public class ListTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateResponseBody</p>
+     */
     public static class TemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoverUrl")
         private String coverUrl;

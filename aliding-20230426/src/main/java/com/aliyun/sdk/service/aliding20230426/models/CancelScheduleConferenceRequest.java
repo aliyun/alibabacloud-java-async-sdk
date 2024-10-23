@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelScheduleConferenceRequest} extends {@link RequestModel}
  *
  * <p>CancelScheduleConferenceRequest</p>
@@ -92,7 +93,10 @@ public class CancelScheduleConferenceRequest extends Request {
         }
 
         /**
-         * ScheduleConferenceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2a489xxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder scheduleConferenceId(String scheduleConferenceId) {
             this.putBodyParameter("ScheduleConferenceId", scheduleConferenceId);
@@ -117,6 +121,12 @@ public class CancelScheduleConferenceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CancelScheduleConferenceRequest} extends {@link TeaModel}
+     *
+     * <p>CancelScheduleConferenceRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +155,10 @@ public class CancelScheduleConferenceRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -159,6 +172,12 @@ public class CancelScheduleConferenceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CancelScheduleConferenceRequest} extends {@link TeaModel}
+     *
+     * <p>CancelScheduleConferenceRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

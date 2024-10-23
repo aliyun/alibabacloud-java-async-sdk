@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
  *
  * <p>GetSpaceDirectoriesResponseBody</p>
@@ -97,7 +98,10 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class Creator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -171,6 +181,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class IconUrl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
@@ -232,6 +248,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class LinkSourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
@@ -353,6 +375,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class HdIconVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
@@ -414,6 +442,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class IconVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
@@ -475,6 +509,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class Owner extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -536,6 +576,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class VisitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DentryActions")
         private java.util.List < String > dentryActions;
@@ -617,6 +663,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class Space extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cover")
         private String cover;
@@ -858,6 +910,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class StatisticalInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WordCount")
         private Long wordCount;
@@ -885,7 +943,10 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
             private Long wordCount; 
 
             /**
-             * WordCount
+             * <p>WordCount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder wordCount(Long wordCount) {
                 this.wordCount = wordCount;
@@ -899,6 +960,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class Updater extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -960,6 +1027,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class ChildrenVisitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DentryActions")
         private java.util.List < String > dentryActions;
@@ -1041,6 +1114,12 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSpaceDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpaceDirectoriesResponseBody</p>
+     */
     public static class Children extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;

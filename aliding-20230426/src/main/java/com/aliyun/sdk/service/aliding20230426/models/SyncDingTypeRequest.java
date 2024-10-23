@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncDingTypeRequest} extends {@link RequestModel}
  *
  * <p>SyncDingTypeRequest</p>
@@ -136,7 +137,10 @@ public class SyncDingTypeRequest extends Request {
         }
 
         /**
-         * DingType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANT_DING</p>
          */
         public Builder dingType(String dingType) {
             this.putBodyParameter("DingType", dingType);
@@ -154,7 +158,10 @@ public class SyncDingTypeRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>antding</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);
@@ -173,7 +180,10 @@ public class SyncDingTypeRequest extends Request {
         }
 
         /**
-         * WorkNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>012345</p>
          */
         public Builder workNo(String workNo) {
             this.putBodyParameter("WorkNo", workNo);
@@ -188,6 +198,12 @@ public class SyncDingTypeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SyncDingTypeRequest} extends {@link TeaModel}
+     *
+     * <p>SyncDingTypeRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -216,7 +232,10 @@ public class SyncDingTypeRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -230,6 +249,12 @@ public class SyncDingTypeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SyncDingTypeRequest} extends {@link TeaModel}
+     *
+     * <p>SyncDingTypeRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

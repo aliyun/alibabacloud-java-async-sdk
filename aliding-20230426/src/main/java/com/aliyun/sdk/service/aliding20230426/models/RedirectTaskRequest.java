@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RedirectTaskRequest} extends {@link RequestModel}
  *
  * <p>RedirectTaskRequest</p>
@@ -180,7 +181,10 @@ public class RedirectTaskRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKxxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -207,7 +211,10 @@ public class RedirectTaskRequest extends Request {
         }
 
         /**
-         * NowActionExecutorId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder nowActionExecutorId(String nowActionExecutorId) {
             this.putBodyParameter("NowActionExecutorId", nowActionExecutorId);
@@ -216,7 +223,10 @@ public class RedirectTaskRequest extends Request {
         }
 
         /**
-         * ProcessInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instxxxx</p>
          */
         public Builder processInstanceId(String processInstanceId) {
             this.putBodyParameter("ProcessInstanceId", processInstanceId);
@@ -234,7 +244,10 @@ public class RedirectTaskRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -243,7 +256,10 @@ public class RedirectTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder taskId(Long taskId) {
             this.putBodyParameter("TaskId", taskId);
@@ -258,6 +274,12 @@ public class RedirectTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RedirectTaskRequest} extends {@link TeaModel}
+     *
+     * <p>RedirectTaskRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -286,7 +308,10 @@ public class RedirectTaskRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

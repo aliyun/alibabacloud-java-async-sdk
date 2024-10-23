@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMeetingRoomResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMeetingRoomResponseBody</p>
@@ -73,7 +74,10 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         private String vendorType; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMeetingRoomResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMeetingRoomResponseBody</p>
+     */
     public static class AuthorizedMembers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemberId")
         private String memberId;
@@ -191,6 +201,12 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMeetingRoomResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMeetingRoomResponseBody</p>
+     */
     public static class ReservationAuthority extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizedMembers")
         private java.util.List < AuthorizedMembers> authorizedMembers;
@@ -232,6 +248,12 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMeetingRoomResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMeetingRoomResponseBody</p>
+     */
     public static class RoomGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
@@ -313,6 +335,12 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMeetingRoomResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMeetingRoomResponseBody</p>
+     */
     public static class RoomLabels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelId")
         private Long labelId;
@@ -374,6 +402,12 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMeetingRoomResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMeetingRoomResponseBody</p>
+     */
     public static class RoomLocation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
@@ -435,6 +469,12 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMeetingRoomResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMeetingRoomResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;

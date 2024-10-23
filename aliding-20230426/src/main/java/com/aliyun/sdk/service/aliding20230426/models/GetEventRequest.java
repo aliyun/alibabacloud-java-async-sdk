@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEventRequest} extends {@link RequestModel}
  *
  * <p>GetEventRequest</p>
@@ -107,7 +108,10 @@ public class GetEventRequest extends Request {
         }
 
         /**
-         * CalendarId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("CalendarId", calendarId);
@@ -116,7 +120,10 @@ public class GetEventRequest extends Request {
         }
 
         /**
-         * EventId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>311525211</p>
          */
         public Builder eventId(String eventId) {
             this.putBodyParameter("EventId", eventId);
@@ -140,6 +147,12 @@ public class GetEventRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetEventRequest} extends {@link TeaModel}
+     *
+     * <p>GetEventRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -168,7 +181,10 @@ public class GetEventRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

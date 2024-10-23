@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubscribedCalendarRequest} extends {@link RequestModel}
  *
  * <p>CreateSubscribedCalendarRequest</p>
@@ -140,7 +141,7 @@ public class CreateSubscribedCalendarRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -149,7 +150,7 @@ public class CreateSubscribedCalendarRequest extends Request {
         }
 
         /**
-         * SubscribeScope.
+         * <p>This parameter is required.</p>
          */
         public Builder subscribeScope(SubscribeScope subscribeScope) {
             String subscribeScopeShrink = shrink(subscribeScope, "SubscribeScope", "json");
@@ -165,6 +166,12 @@ public class CreateSubscribedCalendarRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSubscribedCalendarRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSubscribedCalendarRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -193,7 +200,10 @@ public class CreateSubscribedCalendarRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -207,6 +217,12 @@ public class CreateSubscribedCalendarRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSubscribedCalendarRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSubscribedCalendarRequest</p>
+     */
     public static class SubscribeScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CorpIds")
         private java.util.List < String > corpIds;

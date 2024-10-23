@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddRecordPermissionRequest} extends {@link RequestModel}
  *
  * <p>AddRecordPermissionRequest</p>
@@ -122,7 +123,10 @@ public class AddRecordPermissionRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>minutes</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -131,7 +135,10 @@ public class AddRecordPermissionRequest extends Request {
         }
 
         /**
-         * ConferenceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1dddwrqrq</p>
          */
         public Builder conferenceId(String conferenceId) {
             this.putBodyParameter("ConferenceId", conferenceId);
@@ -150,7 +157,10 @@ public class AddRecordPermissionRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>012345</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
@@ -165,6 +175,12 @@ public class AddRecordPermissionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddRecordPermissionRequest} extends {@link TeaModel}
+     *
+     * <p>AddRecordPermissionRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -193,7 +209,10 @@ public class AddRecordPermissionRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -207,6 +226,12 @@ public class AddRecordPermissionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddRecordPermissionRequest} extends {@link TeaModel}
+     *
+     * <p>AddRecordPermissionRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

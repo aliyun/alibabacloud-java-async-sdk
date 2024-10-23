@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstancesByIdListRequest} extends {@link RequestModel}
  *
  * <p>GetInstancesByIdListRequest</p>
@@ -161,6 +162,12 @@ public class GetInstancesByIdListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstancesByIdListRequest} extends {@link TeaModel}
+     *
+     * <p>GetInstancesByIdListRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -189,7 +196,10 @@ public class GetInstancesByIdListRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

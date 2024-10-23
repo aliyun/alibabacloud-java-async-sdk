@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstancesByIdListResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstancesByIdListResponseBody</p>
@@ -110,6 +111,12 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstancesByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesByIdListResponseBody</p>
+     */
     public static class Name extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -191,6 +198,12 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstancesByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesByIdListResponseBody</p>
+     */
     public static class ActionExecutor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DepartmentName")
         private String departmentName;
@@ -292,6 +305,12 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstancesByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesByIdListResponseBody</p>
+     */
     public static class OriginatorName extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
@@ -373,6 +392,12 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstancesByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesByIdListResponseBody</p>
+     */
     public static class Originator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DepartmentName")
         private String departmentName;
@@ -474,6 +499,12 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstancesByIdListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstancesByIdListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionExecutor")
         private java.util.List < ActionExecutor> actionExecutor;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMeetingRoomRequest} extends {@link RequestModel}
  *
  * <p>DeleteMeetingRoomRequest</p>
@@ -92,7 +93,10 @@ public class DeleteMeetingRoomRequest extends Request {
         }
 
         /**
-         * RoomId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ffb7xxxxx</p>
          */
         public Builder roomId(String roomId) {
             this.putBodyParameter("RoomId", roomId);
@@ -117,6 +121,12 @@ public class DeleteMeetingRoomRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteMeetingRoomRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteMeetingRoomRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +155,10 @@ public class DeleteMeetingRoomRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -159,6 +172,12 @@ public class DeleteMeetingRoomRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteMeetingRoomRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteMeetingRoomRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

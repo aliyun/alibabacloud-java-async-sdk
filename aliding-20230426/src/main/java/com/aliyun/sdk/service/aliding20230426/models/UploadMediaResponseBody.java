@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadMediaResponseBody} extends {@link TeaModel}
  *
  * <p>UploadMediaResponseBody</p>
@@ -57,7 +58,10 @@ public class UploadMediaResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd-1234-wxyz-9876</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

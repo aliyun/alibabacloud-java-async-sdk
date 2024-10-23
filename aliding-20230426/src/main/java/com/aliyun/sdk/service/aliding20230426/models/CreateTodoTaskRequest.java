@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTodoTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateTodoTaskRequest</p>
@@ -383,7 +384,10 @@ public class CreateTodoTaskRequest extends Request {
         }
 
         /**
-         * subject.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>接入钉钉待办</p>
          */
         public Builder subject(String subject) {
             this.putBodyParameter("subject", subject);
@@ -398,6 +402,12 @@ public class CreateTodoTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -439,6 +449,12 @@ public class CreateTodoTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
@@ -480,6 +496,12 @@ public class CreateTodoTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskRequest</p>
+     */
     public static class ContentFieldList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fieldKey")
         private String fieldKey;
@@ -519,7 +541,10 @@ public class CreateTodoTaskRequest extends Request {
             private String fieldValue; 
 
             /**
-             * fieldKey
+             * <p>fieldKey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fieldKey</p>
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -527,7 +552,10 @@ public class CreateTodoTaskRequest extends Request {
             }
 
             /**
-             * fieldValue
+             * <p>fieldValue</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fieldValue</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -541,6 +569,12 @@ public class CreateTodoTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskRequest</p>
+     */
     public static class DetailUrl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appUrl")
         private String appUrl;
@@ -602,6 +636,12 @@ public class CreateTodoTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskRequest</p>
+     */
     public static class NotifyConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dingNotify")
         private String dingNotify;

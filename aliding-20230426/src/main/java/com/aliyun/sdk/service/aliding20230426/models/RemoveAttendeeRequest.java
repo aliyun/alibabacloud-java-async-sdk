@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveAttendeeRequest} extends {@link RequestModel}
  *
  * <p>RemoveAttendeeRequest</p>
@@ -117,7 +118,10 @@ public class RemoveAttendeeRequest extends Request {
         }
 
         /**
-         * CalendarId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("CalendarId", calendarId);
@@ -126,7 +130,10 @@ public class RemoveAttendeeRequest extends Request {
         }
 
         /**
-         * EventId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iiiP35sJadba8aBSgjrwPRKgiEiF</p>
          */
         public Builder eventId(String eventId) {
             this.putBodyParameter("EventId", eventId);
@@ -141,6 +148,12 @@ public class RemoveAttendeeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveAttendeeRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveAttendeeRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -169,7 +182,10 @@ public class RemoveAttendeeRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

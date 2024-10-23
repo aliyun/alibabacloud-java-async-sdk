@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchRemovalByFormInstanceIdListRequest} extends {@link RequestModel}
  *
  * <p>BatchRemovalByFormInstanceIdListRequest</p>
@@ -151,7 +152,10 @@ public class BatchRemovalByFormInstanceIdListRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_XCE0EVXS6DYG3YDYC5RD</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -178,7 +182,10 @@ public class BatchRemovalByFormInstanceIdListRequest extends Request {
         }
 
         /**
-         * FormInstanceIdList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder formInstanceIdList(java.util.List < String > formInstanceIdList) {
             String formInstanceIdListShrink = shrink(formInstanceIdList, "FormInstanceIdList", "json");
@@ -188,7 +195,10 @@ public class BatchRemovalByFormInstanceIdListRequest extends Request {
         }
 
         /**
-         * FormUuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORM-GX866MC1NC1VOFF6WVQW33FD16E23L3CPMKVKA</p>
          */
         public Builder formUuid(String formUuid) {
             this.putBodyParameter("FormUuid", formUuid);
@@ -197,7 +207,10 @@ public class BatchRemovalByFormInstanceIdListRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09866181UTZVVD4R3DC955FNKIM52HVPU5WWK7</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -212,6 +225,12 @@ public class BatchRemovalByFormInstanceIdListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchRemovalByFormInstanceIdListRequest} extends {@link TeaModel}
+     *
+     * <p>BatchRemovalByFormInstanceIdListRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -240,7 +259,10 @@ public class BatchRemovalByFormInstanceIdListRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReceiverListReportRequest} extends {@link RequestModel}
  *
  * <p>ReceiverListReportRequest</p>
@@ -122,7 +123,10 @@ public class ReceiverListReportRequest extends Request {
         }
 
         /**
-         * Offset.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder offset(Long offset) {
             this.putBodyParameter("Offset", offset);
@@ -131,7 +135,10 @@ public class ReceiverListReportRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173xxxx</p>
          */
         public Builder reportId(String reportId) {
             this.putBodyParameter("ReportId", reportId);
@@ -140,7 +147,10 @@ public class ReceiverListReportRequest extends Request {
         }
 
         /**
-         * Size.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Long size) {
             this.putBodyParameter("Size", size);
@@ -165,6 +175,12 @@ public class ReceiverListReportRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ReceiverListReportRequest} extends {@link TeaModel}
+     *
+     * <p>ReceiverListReportRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -193,7 +209,10 @@ public class ReceiverListReportRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -207,6 +226,12 @@ public class ReceiverListReportRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ReceiverListReportRequest} extends {@link TeaModel}
+     *
+     * <p>ReceiverListReportRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

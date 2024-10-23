@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFormDataRequest} extends {@link RequestModel}
  *
  * <p>DeleteFormDataRequest</p>
@@ -122,7 +123,10 @@ public class DeleteFormDataRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKTxxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -131,7 +135,10 @@ public class DeleteFormDataRequest extends Request {
         }
 
         /**
-         * FormInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORM_INST_12345</p>
          */
         public Builder formInstanceId(String formInstanceId) {
             this.putBodyParameter("FormInstanceId", formInstanceId);
@@ -149,7 +156,10 @@ public class DeleteFormDataRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -164,6 +174,12 @@ public class DeleteFormDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteFormDataRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteFormDataRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -192,7 +208,10 @@ public class DeleteFormDataRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

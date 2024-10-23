@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetFormDataByIdListRequest} extends {@link RequestModel}
  *
  * <p>BatchGetFormDataByIdListRequest</p>
@@ -137,7 +138,10 @@ public class BatchGetFormDataByIdListRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_PBKT0xxx</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -146,7 +150,10 @@ public class BatchGetFormDataByIdListRequest extends Request {
         }
 
         /**
-         * FormInstanceIdList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORM-xxxxx</p>
          */
         public Builder formInstanceIdList(java.util.List < String > formInstanceIdList) {
             String formInstanceIdListShrink = shrink(formInstanceIdList, "FormInstanceIdList", "json");
@@ -156,7 +163,10 @@ public class BatchGetFormDataByIdListRequest extends Request {
         }
 
         /**
-         * FormUuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORM-xxxxx</p>
          */
         public Builder formUuid(String formUuid) {
             this.putBodyParameter("FormUuid", formUuid);
@@ -174,7 +184,10 @@ public class BatchGetFormDataByIdListRequest extends Request {
         }
 
         /**
-         * SystemToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hexxxx</p>
          */
         public Builder systemToken(String systemToken) {
             this.putBodyParameter("SystemToken", systemToken);
@@ -189,6 +202,12 @@ public class BatchGetFormDataByIdListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetFormDataByIdListRequest} extends {@link TeaModel}
+     *
+     * <p>BatchGetFormDataByIdListRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -217,7 +236,10 @@ public class BatchGetFormDataByIdListRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserLatestPlanResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserLatestPlanResponseBody</p>

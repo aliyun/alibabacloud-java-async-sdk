@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>GetWorkspaceRequest</p>
@@ -125,7 +126,10 @@ public class GetWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MJ0pDSKMV9dO20E4</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -140,6 +144,12 @@ public class GetWorkspaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkspaceRequest} extends {@link TeaModel}
+     *
+     * <p>GetWorkspaceRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -168,7 +178,10 @@ public class GetWorkspaceRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -182,6 +195,12 @@ public class GetWorkspaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkspaceRequest} extends {@link TeaModel}
+     *
+     * <p>GetWorkspaceRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

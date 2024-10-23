@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PatchEventRequest} extends {@link RequestModel}
  *
  * <p>PatchEventRequest</p>
@@ -257,7 +258,10 @@ public class PatchEventRequest extends Request {
         }
 
         /**
-         * CalendarId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("CalendarId", calendarId);
@@ -295,7 +299,10 @@ public class PatchEventRequest extends Request {
         }
 
         /**
-         * EventId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iiiP35sJadba8aBSgjrwPRKgiEiF</p>
          */
         public Builder eventId(String eventId) {
             this.putBodyParameter("EventId", eventId);
@@ -378,6 +385,12 @@ public class PatchEventRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -406,7 +419,10 @@ public class PatchEventRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -420,6 +436,12 @@ public class PatchEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class Attendees extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -481,6 +503,12 @@ public class PatchEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class CardInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutTrackId")
         private String outTrackId;
@@ -542,6 +570,12 @@ public class PatchEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class End extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("date")
         private String date;
@@ -623,6 +657,12 @@ public class PatchEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class Location extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
@@ -664,6 +704,12 @@ public class PatchEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class Pattern extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dayOfMonth")
         private Integer dayOfMonth;
@@ -785,6 +831,12 @@ public class PatchEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class Range extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endDate")
         private String endDate;
@@ -866,6 +918,12 @@ public class PatchEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class Recurrence extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pattern")
         private Pattern pattern;
@@ -927,6 +985,12 @@ public class PatchEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class Reminders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("method")
         private String method;
@@ -988,6 +1052,12 @@ public class PatchEventRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
     public static class Start extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("date")
         private String date;

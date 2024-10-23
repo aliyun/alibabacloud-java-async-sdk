@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryScheduleConferenceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryScheduleConferenceInfoResponseBody</p>
@@ -150,6 +151,12 @@ public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryScheduleConferenceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryScheduleConferenceInfoResponseBody</p>
+     */
     public static class ConferenceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConferenceId")
         private String conferenceId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSheetContentJobIdRequest} extends {@link RequestModel}
  *
  * <p>GetSheetContentJobIdRequest</p>
@@ -139,6 +140,12 @@ public class GetSheetContentJobIdRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetSheetContentJobIdRequest} extends {@link TeaModel}
+     *
+     * <p>GetSheetContentJobIdRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -167,7 +174,10 @@ public class GetSheetContentJobIdRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -181,6 +191,12 @@ public class GetSheetContentJobIdRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSheetContentJobIdRequest} extends {@link TeaModel}
+     *
+     * <p>GetSheetContentJobIdRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

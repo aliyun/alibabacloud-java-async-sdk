@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeByUrlRequest} extends {@link RequestModel}
  *
  * <p>GetNodeByUrlRequest</p>
@@ -126,7 +127,10 @@ public class GetNodeByUrlRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://alidocs.dingtalk.com/i/nodes/EpGBa2L*********gN7R35y">https://alidocs.dingtalk.com/i/nodes/EpGBa2L*********gN7R35y</a></p>
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);
@@ -141,6 +145,12 @@ public class GetNodeByUrlRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodeByUrlRequest} extends {@link TeaModel}
+     *
+     * <p>GetNodeByUrlRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -169,7 +179,10 @@ public class GetNodeByUrlRequest extends Request {
             private String accountId; 
 
             /**
-             * accountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>012345</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -183,6 +196,12 @@ public class GetNodeByUrlRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNodeByUrlRequest} extends {@link TeaModel}
+     *
+     * <p>GetNodeByUrlRequest</p>
+     */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WithPermissionRole")
         private Boolean withPermissionRole;
@@ -244,6 +263,12 @@ public class GetNodeByUrlRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNodeByUrlRequest} extends {@link TeaModel}
+     *
+     * <p>GetNodeByUrlRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;

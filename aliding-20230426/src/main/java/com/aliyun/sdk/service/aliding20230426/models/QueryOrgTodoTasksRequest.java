@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrgTodoTasksRequest} extends {@link RequestModel}
  *
  * <p>QueryOrgTodoTasksRequest</p>
@@ -139,6 +140,12 @@ public class QueryOrgTodoTasksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrgTodoTasksRequest} extends {@link TeaModel}
+     *
+     * <p>QueryOrgTodoTasksRequest</p>
+     */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -180,6 +187,12 @@ public class QueryOrgTodoTasksRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrgTodoTasksRequest} extends {@link TeaModel}
+     *
+     * <p>QueryOrgTodoTasksRequest</p>
+     */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
