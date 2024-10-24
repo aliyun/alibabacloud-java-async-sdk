@@ -59,7 +59,7 @@ public class TextResult extends TeaModel {
         }
 
         /**
-         * text.
+         * <p>This parameter is required.</p>
          */
         public Builder text(Text text) {
             this.text = text;

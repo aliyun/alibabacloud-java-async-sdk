@@ -7,52 +7,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QueryAvatarProjectResponseBody} extends {@link TeaModel}
+ * {@link SaveAvatarProjectRequest} extends {@link RequestModel}
  *
- * <p>QueryAvatarProjectResponseBody</p>
+ * <p>SaveAvatarProjectRequest</p>
  */
-public class QueryAvatarProjectResponseBody extends TeaModel {
+public class SaveAvatarProjectRequest extends Request {
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("agentId")
     private String agentId;
 
-    @com.aliyun.core.annotation.NameInMap("errorMsg")
-    private String errorMsg;
-
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("frames")
     private java.util.List < Frames> frames;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("operateType")
+    private String operateType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("projectId")
+    private String projectId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("projectName")
     private String projectName;
 
-    @com.aliyun.core.annotation.NameInMap("requestId")
-    private String requestId;
-
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resSpecType")
     private String resSpecType;
 
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scaleType")
     private String scaleType;
 
-    @com.aliyun.core.annotation.NameInMap("status")
-    private String status;
-
-    private QueryAvatarProjectResponseBody(Builder builder) {
+    private SaveAvatarProjectRequest(Builder builder) {
+        super(builder);
         this.agentId = builder.agentId;
-        this.errorMsg = builder.errorMsg;
         this.frames = builder.frames;
+        this.operateType = builder.operateType;
+        this.projectId = builder.projectId;
         this.projectName = builder.projectName;
-        this.requestId = builder.requestId;
         this.resSpecType = builder.resSpecType;
         this.scaleType = builder.scaleType;
-        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static QueryAvatarProjectResponseBody create() {
+    public static SaveAvatarProjectRequest create() {
         return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,13 +72,6 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     }
 
     /**
-     * @return errorMsg
-     */
-    public String getErrorMsg() {
-        return this.errorMsg;
-    }
-
-    /**
      * @return frames
      */
     public java.util.List < Frames> getFrames() {
@@ -77,17 +79,24 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     }
 
     /**
+     * @return operateType
+     */
+    public String getOperateType() {
+        return this.operateType;
+    }
+
+    /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
         return this.projectName;
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -104,36 +113,36 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         return this.scaleType;
     }
 
-    /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
-    public static final class Builder {
+    public static final class Builder extends Request.Builder<SaveAvatarProjectRequest, Builder> {
         private String agentId; 
-        private String errorMsg; 
         private java.util.List < Frames> frames; 
+        private String operateType; 
+        private String projectId; 
         private String projectName; 
-        private String requestId; 
         private String resSpecType; 
         private String scaleType; 
-        private String status; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(SaveAvatarProjectRequest request) {
+            super(request);
+            this.agentId = request.agentId;
+            this.frames = request.frames;
+            this.operateType = request.operateType;
+            this.projectId = request.projectId;
+            this.projectName = request.projectName;
+            this.resSpecType = request.resSpecType;
+            this.scaleType = request.scaleType;
+        } 
 
         /**
          * agentId.
          */
         public Builder agentId(String agentId) {
+            this.putBodyParameter("agentId", agentId);
             this.agentId = agentId;
-            return this;
-        }
-
-        /**
-         * errorMsg.
-         */
-        public Builder errorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
             return this;
         }
 
@@ -141,7 +150,26 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
          * frames.
          */
         public Builder frames(java.util.List < Frames> frames) {
+            this.putBodyParameter("frames", frames);
             this.frames = frames;
+            return this;
+        }
+
+        /**
+         * operateType.
+         */
+        public Builder operateType(String operateType) {
+            this.putBodyParameter("operateType", operateType);
+            this.operateType = operateType;
+            return this;
+        }
+
+        /**
+         * projectId.
+         */
+        public Builder projectId(String projectId) {
+            this.putBodyParameter("projectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 
@@ -149,15 +177,8 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
          * projectName.
          */
         public Builder projectName(String projectName) {
+            this.putBodyParameter("projectName", projectName);
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * requestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -165,6 +186,7 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
          * resSpecType.
          */
         public Builder resSpecType(String resSpecType) {
+            this.putBodyParameter("resSpecType", resSpecType);
             this.resSpecType = resSpecType;
             return this;
         }
@@ -173,29 +195,23 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
          * scaleType.
          */
         public Builder scaleType(String scaleType) {
+            this.putBodyParameter("scaleType", scaleType);
             this.scaleType = scaleType;
             return this;
         }
 
-        /**
-         * status.
-         */
-        public Builder status(String status) {
-            this.status = status;
-            return this;
-        }
-
-        public QueryAvatarProjectResponseBody build() {
-            return new QueryAvatarProjectResponseBody(this);
+        @Override
+        public SaveAvatarProjectRequest build() {
+            return new SaveAvatarProjectRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link QueryAvatarProjectResponseBody} extends {@link TeaModel}
+     * {@link SaveAvatarProjectRequest} extends {@link TeaModel}
      *
-     * <p>QueryAvatarProjectResponseBody</p>
+     * <p>SaveAvatarProjectRequest</p>
      */
     public static class Material extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("format")
@@ -280,9 +296,9 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link QueryAvatarProjectResponseBody} extends {@link TeaModel}
+     * {@link SaveAvatarProjectRequest} extends {@link TeaModel}
      *
-     * <p>QueryAvatarProjectResponseBody</p>
+     * <p>SaveAvatarProjectRequest</p>
      */
     public static class Layers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("height")
@@ -427,9 +443,9 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link QueryAvatarProjectResponseBody} extends {@link TeaModel}
+     * {@link SaveAvatarProjectRequest} extends {@link TeaModel}
      *
-     * <p>QueryAvatarProjectResponseBody</p>
+     * <p>SaveAvatarProjectRequest</p>
      */
     public static class VideoScript extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("speedRate")
@@ -438,9 +454,13 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("voiceTemplateId")
         private String voiceTemplateId;
 
+        @com.aliyun.core.annotation.NameInMap("volume")
+        private String volume;
+
         private VideoScript(Builder builder) {
             this.speedRate = builder.speedRate;
             this.voiceTemplateId = builder.voiceTemplateId;
+            this.volume = builder.volume;
         }
 
         public static Builder builder() {
@@ -465,9 +485,17 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             return this.voiceTemplateId;
         }
 
+        /**
+         * @return volume
+         */
+        public String getVolume() {
+            return this.volume;
+        }
+
         public static final class Builder {
             private String speedRate; 
             private String voiceTemplateId; 
+            private String volume; 
 
             /**
              * speedRate.
@@ -485,6 +513,14 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * volume.
+             */
+            public Builder volume(String volume) {
+                this.volume = volume;
+                return this;
+            }
+
             public VideoScript build() {
                 return new VideoScript(this);
             } 
@@ -494,9 +530,9 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link QueryAvatarProjectResponseBody} extends {@link TeaModel}
+     * {@link SaveAvatarProjectRequest} extends {@link TeaModel}
      *
-     * <p>QueryAvatarProjectResponseBody</p>
+     * <p>SaveAvatarProjectRequest</p>
      */
     public static class Frames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("layers")

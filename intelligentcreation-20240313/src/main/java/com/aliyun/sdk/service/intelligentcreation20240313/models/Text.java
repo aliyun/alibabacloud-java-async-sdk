@@ -264,7 +264,10 @@ public class Text extends TeaModel {
         }
 
         /**
-         * desc.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder desc(String desc) {
             this.desc = desc;
@@ -312,7 +315,10 @@ public class Text extends TeaModel {
         }
 
         /**
-         * textId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder textId(Long textId) {
             this.textId = textId;
@@ -336,7 +342,10 @@ public class Text extends TeaModel {
         }
 
         /**
-         * textStatus.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Generating</p>
          */
         public Builder textStatus(String textStatus) {
             this.textStatus = textStatus;
@@ -352,7 +361,10 @@ public class Text extends TeaModel {
         }
 
         /**
-         * textTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder textTaskId(Long textTaskId) {
             this.textTaskId = textTaskId;
@@ -376,7 +388,10 @@ public class Text extends TeaModel {
         }
 
         /**
-         * userNameCreate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder userNameCreate(String userNameCreate) {
             this.userNameCreate = userNameCreate;
@@ -384,7 +399,10 @@ public class Text extends TeaModel {
         }
 
         /**
-         * userNameModified.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder userNameModified(String userNameModified) {
             this.userNameModified = userNameModified;

@@ -103,7 +103,10 @@ public class UploadInfo extends TeaModel {
         private String url; 
 
         /**
-         * accessId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -111,7 +114,10 @@ public class UploadInfo extends TeaModel {
         }
 
         /**
-         * host.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yic-pre.oss-cn-hangzhou.aliyuncs.com</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -119,7 +125,10 @@ public class UploadInfo extends TeaModel {
         }
 
         /**
-         * key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234/temp-novels/xxxx-xxx-xx.txt</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -127,7 +136,10 @@ public class UploadInfo extends TeaModel {
         }
 
         /**
-         * policy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxx</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -135,7 +147,10 @@ public class UploadInfo extends TeaModel {
         }
 
         /**
-         * policySignature.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxx</p>
          */
         public Builder policySignature(String policySignature) {
             this.policySignature = policySignature;

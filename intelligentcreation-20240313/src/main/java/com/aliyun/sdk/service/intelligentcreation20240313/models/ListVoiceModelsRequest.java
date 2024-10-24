@@ -21,6 +21,10 @@ public class ListVoiceModelsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resSpecType")
+    private String resSpecType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("useScene")
     private String useScene;
 
@@ -32,6 +36,7 @@ public class ListVoiceModelsRequest extends Request {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resSpecType = builder.resSpecType;
         this.useScene = builder.useScene;
         this.voiceType = builder.voiceType;
     }
@@ -64,6 +69,13 @@ public class ListVoiceModelsRequest extends Request {
     }
 
     /**
+     * @return resSpecType
+     */
+    public String getResSpecType() {
+        return this.resSpecType;
+    }
+
+    /**
      * @return useScene
      */
     public String getUseScene() {
@@ -80,6 +92,7 @@ public class ListVoiceModelsRequest extends Request {
     public static final class Builder extends Request.Builder<ListVoiceModelsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resSpecType; 
         private String useScene; 
         private String voiceType; 
 
@@ -91,6 +104,7 @@ public class ListVoiceModelsRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resSpecType = request.resSpecType;
             this.useScene = request.useScene;
             this.voiceType = request.voiceType;
         } 
@@ -110,6 +124,15 @@ public class ListVoiceModelsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * resSpecType.
+         */
+        public Builder resSpecType(String resSpecType) {
+            this.putQueryParameter("resSpecType", resSpecType);
+            this.resSpecType = resSpecType;
             return this;
         }
 

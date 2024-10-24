@@ -305,7 +305,10 @@ public class TextTask extends TeaModel {
         }
 
         /**
-         * nums.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nums(Integer nums) {
             this.nums = nums;
@@ -337,7 +340,7 @@ public class TextTask extends TeaModel {
         }
 
         /**
-         * style.
+         * <p>This parameter is required.</p>
          */
         public Builder style(String style) {
             this.style = style;
@@ -361,7 +364,7 @@ public class TextTask extends TeaModel {
         }
 
         /**
-         * textModeType.
+         * <p>This parameter is required.</p>
          */
         public Builder textModeType(String textModeType) {
             this.textModeType = textModeType;

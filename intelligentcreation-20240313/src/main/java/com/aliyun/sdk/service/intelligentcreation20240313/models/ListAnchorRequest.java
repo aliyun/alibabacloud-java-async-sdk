@@ -33,6 +33,10 @@ public class ListAnchorRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resSpecType")
+    private String resSpecType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("useScene")
     private String useScene;
 
@@ -43,6 +47,7 @@ public class ListAnchorRequest extends Request {
         this.digitalHumanType = builder.digitalHumanType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resSpecType = builder.resSpecType;
         this.useScene = builder.useScene;
     }
 
@@ -95,6 +100,13 @@ public class ListAnchorRequest extends Request {
     }
 
     /**
+     * @return resSpecType
+     */
+    public String getResSpecType() {
+        return this.resSpecType;
+    }
+
+    /**
      * @return useScene
      */
     public String getUseScene() {
@@ -107,6 +119,7 @@ public class ListAnchorRequest extends Request {
         private String digitalHumanType; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resSpecType; 
         private String useScene; 
 
         private Builder() {
@@ -120,6 +133,7 @@ public class ListAnchorRequest extends Request {
             this.digitalHumanType = request.digitalHumanType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resSpecType = request.resSpecType;
             this.useScene = request.useScene;
         } 
 
@@ -165,6 +179,15 @@ public class ListAnchorRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * resSpecType.
+         */
+        public Builder resSpecType(String resSpecType) {
+            this.putQueryParameter("resSpecType", resSpecType);
+            this.resSpecType = resSpecType;
             return this;
         }
 

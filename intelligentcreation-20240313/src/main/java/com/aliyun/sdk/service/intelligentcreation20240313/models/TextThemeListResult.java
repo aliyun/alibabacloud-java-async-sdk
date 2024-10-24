@@ -59,7 +59,7 @@ public class TextThemeListResult extends TeaModel {
         }
 
         /**
-         * textThemeList.
+         * <p>This parameter is required.</p>
          */
         public Builder textThemeList(java.util.List < TextTheme > textThemeList) {
             this.textThemeList = textThemeList;

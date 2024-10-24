@@ -7,28 +7,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetOssUploadTokenResult} extends {@link TeaModel}
+ * {@link OperateAvatarProjectResponseBody} extends {@link TeaModel}
  *
- * <p>GetOssUploadTokenResult</p>
+ * <p>OperateAvatarProjectResponseBody</p>
  */
-public class GetOssUploadTokenResult extends TeaModel {
+public class OperateAvatarProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("uploadInfo")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private UploadInfo uploadInfo;
+    @com.aliyun.core.annotation.NameInMap("success")
+    private Boolean success;
 
-    private GetOssUploadTokenResult(Builder builder) {
+    private OperateAvatarProjectResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.uploadInfo = builder.uploadInfo;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetOssUploadTokenResult create() {
+    public static OperateAvatarProjectResponseBody create() {
         return builder().build();
     }
 
@@ -40,18 +39,21 @@ public class GetOssUploadTokenResult extends TeaModel {
     }
 
     /**
-     * @return uploadInfo
+     * @return success
      */
-    public UploadInfo getUploadInfo() {
-        return this.uploadInfo;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static final class Builder {
         private String requestId; 
-        private UploadInfo uploadInfo; 
+        private Boolean success; 
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86A90C40-D1AB-50DA-A4B1-0D545F80F2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -59,15 +61,15 @@ public class GetOssUploadTokenResult extends TeaModel {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * success.
          */
-        public Builder uploadInfo(UploadInfo uploadInfo) {
-            this.uploadInfo = uploadInfo;
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 
-        public GetOssUploadTokenResult build() {
-            return new GetOssUploadTokenResult(this);
+        public OperateAvatarProjectResponseBody build() {
+            return new OperateAvatarProjectResponseBody(this);
         } 
 
     } 

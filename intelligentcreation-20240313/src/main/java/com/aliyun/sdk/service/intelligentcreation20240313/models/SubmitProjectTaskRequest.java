@@ -151,6 +151,9 @@ public class SubmitProjectTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
+        @com.aliyun.core.annotation.NameInMap("speed")
+        private String speed;
+
         @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
@@ -160,6 +163,7 @@ public class SubmitProjectTaskRequest extends Request {
         private Material(Builder builder) {
             this.format = builder.format;
             this.id = builder.id;
+            this.speed = builder.speed;
             this.url = builder.url;
             this.volume = builder.volume;
         }
@@ -187,6 +191,13 @@ public class SubmitProjectTaskRequest extends Request {
         }
 
         /**
+         * @return speed
+         */
+        public String getSpeed() {
+            return this.speed;
+        }
+
+        /**
          * @return url
          */
         public String getUrl() {
@@ -203,6 +214,7 @@ public class SubmitProjectTaskRequest extends Request {
         public static final class Builder {
             private String format; 
             private String id; 
+            private String speed; 
             private String url; 
             private Integer volume; 
 
@@ -219,6 +231,14 @@ public class SubmitProjectTaskRequest extends Request {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * speed.
+             */
+            public Builder speed(String speed) {
+                this.speed = speed;
                 return this;
             }
 

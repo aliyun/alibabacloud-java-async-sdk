@@ -249,7 +249,10 @@ public class TextTaskCreateCmd extends TeaModel {
         }
 
         /**
-         * number.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder number(Integer number) {
             this.number = number;
@@ -289,7 +292,7 @@ public class TextTaskCreateCmd extends TeaModel {
         }
 
         /**
-         * style.
+         * <p>This parameter is required.</p>
          */
         public Builder style(String style) {
             this.style = style;
@@ -305,7 +308,7 @@ public class TextTaskCreateCmd extends TeaModel {
         }
 
         /**
-         * textModeType.
+         * <p>This parameter is required.</p>
          */
         public Builder textModeType(String textModeType) {
             this.textModeType = textModeType;

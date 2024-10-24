@@ -40,6 +40,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddTextFeedback  AddTextFeedbackRequest
+     * @return AddTextFeedbackResponse
+     */
     @Override
     public CompletableFuture<AddTextFeedbackResponse> addTextFeedback(AddTextFeedbackRequest request) {
         try {
@@ -54,6 +58,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchGetProjectTask  BatchGetProjectTaskRequest
+     * @return BatchGetProjectTaskResponse
+     */
     @Override
     public CompletableFuture<BatchGetProjectTaskResponse> batchGetProjectTask(BatchGetProjectTaskRequest request) {
         try {
@@ -68,6 +76,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckSession  CheckSessionRequest
+     * @return CheckSessionResponse
+     */
     @Override
     public CompletableFuture<CheckSessionResponse> checkSession(CheckSessionRequest request) {
         try {
@@ -82,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CountText  CountTextRequest
+     * @return CountTextResponse
+     */
     @Override
     public CompletableFuture<CountTextResponse> countText(CountTextRequest request) {
         try {
@@ -96,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIllustrationTask  CreateIllustrationTaskRequest
+     * @return CreateIllustrationTaskResponse
+     */
     @Override
     public CompletableFuture<CreateIllustrationTaskResponse> createIllustrationTask(CreateIllustrationTaskRequest request) {
         try {
@@ -110,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRealisticPortrait  CreateRealisticPortraitRequest
+     * @return CreateRealisticPortraitResponse
+     */
     @Override
     public CompletableFuture<CreateRealisticPortraitResponse> createRealisticPortrait(CreateRealisticPortraitRequest request) {
         try {
@@ -124,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTextTask  CreateTextTaskRequest
+     * @return CreateTextTaskResponse
+     */
     @Override
     public CompletableFuture<CreateTextTaskResponse> createTextTask(CreateTextTaskRequest request) {
         try {
@@ -138,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIllustration  GetIllustrationRequest
+     * @return GetIllustrationResponse
+     */
     @Override
     public CompletableFuture<GetIllustrationResponse> getIllustration(GetIllustrationRequest request) {
         try {
@@ -152,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIllustrationTask  GetIllustrationTaskRequest
+     * @return GetIllustrationTaskResponse
+     */
     @Override
     public CompletableFuture<GetIllustrationTaskResponse> getIllustrationTask(GetIllustrationTaskRequest request) {
         try {
@@ -166,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOssUploadToken  GetOssUploadTokenRequest
+     * @return GetOssUploadTokenResponse
+     */
     @Override
     public CompletableFuture<GetOssUploadTokenResponse> getOssUploadToken(GetOssUploadTokenRequest request) {
         try {
@@ -180,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProjectTask  GetProjectTaskRequest
+     * @return GetProjectTaskResponse
+     */
     @Override
     public CompletableFuture<GetProjectTaskResponse> getProjectTask(GetProjectTaskRequest request) {
         try {
@@ -194,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetText  GetTextRequest
+     * @return GetTextResponse
+     */
     @Override
     public CompletableFuture<GetTextResponse> getText(GetTextRequest request) {
         try {
@@ -208,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTextTask  GetTextTaskRequest
+     * @return GetTextTaskResponse
+     */
     @Override
     public CompletableFuture<GetTextTaskResponse> getTextTask(GetTextTaskRequest request) {
         try {
@@ -222,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTextTemplate  GetTextTemplateRequest
+     * @return GetTextTemplateResponse
+     */
     @Override
     public CompletableFuture<GetTextTemplateResponse> getTextTemplate(GetTextTemplateRequest request) {
         try {
@@ -236,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InteractText  InteractTextRequest
+     * @return InteractTextResponse
+     */
     @Override
     public CompletableFuture<InteractTextResponse> interactText(InteractTextRequest request) {
         try {
@@ -260,6 +320,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of ListAnchor  ListAnchorRequest
+     * @return ListAnchorResponse
+     */
     @Override
     public CompletableFuture<ListAnchorResponse> listAnchor(ListAnchorRequest request) {
         try {
@@ -274,6 +338,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAvatarProject  ListAvatarProjectRequest
+     * @return ListAvatarProjectResponse
+     */
     @Override
     public CompletableFuture<ListAvatarProjectResponse> listAvatarProject(ListAvatarProjectRequest request) {
         try {
@@ -288,6 +356,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTextThemes  ListTextThemesRequest
+     * @return ListTextThemesResponse
+     */
     @Override
     public CompletableFuture<ListTextThemesResponse> listTextThemes(ListTextThemesRequest request) {
         try {
@@ -302,6 +374,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTexts  ListTextsRequest
+     * @return ListTextsResponse
+     */
     @Override
     public CompletableFuture<ListTextsResponse> listTexts(ListTextsRequest request) {
         try {
@@ -316,6 +392,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVoiceModels  ListVoiceModelsRequest
+     * @return ListVoiceModelsResponse
+     */
     @Override
     public CompletableFuture<ListVoiceModelsResponse> listVoiceModels(ListVoiceModelsRequest request) {
         try {
@@ -330,6 +410,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateAvatarProject  OperateAvatarProjectRequest
+     * @return OperateAvatarProjectResponse
+     */
+    @Override
+    public CompletableFuture<OperateAvatarProjectResponse> operateAvatarProject(OperateAvatarProjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OperateAvatarProject").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/avatar/project/operateProjectAvatar").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OperateAvatarProjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OperateAvatarProjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAvatarProject  QueryAvatarProjectRequest
+     * @return QueryAvatarProjectResponse
+     */
     @Override
     public CompletableFuture<QueryAvatarProjectResponse> queryAvatarProject(QueryAvatarProjectRequest request) {
         try {
@@ -344,6 +446,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAvatarResource  QueryAvatarResourceRequest
+     * @return QueryAvatarResourceResponse
+     */
     @Override
     public CompletableFuture<QueryAvatarResourceResponse> queryAvatarResource(QueryAvatarResourceRequest request) {
         try {
@@ -358,6 +464,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySessionInfo  QuerySessionInfoRequest
+     * @return QuerySessionInfoResponse
+     */
+    @Override
+    public CompletableFuture<QuerySessionInfoResponse> querySessionInfo(QuerySessionInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QuerySessionInfo").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/avatar/project/querySessionInfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuerySessionInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuerySessionInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryTextStream  QueryTextStreamRequest
+     * @return QueryTextStreamResponse
+     */
     @Override
     public CompletableFuture<QueryTextStreamResponse> queryTextStream(QueryTextStreamRequest request) {
         try {
@@ -382,6 +510,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of SaveAvatarProject  SaveAvatarProjectRequest
+     * @return SaveAvatarProjectResponse
+     */
+    @Override
+    public CompletableFuture<SaveAvatarProjectResponse> saveAvatarProject(SaveAvatarProjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SaveAvatarProject").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/avatar/project/saveAvatarProject").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveAvatarProjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SaveAvatarProjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SelectImageTask  SelectImageTaskRequest
+     * @return SelectImageTaskResponse
+     */
     @Override
     public CompletableFuture<SelectImageTaskResponse> selectImageTask(SelectImageTaskRequest request) {
         try {
@@ -396,6 +546,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SelectResource  SelectResourceRequest
+     * @return SelectResourceResponse
+     */
     @Override
     public CompletableFuture<SelectResourceResponse> selectResource(SelectResourceRequest request) {
         try {
@@ -410,6 +564,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendTextMsg  SendTextMsgRequest
+     * @return SendTextMsgResponse
+     */
     @Override
     public CompletableFuture<SendTextMsgResponse> sendTextMsg(SendTextMsgRequest request) {
         try {
@@ -424,6 +582,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartAvatarSession  StartAvatarSessionRequest
+     * @return StartAvatarSessionResponse
+     */
     @Override
     public CompletableFuture<StartAvatarSessionResponse> startAvatarSession(StartAvatarSessionRequest request) {
         try {
@@ -438,6 +600,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopAvatarSession  StopAvatarSessionRequest
+     * @return StopAvatarSessionResponse
+     */
     @Override
     public CompletableFuture<StopAvatarSessionResponse> stopAvatarSession(StopAvatarSessionRequest request) {
         try {
@@ -452,6 +618,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopProjectTask  StopProjectTaskRequest
+     * @return StopProjectTaskResponse
+     */
     @Override
     public CompletableFuture<StopProjectTaskResponse> stopProjectTask(StopProjectTaskRequest request) {
         try {
@@ -466,6 +636,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitProjectTask  SubmitProjectTaskRequest
+     * @return SubmitProjectTaskResponse
+     */
     @Override
     public CompletableFuture<SubmitProjectTaskResponse> submitProjectTask(SubmitProjectTaskRequest request) {
         try {
@@ -480,6 +654,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TransferPortraitStyle  TransferPortraitStyleRequest
+     * @return TransferPortraitStyleResponse
+     */
     @Override
     public CompletableFuture<TransferPortraitStyleResponse> transferPortraitStyle(TransferPortraitStyleRequest request) {
         try {

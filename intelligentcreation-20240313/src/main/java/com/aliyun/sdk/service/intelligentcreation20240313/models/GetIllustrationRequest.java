@@ -70,7 +70,10 @@ public class GetIllustrationRequest extends Request {
         } 
 
         /**
-         * textId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder textId(Long textId) {
             this.putPathParameter("textId", textId);
@@ -79,7 +82,10 @@ public class GetIllustrationRequest extends Request {
         }
 
         /**
-         * illustrationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder illustrationId(Long illustrationId) {
             this.putPathParameter("illustrationId", illustrationId);

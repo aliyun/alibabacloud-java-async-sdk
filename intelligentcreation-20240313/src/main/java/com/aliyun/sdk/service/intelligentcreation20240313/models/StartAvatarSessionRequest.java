@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StartAvatarSessionRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customPushUrl")
+    private String customPushUrl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("projectId")
     private String projectId;
 
@@ -22,6 +26,7 @@ public class StartAvatarSessionRequest extends Request {
 
     private StartAvatarSessionRequest(Builder builder) {
         super(builder);
+        this.customPushUrl = builder.customPushUrl;
         this.projectId = builder.projectId;
         this.requestId = builder.requestId;
     }
@@ -40,6 +45,13 @@ public class StartAvatarSessionRequest extends Request {
     }
 
     /**
+     * @return customPushUrl
+     */
+    public String getCustomPushUrl() {
+        return this.customPushUrl;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -54,6 +66,7 @@ public class StartAvatarSessionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartAvatarSessionRequest, Builder> {
+        private String customPushUrl; 
         private String projectId; 
         private String requestId; 
 
@@ -63,9 +76,19 @@ public class StartAvatarSessionRequest extends Request {
 
         private Builder(StartAvatarSessionRequest request) {
             super(request);
+            this.customPushUrl = request.customPushUrl;
             this.projectId = request.projectId;
             this.requestId = request.requestId;
         } 
+
+        /**
+         * customPushUrl.
+         */
+        public Builder customPushUrl(String customPushUrl) {
+            this.putBodyParameter("customPushUrl", customPushUrl);
+            this.customPushUrl = customPushUrl;
+            return this;
+        }
 
         /**
          * projectId.

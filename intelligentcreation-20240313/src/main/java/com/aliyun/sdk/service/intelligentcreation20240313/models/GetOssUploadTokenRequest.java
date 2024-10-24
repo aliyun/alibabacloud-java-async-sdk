@@ -70,7 +70,10 @@ public class GetOssUploadTokenRequest extends Request {
         } 
 
         /**
-         * fileName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8021678.png</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);
@@ -79,7 +82,10 @@ public class GetOssUploadTokenRequest extends Request {
         }
 
         /**
-         * fileType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductImage</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("fileType", fileType);
