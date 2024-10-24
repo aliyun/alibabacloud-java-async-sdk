@@ -97,9 +97,106 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
      *
      * <p>ListCustomTemplatesResponseBody</p>
      */
+    public static class TranscodeTemplateHint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BitrateControlType")
+        private String bitrateControlType;
+
+        private TranscodeTemplateHint(Builder builder) {
+            this.bitrateControlType = builder.bitrateControlType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TranscodeTemplateHint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bitrateControlType
+         */
+        public String getBitrateControlType() {
+            return this.bitrateControlType;
+        }
+
+        public static final class Builder {
+            private String bitrateControlType; 
+
+            /**
+             * BitrateControlType.
+             */
+            public Builder bitrateControlType(String bitrateControlType) {
+                this.bitrateControlType = bitrateControlType;
+                return this;
+            }
+
+            public TranscodeTemplateHint build() {
+                return new TranscodeTemplateHint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomTemplatesResponseBody</p>
+     */
+    public static class FrontendHint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateHint")
+        private TranscodeTemplateHint transcodeTemplateHint;
+
+        private FrontendHint(Builder builder) {
+            this.transcodeTemplateHint = builder.transcodeTemplateHint;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FrontendHint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return transcodeTemplateHint
+         */
+        public TranscodeTemplateHint getTranscodeTemplateHint() {
+            return this.transcodeTemplateHint;
+        }
+
+        public static final class Builder {
+            private TranscodeTemplateHint transcodeTemplateHint; 
+
+            /**
+             * TranscodeTemplateHint.
+             */
+            public Builder transcodeTemplateHint(TranscodeTemplateHint transcodeTemplateHint) {
+                this.transcodeTemplateHint = transcodeTemplateHint;
+                return this;
+            }
+
+            public FrontendHint build() {
+                return new FrontendHint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomTemplatesResponseBody</p>
+     */
     public static class CustomTemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("FrontendHint")
+        private FrontendHint frontendHint;
 
         @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
@@ -133,6 +230,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
 
         private CustomTemplateList(Builder builder) {
             this.createTime = builder.createTime;
+            this.frontendHint = builder.frontendHint;
             this.isDefault = builder.isDefault;
             this.modifiedTime = builder.modifiedTime;
             this.status = builder.status;
@@ -158,6 +256,13 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return frontendHint
+         */
+        public FrontendHint getFrontendHint() {
+            return this.frontendHint;
         }
 
         /**
@@ -232,6 +337,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private FrontendHint frontendHint; 
             private Boolean isDefault; 
             private String modifiedTime; 
             private String status; 
@@ -248,6 +354,14 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * FrontendHint.
+             */
+            public Builder frontendHint(FrontendHint frontendHint) {
+                this.frontendHint = frontendHint;
                 return this;
             }
 
