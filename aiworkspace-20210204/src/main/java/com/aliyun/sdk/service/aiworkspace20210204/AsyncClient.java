@@ -56,6 +56,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasetLabelsResponse> createDatasetLabels(CreateDatasetLabelsRequest request);
 
     /**
+     * @param request the request parameters of CreateDatasetVersion  CreateDatasetVersionRequest
+     * @return CreateDatasetVersionResponse
+     */
+    CompletableFuture<CreateDatasetVersionResponse> createDatasetVersion(CreateDatasetVersionRequest request);
+
+    /**
+     * @param request the request parameters of CreateDatasetVersionLabels  CreateDatasetVersionLabelsRequest
+     * @return CreateDatasetVersionLabelsResponse
+     */
+    CompletableFuture<CreateDatasetVersionLabelsResponse> createDatasetVersionLabels(CreateDatasetVersionLabelsRequest request);
+
+    /**
      * @param request the request parameters of CreateExperiment  CreateExperimentRequest
      * @return CreateExperimentResponse
      */
@@ -132,6 +144,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDatasetLabelsResponse
      */
     CompletableFuture<DeleteDatasetLabelsResponse> deleteDatasetLabels(DeleteDatasetLabelsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatasetVersion  DeleteDatasetVersionRequest
+     * @return DeleteDatasetVersionResponse
+     */
+    CompletableFuture<DeleteDatasetVersionResponse> deleteDatasetVersion(DeleteDatasetVersionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatasetVersionLabels  DeleteDatasetVersionLabelsRequest
+     * @return DeleteDatasetVersionLabelsResponse
+     */
+    CompletableFuture<DeleteDatasetVersionLabelsResponse> deleteDatasetVersionLabels(DeleteDatasetVersionLabelsRequest request);
 
     /**
      * @param request the request parameters of DeleteExperiment  DeleteExperimentRequest
@@ -212,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request);
 
     /**
+     * @param request the request parameters of GetDatasetVersion  GetDatasetVersionRequest
+     * @return GetDatasetVersionResponse
+     */
+    CompletableFuture<GetDatasetVersionResponse> getDatasetVersion(GetDatasetVersionRequest request);
+
+    /**
      * @param request the request parameters of GetDefaultWorkspace  GetDefaultWorkspaceRequest
      * @return GetDefaultWorkspaceResponse
      */
@@ -270,6 +300,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCodeSourcesResponse
      */
     CompletableFuture<ListCodeSourcesResponse> listCodeSources(ListCodeSourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListDatasetVersions  ListDatasetVersionsRequest
+     * @return ListDatasetVersionsResponse
+     */
+    CompletableFuture<ListDatasetVersionsResponse> listDatasetVersions(ListDatasetVersionsRequest request);
 
     /**
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
@@ -414,6 +450,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDatasetResponse
      */
     CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDatasetVersion  UpdateDatasetVersionRequest
+     * @return UpdateDatasetVersionResponse
+     */
+    CompletableFuture<UpdateDatasetVersionResponse> updateDatasetVersion(UpdateDatasetVersionRequest request);
 
     /**
      * @param request the request parameters of UpdateDefaultWorkspace  UpdateDefaultWorkspaceRequest
