@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendBatchSmsResponseBody} extends {@link TeaModel}
  *
  * <p>SendBatchSmsResponseBody</p>
@@ -73,11 +74,14 @@ public class SendBatchSmsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the delivery receipt. You can use one of the following methods to query the delivery status of a message based on the ID.
-         * <p>
+         * <p>The ID of the delivery receipt. You can use one of the following methods to query the delivery status of a message based on the ID.</p>
+         * <ul>
+         * <li>Call the <a href="https://help.aliyun.com/document_detail/102352.html">QuerySendDetails</a> operation.</li>
+         * <li>Log on to the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>. In the left-side navigation pane, choose <strong>Analytics</strong> &gt; <strong>Delivery Report</strong>.</li>
+         * </ul>
          * 
-         * *   Call the [QuerySendDetails](~~102352~~) operation.
-         * *   Log on to the [Alibaba Cloud SMS console](https://dysms.console.aliyun.com/dysms.htm#/overview). In the left-side navigation pane, choose **Analytics** > **Delivery Report**.
+         * <strong>example:</strong>
+         * <p>9006197469364984400</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -85,11 +89,14 @@ public class SendBatchSmsResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   If OK is returned, the request is successful.
-         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +104,10 @@ public class SendBatchSmsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +115,10 @@ public class SendBatchSmsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8D230E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

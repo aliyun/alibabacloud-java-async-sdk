@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -163,7 +164,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The name of the cloud service. Set the value to **dysms**.
+         * <p>The name of the cloud service. Set the value to <strong>dysms</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dysms</p>
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -172,7 +176,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to **cn-hangzhou**.
+         * <p>The region ID. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -181,7 +189,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The code of the message template.
+         * <p>The code of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS_23423423</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -208,7 +219,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **TEMPLATE**.
+         * <p>The type of the resource. Set the value to <strong>TEMPLATE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEMPLATE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -217,7 +232,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tag.
+         * <p>The tag.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -232,6 +248,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -271,7 +293,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The array of tag keys. Valid values of N: 1 to 20.
+             * <p>The array of tag keys. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +304,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The array of tag values. Valid values of N: 1 to 20.
+             * <p>The array of tag values. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

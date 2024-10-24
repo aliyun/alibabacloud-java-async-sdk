@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSmsTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetSmsTemplateResponseBody</p>
@@ -253,7 +254,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         private String variableAttribute; 
 
         /**
-         * ApplyScene.
+         * <p>Application scenario content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com/">http://www.aliyun.com/</a></p>
          */
         public Builder applyScene(String applyScene) {
             this.applyScene = applyScene;
@@ -261,7 +265,7 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * AuditInfo.
+         * <p>Audit information.</p>
          */
         public Builder auditInfo(AuditInfo auditInfo) {
             this.auditInfo = auditInfo;
@@ -269,7 +273,14 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Request status code.</p>
+         * <ul>
+         * <li>OK indicates a successful request.</li>
+         * <li>For other error codes, please refer to <a href="https://help.aliyun.com/document_detail/101346.html">API Error Codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -277,7 +288,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * CreateDate.
+         * <p>The time when the SMS template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-03 10:02:34</p>
          */
         public Builder createDate(String createDate) {
             this.createDate = createDate;
@@ -285,7 +299,7 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * FileUrlList.
+         * <p>File information, compatible with signatures created by the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-addsmstemplate?spm">AddSmsSign</a> API.</p>
          */
         public Builder fileUrlList(FileUrlList fileUrlList) {
             this.fileUrlList = fileUrlList;
@@ -293,7 +307,15 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * IntlType.
+         * <p>International/Hong Kong, Macao, and Taiwan template type. When the <strong>TemplateType</strong> parameter is <strong>3</strong>, this parameter is required for international/Hong Kong, Macao, and Taiwan templates, with values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Verification code.</li>
+         * <li><strong>1</strong>: SMS notification.</li>
+         * <li><strong>2</strong>: Promotional SMS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder intlType(Integer intlType) {
             this.intlType = intlType;
@@ -301,7 +323,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -309,7 +334,7 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * MoreDataFileUrlList.
+         * <p>Additional documentation information, supplementing uploaded business proof files or operational screenshots file list.</p>
          */
         public Builder moreDataFileUrlList(MoreDataFileUrlList moreDataFileUrlList) {
             this.moreDataFileUrlList = moreDataFileUrlList;
@@ -317,7 +342,11 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>Work order number.</p>
+         * <p>This parameter is used by auditors when querying the audit. You need to provide this work order number when requesting expedited review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003019****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -325,7 +354,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RelatedSignName.
+         * <p>The SMS signature associated with the template when applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云</p>
          */
         public Builder relatedSignName(String relatedSignName) {
             this.relatedSignName = relatedSignName;
@@ -333,7 +365,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Remark.
+         * <p>Explanation for the SMS template application, which is one of the reference information for template review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>申请验证码模板</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -341,7 +376,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this call request, which is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting and issue定位.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819BE656-D2E0-4858-8B21-B2E47708****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -349,7 +387,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateCode.
+         * <p>SMS template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS_20375****</p>
          */
         public Builder templateCode(String templateCode) {
             this.templateCode = templateCode;
@@ -357,7 +398,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateContent.
+         * <p>Content of the SMS template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您正在申请手机注册，验证码为：${code}，5分钟内有效！</p>
          */
         public Builder templateContent(String templateContent) {
             this.templateContent = templateContent;
@@ -365,7 +409,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * <p>Name of the SMS template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>验证码</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -373,7 +420,16 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateStatus.
+         * <p>Template review status. Return values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Under review.</li>
+         * <li><strong>1</strong>: Approved.</li>
+         * <li><strong>2</strong>: Not approved, with reasons for failure returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.41fd339f3bPSCQ">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-updatesmstemplate?spm">UpdateSmsTemplate</a> API or modify the SMS template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
+         * <li><strong>10</strong>: Review canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder templateStatus(String templateStatus) {
             this.templateStatus = templateStatus;
@@ -381,7 +437,16 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateTag.
+         * <p>Template identifier, indicating whether the template is user-defined or system-provided. Values:</p>
+         * <ul>
+         * <li><p><strong>2</strong>: User-defined template.</p>
+         * </li>
+         * <li><p><strong>3</strong>: System-provided template.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder templateTag(Integer templateTag) {
             this.templateTag = templateTag;
@@ -389,7 +454,19 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateType.
+         * <p>SMS type. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Verification code.</li>
+         * <li><strong>1</strong>: SMS notification.</li>
+         * <li><strong>2</strong>: Promotional SMS.</li>
+         * <li><strong>3</strong>: International/Hong Kong, Macao, and Taiwan messages.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only enterprise-certified users can apply for promotional SMS and international/Hong Kong, Macao, and Taiwan messages. For details on the differences between personal and enterprise user rights, please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm=a2c4g.11186623.0.0.67447f576NJnE8">Usage Notes</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder templateType(String templateType) {
             this.templateType = templateType;
@@ -397,7 +474,11 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * VariableAttribute.
+         * <p>Template variable rules.</p>
+         * <p>For detailed rules of template variables, refer to the <a href="https://help.aliyun.com/zh/sms/templaterule-template-variable-parameter-filling-example">Example Document</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;characterWithNumber&quot;}</p>
          */
         public Builder variableAttribute(String variableAttribute) {
             this.variableAttribute = variableAttribute;
@@ -410,6 +491,12 @@ public class GetSmsTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSmsTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmsTemplateResponseBody</p>
+     */
     public static class AuditInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditDate")
         private String auditDate;
@@ -449,7 +536,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
             private String rejectInfo; 
 
             /**
-             * AuditDate.
+             * <p>Audit date and time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-03 11:20:34</p>
              */
             public Builder auditDate(String auditDate) {
                 this.auditDate = auditDate;
@@ -457,7 +547,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * RejectInfo.
+             * <p>Reasons for failed audit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>模板内容中包含错别字。</p>
              */
             public Builder rejectInfo(String rejectInfo) {
                 this.rejectInfo = rejectInfo;
@@ -471,6 +564,12 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSmsTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmsTemplateResponseBody</p>
+     */
     public static class FileUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private java.util.List < String > fileUrl;
@@ -512,6 +611,12 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSmsTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmsTemplateResponseBody</p>
+     */
     public static class MoreDataFileUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MoreDataFileUrl")
         private java.util.List < String > moreDataFileUrl;

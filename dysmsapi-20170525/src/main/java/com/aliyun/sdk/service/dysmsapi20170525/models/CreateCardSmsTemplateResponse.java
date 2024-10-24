@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCardSmsTemplateResponse} extends {@link TeaModel}
  *
  * <p>CreateCardSmsTemplateResponse</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryShortUrlRequest} extends {@link RequestModel}
  *
  * <p>QueryShortUrlRequest</p>
@@ -123,7 +124,11 @@ public class QueryShortUrlRequest extends Request {
         }
 
         /**
-         * The short URL. You can query the short URL by calling the [AddShortUrl](~~186774~~) operation.
+         * <p>The short URL. You can query the short URL by calling the <a href="https://help.aliyun.com/document_detail/186774.html">AddShortUrl</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://****.cn/6y8uy7</p>
          */
         public Builder shortUrl(String shortUrl) {
             this.putBodyParameter("ShortUrl", shortUrl);

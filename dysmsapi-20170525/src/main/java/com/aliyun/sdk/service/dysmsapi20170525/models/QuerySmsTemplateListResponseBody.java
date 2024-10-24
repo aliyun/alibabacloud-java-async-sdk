@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmsTemplateListResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySmsTemplateListResponseBody</p>
@@ -109,11 +110,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -129,7 +136,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -137,7 +147,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of templates per page. Valid values: **1 to 50**.
+         * <p>The number of templates per page. Valid values: <strong>1 to 50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -145,7 +158,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819BE656-D2E0-4858-8B21-B2E47708****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,7 +169,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The queried message templates.
+         * <p>The queried message templates.</p>
          */
         public Builder smsTemplateList(java.util.List < SmsTemplateList> smsTemplateList) {
             this.smsTemplateList = smsTemplateList;
@@ -161,7 +177,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of templates.
+         * <p>The total number of templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -174,6 +193,12 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySmsTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmsTemplateListResponseBody</p>
+     */
     public static class Reason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RejectDate")
         private String rejectDate;
@@ -225,7 +250,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             private String rejectSubInfo; 
 
             /**
-             * The time when the message template was rejected. Format: yyyy-MM-dd HH:mm:ss.
+             * <p>The time when the message template was rejected. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-04 16:01:17</p>
              */
             public Builder rejectDate(String rejectDate) {
                 this.rejectDate = rejectDate;
@@ -233,7 +261,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the message template was rejected.
+             * <p>The reason why the message template was rejected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The document cannot verify the authenticity of the information. Please upload it again.</p>
              */
             public Builder rejectInfo(String rejectInfo) {
                 this.rejectInfo = rejectInfo;
@@ -241,7 +272,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks about the rejection.
+             * <p>The remarks about the rejection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The document cannot verify the authenticity of the information. Please upload it again.</p>
              */
             public Builder rejectSubInfo(String rejectSubInfo) {
                 this.rejectSubInfo = rejectSubInfo;
@@ -255,6 +289,12 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySmsTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmsTemplateListResponseBody</p>
+     */
     public static class SmsTemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
@@ -378,13 +418,16 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             private Integer templateType; 
 
             /**
-             * The approval status of the message template. Valid values:
-             * <p>
+             * <p>The approval status of the message template. Valid values:</p>
+             * <ul>
+             * <li><strong>AUDIT_STATE_INIT</strong>: The message template is pending approval.</li>
+             * <li><strong>AUDIT_STATE_PASS</strong>: The message template is approved.</li>
+             * <li><strong>AUDIT_STATE_NOT_PASS</strong>: The message template is rejected. You can view the reason in the Reason response parameter.</li>
+             * <li><strong>AUDIT_STATE_CANCEL</strong> or <strong>AUDIT_SATE_CANCEL</strong>: The approval is canceled.</li>
+             * </ul>
              * 
-             * *   **AUDIT_STATE_INIT**: The message template is pending approval.
-             * *   **AUDIT_STATE_PASS**: The message template is approved.
-             * *   **AUDIT_STATE_NOT_PASS**: The message template is rejected. You can view the reason in the Reason response parameter.
-             * *   **AUDIT_STATE_CANCEL** or **AUDIT_SATE_CANCEL**: The approval is canceled.
+             * <strong>example:</strong>
+             * <p>AUDIT_STATE_PASS</p>
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -392,7 +435,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the message template was created. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The time when the message template was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-04 11:42:17</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -400,7 +446,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ticket ID.
+             * <p>The ticket ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2361****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -408,16 +457,20 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the message template. We recommend that you specify this parameter. Valid values:
-             * <p>
+             * <p>The type of the message template. We recommend that you specify this parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: verification code</li>
+             * <li><strong>1</strong>: notification message</li>
+             * <li><strong>2</strong>: promotional message</li>
+             * <li><strong>3</strong>: message sent to countries or regions outside the Chinese mainland</li>
+             * <li><strong>7</strong>: digital message</li>
+             * </ul>
+             * <blockquote>
+             * <p>The template type is the same as the value of the TemplateType parameter in the AddSmsTemplate and ModifySmsTemplate operations.</p>
+             * </blockquote>
              * 
-             * *   **0**: verification code
-             * *   **1**: notification message
-             * *   **2**: promotional message
-             * *   **3**: message sent to countries or regions outside the Chinese mainland
-             * *   **7**: digital message
-             * 
-             * > The template type is the same as the value of the TemplateType parameter in the AddSmsTemplate and ModifySmsTemplate operations.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outerTemplateType(Integer outerTemplateType) {
                 this.outerTemplateType = outerTemplateType;
@@ -425,11 +478,11 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The approval remarks.
-             * <p>
-             * 
-             * *   If the value of AuditStatus is **AUDIT_STATE_PASS** or **AUDIT_STATE_INIT**, the value of Reason is No Approval Remarks.
-             * *   If the value of AuditStatus is **AUDIT_STATE_NOT_PASS**, the reason why the message template is rejected is returned.
+             * <p>The approval remarks.</p>
+             * <ul>
+             * <li>If the value of AuditStatus is <strong>AUDIT_STATE_PASS</strong> or <strong>AUDIT_STATE_INIT</strong>, the value of Reason is No Approval Remarks.</li>
+             * <li>If the value of AuditStatus is <strong>AUDIT_STATE_NOT_PASS</strong>, the reason why the message template is rejected is returned.</li>
+             * </ul>
              */
             public Builder reason(Reason reason) {
                 this.reason = reason;
@@ -437,10 +490,11 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the message template.
-             * <p>
+             * <p>The code of the message template.</p>
+             * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Short Message Service (SMS) console</a>, click <strong>Go China</strong> or <strong>Go Globe</strong> in the left-side navigation pane, and then view the template code on the <strong>Templates</strong> tab. You can also call the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation to obtain the template code.</p>
              * 
-             * You can log on to the [Short Message Service (SMS) console](https://dysms.console.aliyun.com/dysms.htm), click **Go China** or **Go Globe** in the left-side navigation pane, and then view the template code on the **Templates** tab. You can also call the [AddSmsTemplate](~~121208~~) operation to obtain the template code.
+             * <strong>example:</strong>
+             * <p>SMS_1525***</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -448,7 +502,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the message template.
+             * <p>The content of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;
@@ -456,7 +513,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the message template.
+             * <p>The name of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun verification code</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -464,14 +524,17 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the message template. Valid values:
-             * <p>
+             * <p>The type of the message template. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: notification message</li>
+             * <li><strong>1</strong>: promotional message</li>
+             * <li><strong>2</strong>: verification code</li>
+             * <li><strong>6</strong>: message sent to countries or regions outside the Chinese mainland</li>
+             * <li><strong>7</strong>: digital message</li>
+             * </ul>
              * 
-             * *   **0**: notification message
-             * *   **1**: promotional message
-             * *   **2**: verification code
-             * *   **6**: message sent to countries or regions outside the Chinese mainland
-             * *   **7**: digital message
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder templateType(Integer templateType) {
                 this.templateType = templateType;

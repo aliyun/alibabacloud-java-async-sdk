@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSmartShortUrlResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSmartShortUrlResponseBody</p>
@@ -110,6 +111,12 @@ public class CreateSmartShortUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSmartShortUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSmartShortUrlResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;

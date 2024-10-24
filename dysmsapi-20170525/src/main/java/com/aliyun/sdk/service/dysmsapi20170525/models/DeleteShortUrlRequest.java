@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteShortUrlRequest} extends {@link RequestModel}
  *
  * <p>DeleteShortUrlRequest</p>
@@ -123,7 +124,11 @@ public class DeleteShortUrlRequest extends Request {
         }
 
         /**
-         * The source address. The address can be up to 1,000 characters in length.
+         * <p>The source address. The address can be up to 1,000 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></p>
          */
         public Builder sourceUrl(String sourceUrl) {
             this.putBodyParameter("SourceUrl", sourceUrl);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendBatchSmsRequest} extends {@link RequestModel}
  *
  * <p>SendBatchSmsRequest</p>
@@ -168,10 +169,13 @@ public class SendBatchSmsRequest extends Request {
         } 
 
         /**
-         * The extension field of the external record. The value is a string that contains no more than 256 characters.
-         * <p>
+         * <p>The extension field of the external record. The value is a string that contains no more than 256 characters.</p>
+         * <blockquote>
+         * <p>The parameter is optional.</p>
+         * </blockquote>
          * 
-         * > The parameter is optional.
+         * <strong>example:</strong>
+         * <p>abcdefg</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -189,13 +193,18 @@ public class SendBatchSmsRequest extends Request {
         }
 
         /**
-         * The mobile number of the recipient. Format:
-         * <p>
+         * <p>The mobile number of the recipient. Format:</p>
+         * <ul>
+         * <li>Message delivery to the Chinese mainland: +/+86/0086/86 or an 11-digit mobile number without a prefix. Example: 1590000****.</li>
+         * <li>Message delivery to countries or regions outside the Chinese mainland: Dialing code + Mobile number. Example: 852000012****.</li>
+         * </ul>
+         * <blockquote>
+         * <p>We recommend that you call the SendSms operation to send verification codes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   Message delivery to the Chinese mainland: +/+86/0086/86 or an 11-digit mobile number without a prefix. Example: 1590000\*\*\*\*.
-         * *   Message delivery to countries or regions outside the Chinese mainland: Dialing code + Mobile number. Example: 852000012\*\*\*\*.
-         * 
-         * > We recommend that you call the SendSms operation to send verification codes.
+         * <strong>example:</strong>
+         * <p>[&quot;1590000****&quot;,&quot;1350000****&quot;]</p>
          */
         public Builder phoneNumberJson(String phoneNumberJson) {
             this.putBodyParameter("PhoneNumberJson", phoneNumberJson);
@@ -222,12 +231,15 @@ public class SendBatchSmsRequest extends Request {
         }
 
         /**
-         * The signature.
-         * <p>
+         * <p>The signature.</p>
+         * <p>Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click <strong>Go Globe</strong> or <strong>Go China</strong>. You can view the signature in the <strong>Signature</strong> column on the <strong>Signatures</strong> tab.</p>
+         * <blockquote>
+         * <p>The signatures must be approved and correspond to the mobile numbers in sequence.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click **Go Globe** or **Go China**. You can view the signature in the **Signature** column on the **Signatures** tab.
-         * 
-         * > The signatures must be approved and correspond to the mobile numbers in sequence.
+         * <strong>example:</strong>
+         * <p>[&quot;Aliyun&quot;,&quot;Alibaba&quot;]</p>
          */
         public Builder signNameJson(String signNameJson) {
             this.putBodyParameter("SignNameJson", signNameJson);
@@ -236,10 +248,13 @@ public class SendBatchSmsRequest extends Request {
         }
 
         /**
-         * The extension code of the MO message. Format: JSON array.
-         * <p>
+         * <p>The extension code of the MO message. Format: JSON array.</p>
+         * <blockquote>
+         * <p>The parameter is optional.</p>
+         * </blockquote>
          * 
-         * > The parameter is optional.
+         * <strong>example:</strong>
+         * <p>[&quot;90999&quot;,&quot;90998&quot;]</p>
          */
         public Builder smsUpExtendCodeJson(String smsUpExtendCodeJson) {
             this.putBodyParameter("SmsUpExtendCodeJson", smsUpExtendCodeJson);
@@ -248,12 +263,15 @@ public class SendBatchSmsRequest extends Request {
         }
 
         /**
-         * The code of the message template.
-         * <p>
+         * <p>The code of the message template.</p>
+         * <p>Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click <strong>Go Globe</strong> or <strong>Go China</strong>. You can view the message template in the <strong>Template Code</strong> column on the <strong>Message Templates</strong> tab.</p>
+         * <blockquote>
+         * <p>The message templates must be created on the Go Globe page and approved.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click **Go Globe** or **Go China**. You can view the message template in the **Template Code** column on the **Message Templates** tab.
-         * 
-         * > The message templates must be created on the Go Globe page and approved.
+         * <strong>example:</strong>
+         * <p>SMS_15255****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -262,10 +280,13 @@ public class SendBatchSmsRequest extends Request {
         }
 
         /**
-         * The value of the variable in the message template.
-         * <p>
+         * <p>The value of the variable in the message template.</p>
+         * <blockquote>
+         * <p>If you need to add line breaks to the JSON template, make sure that the format is valid. In addition, the sequence of variable values must be the same as that of the mobile numbers and signatures.</p>
+         * </blockquote>
          * 
-         * > If you need to add line breaks to the JSON template, make sure that the format is valid. In addition, the sequence of variable values must be the same as that of the mobile numbers and signatures.
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;TemplateParamJson&quot;},{&quot;name&quot;:&quot;TemplateParamJson&quot;}]</p>
          */
         public Builder templateParamJson(String templateParamJson) {
             this.putBodyParameter("TemplateParamJson", templateParamJson);

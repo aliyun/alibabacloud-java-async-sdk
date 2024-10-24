@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddShortUrlResponseBody} extends {@link TeaModel}
  *
  * <p>AddShortUrlResponseBody</p>
@@ -73,11 +74,14 @@ public class AddShortUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class AddShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the short URL.
+         * <p>The details of the short URL.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class AddShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class AddShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819BE656-D2E0-4858-8B21-B2E477085AAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,6 +124,12 @@ public class AddShortUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddShortUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddShortUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
@@ -165,10 +181,13 @@ public class AddShortUrlResponseBody extends TeaModel {
             private String sourceUrl; 
 
             /**
-             * The time when the short URL expires.
-             * <p>
+             * <p>The time when the short URL expires.</p>
+             * <blockquote>
+             * <p>The value of <strong>ExpireDate</strong> is on the hour.</p>
+             * </blockquote>
              * 
-             * > The value of **ExpireDate** is on the hour.
+             * <strong>example:</strong>
+             * <p>2021-09-19 00:00:00</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -176,7 +195,10 @@ public class AddShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The short URL.
+             * <p>The short URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://****.cn/6y8uy7</p>
              */
             public Builder shortUrl(String shortUrl) {
                 this.shortUrl = shortUrl;
@@ -184,7 +206,10 @@ public class AddShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The source URL.
+             * <p>The source URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryShortUrlResponseBody} extends {@link TeaModel}
  *
  * <p>QueryShortUrlResponseBody</p>
@@ -73,11 +74,14 @@ public class QueryShortUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   If OK is returned, the request is successful.
-         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the short URL.
+         * <p>The details of the short URL.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819BE656-D2E0-4858-8B21-B2E477085AAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,6 +124,12 @@ public class QueryShortUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryShortUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryShortUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
@@ -225,7 +241,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             private String uniqueVisitorCount; 
 
             /**
-             * The time when the short URL was created.
+             * <p>The time when the short URL was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-08 16:44:13</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -233,7 +252,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the short URL expires.
+             * <p>The time when the short URL expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-22 11:21:11</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -241,7 +263,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The PV.
+             * <p>The PV.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder pageViewCount(String pageViewCount) {
                 this.pageViewCount = pageViewCount;
@@ -249,7 +274,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The short URL.
+             * <p>The short URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://****.cn/6y8uy7</p>
              */
             public Builder shortUrl(String shortUrl) {
                 this.shortUrl = shortUrl;
@@ -257,7 +285,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The service name of the short URL.
+             * <p>The service name of the short URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The Alibaba Cloud Short Link service.</p>
              */
             public Builder shortUrlName(String shortUrlName) {
                 this.shortUrlName = shortUrlName;
@@ -265,13 +296,16 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the short URL. Valid values:
-             * <p>
+             * <p>The status of the short URL. Valid values:</p>
+             * <ul>
+             * <li><strong>expired</strong></li>
+             * <li><strong>effective</strong></li>
+             * <li><strong>audit</strong></li>
+             * <li><strong>reject</strong></li>
+             * </ul>
              * 
-             * *   **expired**
-             * *   **effective**
-             * *   **audit**
-             * *   **reject**
+             * <strong>example:</strong>
+             * <p>expired</p>
              */
             public Builder shortUrlStatus(String shortUrlStatus) {
                 this.shortUrlStatus = shortUrlStatus;
@@ -279,7 +313,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The source address.
+             * <p>The source address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -287,7 +324,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The UV.
+             * <p>The UV.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder uniqueVisitorCount(String uniqueVisitorCount) {
                 this.uniqueVisitorCount = uniqueVisitorCount;

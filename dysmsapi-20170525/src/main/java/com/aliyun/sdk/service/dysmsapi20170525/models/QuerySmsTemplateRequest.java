@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmsTemplateRequest} extends {@link RequestModel}
  *
  * <p>QuerySmsTemplateRequest</p>
@@ -123,10 +124,12 @@ public class QuerySmsTemplateRequest extends Request {
         }
 
         /**
-         * The code of the message template.
-         * <p>
+         * <p>The code of the message template.</p>
+         * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Short Message Service (SMS) console</a>, click <strong>Go China</strong> or <strong>Go Globe</strong> in the left-side navigation pane, and then view the template code on the <strong>Templates</strong> tab. You can also call the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation to obtain the template code.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Short Message Service (SMS) console](https://dysms.console.aliyun.com/dysms.htm), click **Go China** or **Go Globe** in the left-side navigation pane, and then view the template code on the **Templates** tab. You can also call the [AddSmsTemplate](~~121208~~) operation to obtain the template code.
+         * <strong>example:</strong>
+         * <p>SMS_1525***</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);

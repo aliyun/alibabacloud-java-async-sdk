@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySendDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySendDetailsResponseBody</p>
@@ -85,11 +86,14 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +101,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +112,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819BE656-D2E0-4858-8B21-B2E477085AAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the message.
+         * <p>The details of the message.</p>
          */
         public Builder smsSendDetailDTOs(SmsSendDetailDTOs smsSendDetailDTOs) {
             this.smsSendDetailDTOs = smsSendDetailDTOs;
@@ -121,7 +131,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of sent messages.
+         * <p>The number of sent messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +147,12 @@ public class QuerySendDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySendDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySendDetailsResponseBody</p>
+     */
     public static class SmsSendDetailDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -245,7 +264,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             private String templateCode; 
 
             /**
-             * The content of the message.
+             * <p>The content of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>【Aliyun】This is a test message.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -253,11 +275,14 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The status code returned by the carrier.
-             * <p>
+             * <p>The status code returned by the carrier.</p>
+             * <ul>
+             * <li>If the message is delivered, &quot;DELIVERED&quot; is returned.</li>
+             * <li>For information about the error codes that may be returned if the message is not delivered, see <a href="https://help.aliyun.com/document_detail/101347.html">error codes</a>.</li>
+             * </ul>
              * 
-             * *   If the message is delivered, "DELIVERED" is returned.
-             * *   For information about the error codes that may be returned if the message is not delivered, see [error codes](~~101347~~).
+             * <strong>example:</strong>
+             * <p>DELIVERED</p>
              */
             public Builder errCode(String errCode) {
                 this.errCode = errCode;
@@ -265,7 +290,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field.
+             * <p>The extended field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder outId(String outId) {
                 this.outId = outId;
@@ -273,7 +301,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile numbers of the recipients.
+             * <p>The mobile numbers of the recipients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder phoneNum(String phoneNum) {
                 this.phoneNum = phoneNum;
@@ -281,7 +312,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The date and time when the message was received.
+             * <p>The date and time when the message was received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-08 16:44:13</p>
              */
             public Builder receiveDate(String receiveDate) {
                 this.receiveDate = receiveDate;
@@ -289,7 +323,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The date and time when the message was sent.
+             * <p>The date and time when the message was sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-08 16:44:10</p>
              */
             public Builder sendDate(String sendDate) {
                 this.sendDate = sendDate;
@@ -297,12 +334,15 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The delivery status of the message. Valid values:
-             * <p>
+             * <p>The delivery status of the message. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The message has not received a delivery receipt yet.</li>
+             * <li><strong>2</strong>: The message failed to be delivered.</li>
+             * <li><strong>3</strong>: The message was delivered.</li>
+             * </ul>
              * 
-             * *   **1**: The message has not received a delivery receipt yet.
-             * *   **2**: The message failed to be delivered.
-             * *   **3**: The message was delivered.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder sendStatus(Long sendStatus) {
                 this.sendStatus = sendStatus;
@@ -310,7 +350,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the message template.
+             * <p>The ID of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS_12231****</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -324,6 +367,12 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySendDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySendDetailsResponseBody</p>
+     */
     public static class SmsSendDetailDTOs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SmsSendDetailDTO")
         private java.util.List < SmsSendDetailDTO> smsSendDetailDTO;

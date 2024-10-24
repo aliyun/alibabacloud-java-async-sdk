@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSmsTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSmsTemplateResponseBody</p>
@@ -73,11 +74,14 @@ public class DeleteSmsTemplateResponseBody extends TeaModel {
         private String templateCode; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   For more information about other response codes, see [API error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,10 @@ public class DeleteSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +100,10 @@ public class DeleteSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CCA2BCFF-2BA7-427C-90EE-AC6994748607</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +111,10 @@ public class DeleteSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The code of the message template.
+         * <p>The code of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS_20375****</p>
          */
         public Builder templateCode(String templateCode) {
             this.templateCode = templateCode;

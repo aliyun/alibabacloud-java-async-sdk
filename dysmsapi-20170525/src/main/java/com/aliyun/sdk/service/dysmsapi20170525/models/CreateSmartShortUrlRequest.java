@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSmartShortUrlRequest} extends {@link RequestModel}
  *
  * <p>CreateSmartShortUrlRequest</p>
@@ -143,7 +144,10 @@ public class CreateSmartShortUrlRequest extends Request {
         }
 
         /**
-         * PhoneNumbers.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15900195***</p>
          */
         public Builder phoneNumbers(String phoneNumbers) {
             this.putQueryParameter("PhoneNumbers", phoneNumbers);
@@ -170,7 +174,10 @@ public class CreateSmartShortUrlRequest extends Request {
         }
 
         /**
-         * SourceUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder sourceUrl(String sourceUrl) {
             this.putQueryParameter("SourceUrl", sourceUrl);

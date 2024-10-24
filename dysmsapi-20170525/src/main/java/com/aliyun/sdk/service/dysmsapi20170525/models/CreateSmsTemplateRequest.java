@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSmsTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateSmsTemplateRequest</p>
@@ -211,7 +212,10 @@ public class CreateSmsTemplateRequest extends Request {
         } 
 
         /**
-         * ApplySceneContent.
+         * <p>If there is an applicable scenario, you can fill it in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com/">http://www.aliyun.com/</a></p>
          */
         public Builder applySceneContent(String applySceneContent) {
             this.putQueryParameter("ApplySceneContent", applySceneContent);
@@ -220,7 +224,15 @@ public class CreateSmsTemplateRequest extends Request {
         }
 
         /**
-         * IntlType.
+         * <p>International/Hong Kong, Macao, and Taiwan template type. When the <strong>TemplateType</strong> parameter is <strong>3</strong>, this parameter is required for international/Hong Kong, Macao, and Taiwan templates, with values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Verification code.</li>
+         * <li><strong>1</strong>: SMS notification.</li>
+         * <li><strong>2</strong>: Promotional message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder intlType(Integer intlType) {
             this.putQueryParameter("IntlType", intlType);
@@ -229,7 +241,8 @@ public class CreateSmsTemplateRequest extends Request {
         }
 
         /**
-         * MoreData.
+         * <p>Additional materials you can upload, such as business proof documents or screenshots, to help reviewers understand your business details.</p>
+         * <p>This parameter is optional; please fill it in according to actual needs.</p>
          */
         public Builder moreData(java.util.List < String > moreData) {
             String moreDataShrink = shrink(moreData, "MoreData", "json");
@@ -248,7 +261,12 @@ public class CreateSmsTemplateRequest extends Request {
         }
 
         /**
-         * RelatedSignName.
+         * <p>The signature name that the template needs to be associated with. The associated SMS signature must have passed the review.</p>
+         * <p>This parameter is mandatory when the TemplateType parameter is <strong>0</strong>, <strong>1</strong>, or <strong>2</strong>.</p>
+         * <p><notice>Associating a signature can expedite the review process. Note that this associated signature is unrelated to the signature selected when sending SMS messages.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder relatedSignName(String relatedSignName) {
             this.putQueryParameter("RelatedSignName", relatedSignName);
@@ -257,7 +275,10 @@ public class CreateSmsTemplateRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>Please describe the business scenario where you use SMS or provide an online link to the scenario, along with a complete example of the SMS (with variable contents filled), as complete information helps increase the template approval rate. Failure to follow guidelines or leaving this field blank may affect the approval of your template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request verification code SMS.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -284,7 +305,12 @@ public class CreateSmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateContent.
+         * <p>Template content, up to 500 characters in length.</p>
+         * <p>Both the template content and variable content must comply with SMS specifications; otherwise, the template will fail the review. You can also view common template examples on the template application page. Using sample templates can enhance review efficiency and success rates. For variable specifications, see <a href="https://help.aliyun.com/zh/sms/templaterule-template-variable-parameter-filling-example">TemplateContent Variable Parameter Filling Specifications</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are applying for mobile registration. The verification code is: ${code}. It is valid for 5 minutes!</p>
          */
         public Builder templateContent(String templateContent) {
             this.putQueryParameter("TemplateContent", templateContent);
@@ -293,7 +319,11 @@ public class CreateSmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>Template name, up to 30 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyunCode</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -302,7 +332,11 @@ public class CreateSmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateRule.
+         * <p>Template variable rules.</p>
+         * <p>For filling in variable rules, refer to the <a href="https://help.aliyun.com/zh/sms/templaterule-template-variable-parameter-filling-example">Sample Documentation</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;characterWithNumber&quot;}</p>
          */
         public Builder templateRule(String templateRule) {
             this.putQueryParameter("TemplateRule", templateRule);
@@ -311,7 +345,20 @@ public class CreateSmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>SMS type. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Verification code.</li>
+         * <li><strong>1</strong>: SMS notification.</li>
+         * <li><strong>2</strong>: Promotional message.</li>
+         * <li><strong>3</strong>: International/Hong Kong, Macao, and Taiwan messages.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only enterprise-verified users can apply for promotional messages and international/Hong Kong, Macao, and Taiwan messages. For details on the differences between personal and enterprise user rights, please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm=a2c4g.11186623.0.0.67447f576NJnE8">Usage Instructions</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder templateType(Integer templateType) {
             this.putQueryParameter("TemplateType", templateType);

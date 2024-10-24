@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySmsTemplateRequest} extends {@link RequestModel}
  *
  * <p>ModifySmsTemplateRequest</p>
@@ -165,7 +166,11 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * The description of the message template. It is one of the reference information for template review. The description cannot exceed 100 characters in length.
+         * <p>The description of the message template. It is one of the reference information for template review. The description cannot exceed 100 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Modify the parameters of the template.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -192,10 +197,12 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * The code of the message template.
-         * <p>
+         * <p>The code of the message template.</p>
+         * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Short Message Service (SMS) console</a>, click <strong>Go China</strong> or <strong>Go Globe</strong> in the left-side navigation pane, and then view the template code on the <strong>Templates</strong> tab. You can also call the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation to obtain the template code.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Short Message Service (SMS) console](https://dysms.console.aliyun.com/dysms.htm), click **Go China** or **Go Globe** in the left-side navigation pane, and then view the template code on the **Templates** tab. You can also call the [AddSmsTemplate](~~121208~~) operation to obtain the template code.
+         * <strong>example:</strong>
+         * <p>SMS_15255****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -204,10 +211,14 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * The content of the template. The content must be 1 to 500 characters in length.
-         * <p>
+         * <p>The content of the template. The content must be 1 to 500 characters in length.</p>
+         * <blockquote>
+         * <p>When you modify a template, design the template content based on the review comments.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > When you modify a template, design the template content based on the review comments.
+         * <strong>example:</strong>
+         * <p>You are applying for mobile registration. The verification code is: ${code}, valid for 5 minutes!</p>
          */
         public Builder templateContent(String templateContent) {
             this.putQueryParameter("TemplateContent", templateContent);
@@ -216,7 +227,11 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * The name of the template. The name must be 1 to 30 characters in length.
+         * <p>The name of the template. The name must be 1 to 30 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun verification code</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -225,13 +240,17 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * The type of the message. Valid values:
-         * <p>
+         * <p>The type of the message. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: verification code</li>
+         * <li><strong>1</strong>: text message</li>
+         * <li><strong>2</strong>: promotional message</li>
+         * <li><strong>3</strong>: message sent to countries or regions outside the Chinese mainland</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: verification code
-         * *   **1**: text message
-         * *   **2**: promotional message
-         * *   **3**: message sent to countries or regions outside the Chinese mainland
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateType(Integer templateType) {
             this.putQueryParameter("TemplateType", templateType);

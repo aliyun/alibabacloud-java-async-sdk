@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaResourceIdRequest} extends {@link RequestModel}
  *
  * <p>GetMediaResourceIdRequest</p>
@@ -112,10 +113,13 @@ public class GetMediaResourceIdRequest extends Request {
         } 
 
         /**
-         * The extended fields.
-         * <p>
+         * <p>The extended fields.</p>
+         * <blockquote>
+         * <p>If you set the ResourceType parameter to <strong>2</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > If you set the ResourceType parameter to **2**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>{&quot;img_rate&quot;:&quot;oneToOne&quot;}</p>
          */
         public Builder extendInfo(String extendInfo) {
             this.putQueryParameter("ExtendInfo", extendInfo);
@@ -124,7 +128,11 @@ public class GetMediaResourceIdRequest extends Request {
         }
 
         /**
-         * The size of the resource. Unit: bytes.
+         * <p>The size of the resource. Unit: bytes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder fileSize(Long fileSize) {
             this.putQueryParameter("FileSize", fileSize);
@@ -133,7 +141,10 @@ public class GetMediaResourceIdRequest extends Request {
         }
 
         /**
-         * The description of the resource.
+         * <p>The description of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder memo(String memo) {
             this.putQueryParameter("Memo", memo);
@@ -142,7 +153,11 @@ public class GetMediaResourceIdRequest extends Request {
         }
 
         /**
-         * The address of the resource.
+         * <p>The address of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://alicom-fc-media/1947741454322274/alicom-fc-media/pic/202205191526575398603697152.png</p>
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);
@@ -151,25 +166,31 @@ public class GetMediaResourceIdRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <ul>
+         * <li><strong>1</strong>: text.</li>
+         * <li><strong>2</strong>: image. A small image cannot exceed 100 KB in size, and a large image cannot exceed 2 MB in size. The image must be clear. Supported format: JPG, JPEG, and PNG.</li>
+         * <li><strong>3</strong>: audio.</li>
+         * <li><strong>4</strong>: video. Supported format: MP4.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you set the ResourceType parameter to 2, the <strong>img_rate</strong> required is required. Valid values:</p>
+         * </li>
+         * <li><p>1:1</p>
+         * </li>
+         * <li><p>16:9</p>
+         * </li>
+         * <li><p>3:1</p>
+         * </li>
+         * <li><p>48:65</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: text.
-         * *   **2**: image. A small image cannot exceed 100 KB in size, and a large image cannot exceed 2 MB in size. The image must be clear. Supported format: JPG, JPEG, and PNG.
-         * *   **3**: audio.
-         * *   **4**: video. Supported format: MP4.
-         * 
-         * > 
-         * 
-         * *   If you set the ResourceType parameter to 2, the **img_rate** required is required. Valid values:
-         * 
-         * *   1:1
-         * 
-         * *   16:9
-         * 
-         * *   3:1
-         * 
-         * *   48:65
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

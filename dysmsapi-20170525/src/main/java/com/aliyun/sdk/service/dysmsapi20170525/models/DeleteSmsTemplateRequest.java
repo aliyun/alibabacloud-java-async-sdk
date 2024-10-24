@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSmsTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteSmsTemplateRequest</p>
@@ -123,10 +124,12 @@ public class DeleteSmsTemplateRequest extends Request {
         }
 
         /**
-         * The code of the message template.
-         * <p>
+         * <p>The code of the message template.</p>
+         * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Alibaba Cloud SMS console</a> and obtain the message template code on the <strong>Message Templates</strong> tab. You can also obtain the message template code by calling the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Alibaba Cloud SMS console](https://dysms.console.aliyun.com/dysms.htm) and obtain the message template code on the **Message Templates** tab. You can also obtain the message template code by calling the [AddSmsTemplate](~~121208~~) operation.
+         * <strong>example:</strong>
+         * <p>SMS_152550****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);

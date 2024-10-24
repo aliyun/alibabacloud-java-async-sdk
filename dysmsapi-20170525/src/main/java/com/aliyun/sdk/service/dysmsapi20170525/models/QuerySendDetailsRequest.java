@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySendDetailsRequest} extends {@link RequestModel}
  *
  * <p>QuerySendDetailsRequest</p>
@@ -155,7 +156,10 @@ public class QuerySendDetailsRequest extends Request {
         } 
 
         /**
-         * The ID of the delivery receipt. The delivery receipt ID is the value of the BizId parameter that is returned when you call the SendSms or SendBatchSms operation.
+         * <p>The ID of the delivery receipt. The delivery receipt ID is the value of the BizId parameter that is returned when you call the SendSms or SendBatchSms operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134523^435****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -164,7 +168,11 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * The page number of the first page.
+         * <p>The page number of the first page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -182,10 +190,12 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * The number of items displayed per page.
-         * <p>
+         * <p>The number of items displayed per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: 1 to 50.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,11 +204,15 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * The mobile numbers of the recipients. Format:
-         * <p>
+         * <p>The mobile numbers of the recipients. Format:</p>
+         * <ul>
+         * <li>If you send messages in the Chinese mainland, specify an 11-digit mobile number, for example, 1390000****.</li>
+         * <li>If you send messages to countries or regions outside the Chinese mainland, specify this parameter in the &lt;Area code&gt;&lt;Mobile number&gt; format. Example: 8520000****.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you send messages in the Chinese mainland, specify an 11-digit mobile number, for example, 1390000\*\*\*\*.
-         * *   If you send messages to countries or regions outside the Chinese mainland, specify this parameter in the \<Area code>\<Mobile number> format. Example: 8520000\*\*\*\*.
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -225,10 +239,12 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * The date when the message was sent. You can query messages that were sent within the last 30 days.
-         * <p>
+         * <p>The date when the message was sent. You can query messages that were sent within the last 30 days.</p>
+         * <p>Format: yyyyMMdd. Example: 20181225.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Format: yyyyMMdd. Example: 20181225.
+         * <strong>example:</strong>
+         * <p>20181228</p>
          */
         public Builder sendDate(String sendDate) {
             this.putQueryParameter("SendDate", sendDate);

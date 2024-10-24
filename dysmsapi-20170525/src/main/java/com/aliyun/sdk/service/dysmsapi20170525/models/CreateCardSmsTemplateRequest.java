@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCardSmsTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateCardSmsTemplateRequest</p>
@@ -97,16 +98,20 @@ public class CreateCardSmsTemplateRequest extends Request {
         } 
 
         /**
-         * The mobile phone manufacturer. Valid values:
-         * <p>
+         * <p>The mobile phone manufacturer. Valid values:</p>
+         * <ul>
+         * <li><strong>HuaWei</strong>: HUAWEI</li>
+         * <li><strong>XiaoMi</strong>: Xiaomi</li>
+         * <li><strong>OPPO</strong>: OPPO</li>
+         * <li><strong>VIVO</strong>: vivo</li>
+         * <li><strong>MEIZU</strong>: MEIZU</li>
+         * </ul>
+         * <blockquote>
+         * <p>If this parameter is not specified, the system automatically specifies a supported mobile phone manufacturer.</p>
+         * </blockquote>
          * 
-         * *   **HuaWei**: HUAWEI
-         * *   **XiaoMi**: Xiaomi
-         * *   **OPPO**: OPPO
-         * *   **VIVO**: vivo
-         * *   **MEIZU**: MEIZU
-         * 
-         * > If this parameter is not specified, the system automatically specifies a supported mobile phone manufacturer.
+         * <strong>example:</strong>
+         * <p>XiaoMi</p>
          */
         public Builder factorys(String factorys) {
             this.putQueryParameter("Factorys", factorys);
@@ -115,7 +120,10 @@ public class CreateCardSmsTemplateRequest extends Request {
         }
 
         /**
-         * The description of the message template.
+         * <p>The description of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Image and Text Template</p>
          */
         public Builder memo(String memo) {
             this.putQueryParameter("Memo", memo);
@@ -124,14 +132,71 @@ public class CreateCardSmsTemplateRequest extends Request {
         }
 
         /**
-         * The content of the card message template.
-         * <p>
+         * <p>The content of the card message template.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>For information about fields such as Template, ExtendInfo, TemplateContent, TmpCard, and Action, see <a href="https://help.aliyun.com/document_detail/434929.html">Parameters of card message templates</a>.</p>
+         * </li>
+         * <li><p>Message template content varies based on the template type. For more information, see <a href="https://help.aliyun.com/document_detail/435361.html">Sample message templates</a>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   For information about fields such as Template, ExtendInfo, TemplateContent, TmpCard, and Action, see [Parameters of card message templates](~~434929~~).
-         * 
-         * *   Message template content varies based on the template type. For more information, see [Sample message templates](~~435361~~).
+         * <strong>example:</strong>
+         * <p>{
+         *        &quot;extendInfo&quot;:{
+         *               &quot;scene&quot;:&quot;HMOVM&quot;,
+         *               &quot;purpose&quot;:&quot;2&quot;,
+         *               &quot;userExt&quot;:{
+         *                      &quot;outId&quot;:&quot;1234554321&quot;
+         *               }
+         *        },
+         *        &quot;templateContent&quot;:{
+         *               &quot;pages&quot;:[
+         *                      {
+         * &quot;tmpCards&quot;:[
+         *                                    {
+         *                                           &quot;type&quot;:&quot;IMAGE&quot;,
+         *                                           &quot;srcType&quot;:1,
+         *                                           &quot;src&quot;:&quot;28755&quot;,
+         *                                           &quot;actionType&quot;:&quot;OPEN_APP&quot;,
+         *                                           &quot;action&quot;:{
+         *                                                  &quot;target&quot;:&quot;<a href="https://s.tb.cn/c.KxzZ">https://s.tb.cn/c.KxzZ</a>&quot;,
+         *                                                  &quot;merchantName&quot;:&quot;test-template&quot;,
+         *                                                  &quot;packageName&quot;:[
+         *                                                         &quot;com.taobao.taobao&quot;],
+         *                                                  &quot;floorUrl&quot;:&quot;<a href="https://s.tb.cn/c.KxzZ">https://s.tb.cn/c.KxzZ</a>&quot;
+         *                                           },
+         *                                           &quot;positionNumber&quot;:1
+         *                                    },
+         *                                    {
+         *                                           &quot;type&quot;:&quot;TEXT&quot;,
+         *                                           &quot;content&quot;:&quot;this is a test msg.&quot;,
+         *                                           &quot;isTextTitle&quot;:true,
+         *                                           &quot;positionNumber&quot;:2
+         *                                    },
+         *                                    {
+         *                                           &quot;type&quot;:&quot;TEXT&quot;,
+         *                                           &quot;content&quot;:&quot;Promotional information&quot;,
+         *                                           &quot;isTextTitle&quot;:false,
+         *                                           &quot;positionNumber&quot;:3
+         *                                    },
+         *                                    {
+         *                                           &quot;type&quot;:&quot;BUTTON&quot;,
+         *                                           &quot;content&quot;:&quot;Promotional information,&quot;,
+         *                                           &quot;actionType&quot;:&quot;OPEN_BROWSER&quot;,
+         *                                           &quot;action&quot;:{
+         *                                                  &quot;target&quot;:&quot;<a href="https://www.aliyun.com">https://www.aliyun.com</a>&quot;,
+         *                                                  &quot;merchantName&quot;:&quot;Currently on the Alibaba Cloud official website.&quot;
+         * },
+         *                                           &quot;positionNumber&quot;:4
+         *                                    }]
+         *                      }]
+         *        },
+         *        &quot;cardSignName&quot;:&quot;aliyun&quot;,
+         *        &quot;cardType&quot;:5
+         * }</p>
          */
         public Builder template(java.util.Map < String, ? > template) {
             String templateShrink = shrink(template, "Template", "json");
@@ -141,7 +206,11 @@ public class CreateCardSmsTemplateRequest extends Request {
         }
 
         /**
-         * The name of the card message template.
+         * <p>The name of the card message template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun Image and Text Template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

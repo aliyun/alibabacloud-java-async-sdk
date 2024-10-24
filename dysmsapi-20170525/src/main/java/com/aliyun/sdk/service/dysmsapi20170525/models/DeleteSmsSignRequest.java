@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSmsSignRequest} extends {@link RequestModel}
  *
  * <p>DeleteSmsSignRequest</p>
@@ -123,10 +124,14 @@ public class DeleteSmsSignRequest extends Request {
         }
 
         /**
-         * The signature.
-         * <p>
+         * <p>The signature.</p>
+         * <blockquote>
+         * <p>The signature must be submitted by the current Alibaba Cloud account, and has been approved.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The signature must be submitted by the current Alibaba Cloud account, and has been approved.
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCardSmsTemplateReportResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCardSmsTemplateReportResponseBody</p>
@@ -73,11 +74,14 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC89A90C-978F-46AC-B80D-54738371E7CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +108,14 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,6 +128,12 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCardSmsTemplateReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCardSmsTemplateReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("model")
         private java.util.List < java.util.Map<String, ?>> model;
@@ -145,7 +161,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> model; 
 
             /**
-             * The details of the data returned.
+             * <p>The details of the data returned.</p>
              */
             public Builder model(java.util.List < java.util.Map<String, ?>> model) {
                 this.model = model;

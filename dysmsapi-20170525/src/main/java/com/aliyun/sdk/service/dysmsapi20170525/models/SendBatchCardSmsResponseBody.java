@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendBatchCardSmsResponseBody} extends {@link TeaModel}
  *
  * <p>SendBatchCardSmsResponseBody</p>
@@ -73,11 +74,14 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   For more information about other response codes, see [API error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +108,14 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,6 +128,12 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SendBatchCardSmsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SendBatchCardSmsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizCardId")
         private String bizCardId;
@@ -205,7 +221,10 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
             private String notMediaMobiles; 
 
             /**
-             * The ID of the card message.
+             * <p>The ID of the card message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder bizCardId(String bizCardId) {
                 this.bizCardId = bizCardId;
@@ -213,7 +232,10 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the digital message.
+             * <p>The ID of the digital message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3214</p>
              */
             public Builder bizDigitalId(String bizDigitalId) {
                 this.bizDigitalId = bizDigitalId;
@@ -221,7 +243,10 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the text message.
+             * <p>The ID of the text message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3256</p>
              */
             public Builder bizSmsId(String bizSmsId) {
                 this.bizSmsId = bizSmsId;
@@ -229,14 +254,18 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * The review status of the card message template.
-             * <p>
+             * <p>The review status of the card message template.</p>
+             * <ul>
+             * <li><strong>0</strong>: pending approval</li>
+             * <li><strong>1</strong>: approved</li>
+             * <li><strong>2</strong>: rejected</li>
+             * </ul>
+             * <blockquote>
+             * <p>Unapproved card messages are rolled back.</p>
+             * </blockquote>
              * 
-             * *   **0**: pending approval
-             * *   **1**: approved
-             * *   **2**: rejected
-             * 
-             * > Unapproved card messages are rolled back.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cardTmpState(Integer cardTmpState) {
                 this.cardTmpState = cardTmpState;
@@ -244,7 +273,10 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone number from which the card message is sent.
+             * <p>The mobile phone number from which the card message is sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder mediaMobiles(String mediaMobiles) {
                 this.mediaMobiles = mediaMobiles;
@@ -252,7 +284,10 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone number whose card message is rolled back.
+             * <p>The mobile phone number whose card message is rolled back.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder notMediaMobiles(String notMediaMobiles) {
                 this.notMediaMobiles = notMediaMobiles;

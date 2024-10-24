@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendSmsRequest} extends {@link RequestModel}
  *
  * <p>SendSmsRequest</p>
@@ -168,10 +169,13 @@ public class SendSmsRequest extends Request {
         } 
 
         /**
-         * The extension field.
-         * <p>
+         * <p>The extension field.</p>
+         * <blockquote>
+         * <p>You can ignore this parameter if you do not have special requirements.</p>
+         * </blockquote>
          * 
-         * > You can ignore this parameter if you do not have special requirements.
+         * <strong>example:</strong>
+         * <p>abcdefgh</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -189,15 +193,19 @@ public class SendSmsRequest extends Request {
         }
 
         /**
-         * The mobile numbers of the recipients. Format:
-         * <p>
+         * <p>The mobile numbers of the recipients. Format:</p>
+         * <ul>
+         * <li>If you send messages to the Chinese mainland, specify mobile numbers that are prefixed with +, +86, 0086, or 86, or 11-digit mobile numbers without prefixes. Example: 1390000****.</li>
+         * <li>If you send messages to countries or regions outside the Chinese mainland, specify this parameter in the &lt;Area code&gt;&lt;Mobile number&gt; format. Example: 852000012****.</li>
+         * </ul>
+         * <p>You can send messages to multiple mobile numbers, separate the mobile numbers with commas (,). You can specify up to 1,000 mobile numbers in each request. Compared with sending messages to a single mobile number, sending messages to multiple mobile numbers requires longer response time.</p>
+         * <blockquote>
+         * <p>We recommend that you send one verification code message to a mobile number in each request.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you send messages to the Chinese mainland, specify mobile numbers that are prefixed with +, +86, 0086, or 86, or 11-digit mobile numbers without prefixes. Example: 1390000\*\*\*\*.
-         * *   If you send messages to countries or regions outside the Chinese mainland, specify this parameter in the \<Area code>\<Mobile number> format. Example: 852000012\*\*\*\*.
-         * 
-         * You can send messages to multiple mobile numbers, separate the mobile numbers with commas (,). You can specify up to 1,000 mobile numbers in each request. Compared with sending messages to a single mobile number, sending messages to multiple mobile numbers requires longer response time.
-         * 
-         * > We recommend that you send one verification code message to a mobile number in each request.
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder phoneNumbers(String phoneNumbers) {
             this.putQueryParameter("PhoneNumbers", phoneNumbers);
@@ -224,12 +232,15 @@ public class SendSmsRequest extends Request {
         }
 
         /**
-         * The signature.
-         * <p>
+         * <p>The signature.</p>
+         * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview">Short Message Service (SMS) console</a>, click <strong>Go China</strong> or <strong>Go Globe</strong> in the left-side navigation pane, and then view the signature on the <strong>Signatures</strong> tab.</p>
+         * <blockquote>
+         * <p>You must specify a signature that is created in the SMS console and approved by Alibaba Cloud. For more information about SMS signature specifications, see <a href="https://help.aliyun.com/document_detail/108076.html">SMS signature specifications</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Short Message Service (SMS) console](https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview), click **Go China** or **Go Globe** in the left-side navigation pane, and then view the signature on the **Signatures** tab.
-         * 
-         * > You must specify a signature that is created in the SMS console and approved by Alibaba Cloud. For more information about SMS signature specifications, see [SMS signature specifications](~~108076~~).
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -238,10 +249,13 @@ public class SendSmsRequest extends Request {
         }
 
         /**
-         * The extension code of the upstream message. Upstream messages are messages sent to the communication service provider. Upstream messages are used to customize a service, complete an inquiry, or send a request. You are charged for sending upstream messages based on the billing standards of the service provider.
-         * <p>
+         * <p>The extension code of the upstream message. Upstream messages are messages sent to the communication service provider. Upstream messages are used to customize a service, complete an inquiry, or send a request. You are charged for sending upstream messages based on the billing standards of the service provider.</p>
+         * <blockquote>
+         * <p>The extension code is automatically generated by the system when the signature is generated. You do not need to specify the extension code. You can ignore this parameter if you do not have special requirements.</p>
+         * </blockquote>
          * 
-         * > The extension code is automatically generated by the system when the signature is generated. You do not need to specify the extension code. You can ignore this parameter if you do not have special requirements.
+         * <strong>example:</strong>
+         * <p>90999</p>
          */
         public Builder smsUpExtendCode(String smsUpExtendCode) {
             this.putQueryParameter("SmsUpExtendCode", smsUpExtendCode);
@@ -250,12 +264,15 @@ public class SendSmsRequest extends Request {
         }
 
         /**
-         * The code of the message template.
-         * <p>
+         * <p>The code of the message template.</p>
+         * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview">Short Message Service (SMS) console</a>, click <strong>Go China</strong> or <strong>Go Globe</strong> in the left-side navigation pane, and then view the <strong>template code</strong> on the <strong>Templates</strong> tab.</p>
+         * <blockquote>
+         * <p>You must specify a message template that is created in the SMS console and approved by Alibaba Cloud. If you send messages to countries or regions outside the Chinese mainland, use the corresponding message templates.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Short Message Service (SMS) console](https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview), click **Go China** or **Go Globe** in the left-side navigation pane, and then view the **template code** on the **Templates** tab.
-         * 
-         * > You must specify a message template that is created in the SMS console and approved by Alibaba Cloud. If you send messages to countries or regions outside the Chinese mainland, use the corresponding message templates.
+         * <strong>example:</strong>
+         * <p>SMS_15305****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -264,14 +281,18 @@ public class SendSmsRequest extends Request {
         }
 
         /**
-         * The value of the variable in the message template. You can specify multiple parameter values. Example:{"name":"Sam","number":"1390000\*\*\*\*"}.
-         * <p>
+         * <p>The value of the variable in the message template. You can specify multiple parameter values. Example:{&quot;name&quot;:&quot;Sam&quot;,&quot;number&quot;:&quot;1390000****&quot;}.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If line breaks are required in JSON-formatted data, they must meet the relevant requirements that are specified in the standard JSON protocol.</p>
+         * </li>
+         * <li><p>For more information about template variables, see <a href="https://help.aliyun.com/document_detail/108253.html">SMS template specifications</a>.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If line breaks are required in JSON-formatted data, they must meet the relevant requirements that are specified in the standard JSON protocol.
-         * 
-         * *   For more information about template variables, see [SMS template specifications](~~108253~~).
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;1111&quot;}</p>
          */
         public Builder templateParam(String templateParam) {
             this.putQueryParameter("TemplateParam", templateParam);

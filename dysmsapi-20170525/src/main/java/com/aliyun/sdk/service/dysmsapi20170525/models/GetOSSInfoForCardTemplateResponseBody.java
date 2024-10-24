@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOSSInfoForCardTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetOSSInfoForCardTemplateResponseBody</p>
@@ -73,11 +74,14 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   For more information about other response codes, see [API error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +108,14 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,6 +128,12 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOSSInfoForCardTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOSSInfoForCardTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
@@ -229,7 +245,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
             private String startPath; 
 
             /**
-             * The AccessKey ID.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAIxetqt1Dg****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -237,7 +256,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>599333677478****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -245,7 +267,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicom-cardsms-resources</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -253,7 +278,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period.
+             * <p>The timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634209418</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -261,7 +289,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://alicom-cardsms-resources.oss-cn-zhangjiakou.aliyuncs.com">https://alicom-cardsms-resources.oss-cn-zhangjiakou.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -269,7 +300,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The signature policy.
+             * <p>The signature policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJxxx0=</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -277,7 +311,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The signature.
+             * <p>The signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -285,7 +322,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the policy.
+             * <p>The path of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631792777</p>
              */
             public Builder startPath(String startPath) {
                 this.startPath = startPath;

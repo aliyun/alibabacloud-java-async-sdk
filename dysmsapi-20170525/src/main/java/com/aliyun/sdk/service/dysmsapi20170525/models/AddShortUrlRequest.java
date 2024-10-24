@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddShortUrlRequest} extends {@link RequestModel}
  *
  * <p>AddShortUrlRequest</p>
@@ -126,7 +127,11 @@ public class AddShortUrlRequest extends Request {
         } 
 
         /**
-         * The validity period of the short URL. Unit: days. The maximum validity period is 90 days.
+         * <p>The validity period of the short URL. Unit: days. The maximum validity period is 90 days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder effectiveDays(String effectiveDays) {
             this.putBodyParameter("EffectiveDays", effectiveDays);
@@ -162,7 +167,11 @@ public class AddShortUrlRequest extends Request {
         }
 
         /**
-         * The service name of the short URL. The name cannot exceed 13 characters in length.
+         * <p>The service name of the short URL. The name cannot exceed 13 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Alibaba Cloud Short Link service.</p>
          */
         public Builder shortUrlName(String shortUrlName) {
             this.putBodyParameter("ShortUrlName", shortUrlName);
@@ -171,7 +180,11 @@ public class AddShortUrlRequest extends Request {
         }
 
         /**
-         * The source URL. The URL cannot exceed 1,000 characters in length.
+         * <p>The source URL. The URL cannot exceed 1,000 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></p>
          */
         public Builder sourceUrl(String sourceUrl) {
             this.putBodyParameter("SourceUrl", sourceUrl);

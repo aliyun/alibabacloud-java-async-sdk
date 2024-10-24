@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmsSignListRequest} extends {@link RequestModel}
  *
  * <p>QuerySmsSignListRequest</p>
@@ -119,7 +120,10 @@ public class QuerySmsSignListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -128,7 +132,10 @@ public class QuerySmsSignListRequest extends Request {
         }
 
         /**
-         * The number of signatures per page. Valid values: **1 to 50**.
+         * <p>The number of signatures per page. Valid values: <strong>1 to 50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

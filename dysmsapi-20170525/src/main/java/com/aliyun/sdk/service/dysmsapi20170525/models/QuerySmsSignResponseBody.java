@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmsSignResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySmsSignResponseBody</p>
@@ -109,11 +110,14 @@ public class QuerySmsSignResponseBody extends TeaModel {
         private Integer signStatus; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   If OK is returned, the request is successful.
-         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,10 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * The date and time when the signature was created.
+         * <p>The date and time when the signature was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-08 16:44:13</p>
          */
         public Builder createDate(String createDate) {
             this.createDate = createDate;
@@ -129,7 +136,10 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -137,11 +147,14 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * The remarks of the review. Valid values:
-         * <p>
+         * <p>The remarks of the review. Valid values:</p>
+         * <ul>
+         * <li>If the signature is in the <strong>Approved</strong> or <strong>Pending Approval</strong> state, No Remarks is returned.</li>
+         * <li>If the signature is in the <strong>Not Approved</strong> state, the reason why the signature is rejected is returned.</li>
+         * </ul>
          * 
-         * *   If the signature is in the **Approved** or **Pending Approval** state, No Remarks is returned.
-         * *   If the signature is in the **Not Approved** state, the reason why the signature is rejected is returned.
+         * <strong>example:</strong>
+         * <p>The document cannot verify the authenticity of the information. Please upload it again.</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -149,7 +162,10 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC89A90C-978F-46AC-B80D-54738371E7CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +173,10 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * The signature.
+         * <p>The signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder signName(String signName) {
             this.signName = signName;
@@ -165,13 +184,16 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the signature. Valid values:
-         * <p>
+         * <p>The status of the signature. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The signature is pending approval.</li>
+         * <li><strong>1</strong>: The signature is approved.</li>
+         * <li><strong>2</strong>: The signature is rejected. The Reason parameter indicates the reason why the signature is rejected.</li>
+         * <li><strong>10</strong>: The signature is cancelled.</li>
+         * </ul>
          * 
-         * *   **0**: The signature is pending approval.
-         * *   **1**: The signature is approved.
-         * *   **2**: The signature is rejected. The Reason parameter indicates the reason why the signature is rejected.
-         * *   **10**: The signature is cancelled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder signStatus(Integer signStatus) {
             this.signStatus = signStatus;

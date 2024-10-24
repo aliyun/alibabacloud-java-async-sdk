@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCardSmsLinkResponseBody} extends {@link TeaModel}
  *
  * <p>GetCardSmsLinkResponseBody</p>
@@ -73,11 +74,14 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC89A90C-978F-46AC-B80D-54738371E7CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +108,14 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,6 +128,12 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCardSmsLinkResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCardSmsLinkResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CardPhoneNumbers")
         private String cardPhoneNumbers;
@@ -193,7 +209,10 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
             private String notMediaMobiles; 
 
             /**
-             * The mobile phone numbers that support card messages.
+             * <p>The mobile phone numbers that support card messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;1390000****&quot;,&quot;1370000****&quot;]</p>
              */
             public Builder cardPhoneNumbers(String cardPhoneNumbers) {
                 this.cardPhoneNumbers = cardPhoneNumbers;
@@ -201,7 +220,10 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The signatures must correspond to the mobile numbers and short URLs in sequence.
+             * <p>The signatures must correspond to the mobile numbers and short URLs in sequence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;aliyun&quot;,&quot;aliyun2&quot;]</p>
              */
             public Builder cardSignNames(String cardSignNames) {
                 this.cardSignNames = cardSignNames;
@@ -209,7 +231,10 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The short URLs.
+             * <p>The short URLs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;mw2m.cn/LAaGGa&quot;,&quot;mw2m.cn/LAAaes&quot;]</p>
              */
             public Builder cardSmsLinks(String cardSmsLinks) {
                 this.cardSmsLinks = cardSmsLinks;
@@ -217,14 +242,18 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The review status of the card message template.
-             * <p>
+             * <p>The review status of the card message template.</p>
+             * <ul>
+             * <li><strong>0</strong>: pending approval</li>
+             * <li><strong>1</strong>: approved</li>
+             * <li><strong>2</strong>: rejected</li>
+             * </ul>
+             * <blockquote>
+             * <p>Unapproved card messages are rolled back.</p>
+             * </blockquote>
              * 
-             * *   **0**: pending approval
-             * *   **1**: approved
-             * *   **2**: rejected
-             * 
-             * > Unapproved card messages are rolled back.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cardTmpState(Integer cardTmpState) {
                 this.cardTmpState = cardTmpState;
@@ -232,7 +261,10 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone numbers that do not support card messages.
+             * <p>The mobile phone numbers that do not support card messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder notMediaMobiles(String notMediaMobiles) {
                 this.notMediaMobiles = notMediaMobiles;

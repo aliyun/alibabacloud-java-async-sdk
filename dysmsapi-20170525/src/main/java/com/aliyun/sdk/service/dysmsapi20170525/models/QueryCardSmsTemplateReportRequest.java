@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCardSmsTemplateReportRequest} extends {@link RequestModel}
  *
  * <p>QueryCardSmsTemplateReportRequest</p>
@@ -82,7 +83,10 @@ public class QueryCardSmsTemplateReportRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-11 00:00:01</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -91,7 +95,10 @@ public class QueryCardSmsTemplateReportRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-10 00:00:01</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -100,7 +107,8 @@ public class QueryCardSmsTemplateReportRequest extends Request {
         }
 
         /**
-         * The array of message templates.
+         * <p>The array of message templates.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder templateCodes(java.util.List < String > templateCodes) {
             this.putQueryParameter("TemplateCodes", templateCodes);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmsSignRequest} extends {@link RequestModel}
  *
  * <p>QuerySmsSignRequest</p>
@@ -123,7 +124,11 @@ public class QuerySmsSignRequest extends Request {
         }
 
         /**
-         * The signature.
+         * <p>The signature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);

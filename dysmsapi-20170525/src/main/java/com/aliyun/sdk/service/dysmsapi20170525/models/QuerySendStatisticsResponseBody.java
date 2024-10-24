@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySendStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySendStatisticsResponseBody</p>
@@ -73,11 +74,14 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   If OK is returned, the request is successful.
-         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819BE656-D2E0-4858-8B21-B2E47708****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,6 +124,12 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySendStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySendStatisticsResponseBody</p>
+     */
     public static class TargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NoRespondedCount")
         private Long noRespondedCount;
@@ -189,7 +205,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The number of messages without a delivery receipt.
+             * <p>The number of messages without a delivery receipt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder noRespondedCount(Long noRespondedCount) {
                 this.noRespondedCount = noRespondedCount;
@@ -197,7 +216,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of messages with a delivery receipt that indicates a failure.
+             * <p>The number of messages with a delivery receipt that indicates a failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder respondedFailCount(Long respondedFailCount) {
                 this.respondedFailCount = respondedFailCount;
@@ -205,7 +227,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of messages with a delivery receipt that indicates a success.
+             * <p>The number of messages with a delivery receipt that indicates a success.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder respondedSuccessCount(Long respondedSuccessCount) {
                 this.respondedSuccessCount = respondedSuccessCount;
@@ -213,7 +238,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The date when the message is sent. Format: yyyyMMdd. Example: 20181225.
+             * <p>The date when the message is sent. Format: yyyyMMdd. Example: 20181225.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20201010</p>
              */
             public Builder sendDate(String sendDate) {
                 this.sendDate = sendDate;
@@ -221,7 +249,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of delivered messages.
+             * <p>The number of delivered messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -235,6 +266,12 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySendStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySendStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetList")
         private java.util.List < TargetList> targetList;
@@ -274,7 +311,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The details of the data returned.
+             * <p>The details of the data returned.</p>
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;
@@ -282,7 +319,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

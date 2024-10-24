@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOSSInfoForUploadFileRequest} extends {@link RequestModel}
  *
  * <p>GetOSSInfoForUploadFileRequest</p>
@@ -95,7 +96,11 @@ public class GetOSSInfoForUploadFileRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>Business type, default value is <strong>fcMediaSms</strong>.</p>
+         * <p>When creating signatures and templates, and uploading <strong>additional materials</strong>, this value is <strong>fcMediaSms</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fcMediaSms</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);

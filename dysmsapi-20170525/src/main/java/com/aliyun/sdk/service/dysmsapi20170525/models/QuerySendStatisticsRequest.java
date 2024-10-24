@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySendStatisticsRequest} extends {@link RequestModel}
  *
  * <p>QuerySendStatisticsRequest</p>
@@ -184,7 +185,11 @@ public class QuerySendStatisticsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Format: yyyyMMdd. Example: 20181225.
+         * <p>The end of the time range to query. Format: yyyyMMdd. Example: 20181225.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201003</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -193,11 +198,15 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * The site from where the message is sent. Valid values:
-         * <p>
+         * <p>The site from where the message is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: China site</li>
+         * <li><strong>2</strong>: international site</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: China site
-         * *   **2**: international site
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isGlobe(Integer isGlobe) {
             this.putQueryParameter("IsGlobe", isGlobe);
@@ -215,7 +224,11 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -224,7 +237,11 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1 to 50**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1 to 50</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -251,7 +268,10 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * The signature.
+         * <p>The signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -260,7 +280,11 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Format: yyyyMMdd. Example: 20181225.
+         * <p>The beginning of the time range to query. Format: yyyyMMdd. Example: 20181225.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201002</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -269,14 +293,17 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * The type of the message template. Valid values: Valid values:
-         * <p>
+         * <p>The type of the message template. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: verification code</li>
+         * <li><strong>1</strong>: notification</li>
+         * <li><strong>2</strong>: promotional message (Enterprise users only)</li>
+         * <li><strong>3</strong>: international purpose (Enterprise users only)</li>
+         * <li><strong>7</strong>: digital message</li>
+         * </ul>
          * 
-         * *   **0**: verification code
-         * *   **1**: notification
-         * *   **2**: promotional message (Enterprise users only)
-         * *   **3**: international purpose (Enterprise users only)
-         * *   **7**: digital message
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder templateType(Integer templateType) {
             this.putQueryParameter("TemplateType", templateType);

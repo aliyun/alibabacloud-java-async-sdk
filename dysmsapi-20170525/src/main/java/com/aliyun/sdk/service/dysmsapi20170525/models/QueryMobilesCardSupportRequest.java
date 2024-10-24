@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMobilesCardSupportRequest} extends {@link RequestModel}
  *
  * <p>QueryMobilesCardSupportRequest</p>
@@ -69,7 +70,8 @@ public class QueryMobilesCardSupportRequest extends Request {
         } 
 
         /**
-         * The list of mobile phone numbers.
+         * <p>The list of mobile phone numbers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder mobiles(java.util.List < java.util.Map<String, ?>> mobiles) {
             String mobilesShrink = shrink(mobiles, "Mobiles", "json");
@@ -79,10 +81,14 @@ public class QueryMobilesCardSupportRequest extends Request {
         }
 
         /**
-         * The code of the message template. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
-         * <p>
+         * <p>The code of the message template. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+         * <blockquote>
+         * <p>Make sure that the message template has been approved.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Make sure that the message template has been approved.
+         * <strong>example:</strong>
+         * <p>CARD_SMS_0000</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);

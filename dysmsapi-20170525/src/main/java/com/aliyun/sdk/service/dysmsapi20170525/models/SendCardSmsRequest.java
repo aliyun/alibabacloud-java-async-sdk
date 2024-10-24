@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendCardSmsRequest} extends {@link RequestModel}
  *
  * <p>SendCardSmsRequest</p>
@@ -211,7 +212,8 @@ public class SendCardSmsRequest extends Request {
         } 
 
         /**
-         * The objects of the message template.
+         * <p>The objects of the message template.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder cardObjects(java.util.List < CardObjects> cardObjects) {
             this.putQueryParameter("CardObjects", cardObjects);
@@ -220,10 +222,14 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The code of the message template. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
-         * <p>
+         * <p>The code of the message template. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+         * <blockquote>
+         * <p>Make sure that the message template has been approved.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Make sure that the message template has been approved.
+         * <strong>example:</strong>
+         * <p>CARD_SMS_70</p>
          */
         public Builder cardTemplateCode(String cardTemplateCode) {
             this.putQueryParameter("CardTemplateCode", cardTemplateCode);
@@ -232,10 +238,13 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The code of the digital message template that applies when the card message is rolled back. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
-         * <p>
+         * <p>The code of the digital message template that applies when the card message is rolled back. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+         * <blockquote>
+         * <p>Make sure that the message template has been approved.</p>
+         * </blockquote>
          * 
-         * > Make sure that the message template has been approved.
+         * <strong>example:</strong>
+         * <p>SMS_003</p>
          */
         public Builder digitalTemplateCode(String digitalTemplateCode) {
             this.putQueryParameter("DigitalTemplateCode", digitalTemplateCode);
@@ -244,10 +253,13 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The variables of the digital message template.
-         * <p>
+         * <p>The variables of the digital message template.</p>
+         * <blockquote>
+         * <p>If you need to add line breaks to the JSON template, make sure that the format is valid.</p>
+         * </blockquote>
          * 
-         * > If you need to add line breaks to the JSON template, make sure that the format is valid.
+         * <strong>example:</strong>
+         * <p>{&quot;msg&quot;,&quot;xxxd&quot;}</p>
          */
         public Builder digitalTemplateParam(String digitalTemplateParam) {
             this.putQueryParameter("DigitalTemplateParam", digitalTemplateParam);
@@ -256,12 +268,16 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The rollback type. Valid values:
-         * <p>
+         * <p>The rollback type. Valid values:</p>
+         * <ul>
+         * <li><strong>SMS</strong>: text message</li>
+         * <li><strong>DIGITALSMS</strong>: digital message</li>
+         * <li><strong>NONE</strong>: none</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **SMS**: text message
-         * *   **DIGITALSMS**: digital message
-         * *   **NONE**: none
+         * <strong>example:</strong>
+         * <p>SMS</p>
          */
         public Builder fallbackType(String fallbackType) {
             this.putQueryParameter("FallbackType", fallbackType);
@@ -270,7 +286,10 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The ID that is reserved for the caller of the operation.
+         * <p>The ID that is reserved for the caller of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38d76c9b-4a9a-4c89-afae-61fd8e0e****</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -279,10 +298,14 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The signature. You can view the template code in the **Signature** column on the **Signaturess** tab of the **Go China** page in the Alibaba Cloud SMS console.
-         * <p>
+         * <p>The signature. You can view the template code in the <strong>Signature</strong> column on the <strong>Signaturess</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+         * <blockquote>
+         * <p>The signature must be approved.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The signature must be approved.
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -291,10 +314,13 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The code of the text message template that applies when the card message is rolled back. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
-         * <p>
+         * <p>The code of the text message template that applies when the card message is rolled back. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+         * <blockquote>
+         * <p>Make sure that the message template has been approved. If you set the <strong>FallbackType</strong> parameter to <strong>SMS</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > Make sure that the message template has been approved. If you set the **FallbackType** parameter to **SMS**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>SIER_TEST_01</p>
          */
         public Builder smsTemplateCode(String smsTemplateCode) {
             this.putQueryParameter("SmsTemplateCode", smsTemplateCode);
@@ -303,10 +329,13 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The variables of the text message template.
-         * <p>
+         * <p>The variables of the text message template.</p>
+         * <blockquote>
+         * <p>If you need to add line breaks to the JSON template, make sure that the format is valid.</p>
+         * </blockquote>
          * 
-         * > If you need to add line breaks to the JSON template, make sure that the format is valid.
+         * <strong>example:</strong>
+         * <p>{&quot;uri&quot;:&quot;Zg11tZ&quot;}</p>
          */
         public Builder smsTemplateParam(String smsTemplateParam) {
             this.putQueryParameter("SmsTemplateParam", smsTemplateParam);
@@ -315,10 +344,13 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The extension code of the upstream message. Upstream messages are messages sent to the communication service provider. Upstream messages are used to customize a service, complete an inquiry, or send a request. You are charged for sending upstream messages based on the billing standards of the service provider.
-         * <p>
+         * <p>The extension code of the upstream message. Upstream messages are messages sent to the communication service provider. Upstream messages are used to customize a service, complete an inquiry, or send a request. You are charged for sending upstream messages based on the billing standards of the service provider.</p>
+         * <blockquote>
+         * <p>If you do not need upstream messages, ignore this parameter.</p>
+         * </blockquote>
          * 
-         * > If you do not need upstream messages, ignore this parameter.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder smsUpExtendCode(String smsUpExtendCode) {
             this.putQueryParameter("SmsUpExtendCode", smsUpExtendCode);
@@ -327,12 +359,14 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The code of the text message template.
-         * <p>
+         * <p>The code of the text message template.</p>
+         * <p>Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click <strong>Go Globe</strong> or <strong>Go China</strong>. You can view the message template in the <strong>Template Code</strong> column on the <strong>Message Templates</strong> tab.</p>
+         * <blockquote>
+         * <p>The message templates must be created on the Go Globe page and approved.</p>
+         * </blockquote>
          * 
-         * Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click **Go Globe** or **Go China**. You can view the message template in the **Template Code** column on the **Message Templates** tab.
-         * 
-         * > The message templates must be created on the Go Globe page and approved.
+         * <strong>example:</strong>
+         * <p>SMS_2322****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -341,10 +375,15 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * The variables of the message template. Format: JSON.
-         * <p>
+         * <p>The variables of the message template. Format: JSON.</p>
+         * <blockquote>
+         * <p>If you need to add line breaks to the JSON template, make sure that the format is valid.</p>
+         * </blockquote>
          * 
-         * > If you need to add line breaks to the JSON template, make sure that the format is valid.
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;code&quot;: &quot;1111&quot;
+         * }</p>
          */
         public Builder templateParam(String templateParam) {
             this.putQueryParameter("TemplateParam", templateParam);
@@ -359,6 +398,12 @@ public class SendCardSmsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SendCardSmsRequest} extends {@link TeaModel}
+     *
+     * <p>SendCardSmsRequest</p>
+     */
     public static class CardObjects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("customUrl")
         private String customUrl;
@@ -410,7 +455,10 @@ public class SendCardSmsRequest extends Request {
             private String mobile; 
 
             /**
-             * The URL to which the message is redirected if the message fails to be rendered.
+             * <p>The URL to which the message is redirected if the message fails to be rendered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://alibaba.com">https://alibaba.com</a></p>
              */
             public Builder customUrl(String customUrl) {
                 this.customUrl = customUrl;
@@ -418,7 +466,10 @@ public class SendCardSmsRequest extends Request {
             }
 
             /**
-             * The variables. Special characters, such as $ and {}, do not need to be entered.
+             * <p>The variables. Special characters, such as $ and {}, do not need to be entered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;param3&quot;:&quot;three&quot;,&quot;param1&quot;:&quot;one&quot;,&quot;param2&quot;:&quot;two&quot;}</p>
              */
             public Builder dyncParams(String dyncParams) {
                 this.dyncParams = dyncParams;
@@ -426,7 +477,10 @@ public class SendCardSmsRequest extends Request {
             }
 
             /**
-             * The mobile phone number.
+             * <p>The mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;

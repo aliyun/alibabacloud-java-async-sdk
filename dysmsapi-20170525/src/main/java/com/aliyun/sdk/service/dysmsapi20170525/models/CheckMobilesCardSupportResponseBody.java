@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckMobilesCardSupportResponseBody} extends {@link TeaModel}
  *
  * <p>CheckMobilesCardSupportResponseBody</p>
@@ -73,11 +74,14 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819BE656-D2E0-4858-8B21-B2E477085AAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +108,14 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,6 +128,12 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckMobilesCardSupportResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckMobilesCardSupportResponseBody</p>
+     */
     public static class QueryResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("mobile")
         private String mobile;
@@ -157,7 +173,10 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
             private Boolean support; 
 
             /**
-             * The mobile phone number.
+             * <p>The mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -165,11 +184,14 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the mobile phone number supports card messages.
-             * <p>
+             * <p>Indicates whether the mobile phone number supports card messages.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder support(Boolean support) {
                 this.support = support;
@@ -183,6 +205,12 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CheckMobilesCardSupportResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckMobilesCardSupportResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("queryResult")
         private java.util.List < QueryResult> queryResult;
@@ -210,7 +238,7 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
             private java.util.List < QueryResult> queryResult; 
 
             /**
-             * The list of returned results.
+             * <p>The list of returned results.</p>
              */
             public Builder queryResult(java.util.List < QueryResult> queryResult) {
                 this.queryResult = queryResult;

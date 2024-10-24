@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -181,7 +182,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token used to query the next page.
+         * <p>The token used to query the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23432453245</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -199,7 +203,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -208,7 +215,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The name of the cloud service. Set the value to **dysms**.
+         * <p>The name of the cloud service. Set the value to <strong>dysms</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dysms</p>
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -217,7 +227,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to **cn-hangzhou**.
+         * <p>The region ID. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -226,7 +240,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The code of the message template. Specify either the Tag or the ResourceId parameter.
+         * <p>The code of the message template. Specify either the Tag or the ResourceId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS_23423423</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -253,7 +270,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to TEMPLATE.
+         * <p>The type of the resource. Set the value to TEMPLATE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEMPLATE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -262,7 +283,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tag list. Specify either the Tag or the ResourceId parameter. You can specify a maximum of 20 tags.
+         * <p>The tag list. Specify either the Tag or the ResourceId parameter. You can specify a maximum of 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -277,6 +298,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -316,7 +343,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -324,7 +354,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

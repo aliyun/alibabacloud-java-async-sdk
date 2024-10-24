@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPageSmartShortUrlLogRequest} extends {@link RequestModel}
  *
  * <p>QueryPageSmartShortUrlLogRequest</p>
@@ -169,7 +170,10 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
         } 
 
         /**
-         * CreateDateEnd.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20181225</p>
          */
         public Builder createDateEnd(Long createDateEnd) {
             this.putQueryParameter("CreateDateEnd", createDateEnd);
@@ -178,7 +182,10 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
         }
 
         /**
-         * CreateDateStart.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20181225</p>
          */
         public Builder createDateStart(Long createDateStart) {
             this.putQueryParameter("CreateDateStart", createDateStart);
@@ -196,7 +203,10 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -205,7 +215,10 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

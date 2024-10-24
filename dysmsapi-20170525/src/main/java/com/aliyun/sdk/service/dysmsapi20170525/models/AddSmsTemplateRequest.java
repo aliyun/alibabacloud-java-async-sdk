@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSmsTemplateRequest} extends {@link RequestModel}
  *
  * <p>AddSmsTemplateRequest</p>
@@ -150,7 +151,11 @@ public class AddSmsTemplateRequest extends Request {
         }
 
         /**
-         * The description of the message template. It is one of the reference information for template review. The description cannot exceed 100 characters in length.
+         * <p>The description of the message template. It is one of the reference information for template review. The description cannot exceed 100 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apply for a template to send verification codes.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -177,7 +182,11 @@ public class AddSmsTemplateRequest extends Request {
         }
 
         /**
-         * The content of the template. The content can be up to 500 characters in length. For more information, see [Message template specifications](~~108253~~).
+         * <p>The content of the template. The content can be up to 500 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/108253.html">Message template specifications</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are applying for mobile registration. The verification code is: ${code}, valid for 5 minutes!</p>
          */
         public Builder templateContent(String templateContent) {
             this.putQueryParameter("TemplateContent", templateContent);
@@ -186,7 +195,11 @@ public class AddSmsTemplateRequest extends Request {
         }
 
         /**
-         * The name of the template. The name can be up to 30 characters in length.
+         * <p>The name of the template. The name can be up to 30 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun Test</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -195,15 +208,20 @@ public class AddSmsTemplateRequest extends Request {
         }
 
         /**
-         * The type of the message. Valid values:
-         * <p>
+         * <p>The type of the message. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: verification code</li>
+         * <li><strong>1</strong>: notification</li>
+         * <li><strong>2</strong>: promotional message</li>
+         * <li><strong>3</strong>: message sent to countries or regions outside the Chinese mainland</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only enterprise users can send promotional messages, or send messages to countries or regions outside the Chinese mainland.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: verification code
-         * *   **1**: notification
-         * *   **2**: promotional message
-         * *   **3**: message sent to countries or regions outside the Chinese mainland
-         * 
-         * > Only enterprise users can send promotional messages, or send messages to countries or regions outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateType(Integer templateType) {
             this.putQueryParameter("TemplateType", templateType);
