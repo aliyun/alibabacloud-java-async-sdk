@@ -57,6 +57,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String instanceGroupSpec;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairId")
+    private String keyPairId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NumberOfInstances")
     @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer numberOfInstances;
@@ -94,6 +98,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.imageId = builder.imageId;
         this.instanceGroupName = builder.instanceGroupName;
         this.instanceGroupSpec = builder.instanceGroupSpec;
+        this.keyPairId = builder.keyPairId;
         this.numberOfInstances = builder.numberOfInstances;
         this.officeSiteId = builder.officeSiteId;
         this.period = builder.period;
@@ -186,6 +191,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return keyPairId
+     */
+    public String getKeyPairId() {
+        return this.keyPairId;
+    }
+
+    /**
      * @return numberOfInstances
      */
     public Integer getNumberOfInstances() {
@@ -238,6 +250,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private String imageId; 
         private String instanceGroupName; 
         private String instanceGroupSpec; 
+        private String keyPairId; 
         private Integer numberOfInstances; 
         private String officeSiteId; 
         private Integer period; 
@@ -261,6 +274,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.imageId = request.imageId;
             this.instanceGroupName = request.instanceGroupName;
             this.instanceGroupSpec = request.instanceGroupSpec;
+            this.keyPairId = request.keyPairId;
             this.numberOfInstances = request.numberOfInstances;
             this.officeSiteId = request.officeSiteId;
             this.period = request.period;
@@ -365,6 +379,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         public Builder instanceGroupSpec(String instanceGroupSpec) {
             this.putQueryParameter("InstanceGroupSpec", instanceGroupSpec);
             this.instanceGroupSpec = instanceGroupSpec;
+            return this;
+        }
+
+        /**
+         * KeyPairId.
+         */
+        public Builder keyPairId(String keyPairId) {
+            this.putQueryParameter("KeyPairId", keyPairId);
+            this.keyPairId = keyPairId;
             return this;
         }
 
