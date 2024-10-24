@@ -1,51 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEaiEciRequest} extends {@link RequestModel}
  *
  * <p>CreateEaiEciRequest</p>
  */
 public class CreateEaiEciRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EaisName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EaisName")
     private String eaisName;
 
-    @Query
-    @NameInMap("EaisType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EaisType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eaisType;
 
-    @Query
-    @NameInMap("Eci")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Eci")
     private Eci eci;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
     private CreateEaiEciRequest(Builder builder) {
@@ -174,7 +174,10 @@ public class CreateEaiEciRequest extends Request {
         }
 
         /**
-         * EaisType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eais.ei-a6.2xlarge</p>
          */
         public Builder eaisType(String eaisType) {
             this.putQueryParameter("EaisType", eaisType);
@@ -193,7 +196,10 @@ public class CreateEaiEciRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +217,10 @@ public class CreateEaiEciRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-uf66jeqopgqa9hdn****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -220,7 +229,10 @@ public class CreateEaiEciRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6h3rbwbm90urjwa****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -235,20 +247,26 @@ public class CreateEaiEciRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEaiEciRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEaiEciRequest</p>
+     */
     public static class Container extends TeaModel {
-        @NameInMap("Arg")
+        @com.aliyun.core.annotation.NameInMap("Arg")
         private String arg;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Volumes")
+        @com.aliyun.core.annotation.NameInMap("Volumes")
         private String volumes;
 
         private Container(Builder builder) {
@@ -356,20 +374,26 @@ public class CreateEaiEciRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEaiEciRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEaiEciRequest</p>
+     */
     public static class Eci extends TeaModel {
-        @NameInMap("Container")
+        @com.aliyun.core.annotation.NameInMap("Container")
         private Container container;
 
-        @NameInMap("EipId")
+        @com.aliyun.core.annotation.NameInMap("EipId")
         private String eipId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Volume")
+        @com.aliyun.core.annotation.NameInMap("Volume")
         private String volume;
 
         private Eci(Builder builder) {

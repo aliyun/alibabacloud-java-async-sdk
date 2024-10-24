@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEaisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEaisResponseBody</p>
  */
 public class DescribeEaisResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEaisResponseBody(Builder builder) {
@@ -131,11 +131,17 @@ public class DescribeEaisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEaisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEaisResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -192,8 +198,14 @@ public class DescribeEaisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEaisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEaisResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -233,59 +245,65 @@ public class DescribeEaisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEaisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEaisResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("ClientInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ClientInstanceId")
         private String clientInstanceId;
 
-        @NameInMap("ClientInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ClientInstanceName")
         private String clientInstanceName;
 
-        @NameInMap("ClientInstanceType")
+        @com.aliyun.core.annotation.NameInMap("ClientInstanceType")
         private String clientInstanceType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ElasticAcceleratedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ElasticAcceleratedInstanceId")
         private String elasticAcceleratedInstanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("JupyterUrl")
+        @com.aliyun.core.annotation.NameInMap("JupyterUrl")
         private String jupyterUrl;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Instance(Builder builder) {
@@ -614,8 +632,14 @@ public class DescribeEaisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEaisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEaisResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
 
         private Instances(Builder builder) {

@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachEaiRequest} extends {@link RequestModel}
  *
  * <p>DetachEaiRequest</p>
  */
 public class DetachEaiRequest extends Request {
-    @Query
-    @NameInMap("ElasticAcceleratedInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticAcceleratedInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String elasticAcceleratedInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DetachEaiRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class DetachEaiRequest extends Request {
         } 
 
         /**
-         * ElasticAcceleratedInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eais-sz8t15a7gt7z7j7i****</p>
          */
         public Builder elasticAcceleratedInstanceId(String elasticAcceleratedInstanceId) {
             this.putQueryParameter("ElasticAcceleratedInstanceId", elasticAcceleratedInstanceId);
@@ -79,7 +82,10 @@ public class DetachEaiRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

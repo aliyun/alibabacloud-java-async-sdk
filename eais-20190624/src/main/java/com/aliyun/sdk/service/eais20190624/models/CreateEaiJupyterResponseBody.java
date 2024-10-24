@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEaiJupyterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEaiJupyterResponseBody</p>
  */
 public class CreateEaiJupyterResponseBody extends TeaModel {
-    @NameInMap("ElasticAcceleratedInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ElasticAcceleratedInstanceId")
     private String elasticAcceleratedInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateEaiJupyterResponseBody(Builder builder) {

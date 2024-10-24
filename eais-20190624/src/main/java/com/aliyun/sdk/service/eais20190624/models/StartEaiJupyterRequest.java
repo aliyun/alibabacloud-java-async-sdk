@@ -7,24 +7,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link StopEaisEiRequest} extends {@link RequestModel}
+ * {@link StartEaiJupyterRequest} extends {@link RequestModel}
  *
- * <p>StopEaisEiRequest</p>
+ * <p>StartEaiJupyterRequest</p>
  */
-public class StopEaisEiRequest extends Request {
+public class StartEaiJupyterRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EiInstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String eiInstanceId;
+    private String instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private StopEaisEiRequest(Builder builder) {
+    private StartEaiJupyterRequest(Builder builder) {
         super(builder);
-        this.eiInstanceId = builder.eiInstanceId;
+        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
     }
 
@@ -32,7 +32,7 @@ public class StopEaisEiRequest extends Request {
         return new Builder();
     }
 
-    public static StopEaisEiRequest create() {
+    public static StartEaiJupyterRequest create() {
         return builder().build();
     }
 
@@ -42,10 +42,10 @@ public class StopEaisEiRequest extends Request {
     }
 
     /**
-     * @return eiInstanceId
+     * @return instanceId
      */
-    public String getEiInstanceId() {
-        return this.eiInstanceId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -55,17 +55,17 @@ public class StopEaisEiRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<StopEaisEiRequest, Builder> {
-        private String eiInstanceId; 
+    public static final class Builder extends Request.Builder<StartEaiJupyterRequest, Builder> {
+        private String instanceId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(StopEaisEiRequest request) {
+        private Builder(StartEaiJupyterRequest request) {
             super(request);
-            this.eiInstanceId = request.eiInstanceId;
+            this.instanceId = request.instanceId;
             this.regionId = request.regionId;
         } 
 
@@ -73,11 +73,11 @@ public class StopEaisEiRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>eais-hzu00xufs1c8j5nn****</p>
+         * <p>eais-hze3x2gv9wimdj0k****</p>
          */
-        public Builder eiInstanceId(String eiInstanceId) {
-            this.putQueryParameter("EiInstanceId", eiInstanceId);
-            this.eiInstanceId = eiInstanceId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -94,8 +94,8 @@ public class StopEaisEiRequest extends Request {
         }
 
         @Override
-        public StopEaisEiRequest build() {
-            return new StopEaisEiRequest(this);
+        public StartEaiJupyterRequest build() {
+            return new StartEaiJupyterRequest(this);
         } 
 
     } 

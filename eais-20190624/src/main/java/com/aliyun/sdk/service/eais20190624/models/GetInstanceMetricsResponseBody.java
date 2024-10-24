@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceMetricsResponseBody</p>
  */
 public class GetInstanceMetricsResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("PodMetrics")
+    @com.aliyun.core.annotation.NameInMap("PodMetrics")
     private java.util.List < PodMetrics> podMetrics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceMetricsResponseBody(Builder builder) {
@@ -91,11 +91,17 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Metrics(Builder builder) {
@@ -152,11 +158,17 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceMetricsResponseBody</p>
+     */
     public static class PodMetrics extends TeaModel {
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private java.util.List < Metrics> metrics;
 
-        @NameInMap("PodId")
+        @com.aliyun.core.annotation.NameInMap("PodId")
         private String podId;
 
         private PodMetrics(Builder builder) {
@@ -199,7 +211,10 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Pod ID。
+             * <p>Pod ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eais-hznzre6ffmz9num4****-579b587ddf-9txr6</p>
              */
             public Builder podId(String podId) {
                 this.podId = podId;

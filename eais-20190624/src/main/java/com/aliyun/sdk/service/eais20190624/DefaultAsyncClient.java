@@ -91,6 +91,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AttachEai  AttachEaiRequest
+     * @return AttachEaiResponse
+     */
     @Override
     public CompletableFuture<AttachEaiResponse> attachEai(AttachEaiRequest request) {
         try {
@@ -105,6 +109,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachEaisEi  AttachEaisEiRequest
+     * @return AttachEaisEiResponse
+     */
     @Override
     public CompletableFuture<AttachEaisEiResponse> attachEaisEi(AttachEaisEiRequest request) {
         try {
@@ -119,6 +127,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -133,6 +145,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEai  CreateEaiRequest
+     * @return CreateEaiResponse
+     */
     @Override
     public CompletableFuture<CreateEaiResponse> createEai(CreateEaiRequest request) {
         try {
@@ -148,23 +164,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @param request the request parameters of CreateEaiEci  CreateEaiEciRequest
+     * @return CreateEaiEciResponse
      */
-    @Override
-    public CompletableFuture<CreateEaiAllResponse> createEaiAll(CreateEaiAllRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateEaiAll").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEaiAllResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateEaiAllResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     @Override
     public CompletableFuture<CreateEaiEciResponse> createEaiEci(CreateEaiEciRequest request) {
         try {
@@ -179,6 +181,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEaiEcs  CreateEaiEcsRequest
+     * @return CreateEaiEcsResponse
+     */
     @Override
     public CompletableFuture<CreateEaiEcsResponse> createEaiEcs(CreateEaiEcsRequest request) {
         try {
@@ -193,6 +199,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEaiJupyter  CreateEaiJupyterRequest
+     * @return CreateEaiJupyterResponse
+     */
     @Override
     public CompletableFuture<CreateEaiJupyterResponse> createEaiJupyter(CreateEaiJupyterRequest request) {
         try {
@@ -207,6 +217,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEaisEi  CreateEaisEiRequest
+     * @return CreateEaisEiResponse
+     */
     @Override
     public CompletableFuture<CreateEaisEiResponse> createEaisEi(CreateEaisEiRequest request) {
         try {
@@ -221,6 +235,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEai  DeleteEaiRequest
+     * @return DeleteEaiResponse
+     */
     @Override
     public CompletableFuture<DeleteEaiResponse> deleteEai(DeleteEaiRequest request) {
         try {
@@ -235,6 +253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEaiAll  DeleteEaiAllRequest
+     * @return DeleteEaiAllResponse
+     */
     @Override
     public CompletableFuture<DeleteEaiAllResponse> deleteEaiAll(DeleteEaiAllRequest request) {
         try {
@@ -249,6 +271,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEaisEi  DeleteEaisEiRequest
+     * @return DeleteEaisEiResponse
+     */
     @Override
     public CompletableFuture<DeleteEaisEiResponse> deleteEaisEi(DeleteEaisEiRequest request) {
         try {
@@ -263,6 +289,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEais  DescribeEaisRequest
+     * @return DescribeEaisResponse
+     */
     @Override
     public CompletableFuture<DescribeEaisResponse> describeEais(DescribeEaisRequest request) {
         try {
@@ -277,6 +307,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -291,6 +325,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachEai  DetachEaiRequest
+     * @return DetachEaiResponse
+     */
     @Override
     public CompletableFuture<DetachEaiResponse> detachEai(DetachEaiRequest request) {
         try {
@@ -305,6 +343,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachEaisEi  DetachEaisEiRequest
+     * @return DetachEaisEiResponse
+     */
     @Override
     public CompletableFuture<DetachEaisEiResponse> detachEaisEi(DetachEaisEiRequest request) {
         try {
@@ -319,6 +361,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceMetrics  GetInstanceMetricsRequest
+     * @return GetInstanceMetricsResponse
+     */
     @Override
     public CompletableFuture<GetInstanceMetricsResponse> getInstanceMetrics(GetInstanceMetricsRequest request) {
         try {
@@ -333,6 +379,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StartEaiJupyter  StartEaiJupyterRequest
+     * @return StartEaiJupyterResponse
+     */
+    @Override
+    public CompletableFuture<StartEaiJupyterResponse> startEaiJupyter(StartEaiJupyterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartEaiJupyter").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartEaiJupyterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartEaiJupyterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StartEaisEi  StartEaisEiRequest
+     * @return StartEaisEiResponse
+     */
     @Override
     public CompletableFuture<StartEaisEiResponse> startEaisEi(StartEaisEiRequest request) {
         try {
@@ -347,6 +433,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopEaiJupyter  StopEaiJupyterRequest
+     * @return StopEaiJupyterResponse
+     */
+    @Override
+    public CompletableFuture<StopEaiJupyterResponse> stopEaiJupyter(StopEaiJupyterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopEaiJupyter").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopEaiJupyterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopEaiJupyterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopEaisEi  StopEaisEiRequest
+     * @return StopEaisEiResponse
+     */
     @Override
     public CompletableFuture<StopEaisEiResponse> stopEaisEi(StopEaisEiRequest request) {
         try {
@@ -356,6 +464,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopEaisEiResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UntagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UntagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UntagResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
