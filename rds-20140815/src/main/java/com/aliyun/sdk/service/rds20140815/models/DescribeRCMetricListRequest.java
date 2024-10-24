@@ -219,7 +219,7 @@ public class DescribeRCMetricListRequest extends Request {
         }
 
         /**
-         * <p>The metric that you want to use.</p>
+         * <p>The metric that you want to use. For more information, see <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">CloudMonitor metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

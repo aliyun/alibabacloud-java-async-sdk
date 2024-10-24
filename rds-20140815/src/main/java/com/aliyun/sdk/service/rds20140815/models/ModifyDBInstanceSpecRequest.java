@@ -83,6 +83,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private String payType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceClass")
+    private String readOnlyDBInstanceClass;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -145,6 +149,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
+        this.readOnlyDBInstanceClass = builder.readOnlyDBInstanceClass;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -291,6 +296,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return readOnlyDBInstanceClass
+     */
+    public String getReadOnlyDBInstanceClass() {
+        return this.readOnlyDBInstanceClass;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -385,6 +397,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String payType; 
+        private String readOnlyDBInstanceClass; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -420,6 +433,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
+            this.readOnlyDBInstanceClass = request.readOnlyDBInstanceClass;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -720,6 +734,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
             this.payType = payType;
+            return this;
+        }
+
+        /**
+         * ReadOnlyDBInstanceClass.
+         */
+        public Builder readOnlyDBInstanceClass(String readOnlyDBInstanceClass) {
+            this.putQueryParameter("ReadOnlyDBInstanceClass", readOnlyDBInstanceClass);
+            this.readOnlyDBInstanceClass = readOnlyDBInstanceClass;
             return this;
         }
 

@@ -30,6 +30,10 @@ public class RunRCInstancesRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateMode")
+    private String createMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
     private java.util.List < DataDisk> dataDisk;
 
@@ -44,6 +48,10 @@ public class RunRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
+    private String hostName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
@@ -96,6 +104,10 @@ public class RunRCInstancesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
     private String securityEnhancementStrategy;
 
@@ -106,6 +118,10 @@ public class RunRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -122,10 +138,12 @@ public class RunRCInstancesRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.clientToken = builder.clientToken;
+        this.createMode = builder.createMode;
         this.dataDisk = builder.dataDisk;
         this.deploymentSetId = builder.deploymentSetId;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
+        this.hostName = builder.hostName;
         this.imageId = builder.imageId;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceName = builder.instanceName;
@@ -138,9 +156,11 @@ public class RunRCInstancesRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
         this.systemDisk = builder.systemDisk;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
     }
@@ -187,6 +207,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return createMode
+     */
+    public String getCreateMode() {
+        return this.createMode;
+    }
+
+    /**
      * @return dataDisk
      */
     public java.util.List < DataDisk> getDataDisk() {
@@ -212,6 +239,13 @@ public class RunRCInstancesRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return hostName
+     */
+    public String getHostName() {
+        return this.hostName;
     }
 
     /**
@@ -299,6 +333,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return securityEnhancementStrategy
      */
     public String getSecurityEnhancementStrategy() {
@@ -320,6 +361,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -338,10 +386,12 @@ public class RunRCInstancesRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String clientToken; 
+        private String createMode; 
         private java.util.List < DataDisk> dataDisk; 
         private String deploymentSetId; 
         private String description; 
         private Boolean dryRun; 
+        private String hostName; 
         private String imageId; 
         private String instanceChargeType; 
         private String instanceName; 
@@ -354,9 +404,11 @@ public class RunRCInstancesRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String regionId; 
+        private String resourceGroupId; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
         private SystemDisk systemDisk; 
+        private java.util.List < Tag> tag; 
         private String vSwitchId; 
         private String zoneId; 
 
@@ -370,10 +422,12 @@ public class RunRCInstancesRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.clientToken = request.clientToken;
+            this.createMode = request.createMode;
             this.dataDisk = request.dataDisk;
             this.deploymentSetId = request.deploymentSetId;
             this.description = request.description;
             this.dryRun = request.dryRun;
+            this.hostName = request.hostName;
             this.imageId = request.imageId;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceName = request.instanceName;
@@ -386,9 +440,11 @@ public class RunRCInstancesRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
             this.systemDisk = request.systemDisk;
+            this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
@@ -455,6 +511,15 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
+         * CreateMode.
+         */
+        public Builder createMode(String createMode) {
+            this.putQueryParameter("CreateMode", createMode);
+            this.createMode = createMode;
+            return this;
+        }
+
+        /**
          * <p>The information about the data disks.</p>
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
@@ -501,6 +566,15 @@ public class RunRCInstancesRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * HostName.
+         */
+        public Builder hostName(String hostName) {
+            this.putQueryParameter("HostName", hostName);
+            this.hostName = hostName;
             return this;
         }
 
@@ -655,6 +729,15 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * <p>The reserved parameter. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
@@ -688,6 +771,15 @@ public class RunRCInstancesRequest extends Request {
             String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
             this.putQueryParameter("SystemDisk", systemDiskShrink);
             this.systemDisk = systemDisk;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -943,6 +1035,73 @@ public class RunRCInstancesRequest extends Request {
 
             public SystemDisk build() {
                 return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunRCInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunRCInstancesRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

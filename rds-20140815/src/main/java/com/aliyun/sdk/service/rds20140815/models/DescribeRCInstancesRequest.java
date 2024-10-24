@@ -29,6 +29,10 @@ public class DescribeRCInstancesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private String tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
@@ -38,6 +42,7 @@ public class DescribeRCInstancesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
 
@@ -83,6 +88,13 @@ public class DescribeRCInstancesRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public String getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -94,6 +106,7 @@ public class DescribeRCInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String tag; 
         private String vpcId; 
 
         private Builder() {
@@ -106,6 +119,7 @@ public class DescribeRCInstancesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
 
@@ -158,6 +172,15 @@ public class DescribeRCInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(String tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 

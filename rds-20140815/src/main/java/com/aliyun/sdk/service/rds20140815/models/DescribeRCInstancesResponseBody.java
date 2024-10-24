@@ -153,6 +153,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
+        @com.aliyun.core.annotation.NameInMap("CreateMode")
+        private String createMode;
+
         @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
@@ -168,6 +171,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+        private String instanceChargeType;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -182,11 +188,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         private RCInstances(Builder builder) {
             this.clusterName = builder.clusterName;
+            this.createMode = builder.createMode;
             this.dbType = builder.dbType;
             this.description = builder.description;
             this.gmtCreated = builder.gmtCreated;
             this.hostIp = builder.hostIp;
             this.hostName = builder.hostName;
+            this.instanceChargeType = builder.instanceChargeType;
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
             this.status = builder.status;
@@ -206,6 +214,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         public String getClusterName() {
             return this.clusterName;
+        }
+
+        /**
+         * @return createMode
+         */
+        public String getCreateMode() {
+            return this.createMode;
         }
 
         /**
@@ -244,6 +259,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceChargeType
+         */
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -273,11 +295,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String clusterName; 
+            private String createMode; 
             private String dbType; 
             private String description; 
             private String gmtCreated; 
             private String hostIp; 
             private String hostName; 
+            private String instanceChargeType; 
             private String instanceId; 
             private String regionId; 
             private String status; 
@@ -291,6 +315,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * CreateMode.
+             */
+            public Builder createMode(String createMode) {
+                this.createMode = createMode;
                 return this;
             }
 
@@ -346,6 +378,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
+                return this;
+            }
+
+            /**
+             * InstanceChargeType.
+             */
+            public Builder instanceChargeType(String instanceChargeType) {
+                this.instanceChargeType = instanceChargeType;
                 return this;
             }
 

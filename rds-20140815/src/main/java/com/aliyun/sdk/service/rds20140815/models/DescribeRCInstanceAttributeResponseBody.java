@@ -63,6 +63,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InnerIpAddress")
     private InnerIpAddress innerIpAddress;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+    private String instanceChargeType;
+
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -105,6 +108,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
     private SecurityGroupIds securityGroupIds;
 
@@ -144,6 +150,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.hostType = builder.hostType;
         this.imageId = builder.imageId;
         this.innerIpAddress = builder.innerIpAddress;
+        this.instanceChargeType = builder.instanceChargeType;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.instanceNetworkType = builder.instanceNetworkType;
@@ -158,6 +165,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.publicIpAddress = builder.publicIpAddress;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupIds = builder.securityGroupIds;
         this.serialNumber = builder.serialNumber;
         this.status = builder.status;
@@ -295,6 +303,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return instanceChargeType
+     */
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -393,6 +408,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return securityGroupIds
      */
     public SecurityGroupIds getSecurityGroupIds() {
@@ -459,6 +481,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private String hostType; 
         private String imageId; 
         private InnerIpAddress innerIpAddress; 
+        private String instanceChargeType; 
         private String instanceId; 
         private String instanceName; 
         private String instanceNetworkType; 
@@ -473,6 +496,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private PublicIpAddress publicIpAddress; 
         private String regionId; 
         private String requestId; 
+        private String resourceGroupId; 
         private SecurityGroupIds securityGroupIds; 
         private String serialNumber; 
         private String status; 
@@ -668,6 +692,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * InstanceChargeType.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
@@ -827,6 +859,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
