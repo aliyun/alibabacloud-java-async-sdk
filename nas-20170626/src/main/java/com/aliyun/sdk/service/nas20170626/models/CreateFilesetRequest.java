@@ -36,8 +36,12 @@ public class CreateFilesetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileSystemPath")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 2)
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemPath;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quota")
+    private Quota quota;
 
     private CreateFilesetRequest(Builder builder) {
         super(builder);
@@ -47,6 +51,7 @@ public class CreateFilesetRequest extends Request {
         this.dryRun = builder.dryRun;
         this.fileSystemId = builder.fileSystemId;
         this.fileSystemPath = builder.fileSystemPath;
+        this.quota = builder.quota;
     }
 
     public static Builder builder() {
@@ -104,6 +109,13 @@ public class CreateFilesetRequest extends Request {
         return this.fileSystemPath;
     }
 
+    /**
+     * @return quota
+     */
+    public Quota getQuota() {
+        return this.quota;
+    }
+
     public static final class Builder extends Request.Builder<CreateFilesetRequest, Builder> {
         private String clientToken; 
         private Boolean deletionProtection; 
@@ -111,6 +123,7 @@ public class CreateFilesetRequest extends Request {
         private Boolean dryRun; 
         private String fileSystemId; 
         private String fileSystemPath; 
+        private Quota quota; 
 
         private Builder() {
             super();
@@ -124,6 +137,7 @@ public class CreateFilesetRequest extends Request {
             this.dryRun = request.dryRun;
             this.fileSystemId = request.fileSystemId;
             this.fileSystemPath = request.fileSystemPath;
+            this.quota = request.quota;
         } 
 
         /**
@@ -227,6 +241,15 @@ public class CreateFilesetRequest extends Request {
             return this;
         }
 
+        /**
+         * Quota.
+         */
+        public Builder quota(Quota quota) {
+            this.putQueryParameter("Quota", quota);
+            this.quota = quota;
+            return this;
+        }
+
         @Override
         public CreateFilesetRequest build() {
             return new CreateFilesetRequest(this);
@@ -234,4 +257,71 @@ public class CreateFilesetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFilesetRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFilesetRequest</p>
+     */
+    public static class Quota extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileCountLimit")
+        private Long fileCountLimit;
+
+        @com.aliyun.core.annotation.NameInMap("SizeLimit")
+        private Long sizeLimit;
+
+        private Quota(Builder builder) {
+            this.fileCountLimit = builder.fileCountLimit;
+            this.sizeLimit = builder.sizeLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Quota create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileCountLimit
+         */
+        public Long getFileCountLimit() {
+            return this.fileCountLimit;
+        }
+
+        /**
+         * @return sizeLimit
+         */
+        public Long getSizeLimit() {
+            return this.sizeLimit;
+        }
+
+        public static final class Builder {
+            private Long fileCountLimit; 
+            private Long sizeLimit; 
+
+            /**
+             * FileCountLimit.
+             */
+            public Builder fileCountLimit(Long fileCountLimit) {
+                this.fileCountLimit = fileCountLimit;
+                return this;
+            }
+
+            /**
+             * SizeLimit.
+             */
+            public Builder sizeLimit(Long sizeLimit) {
+                this.sizeLimit = sizeLimit;
+                return this;
+            }
+
+            public Quota build() {
+                return new Quota(this);
+            } 
+
+        } 
+
+    }
 }

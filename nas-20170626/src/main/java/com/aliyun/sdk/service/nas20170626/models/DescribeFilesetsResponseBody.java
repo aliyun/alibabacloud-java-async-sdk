@@ -16,6 +16,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
     private Entries entries;
 
     @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @Deprecated
     private String fileSystemId;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -126,6 +127,73 @@ public class DescribeFilesetsResponseBody extends TeaModel {
      *
      * <p>DescribeFilesetsResponseBody</p>
      */
+    public static class Quota extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileCountLimit")
+        private Long fileCountLimit;
+
+        @com.aliyun.core.annotation.NameInMap("SizeLimit")
+        private Long sizeLimit;
+
+        private Quota(Builder builder) {
+            this.fileCountLimit = builder.fileCountLimit;
+            this.sizeLimit = builder.sizeLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Quota create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileCountLimit
+         */
+        public Long getFileCountLimit() {
+            return this.fileCountLimit;
+        }
+
+        /**
+         * @return sizeLimit
+         */
+        public Long getSizeLimit() {
+            return this.sizeLimit;
+        }
+
+        public static final class Builder {
+            private Long fileCountLimit; 
+            private Long sizeLimit; 
+
+            /**
+             * FileCountLimit.
+             */
+            public Builder fileCountLimit(Long fileCountLimit) {
+                this.fileCountLimit = fileCountLimit;
+                return this;
+            }
+
+            /**
+             * SizeLimit.
+             */
+            public Builder sizeLimit(Long sizeLimit) {
+                this.sizeLimit = sizeLimit;
+                return this;
+            }
+
+            public Quota build() {
+                return new Quota(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFilesetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFilesetsResponseBody</p>
+     */
     public static class Entrie extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -136,11 +204,23 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("FileCountUsage")
+        private Long fileCountUsage;
+
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
+        private String fileSystemId;
+
         @com.aliyun.core.annotation.NameInMap("FileSystemPath")
         private String fileSystemPath;
 
         @com.aliyun.core.annotation.NameInMap("FsetId")
         private String fsetId;
+
+        @com.aliyun.core.annotation.NameInMap("Quota")
+        private Quota quota;
+
+        @com.aliyun.core.annotation.NameInMap("SpaceUsage")
+        private Long spaceUsage;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -152,8 +232,12 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.deletionProtection = builder.deletionProtection;
             this.description = builder.description;
+            this.fileCountUsage = builder.fileCountUsage;
+            this.fileSystemId = builder.fileSystemId;
             this.fileSystemPath = builder.fileSystemPath;
             this.fsetId = builder.fsetId;
+            this.quota = builder.quota;
+            this.spaceUsage = builder.spaceUsage;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
         }
@@ -188,6 +272,20 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileCountUsage
+         */
+        public Long getFileCountUsage() {
+            return this.fileCountUsage;
+        }
+
+        /**
+         * @return fileSystemId
+         */
+        public String getFileSystemId() {
+            return this.fileSystemId;
+        }
+
+        /**
          * @return fileSystemPath
          */
         public String getFileSystemPath() {
@@ -199,6 +297,20 @@ public class DescribeFilesetsResponseBody extends TeaModel {
          */
         public String getFsetId() {
             return this.fsetId;
+        }
+
+        /**
+         * @return quota
+         */
+        public Quota getQuota() {
+            return this.quota;
+        }
+
+        /**
+         * @return spaceUsage
+         */
+        public Long getSpaceUsage() {
+            return this.spaceUsage;
         }
 
         /**
@@ -219,8 +331,12 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             private String createTime; 
             private Boolean deletionProtection; 
             private String description; 
+            private Long fileCountUsage; 
+            private String fileSystemId; 
             private String fileSystemPath; 
             private String fsetId; 
+            private Quota quota; 
+            private Long spaceUsage; 
             private String status; 
             private String updateTime; 
 
@@ -266,6 +382,25 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
+             * FileCountUsage.
+             */
+            public Builder fileCountUsage(Long fileCountUsage) {
+                this.fileCountUsage = fileCountUsage;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpfs-099394bd928c****</p>
+             */
+            public Builder fileSystemId(String fileSystemId) {
+                this.fileSystemId = fileSystemId;
+                return this;
+            }
+
+            /**
              * <p>The fileset path.</p>
              * 
              * <strong>example:</strong>
@@ -284,6 +419,22 @@ public class DescribeFilesetsResponseBody extends TeaModel {
              */
             public Builder fsetId(String fsetId) {
                 this.fsetId = fsetId;
+                return this;
+            }
+
+            /**
+             * Quota.
+             */
+            public Builder quota(Quota quota) {
+                this.quota = quota;
+                return this;
+            }
+
+            /**
+             * SpaceUsage.
+             */
+            public Builder spaceUsage(Long spaceUsage) {
+                this.spaceUsage = spaceUsage;
                 return this;
             }
 

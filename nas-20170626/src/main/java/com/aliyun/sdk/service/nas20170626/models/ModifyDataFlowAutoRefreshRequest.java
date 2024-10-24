@@ -176,7 +176,7 @@ public class ModifyDataFlowAutoRefreshRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dfid-194433a5be31****</p>
+         * <p>df-194433a5be31****</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);

@@ -119,7 +119,7 @@ public class DeleteDataFlowRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dfid-123456</p>
+         * <p>df-194433a5be31****</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);
@@ -147,10 +147,17 @@ public class DeleteDataFlowRequest extends Request {
 
         /**
          * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
+         * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015****.</li>
+         * </ul>
+         * <blockquote>
+         * <p> CPFS is not supported on the international site.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpfs-12345678</p>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
