@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainTopAttackListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainTopAttackListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The peak QPS of the website.
+         * <p>The peak QPS of the website.</p>
          */
         public Builder attackList(java.util.List < AttackList> attackList) {
             this.attackList = attackList;
@@ -57,7 +58,10 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainTopAttackListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainTopAttackListResponseBody</p>
+     */
     public static class AttackList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attack")
         private Long attack;
@@ -121,7 +131,10 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             private String domain; 
 
             /**
-             * The attack QPS. Unit: QPS
+             * <p>The attack QPS. Unit: QPS</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attack(Long attack) {
                 this.attack = attack;
@@ -129,7 +142,10 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of all QPS, which includes normal and attack QPS. Unit: QPS.
+             * <p>The number of all QPS, which includes normal and attack QPS. Unit: QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>294</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -137,7 +153,10 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;

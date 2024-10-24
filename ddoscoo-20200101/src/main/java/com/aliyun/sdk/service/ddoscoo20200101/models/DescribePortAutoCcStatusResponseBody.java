@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortAutoCcStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortAutoCcStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the configurations of the Intelligent Protection policy.
+         * <p>An array that consists of the configurations of the Intelligent Protection policy.</p>
          */
         public Builder portAutoCcStatus(java.util.List < PortAutoCcStatus> portAutoCcStatus) {
             this.portAutoCcStatus = portAutoCcStatus;
@@ -57,7 +58,10 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC3C6403-F248-4125-B2C9-8733ED94EA85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortAutoCcStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortAutoCcStatusResponseBody</p>
+     */
     public static class PortAutoCcStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
@@ -133,12 +143,15 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             private String webSwitch; 
 
             /**
-             * The mode of the Intelligent Protection policy. Valid values:
-             * <p>
+             * <p>The mode of the Intelligent Protection policy. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>loose</strong></li>
+             * <li><strong>strict</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **loose**
-             * *   **strict**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -146,11 +159,14 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Intelligent Protection policy. Valid values:
-             * <p>
+             * <p>The status of the Intelligent Protection policy. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled</li>
+             * <li><strong>off</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder _switch(String _switch) {
                 this._switch = _switch;
@@ -158,12 +174,15 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The protection mode for ports 80 and 443. Valid values:
-             * <p>
+             * <p>The protection mode for ports 80 and 443. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>loose</strong></li>
+             * <li><strong>strict</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **loose**
-             * *   **strict**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder webMode(String webMode) {
                 this.webMode = webMode;
@@ -171,11 +190,14 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Intelligent Protection policy for ports 80 and 443. Valid values:
-             * <p>
+             * <p>The status of the Intelligent Protection policy for ports 80 and 443. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled</li>
+             * <li><strong>off</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder webSwitch(String webSwitch) {
                 this.webSwitch = webSwitch;

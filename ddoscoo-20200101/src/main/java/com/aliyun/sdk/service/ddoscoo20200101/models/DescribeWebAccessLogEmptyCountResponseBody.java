@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebAccessLogEmptyCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebAccessLogEmptyCountResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeWebAccessLogEmptyCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The remaining quota that you can clear the Logstore.
+         * <p>The remaining quota that you can clear the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder availableCount(Integer availableCount) {
             this.availableCount = availableCount;
@@ -57,7 +61,10 @@ public class DescribeWebAccessLogEmptyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

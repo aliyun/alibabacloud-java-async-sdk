@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWebRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateWebRuleRequest</p>
@@ -163,14 +164,17 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * The ID of the associated defense. This parameter applies to scenarios in which other cloud services, such as Object Storage Service (OSS), are integrated with Anti-DDoS Pro or Anti-DDoS Premium.
-         * <p>
+         * <p>The ID of the associated defense. This parameter applies to scenarios in which other cloud services, such as Object Storage Service (OSS), are integrated with Anti-DDoS Pro or Anti-DDoS Premium.</p>
+         * <blockquote>
+         * <p>This parameter is in internal preview. Do not use this parameter.</p>
+         * </blockquote>
+         * <p>For example, if you integrate OSS with Anti-DDoS Pro or Anti-DDoS Premium, Anti-DDoS Pro or Anti-DDoS Premium allocates an IP address pool for the OSS production account. Each IP address corresponds to a unique defense ID. A defense ID is a CNAME, which is automatically resolved to the IP address of the required Anti-DDoS Pro or Anti-DDoS Premium instance. A defense ID can be resolved to the same IP address to facilitate scheduling.</p>
+         * <blockquote>
+         * <p>You can specify only one of the following parameters: <strong>InstanceIds</strong> and <strong>DefenseId</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is in internal preview. Do not use this parameter.
-         * 
-         * For example, if you integrate OSS with Anti-DDoS Pro or Anti-DDoS Premium, Anti-DDoS Pro or Anti-DDoS Premium allocates an IP address pool for the OSS production account. Each IP address corresponds to a unique defense ID. A defense ID is a CNAME, which is automatically resolved to the IP address of the required Anti-DDoS Pro or Anti-DDoS Premium instance. A defense ID can be resolved to the same IP address to facilitate scheduling.
-         * 
-         * > You can specify only one of the following parameters: **InstanceIds** and **DefenseId**.
+         * <strong>example:</strong>
+         * <p>testid</p>
          */
         public Builder defenseId(String defenseId) {
             this.putQueryParameter("DefenseId", defenseId);
@@ -179,7 +183,11 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * The domain name of the website that you want to add to the instance.
+         * <p>The domain name of the website that you want to add to the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -188,20 +196,21 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * The advanced HTTPS settings. This parameter takes effect only when the value of the **ProxyType** parameter includes **https**. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
-         * <p>
+         * <p>The advanced HTTPS settings. This parameter takes effect only when the value of the <strong>ProxyType</strong> parameter includes <strong>https</strong>. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>Http2https</strong>: specifies whether to turn on Enforce HTTPS Routing. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enforce HTTPS Routing is turned off. The value 1 indicates that Enforce HTTPS Routing is turned on. The default value is 0.</p>
+         * <p>If your website supports both HTTP and HTTPS, this feature meets your business requirements. If you enable this feature, all HTTP requests to access the website are redirected to HTTPS requests on the standard port 443.</p>
+         * </li>
+         * <li><p><strong>Https2http</strong>: specifies whether to turn on Enable HTTP. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP is turned off. The value 1 indicates that Enable HTTP is turned on. The default value is 0.</p>
+         * <p>If your website does not support HTTPS, this feature meets your business requirements If this feature is enabled, all HTTPS requests are redirected to HTTP requests and forwarded to origin servers. This feature can redirect WebSockets requests to WebSocket requests. Requests are redirected over the standard port 80.</p>
+         * </li>
+         * <li><p><strong>Http2</strong>: specifies whether to turn on Enable HTTP/2. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on. The default value is 0.</p>
+         * <p>After you turn on Enable HTTP/2, the protocol type is HTTP/2.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **Http2https**: specifies whether to turn on Enforce HTTPS Routing. This field is optional and must be an integer. Valid values: **0** and **1**. The value 0 indicates that Enforce HTTPS Routing is turned off. The value 1 indicates that Enforce HTTPS Routing is turned on. The default value is 0.
-         * 
-         *     If your website supports both HTTP and HTTPS, this feature meets your business requirements. If you enable this feature, all HTTP requests to access the website are redirected to HTTPS requests on the standard port 443.
-         * 
-         * *   **Https2http**: specifies whether to turn on Enable HTTP. This field is optional and must be an integer. Valid values: **0** and **1**. The value 0 indicates that Enable HTTP is turned off. The value 1 indicates that Enable HTTP is turned on. The default value is 0.
-         * 
-         *     If your website does not support HTTPS, this feature meets your business requirements If this feature is enabled, all HTTPS requests are redirected to HTTP requests and forwarded to origin servers. This feature can redirect WebSockets requests to WebSocket requests. Requests are redirected over the standard port 80.
-         * 
-         * *   **Http2**: specifies whether to turn on Enable HTTP/2. This field is optional and must be an integer. Valid values: **0** and **1**. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on. The default value is 0.
-         * 
-         *     After you turn on Enable HTTP/2, the protocol type is HTTP/2.
+         * <strong>example:</strong>
+         * <p>{&quot;Http2&quot;:1,&quot;Http2https&quot;:1,&quot;Https2http&quot;:1}</p>
          */
         public Builder httpsExt(String httpsExt) {
             this.putQueryParameter("HttpsExt", httpsExt);
@@ -210,7 +219,10 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * An array consisting of the IDs of instances that you want to associate.
+         * <p>An array consisting of the IDs of instances that you want to associate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -219,10 +231,11 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
          * 
-         * For more information about resource groups, see [Create a resource group](~~94485~~).
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -231,11 +244,15 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * The address type of the origin server. Valid values:
-         * <p>
+         * <p>The address type of the origin server. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: IP address</li>
+         * <li><strong>1</strong>: domain name The domain name of the origin server is returned if you deploy proxies, such as Web Application Firewall (WAF), between the origin server and the instance. In this case, the address of the proxy, such as the CNAME provided by WAF, is returned.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: IP address
-         * *   **1**: domain name The domain name of the origin server is returned if you deploy proxies, such as Web Application Firewall (WAF), between the origin server and the instance. In this case, the address of the proxy, such as the CNAME provided by WAF, is returned.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder rsType(Integer rsType) {
             this.putQueryParameter("RsType", rsType);
@@ -244,15 +261,21 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * The details of the forwarding rule. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
-         * <p>
+         * <p>The details of the forwarding rule. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>ProxyRules</strong>: the information about the origin server. The information includes the port number and IP address. This field is required and must be a JSON array. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+         * <ul>
+         * <li><strong>ProxyPort</strong>: the port number. This field is required and must be an integer.</li>
+         * <li><strong>RealServers</strong>: the IP address. This field is required and must be a string array.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>ProxyType</strong>: the protocol type. This field is required and must be a string. Valid values: <strong>http</strong>, <strong>https</strong>, <strong>websocket</strong>, and <strong>websockets</strong>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ProxyRules**: the information about the origin server. The information includes the port number and IP address. This field is required and must be a JSON array. Each element in a JSON array is a JSON struct that contains the following fields:
-         * 
-         *     *   **ProxyPort**: the port number. This field is required and must be an integer.
-         *     *   **RealServers**: the IP address. This field is required and must be a string array.
-         * 
-         * *   **ProxyType**: the protocol type. This field is required and must be a string. Valid values: **http**, **https**, **websocket**, and **websockets**.
+         * <strong>example:</strong>
+         * <p>[{&quot;ProxyRules&quot;:[{&quot;ProxyPort&quot;:443,&quot;RealServers&quot;:[&quot;192.1.XX.XX&quot;]}],&quot;ProxyType&quot;:&quot;https&quot;}]</p>
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);

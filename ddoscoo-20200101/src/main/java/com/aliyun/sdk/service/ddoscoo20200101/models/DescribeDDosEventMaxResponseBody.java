@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDosEventMaxResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDDosEventMaxResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The peak of connection flood attacks. Unit: connections per seconds (CPS).
+         * <p>The peak of connection flood attacks. Unit: connections per seconds (CPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1302</p>
          */
         public Builder cps(Long cps) {
             this.cps = cps;
@@ -81,7 +85,10 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         }
 
         /**
-         * The peak of volumetric attacks. Unit: Mbit/s.
+         * <p>The peak of volumetric attacks. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6809</p>
          */
         public Builder mbps(Long mbps) {
             this.mbps = mbps;
@@ -89,7 +96,10 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         }
 
         /**
-         * The peak of resource exhaustion attacks. Unit: queries per second (QPS).
+         * <p>The peak of resource exhaustion attacks. Unit: queries per second (QPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26314</p>
          */
         public Builder qps(Long qps) {
             this.qps = qps;
@@ -97,7 +107,10 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5AE2FC86-C840-41AE-9F1A-3A2747C7C1DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

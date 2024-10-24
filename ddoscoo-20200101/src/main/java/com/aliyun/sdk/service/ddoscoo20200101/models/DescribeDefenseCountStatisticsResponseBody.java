@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseCountStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefenseCountStatisticsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics on the number of advanced mitigation sessions.
+         * <p>The statistics on the number of advanced mitigation sessions.</p>
          */
         public Builder defenseCountStatistics(DefenseCountStatistics defenseCountStatistics) {
             this.defenseCountStatistics = defenseCountStatistics;
@@ -57,7 +58,10 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310A41FD-0990-5610-92E0-A6A55D7C6444</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDefenseCountStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseCountStatisticsResponseBody</p>
+     */
     public static class DefenseCountStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseCountTotalUsageOfCurrentMonth")
         private Integer defenseCountTotalUsageOfCurrentMonth;
@@ -133,7 +143,10 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             private Integer secHighSpeedCountRemain; 
 
             /**
-             * The number of advanced mitigation sessions that are used within the current calendar month.
+             * <p>The number of advanced mitigation sessions that are used within the current calendar month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder defenseCountTotalUsageOfCurrentMonth(Integer defenseCountTotalUsageOfCurrentMonth) {
                 this.defenseCountTotalUsageOfCurrentMonth = defenseCountTotalUsageOfCurrentMonth;
@@ -141,7 +154,10 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available global advanced mitigation sessions for the Insurance mitigation plan.
+             * <p>The number of available global advanced mitigation sessions for the Insurance mitigation plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flowPackCountRemain(Integer flowPackCountRemain) {
                 this.flowPackCountRemain = flowPackCountRemain;
@@ -149,7 +165,10 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of advanced mitigation sessions available for the current calendar month. The advanced mitigation sessions include the advanced mitigation sessions that are provided free of charge and the global advanced mitigation sessions that you purchase.
+             * <p>The maximum number of advanced mitigation sessions available for the current calendar month. The advanced mitigation sessions include the advanced mitigation sessions that are provided free of charge and the global advanced mitigation sessions that you purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxUsableDefenseCountCurrentMonth(Integer maxUsableDefenseCountCurrentMonth) {
                 this.maxUsableDefenseCountCurrentMonth = maxUsableDefenseCountCurrentMonth;
@@ -157,7 +176,10 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available global advanced mitigation sessions for the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan.
+             * <p>The number of available global advanced mitigation sessions for the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder secHighSpeedCountRemain(Integer secHighSpeedCountRemain) {
                 this.secHighSpeedCountRemain = secHighSpeedCountRemain;

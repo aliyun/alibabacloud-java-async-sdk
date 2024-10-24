@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebCacheConfigsRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebCacheConfigsRequest</p>
@@ -91,7 +92,11 @@ public class DescribeWebCacheConfigsRequest extends Request {
         }
 
         /**
-         * An array consisting of domain names for which you want to query the Static Page Caching configurations.
+         * <p>An array consisting of domain names for which you want to query the Static Page Caching configurations.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domains(java.util.List < String > domains) {
             this.putQueryParameter("Domains", domains);
@@ -100,10 +105,11 @@ public class DescribeWebCacheConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

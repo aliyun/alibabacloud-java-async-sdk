@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The details about the instances.
+         * <p>The details about the instances.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -69,7 +70,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A0AF40CC-814A-5A86-AEAA-6F19E88B8A39</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the instances.
+         * <p>The total number of the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -261,7 +274,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637751953000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -269,7 +285,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The overdue status of the instance. The value is fixed as **0**, which indicates that your Alibaba Cloud account does not have overdue payments. The instance supports only the subscription billing method.
+             * <p>The overdue status of the instance. The value is fixed as <strong>0</strong>, which indicates that your Alibaba Cloud account does not have overdue payments. The instance supports only the subscription billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder debtStatus(Integer debtStatus) {
                 this.debtStatus = debtStatus;
@@ -277,13 +296,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The mitigation plan of the instance. Valid values:
-             * <p>
+             * <p>The mitigation plan of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+             * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+             * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
+             * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+             * </ul>
              * 
-             * *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
-             * *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
-             * *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
-             * *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder edition(Integer edition) {
                 this.edition = edition;
@@ -291,11 +313,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic forwarding status of the instance. Valid values:
-             * <p>
+             * <p>The traffic forwarding status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The instance no longer forwards service traffic.</li>
+             * <li><strong>1</strong>: The instance forwards service traffic as expected.</li>
+             * </ul>
              * 
-             * *   **0**: The instance no longer forwards service traffic.
-             * *   **1**: The instance forwards service traffic as expected.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enabled(Integer enabled) {
                 this.enabled = enabled;
@@ -303,7 +328,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640361600000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -311,7 +339,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-7pp2g9ed****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -319,7 +350,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.199.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -327,11 +361,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address-based forwarding mode of the instance. Valid values:
-             * <p>
+             * <p>The IP address-based forwarding mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>fnat</strong>: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</li>
+             * <li><strong>v6tov4</strong>: All requests are forwarded to origin servers that use IPv4 addresses.</li>
+             * </ul>
              * 
-             * *   **fnat**: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.
-             * *   **v6tov4**: All requests are forwarded to origin servers that use IPv4 addresses.
+             * <strong>example:</strong>
+             * <p>fnat</p>
              */
             public Builder ipMode(String ipMode) {
                 this.ipMode = ipMode;
@@ -339,11 +376,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version of the instance. Valid values:
-             * <p>
+             * <p>The IP version of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Ipv4</strong></li>
+             * <li><strong>Ipv6</strong></li>
+             * </ul>
              * 
-             * *   **Ipv4**
-             * *   **Ipv6**
+             * <strong>example:</strong>
+             * <p>Ipv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -351,11 +391,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the metering method of the 95th percentile burstable clean bandwidth is enabled for the instance. Valid values:
-             * <p>
+             * <p>Indicates whether the metering method of the 95th percentile burstable clean bandwidth is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li>0: no</li>
+             * <li>1: yes</li>
+             * </ul>
              * 
-             * *   0: no
-             * *   1: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isFirstOpenBw(Long isFirstOpenBw) {
                 this.isFirstOpenBw = isFirstOpenBw;
@@ -363,11 +406,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the metering method of the 95th percentile burstable QPS is enabled for the instance. Valid values:
-             * <p>
+             * <p>Indicates whether the metering method of the 95th percentile burstable QPS is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li>0: no</li>
+             * <li>1: yes</li>
+             * </ul>
              * 
-             * *   0: no
-             * *   1: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isFirstOpenQps(Long isFirstOpenQps) {
                 this.isFirstOpenQps = isFirstOpenQps;
@@ -375,7 +421,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the instance.
+             * <p>The remarks of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc-test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -383,11 +432,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: normal</li>
+             * <li><strong>2</strong>: expired</li>
+             * </ul>
              * 
-             * *   **1**: normal
-             * *   **2**: expired
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

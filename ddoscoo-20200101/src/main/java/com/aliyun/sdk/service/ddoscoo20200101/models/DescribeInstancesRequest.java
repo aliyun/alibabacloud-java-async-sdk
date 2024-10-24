@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesRequest</p>
@@ -232,13 +233,16 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The mitigation plan of the instance to query. Valid values:
-         * <p>
+         * <p>The mitigation plan of the instance to query. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+         * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+         * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
+         * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+         * </ul>
          * 
-         * *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
-         * *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
-         * *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
-         * *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder edition(Integer edition) {
             this.putQueryParameter("Edition", edition);
@@ -247,11 +251,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The traffic forwarding status of the instance to query. Valid values:
-         * <p>
+         * <p>The traffic forwarding status of the instance to query. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The instance no longer forwards service traffic.</li>
+         * <li><strong>1</strong>: The instance forwards service traffic as expected.</li>
+         * </ul>
          * 
-         * *   **0**: The instance no longer forwards service traffic.
-         * *   **1**: The instance forwards service traffic as expected.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enabled(Integer enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -260,7 +267,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Instances whose expiration time is earlier than the point in time are queried. This value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end of the time range to query. Instances whose expiration time is earlier than the point in time are queried. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640361700000</p>
          */
         public Builder expireEndTime(Long expireEndTime) {
             this.putQueryParameter("ExpireEndTime", expireEndTime);
@@ -269,7 +279,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Instances whose expiration time is later than the point in time are queried. This value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Instances whose expiration time is later than the point in time are queried. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640361500000</p>
          */
         public Builder expireStartTime(Long expireStartTime) {
             this.putQueryParameter("ExpireStartTime", expireStartTime);
@@ -278,7 +291,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the instances to query. You can specify up to 200 instance IDs.
+         * <p>The IDs of the instances to query. You can specify up to 200 instance IDs.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -287,7 +300,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The IP address of the instance to query.
+         * <p>The IP address of the instance to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -296,7 +312,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -305,7 +325,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -314,7 +338,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The remarks of the instance to query. Fuzzy match is supported.
+         * <p>The remarks of the instance to query. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc-test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -323,10 +350,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -335,7 +363,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The states of the instances to query. You can specify up to two states.
+         * <p>The states of the instances to query. You can specify up to two states.</p>
          */
         public Builder status(java.util.List < Integer > status) {
             this.putQueryParameter("Status", status);
@@ -344,7 +372,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The tags that are added to the instances to query.
+         * <p>The tags that are added to the instances to query.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -359,6 +387,12 @@ public class DescribeInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -398,13 +432,17 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is added to the instance to query. You can specify up to 200 tag keys. When you specify tags, take note of the following rules:
-             * <p>
+             * <p>The key of the tag that is added to the instance to query. You can specify up to 200 tag keys. When you specify tags, take note of the following rules:</p>
+             * <ul>
+             * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated with a comma (,).</li>
+             * <li>Separate multiple tags with commas (,).</li>
+             * </ul>
+             * <blockquote>
+             * <p> The tag key (<strong>Key</strong>) and tag value (<strong>Value</strong>) must be specified in pairs.</p>
+             * </blockquote>
              * 
-             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated with a comma (,).
-             * *   Separate multiple tags with commas (,).
-             * 
-             * >  The tag key (**Key**) and tag value (**Value**) must be specified in pairs.
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -412,13 +450,17 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The value of the tag that is added to the instance to query. You can specify up to 200 tag values. When you specify tags, take note of the following rules:
-             * <p>
+             * <p>The value of the tag that is added to the instance to query. You can specify up to 200 tag values. When you specify tags, take note of the following rules:</p>
+             * <ul>
+             * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated with a comma (,).</li>
+             * <li>Separate multiple tags with commas (,).</li>
+             * </ul>
+             * <blockquote>
+             * <p> The tag key (<strong>Key</strong>) and tag value (<strong>Value</strong>) must be specified in pairs.</p>
+             * </blockquote>
              * 
-             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated with a comma (,).
-             * *   Separate multiple tags with commas (,).
-             * 
-             * >  The tag key (**Key**) and tag value (**Value**) must be specified in pairs.
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

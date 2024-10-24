@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDosEventAttackTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDDosEventAttackTypeResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the attack types.
+         * <p>The information about the attack types.</p>
          */
         public Builder attackTypes(java.util.List < AttackTypes> attackTypes) {
             this.attackTypes = attackTypes;
@@ -57,7 +58,10 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F644A6E-40E7-483F-9DBB-CC27E16BB555</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDDosEventAttackTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDDosEventAttackTypeResponseBody</p>
+     */
     public static class AttackTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttackType")
         private String attackType;
@@ -109,50 +119,53 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
             private Long inPkts; 
 
             /**
-             * The type of the attack Valid values:
-             * <p>
+             * <p>The type of the attack Valid values:</p>
+             * <ul>
+             * <li><strong>QOTD-Reflect-Flood</strong>: QOTD reflection attacks</li>
+             * <li><strong>CharGEN-Reflect-Flood</strong>: CHARGEN reflection attacks</li>
+             * <li><strong>DNS-Reflect-Flood</strong>: DNS reflection attacks</li>
+             * <li><strong>TFTP-Reflect-Flood</strong>: TFTP reflection attacks</li>
+             * <li><strong>Portmap-Reflect-Flood</strong>: Portmap reflection attacks</li>
+             * <li><strong>NTP-Reflect-Flood</strong>: NTP reflection attacks</li>
+             * <li><strong>NetBIOS-Reflect-Flood</strong>: NetBIOS reflection attacks</li>
+             * <li><strong>SNMPv2-Reflect-Flood</strong>: SNMPv2 reflection attacks</li>
+             * <li><strong>CLDAP-Reflect-Flood</strong>: CLDAP reflection attacks</li>
+             * <li><strong>Ripv1-Reflect-Flood</strong>: RIPv1 reflection attacks</li>
+             * <li><strong>OpenVPN-Reflect-Flood</strong>: OpenVPN reflection attacks</li>
+             * <li><strong>SSDP-Reflect-Flood</strong>: SSDP reflection attacks</li>
+             * <li><strong>NetAssistant-Reflect-Flood</strong>: NetAssistant reflection attacks</li>
+             * <li><strong>WSDiscovery-Reflect-Flood</strong>: WS-Discovery reflection attacks</li>
+             * <li><strong>Kad-Reflect-Flood</strong>: Kad reflection attacks</li>
+             * <li><strong>mDNS-Reflect-Flood</strong>: mDNS reflection attacks</li>
+             * <li><strong>10001-Reflect-Flood</strong>: reflection attacks over port 10001</li>
+             * <li><strong>Memcached-Reflect-Flood</strong>: Memcached reflection attacks</li>
+             * <li><strong>QNP-Reflect-Flood</strong>: QNP reflection attacks</li>
+             * <li><strong>DVR-Reflect-Flood</strong>: DVR reflection attacks</li>
+             * <li><strong>CoAP-Reflect-Flood</strong>: CoAP reflection attacks</li>
+             * <li><strong>ADDP-Reflect-Flood</strong>: ADDP reflection attacks</li>
+             * <li><strong>Tcp-Syn</strong>: TCP SYN flood attacks</li>
+             * <li><strong>Tcp-Fin</strong>: TCP FIN flood attacks</li>
+             * <li><strong>Tcp-Ack</strong>: TCP ACK flood attacks</li>
+             * <li><strong>Tcp-Rst</strong>: TCP RST flood attacks</li>
+             * <li><strong>Tcp-Pushack</strong>: TCP PSH-ACK flood attacks</li>
+             * <li><strong>Tcp-Synack</strong>: TCP SYN-ACK flood attacks</li>
+             * <li><strong>Udp-None</strong>: UDP attacks</li>
+             * <li><strong>Udp-Ssh</strong>: UDP-based SSH attacks</li>
+             * <li><strong>Udp-Dns</strong>: UDP-based DNS attacks</li>
+             * <li><strong>Udp-Http</strong>: UDP-based HTTP attacks</li>
+             * <li><strong>Udp-Https</strong>: UDP-based HTTPS attacks</li>
+             * <li><strong>Udp-Ntp</strong>: UDP-based NTP attacks</li>
+             * <li><strong>Udp-Ldap</strong>: UDP-based LDAP attacks</li>
+             * <li><strong>Udp-Ssdp</strong>: UDP-based SSDP attacks</li>
+             * <li><strong>Udp-Memcached</strong>: Memcached UDP reflection attacks</li>
+             * <li><strong>Tcp-Other</strong>: other TCP attacks</li>
+             * <li><strong>Icmp</strong>: ICMP flood attacks</li>
+             * <li><strong>Igmp</strong>: IGMP flood attacks</li>
+             * <li><strong>Ipv6</strong>: IPv6 attacks</li>
+             * </ul>
              * 
-             * *   **QOTD-Reflect-Flood**: QOTD reflection attacks
-             * *   **CharGEN-Reflect-Flood**: CHARGEN reflection attacks
-             * *   **DNS-Reflect-Flood**: DNS reflection attacks
-             * *   **TFTP-Reflect-Flood**: TFTP reflection attacks
-             * *   **Portmap-Reflect-Flood**: Portmap reflection attacks
-             * *   **NTP-Reflect-Flood**: NTP reflection attacks
-             * *   **NetBIOS-Reflect-Flood**: NetBIOS reflection attacks
-             * *   **SNMPv2-Reflect-Flood**: SNMPv2 reflection attacks
-             * *   **CLDAP-Reflect-Flood**: CLDAP reflection attacks
-             * *   **Ripv1-Reflect-Flood**: RIPv1 reflection attacks
-             * *   **OpenVPN-Reflect-Flood**: OpenVPN reflection attacks
-             * *   **SSDP-Reflect-Flood**: SSDP reflection attacks
-             * *   **NetAssistant-Reflect-Flood**: NetAssistant reflection attacks
-             * *   **WSDiscovery-Reflect-Flood**: WS-Discovery reflection attacks
-             * *   **Kad-Reflect-Flood**: Kad reflection attacks
-             * *   **mDNS-Reflect-Flood**: mDNS reflection attacks
-             * *   **10001-Reflect-Flood**: reflection attacks over port 10001
-             * *   **Memcached-Reflect-Flood**: Memcached reflection attacks
-             * *   **QNP-Reflect-Flood**: QNP reflection attacks
-             * *   **DVR-Reflect-Flood**: DVR reflection attacks
-             * *   **CoAP-Reflect-Flood**: CoAP reflection attacks
-             * *   **ADDP-Reflect-Flood**: ADDP reflection attacks
-             * *   **Tcp-Syn**: TCP SYN flood attacks
-             * *   **Tcp-Fin**: TCP FIN flood attacks
-             * *   **Tcp-Ack**: TCP ACK flood attacks
-             * *   **Tcp-Rst**: TCP RST flood attacks
-             * *   **Tcp-Pushack**: TCP PSH-ACK flood attacks
-             * *   **Tcp-Synack**: TCP SYN-ACK flood attacks
-             * *   **Udp-None**: UDP attacks
-             * *   **Udp-Ssh**: UDP-based SSH attacks
-             * *   **Udp-Dns**: UDP-based DNS attacks
-             * *   **Udp-Http**: UDP-based HTTP attacks
-             * *   **Udp-Https**: UDP-based HTTPS attacks
-             * *   **Udp-Ntp**: UDP-based NTP attacks
-             * *   **Udp-Ldap**: UDP-based LDAP attacks
-             * *   **Udp-Ssdp**: UDP-based SSDP attacks
-             * *   **Udp-Memcached**: Memcached UDP reflection attacks
-             * *   **Tcp-Other**: other TCP attacks
-             * *   **Icmp**: ICMP flood attacks
-             * *   **Igmp**: IGMP flood attacks
-             * *   **Ipv6**: IPv6 attacks
+             * <strong>example:</strong>
+             * <p>Tcp-Syn</p>
              */
             public Builder attackType(String attackType) {
                 this.attackType = attackType;
@@ -160,7 +173,10 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of request packets of the attack type.
+             * <p>The number of request packets of the attack type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>145902</p>
              */
             public Builder inPkts(Long inPkts) {
                 this.inPkts = inPkts;

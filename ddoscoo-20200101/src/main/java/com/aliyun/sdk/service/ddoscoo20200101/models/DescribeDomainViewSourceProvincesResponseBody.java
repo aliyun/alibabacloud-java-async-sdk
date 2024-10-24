@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainViewSourceProvincesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainViewSourceProvincesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
         private java.util.List < SourceProvinces> sourceProvinces; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the details of the administrative region in China from which the requests are sent.
+         * <p>An array consisting of the details of the administrative region in China from which the requests are sent.</p>
          */
         public Builder sourceProvinces(java.util.List < SourceProvinces> sourceProvinces) {
             this.sourceProvinces = sourceProvinces;
@@ -70,6 +74,12 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainViewSourceProvincesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainViewSourceProvincesResponseBody</p>
+     */
     public static class SourceProvinces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
             private String provinceId; 
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3390671</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region inside China. For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.
+             * <p>The ID of the region inside China. For more information, see the <strong>Codes of administrative regions in China</strong> section of the <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a> topic. For example, <strong>110000</strong> indicates Beijing, and <strong>120000</strong> indicates Tianjin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>440000</p>
              */
             public Builder provinceId(String provinceId) {
                 this.provinceId = provinceId;

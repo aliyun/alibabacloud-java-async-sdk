@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>CreateTagResourcesRequest</p>
@@ -112,7 +113,11 @@ public class CreateTagResourcesRequest extends Request {
         } 
 
         /**
-         * The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.
+         * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -121,10 +126,11 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -133,7 +139,11 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances to which you want to add the tag.
+         * <p>The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances to which you want to add the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -142,7 +152,11 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.
+         * <p>The type of the resource to which the tag belongs. Set the value to <strong>INSTANCE</strong>, which indicates an Anti-DDoS Pro instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -151,7 +165,7 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * An array that consists of the tags to add.
+         * <p>An array that consists of the tags to add.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -166,6 +180,12 @@ public class CreateTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTagResourcesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -205,7 +225,10 @@ public class CreateTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag to add.
+             * <p>The key of the tag to add.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -213,7 +236,10 @@ public class CreateTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag to add.
+             * <p>The value of the tag to add.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

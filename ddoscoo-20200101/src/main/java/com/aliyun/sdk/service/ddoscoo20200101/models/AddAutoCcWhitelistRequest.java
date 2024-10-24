@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAutoCcWhitelistRequest} extends {@link RequestModel}
  *
  * <p>AddAutoCcWhitelistRequest</p>
@@ -106,10 +107,13 @@ public class AddAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
-         * <p>
+         * <p>This parameter is deprecated.</p>
+         * <blockquote>
+         * <p>This parameter indicates the validity period of the IP address blacklist. By default, the traffic from the IP addresses that you add to the whitelist is always allowed. You do not need to set this parameter.</p>
+         * </blockquote>
          * 
-         * > This parameter indicates the validity period of the IP address blacklist. By default, the traffic from the IP addresses that you add to the whitelist is always allowed. You do not need to set this parameter.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder expireTime(Integer expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -118,10 +122,14 @@ public class AddAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,10 +138,14 @@ public class AddAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * The configuration of the IP addresses that you want to add to the whitelist. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
-         * <p>
+         * <p>The configuration of the IP addresses that you want to add to the whitelist. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+         * <ul>
+         * <li><strong>src</strong>: the IP address that you want to add. This parameter is required. Data type: string.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **src**: the IP address that you want to add. This parameter is required. Data type: string.
+         * <strong>example:</strong>
+         * <p>[{&quot;src&quot;:&quot;192.XX.XX.1&quot;},{&quot;src&quot;:&quot;192.XX.XX.2&quot;}]</p>
          */
         public Builder whitelist(String whitelist) {
             this.putQueryParameter("Whitelist", whitelist);

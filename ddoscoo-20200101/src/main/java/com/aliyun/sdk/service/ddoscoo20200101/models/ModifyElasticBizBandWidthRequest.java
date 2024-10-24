@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyElasticBizBandWidthRequest} extends {@link RequestModel}
  *
  * <p>ModifyElasticBizBandWidthRequest</p>
@@ -106,7 +107,11 @@ public class ModifyElasticBizBandWidthRequest extends Request {
         }
 
         /**
-         * The burstable clean bandwidth. Unit: Mbit/s. The burstable clean bandwidth cannot exceed nine times the clean bandwidth of your Anti-DDoS Pro or Anti-DDoS Premium instance, and the sum of the clean bandwidth and the burstable clean bandwidth cannot exceed the maximum clean bandwidth that is supported by your instance. The value 0 indicates that the burstable clean bandwidth feature is disabled. You can disable the burstable clean bandwidth feature once a month.
+         * <p>The burstable clean bandwidth. Unit: Mbit/s. The burstable clean bandwidth cannot exceed nine times the clean bandwidth of your Anti-DDoS Pro or Anti-DDoS Premium instance, and the sum of the clean bandwidth and the burstable clean bandwidth cannot exceed the maximum clean bandwidth that is supported by your instance. The value 0 indicates that the burstable clean bandwidth feature is disabled. You can disable the burstable clean bandwidth feature once a month.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder elasticBizBandwidth(Integer elasticBizBandwidth) {
             this.putQueryParameter("ElasticBizBandwidth", elasticBizBandwidth);
@@ -115,10 +120,14 @@ public class ModifyElasticBizBandWidthRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-tl32morr****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -127,11 +136,14 @@ public class ModifyElasticBizBandWidthRequest extends Request {
         }
 
         /**
-         * The metering method of the burstable clean bandwidth feature. Valid values:
-         * <p>
+         * <p>The metering method of the burstable clean bandwidth feature. Valid values:</p>
+         * <ul>
+         * <li><strong>month</strong>: the metering method of monthly 95th percentile</li>
+         * <li><strong>day</strong>: the metering method of daily 95th percentile</li>
+         * </ul>
          * 
-         * *   **month**: the metering method of monthly 95th percentile
-         * *   **day**: the metering method of daily 95th percentile
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSceneDefenseObjectsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSceneDefenseObjectsRequest</p>
@@ -91,10 +92,14 @@ public class DescribeSceneDefenseObjectsRequest extends Request {
         }
 
         /**
-         * The ID of the policy that you want to query.
-         * <p>
+         * <p>The ID of the policy that you want to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> operation to query the IDs of all policies.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
+         * <strong>example:</strong>
+         * <p>47e07ebd-0ba5-4afc-957b-59d15b90****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -103,10 +108,11 @@ public class DescribeSceneDefenseObjectsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

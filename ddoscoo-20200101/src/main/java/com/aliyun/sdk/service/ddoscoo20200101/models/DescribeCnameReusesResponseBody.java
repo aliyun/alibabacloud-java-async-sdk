@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCnameReusesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCnameReusesResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCnameReusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCnameReusesResponseBody</p>
+     */
     public static class CnameReuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;

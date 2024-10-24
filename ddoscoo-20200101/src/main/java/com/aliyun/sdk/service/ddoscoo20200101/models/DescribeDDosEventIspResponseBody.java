@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDosEventIspResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDDosEventIspResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ISPs for the volumetric attack.
+         * <p>The ISPs for the volumetric attack.</p>
          */
         public Builder isps(java.util.List < Isps> isps) {
             this.isps = isps;
@@ -57,7 +58,10 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C4A3BCD1-4A32-4342-941A-4745AE69508C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDDosEventIspResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDDosEventIspResponseBody</p>
+     */
     public static class Isps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InPkts")
         private Long inPkts;
@@ -109,7 +119,10 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
             private String isp; 
 
             /**
-             * The number of request packets that were sent from the ISP.
+             * <p>The number of request packets that were sent from the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>230</p>
              */
             public Builder inPkts(Long inPkts) {
                 this.inPkts = inPkts;
@@ -117,27 +130,30 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the ISP. Valid values:
-             * <p>
+             * <p>The code of the ISP. Valid values:</p>
+             * <ul>
+             * <li><strong>100017</strong>: China Telecom</li>
+             * <li><strong>100026</strong>: China Unicom</li>
+             * <li><strong>100025</strong>: China Mobile</li>
+             * <li><strong>100027</strong>: China Education and Research Network</li>
+             * <li><strong>100020</strong>: China Mobile Tietong</li>
+             * <li><strong>1000143</strong>: Dr.Peng Telecom &amp; Media Group</li>
+             * <li><strong>100080</strong>: Beijing Gehua CATV Network</li>
+             * <li><strong>1000139</strong>: National Radio and Television Administration</li>
+             * <li><strong>100023</strong>: Oriental Cable Network</li>
+             * <li><strong>100063</strong>: Founder Broadband</li>
+             * <li><strong>1000337</strong>: China Internet Exchange</li>
+             * <li><strong>100021</strong>: 21Vianet Group</li>
+             * <li><strong>1000333</strong>: Wasu Media Holding</li>
+             * <li><strong>100093</strong>: Wangsu Science &amp; Technology</li>
+             * <li><strong>1000401</strong>: Tencent</li>
+             * <li><strong>100099</strong>: Baidu</li>
+             * <li><strong>1000323</strong>: Alibaba Cloud</li>
+             * <li><strong>100098</strong>: Alibaba</li>
+             * </ul>
              * 
-             * *   **100017**: China Telecom
-             * *   **100026**: China Unicom
-             * *   **100025**: China Mobile
-             * *   **100027**: China Education and Research Network
-             * *   **100020**: China Mobile Tietong
-             * *   **1000143**: Dr.Peng Telecom & Media Group
-             * *   **100080**: Beijing Gehua CATV Network
-             * *   **1000139**: National Radio and Television Administration
-             * *   **100023**: Oriental Cable Network
-             * *   **100063**: Founder Broadband
-             * *   **1000337**: China Internet Exchange
-             * *   **100021**: 21Vianet Group
-             * *   **1000333**: Wasu Media Holding
-             * *   **100093**: Wangsu Science & Technology
-             * *   **1000401**: Tencent
-             * *   **100099**: Baidu
-             * *   **1000323**: Alibaba Cloud
-             * *   **100098**: Alibaba
+             * <strong>example:</strong>
+             * <p>1000323</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;

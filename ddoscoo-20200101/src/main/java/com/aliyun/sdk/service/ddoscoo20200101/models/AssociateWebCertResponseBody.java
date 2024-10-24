@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateWebCertResponseBody} extends {@link TeaModel}
  *
  * <p>AssociateWebCertResponseBody</p>
@@ -37,7 +38,10 @@ public class AssociateWebCertResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40F11005-A75C-4644-95F2-52A4E7D43E91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

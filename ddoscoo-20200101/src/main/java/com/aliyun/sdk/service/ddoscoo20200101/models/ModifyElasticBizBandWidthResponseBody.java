@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyElasticBizBandWidthResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyElasticBizBandWidthResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyElasticBizBandWidthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C566BA3A-192F-5D32-8A33-21422F975145</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

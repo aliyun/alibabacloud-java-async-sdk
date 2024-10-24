@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUdpReflectResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUdpReflectResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeUdpReflectResponseBody extends TeaModel {
         private java.util.List < String > udpSports; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F97A8766-FB4D-411A-9CD5-2CFF701B592F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeUdpReflectResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the source ports of the UDP traffic that are filtered out by the filtering policies for UDP reflection attacks.
+         * <p>An array consisting of the source ports of the UDP traffic that are filtered out by the filtering policies for UDP reflection attacks.</p>
          */
         public Builder udpSports(java.util.List < String > udpSports) {
             this.udpSports = udpSports;

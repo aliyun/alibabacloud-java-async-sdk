@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoCcBlacklistResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoCcBlacklistResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the details of the IP addresses in the blacklist of the instance.
+         * <p>An array that consists of the details of the IP addresses in the blacklist of the instance.</p>
          */
         public Builder autoCcBlacklist(java.util.List < AutoCcBlacklist> autoCcBlacklist) {
             this.autoCcBlacklist = autoCcBlacklist;
@@ -69,7 +70,10 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E78C8472-0B15-42D5-AF22-A32A78818AB2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned IP addresses in the blacklist.
+         * <p>The total number of returned IP addresses in the blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoCcBlacklistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoCcBlacklistResponseBody</p>
+     */
     public static class AutoCcBlacklist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestIp")
         private String destIp;
@@ -153,7 +166,10 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder destIp(String destIp) {
                 this.destIp = destIp;
@@ -161,7 +177,10 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the IP address in the blacklist. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The validity period of the IP address in the blacklist. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1584093569</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -169,7 +188,10 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address in the blacklist.
+             * <p>The IP address in the blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX</p>
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;
@@ -177,11 +199,14 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of how the IP address is added to the blacklist. Valid values:
-             * <p>
+             * <p>The mode of how the IP address is added to the blacklist. Valid values:</p>
+             * <ul>
+             * <li><strong>manual</strong>: manually added</li>
+             * <li><strong>auto</strong>: automatically added</li>
+             * </ul>
              * 
-             * *   **manual**: manually added
-             * *   **auto**: automatically added
+             * <strong>example:</strong>
+             * <p>manual</p>
              */
             public Builder type(String type) {
                 this.type = type;

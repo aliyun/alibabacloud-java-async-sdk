@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAsyncTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteAsyncTaskRequest</p>
@@ -91,7 +92,10 @@ public class DeleteAsyncTaskRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -100,10 +104,14 @@ public class DeleteAsyncTaskRequest extends Request {
         }
 
         /**
-         * The ID of the task that you want to delete.
-         * <p>
+         * <p>The ID of the task that you want to delete.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeAsyncTasks~~">DescribeAsyncTasks</a> operation to query the IDs of all asynchronous export tasks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeAsyncTasks](~~DescribeAsyncTasks~~) operation to query the IDs of all asynchronous export tasks.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskId(Integer taskId) {
             this.putQueryParameter("TaskId", taskId);

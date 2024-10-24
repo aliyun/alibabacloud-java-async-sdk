@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainViewTopCostTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainViewTopCostTimeResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
         private java.util.List < UrlList> urlList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The URLs which require the longest time to respond to requests.
+         * <p>The URLs which require the longest time to respond to requests.</p>
          */
         public Builder urlList(java.util.List < UrlList> urlList) {
             this.urlList = urlList;
@@ -70,6 +74,12 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainViewTopCostTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainViewTopCostTimeResponseBody</p>
+     */
     public static class UrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CostTime")
         private Float costTime;
@@ -121,7 +131,10 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The response duration. Unit: milliseconds.
+             * <p>The response duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder costTime(Float costTime) {
                 this.costTime = costTime;
@@ -129,7 +142,10 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -137,7 +153,10 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is Base64-encoded.
+             * <p>The URL that is Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lw==</p>
              */
             public Builder url(String url) {
                 this.url = url;

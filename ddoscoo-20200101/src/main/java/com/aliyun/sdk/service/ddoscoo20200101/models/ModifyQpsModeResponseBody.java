@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyQpsModeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyQpsModeResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyQpsModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID, which is used to locate and troubleshoot issues.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48859E14-A9FB-4100-99FF-AAB75CA46776</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

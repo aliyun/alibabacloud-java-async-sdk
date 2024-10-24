@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainStatusCodeListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainStatusCodeListRequest</p>
@@ -149,10 +150,13 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * The domain name of the website. If you do not specify this parameter, the statistics on response status codes of all domain names are queried.
-         * <p>
+         * <p>The domain name of the website. If you do not specify this parameter, the statistics on response status codes of all domain names are queried.</p>
+         * <blockquote>
+         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
          * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -161,10 +165,13 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
          * 
-         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>1583683200</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -173,7 +180,11 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * The interval for returning data. Unit: seconds.
+         * <p>The interval for returning data. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -182,11 +193,15 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * The source of the statistics. Valid values:
-         * <p>
+         * <p>The source of the statistics. Valid values:</p>
+         * <ul>
+         * <li><strong>gf</strong>: Anti-DDoS Pro or Anti-DDoS Premium</li>
+         * <li><strong>upstrem</strong>: origin server</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **gf**: Anti-DDoS Pro or Anti-DDoS Premium
-         * *   **upstrem**: origin server
+         * <strong>example:</strong>
+         * <p>gf</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -195,7 +210,10 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -204,10 +222,14 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * The start time of the event. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The start time of the event. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>1582992000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

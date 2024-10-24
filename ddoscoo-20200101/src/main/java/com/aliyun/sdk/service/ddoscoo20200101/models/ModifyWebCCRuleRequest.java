@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebCCRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyWebCCRuleRequest</p>
@@ -196,7 +197,10 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * Act.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         public Builder act(String act) {
             this.putQueryParameter("Act", act);
@@ -205,7 +209,10 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * Count.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Integer count) {
             this.putQueryParameter("Count", count);
@@ -214,7 +221,10 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -223,7 +233,10 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -232,7 +245,10 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prefix</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -241,7 +257,10 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -259,7 +278,11 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * The blocking duration. Valid values: **60** to **86400**. Unit: seconds.
+         * <p>The blocking duration. Valid values: <strong>60</strong> to <strong>86400</strong>. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -268,10 +291,14 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * The check path.
-         * <p>
+         * <p>The check path.</p>
+         * <blockquote>
+         * <p> You cannot modify the Uniform Resource Identifier (URI). The domain name of the website, the check path, and the rule name uniquely identify a rule.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You cannot modify the Uniform Resource Identifier (URI). The domain name of the website, the check path, and the rule name uniquely identify a rule.
+         * <strong>example:</strong>
+         * <p>/abc</p>
          */
         public Builder uri(String uri) {
             this.putQueryParameter("Uri", uri);

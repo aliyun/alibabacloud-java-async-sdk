@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigL7UsKeepaliveRequest} extends {@link RequestModel}
  *
  * <p>ConfigL7UsKeepaliveRequest</p>
@@ -68,10 +69,13 @@ public class ConfigL7UsKeepaliveRequest extends Request {
         } 
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
          * 
-         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -80,12 +84,16 @@ public class ConfigL7UsKeepaliveRequest extends Request {
         }
 
         /**
-         * The settings for back-to-origin persistent connections. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
-         * <p>
+         * <p>The settings for back-to-origin persistent connections. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><strong>enabled</strong>: the switch for back-to-origin persistent connections. This field is required, and the value is of the Boolean type.</li>
+         * <li><strong>keepalive_requests</strong>: the number of requests that reuse a persistent connection. This field is required, and the value is of the integer type.</li>
+         * <li><strong>keepalive_timeout</strong>: the timeout period for an idle persistent connection. This field is required, and the value is of the integer type.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **enabled**: the switch for back-to-origin persistent connections. This field is required, and the value is of the Boolean type.
-         * *   **keepalive_requests**: the number of requests that reuse a persistent connection. This field is required, and the value is of the integer type.
-         * *   **keepalive_timeout**: the timeout period for an idle persistent connection. This field is required, and the value is of the integer type.
+         * <strong>example:</strong>
+         * <p>{&quot;enabled&quot;: true, &quot;keepalive_requests&quot;: 1000,&quot;keepalive_timeout&quot;: 30}</p>
          */
         public Builder upstreamKeepalive(String upstreamKeepalive) {
             this.putQueryParameter("UpstreamKeepalive", upstreamKeepalive);

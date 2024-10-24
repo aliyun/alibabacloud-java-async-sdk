@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDoSEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDDoSEventsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The DDoS attack events.
+         * <p>The DDoS attack events.</p>
          */
         public Builder dDoSEvents(java.util.List < DDoSEvents> dDoSEvents) {
             this.dDoSEvents = dDoSEvents;
@@ -69,7 +70,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CA72AF5-1795-4350-8C77-50A448A2F334</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned attack events.
+         * <p>The total number of returned attack events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -90,6 +97,12 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDDoSEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDDoSEventsResponseBody</p>
+     */
     public static class DDoSEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bps")
         private Long bps;
@@ -201,7 +214,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The bandwidth of attack traffic. Unit: bit/s.
+             * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bps(Long bps) {
                 this.bps = bps;
@@ -209,7 +225,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DDoS attack stopped. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the DDoS attack stopped. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583933330</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -217,11 +236,14 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the attack event. Valid values:
-             * <p>
+             * <p>The type of the attack event. Valid values:</p>
+             * <ul>
+             * <li><strong>defense</strong>: traffic scrubbing events</li>
+             * <li><strong>blackhole</strong>: blackhole filtering events</li>
+             * </ul>
              * 
-             * *   **defense**: traffic scrubbing events
-             * *   **blackhole**: blackhole filtering events
+             * <strong>example:</strong>
+             * <p>blackhole</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -229,7 +251,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The attacked IP address.
+             * <p>The attacked IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.<em><strong>.</strong></em>.132</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -237,7 +262,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The attacked port.
+             * <p>The attacked port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -245,7 +273,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of attack traffic. Unit: packets per second (pps).
+             * <p>The packet forwarding rate of attack traffic. Unit: packets per second (pps).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pps(Long pps) {
                 this.pps = pps;
@@ -253,17 +284,21 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The region from which the attack was launched. Valid values:
-             * <p>
+             * <p>The region from which the attack was launched. Valid values:</p>
+             * <ul>
+             * <li><strong>cn</strong>: a region in the Chinese mainland</li>
+             * <li><strong>alb-ap-northeast-1-gf-x</strong>: Japan (Tokyo)</li>
+             * <li><strong>alb-ap-southeast-gf-x</strong>: Singapore</li>
+             * <li><strong>alb-cn-hongkong-gf-x</strong>: Hong Kong (China)</li>
+             * <li><strong>alb-eu-central-1-gf-x</strong>: Germany (Frankfurt)</li>
+             * <li><strong>alb-us-west-1-gf-x</strong>: US (Silicon Valley)</li>
+             * </ul>
+             * <blockquote>
+             * <p>The values except <strong>cn</strong> are returned only when <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>.</p>
+             * </blockquote>
              * 
-             * *   **cn**: a region in the Chinese mainland
-             * *   **alb-ap-northeast-1-gf-x**: Japan (Tokyo)
-             * *   **alb-ap-southeast-gf-x**: Singapore
-             * *   **alb-cn-hongkong-gf-x**: Hong Kong (China)
-             * *   **alb-eu-central-1-gf-x**: Germany (Frankfurt)
-             * *   **alb-us-west-1-gf-x**: US (Silicon Valley)
-             * 
-             * > The values except **cn** are returned only when **RegionId** is set to **ap-southeast-1**.
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -271,7 +306,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DDoS attack started. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the DDoS attack started. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583933277</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

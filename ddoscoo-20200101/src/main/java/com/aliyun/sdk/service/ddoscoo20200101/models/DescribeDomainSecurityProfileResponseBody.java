@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSecurityProfileResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainSecurityProfileResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +58,7 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +71,12 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainSecurityProfileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSecurityProfileResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GlobalEnable")
         private Boolean globalEnable;
@@ -109,11 +116,14 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
             private String globalMode; 
 
             /**
-             * Indicates whether the global mitigation policy is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the global mitigation policy is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder globalEnable(Boolean globalEnable) {
                 this.globalEnable = globalEnable;
@@ -121,12 +131,15 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the global mitigation policy. Valid values:
-             * <p>
+             * <p>The mode of the global mitigation policy. Valid values:</p>
+             * <ul>
+             * <li><strong>weak</strong>: the Low mode</li>
+             * <li><strong>default</strong>: the Normal mode</li>
+             * <li><strong>hard</strong>: the Strict mode</li>
+             * </ul>
              * 
-             * *   **weak**: the Low mode
-             * *   **default**: the Normal mode
-             * *   **hard**: the Strict mode
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder globalMode(String globalMode) {
                 this.globalMode = globalMode;

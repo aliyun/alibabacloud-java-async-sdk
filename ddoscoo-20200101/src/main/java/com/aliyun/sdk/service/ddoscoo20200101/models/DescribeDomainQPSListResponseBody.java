@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainQPSListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainQPSListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the statistics on the QPS of the website.
+         * <p>An array that consists of the statistics on the QPS of the website.</p>
          */
         public Builder domainQPSList(java.util.List < DomainQPSList> domainQPSList) {
             this.domainQPSList = domainQPSList;
@@ -57,7 +58,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>327F2ABB-104D-437A-AAB5-D633E29A8C51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainQPSListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainQPSListResponseBody</p>
+     */
     public static class DomainQPSList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttackQps")
         private Long attackQps;
@@ -193,7 +203,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             private Long totalQps; 
 
             /**
-             * The attack QPS.
+             * <p>The attack QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attackQps(Long attackQps) {
                 this.attackQps = attackQps;
@@ -201,7 +214,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cache hits.
+             * <p>The number of cache hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cacheHits(Long cacheHits) {
                 this.cacheHits = cacheHits;
@@ -209,7 +225,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * The index number of the returned data.
+             * <p>The index number of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -217,7 +236,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * The peak attack QPS.
+             * <p>The peak attack QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37</p>
              */
             public Builder maxAttackQps(Long maxAttackQps) {
                 this.maxAttackQps = maxAttackQps;
@@ -225,7 +247,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * The peak of normal QPS.
+             * <p>The peak of normal QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93</p>
              */
             public Builder maxNormalQps(Long maxNormalQps) {
                 this.maxNormalQps = maxNormalQps;
@@ -233,7 +258,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * The peak of total QPS.
+             * <p>The peak of total QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130</p>
              */
             public Builder maxQps(Long maxQps) {
                 this.maxQps = maxQps;
@@ -241,7 +269,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582992000</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -249,7 +280,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20008</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -257,7 +291,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * The total QPS.
+             * <p>The total QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalQps(Long totalQps) {
                 this.totalQps = totalQps;

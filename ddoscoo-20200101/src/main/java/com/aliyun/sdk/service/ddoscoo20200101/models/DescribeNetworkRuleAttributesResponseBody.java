@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkRuleAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNetworkRuleAttributesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.
+         * <p>An array that consists of the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.</p>
          */
         public Builder networkRuleAttributes(java.util.List < NetworkRuleAttributes> networkRuleAttributes) {
             this.networkRuleAttributes = networkRuleAttributes;
@@ -57,7 +58,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F9F2F77D-307C-4F15-8D02-AB5957EEBF97</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkRuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRuleAttributesResponseBody</p>
+     */
     public static class Sblack extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cnt")
         private Integer cnt;
@@ -133,7 +143,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The threshold that the number of connections initiated from a source IP address can exceed the limit. Set the value to **5**. If the number of connections initiated from a source IP address exceeds the limit five times during the check, the source IP address is added to the blacklist.
+             * <p>The threshold that the number of connections initiated from a source IP address can exceed the limit. Set the value to <strong>5</strong>. If the number of connections initiated from a source IP address exceeds the limit five times during the check, the source IP address is added to the blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder cnt(Integer cnt) {
                 this.cnt = cnt;
@@ -141,7 +154,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which checks are performed. Set the value to **60**. Unit: seconds.
+             * <p>The interval at which checks are performed. Set the value to <strong>60</strong>. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder during(Integer during) {
                 this.during = during;
@@ -149,7 +165,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the IP address in the blacklist. Valid values: **60** to **604800**. Unit: seconds.
+             * <p>The validity period of the IP address in the blacklist. Valid values: <strong>60</strong> to <strong>604800</strong>. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder expires(Integer expires) {
                 this.expires = expires;
@@ -157,13 +176,16 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the limit that causes a source IP address to be added to the blacklist. Valid values:
-             * <p>
+             * <p>The type of the limit that causes a source IP address to be added to the blacklist. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Source New Connection Rate Limit</li>
+             * <li><strong>2</strong>: Source Concurrent Connection Rate Limit</li>
+             * <li><strong>3</strong>: PPS Limit for Source</li>
+             * <li><strong>4</strong>: Bandwidth Limit for Source</li>
+             * </ul>
              * 
-             * *   **1**: Source New Connection Rate Limit
-             * *   **2**: Source Concurrent Connection Rate Limit
-             * *   **3**: PPS Limit for Source
-             * *   **4**: Bandwidth Limit for Source
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -177,6 +199,12 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkRuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRuleAttributesResponseBody</p>
+     */
     public static class Cc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sblack")
         private java.util.List < Sblack> sblack;
@@ -204,7 +232,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private java.util.List < Sblack> sblack; 
 
             /**
-             * The protection policy that a source IP address is added to the blacklist when the number of connections initiated from the IP address frequently exceeds the limit.
+             * <p>The protection policy that a source IP address is added to the blacklist when the number of connections initiated from the IP address frequently exceeds the limit.</p>
              */
             public Builder sblack(java.util.List < Sblack> sblack) {
                 this.sblack = sblack;
@@ -218,6 +246,12 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkRuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRuleAttributesResponseBody</p>
+     */
     public static class PayloadLen extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
@@ -257,7 +291,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private Integer min; 
 
             /**
-             * The maximum length of a packet. Valid values: **0** to **6000**. Unit: bytes.
+             * <p>The maximum length of a packet. Valid values: <strong>0</strong> to <strong>6000</strong>. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -265,7 +302,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum length of a packet. Valid values: **0** to **6000**. Unit: bytes.
+             * <p>The minimum length of a packet. Valid values: <strong>0</strong> to <strong>6000</strong>. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -279,6 +319,12 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkRuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRuleAttributesResponseBody</p>
+     */
     public static class Sla extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cps")
         private Integer cps;
@@ -342,7 +388,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private Integer maxconnEnable; 
 
             /**
-             * The maximum number of new connections per second that can be established over the port of the destination instance. Valid values: **100** to **100000**.
+             * <p>The maximum number of new connections per second that can be established over the port of the destination instance. Valid values: <strong>100</strong> to <strong>100000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder cps(Integer cps) {
                 this.cps = cps;
@@ -350,11 +399,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Destination New Connection Rate Limit switch. Valid values:
-             * <p>
+             * <p>The status of the Destination New Connection Rate Limit switch. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The switch is turned off.</li>
+             * <li><strong>1</strong>: The switch is turned on.</li>
+             * </ul>
              * 
-             * *   **0**: The switch is turned off.
-             * *   **1**: The switch is turned on.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpsEnable(Integer cpsEnable) {
                 this.cpsEnable = cpsEnable;
@@ -362,7 +414,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections that can be established over the port of the destination instance. Valid values: **1000** to **1000000**.
+             * <p>The maximum number of concurrent connections that can be established over the port of the destination instance. Valid values: <strong>1000</strong> to <strong>1000000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder maxconn(Integer maxconn) {
                 this.maxconn = maxconn;
@@ -370,11 +425,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Destination Concurrent Connection Rate Limit switch. Valid values:
-             * <p>
+             * <p>The status of the Destination Concurrent Connection Rate Limit switch. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The switch is turned off.</li>
+             * <li><strong>1</strong>: The switch is turned on.</li>
+             * </ul>
              * 
-             * *   **0**: The switch is turned off.
-             * *   **1**: The switch is turned on.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxconnEnable(Integer maxconnEnable) {
                 this.maxconnEnable = maxconnEnable;
@@ -388,6 +446,12 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkRuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRuleAttributesResponseBody</p>
+     */
     public static class Slimit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bps")
         private Long bps;
@@ -487,7 +551,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private Long pps; 
 
             /**
-             * The bandwidth limit for a source IP address. Valid values: **1024** to **268435456**. Unit: bytes/s. Default value: **0**, which indicates that the bandwidth for a source IP address is unlimited.
+             * <p>The bandwidth limit for a source IP address. Valid values: <strong>1024</strong> to <strong>268435456</strong>. Unit: bytes/s. Default value: <strong>0</strong>, which indicates that the bandwidth for a source IP address is unlimited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bps(Long bps) {
                 this.bps = bps;
@@ -495,7 +562,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of new connections per second that can be initiated from a source IP address. Valid values: **1** to **500000**.
+             * <p>The maximum number of new connections per second that can be initiated from a source IP address. Valid values: <strong>1</strong> to <strong>500000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cps(Integer cps) {
                 this.cps = cps;
@@ -503,11 +573,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Source New Connection Rate Limit switch. Valid values:
-             * <p>
+             * <p>The status of the Source New Connection Rate Limit switch. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The switch is turned off.</li>
+             * <li><strong>1</strong>: The switch is turned on.</li>
+             * </ul>
              * 
-             * *   **0**: The switch is turned off.
-             * *   **1**: The switch is turned on.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpsEnable(Integer cpsEnable) {
                 this.cpsEnable = cpsEnable;
@@ -515,11 +588,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the Source New Connection Rate Limit switch. Valid values:
-             * <p>
+             * <p>The mode of the Source New Connection Rate Limit switch. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: the manual mode</li>
+             * <li><strong>2</strong>: the automatic mode</li>
+             * </ul>
              * 
-             * *   **1**: the manual mode
-             * *   **2**: the automatic mode
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpsMode(Integer cpsMode) {
                 this.cpsMode = cpsMode;
@@ -527,7 +603,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections initiated from a source IP address. Valid values: **1** to **500000**.
+             * <p>The maximum number of concurrent connections initiated from a source IP address. Valid values: <strong>1</strong> to <strong>500000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxconn(Integer maxconn) {
                 this.maxconn = maxconn;
@@ -535,11 +614,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Source Concurrent Connection Rate Limit switch. Valid values:
-             * <p>
+             * <p>The status of the Source Concurrent Connection Rate Limit switch. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The switch is turned off.</li>
+             * <li><strong>1</strong>: The switch is turned on.</li>
+             * </ul>
              * 
-             * *   **0**: The switch is turned off.
-             * *   **1**: The switch is turned on.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxconnEnable(Integer maxconnEnable) {
                 this.maxconnEnable = maxconnEnable;
@@ -547,7 +629,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The packets per second (pps) limit for a source IP address. Valid values: **1** to **100000**. Unit: packets/s. Default value: **0**, which indicates that the pps for a source IP address is unlimited.
+             * <p>The packets per second (pps) limit for a source IP address. Valid values: <strong>1</strong> to <strong>100000</strong>. Unit: packets/s. Default value: <strong>0</strong>, which indicates that the pps for a source IP address is unlimited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pps(Long pps) {
                 this.pps = pps;
@@ -561,6 +646,12 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkRuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRuleAttributesResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cc")
         private Cc cc;
@@ -660,7 +751,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private String synproxy; 
 
             /**
-             * The protection policy applied when the number of connections initiated from a source IP address frequently exceeds the limit.
+             * <p>The protection policy applied when the number of connections initiated from a source IP address frequently exceeds the limit.</p>
              */
             public Builder cc(Cc cc) {
                 this.cc = cc;
@@ -668,11 +759,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Empty Connection switch. Valid values:
-             * <p>
+             * <p>The status of the Empty Connection switch. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: The switch is turned on.</li>
+             * <li><strong>off</strong>: The switch is turned off.</li>
+             * </ul>
              * 
-             * *   **on**: The switch is turned on.
-             * *   **off**: The switch is turned off.
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder nodataConn(String nodataConn) {
                 this.nodataConn = nodataConn;
@@ -680,7 +774,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The settings of the Packet Length Limit policy.
+             * <p>The settings of the Packet Length Limit policy.</p>
              */
             public Builder payloadLen(PayloadLen payloadLen) {
                 this.payloadLen = payloadLen;
@@ -688,7 +782,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of session persistence. Valid values: **30** to **3600**. Unit: seconds. Default value: **0**, which indicates that session persistence is disabled.
+             * <p>The timeout period of session persistence. Valid values: <strong>30</strong> to <strong>3600</strong>. Unit: seconds. Default value: <strong>0</strong>, which indicates that session persistence is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder persistenceTimeout(Integer persistenceTimeout) {
                 this.persistenceTimeout = persistenceTimeout;
@@ -696,7 +793,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The settings of the Speed Limit for Destination policy.
+             * <p>The settings of the Speed Limit for Destination policy.</p>
              */
             public Builder sla(Sla sla) {
                 this.sla = sla;
@@ -704,7 +801,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The settings of the Speed Limit for Source policy.
+             * <p>The settings of the Speed Limit for Source policy.</p>
              */
             public Builder slimit(Slimit slimit) {
                 this.slimit = slimit;
@@ -712,11 +809,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the False Source switch. Valid values:
-             * <p>
+             * <p>The status of the False Source switch. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: The switch is turned on.</li>
+             * <li><strong>off</strong>: The switch is turned off.</li>
+             * </ul>
              * 
-             * *   **on**: The switch is turned on.
-             * *   **off**: The switch is turned off.
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder synproxy(String synproxy) {
                 this.synproxy = synproxy;
@@ -730,6 +830,12 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkRuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRuleAttributesResponseBody</p>
+     */
     public static class NetworkRuleAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private Config config;
@@ -793,7 +899,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * The mitigation settings of the port forwarding rule.
+             * <p>The mitigation settings of the port forwarding rule.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -801,7 +907,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding port.
+             * <p>The forwarding port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -809,7 +918,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-mp91j1ao****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -817,11 +929,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding protocol. Valid values:
-             * <p>
+             * <p>The forwarding protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

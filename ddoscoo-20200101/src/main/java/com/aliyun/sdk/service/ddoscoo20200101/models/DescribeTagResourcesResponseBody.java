@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagResourcesResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The query token that is returned in this call.
+         * <p>The query token that is returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36E698F7-48A4-48D0-9554-0BB4BAAB99B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The tags that are added to the Anti-DDoS Proxy (Chinese Mainland) instance.
+         * <p>The tags that are added to the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -90,6 +97,12 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagResourcesResponseBody</p>
+     */
     public static class TagResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -153,7 +166,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the Anti-DDoS Proxy (Chinese Mainland) instance.
+             * <p>The ID of the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-zz121ogz****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -161,7 +177,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type. The value is fixed as **INSTANCE**, which indicates an Anti-DDoS Proxy instance.
+             * <p>The resource type. The value is fixed as <strong>INSTANCE</strong>, which indicates an Anti-DDoS Proxy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTANCE</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -169,7 +188,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.
+             * <p>The key of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -177,7 +199,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.
+             * <p>The value of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -191,6 +216,12 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagResource")
         private java.util.List < TagResource> tagResource;

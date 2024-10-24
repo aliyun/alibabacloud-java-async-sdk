@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortConnsListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortConnsListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the connections established over the port.
+         * <p>Details about the connections established over the port.</p>
          */
         public Builder connsList(java.util.List < ConnsList> connsList) {
             this.connsList = connsList;
@@ -57,7 +58,10 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D48AED0-41DB-5D9B-B484-3B6AAD312AD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePortConnsListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortConnsListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortConnsListResponseBody</p>
+     */
     public static class ConnsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActConns")
         private Long actConns;
@@ -145,7 +155,10 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             private Long index; 
 
             /**
-             * The number of active connections.
+             * <p>The number of active connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder actConns(Long actConns) {
                 this.actConns = actConns;
@@ -153,7 +166,12 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * >  This parameter is in internal preview. Do not use this parameter.
+             * <blockquote>
+             * <p> This parameter is in internal preview. Do not use this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder conns(Long conns) {
                 this.conns = conns;
@@ -161,7 +179,10 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of new connections.
+             * <p>The number of new connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cps(Long cps) {
                 this.cps = cps;
@@ -169,7 +190,10 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of inactive connections.
+             * <p>The number of inactive connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder inActConns(Long inActConns) {
                 this.inActConns = inActConns;
@@ -177,7 +201,10 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * The index number of the returned data.
+             * <p>The index number of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16506</p>
              */
             public Builder index(Long index) {
                 this.index = index;

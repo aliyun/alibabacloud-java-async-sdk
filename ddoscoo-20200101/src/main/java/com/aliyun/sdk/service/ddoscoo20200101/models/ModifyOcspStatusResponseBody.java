@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOcspStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyOcspStatusResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyOcspStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8DDBA8E-8182-5C85-AA41-F17EACFCAE0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

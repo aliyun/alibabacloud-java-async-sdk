@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNetworkRulesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The details of the port forwarding rule.
+         * <p>The details of the port forwarding rule.</p>
          */
         public Builder networkRules(java.util.List < NetworkRules> networkRules) {
             this.networkRules = networkRules;
@@ -69,7 +70,10 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8597F235-FA5E-4FC7-BAD9-E4C0B01BC771</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned port forwarding rules.
+         * <p>The total number of returned port forwarding rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRulesResponseBody</p>
+     */
     public static class NetworkRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackendPort")
         private Integer backendPort;
@@ -225,7 +238,10 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             private String remark; 
 
             /**
-             * The port of the origin server.
+             * <p>The port of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder backendPort(Integer backendPort) {
                 this.backendPort = backendPort;
@@ -233,7 +249,10 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding port.
+             * <p>The forwarding port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -241,7 +260,10 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-mp91j1ao****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -249,11 +271,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the port forwarding rule is automatically created. Valid values:
-             * <p>
+             * <p>Indicates whether the port forwarding rule is automatically created. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAutoCreate(Boolean isAutoCreate) {
                 this.isAutoCreate = isAutoCreate;
@@ -269,11 +294,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding protocol. Valid values:
-             * <p>
+             * <p>The forwarding protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -297,7 +325,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of origin servers.
+             * <p>The IP addresses of origin servers.</p>
              */
             public Builder realServers(java.util.List < String > realServers) {
                 this.realServers = realServers;
@@ -305,7 +333,10 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the port forwarding rule.
+             * <p>The remarks of the port forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

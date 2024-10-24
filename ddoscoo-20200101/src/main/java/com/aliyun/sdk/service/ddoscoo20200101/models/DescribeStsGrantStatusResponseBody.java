@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStsGrantStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStsGrantStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
         private StsGrant stsGrant; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6623EA1F-30FB-5BC8-BEC9-74D55F6F08F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The authorization status of Anti-DDoS Pro or Anti-DDoS Premium.
+         * <p>The authorization status of Anti-DDoS Pro or Anti-DDoS Premium.</p>
          */
         public Builder stsGrant(StsGrant stsGrant) {
             this.stsGrant = stsGrant;
@@ -70,6 +74,12 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStsGrantStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStsGrantStatusResponseBody</p>
+     */
     public static class StsGrant extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -97,11 +107,14 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The authorization status. Valid values:
-             * <p>
+             * <p>The authorization status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Anti-DDoS Pro or Anti-DDoS Premium is not authorized to access other cloud services.</li>
+             * <li><strong>1</strong>: Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.</li>
+             * </ul>
              * 
-             * *   **0**: Anti-DDoS Pro or Anti-DDoS Premium is not authorized to access other cloud services.
-             * *   **1**: Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

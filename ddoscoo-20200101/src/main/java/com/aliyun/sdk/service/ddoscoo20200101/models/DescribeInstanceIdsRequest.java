@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceIdsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceIdsRequest</p>
@@ -104,14 +105,17 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * The type of the instance to query. Valid values:
-         * <p>
+         * <p>The type of the instance to query. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+         * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+         * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
+         * <li><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan</li>
+         * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+         * </ul>
          * 
-         * *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
-         * *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
-         * *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
-         * *   **3**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan
-         * *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder edition(Integer edition) {
             this.putQueryParameter("Edition", edition);
@@ -120,7 +124,10 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * The IDs of instances to query.
+         * <p>The IDs of instances to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

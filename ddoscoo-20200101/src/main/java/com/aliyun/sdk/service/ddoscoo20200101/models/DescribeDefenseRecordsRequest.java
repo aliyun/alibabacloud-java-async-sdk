@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDefenseRecordsRequest</p>
@@ -150,10 +151,14 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp. Units: miliseconds.
-         * <p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Units: miliseconds.</p>
+         * <blockquote>
+         * <p>The time must be in the latest 90 days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The time must be in the latest 90 days.
+         * <strong>example:</strong>
+         * <p>1583683200000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -162,10 +167,13 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +182,11 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.
+         * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -183,7 +195,11 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +208,10 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -201,10 +220,14 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp. Units: miliseconds.
-         * <p>
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Units: miliseconds.</p>
+         * <blockquote>
+         * <p>The time must be in the latest 90 days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The time must be in the latest 90 days.
+         * <strong>example:</strong>
+         * <p>1582992000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

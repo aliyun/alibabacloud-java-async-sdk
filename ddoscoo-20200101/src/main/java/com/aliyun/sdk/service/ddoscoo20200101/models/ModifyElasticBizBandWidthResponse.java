@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyElasticBizBandWidthResponse} extends {@link TeaModel}
  *
  * <p>ModifyElasticBizBandWidthResponse</p>

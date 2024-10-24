@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebRulesRequest</p>
@@ -161,7 +162,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The CNAME address to query.
+         * <p>The CNAME address to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kzmk7b8tt351****.aliyunddos1014****</p>
          */
         public Builder cname(String cname) {
             this.putQueryParameter("Cname", cname);
@@ -170,10 +174,13 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The domain name of the website to query.
-         * <p>
+         * <p>The domain name of the website to query.</p>
+         * <blockquote>
+         * <p>The domain must have been configured with website business forwarding rules. You can call <a href="~~DescribeDomains~~">DescribeDomains</a> to query all domains that have been configured with website business forwarding rules.</p>
+         * </blockquote>
          * 
-         * > The domain must have been configured with website business forwarding rules. You can call [DescribeDomains](~~DescribeDomains~~) to query all domains that have been configured with website business forwarding rules.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -182,7 +189,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The list of DDoS protection instance IDs to query.
+         * <p>The list of DDoS protection instance IDs to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -191,7 +201,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * When paginating, set the page number of the current page. The default value is 1.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -200,7 +213,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * When paginating, set the number of forwarding rules per page. The range of values is: 1~10.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -209,10 +225,14 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The query matching pattern. Values:
-         * <p>
-         * - **fuzzy** (default): Indicates fuzzy query.
-         * - **exact**: Indicates exact query.
+         * <p>The query matching pattern. Values:</p>
+         * <ul>
+         * <li><strong>fuzzy</strong> (default): Indicates fuzzy query.</li>
+         * <li><strong>exact</strong>: Indicates exact query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         public Builder queryDomainPattern(String queryDomainPattern) {
             this.putQueryParameter("QueryDomainPattern", queryDomainPattern);
@@ -221,10 +241,11 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The resource group ID of the DDoS protection instance in the resource management service.
-         * <p>
+         * <p>The resource group ID of the DDoS protection instance in the resource management service.</p>
+         * <p>Not setting this parameter indicates the default resource group.</p>
          * 
-         * Not setting this parameter indicates the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

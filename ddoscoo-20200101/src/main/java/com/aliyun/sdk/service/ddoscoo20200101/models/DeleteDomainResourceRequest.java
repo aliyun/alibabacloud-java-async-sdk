@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDomainResourceRequest} extends {@link RequestModel}
  *
  * <p>DeleteDomainResourceRequest</p>
@@ -77,7 +78,11 @@ public class DeleteDomainResourceRequest extends Request {
         }
 
         /**
-         * The domain name for which the forwarding rule is configured.
+         * <p>The domain name for which the forwarding rule is configured.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

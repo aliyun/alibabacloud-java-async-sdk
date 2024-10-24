@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortViewSourceProvincesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortViewSourceProvincesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         private java.util.List < SourceProvinces> sourceProvinces; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the administrative region in China from which the requests are sent.
+         * <p>Details about the administrative region in China from which the requests are sent.</p>
          */
         public Builder sourceProvinces(java.util.List < SourceProvinces> sourceProvinces) {
             this.sourceProvinces = sourceProvinces;
@@ -70,6 +74,12 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortViewSourceProvincesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortViewSourceProvincesResponseBody</p>
+     */
     public static class SourceProvinces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,10 +119,13 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
             private String provinceId; 
 
             /**
-             * The total number of requests that are sent from the ISP.
-             * <p>
+             * <p>The total number of requests that are sent from the ISP.</p>
+             * <blockquote>
+             * <p>This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different administrative regions in China.</p>
+             * </blockquote>
              * 
-             * > This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different administrative regions in China.
+             * <strong>example:</strong>
+             * <p>3390671</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -120,10 +133,13 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the administrative region in China from which the requests are sent. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.
-             * <p>
+             * <p>The ID of the administrative region in China from which the requests are sent. For example, <strong>110000</strong> indicates Beijing, and <strong>120000</strong> indicates Tianjin.</p>
+             * <blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Location parameters</a>.</p>
+             * </blockquote>
              * 
-             * > For more information, see [Location parameters](~~167926~~).
+             * <strong>example:</strong>
+             * <p>440000</p>
              */
             public Builder provinceId(String provinceId) {
                 this.provinceId = provinceId;

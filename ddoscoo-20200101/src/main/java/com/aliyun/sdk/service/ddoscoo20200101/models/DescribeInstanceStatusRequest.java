@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceStatusRequest</p>
@@ -69,10 +70,14 @@ public class DescribeInstanceStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the Anti-DDoS Proxy instance to query.
-         * <p>
+         * <p>The ID of the Anti-DDoS Proxy instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy (Chinese Mainland) or Anti-DDoS Proxy (Outside Chinese Mainland) instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all Anti-DDoS Proxy (Chinese Mainland) or Anti-DDoS Proxy (Outside Chinese Mainland) instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-6ja1y6p5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -81,11 +86,15 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The type of the Anti-DDoS Proxy instance to query. Valid values:
-         * <p>
+         * <p>The type of the Anti-DDoS Proxy instance to query. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: an Anti-DDoS Proxy (Chinese Mainland) instance</li>
+         * <li><strong>2</strong>: an Anti-DDoS Proxy (Outside Chinese Mainland) instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: an Anti-DDoS Proxy (Chinese Mainland) instance
-         * *   **2**: an Anti-DDoS Proxy (Outside Chinese Mainland) instance
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productType(Integer productType) {
             this.putQueryParameter("ProductType", productType);

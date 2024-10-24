@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortAttackMaxFlowRequest} extends {@link RequestModel}
  *
  * <p>DescribePortAttackMaxFlowRequest</p>
@@ -121,10 +122,14 @@ public class DescribePortAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>1583683200</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -133,7 +138,11 @@ public class DescribePortAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of instances to query.
+         * <p>An array that consists of the IDs of instances to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -142,10 +151,11 @@ public class DescribePortAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -154,10 +164,14 @@ public class DescribePortAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>1582992000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

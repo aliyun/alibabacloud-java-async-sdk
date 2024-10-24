@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainStatusCodeCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainStatusCodeCountResponseBody</p>
@@ -181,7 +182,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         private Long status5XX; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +193,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 200 status codes within the specified period of time.
+         * <p>The number of 200 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>951159</p>
          */
         public Builder status200(Long status200) {
             this.status200 = status200;
@@ -197,7 +204,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 2xx status codes within the specified period of time.
+         * <p>The number of 2xx status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>951472</p>
          */
         public Builder status2XX(Long status2XX) {
             this.status2XX = status2XX;
@@ -205,7 +215,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 3xx status codes within the specified period of time.
+         * <p>The number of 3xx status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133209</p>
          */
         public Builder status3XX(Long status3XX) {
             this.status3XX = status3XX;
@@ -213,7 +226,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 403 status codes within the specified period of time.
+         * <p>The number of 403 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status403(Long status403) {
             this.status403 = status403;
@@ -221,7 +237,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 404 status codes within the specified period of time.
+         * <p>The number of 404 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>897</p>
          */
         public Builder status404(Long status404) {
             this.status404 = status404;
@@ -229,7 +248,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 405 status codes within the specified period of time.
+         * <p>The number of 405 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status405(Long status405) {
             this.status405 = status405;
@@ -237,7 +259,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 4xx status codes within the specified period of time.
+         * <p>The number of 4xx status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5653</p>
          */
         public Builder status4XX(Long status4XX) {
             this.status4XX = status4XX;
@@ -245,7 +270,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 501 status codes within the specified period of time.
+         * <p>The number of 501 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status501(Long status501) {
             this.status501 = status501;
@@ -253,7 +281,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 502 status codes within the specified period of time.
+         * <p>The number of 502 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status502(Long status502) {
             this.status502 = status502;
@@ -261,7 +292,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 503 status codes within the specified period of time.
+         * <p>The number of 503 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status503(Long status503) {
             this.status503 = status503;
@@ -269,7 +303,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 504 status codes within the specified period of time.
+         * <p>The number of 504 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status504(Long status504) {
             this.status504 = status504;
@@ -277,7 +314,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 5xx status codes within the specified period of time.
+         * <p>The number of 5xx status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder status5XX(Long status5XX) {
             this.status5XX = status5XX;

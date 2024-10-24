@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSceneDefensePoliciesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSceneDefensePoliciesRequest</p>
@@ -104,10 +105,11 @@ public class DescribeSceneDefensePoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -116,13 +118,16 @@ public class DescribeSceneDefensePoliciesRequest extends Request {
         }
 
         /**
-         * The status of the policy. Valid values:
-         * <p>
+         * <p>The status of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: pending enabling</li>
+         * <li><strong>2</strong>: enabled</li>
+         * <li><strong>3</strong>: expired</li>
+         * </ul>
          * 
-         * *   **0**: disabled
-         * *   **1**: pending enabling
-         * *   **2**: enabled
-         * *   **3**: expired
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -131,11 +136,14 @@ public class DescribeSceneDefensePoliciesRequest extends Request {
         }
 
         /**
-         * The type of the template that is used to create the policy. Valid values:
-         * <p>
+         * <p>The type of the template that is used to create the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>promotion</strong>: the Important Activity template</li>
+         * <li><strong>bypass</strong>: the Forward All template</li>
+         * </ul>
          * 
-         * *   **promotion**: the Important Activity template
-         * *   **bypass**: the Forward All template
+         * <strong>example:</strong>
+         * <p>promotion</p>
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);

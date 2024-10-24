@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyElasticBandWidthRequest} extends {@link RequestModel}
  *
  * <p>ModifyElasticBandWidthRequest</p>
@@ -92,10 +93,14 @@ public class ModifyElasticBandWidthRequest extends Request {
         }
 
         /**
-         * The new burstable protection bandwidth that you want to use. Unit: Gbit/s.
-         * <p>
+         * <p>The new burstable protection bandwidth that you want to use. Unit: Gbit/s.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91502.html">DescribeElasticBandwidthSpec</a> operation to query the available burstable protection bandwidth of the instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeElasticBandwidthSpec](~~91502~~) operation to query the available burstable protection bandwidth of the instance.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder elasticBandwidth(Integer elasticBandwidth) {
             this.putQueryParameter("ElasticBandwidth", elasticBandwidth);
@@ -104,10 +109,14 @@ public class ModifyElasticBandWidthRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> The instance must be in a normal state. You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The instance must be in a normal state. You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

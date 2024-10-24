@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoCcWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoCcWhitelistResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of details of the IP address in the whitelist of the instance.
+         * <p>An array that consists of details of the IP address in the whitelist of the instance.</p>
          */
         public Builder autoCcWhitelist(java.util.List < AutoCcWhitelist> autoCcWhitelist) {
             this.autoCcWhitelist = autoCcWhitelist;
@@ -69,7 +70,10 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F09D085E-5E0F-4FF2-B32E-F4A644049162</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned IP addresses in the whitelist.
+         * <p>The total number of returned IP addresses in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoCcWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoCcWhitelistResponseBody</p>
+     */
     public static class AutoCcWhitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestIp")
         private String destIp;
@@ -153,7 +166,10 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.<em><strong>.</strong></em>.117</p>
              */
             public Builder destIp(String destIp) {
                 this.destIp = destIp;
@@ -161,7 +177,10 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the IP address in the whitelist. Unit: seconds. **0** indicates that the IP address in the whitelist never expires.
+             * <p>The validity period of the IP address in the whitelist. Unit: seconds. <strong>0</strong> indicates that the IP address in the whitelist never expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -169,7 +188,10 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses that is contained in the IP address whitelist.
+             * <p>The IP addresses that is contained in the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.2.2</p>
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;
@@ -177,11 +199,14 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of how an IP address is added to the whitelist. Valid values:
-             * <p>
+             * <p>The mode of how an IP address is added to the whitelist. Valid values:</p>
+             * <ul>
+             * <li><strong>manual</strong>: manually added</li>
+             * <li><strong>auto</strong>: automatically added</li>
+             * </ul>
              * 
-             * *   **manual**: manually added
-             * *   **auto**: automatically added
+             * <strong>example:</strong>
+             * <p>manual</p>
              */
             public Builder type(String type) {
                 this.type = type;

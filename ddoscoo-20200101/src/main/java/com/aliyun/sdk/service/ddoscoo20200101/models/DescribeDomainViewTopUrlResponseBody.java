@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainViewTopUrlResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainViewTopUrlResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
         private java.util.List < UrlList> urlList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the URLs that receive the most requests.
+         * <p>An array consisting of the URLs that receive the most requests.</p>
          */
         public Builder urlList(java.util.List < UrlList> urlList) {
             this.urlList = urlList;
@@ -70,6 +74,12 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainViewTopUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainViewTopUrlResponseBody</p>
+     */
     public static class UrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -121,7 +131,10 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3390671</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -129,7 +142,10 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -137,7 +153,10 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is Base64-encoded.
+             * <p>The URL that is Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lw==</p>
              */
             public Builder url(String url) {
                 this.url = url;

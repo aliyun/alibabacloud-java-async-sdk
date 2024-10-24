@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyQpsModeRequest} extends {@link RequestModel}
  *
  * <p>ModifyQpsModeRequest</p>
@@ -92,10 +93,14 @@ public class ModifyQpsModeRequest extends Request {
         }
 
         /**
-         * The region ID of the Anti-DDoS Pro instance.
-         * <p>
+         * <p>The region ID of the Anti-DDoS Pro instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-7e225i41****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -104,11 +109,15 @@ public class ModifyQpsModeRequest extends Request {
         }
 
         /**
-         * The metering method of QPS. Valid values:
-         * <p>
+         * <p>The metering method of QPS. Valid values:</p>
+         * <ul>
+         * <li><strong>month</strong>: monthly 95th percentile QPS.</li>
+         * <li><strong>day</strong>: daily 95th percentile QPS.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **month**: monthly 95th percentile QPS.
-         * *   **day**: daily 95th percentile QPS.
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

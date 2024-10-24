@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyWebRuleRequest</p>
@@ -164,7 +165,10 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -191,7 +195,10 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
-         * ProxyTypes.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ProxyType&quot;:&quot;https&quot;,&quot;ProxyPorts&quot;:[443]}]</p>
          */
         public Builder proxyTypes(String proxyTypes) {
             this.putQueryParameter("ProxyTypes", proxyTypes);
@@ -200,7 +207,10 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
-         * RealServers.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.xxx.xxx.1</p>
          */
         public Builder realServers(java.util.List < String > realServers) {
             this.putQueryParameter("RealServers", realServers);
@@ -218,7 +228,10 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
-         * RsType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder rsType(Integer rsType) {
             this.putQueryParameter("RsType", rsType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoCcWhitelistRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoCcWhitelistRequest</p>
@@ -121,10 +122,14 @@ public class DescribeAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,10 +138,13 @@ public class DescribeAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * The keyword for the query. This keyword is used to specify the prefix of the source IP address that you want to query.
-         * <p>
+         * <p>The keyword for the query. This keyword is used to specify the prefix of the source IP address that you want to query.</p>
+         * <blockquote>
+         * <p>The keyword must be greater than three characters in length.</p>
+         * </blockquote>
          * 
-         * > The keyword must be greater than three characters in length.
+         * <strong>example:</strong>
+         * <p>138</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -145,7 +153,11 @@ public class DescribeAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.
+         * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +166,11 @@ public class DescribeAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

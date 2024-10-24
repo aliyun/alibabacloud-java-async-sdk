@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachSceneDefenseObjectRequest} extends {@link RequestModel}
  *
  * <p>DetachSceneDefenseObjectRequest</p>
@@ -106,7 +107,10 @@ public class DetachSceneDefenseObjectRequest extends Request {
         }
 
         /**
-         * The type of the object. Set the value to **Domain**, which indicates a domain name.
+         * <p>The type of the object. Set the value to <strong>Domain</strong>, which indicates a domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Domain</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -115,7 +119,11 @@ public class DetachSceneDefenseObjectRequest extends Request {
         }
 
         /**
-         * The protection asset that you want to remove from a policy. Separate multiple protection assets with commas (,).
+         * <p>The protection asset that you want to remove from a policy. Separate multiple protection assets with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder objects(String objects) {
             this.putQueryParameter("Objects", objects);
@@ -124,10 +132,14 @@ public class DetachSceneDefenseObjectRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
-         * <p>
+         * <p>The ID of the policy.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> operation to query the IDs of all policies.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
+         * <strong>example:</strong>
+         * <p>321a-fd31-df51-****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);

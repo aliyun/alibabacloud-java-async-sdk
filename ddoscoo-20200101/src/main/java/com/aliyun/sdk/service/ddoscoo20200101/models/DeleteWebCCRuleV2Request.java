@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWebCCRuleV2Request} extends {@link RequestModel}
  *
  * <p>DeleteWebCCRuleV2Request</p>
@@ -105,10 +106,14 @@ public class DeleteWebCCRuleV2Request extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -117,11 +122,14 @@ public class DeleteWebCCRuleV2Request extends Request {
         }
 
         /**
-         * The source of the rule. Valid values:
-         * <p>
+         * <p>The source of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>manual</strong> (default): manually created.</li>
+         * <li><strong>clover</strong>: automatically created. Specify this value when you want to delete intelligent protection rules.</li>
+         * </ul>
          * 
-         * *   **manual** (default): manually created.
-         * *   **clover**: automatically created. Specify this value when you want to delete intelligent protection rules.
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -130,7 +138,10 @@ public class DeleteWebCCRuleV2Request extends Request {
         }
 
         /**
-         * The names of the rules that you want to delete.
+         * <p>The names of the rules that you want to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;trdsss&quot;]</p>
          */
         public Builder ruleNames(String ruleNames) {
             this.putQueryParameter("RuleNames", ruleNames);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSceneDefensePoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSceneDefensePoliciesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * An array that consists of the configurations of the scenario-specific custom policy.
+         * <p>An array that consists of the configurations of the scenario-specific custom policy.</p>
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -69,7 +70,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F65DF043-E0EB-4796-9467-23DDCDF92C1D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSceneDefensePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSceneDefensePoliciesResponseBody</p>
+     */
     public static class RuntimePolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NewValue")
         private String newValue;
@@ -157,12 +170,12 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             private String oldValue; 
 
             /**
-             * The protection rule that is applied when the policy takes effect.
-             * <p>
+             * <p>The protection rule that is applied when the policy takes effect.</p>
+             * <p>If you set <strong>PolicyType</strong> to <strong>1</strong>, the value is <strong>{&quot;cc_rule_enable&quot;: false }</strong>. The value indicates that the Frequency Control policy is disabled.</p>
+             * <p>If you set <strong>PolicyType</strong> to <strong>2</strong>, the value is <strong>{&quot;ai_rule_enable&quot;: 0}</strong>. The value indicates that the Intelligent Protection policy is disabled.</p>
              * 
-             * If you set **PolicyType** to **1**, the value is **{"cc_rule_enable": false }**. The value indicates that the Frequency Control policy is disabled.
-             * 
-             * If you set **PolicyType** to **2**, the value is **{"ai_rule_enable": 0}**. The value indicates that the Intelligent Protection policy is disabled.
+             * <strong>example:</strong>
+             * <p>{&quot;cc_rule_enable&quot;: false }</p>
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -170,11 +183,14 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The protection policy whose status is changed when the policy takes effect. Valid values:
-             * <p>
+             * <p>The protection policy whose status is changed when the policy takes effect. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: indicates that the Frequency Control policy is changed.</li>
+             * <li><strong>2</strong>: indicates that the Intelligent Protection policy is changed.</li>
+             * </ul>
              * 
-             * *   **1**: indicates that the Frequency Control policy is changed.
-             * *   **2**: indicates that the Intelligent Protection policy is changed.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder policyType(Integer policyType) {
                 this.policyType = policyType;
@@ -182,16 +198,19 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the policy. Valid values:
-             * <p>
+             * <p>The running status of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The policy has not been issued or is restored.</li>
+             * <li><strong>1</strong>: The policy is pending.</li>
+             * <li><strong>2</strong>: The policy is being restored.</li>
+             * <li><strong>3</strong>: The policy takes effect.</li>
+             * <li><strong>4</strong>: The policy fails to take effect.</li>
+             * <li><strong>5</strong>:The policy fails to be restored.</li>
+             * <li><strong>6</strong>: The configurations of the protected objects for the policy does not exist because the configurations may be deleted.</li>
+             * </ul>
              * 
-             * *   **0**: The policy has not been issued or is restored.
-             * *   **1**: The policy is pending.
-             * *   **2**: The policy is being restored.
-             * *   **3**: The policy takes effect.
-             * *   **4**: The policy fails to take effect.
-             * *   **5**:The policy fails to be restored.
-             * *   **6**: The configurations of the protected objects for the policy does not exist because the configurations may be deleted.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -199,12 +218,12 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The protection rule that is applied before the policy takes effect.
-             * <p>
+             * <p>The protection rule that is applied before the policy takes effect.</p>
+             * <p>If you set <strong>PolicyType</strong> to <strong>1</strong>, the value is <strong>{&quot;cc_rule_enable&quot;: true}</strong>. The value indicates that the Frequency Control policy is enabled.</p>
+             * <p>If you set <strong>PolicyType</strong> to <strong>2</strong>, the value is <strong>{&quot;ai_rule_enable&quot;: 1}</strong>. The value indicates that the Intelligent Protection policy is enabled.</p>
              * 
-             * If you set **PolicyType** to **1**, the value is **{"cc_rule_enable": true}**. The value indicates that the Frequency Control policy is enabled.
-             * 
-             * If you set **PolicyType** to **2**, the value is **{"ai_rule_enable": 1}**. The value indicates that the Intelligent Protection policy is enabled.
+             * <strong>example:</strong>
+             * <p>{&quot;cc_rule_enable&quot;: true}</p>
              */
             public Builder oldValue(String oldValue) {
                 this.oldValue = oldValue;
@@ -218,6 +237,12 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSceneDefensePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSceneDefensePoliciesResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Done")
         private Integer done;
@@ -341,12 +366,15 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             private String template; 
 
             /**
-             * The execution status of the policy. Valid values:
-             * <p>
+             * <p>The execution status of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: not executed or execution completed</li>
+             * <li><strong>0</strong>: being executed</li>
+             * <li><strong>-1</strong>: execution failed</li>
+             * </ul>
              * 
-             * *   **1**: not executed or execution completed
-             * *   **0**: being executed
-             * *   **-1**: execution failed
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder done(Integer done) {
                 this.done = done;
@@ -354,7 +382,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the policy expires. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time at which the policy expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1586016000000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -362,7 +393,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testpolicy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -370,7 +404,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of objects that are protected by the policy.
+             * <p>The number of objects that are protected by the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder objectCount(Integer objectCount) {
                 this.objectCount = objectCount;
@@ -378,7 +415,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>321a-fd31-df51-****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -386,7 +426,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The running rules of the policy.
+             * <p>The running rules of the policy.</p>
              */
             public Builder runtimePolicies(java.util.List < RuntimePolicies> runtimePolicies) {
                 this.runtimePolicies = runtimePolicies;
@@ -394,7 +434,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the policy takes effect. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time at which the policy takes effect. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1585670400000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -402,13 +445,16 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the policy. Valid values:
-             * <p>
+             * <p>The status of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: pending enabling</li>
+             * <li><strong>2</strong>: enabled</li>
+             * <li><strong>3</strong>: expired</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: pending enabling
-             * *   **2**: enabled
-             * *   **3**: expired
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -416,11 +462,14 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the template that is used to create the policy. Valid values:
-             * <p>
+             * <p>The type of the template that is used to create the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>promotion</strong>: the Important Activity template</li>
+             * <li><strong>bypass</strong>: the Forward All template</li>
+             * </ul>
              * 
-             * *   **promotion**: the Important Activity template
-             * *   **bypass**: the Forward All template
+             * <strong>example:</strong>
+             * <p>promotion</p>
              */
             public Builder template(String template) {
                 this.template = template;

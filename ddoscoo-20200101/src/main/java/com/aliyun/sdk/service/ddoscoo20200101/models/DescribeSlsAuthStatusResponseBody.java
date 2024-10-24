@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlsAuthStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlsAuthStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSlsAuthStatusResponseBody extends TeaModel {
         private Boolean slsAuthStatus; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class DescribeSlsAuthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access Log Service. Valid values:
-         * <p>
+         * <p>Indicates whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access Log Service. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder slsAuthStatus(Boolean slsAuthStatus) {
             this.slsAuthStatus = slsAuthStatus;

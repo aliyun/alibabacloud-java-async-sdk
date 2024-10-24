@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceStatisticsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics on the instance.
+         * <p>The statistics on the instance.</p>
          */
         public Builder instanceStatistics(java.util.List < InstanceStatistics> instanceStatistics) {
             this.instanceStatistics = instanceStatistics;
@@ -57,7 +58,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>642319A9-D1F2-4459-A447-E57CFC599FDE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceStatisticsResponseBody</p>
+     */
     public static class InstanceStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseCountUsage")
         private Integer defenseCountUsage;
@@ -145,10 +155,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer siteUsage; 
 
             /**
-             * The number of advanced mitigation sessions that are used in this month.
-             * <p>
+             * <p>The number of advanced mitigation sessions that are used in this month.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defenseCountUsage(Integer defenseCountUsage) {
                 this.defenseCountUsage = defenseCountUsage;
@@ -156,7 +169,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of domain names that are protected by the instance.
+             * <p>The number of domain names that are protected by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder domainUsage(Integer domainUsage) {
                 this.domainUsage = domainUsage;
@@ -164,7 +180,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-mp91j1ao****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -172,7 +191,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ports that are protected by the instance.
+             * <p>The number of ports that are protected by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder portUsage(Integer portUsage) {
                 this.portUsage = portUsage;
@@ -180,7 +202,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of websites that are protected by the instance.
+             * <p>The number of websites that are protected by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteUsage(Integer siteUsage) {
                 this.siteUsage = siteUsage;

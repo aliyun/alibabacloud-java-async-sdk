@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOcspStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyOcspStatusRequest</p>
@@ -92,10 +93,14 @@ public class ModifyOcspStatusRequest extends Request {
         }
 
         /**
-         * The domain name for which you want to configure the Static Page Caching policy.
-         * <p>
+         * <p>The domain name for which you want to configure the Static Page Caching policy.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.
+         * <strong>example:</strong>
+         * <p>click.linktech.cn</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -104,11 +109,12 @@ public class ModifyOcspStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the OCSP feature. Valid values:
-         * <p>
-         * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <p>Specifies whether to enable the OCSP feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);

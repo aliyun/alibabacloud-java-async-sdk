@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackSourceCidrResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackSourceCidrResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the back-to-origin CIDR blocks of the instance.
+         * <p>An array that consists of the back-to-origin CIDR blocks of the instance.</p>
          */
         public Builder cidrs(java.util.List < String > cidrs) {
             this.cidrs = cidrs;
@@ -57,7 +58,10 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

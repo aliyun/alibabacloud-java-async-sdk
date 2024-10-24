@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebPreciseAccessSwitchResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyWebPreciseAccessSwitchResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyWebPreciseAccessSwitchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticQpsRequest} extends {@link RequestModel}
  *
  * <p>DescribeElasticQpsRequest</p>
@@ -112,10 +113,14 @@ public class DescribeElasticQpsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>1684339200</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -124,7 +129,10 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * The sampling interval. Unit: seconds. The value must be a multiple of 60. Default value: 60. Unit: seconds. The query result varies depending on the sampling interval.
+         * <p>The sampling interval. Unit: seconds. The value must be a multiple of 60. Default value: 60. Unit: seconds. The query result varies depending on the sampling interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -133,7 +141,10 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * The IP address of the Anti-DDoS Proxy instance to query.
+         * <p>The IP address of the Anti-DDoS Proxy instance to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -142,11 +153,15 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * The type of the service. Valid values:
-         * <p>
+         * <p>The type of the service. Valid values:</p>
+         * <ul>
+         * <li><strong>cn</strong>: Anti-DDoS Proxy (Chinese Mainland)</li>
+         * <li><strong>cn-hongkong</strong>: Anti-DDoS Proxy (Outside Chinese Mainland)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn**: Anti-DDoS Proxy (Chinese Mainland)
-         * *   **cn-hongkong**: Anti-DDoS Proxy (Outside Chinese Mainland)
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -155,10 +170,14 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>1684252800</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

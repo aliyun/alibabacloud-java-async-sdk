@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebReportTopIpResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebReportTopIpResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -57,7 +58,10 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D21BE0C4-8E83-5E32-86C6-AA6BE9B1B5BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebReportTopIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebReportTopIpResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
@@ -133,7 +143,10 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
             private String sourceIp; 
 
             /**
-             * The ID of the location.
+             * <p>The ID of the location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90998690</p>
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -141,7 +154,10 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned.
+             * <p>The number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -149,27 +165,30 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP) for the attack. Valid values:
-             * <p>
+             * <p>The Internet service provider (ISP) for the attack. Valid values:</p>
+             * <ul>
+             * <li><strong>100017</strong>: China Telecom</li>
+             * <li><strong>100026</strong>: China Unicom</li>
+             * <li><strong>100025</strong>: China Mobile</li>
+             * <li><strong>100027</strong>: China Education and Research Network</li>
+             * <li><strong>100020</strong>: China Mobile Tietong</li>
+             * <li><strong>1000143</strong>: Dr.Peng Telecom &amp; Media Group</li>
+             * <li><strong>100080</strong>: Beijing Gehua CATV Network</li>
+             * <li><strong>1000139</strong>: National Radio and Television Administration</li>
+             * <li><strong>100023</strong>: Oriental Cable Network</li>
+             * <li><strong>100063</strong>: Founder Broadband</li>
+             * <li><strong>1000337</strong>: China Internet Exchange</li>
+             * <li><strong>100021</strong>: 21Vianet Group</li>
+             * <li><strong>1000333</strong>: Wasu Media Holding</li>
+             * <li><strong>100093</strong>: Wangsu Science &amp; Technology</li>
+             * <li><strong>1000401</strong>: Tencent</li>
+             * <li><strong>100099</strong>: Baidu</li>
+             * <li><strong>1000323</strong>: Alibaba Cloud</li>
+             * <li><strong>100098</strong>: Alibaba</li>
+             * </ul>
              * 
-             * *   **100017**: China Telecom
-             * *   **100026**: China Unicom
-             * *   **100025**: China Mobile
-             * *   **100027**: China Education and Research Network
-             * *   **100020**: China Mobile Tietong
-             * *   **1000143**: Dr.Peng Telecom & Media Group
-             * *   **100080**: Beijing Gehua CATV Network
-             * *   **1000139**: National Radio and Television Administration
-             * *   **100023**: Oriental Cable Network
-             * *   **100063**: Founder Broadband
-             * *   **1000337**: China Internet Exchange
-             * *   **100021**: 21Vianet Group
-             * *   **1000333**: Wasu Media Holding
-             * *   **100093**: Wangsu Science & Technology
-             * *   **1000401**: Tencent
-             * *   **100099**: Baidu
-             * *   **1000323**: Alibaba Cloud
-             * *   **100098**: Alibaba
+             * <strong>example:</strong>
+             * <p>100017</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -177,7 +196,10 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>117.186.XX.XX</p>
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;

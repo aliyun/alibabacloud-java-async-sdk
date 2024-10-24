@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAutoCcBlacklistRequest} extends {@link RequestModel}
  *
  * <p>AddAutoCcBlacklistRequest</p>
@@ -107,7 +108,10 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * Blacklist.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;src&quot;:&quot;198.51.XX.XX&quot;},{&quot;src&quot;:&quot;198.52.XX.XX&quot;}]</p>
          */
         public Builder blacklist(String blacklist) {
             this.putQueryParameter("Blacklist", blacklist);
@@ -116,7 +120,10 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder expireTime(Integer expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -125,7 +132,10 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

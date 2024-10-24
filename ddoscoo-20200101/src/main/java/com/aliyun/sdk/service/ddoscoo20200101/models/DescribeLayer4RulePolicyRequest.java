@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLayer4RulePolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeLayer4RulePolicyRequest</p>
@@ -77,18 +78,21 @@ public class DescribeLayer4RulePolicyRequest extends Request {
         }
 
         /**
-         * The port forwarding rule that you want to query.
-         * <p>
+         * <p>The port forwarding rule that you want to query.</p>
+         * <p>This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can query only one port forwarding rule at a time.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157484.html">DescribeNetworkRules</a> to query existing port forwarding rules.</p>
+         * </blockquote>
+         * <p>Each port forwarding rule contains the following fields:</p>
+         * <ul>
+         * <li><strong>InstanceId</strong>: the ID of the instance. This field is required and must be of the string type.</li>
+         * <li><strong>Protocol</strong>: the forwarding protocol. This field is required and must be of the string type. Valid values: <strong>tcp</strong> and <strong>udp</strong>.</li>
+         * <li><strong>FrontendPort</strong>: the forwarding port. This field is required and must be of the integer type.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can query only one port forwarding rule at a time.
-         * 
-         * > You can call the [DescribeNetworkRules](~~157484~~) to query existing port forwarding rules.
-         * 
-         * Each port forwarding rule contains the following fields:
-         * 
-         * *   **InstanceId**: the ID of the instance. This field is required and must be of the string type.
-         * *   **Protocol**: the forwarding protocol. This field is required and must be of the string type. Valid values: **tcp** and **udp**.
-         * *   **FrontendPort**: the forwarding port. This field is required and must be of the integer type.
+         * <strong>example:</strong>
+         * <p>[{&quot;InstanceId&quot;:&quot;ddosDip-sg-4hr2b3l****&quot;,&quot;FrontendPort&quot;:2020,&quot;Protocol&quot;:&quot;udp&quot;}]</p>
          */
         public Builder listeners(String listeners) {
             this.putQueryParameter("Listeners", listeners);

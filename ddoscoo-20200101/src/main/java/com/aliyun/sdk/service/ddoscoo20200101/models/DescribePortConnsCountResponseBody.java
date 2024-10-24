@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortConnsCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortConnsCountResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of active connections.
+         * <p>The number of active connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>159</p>
          */
         public Builder actConns(Long actConns) {
             this.actConns = actConns;
@@ -93,7 +97,10 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of concurrent connections.
+         * <p>The number of concurrent connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46340</p>
          */
         public Builder conns(Long conns) {
             this.conns = conns;
@@ -101,7 +108,10 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of new connections.
+         * <p>The number of new connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cps(Long cps) {
             this.cps = cps;
@@ -109,7 +119,10 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of inactive connections.
+         * <p>The number of inactive connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121</p>
          */
         public Builder inActConns(Long inActConns) {
             this.inActConns = inActConns;
@@ -117,7 +130,10 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48859E14-A9FB-4100-99FF-AAB75CA46776</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyFullLogTtlRequest} extends {@link RequestModel}
  *
  * <p>ModifyFullLogTtlRequest</p>
@@ -91,7 +92,10 @@ public class ModifyFullLogTtlRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -100,7 +104,11 @@ public class ModifyFullLogTtlRequest extends Request {
         }
 
         /**
-         * The log storage duration of a website. Valid values: **30** to **180**. Unit: days.
+         * <p>The log storage duration of a website. Valid values: <strong>30</strong> to <strong>180</strong>. Unit: days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);

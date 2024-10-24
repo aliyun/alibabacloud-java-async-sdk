@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSpecsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceSpecsRequest</p>
@@ -77,7 +78,8 @@ public class DescribeInstanceSpecsRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of instances to query.
+         * <p>An array that consists of the IDs of instances to query.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

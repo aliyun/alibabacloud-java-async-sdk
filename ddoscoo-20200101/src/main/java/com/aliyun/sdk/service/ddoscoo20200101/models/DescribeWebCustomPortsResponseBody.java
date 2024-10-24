@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebCustomPortsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebCustomPortsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         private java.util.List < WebCustomPorts> webCustomPorts; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of information about supported custom ports that are used by a website.
+         * <p>An array consisting of information about supported custom ports that are used by a website.</p>
          */
         public Builder webCustomPorts(java.util.List < WebCustomPorts> webCustomPorts) {
             this.webCustomPorts = webCustomPorts;
@@ -70,6 +74,12 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebCustomPortsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCustomPortsResponseBody</p>
+     */
     public static class WebCustomPorts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxyPorts")
         private java.util.List < String > proxyPorts;
@@ -109,7 +119,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
             private String proxyType; 
 
             /**
-             * An array that consists of supported custom ports.
+             * <p>An array that consists of supported custom ports.</p>
              */
             public Builder proxyPorts(java.util.List < String > proxyPorts) {
                 this.proxyPorts = proxyPorts;
@@ -117,11 +127,14 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>http</strong></li>
+             * <li><strong>https</strong></li>
+             * </ul>
              * 
-             * *   **http**
-             * *   **https**
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;

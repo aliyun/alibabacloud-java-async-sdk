@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigUdpReflectRequest} extends {@link RequestModel}
  *
  * <p>ConfigUdpReflectRequest</p>
@@ -83,27 +84,31 @@ public class ConfigUdpReflectRequest extends Request {
         } 
 
         /**
-         * The configuration of the filtering policy for UDP reflection attacks.
-         * <p>
+         * <p>The configuration of the filtering policy for UDP reflection attacks.</p>
+         * <p>The value is a string that consists of a JSON struct. The JSON struct contains the following field:</p>
+         * <ul>
+         * <li><p><strong>UdpSports</strong>: the source ports of the UDP traffic that you want to block. This field is required and must be of the ARRAY type. Example: <code>[17,19]</code>.</p>
+         * <p>We recommend that you block the following source ports of UDP traffic:</p>
+         * <ul>
+         * <li>UDP 17: QOTD reflection attacks</li>
+         * <li>UDP 19: CharGEN reflection attacks</li>
+         * <li>UDP 69: TFTP reflection attacks</li>
+         * <li>UDP 111: Portmap reflection attacks</li>
+         * <li>UDP 123: NTP reflection attacks</li>
+         * <li>UDP 137: NetBIOS reflection attacks</li>
+         * <li>UDP 161: SNMPv2 reflection attacks</li>
+         * <li>UDP 389: CLDAP reflection attacks</li>
+         * <li>UDP 1194: OpenVPN reflection attacks</li>
+         * <li>UDP 1900: SSDP reflection attacks</li>
+         * <li>UDP 3389: RDP reflection attacks</li>
+         * <li>UDP 11211: memcached reflection attacks</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * The value is a string that consists of a JSON struct. The JSON struct contains the following field:
-         * 
-         * *   **UdpSports**: the source ports of the UDP traffic that you want to block. This field is required and must be of the ARRAY type. Example: `[17,19]`.
-         * 
-         *     We recommend that you block the following source ports of UDP traffic:
-         * 
-         *     *   UDP 17: QOTD reflection attacks
-         *     *   UDP 19: CharGEN reflection attacks
-         *     *   UDP 69: TFTP reflection attacks
-         *     *   UDP 111: Portmap reflection attacks
-         *     *   UDP 123: NTP reflection attacks
-         *     *   UDP 137: NetBIOS reflection attacks
-         *     *   UDP 161: SNMPv2 reflection attacks
-         *     *   UDP 389: CLDAP reflection attacks
-         *     *   UDP 1194: OpenVPN reflection attacks
-         *     *   UDP 1900: SSDP reflection attacks
-         *     *   UDP 3389: RDP reflection attacks
-         *     *   UDP 11211: memcached reflection attacks
+         * <strong>example:</strong>
+         * <p>{&quot;UdpSports&quot;:[17,19]}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -112,10 +117,14 @@ public class ConfigUdpReflectRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-i7m25564****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,11 +133,14 @@ public class ConfigUdpReflectRequest extends Request {
         }
 
         /**
-         * The region ID of the Anti-DDoS Proxy instance. Valid values:
-         * <p>
+         * <p>The region ID of the Anti-DDoS Proxy instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: indicates an Anti-DDoS Proxy (Chinese Mainland) instance. This is the default value.</li>
+         * <li><strong>ap-southeast-1</strong>: indicates an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: indicates an Anti-DDoS Proxy (Chinese Mainland) instance. This is the default value.
-         * *   **ap-southeast-1**: indicates an Anti-DDoS Proxy (Outside Chinese Mainland) instance.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

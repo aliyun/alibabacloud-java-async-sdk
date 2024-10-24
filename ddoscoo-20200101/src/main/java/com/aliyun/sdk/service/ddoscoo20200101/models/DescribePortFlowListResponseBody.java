@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortFlowListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortFlowListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned traffic data.
+         * <p>The returned traffic data.</p>
          */
         public Builder portFlowList(java.util.List < PortFlowList> portFlowList) {
             this.portFlowList = portFlowList;
@@ -57,7 +58,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFC77501-BDF8-4BC8-9BF5-B295FBC3189B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePortFlowListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortFlowListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortFlowListResponseBody</p>
+     */
     public static class PortFlowList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttackBps")
         private Long attackBps;
@@ -289,7 +299,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * The bandwidth of attack traffic. Unit: bit/s.
+             * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attackBps(Long attackBps) {
                 this.attackBps = attackBps;
@@ -297,7 +310,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of attack traffic. Unit: pps.
+             * <p>The packet forwarding rate of attack traffic. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attackPps(Long attackPps) {
                 this.attackPps = attackPps;
@@ -305,7 +321,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound bandwidth. Unit: bit/s.
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2176000</p>
              */
             public Builder inBps(Long inBps) {
                 this.inBps = inBps;
@@ -313,7 +332,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of inbound traffic. Unit: packets per second.
+             * <p>The packet forwarding rate of inbound traffic. Unit: packets per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2934</p>
              */
             public Builder inPps(Long inPps) {
                 this.inPps = inPps;
@@ -321,7 +343,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The index number of the returned data.
+             * <p>The index number of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -329,7 +354,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound bandwidth. Unit: bit/s.
+             * <p>The outbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4389</p>
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;
@@ -337,7 +365,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of outbound traffic. Unit: packets per second (pps).
+             * <p>The packet forwarding rate of outbound traffic. Unit: packets per second (pps).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder outPps(Long outPps) {
                 this.outPps = outPps;
@@ -345,17 +376,21 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The source region of the traffic. Valid values:
-             * <p>
+             * <p>The source region of the traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>cn</strong>: mainland China</li>
+             * <li><strong>alb-ap-northeast-1-gf-x</strong>: Japan (Tokyo)</li>
+             * <li><strong>alb-ap-southeast-gf-x</strong>: Singapore</li>
+             * <li><strong>alb-cn-hongkong-gf-x</strong>: Hong Kong (China)</li>
+             * <li><strong>alb-eu-central-1-gf-x</strong>: Germany (Frankfurt)</li>
+             * <li><strong>alb-us-west-1-gf-x</strong>: US (Silicon Valley)</li>
+             * </ul>
+             * <blockquote>
+             * <p>The values except <strong>cn</strong> are returned only when <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>.</p>
+             * </blockquote>
              * 
-             * *   **cn**: mainland China
-             * *   **alb-ap-northeast-1-gf-x**: Japan (Tokyo)
-             * *   **alb-ap-southeast-gf-x**: Singapore
-             * *   **alb-cn-hongkong-gf-x**: Hong Kong (China)
-             * *   **alb-eu-central-1-gf-x**: Germany (Frankfurt)
-             * *   **alb-us-west-1-gf-x**: US (Silicon Valley)
-             * 
-             * > The values except **cn** are returned only when **RegionId** is set to **ap-southeast-1**.
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -427,7 +462,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582992000</p>
              */
             public Builder time(Long time) {
                 this.time = time;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebCCRulesV2Request} extends {@link RequestModel}
  *
  * <p>DescribeWebCCRulesV2Request</p>
@@ -95,7 +96,10 @@ public class DescribeWebCCRulesV2Request extends Request {
         } 
 
         /**
-         * The domain name of the website that you want to add to the Anti-DDoS Proxy instance for protection.
+         * <p>The domain name of the website that you want to add to the Anti-DDoS Proxy instance for protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -104,7 +108,10 @@ public class DescribeWebCCRulesV2Request extends Request {
         }
 
         /**
-         * The number of entries that you want the system to skip before the system returns entries. Default value: **0**.
+         * <p>The number of entries that you want the system to skip before the system returns entries. Default value: <strong>0</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(String offset) {
             this.putQueryParameter("Offset", offset);
@@ -113,11 +120,14 @@ public class DescribeWebCCRulesV2Request extends Request {
         }
 
         /**
-         * The method used to create the rule. Valid values:
-         * <p>
+         * <p>The method used to create the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>manual</strong> (default): manually created.</li>
+         * <li><strong>clover</strong>: automatically created.</li>
+         * </ul>
          * 
-         * *   **manual** (default): manually created.
-         * *   **clover**: automatically created.
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -126,7 +136,10 @@ public class DescribeWebCCRulesV2Request extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **20**. Default value: **20**.
+         * <p>The number of entries per page. Maximum value: <strong>20</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

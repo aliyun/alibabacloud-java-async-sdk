@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticQpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticQpsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the burstable QPS.
+         * <p>The information about the burstable QPS.</p>
          */
         public Builder elasticQps(java.util.List < ElasticQps> elasticQps) {
             this.elasticQps = elasticQps;
@@ -57,7 +58,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID, which is used to locate and troubleshoot issues.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2E7F7F7B-39A8-5D92-BAB4-D89D9DCE7D4F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticQpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticQpsResponseBody</p>
+     */
     public static class ElasticQps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
@@ -193,7 +203,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             private Long ups; 
 
             /**
-             * The index number of the returned data.
+             * <p>The index number of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -201,7 +214,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The peak QPS of the normal service.
+             * <p>The peak QPS of the normal service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder maxNormalQps(Long maxNormalQps) {
                 this.maxNormalQps = maxNormalQps;
@@ -209,7 +225,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The peak inbound QPS.
+             * <p>The peak inbound QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxQps(Long maxQps) {
                 this.maxQps = maxQps;
@@ -217,7 +236,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests during the step size period.
+             * <p>The total number of requests during the step size period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15104</p>
              */
             public Builder pv(Long pv) {
                 this.pv = pv;
@@ -225,7 +247,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of HTTP 2xx status codes during the step size period.
+             * <p>The total number of HTTP 2xx status codes during the step size period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>455</p>
              */
             public Builder status2(Long status2) {
                 this.status2 = status2;
@@ -233,7 +258,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of HTTP 3xx status codes during the step size period.
+             * <p>The total number of HTTP 3xx status codes during the step size period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder status3(Long status3) {
                 this.status3 = status3;
@@ -241,7 +269,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of HTTP 4xx status codes during the step size period.
+             * <p>The total number of HTTP 4xx status codes during the step size period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder status4(Long status4) {
                 this.status4 = status4;
@@ -249,7 +280,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of HTTP 5xx status codes during the step size period.
+             * <p>The total number of HTTP 5xx status codes during the step size period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status5(Long status5) {
                 this.status5 = status5;
@@ -257,7 +291,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of origin requests during the step size period.
+             * <p>The total number of origin requests during the step size period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1223</p>
              */
             public Builder ups(Long ups) {
                 this.ups = ups;

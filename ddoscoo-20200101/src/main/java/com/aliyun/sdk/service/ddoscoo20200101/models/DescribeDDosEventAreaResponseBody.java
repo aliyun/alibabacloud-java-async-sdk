@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDosEventAreaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDDosEventAreaResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the source region from which the volumetric attack was initiated.
+         * <p>The information about the source region from which the volumetric attack was initiated.</p>
          */
         public Builder areas(java.util.List < Areas> areas) {
             this.areas = areas;
@@ -57,7 +58,10 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11710C9F-BC5E-481A-BEC5-C6D8FBFCA827</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDDosEventAreaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDDosEventAreaResponseBody</p>
+     */
     public static class Areas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -109,7 +119,10 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
             private Long inPkts; 
 
             /**
-             * The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](~~167926~~). For example, **110000** indicates Beijing, China, and **us** indicates the United States.
+             * <p>The code or ID of the source region. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110000</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -117,7 +130,10 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
             }
 
             /**
-             * The number of request packets that were sent from the source region.
+             * <p>The number of request packets that were sent from the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>228</p>
              */
             public Builder inPkts(Long inPkts) {
                 this.inPkts = inPkts;

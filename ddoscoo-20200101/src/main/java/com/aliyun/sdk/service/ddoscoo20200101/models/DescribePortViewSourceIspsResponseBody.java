@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortViewSourceIspsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortViewSourceIspsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the details of the ISP.
+         * <p>An array that consists of the details of the ISP.</p>
          */
         public Builder isps(java.util.List < Isps> isps) {
             this.isps = isps;
@@ -57,7 +58,10 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortViewSourceIspsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortViewSourceIspsResponseBody</p>
+     */
     public static class Isps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,10 +119,13 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
             private String ispId; 
 
             /**
-             * The total number of requests that are sent from the ISP.
-             * <p>
+             * <p>The total number of requests that are sent from the ISP.</p>
+             * <blockquote>
+             * <p>This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different ISPs.</p>
+             * </blockquote>
              * 
-             * > This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different ISPs.
+             * <strong>example:</strong>
+             * <p>3390671</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -120,7 +133,10 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ISP. For more information, see the ISP codes table.
+             * <p>The ID of the ISP. For more information, see the ISP codes table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100017</p>
              */
             public Builder ispId(String ispId) {
                 this.ispId = ispId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSchedulerRulesResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchedulerRulesResponseBody</p>
+     */
     public static class ParamData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudInstanceId")
         private String cloudInstanceId;
@@ -131,6 +138,12 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchedulerRulesResponseBody</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParamData")
         private ParamData paramData;
@@ -192,6 +205,12 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchedulerRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
@@ -373,6 +392,12 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchedulerRulesResponseBody</p>
+     */
     public static class SchedulerRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;

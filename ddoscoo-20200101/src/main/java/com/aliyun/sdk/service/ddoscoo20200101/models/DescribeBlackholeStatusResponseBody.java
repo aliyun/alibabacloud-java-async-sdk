@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBlackholeStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBlackholeStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the blackhole filtering status of the instance.
+         * <p>An array that consists of the blackhole filtering status of the instance.</p>
          */
         public Builder blackholeStatus(java.util.List < BlackholeStatus> blackholeStatus) {
             this.blackholeStatus = blackholeStatus;
@@ -57,7 +58,10 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBlackholeStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBlackholeStatusResponseBody</p>
+     */
     public static class BlackholeStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackStatus")
         private String blackStatus;
@@ -133,11 +143,14 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * Indicates whether blackhole filtering is triggered for the instance. Valid values:
-             * <p>
+             * <p>Indicates whether blackhole filtering is triggered for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>blackhole</strong>: yes</li>
+             * <li><strong>normal</strong>: no</li>
+             * </ul>
              * 
-             * *   **blackhole**: yes
-             * *   **normal**: no
+             * <strong>example:</strong>
+             * <p>blackhole</p>
              */
             public Builder blackStatus(String blackStatus) {
                 this.blackStatus = blackStatus;
@@ -145,7 +158,10 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The end time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1540196323</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -153,7 +169,10 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.<em><strong>.</strong></em>.132</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -161,7 +180,10 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The start time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1540195323</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

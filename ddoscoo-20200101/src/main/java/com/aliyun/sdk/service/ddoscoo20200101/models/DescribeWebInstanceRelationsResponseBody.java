@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebInstanceRelationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebInstanceRelationsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         private java.util.List < WebInstanceRelations> webInstanceRelations; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0222382B-5FE5-4FF7-BC9B-97EE31D58818</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the instances to which a website service is added.
+         * <p>The information about the instances to which a website service is added.</p>
          */
         public Builder webInstanceRelations(java.util.List < WebInstanceRelations> webInstanceRelations) {
             this.webInstanceRelations = webInstanceRelations;
@@ -70,6 +74,12 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebInstanceRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebInstanceRelationsResponseBody</p>
+     */
     public static class InstanceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipList")
         private java.util.List < String > eipList;
@@ -121,7 +131,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The IP addresses of the instance.
+             * <p>The IP addresses of the instance.</p>
              */
             public Builder eipList(java.util.List < String > eipList) {
                 this.eipList = eipList;
@@ -129,11 +139,14 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The function plan of the instance. Valid values:
-             * <p>
+             * <p>The function plan of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: Standard function plan</li>
+             * <li><strong>enhance</strong>: Enhanced function plan</li>
+             * </ul>
              * 
-             * *   **default**: Standard function plan
-             * *   **enhance**: Enhanced function plan
+             * <strong>example:</strong>
+             * <p>enhance</p>
              */
             public Builder functionVersion(String functionVersion) {
                 this.functionVersion = functionVersion;
@@ -141,7 +154,10 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-0pp163pd****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -155,6 +171,12 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebInstanceRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebInstanceRelationsResponseBody</p>
+     */
     public static class WebInstanceRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -194,7 +216,10 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             private java.util.List < InstanceDetails> instanceDetails; 
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -202,7 +227,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the instance to which a website service is added.
+             * <p>The information about the instance to which a website service is added.</p>
              */
             public Builder instanceDetails(java.util.List < InstanceDetails> instanceDetails) {
                 this.instanceDetails = instanceDetails;

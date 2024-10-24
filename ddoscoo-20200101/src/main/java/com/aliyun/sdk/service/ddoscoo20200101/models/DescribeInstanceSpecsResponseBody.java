@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSpecsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSpecsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the specifications of the instance.
+         * <p>The details of the specifications of the instance.</p>
          */
         public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -57,7 +58,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E3A9B5F-5DDB-593D-A1E6-F1F451DB5E0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSpecsResponseBody</p>
+     */
     public static class InstanceSpecs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthMbps")
         private Integer bandwidthMbps;
@@ -289,7 +299,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer siteLimit; 
 
             /**
-             * The clean bandwidth. Unit: Mbit/s.
+             * <p>The clean bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bandwidthMbps(Integer bandwidthMbps) {
                 this.bandwidthMbps = bandwidthMbps;
@@ -297,7 +310,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The basic protection bandwidth. Unit: Gbit/s.
+             * <p>The basic protection bandwidth. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder baseBandwidth(Integer baseBandwidth) {
                 this.baseBandwidth = baseBandwidth;
@@ -305,7 +321,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of concurrent connections of the instance.
+             * <p>The specification of concurrent connections of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder connLimit(Long connLimit) {
                 this.connLimit = connLimit;
@@ -313,7 +332,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of new connections of the instance.
+             * <p>The specification of new connections of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder cpsLimit(Long cpsLimit) {
                 this.cpsLimit = cpsLimit;
@@ -321,10 +343,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available advanced mitigation sessions for this month. **-1**: unlimited
-             * <p>
+             * <p>The number of available advanced mitigation sessions for this month. <strong>-1</strong>: unlimited</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the request parameter <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the request parameter **RegionId** is set to **ap-southeast-1**. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder defenseCount(Integer defenseCount) {
                 this.defenseCount = defenseCount;
@@ -332,7 +357,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of domain names that can be protected by the instance.
+             * <p>The number of domain names that can be protected by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder domainLimit(Integer domainLimit) {
                 this.domainLimit = domainLimit;
@@ -340,7 +368,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable protection bandwidth. Unit: Gbit/s.
+             * <p>The burstable protection bandwidth. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder elasticBandwidth(Integer elasticBandwidth) {
                 this.elasticBandwidth = elasticBandwidth;
@@ -348,7 +379,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable clean bandwidth. Unit: Mbit/s.
+             * <p>The burstable clean bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder elasticBw(Integer elasticBw) {
                 this.elasticBw = elasticBw;
@@ -356,11 +390,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of the burstable clean bandwidth. Valid values:
-             * <p>
+             * <p>The metering method of the burstable clean bandwidth. Valid values:</p>
+             * <ul>
+             * <li><strong>day</strong>: the metering method of daily 95th percentile</li>
+             * <li><strong>month</strong>: the metering method of monthly 95th percentile</li>
+             * </ul>
              * 
-             * *   **day**: the metering method of daily 95th percentile
-             * *   **month**: the metering method of monthly 95th percentile
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder elasticBwModel(String elasticBwModel) {
                 this.elasticBwModel = elasticBwModel;
@@ -368,7 +405,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable QPS. Unit: QPS
+             * <p>The burstable QPS. Unit: QPS</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder elasticQps(Long elasticQps) {
                 this.elasticQps = elasticQps;
@@ -376,11 +416,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of the burstable QPS. Valid values:
-             * <p>
+             * <p>The metering method of the burstable QPS. Valid values:</p>
+             * <ul>
+             * <li><strong>day</strong>: the metering method of daily 95th percentile</li>
+             * <li><strong>month</strong>: the metering method of monthly 95th percentile</li>
+             * </ul>
              * 
-             * *   **day**: the metering method of daily 95th percentile
-             * *   **month**: the metering method of monthly 95th percentile
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder elasticQpsMode(String elasticQpsMode) {
                 this.elasticQpsMode = elasticQpsMode;
@@ -388,14 +431,17 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The function plan of the instance. Valid values:
-             * <p>
+             * <p>The function plan of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: Standard</li>
+             * <li><strong>enhance</strong>: Enhanced</li>
+             * <li><strong>cnhk</strong>: Chinese Mainland Acceleration (CMA)</li>
+             * <li><strong>cnhk_default</strong>: Secure Chinese Mainland Acceleration (Sec-CMA) standard</li>
+             * <li><strong>cnhk_enhance</strong>: Sec-CMA enhanced</li>
+             * </ul>
              * 
-             * *   **default**: Standard
-             * *   **enhance**: Enhanced
-             * *   **cnhk**: Chinese Mainland Acceleration (CMA)
-             * *   **cnhk_default**: Secure Chinese Mainland Acceleration (Sec-CMA) standard
-             * *   **cnhk_enhance**: Sec-CMA enhanced
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder functionVersion(String functionVersion) {
                 this.functionVersion = functionVersion;
@@ -403,7 +449,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-zvp2eibz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -411,7 +460,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ports that can be protected by the instance.
+             * <p>The number of ports that can be protected by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder portLimit(Integer portLimit) {
                 this.portLimit = portLimit;
@@ -419,7 +471,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The clean QPS.
+             * <p>The clean QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder qpsLimit(Integer qpsLimit) {
                 this.qpsLimit = qpsLimit;
@@ -427,7 +482,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold of the clean bandwidth. Valid values: 0 to 15360. The value 0 indicates that rate limiting is never triggered. Unit: Mbit/s
+             * <p>The threshold of the clean bandwidth. Valid values: 0 to 15360. The value 0 indicates that rate limiting is never triggered. Unit: Mbit/s</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder realLimitBw(Long realLimitBw) {
                 this.realLimitBw = realLimitBw;
@@ -435,7 +493,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sites that can be protected by the instance.
+             * <p>The number of sites that can be protected by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder siteLimit(Integer siteLimit) {
                 this.siteLimit = siteLimit;

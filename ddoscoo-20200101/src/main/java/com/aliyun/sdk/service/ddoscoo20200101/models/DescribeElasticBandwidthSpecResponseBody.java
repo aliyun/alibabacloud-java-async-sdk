@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticBandwidthSpecResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticBandwidthSpecResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the available burstable protection bandwidths. Unit: Gbit/s.
+         * <p>An array that consists of the available burstable protection bandwidths. Unit: Gbit/s.</p>
          */
         public Builder elasticBandwidthSpec(java.util.List < String > elasticBandwidthSpec) {
             this.elasticBandwidthSpec = elasticBandwidthSpec;
@@ -57,7 +58,10 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

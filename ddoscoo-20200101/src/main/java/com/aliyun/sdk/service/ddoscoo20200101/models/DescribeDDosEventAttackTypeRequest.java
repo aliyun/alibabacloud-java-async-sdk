@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDosEventAttackTypeRequest} extends {@link RequestModel}
  *
  * <p>DescribeDDosEventAttackTypeRequest</p>
@@ -84,11 +85,15 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
         } 
 
         /**
-         * The type of the attack event that you want to query. Valid values:
-         * <p>
+         * <p>The type of the attack event that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>defense</strong>: attack events that trigger traffic scrubbing</li>
+         * <li><strong>blackhole</strong>: attack events that trigger blackhole filtering</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **defense**: attack events that trigger traffic scrubbing
-         * *   **blackhole**: attack events that trigger blackhole filtering
+         * <strong>example:</strong>
+         * <p>defense</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -97,7 +102,11 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
         }
 
         /**
-         * The IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * <p>The IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.<em><strong>.</strong></em>.199</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -106,10 +115,14 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
         }
 
         /**
-         * The UNIX timestamp when the query starts. Unit: seconds.
-         * <p>
+         * <p>The UNIX timestamp when the query starts. Unit: seconds.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188604.html">DescribeDDosAllEventList</a> operation to query the beginning time of all attack events.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDDosAllEventList](~~188604~~) operation to query the beginning time of all attack events.
+         * <strong>example:</strong>
+         * <p>1598948471</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

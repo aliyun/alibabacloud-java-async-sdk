@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagKeysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagKeysResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6623EA1F-30FB-5BC8-BEC9-74D55F6F08F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the tag keys.
+         * <p>The details about the tag keys.</p>
          */
         public Builder tagKeys(java.util.List < TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
@@ -117,7 +127,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeTagKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagKeysResponseBody</p>
+     */
     public static class TagKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagCount")
         private Integer tagCount;
@@ -169,7 +188,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             private String tagKey; 
 
             /**
-             * The number of Anti-DDoS Proxy (Chinese Mainland) instances to which the tag key is added.
+             * <p>The number of Anti-DDoS Proxy (Chinese Mainland) instances to which the tag key is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder tagCount(Integer tagCount) {
                 this.tagCount = tagCount;
@@ -177,7 +199,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;

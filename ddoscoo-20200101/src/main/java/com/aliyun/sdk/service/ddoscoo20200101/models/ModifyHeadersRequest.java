@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHeadersRequest} extends {@link RequestModel}
  *
  * <p>ModifyHeadersRequest</p>
@@ -106,15 +107,19 @@ public class ModifyHeadersRequest extends Request {
         }
 
         /**
-         * The key-value pair of the custom header. The key specifies the header name, and the value specifies the header value. You can specify up to five key-value pairs. The key-value pairs can be up to 200 characters in length.
-         * <p>
+         * <p>The key-value pair of the custom header. The key specifies the header name, and the value specifies the header value. You can specify up to five key-value pairs. The key-value pairs can be up to 200 characters in length.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>Do not use X-Forwarded-ClientSrcPort as a custom header.</li>
+         * <li>Do not use a standard HTTP header such as User-Agent. Otherwise, the original header may be overwritten.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you specify a key of X-Forwarded-ClientSrcPort, the system obtains the originating port of the client that accesses Anti-DDoS Proxy (a Layer 7 proxy). In this case, the value is an empty string.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Take note of the following items:
-         * 
-         * *   Do not use X-Forwarded-ClientSrcPort as a custom header.
-         * *   Do not use a standard HTTP header such as User-Agent. Otherwise, the original header may be overwritten.
-         * 
-         * >  If you specify a key of X-Forwarded-ClientSrcPort, the system obtains the originating port of the client that accesses Anti-DDoS Proxy (a Layer 7 proxy). In this case, the value is an empty string.
+         * <strong>example:</strong>
+         * <p>{&quot;X-Forwarded-ClientSrcPort&quot;:&quot;&quot;}</p>
          */
         public Builder customHeaders(String customHeaders) {
             this.putQueryParameter("CustomHeaders", customHeaders);
@@ -123,10 +128,14 @@ public class ModifyHeadersRequest extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -135,14 +144,18 @@ public class ModifyHeadersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can query resource group IDs in the Anti-DDoS Pro or Anti-DDoS Premium console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * </li>
+         * <li><p>Before you modify the resource group to which an instance belongs, you can call the <a href="https://help.aliyun.com/document_detail/158866.html">ListResources</a> operation to view the current resource group of the instance.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   You can query resource group IDs in the Anti-DDoS Pro or Anti-DDoS Premium console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).
-         * 
-         * *   Before you modify the resource group to which an instance belongs, you can call the [ListResources](~~158866~~) operation to view the current resource group of the instance.
+         * <strong>example:</strong>
+         * <p>rg-acfmz6jbof5****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

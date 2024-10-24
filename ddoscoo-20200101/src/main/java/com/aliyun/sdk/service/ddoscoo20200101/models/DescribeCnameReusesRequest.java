@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCnameReusesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCnameReusesRequest</p>
@@ -91,7 +92,10 @@ public class DescribeCnameReusesRequest extends Request {
         }
 
         /**
-         * Domains.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domains(java.util.List < String > domains) {
             this.putQueryParameter("Domains", domains);

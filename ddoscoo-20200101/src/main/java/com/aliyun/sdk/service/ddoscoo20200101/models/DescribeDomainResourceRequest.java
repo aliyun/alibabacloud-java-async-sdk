@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainResourceRequest</p>
@@ -132,7 +133,10 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * The domain name of the website that you want to query.
+         * <p>The domain name of the website that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -141,7 +145,7 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of instances to query.
+         * <p>An array that consists of the IDs of instances to query.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -150,7 +154,10 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -159,7 +166,10 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,11 +178,14 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * The match mode. Valid values:
-         * <p>
+         * <p>The match mode. Valid values:</p>
+         * <ul>
+         * <li><strong>fuzzy</strong>: fuzzy match. This is the default value.</li>
+         * <li><strong>exact</strong>: exact match.</li>
+         * </ul>
          * 
-         * *   **fuzzy**: fuzzy match. This is the default value.
-         * *   **exact**: exact match.
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
          */
         public Builder queryDomainPattern(String queryDomainPattern) {
             this.putQueryParameter("QueryDomainPattern", queryDomainPattern);

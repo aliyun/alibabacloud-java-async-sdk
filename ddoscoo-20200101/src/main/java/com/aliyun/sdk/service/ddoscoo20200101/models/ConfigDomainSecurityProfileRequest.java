@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigDomainSecurityProfileRequest} extends {@link RequestModel}
  *
  * <p>ConfigDomainSecurityProfileRequest</p>
@@ -83,7 +84,7 @@ public class ConfigDomainSecurityProfileRequest extends Request {
         } 
 
         /**
-         * This parameter is unavailable.
+         * <p>This parameter is unavailable.</p>
          */
         public Builder cluster(String cluster) {
             this.putQueryParameter("Cluster", cluster);
@@ -92,19 +93,26 @@ public class ConfigDomainSecurityProfileRequest extends Request {
         }
 
         /**
-         * The configurations for the global mitigation policy feature. The configurations include the following fields:
-         * <p>
+         * <p>The configurations for the global mitigation policy feature. The configurations include the following fields:</p>
+         * <ul>
+         * <li><p><strong>global_rule_mode</strong>: optional. The mode for the global mitigation policy feature. Data type: string. Valid values:</p>
+         * <ul>
+         * <li><strong>weak</strong>: loose.</li>
+         * <li><strong>default</strong>: normal.</li>
+         * <li><strong>hard</strong>: strict.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>global_rule_enable</strong>: optional. Specifies whether to enable the global mitigation policy feature. Data type: string. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **global_rule_mode**: optional. The mode for the global mitigation policy feature. Data type: string. Valid values:
-         * 
-         *     *   **weak**: loose.
-         *     *   **default**: normal.
-         *     *   **hard**: strict.
-         * 
-         * *   **global_rule_enable**: optional. Specifies whether to enable the global mitigation policy feature. Data type: string. Valid values:
-         * 
-         *     *   **0**: disabled.
-         *     *   **1**: enabled.
+         * <strong>example:</strong>
+         * <p>{&quot;global_rule_mode&quot;:&quot;hard&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -113,10 +121,14 @@ public class ConfigDomainSecurityProfileRequest extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p>live.abcde.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

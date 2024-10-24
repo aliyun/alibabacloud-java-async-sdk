@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeL7RsPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeL7RsPolicyResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         private Integer upstreamRetry; 
 
         /**
-         * The details about the parameters for back-to-origin processing.
+         * <p>The details about the parameters for back-to-origin processing.</p>
          */
         public Builder attributes(java.util.List < Attributes> attributes) {
             this.attributes = attributes;
@@ -93,12 +94,15 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The scheduling algorithm for back-to-origin traffic. Valid values:
-         * <p>
+         * <p>The scheduling algorithm for back-to-origin traffic. Valid values:</p>
+         * <ul>
+         * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</li>
+         * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</li>
+         * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</li>
+         * </ul>
          * 
-         * *   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.
-         * *   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.
-         * *   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.
+         * <strong>example:</strong>
+         * <p>rr</p>
          */
         public Builder proxyMode(String proxyMode) {
             this.proxyMode = proxyMode;
@@ -106,7 +110,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E7F6B2C-03F2-462F-9076-B782CF0DD502</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,11 +129,14 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The back-to-origin retry switch. Valid values:
-         * <p>
+         * <p>The back-to-origin retry switch. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: on</li>
+         * <li><strong>0</strong>: off</li>
+         * </ul>
          * 
-         * *   **1**: on
-         * *   **0**: off
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder upstreamRetry(Integer upstreamRetry) {
             this.upstreamRetry = upstreamRetry;
@@ -139,6 +149,12 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeL7RsPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeL7RsPolicyResponseBody</p>
+     */
     public static class Attribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
         private Integer connectTimeout;
@@ -238,7 +254,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The timeout period for a new connection. Valid values: **1** to **10**. Unit: seconds. Default value: **5**.
+             * <p>The timeout period for a new connection. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: seconds. Default value: <strong>5</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder connectTimeout(Integer connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -246,7 +265,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of a connection, in seconds. If the number of failures at the origin server exceeds the **MaxFails** value, the address of the origin server is set to down and the expiration time is **FailTimeout**. The final value is the maximum value of **ConnectTimeout** and **FailTimeout**. Valid values: **1** to **3600**. Unit: seconds. Default value: **10**.
+             * <p>The expiration time of a connection, in seconds. If the number of failures at the origin server exceeds the <strong>MaxFails</strong> value, the address of the origin server is set to down and the expiration time is <strong>FailTimeout</strong>. The final value is the maximum value of <strong>ConnectTimeout</strong> and <strong>FailTimeout</strong>. Valid values: <strong>1</strong> to <strong>3600</strong>. Unit: seconds. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder failTimeout(Integer failTimeout) {
                 this.failTimeout = failTimeout;
@@ -254,7 +276,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of failures. This parameter is related to health check. Valid values: **1** to **10**. Unit: seconds. Default value: **3**.
+             * <p>The maximum number of failures. This parameter is related to health check. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: seconds. Default value: <strong>3</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxFails(Integer maxFails) {
                 this.maxFails = maxFails;
@@ -262,11 +287,14 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The primary/secondary flag. Valid values:
-             * <p>
+             * <p>The primary/secondary flag. Valid values:</p>
+             * <ul>
+             * <li><strong>active</strong>: primary</li>
+             * <li><strong>backup</strong>: secondary</li>
+             * </ul>
              * 
-             * *   **active**: primary
-             * *   **backup**: secondary
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -274,7 +302,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for a read connection. Valid values: **10** to **300**. Unit: seconds. Default value: **120**.
+             * <p>The timeout period for a read connection. Valid values: <strong>10</strong> to <strong>300</strong>. Unit: seconds. Default value: <strong>120</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -282,7 +313,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for a write connection. Valid values: **10** to **300**. Unit: seconds. Default value: **120**.
+             * <p>The timeout period for a write connection. Valid values: <strong>10</strong> to <strong>300</strong>. Unit: seconds. Default value: <strong>120</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder sendTimeout(Integer sendTimeout) {
                 this.sendTimeout = sendTimeout;
@@ -290,10 +324,11 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the origin server. This parameter takes effect only when **ProxyMode** is set to **rr**.
-             * <p>
+             * <p>The weight of the origin server. This parameter takes effect only when <strong>ProxyMode</strong> is set to <strong>rr</strong>.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>. A server with a higher weight receives more requests.</p>
              * 
-             * Valid values: **1** to **100**. Default value: **100**. A server with a higher weight receives more requests.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -307,6 +342,12 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeL7RsPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeL7RsPolicyResponseBody</p>
+     */
     public static class Attributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attribute")
         private Attribute attribute;
@@ -358,7 +399,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             private Integer rsType; 
 
             /**
-             * The parameter for back-to-origin processing.
+             * <p>The parameter for back-to-origin processing.</p>
              */
             public Builder attribute(Attribute attribute) {
                 this.attribute = attribute;
@@ -366,7 +407,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the origin server.
+             * <p>The address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.<em><strong>.</strong></em>.1</p>
              */
             public Builder realServer(String realServer) {
                 this.realServer = realServer;
@@ -374,11 +418,14 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The address type of the origin server. Valid values:
-             * <p>
+             * <p>The address type of the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: IP address</li>
+             * <li><strong>1</strong>: domain name</li>
+             * </ul>
              * 
-             * *   **0**: IP address
-             * *   **1**: domain name
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rsType(Integer rsType) {
                 this.rsType = rsType;

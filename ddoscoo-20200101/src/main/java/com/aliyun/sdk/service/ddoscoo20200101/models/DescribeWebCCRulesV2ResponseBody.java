@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebCCRulesV2ResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebCCRulesV2ResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         private java.util.List < WebCCRules> webCCRules; 
 
         /**
-         * The domain name of the website.
+         * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -81,7 +85,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned custom frequency control rules.
+         * <p>The total number of returned custom frequency control rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -97,7 +107,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * The custom frequency control rules.
+         * <p>The custom frequency control rules.</p>
          */
         public Builder webCCRules(java.util.List < WebCCRules> webCCRules) {
             this.webCCRules = webCCRules;
@@ -110,6 +120,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebCCRulesV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCCRulesV2ResponseBody</p>
+     */
     public static class Condition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -185,7 +201,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private String matchMethod; 
 
             /**
-             * The match content.
+             * <p>The match content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -193,7 +212,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The match content when the match method is Equals to One of Multiple Values.
+             * <p>The match content when the match method is Equals to One of Multiple Values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;2&quot;,&quot;3&quot;,&quot;ad&quot;]</p>
              */
             public Builder contentList(String contentList) {
                 this.contentList = contentList;
@@ -201,7 +223,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The match field.
+             * <p>The match field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -209,10 +234,13 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The custom HTTP request header.
-             * <p>
+             * <p>The custom HTTP request header.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only when <strong>Field</strong> is set to <strong>header</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only when **Field** is set to **header**.
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -220,7 +248,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The match method.
+             * <p>The match method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>belong</p>
              */
             public Builder matchMethod(String matchMethod) {
                 this.matchMethod = matchMethod;
@@ -234,6 +265,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebCCRulesV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCCRulesV2ResponseBody</p>
+     */
     public static class RateLimit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
@@ -309,7 +346,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private Integer ttl; 
 
             /**
-             * The statistical period. Unit: seconds.
+             * <p>The statistical period. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -317,7 +357,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field. This parameter is required only when the Target parameter is set to header.
+             * <p>The name of the field. This parameter is required only when the Target parameter is set to header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>action</p>
              */
             public Builder subKey(String subKey) {
                 this.subKey = subKey;
@@ -325,11 +368,14 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical method. Valid values:
-             * <p>
+             * <p>The statistical method. Valid values:</p>
+             * <ul>
+             * <li><strong>ip</strong></li>
+             * <li><strong>header</strong></li>
+             * </ul>
              * 
-             * *   **ip**
-             * *   **header**
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -337,7 +383,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger threshold.
+             * <p>The trigger threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder threshold(Integer threshold) {
                 this.threshold = threshold;
@@ -345,7 +394,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The blocking duration. Unit: seconds.
+             * <p>The blocking duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -359,6 +411,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebCCRulesV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCCRulesV2ResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
@@ -410,12 +468,15 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private String mode; 
 
             /**
-             * The statistical method. Valid values:
-             * <p>
+             * <p>The statistical method. Valid values:</p>
+             * <ul>
+             * <li><strong>ip</strong></li>
+             * <li><strong>header</strong></li>
+             * <li><strong>uri</strong></li>
+             * </ul>
              * 
-             * *   **ip**
-             * *   **header**
-             * *   **uri**
+             * <strong>example:</strong>
+             * <p>uri</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -423,7 +484,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the header. This parameter is required only when the Field parameter is set to header.
+             * <p>The name of the header. This parameter is required only when the Field parameter is set to header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -431,11 +495,14 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system collects statistics after deduplication. Valid values:
-             * <p>
+             * <p>Indicates whether the system collects statistics after deduplication. Valid values:</p>
+             * <ul>
+             * <li><strong>count</strong>: The system collects statistics before deduplication.</li>
+             * <li><strong>distinct</strong>: The system collects statistics after deduplication.</li>
+             * </ul>
              * 
-             * *   **count**: The system collects statistics before deduplication.
-             * *   **distinct**: The system collects statistics after deduplication.
+             * <strong>example:</strong>
+             * <p>count</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -449,6 +516,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebCCRulesV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCCRulesV2ResponseBody</p>
+     */
     public static class StatusCode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -524,11 +597,14 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private Boolean useRatio; 
 
             /**
-             * The status code. Valid values: **100** to **599**.
-             * <p>
+             * <p>The status code. Valid values: <strong>100</strong> to <strong>599</strong>.</p>
+             * <ul>
+             * <li><strong>200</strong>: The request was successful.</li>
+             * <li>Other codes: The request failed.</li>
+             * </ul>
              * 
-             * *   **200**: The request was successful.
-             * *   Other codes: The request failed.
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -536,7 +612,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * If a ratio is not used, the handling action is triggered only when the number of requests of the corresponding status code reaches the value of **CountThreshold**. Valid values: **2** to **50000**.
+             * <p>If a ratio is not used, the handling action is triggered only when the number of requests of the corresponding status code reaches the value of <strong>CountThreshold</strong>. Valid values: <strong>2</strong> to <strong>50000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder countThreshold(Integer countThreshold) {
                 this.countThreshold = countThreshold;
@@ -544,11 +623,14 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the status code is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the status code is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -556,7 +638,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * If a ratio is used, the handling action is triggered only when the number of requests of the corresponding status code reaches the value of **RatioThreshold**. Valid values: **1** to **100**.
+             * <p>If a ratio is used, the handling action is triggered only when the number of requests of the corresponding status code reaches the value of <strong>RatioThreshold</strong>. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ratioThreshold(Integer ratioThreshold) {
                 this.ratioThreshold = ratioThreshold;
@@ -564,11 +649,14 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to use a ratio.
-             * <p>
+             * <p>Indicates whether to use a ratio.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useRatio(Boolean useRatio) {
                 this.useRatio = useRatio;
@@ -582,6 +670,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebCCRulesV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCCRulesV2ResponseBody</p>
+     */
     public static class RuleDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -729,13 +823,16 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * The action triggered if the rule is matched. Valid values:
-             * <p>
+             * <p>The action triggered if the rule is matched. Valid values:</p>
+             * <ul>
+             * <li><strong>accept</strong>: The requests that match the rule are allowed.</li>
+             * <li><strong>block</strong>: The requests that match the rule are blocked.</li>
+             * <li><strong>challenge</strong>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</li>
+             * <li><strong>watch</strong>: The requests that match the rule are recorded in logs and allowed.</li>
+             * </ul>
              * 
-             * *   **accept**: The requests that match the rule are allowed.
-             * *   **block**: The requests that match the rule are blocked.
-             * *   **challenge**: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.
-             * *   **watch**: The requests that match the rule are recorded in logs and allowed.
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -743,7 +840,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The match conditions.
+             * <p>The match conditions.</p>
              */
             public Builder condition(java.util.List < Condition> condition) {
                 this.condition = condition;
@@ -751,7 +848,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter is deprecated.
+             * <p>The parameter is deprecated.</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -759,7 +856,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter is deprecated.
+             * <p>The parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -767,7 +867,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter is deprecated.
+             * <p>The parameter is deprecated.</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -775,7 +875,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccauto14</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -783,7 +886,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The frequency statistics.
+             * <p>The frequency statistics.</p>
              */
             public Builder rateLimit(RateLimit rateLimit) {
                 this.rateLimit = rateLimit;
@@ -791,7 +894,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics after deduplication. By default, the system collects statistics before deduplication.
+             * <p>The statistics after deduplication. By default, the system collects statistics before deduplication.</p>
              */
             public Builder statistics(Statistics statistics) {
                 this.statistics = statistics;
@@ -799,7 +902,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The status codes.
+             * <p>The status codes.</p>
              */
             public Builder statusCode(StatusCode statusCode) {
                 this.statusCode = statusCode;
@@ -807,7 +910,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter is deprecated.
+             * <p>The parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -815,7 +921,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter is deprecated.
+             * <p>The parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/p3shijihao</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -829,6 +938,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebCCRulesV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCCRulesV2ResponseBody</p>
+     */
     public static class WebCCRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expires")
         private Long expires;
@@ -892,7 +1007,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private RuleDetail ruleDetail; 
 
             /**
-             * The validity period of the rule. Unit: seconds. If the Action parameter is set to block, the system blocks the requests that match the rule within the validity period of the rule. The value 0 indicates that the rule is permanently valid.
+             * <p>The validity period of the rule. Unit: seconds. If the Action parameter is set to block, the system blocks the requests that match the rule within the validity period of the rule. The value 0 indicates that the rule is permanently valid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expires(Long expires) {
                 this.expires = expires;
@@ -900,7 +1018,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wq</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -908,11 +1029,14 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The method used to create the rule. Valid values:
-             * <p>
+             * <p>The method used to create the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>manual</strong> (default): manually created.</li>
+             * <li><strong>clover</strong>: automatically created.</li>
+             * </ul>
              * 
-             * *   **manual** (default): manually created.
-             * *   **clover**: automatically created.
+             * <strong>example:</strong>
+             * <p>manual</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -920,7 +1044,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the rule.
+             * <p>The details of the rule.</p>
              */
             public Builder ruleDetail(RuleDetail ruleDetail) {
                 this.ruleDetail = ruleDetail;

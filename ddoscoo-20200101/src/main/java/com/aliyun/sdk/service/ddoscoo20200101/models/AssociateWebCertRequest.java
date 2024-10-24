@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateWebCertRequest} extends {@link RequestModel}
  *
  * <p>AssociateWebCertRequest</p>
@@ -179,10 +180,13 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * The globally unique ID of the certificate. The value is in the "Certificate ID-cn-hangzhou" format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-cn-hangzhou.
-         * <p>
+         * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-cn-hangzhou.</p>
+         * <blockquote>
+         * <p> You can specify only one of this parameter and the CertId parameter.</p>
+         * </blockquote>
          * 
-         * >  You can specify only one of this parameter and the CertId parameter.
+         * <strong>example:</strong>
+         * <p>9430680-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putBodyParameter("CertIdentifier", certIdentifier);
@@ -200,7 +204,10 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * The region of the certificate. Valid values: **cn-hangzhou** and **ap-southeast-1**. Default value: **cn-hangzhou**.
+         * <p>The region of the certificate. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder certRegion(String certRegion) {
             this.putBodyParameter("CertRegion", certRegion);
@@ -209,7 +216,7 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>This parameter is required.</p>
          */
         public Builder domain(String domain) {
             this.putBodyParameter("Domain", domain);

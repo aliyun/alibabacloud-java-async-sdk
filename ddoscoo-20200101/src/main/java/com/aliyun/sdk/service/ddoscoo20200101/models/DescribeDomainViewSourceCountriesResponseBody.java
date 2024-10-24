@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainViewSourceCountriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainViewSourceCountriesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
         private java.util.List < SourceCountrys> sourceCountrys; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the country or area from which the requests are sent.
+         * <p>An array consisting of the country or area from which the requests are sent.</p>
          */
         public Builder sourceCountrys(java.util.List < SourceCountrys> sourceCountrys) {
             this.sourceCountrys = sourceCountrys;
@@ -70,6 +74,12 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainViewSourceCountriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainViewSourceCountriesResponseBody</p>
+     */
     public static class SourceCountrys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
             private String countryId; 
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3390671</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the country or area. For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic. For example, **cn** indicates China, and **us** indicates the United States.
+             * <p>The abbreviation of the country or area. For more information, see the <strong>Codes of countries and areas</strong> section of the <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a> topic. For example, <strong>cn</strong> indicates China, and <strong>us</strong> indicates the United States.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder countryId(String countryId) {
                 this.countryId = countryId;

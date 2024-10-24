@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortCcAttackTopIPResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortCcAttackTopIPResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
         private java.util.List < TopIp> topIp; 
 
         /**
-         * The request ID, which is used to locate and troubleshoot issues.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24F36D81-5E2D-52E5-9DB6-A3ED23CF271A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the source IP address of the attack.
+         * <p>The top IP addresses from which most attacks are initiated.</p>
          */
         public Builder topIp(java.util.List < TopIp> topIp) {
             this.topIp = topIp;
@@ -70,6 +74,12 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortCcAttackTopIPResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortCcAttackTopIPResponseBody</p>
+     */
     public static class TopIp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
@@ -121,7 +131,10 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
             private String srcIp; 
 
             /**
-             * The code of the location from which the attack is initiated. For more information, see [Codes of administrative regions in China and codes of countries and areas](~~167926~~). For example, **110000** indicates Beijing, China, and **us** indicates the United States.
+             * <p>The code of the location from which the attack is initiated. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -129,7 +142,10 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
             }
 
             /**
-             * The number of attacks from the IP address.
+             * <p>The number of attacks from the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33971</p>
              */
             public Builder pv(Long pv) {
                 this.pv = pv;
@@ -137,7 +153,10 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the attack.
+             * <p>The source IP address of the attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.18.XX.XX</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;

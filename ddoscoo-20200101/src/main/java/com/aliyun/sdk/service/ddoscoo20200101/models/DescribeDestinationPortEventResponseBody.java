@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDestinationPortEventResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDestinationPortEventResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ports.
+         * <p>The ports.</p>
          */
         public Builder portList(java.util.List < PortList> portList) {
             this.portList = portList;
@@ -57,7 +58,10 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E7F6B2C-03F2-462F-9076-B782CF0DD502</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDestinationPortEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDestinationPortEventResponseBody</p>
+     */
     public static class PortList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstPort")
         private String dstPort;
@@ -109,7 +119,10 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
             private Long inPkts; 
 
             /**
-             * The destination port.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder dstPort(String dstPort) {
                 this.dstPort = dstPort;
@@ -117,7 +130,10 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
             }
 
             /**
-             * The number of request packets received by the destination port.
+             * <p>The number of request packets received by the destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8760950</p>
              */
             public Builder inPkts(Long inPkts) {
                 this.inPkts = inPkts;

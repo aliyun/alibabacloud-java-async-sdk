@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSceneDefenseObjectsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSceneDefenseObjectsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the protected assets.
+         * <p>The information about the protected assets.</p>
          */
         public Builder objects(java.util.List < Objects> objects) {
             this.objects = objects;
@@ -69,7 +70,10 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE07E73F-F19E-4A51-B62F-AC59E3B962D8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +81,14 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSceneDefenseObjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSceneDefenseObjectsResponseBody</p>
+     */
     public static class Objects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -145,7 +158,10 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
             private String vip; 
 
             /**
-             * The domain name that is protected by the policy.
+             * <p>The domain name that is protected by the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -153,7 +169,10 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47e07ebd-0ba5-4afc-957b-59d15b90****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -161,7 +180,10 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance that is protected by the policy.
+             * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance that is protected by the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.XX.XX.119</p>
              */
             public Builder vip(String vip) {
                 this.vip = vip;

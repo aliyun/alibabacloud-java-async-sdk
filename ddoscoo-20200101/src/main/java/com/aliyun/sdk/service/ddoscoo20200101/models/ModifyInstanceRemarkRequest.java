@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceRemarkRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceRemarkRequest</p>
@@ -92,10 +93,14 @@ public class ModifyInstanceRemarkRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -104,10 +109,12 @@ public class ModifyInstanceRemarkRequest extends Request {
         }
 
         /**
-         * The description of the instance.
-         * <p>
+         * <p>The description of the instance.</p>
+         * <p>The value can contain letters, digits, and some special characters, such as<code>, . + - * / _</code> The value can be up to 500 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value can contain letters, digits, and some special characters, such as`, . + - * / _` The value can be up to 500 characters in length.
+         * <strong>example:</strong>
+         * <p>new-remark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

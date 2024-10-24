@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigLayer4RuleBakModeResponseBody} extends {@link TeaModel}
  *
  * <p>ConfigLayer4RuleBakModeResponseBody</p>
@@ -37,7 +38,10 @@ public class ConfigLayer4RuleBakModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC042262-15A3-4A49-ADF0-130968EA47BC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

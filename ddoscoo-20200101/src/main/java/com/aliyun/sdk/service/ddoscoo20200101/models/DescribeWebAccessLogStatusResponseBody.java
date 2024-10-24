@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebAccessLogStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebAccessLogStatusResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
         private Boolean slsStatus; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +85,10 @@ public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The Logstore of the instance.
+         * <p>The Logstore of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-logstore</p>
          */
         public Builder slsLogstore(String slsLogstore) {
             this.slsLogstore = slsLogstore;
@@ -89,7 +96,10 @@ public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The Log Service project of the instance.
+         * <p>The Log Service project of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-project-128965410602****-cn-hangzhou</p>
          */
         public Builder slsProject(String slsProject) {
             this.slsProject = slsProject;
@@ -97,11 +107,14 @@ public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Log Analysis feature is enabled for the website. Valid values:
-         * <p>
+         * <p>Indicates whether the Log Analysis feature is enabled for the website. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **true**: enabled
-         * *   **false**: disabled
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder slsStatus(Boolean slsStatus) {
             this.slsStatus = slsStatus;

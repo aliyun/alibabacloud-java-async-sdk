@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAutoCcBlacklistRequest} extends {@link RequestModel}
  *
  * <p>DeleteAutoCcBlacklistRequest</p>
@@ -92,10 +93,14 @@ public class DeleteAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * The IP addresses that you want to manage. This parameter is a JSON string. The string contains the following fields:
-         * <p>
+         * <p>The IP addresses that you want to manage. This parameter is a JSON string. The string contains the following fields:</p>
+         * <ul>
+         * <li><strong>src</strong>: the IP address. This field is required and must be of the STRING type.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **src**: the IP address. This field is required and must be of the STRING type.
+         * <strong>example:</strong>
+         * <p>[{&quot;src&quot;:&quot;198.51.XX.XX&quot;},{&quot;src&quot;:&quot;198.52.XX.XX&quot;}]</p>
          */
         public Builder blacklist(String blacklist) {
             this.putQueryParameter("Blacklist", blacklist);
@@ -104,10 +109,14 @@ public class DeleteAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeL7UsKeepaliveResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeL7UsKeepaliveResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         private RsKeepalive rsKeepalive; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         }
 
         /**
-         * The value of the Back-to-origin Persistent Connections parameter.
+         * <p>The value of the Back-to-origin Persistent Connections parameter.</p>
          */
         public Builder rsKeepalive(RsKeepalive rsKeepalive) {
             this.rsKeepalive = rsKeepalive;
@@ -70,6 +74,12 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeL7UsKeepaliveResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeL7UsKeepaliveResponseBody</p>
+     */
     public static class RsKeepalive extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -121,11 +131,14 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             private Long keepaliveTimeout; 
 
             /**
-             * Indicates whether Back-to-origin Persistent Connections is turned on. Valid values:
-             * <p>
+             * <p>Indicates whether Back-to-origin Persistent Connections is turned on. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -133,7 +146,10 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that reuse persistent connections.
+             * <p>The number of requests that reuse persistent connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder keepaliveRequests(Long keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -141,7 +157,10 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of idle persistent connections.
+             * <p>The timeout period of idle persistent connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder keepaliveTimeout(Long keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;

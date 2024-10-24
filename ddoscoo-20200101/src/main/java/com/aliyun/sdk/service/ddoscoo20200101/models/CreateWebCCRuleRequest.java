@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWebCCRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateWebCCRuleRequest</p>
@@ -196,11 +197,15 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The action on the requests that trigger the custom frequency control rule. Valid values:
-         * <p>
+         * <p>The action on the requests that trigger the custom frequency control rule. Valid values:</p>
+         * <ul>
+         * <li><strong>close</strong>: blocks the requests.</li>
+         * <li><strong>captcha</strong>: triggers Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **close**: blocks the requests.
-         * *   **captcha**: triggers Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests.
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         public Builder act(String act) {
             this.putQueryParameter("Act", act);
@@ -209,7 +214,10 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Count.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder count(Integer count) {
             this.putQueryParameter("Count", count);
@@ -218,10 +226,14 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -230,7 +242,10 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -239,13 +254,18 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The matching mode. Valid values:
-         * <p>
+         * <p>The matching mode. Valid values:</p>
+         * <ul>
+         * <li><strong>prefix</strong>: prefix match.</li>
+         * <li><strong>match</strong>: exact match.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the <strong>URI</strong> of the check path contains parameters, you must set this parameter to <strong>prefix</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **prefix**: prefix match.
-         * *   **match**: exact match.
-         * 
-         * >  If the **URI** of the check path contains parameters, you must set this parameter to **prefix**.
+         * <strong>example:</strong>
+         * <p>prefix</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -254,7 +274,11 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule. The name can be up to 128 characters in length and contain letters, digits, and underscores (\_).
+         * <p>The name of the rule. The name can be up to 128 characters in length and contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -263,10 +287,11 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
-         * <p>
+         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
          * 
-         * For more information about resource groups, see [Create a resource group](~~94485~~).
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -275,7 +300,11 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The blocking duration. Valid values: **60** to **86400**. Unit: seconds.
+         * <p>The blocking duration. Valid values: <strong>60</strong> to <strong>86400</strong>. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -284,10 +313,14 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The check path.
-         * <p>
+         * <p>The check path.</p>
+         * <blockquote>
+         * <p> The URI cannot be modified. The domain name of the website, the check path, and the rule name uniquely identify a rule.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The URI cannot be modified. The domain name of the website, the check path, and the rule name uniquely identify a rule.
+         * <strong>example:</strong>
+         * <p>/abc/a.php</p>
          */
         public Builder uri(String uri) {
             this.putQueryParameter("Uri", uri);

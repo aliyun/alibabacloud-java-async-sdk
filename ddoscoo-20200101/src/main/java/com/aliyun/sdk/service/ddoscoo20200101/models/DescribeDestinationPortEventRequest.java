@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDestinationPortEventRequest} extends {@link RequestModel}
  *
  * <p>DescribeDestinationPortEventRequest</p>
@@ -114,11 +115,15 @@ public class DescribeDestinationPortEventRequest extends Request {
         } 
 
         /**
-         * The type of the attack event that you want to query. Valid values:
-         * <p>
+         * <p>The type of the attack event that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>defense</strong>: attack events that trigger traffic scrubbing.</li>
+         * <li><strong>blackhole</strong>: attack events that trigger blackhole filtering.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **defense**: attack events that trigger traffic scrubbing.
-         * *   **blackhole**: attack events that trigger blackhole filtering.
+         * <strong>example:</strong>
+         * <p>defense</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -127,7 +132,11 @@ public class DescribeDestinationPortEventRequest extends Request {
         }
 
         /**
-         * The IP address of the attacker.
+         * <p>The IP address of the attacker.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -136,7 +145,11 @@ public class DescribeDestinationPortEventRequest extends Request {
         }
 
         /**
-         * The number of destination ports to return. The ports are sorted in descending order of the number of received request packets. By default, the first **10** ports are returned.
+         * <p>The number of destination ports to return. The ports are sorted in descending order of the number of received request packets. By default, the first <strong>10</strong> ports are returned.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder range(Long range) {
             this.putQueryParameter("Range", range);
@@ -145,11 +158,15 @@ public class DescribeDestinationPortEventRequest extends Request {
         }
 
         /**
-         * The region in which your service is deployed. Valid values:
-         * <p>
+         * <p>The region in which your service is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn</strong>: a region in the Chinese mainland.</li>
+         * <li><strong>cn-hongkong</strong>: a region outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn**: a region in the Chinese mainland.
-         * *   **cn-hongkong**: a region outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -158,10 +175,14 @@ public class DescribeDestinationPortEventRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>1720059000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

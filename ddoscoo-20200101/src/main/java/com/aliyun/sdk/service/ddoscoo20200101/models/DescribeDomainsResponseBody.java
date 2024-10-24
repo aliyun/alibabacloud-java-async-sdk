@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of details of the domain name for which the forwarding rules are configured.
+         * <p>An array consisting of details of the domain name for which the forwarding rules are configured.</p>
          */
         public Builder domains(java.util.List < String > domains) {
             this.domains = domains;
@@ -57,7 +58,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F908E959-ADA8-4D7B-8A05-FF2F67F50964</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

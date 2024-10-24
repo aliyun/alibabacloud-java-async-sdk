@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceExtResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceExtResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The extended information about the Anti-DDoS Proxy instance.
+         * <p>The extended information about the Anti-DDoS Proxy instance.</p>
          */
         public Builder instanceExtSpecs(java.util.List < InstanceExtSpecs> instanceExtSpecs) {
             this.instanceExtSpecs = instanceExtSpecs;
@@ -69,7 +70,10 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of queried instances.
+         * <p>The total number of queried instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceExtResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceExtResponseBody</p>
+     */
     public static class InstanceExtSpecs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FunctionVersion")
         private Long functionVersion;
@@ -165,11 +178,14 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             private String servicePartner; 
 
             /**
-             * The function plan. Valid values:
-             * <p>
+             * <p>The function plan. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Standard</li>
+             * <li><strong>1</strong>: Enhanced</li>
+             * </ul>
              * 
-             * *   **0**: Standard
-             * *   **1**: Enhanced
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder functionVersion(Long functionVersion) {
                 this.functionVersion = functionVersion;
@@ -177,7 +193,10 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-i7m25564****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -185,7 +204,10 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * The clean bandwidth. Unit: Mbit/s.
+             * <p>The clean bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder normalBandwidth(Long normalBandwidth) {
                 this.normalBandwidth = normalBandwidth;
@@ -193,14 +215,17 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values:
-             * <p>
+             * <p>The type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+             * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+             * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
+             * <li><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan</li>
+             * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+             * </ul>
              * 
-             * *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
-             * *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
-             * *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
-             * *   **3**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan
-             * *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder productPlan(Long productPlan) {
                 this.productPlan = productPlan;
@@ -208,7 +233,10 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP) line of the Anti-DDoS Proxy (Chinese Mainland) instance.
+             * <p>The Internet service provider (ISP) line of the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coop-line-001</p>
              */
             public Builder servicePartner(String servicePartner) {
                 this.servicePartner = servicePartner;

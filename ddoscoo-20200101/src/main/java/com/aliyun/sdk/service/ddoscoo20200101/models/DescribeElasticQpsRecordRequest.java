@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticQpsRecordRequest} extends {@link RequestModel}
  *
  * <p>DescribeElasticQpsRecordRequest</p>
@@ -107,7 +108,11 @@ public class DescribeElasticQpsRecordRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a timestamp. Unit: milliseconds.
+         * <p>The end of the time range to query. The value is a timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1688140799999</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -116,7 +121,11 @@ public class DescribeElasticQpsRecordRequest extends Request {
         }
 
         /**
-         * The IP address of the Anti-DDoS Proxy instance to query.
+         * <p>The IP address of the Anti-DDoS Proxy instance to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -125,7 +134,11 @@ public class DescribeElasticQpsRecordRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684252800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

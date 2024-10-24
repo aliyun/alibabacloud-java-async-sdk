@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePortRequest} extends {@link RequestModel}
  *
  * <p>DeletePortRequest</p>
@@ -135,7 +136,10 @@ public class DeletePortRequest extends Request {
         }
 
         /**
-         * The port of the origin server. Valid values: **0** to **65535**.
+         * <p>The port of the origin server. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder backendPort(String backendPort) {
             this.putQueryParameter("BackendPort", backendPort);
@@ -144,7 +148,11 @@ public class DeletePortRequest extends Request {
         }
 
         /**
-         * The forwarding port. Valid values: **0** to **65535**.
+         * <p>The forwarding port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder frontendPort(String frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -153,11 +161,15 @@ public class DeletePortRequest extends Request {
         }
 
         /**
-         * The type of the protocol. Valid values:
-         * <p>
+         * <p>The type of the protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **tcp**
-         * *   **udp**
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder frontendProtocol(String frontendProtocol) {
             this.putQueryParameter("FrontendProtocol", frontendProtocol);
@@ -166,10 +178,14 @@ public class DeletePortRequest extends Request {
         }
 
         /**
-         * The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.
-         * <p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-st21zbyq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -178,7 +194,7 @@ public class DeletePortRequest extends Request {
         }
 
         /**
-         * An array that consists of the IP addresses of origin servers.
+         * <p>An array that consists of the IP addresses of origin servers.</p>
          */
         public Builder realServers(java.util.List < String > realServers) {
             this.putQueryParameter("RealServers", realServers);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOpEntitiesRequest} extends {@link RequestModel}
  *
  * <p>DescribeOpEntitiesRequest</p>
@@ -164,10 +165,14 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
-         * <p>
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The time must be in the latest 30 days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The time must be in the latest 30 days.
+         * <strong>example:</strong>
+         * <p>1583683200000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -176,7 +181,10 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The operation object that you want to query.
+         * <p>The operation object that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.<em><strong>.</strong></em>.132</p>
          */
         public Builder entityObject(String entityObject) {
             this.putQueryParameter("EntityObject", entityObject);
@@ -185,13 +193,16 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The type of the operation object that you want to query. Valid values:
-         * <p>
+         * <p>The type of the operation object that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: the IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance</li>
+         * <li><strong>2</strong>: Anti-DDoS plans</li>
+         * <li><strong>3</strong>: ECS instances</li>
+         * <li><strong>4</strong>: all logs</li>
+         * </ul>
          * 
-         * *   **1**: the IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance
-         * *   **2**: Anti-DDoS plans
-         * *   **3**: ECS instances
-         * *   **4**: all logs
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder entityType(Integer entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -200,7 +211,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.
+         * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -209,7 +224,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -218,7 +237,10 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -227,10 +249,14 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
-         * <p>
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The time must be in the latest 30 days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The time must be in the latest 30 days.
+         * <strong>example:</strong>
+         * <p>1582992000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeTagResourcesRequest</p>
@@ -125,10 +126,13 @@ public class DescribeTagResourcesRequest extends Request {
         } 
 
         /**
-         * The query token. Set the value to the value of **NextToken** that is returned in the last call.
-         * <p>
+         * <p>The query token. Set the value to the value of <strong>NextToken</strong> that is returned in the last call.</p>
+         * <blockquote>
+         * <p>You do not need to configure this parameter if you call this operation for the first time.</p>
+         * </blockquote>
          * 
-         * > You do not need to configure this parameter if you call this operation for the first time.
+         * <strong>example:</strong>
+         * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -137,7 +141,11 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.
+         * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,10 +154,11 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -158,7 +167,10 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances that you want to query.
+         * <p>The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -167,7 +179,11 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.
+         * <p>The type of the resource to which the tag belongs. Set the value to <strong>INSTANCE</strong>, which indicates an Anti-DDoS Pro instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -176,7 +192,7 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * An array consisting of tags that you want to query. Each tag consists of a tag **key** and a tag **value**.
+         * <p>An array consisting of tags that you want to query. Each tag consists of a tag <strong>key</strong> and a tag <strong>value</strong>.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -191,6 +207,12 @@ public class DescribeTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeTagResourcesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -230,14 +252,18 @@ public class DescribeTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that you want to query.
-             * <p>
+             * <p>The key of the tag that you want to query.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>You must specify at least one of the <strong>ResourceIds.N</strong> and <strong>Tags.N.Key</strong> parameters.</p>
+             * </li>
+             * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/159785.html">DescribeTagKeys</a> operation to query all tag keys.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   You must specify at least one of the **ResourceIds.N** and **Tags.N.Key** parameters.
-             * 
-             * *   You can call the [DescribeTagKeys](~~159785~~) operation to query all tag keys.
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -245,7 +271,10 @@ public class DescribeTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag that you want to query.
+             * <p>The value of the tag that you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

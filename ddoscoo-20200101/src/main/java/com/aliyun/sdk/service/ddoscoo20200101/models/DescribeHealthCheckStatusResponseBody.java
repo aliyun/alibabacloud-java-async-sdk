@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHealthCheckStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHealthCheckStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the details of the health status of the origin server.
+         * <p>An array that consists of the details of the health status of the origin server.</p>
          */
         public Builder healthCheckStatus(java.util.List < HealthCheckStatus> healthCheckStatus) {
             this.healthCheckStatus = healthCheckStatus;
@@ -57,7 +58,10 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE9FF9E1-569C-4B6C-AB6A-0F6D927BB27C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHealthCheckStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthCheckStatusResponseBody</p>
+     */
     public static class RealServerStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -109,7 +119,10 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The IP address of the origin server.
+             * <p>The IP address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -117,11 +130,14 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The health state of the IP address. Valid values:
-             * <p>
+             * <p>The health state of the IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: healthy</li>
+             * <li><strong>abnormal</strong>: unhealthy</li>
+             * </ul>
              * 
-             * *   **normal**: healthy
-             * *   **abnormal**: unhealthy
+             * <strong>example:</strong>
+             * <p>abnormal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -135,6 +151,12 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthCheckStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthCheckStatusResponseBody</p>
+     */
     public static class HealthCheckStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
@@ -210,7 +232,10 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The forwarding port.
+             * <p>The forwarding port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -218,7 +243,10 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-mp91j1ao****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -226,11 +254,14 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding protocol. Valid values:
-             * <p>
+             * <p>The forwarding protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -238,7 +269,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the health states of the IP addresses of the origin server.
+             * <p>An array that consists of the health states of the IP addresses of the origin server.</p>
              */
             public Builder realServerStatusList(java.util.List < RealServerStatusList> realServerStatusList) {
                 this.realServerStatusList = realServerStatusList;
@@ -246,11 +277,14 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the origin server. Valid values:
-             * <p>
+             * <p>The health status of the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: healthy</li>
+             * <li><strong>abnormal</strong>: unhealthy</li>
+             * </ul>
              * 
-             * *   **normal**: healthy
-             * *   **abnormal**: unhealthy
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;

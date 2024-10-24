@@ -6,11 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortCcAttackTopIPRequest} extends {@link RequestModel}
  *
  * <p>DescribePortCcAttackTopIPRequest</p>
  */
 public class DescribePortCcAttackTopIPRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ip")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -32,6 +37,7 @@ public class DescribePortCcAttackTopIPRequest extends Request {
 
     private DescribePortCcAttackTopIPRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.ip = builder.ip;
         this.limit = builder.limit;
         this.port = builder.port;
@@ -49,6 +55,13 @@ public class DescribePortCcAttackTopIPRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -80,6 +93,7 @@ public class DescribePortCcAttackTopIPRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePortCcAttackTopIPRequest, Builder> {
+        private String regionId; 
         private String ip; 
         private Long limit; 
         private String port; 
@@ -91,6 +105,7 @@ public class DescribePortCcAttackTopIPRequest extends Request {
 
         private Builder(DescribePortCcAttackTopIPRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.ip = request.ip;
             this.limit = request.limit;
             this.port = request.port;
@@ -98,7 +113,20 @@ public class DescribePortCcAttackTopIPRequest extends Request {
         } 
 
         /**
-         * The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance to query.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -107,7 +135,10 @@ public class DescribePortCcAttackTopIPRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -116,7 +147,11 @@ public class DescribePortCcAttackTopIPRequest extends Request {
         }
 
         /**
-         * The attacked port.
+         * <p>The attacked port.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6663</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -125,7 +160,11 @@ public class DescribePortCcAttackTopIPRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: seconds.
+         * <p>The beginning of the time range to query. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678017453</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

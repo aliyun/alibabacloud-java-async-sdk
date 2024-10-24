@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySceneDefensePolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifySceneDefensePolicyRequest</p>
@@ -137,7 +138,11 @@ public class ModifySceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * The end time of the policy. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end time of the policy. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1586016000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -146,7 +151,11 @@ public class ModifySceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpolicy</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -155,10 +164,14 @@ public class ModifySceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * The ID of the policy that you want to modify.
-         * <p>
+         * <p>The ID of the policy that you want to modify.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> operation to query the IDs of all policies.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
+         * <strong>example:</strong>
+         * <p>321a-fd31-df51-****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -167,7 +180,11 @@ public class ModifySceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * The start time of the policy. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The start time of the policy. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1585670400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -176,11 +193,15 @@ public class ModifySceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * The template of the policy. Valid values:
-         * <p>
+         * <p>The template of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>promotion</strong>: important activity</li>
+         * <li><strong>bypass</strong>: all traffic forwarded</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **promotion**: important activity
-         * *   **bypass**: all traffic forwarded
+         * <strong>example:</strong>
+         * <p>promotion</p>
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlaEventListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSlaEventListRequest</p>
@@ -126,10 +127,14 @@ public class DescribeSlaEventListRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>3289457398</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -138,7 +143,10 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -147,7 +155,10 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -156,7 +167,10 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,11 +179,15 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * The type of the service Valid values:
-         * <p>
+         * <p>The type of the service Valid values:</p>
+         * <ul>
+         * <li><strong>cn</strong>: Anti-DDoS Pro</li>
+         * <li><strong>cn-hongkong</strong>: Anti-DDoS Premium</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn**: Anti-DDoS Pro
-         * *   **cn-hongkong**: Anti-DDoS Premium
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -178,10 +196,14 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>3289457398</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

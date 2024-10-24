@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCnameReuseRequest} extends {@link RequestModel}
  *
  * <p>ModifyCnameReuseRequest</p>
@@ -120,7 +121,10 @@ public class ModifyCnameReuseRequest extends Request {
         }
 
         /**
-         * The CNAME record that you want to reuse for the website.
+         * <p>The CNAME record that you want to reuse for the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4o6ep6q217k9****.aliyunddos0004.com</p>
          */
         public Builder cname(String cname) {
             this.putQueryParameter("Cname", cname);
@@ -129,10 +133,14 @@ public class ModifyCnameReuseRequest extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -141,11 +149,15 @@ public class ModifyCnameReuseRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable CNAME reuse. Valid values:
-         * <p>
+         * <p>Specifies whether to enable CNAME reuse. Valid values:</p>
+         * <ul>
+         * <li><strong>0:</strong> disabled</li>
+         * <li><strong>1:</strong> enabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0:** disabled
-         * *   **1:** enabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -154,7 +166,10 @@ public class ModifyCnameReuseRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

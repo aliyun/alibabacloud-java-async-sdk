@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDomainResourceRequest} extends {@link RequestModel}
  *
  * <p>CreateDomainResourceRequest</p>
@@ -151,7 +152,11 @@ public class CreateDomainResourceRequest extends Request {
         }
 
         /**
-         * The domain name of the website that you want to add to the Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * <p>The domain name of the website that you want to add to the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -160,20 +165,21 @@ public class CreateDomainResourceRequest extends Request {
         }
 
         /**
-         * The advanced HTTPS settings. This parameter takes effect only when the value of the **ProxyType** parameter includes **https**. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
-         * <p>
+         * <p>The advanced HTTPS settings. This parameter takes effect only when the value of the <strong>ProxyType</strong> parameter includes <strong>https</strong>. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>Http2https</strong>: specifies whether to turn on Enforce HTTPS Routing. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enforce HTTPS Routing is turned off. The value 1 indicates that Enforce HTTPS Routing is turned on. The default value is 0.</p>
+         * <p>If your website supports both HTTP and HTTPS, this feature meets your business requirements. If you enable this feature, all HTTP requests to access the website are redirected to HTTPS requests on the standard port 443.</p>
+         * </li>
+         * <li><p><strong>Https2http</strong>: specifies whether to turn on Enable HTTP. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP is turned off. The value 1 indicates that Enable HTTP is turned on. The default value is 0.</p>
+         * <p>If your website does not support HTTPS, this feature meets your business requirements If this feature is enabled, all HTTPS requests are redirected to HTTP requests and forwarded to origin servers. This feature can redirect WebSockets requests to WebSocket requests. Requests are redirected over the standard port 80.</p>
+         * </li>
+         * <li><p><strong>Http2</strong>: specifies whether to turn on Enable HTTP/2. This field is optional. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on. The default value is 0.</p>
+         * <p>After you turn on the switch, HTTP/2 is used.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **Http2https**: specifies whether to turn on Enforce HTTPS Routing. This field is optional and must be an integer. Valid values: **0** and **1**. The value 0 indicates that Enforce HTTPS Routing is turned off. The value 1 indicates that Enforce HTTPS Routing is turned on. The default value is 0.
-         * 
-         *     If your website supports both HTTP and HTTPS, this feature meets your business requirements. If you enable this feature, all HTTP requests to access the website are redirected to HTTPS requests on the standard port 443.
-         * 
-         * *   **Https2http**: specifies whether to turn on Enable HTTP. This field is optional and must be an integer. Valid values: **0** and **1**. The value 0 indicates that Enable HTTP is turned off. The value 1 indicates that Enable HTTP is turned on. The default value is 0.
-         * 
-         *     If your website does not support HTTPS, this feature meets your business requirements If this feature is enabled, all HTTPS requests are redirected to HTTP requests and forwarded to origin servers. This feature can redirect WebSockets requests to WebSocket requests. Requests are redirected over the standard port 80.
-         * 
-         * *   **Http2**: specifies whether to turn on Enable HTTP/2. This field is optional. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on. The default value is 0.
-         * 
-         *     After you turn on the switch, HTTP/2 is used.
+         * <strong>example:</strong>
+         * <p>{&quot;Http2&quot;:1,&quot;Http2https&quot;:1,&quot;Https2http&quot;:1}</p>
          */
         public Builder httpsExt(String httpsExt) {
             this.putQueryParameter("HttpsExt", httpsExt);
@@ -182,7 +188,8 @@ public class CreateDomainResourceRequest extends Request {
         }
 
         /**
-         * An array consisting of the IDs of instances that you want to associate.
+         * <p>An array consisting of the IDs of instances that you want to associate.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -191,7 +198,8 @@ public class CreateDomainResourceRequest extends Request {
         }
 
         /**
-         * The details about the protocol type and port number.
+         * <p>The details about the protocol type and port number.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
             this.putQueryParameter("ProxyTypes", proxyTypes);
@@ -200,7 +208,8 @@ public class CreateDomainResourceRequest extends Request {
         }
 
         /**
-         * An array that consists of the addresses of origin servers.
+         * <p>An array that consists of the addresses of origin servers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder realServers(java.util.List < String > realServers) {
             this.putQueryParameter("RealServers", realServers);
@@ -209,14 +218,18 @@ public class CreateDomainResourceRequest extends Request {
         }
 
         /**
-         * The address type of the origin server. Valid values:
-         * <p>
+         * <p>The address type of the origin server. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: IP address.</p>
+         * </li>
+         * <li><p><strong>1</strong>: domain name.</p>
+         * <p>This parameter is suitable for scenarios in which another proxy service, such as Web Application Firewall (WAF), is deployed between the origin server and Anti-DDoS Proxy. The address is the redirection address of the proxy service, such as the CNAME of WAF.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: IP address.
-         * 
-         * *   **1**: domain name.
-         * 
-         *     This parameter is suitable for scenarios in which another proxy service, such as Web Application Firewall (WAF), is deployed between the origin server and Anti-DDoS Proxy. The address is the redirection address of the proxy service, such as the CNAME of WAF.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder rsType(Integer rsType) {
             this.putQueryParameter("RsType", rsType);
@@ -231,6 +244,12 @@ public class CreateDomainResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDomainResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDomainResourceRequest</p>
+     */
     public static class ProxyTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxyPorts")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -271,7 +290,8 @@ public class CreateDomainResourceRequest extends Request {
             private String proxyType; 
 
             /**
-             * The port numbers.
+             * <p>The port numbers.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder proxyPorts(java.util.List < Integer > proxyPorts) {
                 this.proxyPorts = proxyPorts;
@@ -279,13 +299,16 @@ public class CreateDomainResourceRequest extends Request {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>http</strong></li>
+             * <li><strong>https</strong></li>
+             * <li><strong>websocket</strong></li>
+             * <li><strong>websockets</strong></li>
+             * </ul>
              * 
-             * *   **http**
-             * *   **https**
-             * *   **websocket**
-             * *   **websockets**
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;

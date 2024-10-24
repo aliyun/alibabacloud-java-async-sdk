@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigLayer4RemarkResponseBody} extends {@link TeaModel}
  *
  * <p>ConfigLayer4RemarkResponseBody</p>
@@ -37,7 +38,10 @@ public class ConfigLayer4RemarkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E46CC51-36BE-1100-B14C-DAF8381B8F73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

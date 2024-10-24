@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceIdsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceIdsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID, type, description, and IP version of the instance.
+         * <p>The ID, type, description, and IP version of the instance.</p>
          */
         public Builder instanceIds(java.util.List < InstanceIds> instanceIds) {
             this.instanceIds = instanceIds;
@@ -70,6 +71,12 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceIdsResponseBody</p>
+     */
     public static class InstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Edition")
         private Integer edition;
@@ -145,14 +152,17 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             private String remark; 
 
             /**
-             * The type of the instance. Valid values:
-             * <p>
+             * <p>The type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+             * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+             * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the CMA mitigation plan</li>
+             * <li><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Sec-CMA mitigation plan</li>
+             * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+             * </ul>
              * 
-             * *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
-             * *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
-             * *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the CMA mitigation plan
-             * *   **3**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Sec-CMA mitigation plan
-             * *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder edition(Integer edition) {
                 this.edition = edition;
@@ -160,7 +170,10 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-zvp2eibz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -168,11 +181,14 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address-based forwarding mode of the instance. Valid values:
-             * <p>
+             * <p>The IP address-based forwarding mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>fnat</strong>: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</li>
+             * <li><strong>v6tov4</strong>: All requests are forwarded to origin servers that use IPv4 addresses.</li>
+             * </ul>
              * 
-             * *   **fnat**: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.
-             * *   **v6tov4**: All requests are forwarded to origin servers that use IPv4 addresses.
+             * <strong>example:</strong>
+             * <p>fnat</p>
              */
             public Builder ipMode(String ipMode) {
                 this.ipMode = ipMode;
@@ -180,11 +196,14 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version of the instance. Valid values:
-             * <p>
+             * <p>The IP version of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Ipv4</strong></li>
+             * <li><strong>Ipv6</strong></li>
+             * </ul>
              * 
-             * *   **Ipv4**
-             * *   **Ipv6**
+             * <strong>example:</strong>
+             * <p>Ipv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -192,7 +211,10 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

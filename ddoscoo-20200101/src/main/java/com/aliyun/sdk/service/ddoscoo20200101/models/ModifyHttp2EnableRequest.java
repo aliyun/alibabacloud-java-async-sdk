@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHttp2EnableRequest} extends {@link RequestModel}
  *
  * <p>ModifyHttp2EnableRequest</p>
@@ -106,10 +107,14 @@ public class ModifyHttp2EnableRequest extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p>A forwarding rule must be configured for the domain name, and the domain name must be associated with an instance that uses the Enhanced function plan. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > A forwarding rule must be configured for the domain name, and the domain name must be associated with an instance that uses the Enhanced function plan. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -118,11 +123,15 @@ public class ModifyHttp2EnableRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable HTTP/2. Valid values:
-         * <p>
+         * <p>Specifies whether to enable HTTP/2. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disables HTTP/2.</li>
+         * <li><strong>1</strong>: enables HTTP/2.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: disables HTTP/2.
-         * *   **1**: enables HTTP/2.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -131,7 +140,10 @@ public class ModifyHttp2EnableRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

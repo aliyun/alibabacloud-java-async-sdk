@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkRegionBlockResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNetworkRegionBlockResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration of blocked locations.
+         * <p>The configuration of blocked locations.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -57,7 +58,10 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkRegionBlockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRegionBlockResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Countries")
         private java.util.List < Long > countries;
@@ -121,7 +131,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             private String regionBlockSwitch; 
 
             /**
-             * The codes of the countries or areas from which the requests are blocked.
+             * <p>The codes of the countries or areas from which the requests are blocked.</p>
              */
             public Builder countries(java.util.List < Long > countries) {
                 this.countries = countries;
@@ -129,7 +139,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             }
 
             /**
-             * The codes of the administrative regions in China from which the requests are blocked.
+             * <p>The codes of the administrative regions in China from which the requests are blocked.</p>
              */
             public Builder provinces(java.util.List < Long > provinces) {
                 this.provinces = provinces;
@@ -137,11 +147,14 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Location Blacklist policy. Valid values:
-             * <p>
+             * <p>The status of the Location Blacklist policy. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled</li>
+             * <li><strong>off</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder regionBlockSwitch(String regionBlockSwitch) {
                 this.regionBlockSwitch = regionBlockSwitch;

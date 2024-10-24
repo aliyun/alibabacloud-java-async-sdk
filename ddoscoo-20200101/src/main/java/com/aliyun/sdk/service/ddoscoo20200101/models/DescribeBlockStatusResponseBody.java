@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBlockStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBlockStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         private java.util.List < StatusList> statusList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of details of the Diversion from Origin Server configurations of the instance.
+         * <p>An array that consists of details of the Diversion from Origin Server configurations of the instance.</p>
          */
         public Builder statusList(java.util.List < StatusList> statusList) {
             this.statusList = statusList;
@@ -70,6 +74,12 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBlockStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBlockStatusResponseBody</p>
+     */
     public static class BlockStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockStatus")
         private String blockStatus;
@@ -133,11 +143,14 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The blocking status of the network traffic. Valid values:
-             * <p>
+             * <p>The blocking status of the network traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>areablock</strong>: Network traffic is blocked.</li>
+             * <li><strong>normal</strong>: Network traffic is not blocked.</li>
+             * </ul>
              * 
-             * *   **areablock**: Network traffic is blocked.
-             * *   **normal**: Network traffic is not blocked.
+             * <strong>example:</strong>
+             * <p>areablock</p>
              */
             public Builder blockStatus(String blockStatus) {
                 this.blockStatus = blockStatus;
@@ -145,7 +158,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the blocking. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The end time of the blocking. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1540196323</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -153,11 +169,14 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP) line from which the traffic is blocked. Valid values:
-             * <p>
+             * <p>The Internet service provider (ISP) line from which the traffic is blocked. Valid values:</p>
+             * <ul>
+             * <li><strong>ct</strong>: China Telecom (International)</li>
+             * <li><strong>cut</strong>: China Unicom (International)</li>
+             * </ul>
              * 
-             * *   **ct**: China Telecom (International)
-             * *   **cut**: China Unicom (International)
+             * <strong>example:</strong>
+             * <p>cut</p>
              */
             public Builder line(String line) {
                 this.line = line;
@@ -165,7 +184,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the blocking. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The start time of the blocking. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1540195323</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -179,6 +201,12 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBlockStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBlockStatusResponseBody</p>
+     */
     public static class StatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockStatusList")
         private java.util.List < BlockStatusList> blockStatusList;
@@ -218,7 +246,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * An array that consists of details of the Diversion from Origin Server configuration.
+             * <p>An array that consists of details of the Diversion from Origin Server configuration.</p>
              */
             public Builder blockStatusList(java.util.List < BlockStatusList> blockStatusList) {
                 this.blockStatusList = blockStatusList;
@@ -226,7 +254,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.XX.XX.88</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
