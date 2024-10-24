@@ -176,6 +176,9 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AndroidNotificationNotifyId")
         private Integer androidNotificationNotifyId;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidNotificationThreadId")
+        private String androidNotificationThreadId;
+
         @com.aliyun.core.annotation.NameInMap("AndroidNotificationVivoChannel")
         private String androidNotificationVivoChannel;
 
@@ -405,6 +408,7 @@ public class MassPushRequest extends Request {
             this.androidNotificationHonorChannel = builder.androidNotificationHonorChannel;
             this.androidNotificationHuaweiChannel = builder.androidNotificationHuaweiChannel;
             this.androidNotificationNotifyId = builder.androidNotificationNotifyId;
+            this.androidNotificationThreadId = builder.androidNotificationThreadId;
             this.androidNotificationVivoChannel = builder.androidNotificationVivoChannel;
             this.androidNotificationXiaomiChannel = builder.androidNotificationXiaomiChannel;
             this.androidNotifyType = builder.androidNotifyType;
@@ -646,6 +650,13 @@ public class MassPushRequest extends Request {
          */
         public Integer getAndroidNotificationNotifyId() {
             return this.androidNotificationNotifyId;
+        }
+
+        /**
+         * @return androidNotificationThreadId
+         */
+        public String getAndroidNotificationThreadId() {
+            return this.androidNotificationThreadId;
         }
 
         /**
@@ -1128,6 +1139,7 @@ public class MassPushRequest extends Request {
             private String androidNotificationHonorChannel; 
             private String androidNotificationHuaweiChannel; 
             private Integer androidNotificationNotifyId; 
+            private String androidNotificationThreadId; 
             private String androidNotificationVivoChannel; 
             private String androidNotificationXiaomiChannel; 
             private String androidNotifyType; 
@@ -1383,6 +1395,14 @@ public class MassPushRequest extends Request {
              */
             public Builder androidNotificationNotifyId(Integer androidNotificationNotifyId) {
                 this.androidNotificationNotifyId = androidNotificationNotifyId;
+                return this;
+            }
+
+            /**
+             * AndroidNotificationThreadId.
+             */
+            public Builder androidNotificationThreadId(String androidNotificationThreadId) {
+                this.androidNotificationThreadId = androidNotificationThreadId;
                 return this;
             }
 

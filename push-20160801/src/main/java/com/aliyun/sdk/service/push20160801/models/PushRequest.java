@@ -113,6 +113,10 @@ public class PushRequest extends Request {
     private Integer androidNotificationNotifyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationThreadId")
+    private String androidNotificationThreadId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidNotificationVivoChannel")
     private String androidNotificationVivoChannel;
 
@@ -433,6 +437,7 @@ public class PushRequest extends Request {
         this.androidNotificationHonorChannel = builder.androidNotificationHonorChannel;
         this.androidNotificationHuaweiChannel = builder.androidNotificationHuaweiChannel;
         this.androidNotificationNotifyId = builder.androidNotificationNotifyId;
+        this.androidNotificationThreadId = builder.androidNotificationThreadId;
         this.androidNotificationVivoChannel = builder.androidNotificationVivoChannel;
         this.androidNotificationXiaomiChannel = builder.androidNotificationXiaomiChannel;
         this.androidNotifyType = builder.androidNotifyType;
@@ -685,6 +690,13 @@ public class PushRequest extends Request {
      */
     public Integer getAndroidNotificationNotifyId() {
         return this.androidNotificationNotifyId;
+    }
+
+    /**
+     * @return androidNotificationThreadId
+     */
+    public String getAndroidNotificationThreadId() {
+        return this.androidNotificationThreadId;
     }
 
     /**
@@ -1209,6 +1221,7 @@ public class PushRequest extends Request {
         private String androidNotificationHonorChannel; 
         private String androidNotificationHuaweiChannel; 
         private Integer androidNotificationNotifyId; 
+        private String androidNotificationThreadId; 
         private String androidNotificationVivoChannel; 
         private String androidNotificationXiaomiChannel; 
         private String androidNotifyType; 
@@ -1311,6 +1324,7 @@ public class PushRequest extends Request {
             this.androidNotificationHonorChannel = request.androidNotificationHonorChannel;
             this.androidNotificationHuaweiChannel = request.androidNotificationHuaweiChannel;
             this.androidNotificationNotifyId = request.androidNotificationNotifyId;
+            this.androidNotificationThreadId = request.androidNotificationThreadId;
             this.androidNotificationVivoChannel = request.androidNotificationVivoChannel;
             this.androidNotificationXiaomiChannel = request.androidNotificationXiaomiChannel;
             this.androidNotifyType = request.androidNotifyType;
@@ -1597,6 +1611,15 @@ public class PushRequest extends Request {
         public Builder androidNotificationNotifyId(Integer androidNotificationNotifyId) {
             this.putQueryParameter("AndroidNotificationNotifyId", androidNotificationNotifyId);
             this.androidNotificationNotifyId = androidNotificationNotifyId;
+            return this;
+        }
+
+        /**
+         * AndroidNotificationThreadId.
+         */
+        public Builder androidNotificationThreadId(String androidNotificationThreadId) {
+            this.putQueryParameter("AndroidNotificationThreadId", androidNotificationThreadId);
+            this.androidNotificationThreadId = androidNotificationThreadId;
             return this;
         }
 

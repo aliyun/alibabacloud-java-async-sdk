@@ -1,3 +1,6 @@
+2024-10-24 Version: 1.0.10
+- Generated java-async 2016-08-01 for Push.
+
 2024-10-10 Version: 1.0.9
 - Generated java-async 2016-08-01 for Push.
 
