@@ -23,6 +23,10 @@ public class ModifyAccountDescriptionRequest extends Request {
     private String accountName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -31,6 +35,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         super(builder);
         this.accountDescription = builder.accountDescription;
         this.accountName = builder.accountName;
+        this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
     }
 
@@ -62,6 +67,13 @@ public class ModifyAccountDescriptionRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -71,6 +83,7 @@ public class ModifyAccountDescriptionRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyAccountDescriptionRequest, Builder> {
         private String accountDescription; 
         private String accountName; 
+        private String clientToken; 
         private String DBInstanceId; 
 
         private Builder() {
@@ -81,6 +94,7 @@ public class ModifyAccountDescriptionRequest extends Request {
             super(request);
             this.accountDescription = request.accountDescription;
             this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
         } 
 
@@ -113,6 +127,15 @@ public class ModifyAccountDescriptionRequest extends Request {
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
             this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

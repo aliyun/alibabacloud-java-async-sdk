@@ -253,6 +253,9 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -269,6 +272,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             this.completed = builder.completed;
             this.createTime = builder.createTime;
             this.error = builder.error;
+            this.errorCode = builder.errorCode;
             this.id = builder.id;
             this.progress = builder.progress;
             this.status = builder.status;
@@ -305,6 +309,13 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
          * @return id
          */
         public String getId() {
@@ -336,6 +347,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             private Boolean completed; 
             private String createTime; 
             private String error; 
+            private String errorCode; 
             private String id; 
             private Integer progress; 
             private String status; 
@@ -371,6 +383,14 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
              */
             public Builder error(String error) {
                 this.error = error;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
                 return this;
             }
 

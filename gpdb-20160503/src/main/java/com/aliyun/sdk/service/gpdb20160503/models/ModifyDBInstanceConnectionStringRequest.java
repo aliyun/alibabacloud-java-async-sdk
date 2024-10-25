@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceConnectionStringRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
     @com.aliyun.core.annotation.Validation(required = true)
     private String connectionStringPrefix;
@@ -34,6 +38,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
     private ModifyDBInstanceConnectionStringRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.currentConnectionString = builder.currentConnectionString;
         this.DBInstanceId = builder.DBInstanceId;
@@ -51,6 +56,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -82,6 +94,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceConnectionStringRequest, Builder> {
+        private String clientToken; 
         private String connectionStringPrefix; 
         private String currentConnectionString; 
         private String DBInstanceId; 
@@ -93,11 +106,21 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         private Builder(ModifyDBInstanceConnectionStringRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.currentConnectionString = request.currentConnectionString;
             this.DBInstanceId = request.DBInstanceId;
             this.port = request.port;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The endpoint prefix of the instance.</p>

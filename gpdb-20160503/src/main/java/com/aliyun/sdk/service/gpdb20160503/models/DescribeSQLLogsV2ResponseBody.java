@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLLogsV2ResponseBody</p>
  */
 public class DescribeSQLLogsV2ResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
@@ -25,6 +28,7 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeSQLLogsV2ResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.items = builder.items;
         this.pageNumber = builder.pageNumber;
         this.pageRecordCount = builder.pageRecordCount;
@@ -37,6 +41,13 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
 
     public static DescribeSQLLogsV2ResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,10 +79,19 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private java.util.List < Items> items; 
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * <p>Details of the SQL logs.</p>
@@ -136,6 +156,12 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBRole")
         private String DBRole;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+        private String errorMsg;
+
         @com.aliyun.core.annotation.NameInMap("ExecuteCost")
         private Float executeCost;
 
@@ -170,6 +196,8 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             this.accountName = builder.accountName;
             this.DBName = builder.DBName;
             this.DBRole = builder.DBRole;
+            this.errorCode = builder.errorCode;
+            this.errorMsg = builder.errorMsg;
             this.executeCost = builder.executeCost;
             this.executeState = builder.executeState;
             this.operationClass = builder.operationClass;
@@ -209,6 +237,20 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
          */
         public String getDBRole() {
             return this.DBRole;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         /**
@@ -285,6 +327,8 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             private String accountName; 
             private String DBName; 
             private String DBRole; 
+            private String errorCode; 
+            private String errorMsg; 
             private Float executeCost; 
             private String executeState; 
             private String operationClass; 
@@ -326,6 +370,22 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
              */
             public Builder DBRole(String DBRole) {
                 this.DBRole = DBRole;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorMsg.
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
                 return this;
             }
 
