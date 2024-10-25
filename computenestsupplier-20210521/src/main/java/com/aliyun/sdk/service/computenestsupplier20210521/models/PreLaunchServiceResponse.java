@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetServiceResponse} extends {@link TeaModel}
+ * {@link PreLaunchServiceResponse} extends {@link TeaModel}
  *
- * <p>GetServiceResponse</p>
+ * <p>PreLaunchServiceResponse</p>
  */
-public class GetServiceResponse extends Response {
+public class PreLaunchServiceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetServiceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetServiceResponseBody body;
+    private PreLaunchServiceResponseBody body;
 
-    private GetServiceResponse(BuilderImpl builder) {
+    private PreLaunchServiceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetServiceResponse create() {
+    public static PreLaunchServiceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetServiceResponse extends Response {
     /**
      * @return body
      */
-    public GetServiceResponseBody getBody() {
+    public PreLaunchServiceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetServiceResponse, Builder> {
+    public interface Builder extends Response.Builder<PreLaunchServiceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetServiceResponseBody body);
+        Builder body(PreLaunchServiceResponseBody body);
 
         @Override
-        GetServiceResponse build();
+        PreLaunchServiceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetServiceResponse, Builder>
+            extends Response.BuilderImpl<PreLaunchServiceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetServiceResponseBody body; 
+        private PreLaunchServiceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetServiceResponse response) {
+        private BuilderImpl(PreLaunchServiceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetServiceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetServiceResponseBody body) {
+        public Builder body(PreLaunchServiceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetServiceResponse build() {
-            return new GetServiceResponse(this);
+        public PreLaunchServiceResponse build() {
+            return new PreLaunchServiceResponse(this);
         } 
 
     } 

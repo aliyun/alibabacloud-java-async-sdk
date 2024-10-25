@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApproveServiceUsageRequest} extends {@link RequestModel}
  *
  * <p>ApproveServiceUsageRequest</p>
@@ -125,7 +126,10 @@ public class ApproveServiceUsageRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -134,7 +138,10 @@ public class ApproveServiceUsageRequest extends Request {
         }
 
         /**
-         * Approval comments.
+         * <p>Approval comments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Welcome to TuGraph. Your application has been approved. Should you have any questions, please feel free to email us at <a href="mailto:tugraph@service.alipay.com">tugraph@service.alipay.com</a> or call our contact number 400-903-0809. Contact person: Yuansu.</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -143,7 +150,10 @@ public class ApproveServiceUsageRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,7 +162,11 @@ public class ApproveServiceUsageRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-39f4f251e94843xxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -161,7 +175,10 @@ public class ApproveServiceUsageRequest extends Request {
         }
 
         /**
-         * ServiceSharedAccountType，
+         * <p>ServiceSharedAccountType，</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SharedAccount</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);
@@ -170,7 +187,11 @@ public class ApproveServiceUsageRequest extends Request {
         }
 
         /**
-         * User ali uid.
+         * <p>User ali uid.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127383705958xxxx</p>
          */
         public Builder userAliUid(Long userAliUid) {
             this.putQueryParameter("UserAliUid", userAliUid);

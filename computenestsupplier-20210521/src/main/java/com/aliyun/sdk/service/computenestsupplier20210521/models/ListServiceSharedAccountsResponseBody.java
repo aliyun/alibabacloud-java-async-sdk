@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceSharedAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceSharedAccountsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA3AE512-6D30-549A-B52D-B9042CA8D515</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceSharedAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceSharedAccountsResponseBody</p>
+     */
     public static class ShareAccount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -229,7 +248,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
             private String userAliUid; 
 
             /**
-             * The time when the service was created.
+             * <p>The time when the service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-28T02:47:46.000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -237,7 +259,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Service logo.
+             * <p>Service logo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logo</p>
              */
             public Builder logo(String logo) {
                 this.logo = logo;
@@ -245,11 +270,14 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service instance. The value must meet the following requirements:
-             * <p>
+             * <p>The name of the service instance. The value must meet the following requirements:</p>
+             * <ul>
+             * <li>The name cannot exceed 64 characters in length.</li>
+             * <li>It can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</li>
+             * </ul>
              * 
-             * *   The name cannot exceed 64 characters in length.
-             * *   It can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,11 +285,14 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions on the service. Valid values:
-             * <p>
+             * <p>The permissions on the service. Valid values:</p>
+             * <ul>
+             * <li>Deployable: Permissions to deploy the service.</li>
+             * <li>Accessible: Permissions to access the service.</li>
+             * </ul>
              * 
-             * *   Deployable: Permissions to deploy the service.
-             * *   Accessible: Permissions to access the service.
+             * <strong>example:</strong>
+             * <p>Deployable</p>
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -269,7 +300,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-e10349089de34exxxxxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -277,7 +311,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was updated.
+             * <p>The time when the service was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-13T02:16:03.756Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

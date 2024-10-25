@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListArtifactsRequest} extends {@link RequestModel}
  *
  * <p>ListArtifactsRequest</p>
@@ -109,7 +110,7 @@ public class ListArtifactsRequest extends Request {
         } 
 
         /**
-         * The filter.
+         * <p>The filter.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -118,7 +119,10 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -127,7 +131,10 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -136,7 +143,10 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek25yfxxxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -145,7 +155,7 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -160,6 +170,12 @@ public class ListArtifactsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListArtifactsRequest} extends {@link TeaModel}
+     *
+     * <p>ListArtifactsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -199,12 +215,15 @@ public class ListArtifactsRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * The parameter name of the filter. You can specify one or more filters. Valid values:
-             * <p>
+             * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
+             * <ul>
+             * <li><em>Name</em>: The name of the deployment package. Fuzzy match is used.</li>
+             * <li>ArtifactId: The ID of the deployment package.</li>
+             * <li>ArtifactType: The type of the deployment package.</li>
+             * </ul>
              * 
-             * *   *Name*: The name of the deployment package. Fuzzy match is used.
-             * *   ArtifactId: The ID of the deployment package.
-             * *   ArtifactType: The type of the deployment package.
+             * <strong>example:</strong>
+             * <p>ArtifactType</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,7 +231,7 @@ public class ListArtifactsRequest extends Request {
             }
 
             /**
-             * The parameter values of the filter.
+             * <p>The parameter values of the filter.</p>
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -226,6 +245,12 @@ public class ListArtifactsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListArtifactsRequest} extends {@link TeaModel}
+     *
+     * <p>ListArtifactsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -265,7 +290,10 @@ public class ListArtifactsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -273,7 +301,10 @@ public class ListArtifactsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

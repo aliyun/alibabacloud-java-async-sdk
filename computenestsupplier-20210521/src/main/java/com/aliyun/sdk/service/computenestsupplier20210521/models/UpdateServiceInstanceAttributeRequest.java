@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateServiceInstanceAttributeRequest</p>
@@ -18,6 +19,10 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LicenseData")
     private LicenseData licenseData;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reason")
+    private String reason;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -33,6 +38,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
         super(builder);
         this.endTime = builder.endTime;
         this.licenseData = builder.licenseData;
+        this.reason = builder.reason;
         this.regionId = builder.regionId;
         this.serviceInstanceId = builder.serviceInstanceId;
     }
@@ -65,6 +71,13 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -81,6 +94,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateServiceInstanceAttributeRequest, Builder> {
         private String endTime; 
         private LicenseData licenseData; 
+        private String reason; 
         private String regionId; 
         private String serviceInstanceId; 
 
@@ -92,12 +106,17 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
             super(request);
             this.endTime = request.endTime;
             this.licenseData = request.licenseData;
+            this.reason = request.reason;
             this.regionId = request.regionId;
             this.serviceInstanceId = request.serviceInstanceId;
         } 
 
         /**
-         * The time when the service instance expires.
+         * <p>The time when the service instance expires.</p>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-25T02:28:40Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -106,7 +125,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The License Data
+         * <p>The License Data</p>
          */
         public Builder licenseData(LicenseData licenseData) {
             String licenseDataShrink = shrink(licenseData, "LicenseData", "json");
@@ -116,7 +135,20 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * Reason.
+         */
+        public Builder reason(String reason) {
+            this.putQueryParameter("Reason", reason);
+            this.reason = reason;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +157,11 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The service instance ID.
+         * <p>The service instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-3df88e962cdexxxxxxxx</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -140,6 +176,12 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateServiceInstanceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateServiceInstanceAttributeRequest</p>
+     */
     public static class LicenseData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomData")
         private String customData;
@@ -167,7 +209,10 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
             private String customData; 
 
             /**
-             * The Custom Data
+             * <p>The Custom Data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Test&quot;}</p>
              */
             public Builder customData(String customData) {
                 this.customData = customData;

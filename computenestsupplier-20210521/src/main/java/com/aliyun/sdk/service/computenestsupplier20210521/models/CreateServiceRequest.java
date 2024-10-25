@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceRequest</p>
@@ -28,6 +29,10 @@ public class CreateServiceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComplianceMetadata")
+    private ComplianceMetadata complianceMetadata;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeployMetadata")
     private String deployMetadata;
 
@@ -35,6 +40,10 @@ public class CreateServiceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DeployType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String deployType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Duration")
@@ -123,8 +132,10 @@ public class CreateServiceRequest extends Request {
         this.approvalType = builder.approvalType;
         this.buildParameters = builder.buildParameters;
         this.clientToken = builder.clientToken;
+        this.complianceMetadata = builder.complianceMetadata;
         this.deployMetadata = builder.deployMetadata;
         this.deployType = builder.deployType;
+        this.dryRun = builder.dryRun;
         this.duration = builder.duration;
         this.isSupportOperated = builder.isSupportOperated;
         this.licenseMetadata = builder.licenseMetadata;
@@ -189,6 +200,13 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
+     * @return complianceMetadata
+     */
+    public ComplianceMetadata getComplianceMetadata() {
+        return this.complianceMetadata;
+    }
+
+    /**
      * @return deployMetadata
      */
     public String getDeployMetadata() {
@@ -200,6 +218,13 @@ public class CreateServiceRequest extends Request {
      */
     public String getDeployType() {
         return this.deployType;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -347,8 +372,10 @@ public class CreateServiceRequest extends Request {
         private String approvalType; 
         private String buildParameters; 
         private String clientToken; 
+        private ComplianceMetadata complianceMetadata; 
         private String deployMetadata; 
         private String deployType; 
+        private Boolean dryRun; 
         private Long duration; 
         private Boolean isSupportOperated; 
         private String licenseMetadata; 
@@ -380,8 +407,10 @@ public class CreateServiceRequest extends Request {
             this.approvalType = request.approvalType;
             this.buildParameters = request.buildParameters;
             this.clientToken = request.clientToken;
+            this.complianceMetadata = request.complianceMetadata;
             this.deployMetadata = request.deployMetadata;
             this.deployType = request.deployType;
+            this.dryRun = request.dryRun;
             this.duration = request.duration;
             this.isSupportOperated = request.isSupportOperated;
             this.licenseMetadata = request.licenseMetadata;
@@ -405,10 +434,26 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
-         * The alert configurations of the service.
-         * <p>
+         * <p>The alert configurations of the service.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when you specify an alert policy for <strong>PolicyNames</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only when you specify an alert policy for **PolicyNames**.
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;TemplateUrl&quot;: &quot;<a href="http://template.file.url">http://template.file.url</a>&quot;,
+         *   // 应用分组级别告警元数据
+         *   &quot;ApplicationGroups&quot;: [
+         *     {
+         *       &quot;Name&quot;: &quot;applicationGroup1&quot;,
+         *       &quot;TemplateUrl&quot;: &quot;url1&quot;
+         *     },
+         *     {
+         *       &quot;Name&quot;: &quot;applicationGroup2&quot;,
+         *       &quot;TemplateUrl&quot;: &quot;url2&quot;
+         *     }
+         *   ]
+         * }</p>
          */
         public Builder alarmMetadata(String alarmMetadata) {
             this.putQueryParameter("AlarmMetadata", alarmMetadata);
@@ -417,11 +462,14 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The approval type of the service usage application. Valid values:
-         * <p>
+         * <p>The approval type of the service usage application. Valid values:</p>
+         * <ul>
+         * <li>Manual: The application is manually approved.</li>
+         * <li>AutoPass: The application is automatically approved.</li>
+         * </ul>
          * 
-         * *   Manual: The application is manually approved.
-         * *   AutoPass: The application is automatically approved.
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder approvalType(String approvalType) {
             this.putQueryParameter("ApprovalType", approvalType);
@@ -430,7 +478,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The parameters for building the service
+         * <p>The parameters for building the service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;ServiceTemplateId&quot;: &quot;st-xxxxx&quot;}</p>
          */
         public Builder buildParameters(String buildParameters) {
             this.putQueryParameter("BuildParameters", buildParameters);
@@ -439,7 +490,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -448,7 +502,23 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.
+         * ComplianceMetadata.
+         */
+        public Builder complianceMetadata(ComplianceMetadata complianceMetadata) {
+            String complianceMetadataShrink = shrink(complianceMetadata, "ComplianceMetadata", "json");
+            this.putQueryParameter("ComplianceMetadata", complianceMetadataShrink);
+            this.complianceMetadata = complianceMetadata;
+            return this;
+        }
+
+        /**
+         * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;TemplateConfigs&quot;:[{&quot;Name&quot;:&quot;模板1&quot;,&quot;Url&quot;:&quot;oss://computenest-test/template&quot; 
+         *             + &quot;.json?RegionId=cn-beijing&quot;,&quot;PredefinedParameters&quot;:[{&quot;Name&quot;:&quot;低配版&quot;,&quot; 
+         *             + &quot;&quot;Parameters&quot;:{&quot;InstanceType&quot;:&quot;ecs.g5.large&quot;,&quot;DataDiskSize&quot;:40}},{&quot;Name&quot;:&quot;高配版&quot;,&quot; 
+         *             + &quot;&quot;Parameters&quot;:{&quot;InstanceType&quot;:&quot;ecs.g5.large&quot;,&quot;DataDiskSize&quot;:200}}]}]}</p>
          */
         public Builder deployMetadata(String deployMetadata) {
             this.putQueryParameter("DeployMetadata", deployMetadata);
@@ -457,14 +527,18 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The deployment type of the service. Valid values:
-         * <p>
+         * <p>The deployment type of the service. Valid values:</p>
+         * <ul>
+         * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
+         * <li>terraform: The service is deployed by using Terraform.</li>
+         * <li>ack: The service is deployed by using Container Service for Kubernetes (ACK).</li>
+         * <li>spi: The service is deployed by calling a service provider interface (SPI).</li>
+         * <li>operation: The service is deployed by using a hosted O&amp;M service.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ros: The service is deployed by using Resource Orchestration Service (ROS).
-         * *   terraform: The service is deployed by using Terraform.
-         * *   ack: The service is deployed by using Container Service for Kubernetes (ACK).
-         * *   spi: The service is deployed by calling a service provider interface (SPI).
-         * *   operation: The service is deployed by using a hosted O\&M service.
+         * <strong>example:</strong>
+         * <p>ros</p>
          */
         public Builder deployType(String deployType) {
             this.putQueryParameter("DeployType", deployType);
@@ -473,7 +547,19 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The duration for which hosted O\&M is implemented. Unit: seconds.
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The duration for which hosted O&amp;M is implemented. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder duration(Long duration) {
             this.putQueryParameter("Duration", duration);
@@ -482,13 +568,17 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the hosted O\&M feature for the service. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the hosted O&amp;M feature for the service. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if you set <strong>ServiceType</strong> to <strong>private</strong>.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
-         * 
-         * >  This parameter is required if you set **ServiceType** to **private**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isSupportOperated(Boolean isSupportOperated) {
             this.putQueryParameter("IsSupportOperated", isSupportOperated);
@@ -497,7 +587,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The license metadata.
+         * <p>The license metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RetentionDays&quot;:3}</p>
          */
         public Builder licenseMetadata(String licenseMetadata) {
             this.putQueryParameter("LicenseMetadata", licenseMetadata);
@@ -506,7 +599,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The logging configurations.
+         * <p>The logging configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Logstores&quot;: [ { &quot;LogstoreName&quot;: &quot;access-log&quot;, &quot;LogPath&quot;: &quot;/home/admin/app/logs&quot;, # This parameter is not required for containers. Configure the parameter in the YAML file. &quot;FilePattern&quot;: &quot;access.log*&quot; # This parameter is not required for containers. Configure the parameter in the YAML file. } ] }</p>
          */
         public Builder logMetadata(String logMetadata) {
             this.putQueryParameter("LogMetadata", logMetadata);
@@ -515,7 +611,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The hosted O\&M configurations.
+         * <p>The hosted O&amp;M configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PrometheusConfigMap&quot;:{&quot;New_Vpc_Ack_And_Jumpserver&quot;:{}}}</p>
          */
         public Builder operationMetadata(String operationMetadata) {
             this.putQueryParameter("OperationMetadata", operationMetadata);
@@ -524,7 +623,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\&M policies are supported.
+         * <p>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O&amp;M policies are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policyName1, policyName2</p>
          */
         public Builder policyNames(String policyNames) {
             this.putQueryParameter("PolicyNames", policyNames);
@@ -533,7 +635,11 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -542,7 +648,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * Whether resell is supported.
+         * <p>Whether resell is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder resellable(Boolean resellable) {
             this.putQueryParameter("Resellable", resellable);
@@ -551,7 +660,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek25refu7r3opq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -560,7 +672,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-0e6fca6a51a544xxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -569,7 +684,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The service details.
+         * <p>The service details.</p>
          */
         public Builder serviceInfo(java.util.List < ServiceInfo> serviceInfo) {
             this.putQueryParameter("ServiceInfo", serviceInfo);
@@ -578,13 +693,16 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The service type. Valid values:
-         * <p>
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li>private: The service is a private service and is deployed within the account of a customer.</li>
+         * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
+         * <li>operation: The service is a hosted O&amp;M service.</li>
+         * <li>poc: The service is a trial service.</li>
+         * </ul>
          * 
-         * *   private: The service is a private service and is deployed within the account of a customer.
-         * *   managed: The service is a fully managed service and is deployed within the account of a service provider.
-         * *   operation: The service is a hosted O\&M service.
-         * *   poc: The service is a trial service.
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -593,14 +711,17 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The permission type of the deployment URL. Valid values:
-         * <p>
+         * <p>The permission type of the deployment URL. Valid values:</p>
+         * <ul>
+         * <li>Public: All users can go to the URL to create a service instance or a trial service instance.</li>
+         * <li>Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.</li>
+         * <li>OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.</li>
+         * <li>OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.</li>
+         * <li>Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.</li>
+         * </ul>
          * 
-         * *   Public: All users can go to the URL to create a service instance or a trial service instance.
-         * *   Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.
-         * *   OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.
-         * *   OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.
-         * *   Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -609,7 +730,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The source service ID for resell。
+         * <p>The source service ID for resell。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-70a3b15bb62643xxxxxx</p>
          */
         public Builder sourceServiceId(String sourceServiceId) {
             this.putQueryParameter("SourceServiceId", sourceServiceId);
@@ -618,7 +742,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The source service version for resell。
+         * <p>The source service version for resell。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sourceServiceVersion(String sourceServiceVersion) {
             this.putQueryParameter("SourceServiceVersion", sourceServiceVersion);
@@ -627,7 +754,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The custom tags.
+         * <p>The custom tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -636,11 +763,14 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The type of the tenant. Valid values:
-         * <p>
+         * <p>The type of the tenant. Valid values:</p>
+         * <ul>
+         * <li>SingleTenant</li>
+         * <li>MultiTenant</li>
+         * </ul>
          * 
-         * *   SingleTenant
-         * *   MultiTenant
+         * <strong>example:</strong>
+         * <p>SingleTenant</p>
          */
         public Builder tenantType(String tenantType) {
             this.putQueryParameter("TenantType", tenantType);
@@ -649,7 +779,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.
+         * <p>The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder trialDuration(Long trialDuration) {
             this.putQueryParameter("TrialDuration", trialDuration);
@@ -658,7 +791,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The metadata about the upgrade.
+         * <p>The metadata about the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Description&quot;:&quot;xxx&quot;,&quot;SupportRollback&quot;:true,&quot;SupportUpgradeFromVersions&quot;:[],&quot;UpgradeComponents&quot;:[&quot;Configuration&quot;]}</p>
          */
         public Builder upgradeMetadata(String upgradeMetadata) {
             this.putQueryParameter("UpgradeMetadata", upgradeMetadata);
@@ -667,7 +803,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The version name.
+         * <p>The version name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Draft</p>
          */
         public Builder versionName(String versionName) {
             this.putQueryParameter("VersionName", versionName);
@@ -682,6 +821,59 @@ public class CreateServiceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceRequest</p>
+     */
+    public static class ComplianceMetadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CompliancePacks")
+        private java.util.List < String > compliancePacks;
+
+        private ComplianceMetadata(Builder builder) {
+            this.compliancePacks = builder.compliancePacks;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ComplianceMetadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return compliancePacks
+         */
+        public java.util.List < String > getCompliancePacks() {
+            return this.compliancePacks;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > compliancePacks; 
+
+            /**
+             * CompliancePacks.
+             */
+            public Builder compliancePacks(java.util.List < String > compliancePacks) {
+                this.compliancePacks = compliancePacks;
+                return this;
+            }
+
+            public ComplianceMetadata build() {
+                return new ComplianceMetadata(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceRequest</p>
+     */
     public static class Agreements extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -721,7 +913,10 @@ public class CreateServiceRequest extends Request {
             private String url; 
 
             /**
-             * Protocol name.
+             * <p>Protocol name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -729,7 +924,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * Protocol url.
+             * <p>Protocol url.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun.com/xxxxxxxx.html">https://aliyun.com/xxxxxxxx.html</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -743,6 +941,82 @@ public class CreateServiceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceRequest</p>
+     */
+    public static class Softwares extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
+        private Softwares(Builder builder) {
+            this.name = builder.name;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Softwares create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String version; 
+
+            /**
+             * <p>Protocol name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public Softwares build() {
+                return new Softwares(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceRequest</p>
+     */
     public static class ServiceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Agreements")
         private java.util.List < Agreements> agreements;
@@ -764,6 +1038,9 @@ public class CreateServiceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ShortDescription")
         private String shortDescription;
 
+        @com.aliyun.core.annotation.NameInMap("Softwares")
+        private java.util.List < Softwares> softwares;
+
         private ServiceInfo(Builder builder) {
             this.agreements = builder.agreements;
             this.image = builder.image;
@@ -771,6 +1048,7 @@ public class CreateServiceRequest extends Request {
             this.longDescriptionUrl = builder.longDescriptionUrl;
             this.name = builder.name;
             this.shortDescription = builder.shortDescription;
+            this.softwares = builder.softwares;
         }
 
         public static Builder builder() {
@@ -823,6 +1101,13 @@ public class CreateServiceRequest extends Request {
             return this.shortDescription;
         }
 
+        /**
+         * @return softwares
+         */
+        public java.util.List < Softwares> getSoftwares() {
+            return this.softwares;
+        }
+
         public static final class Builder {
             private java.util.List < Agreements> agreements; 
             private String image; 
@@ -830,9 +1115,10 @@ public class CreateServiceRequest extends Request {
             private String longDescriptionUrl; 
             private String name; 
             private String shortDescription; 
+            private java.util.List < Softwares> softwares; 
 
             /**
-             * Protocol document information about the service.
+             * <p>Protocol document information about the service.</p>
              */
             public Builder agreements(java.util.List < Agreements> agreements) {
                 this.agreements = agreements;
@@ -840,7 +1126,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * The URL of the service icon.
+             * <p>The URL of the service icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://img.tidb.oss.url">http://img.tidb.oss.url</a></p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -848,11 +1137,15 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * The language of the service. Valid values:
-             * <p>
+             * <p>The language of the service. Valid values:</p>
+             * <ul>
+             * <li>zh-CN: Chinese</li>
+             * <li>en-US: English</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   zh-CN: Chinese
-             * *   en-US: English
+             * <strong>example:</strong>
+             * <p>zh-CN</p>
              */
             public Builder locale(String locale) {
                 this.locale = locale;
@@ -860,7 +1153,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * The URL of the detailed description of the service.
+             * <p>The URL of the detailed description of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://description.tidb.oss.url">http://description.tidb.oss.url</a></p>
              */
             public Builder longDescriptionUrl(String longDescriptionUrl) {
                 this.longDescriptionUrl = longDescriptionUrl;
@@ -868,7 +1164,11 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * The service name.
+             * <p>The service name.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TiDB Database</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -876,10 +1176,21 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * The description of the service.
+             * <p>The description of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TiDB是A公司自主设计、研发的开源分布式关系型数据库。</p>
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
+                return this;
+            }
+
+            /**
+             * Softwares.
+             */
+            public Builder softwares(java.util.List < Softwares> softwares) {
+                this.softwares = softwares;
                 return this;
             }
 
@@ -890,6 +1201,12 @@ public class CreateServiceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -929,7 +1246,10 @@ public class CreateServiceRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -937,7 +1257,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Web</p>
              */
             public Builder value(String value) {
                 this.value = value;

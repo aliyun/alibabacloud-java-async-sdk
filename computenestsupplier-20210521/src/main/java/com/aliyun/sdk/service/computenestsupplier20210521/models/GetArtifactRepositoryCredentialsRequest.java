@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetArtifactRepositoryCredentialsRequest} extends {@link RequestModel}
  *
  * <p>GetArtifactRepositoryCredentialsRequest</p>
@@ -68,11 +69,15 @@ public class GetArtifactRepositoryCredentialsRequest extends Request {
         } 
 
         /**
-         * The type of the deployment package. Valid values:
-         * <p>
+         * <p>The type of the deployment package. Valid values:</p>
+         * <ul>
+         * <li>File: Object Storage Service (OSS) object.</li>
+         * <li>AcrImage: container image.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   File: Object Storage Service (OSS) object.
-         * *   AcrImage: container image.
+         * <strong>example:</strong>
+         * <p>File</p>
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -81,7 +86,10 @@ public class GetArtifactRepositoryCredentialsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder deployRegionId(String deployRegionId) {
             this.putQueryParameter("DeployRegionId", deployRegionId);

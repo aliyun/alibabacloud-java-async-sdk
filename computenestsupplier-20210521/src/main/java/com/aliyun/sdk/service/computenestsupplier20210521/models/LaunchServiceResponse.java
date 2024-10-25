@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetServiceResponse} extends {@link TeaModel}
+ * {@link LaunchServiceResponse} extends {@link TeaModel}
  *
- * <p>GetServiceResponse</p>
+ * <p>LaunchServiceResponse</p>
  */
-public class GetServiceResponse extends Response {
+public class LaunchServiceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetServiceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetServiceResponseBody body;
+    private LaunchServiceResponseBody body;
 
-    private GetServiceResponse(BuilderImpl builder) {
+    private LaunchServiceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetServiceResponse create() {
+    public static LaunchServiceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetServiceResponse extends Response {
     /**
      * @return body
      */
-    public GetServiceResponseBody getBody() {
+    public LaunchServiceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetServiceResponse, Builder> {
+    public interface Builder extends Response.Builder<LaunchServiceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetServiceResponseBody body);
+        Builder body(LaunchServiceResponseBody body);
 
         @Override
-        GetServiceResponse build();
+        LaunchServiceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetServiceResponse, Builder>
+            extends Response.BuilderImpl<LaunchServiceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetServiceResponseBody body; 
+        private LaunchServiceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetServiceResponse response) {
+        private BuilderImpl(LaunchServiceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetServiceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetServiceResponseBody body) {
+        public Builder body(LaunchServiceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetServiceResponse build() {
-            return new GetServiceResponse(this);
+        public LaunchServiceResponse build() {
+            return new LaunchServiceResponse(this);
         } 
 
     } 

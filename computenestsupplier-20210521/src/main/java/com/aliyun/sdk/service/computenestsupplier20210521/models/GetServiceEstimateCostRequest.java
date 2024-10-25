@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceEstimateCostRequest} extends {@link RequestModel}
  *
  * <p>GetServiceEstimateCostRequest</p>
@@ -166,7 +167,10 @@ public class GetServiceEstimateCostRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mRdxWuW2ts</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -175,7 +179,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The subscription duration information about the purchase order of Alibaba Cloud Marketplace.
+         * <p>The subscription duration information about the purchase order of Alibaba Cloud Marketplace.</p>
          */
         public Builder commodity(Commodity commodity) {
             String commodityShrink = shrink(commodity, "Commodity", "json");
@@ -185,7 +189,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The parameters that are specified to deploy the service instance.
+         * <p>The parameters that are specified to deploy the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PayType&quot;:&quot;PostPaid&quot;,&quot;InstancePassword&quot;:&quot;xxxxxxxxxx&quot;,&quot;EcsInstanceType&quot;:&quot;ecs.g6.large&quot;,&quot;VSwitchId&quot;:&quot;vsw-0jlueyydpuekoxxxxxxxx&quot;,&quot;VpcId&quot;:&quot;vpc-0jlps6mjbgvpqxxxxxxxx&quot;,&quot;ZoneId&quot;:&quot;cn-wulanchabu-a&quot;,&quot;Enable&quot;:false,&quot;RegionId&quot;:&quot;cn-wulanchabu&quot;}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -195,7 +202,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -204,7 +214,11 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-16fbd358d75e49xxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -213,7 +227,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The ID of the service instance.
+         * <p>The ID of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -222,7 +239,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The service version.
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>draft</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -231,7 +251,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The package name.
+         * <p>The package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Package 1</p>
          */
         public Builder specificationName(String specificationName) {
             this.putQueryParameter("SpecificationName", specificationName);
@@ -240,7 +263,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The template name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom_Image_Ecs</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -255,6 +281,12 @@ public class GetServiceEstimateCostRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceEstimateCostRequest} extends {@link TeaModel}
+     *
+     * <p>GetServiceEstimateCostRequest</p>
+     */
     public static class Commodity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PayPeriod")
         private Integer payPeriod;
@@ -294,7 +326,10 @@ public class GetServiceEstimateCostRequest extends Request {
             private String payPeriodUnit; 
 
             /**
-             * The subscription duration.
+             * <p>The subscription duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder payPeriod(Integer payPeriod) {
                 this.payPeriod = payPeriod;
@@ -302,12 +337,15 @@ public class GetServiceEstimateCostRequest extends Request {
             }
 
             /**
-             * The unit of the subscription duration. Valid values:
-             * <p>
+             * <p>The unit of the subscription duration. Valid values:</p>
+             * <ul>
+             * <li>Year</li>
+             * <li>Month</li>
+             * <li>Day</li>
+             * </ul>
              * 
-             * *   Year
-             * *   Month
-             * *   Day
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder payPeriodUnit(String payPeriodUnit) {
                 this.payPeriodUnit = payPeriodUnit;

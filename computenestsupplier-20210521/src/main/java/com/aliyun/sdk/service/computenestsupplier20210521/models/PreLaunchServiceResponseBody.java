@@ -7,15 +7,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link StopServiceInstanceResponseBody} extends {@link TeaModel}
+ * {@link PreLaunchServiceResponseBody} extends {@link TeaModel}
  *
- * <p>StopServiceInstanceResponseBody</p>
+ * <p>PreLaunchServiceResponseBody</p>
  */
-public class StopServiceInstanceResponseBody extends TeaModel {
+public class PreLaunchServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private StopServiceInstanceResponseBody(Builder builder) {
+    private PreLaunchServiceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class StopServiceInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static StopServiceInstanceResponseBody create() {
+    public static PreLaunchServiceResponseBody create() {
         return builder().build();
     }
 
@@ -38,18 +38,15 @@ public class StopServiceInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>49A369EF-A302-5006-B0CE-94CED47C38CF</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public StopServiceInstanceResponseBody build() {
-            return new StopServiceInstanceResponseBody(this);
+        public PreLaunchServiceResponseBody build() {
+            return new PreLaunchServiceResponseBody(this);
         } 
 
     } 

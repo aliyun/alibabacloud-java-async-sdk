@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceUsagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceUsagesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAYChudnQUoBH+mGWFpb6oP0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18AD0960-A9FE-1AC8-ADF8-22131Fxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * The service applications.
+         * <p>The service applications.</p>
          */
         public Builder serviceUsages(java.util.List < ServiceUsages> serviceUsages) {
             this.serviceUsages = serviceUsages;
@@ -117,7 +127,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListServiceUsagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceUsagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceUsagesResponseBody</p>
+     */
     public static class ServiceUsages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -253,7 +272,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             private java.util.Map < String, String > userInformation; 
 
             /**
-             * The comment on the approval.
+             * <p>The comment on the approval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reject</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -261,7 +283,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-25T02:02:02Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -269,7 +294,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-c9f36ec6d19b4exxxxxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -277,7 +305,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * The service name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceTest</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -285,13 +316,16 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the service application. Valid values:
-             * <p>
+             * <p>The status of the service application. Valid values:</p>
+             * <ul>
+             * <li>Submitted: The application is submitted or is to be approved.</li>
+             * <li>Approved: The application is approved.</li>
+             * <li>Rejected: The application is rejected.</li>
+             * <li>Canceled: The application is canceled.</li>
+             * </ul>
              * 
-             * *   Submitted: The application is submitted or is to be approved.
-             * *   Approved: The application is approved.
-             * *   Rejected: The application is rejected.
-             * *   Canceled: The application is canceled.
+             * <strong>example:</strong>
+             * <p>Submitted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -299,7 +333,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service provider.
+             * <p>The name of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SupplierAAA</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -307,7 +344,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was updated.
+             * <p>The time when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-25T02:02:02Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -315,7 +355,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127383705958xxxx</p>
              */
             public Builder userAliUid(Long userAliUid) {
                 this.userAliUid = userAliUid;
@@ -323,7 +366,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * The user information.
+             * <p>The user information.</p>
              */
             public Builder userInformation(java.util.Map < String, String > userInformation) {
                 this.userInformation = userInformation;

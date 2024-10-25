@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceSharedAccountsRequest} extends {@link RequestModel}
  *
  * <p>ListServiceSharedAccountsRequest</p>
@@ -124,7 +125,7 @@ public class ListServiceSharedAccountsRequest extends Request {
         } 
 
         /**
-         * The filters.
+         * <p>The filters.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -133,7 +134,10 @@ public class ListServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -142,7 +146,10 @@ public class ListServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAR130adlM4fHHVSWpTca/t4=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -151,11 +158,14 @@ public class ListServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * The permissions on the service. Valid values:
-         * <p>
+         * <p>The permissions on the service. Valid values:</p>
+         * <ul>
+         * <li>Deployable: Permissions to deploy the service.</li>
+         * <li>Accessible: Permissions to access the service.</li>
+         * </ul>
          * 
-         * *   Deployable: Permissions to deploy the service.
-         * *   Accessible: Permissions to access the service.
+         * <strong>example:</strong>
+         * <p>Accessible</p>
          */
         public Builder permission(String permission) {
             this.putQueryParameter("Permission", permission);
@@ -164,7 +174,11 @@ public class ListServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * The region ID where the service instance resides.
+         * <p>The region ID where the service instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +187,10 @@ public class ListServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-e10349089de34exxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -188,6 +205,12 @@ public class ListServiceSharedAccountsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceSharedAccountsRequest} extends {@link TeaModel}
+     *
+     * <p>ListServiceSharedAccountsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -227,10 +250,13 @@ public class ListServiceSharedAccountsRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:
-             * <p>
+             * <p>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</p>
+             * <ul>
+             * <li>Name: the name of the service.</li>
+             * </ul>
              * 
-             * *   Name: the name of the service.
+             * <strong>example:</strong>
+             * <p>UserAliUid</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,7 +264,7 @@ public class ListServiceSharedAccountsRequest extends Request {
             }
 
             /**
-             * The parameter value N of the filter. Valid values of N: 1 to 10.
+             * <p>The parameter value N of the filter. Valid values of N: 1 to 10.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

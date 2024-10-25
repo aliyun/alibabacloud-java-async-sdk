@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceRequest} extends {@link RequestModel}
  *
  * <p>GetServiceRequest</p>
@@ -21,8 +22,15 @@ public class GetServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
+    private String serviceInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    private String serviceName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceVersion")
@@ -41,6 +49,8 @@ public class GetServiceRequest extends Request {
         this.filterAliUid = builder.filterAliUid;
         this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
+        this.serviceInstanceId = builder.serviceInstanceId;
+        this.serviceName = builder.serviceName;
         this.serviceVersion = builder.serviceVersion;
         this.sharedAccountType = builder.sharedAccountType;
         this.showDetail = builder.showDetail;
@@ -81,6 +91,20 @@ public class GetServiceRequest extends Request {
     }
 
     /**
+     * @return serviceInstanceId
+     */
+    public String getServiceInstanceId() {
+        return this.serviceInstanceId;
+    }
+
+    /**
+     * @return serviceName
+     */
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    /**
      * @return serviceVersion
      */
     public String getServiceVersion() {
@@ -105,6 +129,8 @@ public class GetServiceRequest extends Request {
         private Boolean filterAliUid; 
         private String regionId; 
         private String serviceId; 
+        private String serviceInstanceId; 
+        private String serviceName; 
         private String serviceVersion; 
         private String sharedAccountType; 
         private java.util.List < String > showDetail; 
@@ -118,13 +144,18 @@ public class GetServiceRequest extends Request {
             this.filterAliUid = request.filterAliUid;
             this.regionId = request.regionId;
             this.serviceId = request.serviceId;
+            this.serviceInstanceId = request.serviceInstanceId;
+            this.serviceName = request.serviceName;
             this.serviceVersion = request.serviceVersion;
             this.sharedAccountType = request.sharedAccountType;
             this.showDetail = request.showDetail;
         } 
 
         /**
-         * Specifies whether to filter information based on Alibaba Cloud account IDs.
+         * <p>Specifies whether to filter information based on Alibaba Cloud account IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder filterAliUid(Boolean filterAliUid) {
             this.putQueryParameter("FilterAliUid", filterAliUid);
@@ -133,7 +164,10 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +176,10 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-4ee86df83fd948******</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -151,7 +188,28 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * The service version.
+         * ServiceInstanceId.
+         */
+        public Builder serviceInstanceId(String serviceInstanceId) {
+            this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
+            this.serviceInstanceId = serviceInstanceId;
+            return this;
+        }
+
+        /**
+         * ServiceName.
+         */
+        public Builder serviceName(String serviceName) {
+            this.putQueryParameter("ServiceName", serviceName);
+            this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -160,11 +218,14 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * The share type of the service. Default value: SharedAccount. Valid values:
-         * <p>
+         * <p>The share type of the service. Default value: SharedAccount. Valid values:</p>
+         * <ul>
+         * <li>SharedAccount: The service is shared by multiple accounts.</li>
+         * <li>Resell: The service is distributed.</li>
+         * </ul>
          * 
-         * *   SharedAccount: The service is shared by multiple accounts.
-         * *   Resell: The service is distributed.
+         * <strong>example:</strong>
+         * <p>SharedAccount</p>
          */
         public Builder sharedAccountType(String sharedAccountType) {
             this.putQueryParameter("SharedAccountType", sharedAccountType);
@@ -173,7 +234,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * The information that you want to query.
+         * <p>The information that you want to query.</p>
          */
         public Builder showDetail(java.util.List < String > showDetail) {
             this.putQueryParameter("ShowDetail", showDetail);

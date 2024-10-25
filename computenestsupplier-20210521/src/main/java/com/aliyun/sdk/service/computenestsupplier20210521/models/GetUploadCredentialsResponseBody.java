@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUploadCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>GetUploadCredentialsResponseBody</p>
@@ -97,7 +98,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCC3321E-D518-1BC4-861E-588E9D4DAFB7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. A value of true indicates the request was successful. A value of false indicates the request failed.
+         * <p>Indicates whether the request was successful. A value of true indicates the request was successful. A value of false indicates the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUploadCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUploadCredentialsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
@@ -249,7 +271,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * The AccessKey ID.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.NUCe19W1FKaHAYAhe********</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -257,7 +282,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8LQGp59mY23pcXeTdcvSA1cUQZBeD92sFrXi********</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -265,7 +293,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The bucket name.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-info-private</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -273,7 +304,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the AccessKey pair expires.
+             * <p>The time when the AccessKey pair expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-18T12:27:59Z</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -281,7 +315,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * <p>The name of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>221514575922756034/cn-hangzhou/d57c62fbd508xxxxxxxx.json</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -289,7 +326,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -297,7 +337,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The security token.
+             * <p>The security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAISzQN1q6Ft5B2yfSjIr5b2LouNuu5n/KOjQ3/wjGUHYdlagYGdmzz2IH1Le3NrBO8esfgymGFU6v8dlo1dYLQeHhadQI5cs80HtFqLSNaE65LswPlZ2M2ISETPJzfV9pCK</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

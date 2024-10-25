@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAcrImageTagsRequest} extends {@link RequestModel}
  *
  * <p>ListAcrImageTagsRequest</p>
@@ -95,11 +96,14 @@ public class ListAcrImageTagsRequest extends Request {
         } 
 
         /**
-         * The type of the deployment package. Default value: AcrImage. Valid values:
-         * <p>
+         * <p>The type of the deployment package. Default value: AcrImage. Valid values:</p>
+         * <ul>
+         * <li>HelmChart: Helm chart image.</li>
+         * <li>AcrImage: container image.</li>
+         * </ul>
          * 
-         * *   HelmChart: Helm chart image.
-         * *   AcrImage: container image.
+         * <strong>example:</strong>
+         * <p>AcrImage</p>
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -108,7 +112,10 @@ public class ListAcrImageTagsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -117,7 +124,10 @@ public class ListAcrImageTagsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAW8kZY+u1sYOaYf5JmgmDQQ=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -126,7 +136,10 @@ public class ListAcrImageTagsRequest extends Request {
         }
 
         /**
-         * The image ID.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-3gqhkza0wbxxxxxx</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

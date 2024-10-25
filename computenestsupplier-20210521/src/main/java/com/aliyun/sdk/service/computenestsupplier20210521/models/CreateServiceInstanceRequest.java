@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceInstanceRequest</p>
@@ -223,7 +224,10 @@ public class CreateServiceInstanceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -232,11 +236,14 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run for the request, but does not create a service instance.</li>
+         * <li>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</li>
+         * </ul>
          * 
-         * *   true: performs a dry run for the request, but does not create a service instance.
-         * *   false: performs a dry run for the request, and creates a service instance if the request passes the dry run.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -245,10 +252,14 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The time when the service instance was released.
-         * <p>
+         * <p>The time when the service instance was released.</p>
+         * <blockquote>
+         * <p> This parameter is available only for the service instances that are managed by service providers.</p>
+         * </blockquote>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
-         * >  This parameter is available only for the service instances that are managed by service providers.
+         * <strong>example:</strong>
+         * <p>2023-12-12T03:13:05Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -257,11 +268,14 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The name of the service instance. The value must meet the following requirements:
-         * <p>
+         * <p>The name of the service instance. The value must meet the following requirements:</p>
+         * <ul>
+         * <li>The name cannot exceed 64 characters in length.</li>
+         * <li>It can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</li>
+         * </ul>
          * 
-         * *   The name cannot exceed 64 characters in length.
-         * *   It can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
+         * <strong>example:</strong>
+         * <p>TestName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -270,10 +284,13 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The parameters that are specified for service instance deployment.
-         * <p>
+         * <p>The parameters that are specified for service instance deployment.</p>
+         * <blockquote>
+         * <p> If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.</p>
+         * </blockquote>
          * 
-         * >  If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.
+         * <strong>example:</strong>
+         * <p>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -283,11 +300,15 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. Valid values:
-         * <p>
+         * <p>The region ID. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: China (Hangzhou)</li>
+         * <li>ap-southeast-1: Singapore</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cn-hangzhou: China (Hangzhou)
-         * *   ap-southeast-1: Singapore
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -296,7 +317,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzuqyxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -305,7 +329,11 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-0e6fca6a51a54420****</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -314,7 +342,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The service version.
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -323,7 +354,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The name of the package specification.
+         * <p>The name of the package specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>套餐一</p>
          */
         public Builder specificationName(String specificationName) {
             this.putQueryParameter("SpecificationName", specificationName);
@@ -332,7 +366,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The custom tags.
+         * <p>The custom tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -341,7 +375,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The template name. You must specify a template name if the service supports multiple templates.
+         * <p>The template name. You must specify a template name if the service supports multiple templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模板1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -350,7 +387,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The user ID.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563457855xxxxxx</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -365,6 +405,12 @@ public class CreateServiceInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -404,7 +450,10 @@ public class CreateServiceInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -412,7 +461,10 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

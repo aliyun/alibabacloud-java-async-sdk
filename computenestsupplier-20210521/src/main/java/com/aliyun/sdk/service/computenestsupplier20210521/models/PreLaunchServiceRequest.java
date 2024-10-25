@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeployServiceInstanceRequest} extends {@link RequestModel}
+ * {@link PreLaunchServiceRequest} extends {@link RequestModel}
  *
- * <p>DeployServiceInstanceRequest</p>
+ * <p>PreLaunchServiceRequest</p>
  */
-public class DeployServiceInstanceRequest extends Request {
+public class PreLaunchServiceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
@@ -22,22 +22,22 @@ public class DeployServiceInstanceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String serviceInstanceId;
+    private String serviceId;
 
-    private DeployServiceInstanceRequest(Builder builder) {
+    private PreLaunchServiceRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.regionId = builder.regionId;
-        this.serviceInstanceId = builder.serviceInstanceId;
+        this.serviceId = builder.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeployServiceInstanceRequest create() {
+    public static PreLaunchServiceRequest create() {
         return builder().build();
     }
 
@@ -61,33 +61,30 @@ public class DeployServiceInstanceRequest extends Request {
     }
 
     /**
-     * @return serviceInstanceId
+     * @return serviceId
      */
-    public String getServiceInstanceId() {
-        return this.serviceInstanceId;
+    public String getServiceId() {
+        return this.serviceId;
     }
 
-    public static final class Builder extends Request.Builder<DeployServiceInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<PreLaunchServiceRequest, Builder> {
         private String clientToken; 
         private String regionId; 
-        private String serviceInstanceId; 
+        private String serviceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeployServiceInstanceRequest request) {
+        private Builder(PreLaunchServiceRequest request) {
             super(request);
             this.clientToken = request.clientToken;
             this.regionId = request.regionId;
-            this.serviceInstanceId = request.serviceInstanceId;
+            this.serviceId = request.serviceId;
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123e4567-e89b-12d3-a456-426655440000</p>
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -96,7 +93,6 @@ public class DeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,21 +105,20 @@ public class DeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>si-0e6fca6a51a54420****</p>
+         * <p>service-f7024a22ea5149xxxxxx</p>
          */
-        public Builder serviceInstanceId(String serviceInstanceId) {
-            this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
-            this.serviceInstanceId = serviceInstanceId;
+        public Builder serviceId(String serviceId) {
+            this.putQueryParameter("ServiceId", serviceId);
+            this.serviceId = serviceId;
             return this;
         }
 
         @Override
-        public DeployServiceInstanceRequest build() {
-            return new DeployServiceInstanceRequest(this);
+        public PreLaunchServiceRequest build() {
+            return new PreLaunchServiceRequest(this);
         } 
 
     } 

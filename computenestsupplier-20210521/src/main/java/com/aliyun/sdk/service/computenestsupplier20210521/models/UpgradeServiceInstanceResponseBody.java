@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeServiceInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeServiceInstanceResponseBody</p>
@@ -73,7 +74,10 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         private java.util.List < String > upgradeRequiredParameters; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F224E002-AB0E-5FD9-A87E-54AEE56F6CAE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +85,10 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the service instance.
+         * <p>The ID of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-5cbae874da0e47xxxxxx</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -89,17 +96,20 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The deployment state of the service instance. Valid values:
-         * <p>
+         * <p>The deployment state of the service instance. Valid values:</p>
+         * <ul>
+         * <li>Created</li>
+         * <li>Deploying</li>
+         * <li>DeployedFailed</li>
+         * <li>Deployed</li>
+         * <li>Upgrading</li>
+         * <li>Deleting</li>
+         * <li>Deleted</li>
+         * <li>DeletedFailed</li>
+         * </ul>
          * 
-         * *   Created
-         * *   Deploying
-         * *   DeployedFailed
-         * *   Deployed
-         * *   Upgrading
-         * *   Deleting
-         * *   Deleted
-         * *   DeletedFailed
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -107,7 +117,7 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The parameters required for the upgrade.
+         * <p>The parameters required for the upgrade.</p>
          */
         public Builder upgradeRequiredParameters(java.util.List < String > upgradeRequiredParameters) {
             this.upgradeRequiredParameters = upgradeRequiredParameters;

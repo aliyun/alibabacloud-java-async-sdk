@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListServicesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListServicesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51945B04-6AA6-410D-93BA-236E0248B104</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The services.
+         * <p>The services.</p>
          */
         public Builder services(java.util.List < Services> services) {
             this.services = services;
@@ -117,7 +127,10 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServicesResponseBody</p>
+     */
     public static class Commodity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -181,7 +200,10 @@ public class ListServicesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The commodity code.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmjj00xxxx</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -189,7 +211,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration metadata related to Saas Boost.
+             * <p>The configuration metadata related to Saas Boost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ // Specifies whether to associate the service with the SaaS Boost commodity. Default value: false. &quot;Enabled&quot;:true/false // The public endpoint of the SaaS Boost instance. &quot;PublicAccessUrl&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot; }</p>
              */
             public Builder saasBoostMetadata(String saasBoostMetadata) {
                 this.saasBoostMetadata = saasBoostMetadata;
@@ -197,12 +222,15 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The platform type. Valid values:
-             * <p>
+             * <p>The platform type. Valid values:</p>
+             * <ul>
+             * <li>marketplace: Alibaba Cloud Marketplace.</li>
+             * <li>Css: Lingxiao.</li>
+             * <li>SaasBoost: Saas Boost.</li>
+             * </ul>
              * 
-             * *   marketplace: Alibaba Cloud Marketplace.
-             * *   Css: Lingxiao.
-             * *   SaasBoost: Saas Boost.
+             * <strong>example:</strong>
+             * <p>Marketplace</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -216,6 +244,12 @@ public class ListServicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServicesResponseBody</p>
+     */
     public static class ServiceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -279,7 +313,10 @@ public class ListServicesResponseBody extends TeaModel {
             private String shortDescription; 
 
             /**
-             * The URL of the service icon.
+             * <p>The URL of the service icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://img.tidb.oss.url">http://img.tidb.oss.url</a></p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -287,11 +324,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the service. Valid values:
-             * <p>
+             * <p>The language of the service. Valid values:</p>
+             * <ul>
+             * <li>zh-CN: Chinese.</li>
+             * <li>en-US: English.</li>
+             * </ul>
              * 
-             * *   zh-CN: Chinese.
-             * *   en-US: English.
+             * <strong>example:</strong>
+             * <p>zh-CN</p>
              */
             public Builder locale(String locale) {
                 this.locale = locale;
@@ -299,7 +339,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SpringBoot-ECS容器版</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -307,7 +350,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the service.
+             * <p>The description of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B是A公司自主设计并研发的开源分布式的关系型数据库</p>
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -321,6 +367,12 @@ public class ListServicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServicesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -360,7 +412,10 @@ public class ListServicesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -368,7 +423,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -382,6 +440,12 @@ public class ListServicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServicesResponseBody</p>
+     */
     public static class Services extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApprovalType")
         private String approvalType;
@@ -841,11 +905,14 @@ public class ListServicesResponseBody extends TeaModel {
             private String virtualInternetService; 
 
             /**
-             * The approval type for applications for using the service. Valid values:
-             * <p>
+             * <p>The approval type for applications for using the service. Valid values:</p>
+             * <ul>
+             * <li>Manual: The applications are manual reviewed.</li>
+             * <li>AutoPass: The applications are automatically approved.</li>
+             * </ul>
              * 
-             * *   Manual: The applications are manual reviewed.
-             * *   AutoPass: The applications are automatically approved.
+             * <strong>example:</strong>
+             * <p>AutoPass</p>
              */
             public Builder approvalType(String approvalType) {
                 this.approvalType = approvalType;
@@ -853,7 +920,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the artifact.
+             * <p>The ID of the artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>artifact-21ca53ac16a643xxxxxx</p>
              */
             public Builder artifactId(String artifactId) {
                 this.artifactId = artifactId;
@@ -861,7 +931,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the artifact.
+             * <p>The version of the artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>draft</p>
              */
             public Builder artifactVersion(String artifactVersion) {
                 this.artifactVersion = artifactVersion;
@@ -869,7 +942,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The informathon for build service.
+             * <p>The informathon for build service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;RepoUrl&quot;: &quot;<a href="https://github.com/user/repo.git">https://github.com/user/repo.git</a>&quot;, &quot;Brancn&quot;: &quot;main&quot;}</p>
              */
             public Builder buildInfo(String buildInfo) {
                 this.buildInfo = buildInfo;
@@ -877,7 +953,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the service.
+             * <p>The category of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenSource</p>
              */
             public Builder categories(String categories) {
                 this.categories = categories;
@@ -885,7 +964,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity details.
+             * <p>The commodity details.</p>
              */
             public Builder commodity(Commodity commodity) {
                 this.commodity = commodity;
@@ -893,7 +972,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity code of the service in Alibaba Cloud Marketplace.
+             * <p>The commodity code of the service in Alibaba Cloud Marketplace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmjj00xxxx</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -901,7 +983,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was created.
+             * <p>The time when the service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-20T00:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -909,11 +994,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the version is the default version. Valid values:
-             * <p>
+             * <p>Indicates whether the version is the default version. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
              * 
-             * *   false
-             * *   true
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultVersion(Boolean defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -921,15 +1009,18 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the service. Valid values:
-             * <p>
+             * <p>The deployment type of the service. Valid values:</p>
+             * <ul>
+             * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
+             * <li>terraform: The service is deployed by using Terraform.</li>
+             * <li>spi: The service is deployed by calling the Service Provider Interface (SPI).</li>
+             * <li>operation: The service is deployed by using a hosted O&amp;M service.</li>
+             * <li>container: The service is deployed by using a container.</li>
+             * <li></li>
+             * </ul>
              * 
-             * *   ros: The service is deployed by using Resource Orchestration Service (ROS).
-             * *   terraform: The service is deployed by using Terraform.
-             * *   spi: The service is deployed by calling the Service Provider Interface (SPI).
-             * *   operation: The service is deployed by using a hosted O\&M service.
-             * *   container: The service is deployed by using a container.
-             * *
+             * <strong>example:</strong>
+             * <p>ros</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -937,11 +1028,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service has a beta version. Valid values:
-             * <p>
+             * <p>Indicates whether the service has a beta version. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasBeta(Boolean hasBeta) {
                 this.hasBeta = hasBeta;
@@ -949,11 +1043,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service has a draft version. Valid values:
-             * <p>
+             * <p>Indicates whether the service has a draft version. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasDraft(Boolean hasDraft) {
                 this.hasDraft = hasDraft;
@@ -961,7 +1058,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version of the distribution source service.
+             * <p>The latest version of the distribution source service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder latestResellSourceServiceVersion(String latestResellSourceServiceVersion) {
                 this.latestResellSourceServiceVersion = latestResellSourceServiceVersion;
@@ -969,7 +1069,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was published.
+             * <p>The time when the service was published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-21T00:00:00Z</p>
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -977,11 +1080,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose of the artifact. Valid values:
-             * <p>
+             * <p>The purpose of the artifact. Valid values:</p>
+             * <ul>
+             * <li>ServiceDeployment: The artifact is used to create service instances.</li>
+             * <li>ServiceUpgrade: The artifact is used to upgrade service instances.</li>
+             * </ul>
              * 
-             * *   ServiceDeployment: The artifact is used to create service instances.
-             * *   ServiceUpgrade: The artifact is used to upgrade service instances.
+             * <strong>example:</strong>
+             * <p>ServiceDeployment</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -989,12 +1095,15 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of distribution authorization of the service. Valid values:
-             * <p>
+             * <p>The state of distribution authorization of the service. Valid values:</p>
+             * <ul>
+             * <li>CanApply: Distributors can apply for distribution permissions.</li>
+             * <li>Applied: The application for distribution permissions is submitted.</li>
+             * <li>Approved: The application for distribution permissions is approved.</li>
+             * </ul>
              * 
-             * *   CanApply: Distributors can apply for distribution permissions.
-             * *   Applied: The application for distribution permissions is submitted.
-             * *   Approved: The application for distribution permissions is approved.
+             * <strong>example:</strong>
+             * <p>CanApply</p>
              */
             public Builder resellApplyStatus(String resellApplyStatus) {
                 this.resellApplyStatus = resellApplyStatus;
@@ -1002,7 +1111,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the distribution service.
+             * <p>The ID of the distribution service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-70a3b15bb62643xxxxxx</p>
              */
             public Builder resellServiceId(String resellServiceId) {
                 this.resellServiceId = resellServiceId;
@@ -1010,7 +1122,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekz5b555xxxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1018,11 +1133,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service is visible. Valid values:
-             * <p>
+             * <p>Indicates whether the service is visible. Valid values:</p>
+             * <ul>
+             * <li>INVISIBLE</li>
+             * <li>DISCOVERABLE</li>
+             * </ul>
              * 
-             * *   INVISIBLE
-             * *   DISCOVERABLE
+             * <strong>example:</strong>
+             * <p>INVISIBLE</p>
              */
             public Builder serviceDiscoverable(String serviceDiscoverable) {
                 this.serviceDiscoverable = serviceDiscoverable;
@@ -1030,7 +1148,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-70a3b15bb62643xxxxxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -1038,7 +1159,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the service.
+             * <p>The information about the service.</p>
              */
             public Builder serviceInfos(java.util.List < ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
@@ -1046,12 +1167,15 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service. Valid values:
-             * <p>
+             * <p>The type of the service. Valid values:</p>
+             * <ul>
+             * <li>private: The service is a private service and is deployed within the account of a customer.</li>
+             * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
+             * <li>operation: The service is a hosted O&amp;M service.</li>
+             * </ul>
              * 
-             * *   private: The service is a private service and is deployed within the account of a customer.
-             * *   managed: The service is a fully managed service and is deployed within the account of a service provider.
-             * *   operation: The service is a hosted O\&M service.
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -1059,14 +1183,17 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The permission type of the deployment URL. Valid values:
-             * <p>
+             * <p>The permission type of the deployment URL. Valid values:</p>
+             * <ul>
+             * <li>Public: All users can go to the URL to create a formal service instance or a trial service instance.</li>
+             * <li>Restricted: Only users in the whitelist can go to the URL to create a formal service instance or a trial service instance.</li>
+             * <li>OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a formal service instance.</li>
+             * <li>OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.</li>
+             * <li>Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.</li>
+             * </ul>
              * 
-             * *   Public: All users can go to the URL to create a formal service instance or a trial service instance.
-             * *   Restricted: Only users in the whitelist can go to the URL to create a formal service instance or a trial service instance.
-             * *   OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a formal service instance.
-             * *   OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.
-             * *   Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -1074,7 +1201,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The source image.
+             * <p>The source image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_7</p>
              */
             public Builder sourceImage(String sourceImage) {
                 this.sourceImage = sourceImage;
@@ -1082,7 +1212,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the distribution source service.
+             * <p>The ID of the distribution source service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-70a3b15bb62643xxxxxx</p>
              */
             public Builder sourceServiceId(String sourceServiceId) {
                 this.sourceServiceId = sourceServiceId;
@@ -1090,7 +1223,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the distribution source service.
+             * <p>The version of the distribution source service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sourceServiceVersion(String sourceServiceVersion) {
                 this.sourceServiceVersion = sourceServiceVersion;
@@ -1098,7 +1234,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the distribution source service provider.
+             * <p>The name of the distribution source service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SourceSupplier</p>
              */
             public Builder sourceSupplierName(String sourceSupplierName) {
                 this.sourceSupplierName = sourceSupplierName;
@@ -1106,15 +1245,18 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the service. Valid values:
-             * <p>
+             * <p>The state of the service. Valid values:</p>
+             * <ul>
+             * <li>Draft: The service is a draft.</li>
+             * <li>Submitted: The service is submitted for review. You cannot modify services in this state.</li>
+             * <li>Approved: The service is approved. You cannot modify services in this state. You can publish services in this state.</li>
+             * <li>Launching: The service is being published.</li>
+             * <li>Online: The service is published.</li>
+             * <li>Offline: The service is unpublished.</li>
+             * </ul>
              * 
-             * *   Draft: The service is a draft.
-             * *   Submitted: The service is submitted for review. You cannot modify services in this state.
-             * *   Approved: The service is approved. You cannot modify services in this state. You can publish services in this state.
-             * *   Launching: The service is being published.
-             * *   Online: The service is published.
-             * *   Offline: The service is unpublished.
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1122,7 +1264,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service provider.
+             * <p>The name of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -1130,7 +1275,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the service provider.
+             * <p>The URL of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com">http://example.com</a></p>
              */
             public Builder supplierUrl(String supplierUrl) {
                 this.supplierUrl = supplierUrl;
@@ -1138,7 +1286,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The service tags.
+             * <p>The service tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1146,11 +1294,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant type of the managed service. Valid values:
-             * <p>
+             * <p>The tenant type of the managed service. Valid values:</p>
+             * <ul>
+             * <li>SingleTenant</li>
+             * <li>MultiTenant</li>
+             * </ul>
              * 
-             * *   SingleTenant
-             * *   MultiTenant
+             * <strong>example:</strong>
+             * <p>SingleTenant</p>
              */
             public Builder tenantType(String tenantType) {
                 this.tenantType = tenantType;
@@ -1158,11 +1309,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The trial policy. Valid values:
-             * <p>
+             * <p>The trial policy. Valid values:</p>
+             * <ul>
+             * <li>Trial: Trials are supported.</li>
+             * <li>NotTrial: Trials are not supported.</li>
+             * </ul>
              * 
-             * *   Trial: Trials are supported.
-             * *   NotTrial: Trials are not supported.
+             * <strong>example:</strong>
+             * <p>Trial</p>
              */
             public Builder trialType(String trialType) {
                 this.trialType = trialType;
@@ -1170,7 +1324,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was modified.
+             * <p>The time when the service was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-21T00:00:00Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1178,7 +1335,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * <p>The version of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1186,7 +1346,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The custom version name defined by the service provider.
+             * <p>The custom version name defined by the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2.0.0</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -1194,11 +1357,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service is a virtual Internet service. Valid values:
-             * <p>
+             * <p>Indicates whether the service is a virtual Internet service. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
              * 
-             * *   false
-             * *   true
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder virtualInternetService(String virtualInternetService) {
                 this.virtualInternetService = virtualInternetService;

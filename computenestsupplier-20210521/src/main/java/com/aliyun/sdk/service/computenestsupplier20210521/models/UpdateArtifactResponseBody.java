@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateArtifactResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateArtifactResponseBody</p>
@@ -145,7 +146,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * The ID of the deployment package.
+         * <p>The ID of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>artifact-eea08d1e2d3a43aexxxx</p>
          */
         public Builder artifactId(String artifactId) {
             this.artifactId = artifactId;
@@ -153,7 +157,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The properties of the deployment package.
+         * <p>The properties of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CommodityCode&quot;:&quot;cmjj0005xxxx&quot;,&quot;CommodityVersion&quot;:&quot;V2022xxxx&quot;}</p>
          */
         public Builder artifactProperty(String artifactProperty) {
             this.artifactProperty = artifactProperty;
@@ -161,7 +168,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the deployment package.
+         * <p>The type of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsImage</p>
          */
         public Builder artifactType(String artifactType) {
             this.artifactType = artifactType;
@@ -169,7 +179,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the deployment package.
+         * <p>The version of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder artifactVersion(String artifactVersion) {
             this.artifactVersion = artifactVersion;
@@ -177,7 +190,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the deployment package.
+         * <p>The description of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -185,7 +201,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the deployment package was modified.
+         * <p>The time when the deployment package was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-20T02:19:55Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -193,7 +212,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,15 +223,18 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the deployment package. Valid values:
-         * <p>
+         * <p>The status of the deployment package. Valid values:</p>
+         * <ul>
+         * <li>Created: The deployment package is created.</li>
+         * <li>Scanning: The deployment package is being scanned.</li>
+         * <li>ScanFailed: The deployment package failed to be scanned.</li>
+         * <li>Delivering: The deployment package is being distributed.</li>
+         * <li>Available: The deployment package is available.</li>
+         * <li>Deleted: The deployment package is deleted.</li>
+         * </ul>
          * 
-         * *   Created: The deployment package is created.
-         * *   Scanning: The deployment package is being scanned.
-         * *   ScanFailed: The deployment package failed to be scanned.
-         * *   Delivering: The deployment package is being distributed.
-         * *   Available: The deployment package is available.
-         * *   Deleted: The deployment package is deleted.
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -217,7 +242,14 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region that supports the deployment package.
+         * <p>The ID of the region that supports the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *             &quot;cn-beijing&quot;,
+         *             &quot;cn-hangzhou&quot;,
+         *             &quot;cn-shanghai&quot;
+         *         ]</p>
          */
         public Builder supportRegionIds(String supportRegionIds) {
             this.supportRegionIds = supportRegionIds;
@@ -225,7 +257,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the deployment package.
+         * <p>The name of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;

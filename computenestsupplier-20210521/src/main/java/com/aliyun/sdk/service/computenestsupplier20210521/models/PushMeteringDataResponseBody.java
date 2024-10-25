@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushMeteringDataResponseBody} extends {@link TeaModel}
  *
  * <p>PushMeteringDataResponseBody</p>
@@ -37,7 +38,10 @@ public class PushMeteringDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94E89857-B994-44B6-9C4F-DBD200E9XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

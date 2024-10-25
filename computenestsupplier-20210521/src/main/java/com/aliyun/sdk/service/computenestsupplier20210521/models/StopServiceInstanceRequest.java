@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopServiceInstanceRequest} extends {@link RequestModel}
  *
  * <p>StopServiceInstanceRequest</p>
@@ -83,10 +84,11 @@ public class StopServiceInstanceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -95,7 +97,11 @@ public class StopServiceInstanceRequest extends Request {
         }
 
         /**
-         * The region id where the service instance resides.
+         * <p>The region id where the service instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -104,7 +110,11 @@ public class StopServiceInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the service instance.
+         * <p>The ID of the service instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-c39ed4779cec449f****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);

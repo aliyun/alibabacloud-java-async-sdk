@@ -7,14 +7,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RemoveServiceSharedAccountsRequest} extends {@link RequestModel}
+ * {@link LaunchServiceRequest} extends {@link RequestModel}
  *
- * <p>RemoveServiceSharedAccountsRequest</p>
+ * <p>LaunchServiceRequest</p>
  */
-public class RemoveServiceSharedAccountsRequest extends Request {
+public class LaunchServiceRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Categories")
+    private java.util.List < String > categories;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Recommend")
+    private Boolean recommend;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -27,28 +35,25 @@ public class RemoveServiceSharedAccountsRequest extends Request {
     private String serviceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Type")
-    private String type;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("UserAliUids")
+    @com.aliyun.core.annotation.NameInMap("ServiceVersion")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > userAliUids;
+    private String serviceVersion;
 
-    private RemoveServiceSharedAccountsRequest(Builder builder) {
+    private LaunchServiceRequest(Builder builder) {
         super(builder);
+        this.categories = builder.categories;
         this.clientToken = builder.clientToken;
+        this.recommend = builder.recommend;
         this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
-        this.type = builder.type;
-        this.userAliUids = builder.userAliUids;
+        this.serviceVersion = builder.serviceVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RemoveServiceSharedAccountsRequest create() {
+    public static LaunchServiceRequest create() {
         return builder().build();
     }
 
@@ -58,10 +63,24 @@ public class RemoveServiceSharedAccountsRequest extends Request {
     }
 
     /**
+     * @return categories
+     */
+    public java.util.List < String > getCategories() {
+        return this.categories;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return recommend
+     */
+    public Boolean getRecommend() {
+        return this.recommend;
     }
 
     /**
@@ -79,45 +98,45 @@ public class RemoveServiceSharedAccountsRequest extends Request {
     }
 
     /**
-     * @return type
+     * @return serviceVersion
      */
-    public String getType() {
-        return this.type;
+    public String getServiceVersion() {
+        return this.serviceVersion;
     }
 
-    /**
-     * @return userAliUids
-     */
-    public java.util.List < Long > getUserAliUids() {
-        return this.userAliUids;
-    }
-
-    public static final class Builder extends Request.Builder<RemoveServiceSharedAccountsRequest, Builder> {
+    public static final class Builder extends Request.Builder<LaunchServiceRequest, Builder> {
+        private java.util.List < String > categories; 
         private String clientToken; 
+        private Boolean recommend; 
         private String regionId; 
         private String serviceId; 
-        private String type; 
-        private java.util.List < Long > userAliUids; 
+        private String serviceVersion; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RemoveServiceSharedAccountsRequest request) {
+        private Builder(LaunchServiceRequest request) {
             super(request);
+            this.categories = request.categories;
             this.clientToken = request.clientToken;
+            this.recommend = request.recommend;
             this.regionId = request.regionId;
             this.serviceId = request.serviceId;
-            this.type = request.type;
-            this.userAliUids = request.userAliUids;
+            this.serviceVersion = request.serviceVersion;
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10CM943JP0EN9D51H</p>
+         * Categories.
+         */
+        public Builder categories(java.util.List < String > categories) {
+            this.putQueryParameter("Categories", categories);
+            this.categories = categories;
+            return this;
+        }
+
+        /**
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -126,7 +145,15 @@ public class RemoveServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * Recommend.
+         */
+        public Builder recommend(Boolean recommend) {
+            this.putQueryParameter("Recommend", recommend);
+            this.recommend = recommend;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,11 +166,10 @@ public class RemoveServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>service-0e6fca6a51a54420****</p>
+         * <p>service-0e6fca6a51a544xxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -152,33 +178,20 @@ public class RemoveServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * <p>The share type of the service. Default value: SharedAccount. Valid values:</p>
-         * <ul>
-         * <li>SharedAccount: The service is shared by multiple accounts.</li>
-         * <li>Reseller: The service is distributed.</li>
-         * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>SharedAccount</p>
+         * <p>1.0</p>
          */
-        public Builder type(String type) {
-            this.putQueryParameter("Type", type);
-            this.type = type;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         */
-        public Builder userAliUids(java.util.List < Long > userAliUids) {
-            this.putQueryParameter("UserAliUids", userAliUids);
-            this.userAliUids = userAliUids;
+        public Builder serviceVersion(String serviceVersion) {
+            this.putQueryParameter("ServiceVersion", serviceVersion);
+            this.serviceVersion = serviceVersion;
             return this;
         }
 
         @Override
-        public RemoveServiceSharedAccountsRequest build() {
-            return new RemoveServiceSharedAccountsRequest(this);
+        public LaunchServiceRequest build() {
+            return new LaunchServiceRequest(this);
         } 
 
     } 

@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddServiceSharedAccounts  AddServiceSharedAccountsRequest
+     * @return AddServiceSharedAccountsResponse
+     */
     @Override
     public CompletableFuture<AddServiceSharedAccountsResponse> addServiceSharedAccounts(AddServiceSharedAccountsRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApproveServiceUsage  ApproveServiceUsageRequest
+     * @return ApproveServiceUsageResponse
+     */
     @Override
     public CompletableFuture<ApproveServiceUsageResponse> approveServiceUsage(ApproveServiceUsageRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ContinueDeployServiceInstance  ContinueDeployServiceInstanceRequest
+     * @return ContinueDeployServiceInstanceResponse
+     */
     @Override
     public CompletableFuture<ContinueDeployServiceInstanceResponse> continueDeployServiceInstance(ContinueDeployServiceInstanceRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateArtifact  CreateArtifactRequest
+     * @return CreateArtifactResponse
+     */
     @Override
     public CompletableFuture<CreateArtifactResponse> createArtifact(CreateArtifactRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateService  CreateServiceRequest
+     * @return CreateServiceResponse
+     */
     @Override
     public CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateServiceInstance  CreateServiceInstanceRequest
+     * @return CreateServiceInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateServiceInstanceResponse> createServiceInstance(CreateServiceInstanceRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateServiceUsage  CreateServiceUsageRequest
+     * @return CreateServiceUsageResponse
+     */
     @Override
     public CompletableFuture<CreateServiceUsageResponse> createServiceUsage(CreateServiceUsageRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteArtifact  DeleteArtifactRequest
+     * @return DeleteArtifactResponse
+     */
     @Override
     public CompletableFuture<DeleteArtifactResponse> deleteArtifact(DeleteArtifactRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteService  DeleteServiceRequest
+     * @return DeleteServiceResponse
+     */
     @Override
     public CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteServiceInstances  DeleteServiceInstancesRequest
+     * @return DeleteServiceInstancesResponse
+     */
     @Override
     public CompletableFuture<DeleteServiceInstancesResponse> deleteServiceInstances(DeleteServiceInstancesRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeployServiceInstance  DeployServiceInstanceRequest
+     * @return DeployServiceInstanceResponse
+     */
     @Override
     public CompletableFuture<DeployServiceInstanceResponse> deployServiceInstance(DeployServiceInstanceRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetArtifact  GetArtifactRequest
+     * @return GetArtifactResponse
+     */
     @Override
     public CompletableFuture<GetArtifactResponse> getArtifact(GetArtifactRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetArtifactRepositoryCredentials  GetArtifactRepositoryCredentialsRequest
+     * @return GetArtifactRepositoryCredentialsResponse
+     */
     @Override
     public CompletableFuture<GetArtifactRepositoryCredentialsResponse> getArtifactRepositoryCredentials(GetArtifactRepositoryCredentialsRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetService  GetServiceRequest
+     * @return GetServiceResponse
+     */
     @Override
     public CompletableFuture<GetServiceResponse> getService(GetServiceRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceEstimateCost  GetServiceEstimateCostRequest
+     * @return GetServiceEstimateCostResponse
+     */
     @Override
     public CompletableFuture<GetServiceEstimateCostResponse> getServiceEstimateCost(GetServiceEstimateCostRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceInstance  GetServiceInstanceRequest
+     * @return GetServiceInstanceResponse
+     */
     @Override
     public CompletableFuture<GetServiceInstanceResponse> getServiceInstance(GetServiceInstanceRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceTemplateParameterConstraints  GetServiceTemplateParameterConstraintsRequest
+     * @return GetServiceTemplateParameterConstraintsResponse
+     */
     @Override
     public CompletableFuture<GetServiceTemplateParameterConstraintsResponse> getServiceTemplateParameterConstraints(GetServiceTemplateParameterConstraintsRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUploadCredentials  GetUploadCredentialsRequest
+     * @return GetUploadCredentialsResponse
+     */
     @Override
     public CompletableFuture<GetUploadCredentialsResponse> getUploadCredentials(GetUploadCredentialsRequest request) {
         try {
@@ -291,6 +363,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LaunchService  LaunchServiceRequest
+     * @return LaunchServiceResponse
+     */
+    @Override
+    public CompletableFuture<LaunchServiceResponse> launchService(LaunchServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("LaunchService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LaunchServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<LaunchServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAcrImageRepositories  ListAcrImageRepositoriesRequest
+     * @return ListAcrImageRepositoriesResponse
+     */
     @Override
     public CompletableFuture<ListAcrImageRepositoriesResponse> listAcrImageRepositories(ListAcrImageRepositoriesRequest request) {
         try {
@@ -305,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAcrImageTags  ListAcrImageTagsRequest
+     * @return ListAcrImageTagsResponse
+     */
     @Override
     public CompletableFuture<ListAcrImageTagsResponse> listAcrImageTags(ListAcrImageTagsRequest request) {
         try {
@@ -319,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListArtifactVersions  ListArtifactVersionsRequest
+     * @return ListArtifactVersionsResponse
+     */
     @Override
     public CompletableFuture<ListArtifactVersionsResponse> listArtifactVersions(ListArtifactVersionsRequest request) {
         try {
@@ -333,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListArtifacts  ListArtifactsRequest
+     * @return ListArtifactsResponse
+     */
     @Override
     public CompletableFuture<ListArtifactsResponse> listArtifacts(ListArtifactsRequest request) {
         try {
@@ -347,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServiceCategories  ListServiceCategoriesRequest
+     * @return ListServiceCategoriesResponse
+     */
     @Override
     public CompletableFuture<ListServiceCategoriesResponse> listServiceCategories(ListServiceCategoriesRequest request) {
         try {
@@ -361,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServiceInstances  ListServiceInstancesRequest
+     * @return ListServiceInstancesResponse
+     */
     @Override
     public CompletableFuture<ListServiceInstancesResponse> listServiceInstances(ListServiceInstancesRequest request) {
         try {
@@ -375,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServiceSharedAccounts  ListServiceSharedAccountsRequest
+     * @return ListServiceSharedAccountsResponse
+     */
     @Override
     public CompletableFuture<ListServiceSharedAccountsResponse> listServiceSharedAccounts(ListServiceSharedAccountsRequest request) {
         try {
@@ -389,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServiceUsages  ListServiceUsagesRequest
+     * @return ListServiceUsagesResponse
+     */
     @Override
     public CompletableFuture<ListServiceUsagesResponse> listServiceUsages(ListServiceUsagesRequest request) {
         try {
@@ -403,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServices  ListServicesRequest
+     * @return ListServicesResponse
+     */
     @Override
     public CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request) {
         try {
@@ -417,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyServiceInstanceResources  ModifyServiceInstanceResourcesRequest
+     * @return ModifyServiceInstanceResourcesResponse
+     */
     @Override
     public CompletableFuture<ModifyServiceInstanceResourcesResponse> modifyServiceInstanceResources(ModifyServiceInstanceResourcesRequest request) {
         try {
@@ -431,6 +561,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PreLaunchService  PreLaunchServiceRequest
+     * @return PreLaunchServiceResponse
+     */
+    @Override
+    public CompletableFuture<PreLaunchServiceResponse> preLaunchService(PreLaunchServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PreLaunchService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreLaunchServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PreLaunchServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PushMeteringData  PushMeteringDataRequest
+     * @return PushMeteringDataResponse
+     */
     @Override
     public CompletableFuture<PushMeteringDataResponse> pushMeteringData(PushMeteringDataRequest request) {
         try {
@@ -445,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RegisterService  RegisterServiceRequest
+     * @return RegisterServiceResponse
+     */
     @Override
     public CompletableFuture<RegisterServiceResponse> registerService(RegisterServiceRequest request) {
         try {
@@ -459,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RejectServiceUsage  RejectServiceUsageRequest
+     * @return RejectServiceUsageResponse
+     */
     @Override
     public CompletableFuture<RejectServiceUsageResponse> rejectServiceUsage(RejectServiceUsageRequest request) {
         try {
@@ -473,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseArtifact  ReleaseArtifactRequest
+     * @return ReleaseArtifactResponse
+     */
     @Override
     public CompletableFuture<ReleaseArtifactResponse> releaseArtifact(ReleaseArtifactRequest request) {
         try {
@@ -487,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveServiceSharedAccounts  RemoveServiceSharedAccountsRequest
+     * @return RemoveServiceSharedAccountsResponse
+     */
     @Override
     public CompletableFuture<RemoveServiceSharedAccountsResponse> removeServiceSharedAccounts(RemoveServiceSharedAccountsRequest request) {
         try {
@@ -501,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartServiceInstance  RestartServiceInstanceRequest
+     * @return RestartServiceInstanceResponse
+     */
     @Override
     public CompletableFuture<RestartServiceInstanceResponse> restartServiceInstance(RestartServiceInstanceRequest request) {
         try {
@@ -515,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartServiceInstance  StartServiceInstanceRequest
+     * @return StartServiceInstanceResponse
+     */
     @Override
     public CompletableFuture<StartServiceInstanceResponse> startServiceInstance(StartServiceInstanceRequest request) {
         try {
@@ -529,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopServiceInstance  StopServiceInstanceRequest
+     * @return StopServiceInstanceResponse
+     */
     @Override
     public CompletableFuture<StopServiceInstanceResponse> stopServiceInstance(StopServiceInstanceRequest request) {
         try {
@@ -543,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateArtifact  UpdateArtifactRequest
+     * @return UpdateArtifactResponse
+     */
     @Override
     public CompletableFuture<UpdateArtifactResponse> updateArtifact(UpdateArtifactRequest request) {
         try {
@@ -557,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateService  UpdateServiceRequest
+     * @return UpdateServiceResponse
+     */
     @Override
     public CompletableFuture<UpdateServiceResponse> updateService(UpdateServiceRequest request) {
         try {
@@ -571,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateServiceInstanceAttribute  UpdateServiceInstanceAttributeRequest
+     * @return UpdateServiceInstanceAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateServiceInstanceAttributeResponse> updateServiceInstanceAttribute(UpdateServiceInstanceAttributeRequest request) {
         try {
@@ -585,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateServiceInstanceSpec  UpdateServiceInstanceSpecRequest
+     * @return UpdateServiceInstanceSpecResponse
+     */
     @Override
     public CompletableFuture<UpdateServiceInstanceSpecResponse> updateServiceInstanceSpec(UpdateServiceInstanceSpecRequest request) {
         try {
@@ -599,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeServiceInstance  UpgradeServiceInstanceRequest
+     * @return UpgradeServiceInstanceResponse
+     */
     @Override
     public CompletableFuture<UpgradeServiceInstanceResponse> upgradeServiceInstance(UpgradeServiceInstanceRequest request) {
         try {

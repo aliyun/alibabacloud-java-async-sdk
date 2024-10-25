@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceUsagesRequest} extends {@link RequestModel}
  *
  * <p>ListServiceUsagesRequest</p>
@@ -95,7 +96,7 @@ public class ListServiceUsagesRequest extends Request {
         } 
 
         /**
-         * The filter.
+         * <p>The filter.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -104,7 +105,10 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -113,7 +117,10 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -122,7 +129,10 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * The role of the service provider.
+         * <p>The role of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Supplier</p>
          */
         public Builder supplierRole(String supplierRole) {
             this.putQueryParameter("SupplierRole", supplierRole);
@@ -137,6 +147,12 @@ public class ListServiceUsagesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceUsagesRequest} extends {@link TeaModel}
+     *
+     * <p>ListServiceUsagesRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -176,13 +192,16 @@ public class ListServiceUsagesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The parameter name of the filter. You can specify one or more filters. Valid values:
-             * <p>
+             * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
+             * <ul>
+             * <li>ServiceId: the ID of the service.</li>
+             * <li>ServiceName: the service name.</li>
+             * <li>Status: the state of the service.</li>
+             * <li>SupplierName: the name of the service provider.</li>
+             * </ul>
              * 
-             * *   ServiceId: the ID of the service.
-             * *   ServiceName: the service name.
-             * *   Status: the state of the service.
-             * *   SupplierName: the name of the service provider.
+             * <strong>example:</strong>
+             * <p>ServiceId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +209,7 @@ public class ListServiceUsagesRequest extends Request {
             }
 
             /**
-             * The parameter value N of the filter. Valid values of N: 1 to 10.
+             * <p>The parameter value N of the filter. Valid values of N: 1 to 10.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

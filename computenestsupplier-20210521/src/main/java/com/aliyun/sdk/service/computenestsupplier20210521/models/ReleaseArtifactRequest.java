@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseArtifactRequest} extends {@link RequestModel}
  *
  * <p>ReleaseArtifactRequest</p>
@@ -54,7 +55,11 @@ public class ReleaseArtifactRequest extends Request {
         } 
 
         /**
-         * The ID of the artifact.
+         * <p>The ID of the artifact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>artifact-9feded91880e4c78xxxx</p>
          */
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);

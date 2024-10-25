@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RejectServiceUsageRequest} extends {@link RequestModel}
  *
  * <p>RejectServiceUsageRequest</p>
@@ -129,7 +130,10 @@ public class RejectServiceUsageRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-2117508c874c41xxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -147,7 +151,10 @@ public class RejectServiceUsageRequest extends Request {
         }
 
         /**
-         * UserAliUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563457855xxxxxx</p>
          */
         public Builder userAliUid(Long userAliUid) {
             this.putQueryParameter("UserAliUid", userAliUid);

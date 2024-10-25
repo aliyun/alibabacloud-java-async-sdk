@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceTemplateParameterConstraintsRequest} extends {@link RequestModel}
  *
  * <p>GetServiceTemplateParameterConstraintsRequest</p>
@@ -169,7 +170,10 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +182,11 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the service instance is deployed.
+         * <p>The ID of the region in which the service instance is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder deployRegionId(String deployRegionId) {
             this.putQueryParameter("DeployRegionId", deployRegionId);
@@ -187,11 +195,14 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the private connection feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the private connection feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enablePrivateVpcConnection(Boolean enablePrivateVpcConnection) {
             this.putQueryParameter("EnablePrivateVpcConnection", enablePrivateVpcConnection);
@@ -200,7 +211,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The parameters in the template.
+         * <p>The parameters in the template.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -209,7 +220,11 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +233,11 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-1c11f365190c44xxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -227,7 +246,10 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The ID of the service instance.
+         * <p>The ID of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -236,7 +258,10 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The service version.
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>draft</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -245,7 +270,11 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The template name.
+         * <p>The template name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模板1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -260,6 +289,12 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceTemplateParameterConstraintsRequest} extends {@link TeaModel}
+     *
+     * <p>GetServiceTemplateParameterConstraintsRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
@@ -299,7 +334,10 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The parameter name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayType</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -307,7 +345,10 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
             }
 
             /**
-             * The parameter value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

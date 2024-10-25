@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateServiceInstanceResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the service instance.
+         * <p>The ID of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -77,17 +84,20 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the service instance. Valid values:
-         * <p>
+         * <p>The status of the service instance. Valid values:</p>
+         * <ul>
+         * <li>Created</li>
+         * <li>Deploying</li>
+         * <li>DeployedFailed</li>
+         * <li>Deployed</li>
+         * <li>Upgrading</li>
+         * <li>Deleting</li>
+         * <li>Deleted</li>
+         * <li>DeletedFailed</li>
+         * </ul>
          * 
-         * *   Created
-         * *   Deploying
-         * *   DeployedFailed
-         * *   Deployed
-         * *   Upgrading
-         * *   Deleting
-         * *   Deleted
-         * *   DeletedFailed
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder status(String status) {
             this.status = status;

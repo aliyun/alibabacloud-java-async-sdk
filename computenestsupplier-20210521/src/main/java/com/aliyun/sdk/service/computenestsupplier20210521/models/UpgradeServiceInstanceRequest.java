@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeServiceInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpgradeServiceInstanceRequest</p>
@@ -123,7 +124,10 @@ public class UpgradeServiceInstanceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -132,11 +136,14 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run for the request, but does not create a service instance.</li>
+         * <li>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</li>
+         * </ul>
          * 
-         * *   true: performs a dry run for the request, but does not create a service instance.
-         * *   false: performs a dry run for the request, and creates a service instance if the request passes the dry run.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -145,7 +152,12 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * The configuration parameters of the service instance.
+         * <p>The configuration parameters of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;param&quot;: &quot;value&quot;
+         * }</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -155,7 +167,10 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,7 +179,10 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the service instance.
+         * <p>The ID of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-5cbae874da0e47xxxxxx</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -173,7 +191,10 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * The service version.
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

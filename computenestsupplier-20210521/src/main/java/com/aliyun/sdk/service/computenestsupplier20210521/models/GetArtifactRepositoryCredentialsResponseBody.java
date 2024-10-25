@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetArtifactRepositoryCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>GetArtifactRepositoryCredentialsResponseBody</p>
@@ -73,7 +74,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the resources that can be uploaded.
+         * <p>The information about the resources that can be uploaded.</p>
          */
         public Builder availableResources(java.util.List < AvailableResources> availableResources) {
             this.availableResources = availableResources;
@@ -81,7 +82,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * The credentials.
+         * <p>The credentials.</p>
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -89,7 +90,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the credentials expired.
+         * <p>The time when the credentials expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1526549792000</p>
          */
         public Builder expireDate(String expireDate) {
             this.expireDate = expireDate;
@@ -97,7 +101,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94E89857-B994-44B6-9C4F-DBD200E9XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +117,12 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetArtifactRepositoryCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetArtifactRepositoryCredentialsResponseBody</p>
+     */
     public static class AvailableResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -161,7 +174,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             private String repositoryName; 
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;/xxx/&quot;</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -169,7 +185,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -177,7 +196,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The repository name.
+             * <p>The repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>computenest-artifacts-draft-cn-hangzhou</p>
              */
             public Builder repositoryName(String repositoryName) {
                 this.repositoryName = repositoryName;
@@ -191,6 +213,12 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetArtifactRepositoryCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetArtifactRepositoryCredentialsResponseBody</p>
+     */
     public static class Credentials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
@@ -266,7 +294,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The AccessKey ID.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.xxx</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -274,7 +305,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -282,7 +316,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJ0aW1lIjoiMTUyNjU0OTc5:0705733****</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -290,7 +327,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The Security Token Service (STS) token.
+             * <p>The Security Token Service (STS) token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -298,7 +338,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder username(String username) {
                 this.username = username;

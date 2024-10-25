@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateArtifactResponseBody} extends {@link TeaModel}
  *
  * <p>CreateArtifactResponseBody</p>
@@ -169,7 +170,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * The ID of the deployment package.
+         * <p>The ID of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>artifact-eea08d1e2d3a43aexxxx</p>
          */
         public Builder artifactId(String artifactId) {
             this.artifactId = artifactId;
@@ -177,7 +181,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The properties of the deployment object.
+         * <p>The properties of the deployment object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CommodityCode&quot;:&quot;cmjj0005xxxx&quot;,&quot;CommodityVersion&quot;:&quot;V2022xxxx&quot;}</p>
          */
         public Builder artifactProperty(String artifactProperty) {
             this.artifactProperty = artifactProperty;
@@ -185,7 +192,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the deployment package.
+         * <p>The type of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsImage</p>
          */
         public Builder artifactType(String artifactType) {
             this.artifactType = artifactType;
@@ -193,7 +203,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the deployment package.
+         * <p>The version of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder artifactVersion(String artifactVersion) {
             this.artifactVersion = artifactVersion;
@@ -201,7 +214,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the deployment package.
+         * <p>The description of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test artifact</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -209,7 +225,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the deployment package was modified.
+         * <p>The time when the deployment package was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-11T12:00:00Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -217,7 +236,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The latest version of the deployment package.
+         * <p>The latest version of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxVersion(Long maxVersion) {
             this.maxVersion = maxVersion;
@@ -225,7 +247,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the deployment package.
+         * <p>The name of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -233,7 +258,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -241,7 +269,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the deployment package. Valid values:
+         * <p>The status of the deployment package. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -249,7 +280,14 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region that supports the deployment package.
+         * <p>The ID of the region that supports the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *             &quot;cn-beijing&quot;,
+         *             &quot;cn-hangzhou&quot;,
+         *             &quot;cn-shanghai&quot;
+         *         ]</p>
          */
         public Builder supportRegionIds(String supportRegionIds) {
             this.supportRegionIds = supportRegionIds;
@@ -257,7 +295,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the deployment package.
+         * <p>The name of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;

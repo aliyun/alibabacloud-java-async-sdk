@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateArtifactRequest} extends {@link RequestModel}
  *
  * <p>UpdateArtifactRequest</p>
@@ -112,7 +113,11 @@ public class UpdateArtifactRequest extends Request {
         } 
 
         /**
-         * The ID of the deployment package.
+         * <p>The ID of the deployment package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>artifact-eea08d1e2d3a43aexxxx</p>
          */
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);
@@ -121,7 +126,8 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
-         * The properties of the deployment package.
+         * <p>The properties of the deployment package.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder artifactProperty(ArtifactProperty artifactProperty) {
             String artifactPropertyShrink = shrink(artifactProperty, "ArtifactProperty", "json");
@@ -131,7 +137,10 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
-         * The description of the deployment package.
+         * <p>The description of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -140,7 +149,7 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
-         * The IDs of the regions that support the deployment package.
+         * <p>The IDs of the regions that support the deployment package.</p>
          */
         public Builder supportRegionIds(java.util.List < String > supportRegionIds) {
             this.putQueryParameter("SupportRegionIds", supportRegionIds);
@@ -149,7 +158,11 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
-         * The version name of the deployment package.
+         * <p>The version name of the deployment package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.putQueryParameter("VersionName", versionName);
@@ -164,6 +177,12 @@ public class UpdateArtifactRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateArtifactRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateArtifactRequest</p>
+     */
     public static class ArtifactProperty extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -263,10 +282,13 @@ public class UpdateArtifactRequest extends Request {
             private String url; 
 
             /**
-             * The commodity code of the service in Alibaba Cloud Marketplace.
-             * <p>
+             * <p>The commodity code of the service in Alibaba Cloud Marketplace.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is an image.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the deployment package is an image.
+             * <strong>example:</strong>
+             * <p>cmjj00xxxx</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -274,10 +296,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * The commodity version of the service in Alibaba Cloud Marketplace.
-             * <p>
+             * <p>The commodity version of the service in Alibaba Cloud Marketplace.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is an image.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the deployment package is an image.
+             * <strong>example:</strong>
+             * <p>V1.0</p>
              */
             public Builder commodityVersion(String commodityVersion) {
                 this.commodityVersion = commodityVersion;
@@ -285,10 +310,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * The metadata of the Object Storage Service (OSS) object.
-             * <p>
+             * <p>The metadata of the Object Storage Service (OSS) object.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is an OSS object.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the deployment package is an OSS object.
+             * <strong>example:</strong>
+             * <p>{&quot;WorkDir&quot;:&quot;/root&quot;,&quot;CommandType&quot;:&quot;RunShellScript&quot;,&quot;Platform&quot;:&quot;Linux&quot;,&quot;Script&quot;:&quot;echo hello&quot;}</p>
              */
             public Builder fileScriptMetadata(String fileScriptMetadata) {
                 this.fileScriptMetadata = fileScriptMetadata;
@@ -296,10 +324,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * The image ID.
-             * <p>
+             * <p>The image ID.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is an image.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the deployment package is an image.
+             * <strong>example:</strong>
+             * <p>m-0xij191j9cuev6ucxxxx</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -307,10 +338,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * The region ID.
-             * <p>
+             * <p>The region ID.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is an image.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the deployment package is an image.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -318,10 +352,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * The script content of the deployment package.
-             * <p>
+             * <p>The script content of the deployment package.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a script.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the deployment package is a script.
+             * <strong>example:</strong>
+             * <p>{&quot;ScriptMetadata&quot;:&quot;{&quot;CommandType&quot;:&quot;RunShellScript&quot;,&quot;Platform&quot;:&quot;Linux&quot;,&quot;Script&quot;:&quot;ls&quot;}&quot;}</p>
              */
             public Builder scriptMetadata(String scriptMetadata) {
                 this.scriptMetadata = scriptMetadata;
@@ -329,11 +366,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * The URL of the deployment package object.
-             * <p>
+             * <p>The URL of the deployment package object.</p>
+             * <blockquote>
+             * <p>Note This parameter is available only if the deployment package is an file.</p>
+             * </blockquote>
              * 
-             * 
-             * > Note This parameter is available only if the deployment package is an file.
+             * <strong>example:</strong>
+             * <p><a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1309208528xxxxxx/template/2e1ce8fc-xxxx-481c-9e8e-789ba9db487d.json">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1309208528xxxxxx/template/2e1ce8fc-xxxx-481c-9e8e-789ba9db487d.json</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

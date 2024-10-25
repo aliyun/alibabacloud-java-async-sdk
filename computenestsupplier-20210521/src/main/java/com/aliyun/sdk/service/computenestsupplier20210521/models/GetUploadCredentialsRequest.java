@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUploadCredentialsRequest} extends {@link RequestModel}
  *
  * <p>GetUploadCredentialsRequest</p>
@@ -68,7 +69,11 @@ public class GetUploadCredentialsRequest extends Request {
         } 
 
         /**
-         * The file name to upload.
+         * <p>The file name to upload.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template.yaml</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -77,7 +82,10 @@ public class GetUploadCredentialsRequest extends Request {
         }
 
         /**
-         * Specifies whether the file is publicly accessible. Valid values: **public** or **private**. The default value is **private**.
+         * <p>Specifies whether the file is publicly accessible. Valid values: <strong>public</strong> or <strong>private</strong>. The default value is <strong>private</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);

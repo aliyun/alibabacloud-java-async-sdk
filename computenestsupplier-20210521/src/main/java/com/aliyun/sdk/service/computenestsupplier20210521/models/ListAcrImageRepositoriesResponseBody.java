@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAcrImageRepositoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAcrImageRepositoriesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The images.
+         * <p>The images.</p>
          */
         public Builder repositories(java.util.List < Repositories> repositories) {
             this.repositories = repositories;
@@ -109,7 +116,10 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C4A145D8-6F6C-532A-9001-9730CDA27578</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAcrImageRepositoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAcrImageRepositoriesResponseBody</p>
+     */
     public static class Repositories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -193,7 +212,10 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             private String repoName; 
 
             /**
-             * The time when the image was created.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-20T00:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -201,7 +223,10 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was modified.
+             * <p>The time when the image was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-20T00:00:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -209,7 +234,10 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The image repo ID.
+             * <p>The image repo ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-3gqhkza0wbxxxxxx</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -217,7 +245,10 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The image repo name.
+             * <p>The image repo name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wordpress</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;

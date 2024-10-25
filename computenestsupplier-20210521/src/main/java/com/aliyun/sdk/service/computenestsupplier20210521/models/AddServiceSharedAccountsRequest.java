@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddServiceSharedAccountsRequest} extends {@link RequestModel}
  *
  * <p>AddServiceSharedAccountsRequest</p>
@@ -112,7 +113,10 @@ public class AddServiceSharedAccountsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -121,7 +125,11 @@ public class AddServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +138,11 @@ public class AddServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-63b8a060e9d54cxxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -139,7 +151,8 @@ public class AddServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * The shared account and permissions of the service.
+         * <p>The shared account and permissions of the service.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sharedAccounts(java.util.List < SharedAccounts> sharedAccounts) {
             this.putQueryParameter("SharedAccounts", sharedAccounts);
@@ -148,11 +161,14 @@ public class AddServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * The share type of the service. Default value: SharedAccount. Valid values:
-         * <p>
+         * <p>The share type of the service. Default value: SharedAccount. Valid values:</p>
+         * <ul>
+         * <li>SharedAccount: The service is shared by multiple accounts.</li>
+         * <li>Reseller: The service is distributed.</li>
+         * </ul>
          * 
-         * *   SharedAccount: The service is shared by multiple accounts.
-         * *   Reseller: The service is distributed.
+         * <strong>example:</strong>
+         * <p>SharedAccount</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -167,6 +183,12 @@ public class AddServiceSharedAccountsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddServiceSharedAccountsRequest} extends {@link TeaModel}
+     *
+     * <p>AddServiceSharedAccountsRequest</p>
+     */
     public static class SharedAccounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Permission")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -208,11 +230,15 @@ public class AddServiceSharedAccountsRequest extends Request {
             private String userAliUid; 
 
             /**
-             * The permissions on the service. Valid values:
-             * <p>
+             * <p>The permissions on the service. Valid values:</p>
+             * <ul>
+             * <li>Deployable: Permissions to deploy the service.</li>
+             * <li>Accessible: Permissions to access the service.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   Deployable: Permissions to deploy the service.
-             * *   Accessible: Permissions to access the service.
+             * <strong>example:</strong>
+             * <p>Accessible</p>
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -220,7 +246,11 @@ public class AddServiceSharedAccountsRequest extends Request {
             }
 
             /**
-             * The Alibaba Cloud account ID of the user.
+             * <p>The Alibaba Cloud account ID of the user.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder userAliUid(String userAliUid) {
                 this.userAliUid = userAliUid;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteArtifactRequest} extends {@link RequestModel}
  *
  * <p>DeleteArtifactRequest</p>
@@ -68,7 +69,11 @@ public class DeleteArtifactRequest extends Request {
         } 
 
         /**
-         * The ID of the artifact.
+         * <p>The ID of the artifact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>artifact-eea08d1e2d3a43aexxxx</p>
          */
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);
@@ -77,7 +82,10 @@ public class DeleteArtifactRequest extends Request {
         }
 
         /**
-         * The version of the artifact.
+         * <p>The version of the artifact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder artifactVersion(String artifactVersion) {
             this.putQueryParameter("ArtifactVersion", artifactVersion);

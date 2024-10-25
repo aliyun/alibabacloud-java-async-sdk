@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAcrImageTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAcrImageTagsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of images.
+         * <p>The list of images.</p>
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -93,7 +94,10 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ey14..</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEF343B9-1A15-5789-BE88-7B36190F5BF6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAcrImageTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAcrImageTagsResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -193,7 +212,10 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The time when the image was created.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-20T00:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -201,7 +223,10 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The image size. Unit: bytes.
+             * <p>The image size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>188394616</p>
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -209,7 +234,10 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was modified.
+             * <p>The time when the image was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-20T00:00:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -217,7 +245,10 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The image version.
+             * <p>The image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7.2</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

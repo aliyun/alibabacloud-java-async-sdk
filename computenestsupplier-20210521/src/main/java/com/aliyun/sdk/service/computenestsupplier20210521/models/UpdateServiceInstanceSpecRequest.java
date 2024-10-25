@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceInstanceSpecRequest} extends {@link RequestModel}
  *
  * <p>UpdateServiceInstanceSpecRequest</p>
@@ -123,7 +124,10 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -132,11 +136,14 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Prometheus on the customer side. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Prometheus on the customer side. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableUserPrometheus(Boolean enableUserPrometheus) {
             this.putQueryParameter("EnableUserPrometheus", enableUserPrometheus);
@@ -145,7 +152,10 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * The name of the configuration update operation.
+         * <p>The name of the configuration update operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>package modify</p>
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -154,7 +164,10 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * The configuration parameters of the service instance.
+         * <p>The configuration parameters of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;EcsInstanceParameter&quot;:&quot;4vCPU 8GiB&quot;,&quot;ZoneId&quot;:&quot;cn-heyuan-a&quot;,&quot;SystemDiskSize&quot;:50,&quot;DataDiskSize&quot;:150,&quot;InternetMaxBandwidthOut&quot;:2,&quot;RegionId&quot;:&quot;cn-heyuan&quot;}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -164,7 +177,10 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * The name of the specification package.
+         * <p>The name of the specification package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>package one</p>
          */
         public Builder predefinedParametersName(String predefinedParametersName) {
             this.putQueryParameter("PredefinedParametersName", predefinedParametersName);
@@ -173,7 +189,10 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * The service instance ID.
+         * <p>The service instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-0e6fca6a51a54420****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterServiceResponseBody} extends {@link TeaModel}
  *
  * <p>RegisterServiceResponseBody</p>
@@ -49,7 +50,10 @@ public class RegisterServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The registration ID.
+         * <p>The registration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sr-72dd5071e90c40xxxxxx</p>
          */
         public Builder registrationId(String registrationId) {
             this.registrationId = registrationId;
@@ -57,7 +61,10 @@ public class RegisterServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A361BA9E-2713-52C8-AFFC-C26E5180456E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
