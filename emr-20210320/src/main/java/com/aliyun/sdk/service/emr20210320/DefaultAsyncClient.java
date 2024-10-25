@@ -272,9 +272,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>获取弹性伸缩活动详情。</p>
-     * 
      * @param request the request parameters of GetAutoScalingActivity  GetAutoScalingActivityRequest
      * @return GetAutoScalingActivityResponse
      */
@@ -411,7 +408,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>list Doctor HBaseRegions</p>
+     * <p>List Doctor HBase Regions</p>
      * 
      * @param request the request parameters of GetDoctorHBaseRegion  GetDoctorHBaseRegionRequest
      * @return GetDoctorHBaseRegionResponse
@@ -621,7 +618,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>get specify component&#39;s report analysis by emr doctor</p>
+     * <p>get specify component\&quot;s report analysis by EMR Doctor</p>
      * 
      * @param request the request parameters of GetDoctorReportComponentSummary  GetDoctorReportComponentSummaryRequest
      * @return GetDoctorReportComponentSummaryResponse
@@ -773,9 +770,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>查询弹性伸缩活动列表。</p>
-     * 
      * @param request the request parameters of ListAutoScalingActivities  ListAutoScalingActivitiesRequest
      * @return ListAutoScalingActivitiesResponse
      */

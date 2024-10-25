@@ -199,7 +199,7 @@ public class ListInstanceTypesRequest extends Request {
         } 
 
         /**
-         * <p>集群ID，仅升配场景使用。</p>
+         * <p>The ID of cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c-b933c5aac8fe****</p>
@@ -211,15 +211,7 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>创建的EMR集群类型。取值范围：</p>
-         * <ul>
-         * <li>DATALAKE：新版数据湖。</li>
-         * <li>OLAP：数据分析。</li>
-         * <li>DATAFLOW：实时数据流。</li>
-         * <li>DATASERVING：数据服务。</li>
-         * <li>CUSTOM：自定义集群。</li>
-         * <li>HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。</li>
-         * </ul>
+         * <p>Cluster type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,12 +224,7 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>集群中的应用部署模式。取值范围：</p>
-         * <ul>
-         * <li>NORMAL：非高可用部署。集群1个MASTER节点。</li>
-         * <li>HA：高可用部署。高可用部署要求至少3个MASTER节点。</li>
-         * </ul>
-         * <p>默认值：NORMAL。</p>
+         * <p>Deployment mode.</p>
          * 
          * <strong>example:</strong>
          * <p>HA</p>
@@ -249,7 +236,7 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>机型</p>
+         * <p>Instance Type</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.xlarge</p>
@@ -261,7 +248,7 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>是否变配。</p>
+         * <p>Whether to change the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -273,7 +260,7 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>节点组ID。</p>
+         * <p>Node group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>G-F06C4B47966A****</p>
@@ -285,12 +272,7 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>节点组类型。取值范围：</p>
-         * <ul>
-         * <li>MASTER：管理类型节点组。</li>
-         * <li>CORE：存储类型节点组。</li>
-         * <li>TASK：计算类型节点组。</li>
-         * </ul>
+         * <p>Node group type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,12 +285,7 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>集群的付费类型。取值范围：</p>
-         * <ul>
-         * <li>PayAsYouGo：后付费。</li>
-         * <li>Subscription：预付费。</li>
-         * </ul>
-         * <p>默认值：PayAsYouGo。</p>
+         * <p>Payment type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,7 +298,7 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>区域ID。</p>
+         * <p>The ID of the region in which you want to create the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,10 +311,10 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>EMR发行版。</p>
+         * <p>EMR distribution.</p>
          * 
          * <strong>example:</strong>
-         * <p>EMR-5.3.0</p>
+         * <p>线上已发布版本EMR-5.8.0</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putQueryParameter("ReleaseVersion", releaseVersion);
@@ -346,7 +323,7 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>可用区ID。</p>
+         * <p>Availability Zone ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

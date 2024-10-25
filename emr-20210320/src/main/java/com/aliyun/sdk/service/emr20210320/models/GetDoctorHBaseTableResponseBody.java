@@ -50,7 +50,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The returned data.</p>
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID。</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -179,7 +179,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private String writeRequestUnbalanceSuggestion; 
 
             /**
-             * ReadRequestHotspotRegionList.
+             * <p>List of read hotspot regions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder readRequestHotspotRegionList(java.util.List < String > readRequestHotspotRegionList) {
                 this.readRequestHotspotRegionList = readRequestHotspotRegionList;
@@ -187,7 +190,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of read imbalance.</p>
+             * <p>Description of read imbalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>read request unbalance is &lt;p class=&quot;report-detail-topic&quot;&gt;表分区总数量为14，分区平均读请求数量为5032486，以下分区存在读请求热点访问：</p>&lt;ul class=&quot;report-detail-ul&quot;&gt;&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-4 Region Id： 4ac818a3ab3fd727490a5b4d4dac7667 读请求数量： 15485664</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-2 Region Id： 021b387ae92959def65041e25eade3aa 读请求数量： 7731980</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-2 Region Id： d58f33abfe857e5fd0045eaa31c93df8 读请求数量： 7705237</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-2 Region Id： 4ca84757a7d0948b8552cfeebefa25a9 读请求数量： 7703492</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-4 Region Id： 1018192dae42995fc75c6d5b5981a9b7 读请求数量： 7695284</li></ul>&lt;p style=&quot;line-height： 16px; font-size： 16px; margin： 0 auto&quot;&gt;&nbsp;</p></p>
              */
             public Builder readRequestUnbalanceSuggestion(String readRequestUnbalanceSuggestion) {
                 this.readRequestUnbalanceSuggestion = readRequestUnbalanceSuggestion;
@@ -195,7 +201,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHotspotRegionList.
+             * <p>List of read/write hotspot regions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder requestHotspotRegionList(java.util.List < String > requestHotspotRegionList) {
                 this.requestHotspotRegionList = requestHotspotRegionList;
@@ -203,7 +212,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of read/write imbalance.</p>
+             * <p>Description of read/write imbalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>read request unbalance is &lt;p class=&quot;report-detail-topic&quot;&gt;表分区总数量为14，分区平均读请求数量为5032486，以下分区存在读请求热点访问：</p>&lt;ul class=&quot;report-detail-ul&quot;&gt;&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-4 Region Id： 4ac818a3ab3fd727490a5b4d4dac7667 读请求数量： 15485664</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-2 Region Id： 021b387ae92959def65041e25eade3aa 读请求数量： 7731980</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-2 Region Id： d58f33abfe857e5fd0045eaa31c93df8 读请求数量： 7705237</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-2 Region Id： 4ca84757a7d0948b8552cfeebefa25a9 读请求数量： 7703492</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-4 Region Id： 1018192dae42995fc75c6d5b5981a9b7 读请求数量： 7695284</li></ul>&lt;p style=&quot;line-height： 16px; font-size： 16px; margin： 0 auto&quot;&gt;&nbsp;</p></p>
              */
             public Builder requestUnbalanceSuggestion(String requestUnbalanceSuggestion) {
                 this.requestUnbalanceSuggestion = requestUnbalanceSuggestion;
@@ -211,7 +223,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * TableScore.
+             * <p>Table score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85</p>
              */
             public Builder tableScore(Integer tableScore) {
                 this.tableScore = tableScore;
@@ -219,7 +234,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * WriteRequestHotspotRegionList.
+             * <p>List of write hotspot regions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder writeRequestHotspotRegionList(java.util.List < String > writeRequestHotspotRegionList) {
                 this.writeRequestHotspotRegionList = writeRequestHotspotRegionList;
@@ -227,7 +245,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of write imbalance.</p>
+             * <p>Description of write imbalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>write request unbalance is &lt;p class=&quot;report-detail-topic&quot;&gt;表分区总数量为15，分区平均写请求数量为769954，以下分区存在写请求热点访问：</p>&lt;ul class=&quot;report-detail-ul&quot;&gt;&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-2 Region Id： 4a938c08750869c47b7a92edeeec2ccc 写请求数量： 2115051</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-2 Region Id： b4d21974df92bdf3589e63e4da1fc923 写请求数量： 1592509</li>&lt;li class=&quot;.report-detail-li&quot;&gt;RegionServer： emr-worker-2 Region Id： 25eb6717470f4ddbabe9187ff0fc0cb3 写请求数量： 1585420</li></ul>&lt;p style=&quot;line-height： 16px; font-size： 16px; margin： 0 auto&quot;&gt;&nbsp;</p></p>
              */
             public Builder writeRequestUnbalanceSuggestion(String writeRequestUnbalanceSuggestion) {
                 this.writeRequestUnbalanceSuggestion = writeRequestUnbalanceSuggestion;
@@ -310,7 +331,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cold access day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -318,7 +342,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldAccessDay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -326,7 +353,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -334,7 +364,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -417,7 +450,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cold config day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -425,7 +461,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldConfigDay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -433,7 +472,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -441,7 +483,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -524,7 +569,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the cold data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -532,7 +580,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -540,7 +591,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Metric unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -548,7 +602,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -631,7 +688,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-update</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -639,7 +699,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dailyReadRequest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -647,7 +710,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -655,7 +721,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -738,7 +807,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of table size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -746,7 +818,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dailyReadRequestDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -754,7 +829,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -762,7 +840,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -845,7 +926,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of write requests per day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -853,7 +937,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dailyWriteRequest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -861,7 +948,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -869,7 +959,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -952,7 +1045,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The balance of distributing requests</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -960,7 +1056,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dailyWriteRequestDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -968,7 +1067,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -976,7 +1078,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1059,7 +1164,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Freeze config day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1067,7 +1175,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeConfigDay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1075,7 +1186,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1083,7 +1197,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1166,7 +1283,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the freeze data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1174,7 +1294,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1182,7 +1305,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Metric unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1190,7 +1316,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1273,7 +1402,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the hot data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1281,7 +1413,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1289,7 +1424,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1297,7 +1435,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1380,7 +1521,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The locality of data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1388,7 +1532,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>locality</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1396,7 +1543,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1404,7 +1554,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1487,7 +1640,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The balance of distributing read requests</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1495,7 +1651,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>readRequestBalance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1503,7 +1662,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1511,7 +1673,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1594,7 +1759,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The ability to evenly distribute Regions on different RegionServer nodes</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1602,7 +1770,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionBalance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1610,7 +1781,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1618,7 +1792,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1701,7 +1878,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of regions count</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1709,7 +1889,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1717,7 +1900,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Metric unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1725,7 +1911,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1808,7 +1997,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of region count</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1816,7 +2008,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1824,7 +2019,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Metric unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1832,7 +2030,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1915,7 +2116,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of region servers count</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1923,7 +2127,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionServerCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1931,7 +2138,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Metric unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1939,7 +2149,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2022,7 +2235,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The balance of distributing requests</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2030,7 +2246,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>requestBalance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2038,7 +2257,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2046,7 +2268,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2129,7 +2354,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of store files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2137,7 +2365,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storeFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2145,7 +2376,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2153,7 +2387,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2236,7 +2473,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of store file count</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2244,7 +2484,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storeFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2252,7 +2495,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Metric unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2260,7 +2506,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2343,7 +2592,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the table</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2351,7 +2603,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tableSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2359,7 +2614,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit of the metric</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2367,7 +2625,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tb_item</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2450,7 +2711,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of table size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2458,7 +2722,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tableSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2466,7 +2733,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Metric unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2474,7 +2744,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2557,7 +2830,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the warm data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2565,7 +2841,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmConfigDay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2573,7 +2852,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Metric unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2581,7 +2863,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2664,7 +2949,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the warm data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2672,7 +2960,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2680,7 +2971,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2688,7 +2982,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Usage rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2771,7 +3068,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>Description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The balance of distributing write requests</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2779,7 +3079,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>writeRequestBalance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2787,7 +3090,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2795,7 +3101,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3118,7 +3427,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private WriteRequestBalance writeRequestBalance; 
 
             /**
-             * ColdAccessDay.
+             * <p>Number of days the table has not been accessed.</p>
              */
             public Builder coldAccessDay(ColdAccessDay coldAccessDay) {
                 this.coldAccessDay = coldAccessDay;
@@ -3126,7 +3435,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * ColdConfigDay.
+             * <p>Cold data access days configuration.</p>
              */
             public Builder coldConfigDay(ColdConfigDay coldConfigDay) {
                 this.coldConfigDay = coldConfigDay;
@@ -3134,7 +3443,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataSize.
+             * <p>Cold data size.</p>
              */
             public Builder coldDataSize(ColdDataSize coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -3142,7 +3451,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * DailyReadRequest.
+             * <p>Number of read requests per day.</p>
              */
             public Builder dailyReadRequest(DailyReadRequest dailyReadRequest) {
                 this.dailyReadRequest = dailyReadRequest;
@@ -3150,7 +3459,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * DailyReadRequestDayGrowthRatio.
+             * <p>Daily growth ratio of daily read requests.</p>
              */
             public Builder dailyReadRequestDayGrowthRatio(DailyReadRequestDayGrowthRatio dailyReadRequestDayGrowthRatio) {
                 this.dailyReadRequestDayGrowthRatio = dailyReadRequestDayGrowthRatio;
@@ -3158,7 +3467,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * DailyWriteRequest.
+             * <p>Number of write requests per day.</p>
              */
             public Builder dailyWriteRequest(DailyWriteRequest dailyWriteRequest) {
                 this.dailyWriteRequest = dailyWriteRequest;
@@ -3166,7 +3475,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * DailyWriteRequestDayGrowthRatio.
+             * <p>Daily write request growth ratio.</p>
              */
             public Builder dailyWriteRequestDayGrowthRatio(DailyWriteRequestDayGrowthRatio dailyWriteRequestDayGrowthRatio) {
                 this.dailyWriteRequestDayGrowthRatio = dailyWriteRequestDayGrowthRatio;
@@ -3174,7 +3483,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeConfigDay.
+             * <p>Configuration for the number of days cold data is accessed.</p>
              */
             public Builder freezeConfigDay(FreezeConfigDay freezeConfigDay) {
                 this.freezeConfigDay = freezeConfigDay;
@@ -3182,7 +3491,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataSize.
+             * <p>Frozen data size.</p>
              */
             public Builder freezeDataSize(FreezeDataSize freezeDataSize) {
                 this.freezeDataSize = freezeDataSize;
@@ -3190,7 +3499,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataSize.
+             * <p>Hot data size.</p>
              */
             public Builder hotDataSize(HotDataSize hotDataSize) {
                 this.hotDataSize = hotDataSize;
@@ -3198,7 +3507,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Locality.
+             * <p>Locality rate.</p>
              */
             public Builder locality(Locality locality) {
                 this.locality = locality;
@@ -3206,7 +3515,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * ReadRequestBalance.
+             * <p>Read request balance.</p>
              */
             public Builder readRequestBalance(ReadRequestBalance readRequestBalance) {
                 this.readRequestBalance = readRequestBalance;
@@ -3214,7 +3523,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * RegionBalance.
+             * <p>Region balance.</p>
              */
             public Builder regionBalance(RegionBalance regionBalance) {
                 this.regionBalance = regionBalance;
@@ -3222,7 +3531,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCount.
+             * <p>Number of regions.</p>
              */
             public Builder regionCount(RegionCount regionCount) {
                 this.regionCount = regionCount;
@@ -3230,7 +3539,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCountDayGrowthRatio.
+             * <p>Daily incremental ratio of regions</p>
              */
             public Builder regionCountDayGrowthRatio(RegionCountDayGrowthRatio regionCountDayGrowthRatio) {
                 this.regionCountDayGrowthRatio = regionCountDayGrowthRatio;
@@ -3238,7 +3547,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * RegionServerCount.
+             * <p>Number of RegionServers.</p>
              */
             public Builder regionServerCount(RegionServerCount regionServerCount) {
                 this.regionServerCount = regionServerCount;
@@ -3246,7 +3555,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * RequestBalance.
+             * <p>Request balance.</p>
              */
             public Builder requestBalance(RequestBalance requestBalance) {
                 this.requestBalance = requestBalance;
@@ -3254,7 +3563,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * StoreFileCount.
+             * <p>Number of store files.</p>
              */
             public Builder storeFileCount(StoreFileCount storeFileCount) {
                 this.storeFileCount = storeFileCount;
@@ -3262,7 +3571,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * StoreFileCountDayGrowthRatio.
+             * <p>Daily growth ratio of store file count.</p>
              */
             public Builder storeFileCountDayGrowthRatio(StoreFileCountDayGrowthRatio storeFileCountDayGrowthRatio) {
                 this.storeFileCountDayGrowthRatio = storeFileCountDayGrowthRatio;
@@ -3270,7 +3579,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * TableSize.
+             * <p>Table size.</p>
              */
             public Builder tableSize(TableSize tableSize) {
                 this.tableSize = tableSize;
@@ -3278,7 +3587,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * TableSizeDayGrowthRatio.
+             * <p>Daily growth ratio of table size.</p>
              */
             public Builder tableSizeDayGrowthRatio(TableSizeDayGrowthRatio tableSizeDayGrowthRatio) {
                 this.tableSizeDayGrowthRatio = tableSizeDayGrowthRatio;
@@ -3286,7 +3595,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * WarmConfigDay.
+             * <p>Warm data access days configuration.</p>
              */
             public Builder warmConfigDay(WarmConfigDay warmConfigDay) {
                 this.warmConfigDay = warmConfigDay;
@@ -3294,7 +3603,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataSize.
+             * <p>Warm data size.</p>
              */
             public Builder warmDataSize(WarmDataSize warmDataSize) {
                 this.warmDataSize = warmDataSize;
@@ -3302,7 +3611,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * WriteRequestBalance.
+             * <p>Write request balance.</p>
              */
             public Builder writeRequestBalance(WriteRequestBalance writeRequestBalance) {
                 this.writeRequestBalance = writeRequestBalance;
@@ -3361,7 +3670,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * <p>The diagnosis result.</p>
+             * <p>Diagnostic results.</p>
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -3369,7 +3678,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * <p>Metrics information.</p>
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

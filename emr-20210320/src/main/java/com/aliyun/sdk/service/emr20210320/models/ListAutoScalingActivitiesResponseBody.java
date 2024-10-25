@@ -171,6 +171,9 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpectNum")
         private Integer expectNum;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeToNum")
+        private java.util.Map < String, Integer > instanceTypeToNum;
+
         @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
@@ -179,6 +182,9 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OperationId")
         private String operationId;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
 
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
@@ -194,9 +200,11 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             this.description = builder.description;
             this.endTime = builder.endTime;
             this.expectNum = builder.expectNum;
+            this.instanceTypeToNum = builder.instanceTypeToNum;
             this.nodeGroupId = builder.nodeGroupId;
             this.nodeGroupName = builder.nodeGroupName;
             this.operationId = builder.operationId;
+            this.policyType = builder.policyType;
             this.ruleName = builder.ruleName;
             this.startTime = builder.startTime;
         }
@@ -259,6 +267,13 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceTypeToNum
+         */
+        public java.util.Map < String, Integer > getInstanceTypeToNum() {
+            return this.instanceTypeToNum;
+        }
+
+        /**
          * @return nodeGroupId
          */
         public String getNodeGroupId() {
@@ -277,6 +292,13 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
          */
         public String getOperationId() {
             return this.operationId;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
         }
 
         /**
@@ -301,9 +323,11 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             private String description; 
             private Long endTime; 
             private Integer expectNum; 
+            private java.util.Map < String, Integer > instanceTypeToNum; 
             private String nodeGroupId; 
             private String nodeGroupName; 
             private String operationId; 
+            private String policyType; 
             private String ruleName; 
             private Long startTime; 
 
@@ -395,6 +419,14 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceTypeToNum.
+             */
+            public Builder instanceTypeToNum(java.util.Map < String, Integer > instanceTypeToNum) {
+                this.instanceTypeToNum = instanceTypeToNum;
+                return this;
+            }
+
+            /**
              * <p>The ID of the node group.</p>
              * 
              * <strong>example:</strong>
@@ -424,6 +456,14 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
                 return this;
             }
 

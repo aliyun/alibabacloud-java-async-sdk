@@ -114,6 +114,9 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationId")
         private String operationId;
 
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
         @com.aliyun.core.annotation.NameInMap("RuleDetail")
         private ScalingRule ruleDetail;
 
@@ -135,6 +138,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             this.nodeGroupId = builder.nodeGroupId;
             this.nodeGroupName = builder.nodeGroupName;
             this.operationId = builder.operationId;
+            this.policyType = builder.policyType;
             this.ruleDetail = builder.ruleDetail;
             this.ruleName = builder.ruleName;
             this.startTime = builder.startTime;
@@ -226,6 +230,13 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         }
 
         /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        /**
          * @return ruleDetail
          */
         public ScalingRule getRuleDetail() {
@@ -258,6 +269,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             private String nodeGroupId; 
             private String nodeGroupName; 
             private String operationId; 
+            private String policyType; 
             private ScalingRule ruleDetail; 
             private String ruleName; 
             private Long startTime; 
@@ -387,6 +399,14 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
                 return this;
             }
 

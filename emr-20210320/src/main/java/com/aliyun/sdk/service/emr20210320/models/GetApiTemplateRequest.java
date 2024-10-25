@@ -70,7 +70,7 @@ public class GetApiTemplateRequest extends Request {
         } 
 
         /**
-         * <p>区域ID。</p>
+         * <p>Region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class GetApiTemplateRequest extends Request {
         }
 
         /**
-         * <p>集群模板id。</p>
+         * <p>Cluster template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

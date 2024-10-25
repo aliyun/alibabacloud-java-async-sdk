@@ -285,7 +285,7 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * <p>The application configurations. You can specify a maximum of 1,000 items.</p>
+         * <p>The service configurations. Number of elements in the array: 1 to 1000.</p>
          */
         public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
@@ -294,7 +294,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The applications. You can specify a maximum of 100 items.</p>
+         * <p>The services. Number of elements in the array: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applications(java.util.List < Application > applications) {
@@ -304,7 +304,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The bootstrap actions. You can specify a maximum of 10 items.</p>
+         * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
          */
         public Builder bootstrapScripts(java.util.List < Script > bootstrapScripts) {
             this.putQueryParameter("BootstrapScripts", bootstrapScripts);
@@ -385,7 +385,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The attributes of all ECS instances.</p>
+         * <p>The attributes of all ECS instances. The basic attributes of all ECS instances in the cluster.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
@@ -395,7 +395,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The node groups. You can specify a maximum of 100 items.</p>
+         * <p>The node groups. Number of elements in the array: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -488,7 +488,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The tags. You can specify a maximum of 20 items.</p>
+         * <p>The list of tags. Number of elements in the array: 0 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>

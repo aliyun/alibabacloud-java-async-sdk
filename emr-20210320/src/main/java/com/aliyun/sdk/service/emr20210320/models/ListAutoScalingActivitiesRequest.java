@@ -47,6 +47,10 @@ public class ListAutoScalingActivitiesRequest extends Request {
     private String scalingActivityType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingPolicyType")
+    private String scalingPolicyType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingRuleName")
     private String scalingRuleName;
 
@@ -64,6 +68,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         this.regionId = builder.regionId;
         this.scalingActivityStates = builder.scalingActivityStates;
         this.scalingActivityType = builder.scalingActivityType;
+        this.scalingPolicyType = builder.scalingPolicyType;
         this.scalingRuleName = builder.scalingRuleName;
         this.startTime = builder.startTime;
     }
@@ -138,6 +143,13 @@ public class ListAutoScalingActivitiesRequest extends Request {
     }
 
     /**
+     * @return scalingPolicyType
+     */
+    public String getScalingPolicyType() {
+        return this.scalingPolicyType;
+    }
+
+    /**
      * @return scalingRuleName
      */
     public String getScalingRuleName() {
@@ -160,6 +172,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         private String regionId; 
         private java.util.List < String > scalingActivityStates; 
         private String scalingActivityType; 
+        private String scalingPolicyType; 
         private String scalingRuleName; 
         private Long startTime; 
 
@@ -177,6 +190,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
             this.regionId = request.regionId;
             this.scalingActivityStates = request.scalingActivityStates;
             this.scalingActivityType = request.scalingActivityType;
+            this.scalingPolicyType = request.scalingPolicyType;
             this.scalingRuleName = request.scalingRuleName;
             this.startTime = request.startTime;
         } 
@@ -280,6 +294,15 @@ public class ListAutoScalingActivitiesRequest extends Request {
         public Builder scalingActivityType(String scalingActivityType) {
             this.putQueryParameter("ScalingActivityType", scalingActivityType);
             this.scalingActivityType = scalingActivityType;
+            return this;
+        }
+
+        /**
+         * ScalingPolicyType.
+         */
+        public Builder scalingPolicyType(String scalingPolicyType) {
+            this.putQueryParameter("ScalingPolicyType", scalingPolicyType);
+            this.scalingPolicyType = scalingPolicyType;
             return this;
         }
 

@@ -127,7 +127,7 @@ public class CreateApiTemplateRequest extends Request {
         }
 
         /**
-         * <p>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/zh/emr/emr-on-ecs/developer-reference/api-emr-2021-03-20-createcluster">CreateCluster</a> API operation for creating a cluster.</p>
+         * <p>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a> API operation for creating a cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class CreateApiTemplateRequest extends Request {
         }
 
         /**
-         * <p>地域ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class CreateApiTemplateRequest extends Request {
         }
 
         /**
-         * <p>资源组ID。</p>
+         * <p>Resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzabjyop****</p>
@@ -165,7 +165,7 @@ public class CreateApiTemplateRequest extends Request {
         }
 
         /**
-         * <p>集群模板名字。</p>
+         * <p>Cluster template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

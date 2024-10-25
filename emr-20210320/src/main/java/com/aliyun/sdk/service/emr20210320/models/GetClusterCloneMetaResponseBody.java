@@ -835,7 +835,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attributes of the node.</p>
+             * <p>The attributes of all ECS instances.</p>
              */
             public Builder nodeAttributes(NodeAttributes nodeAttributes) {
                 this.nodeAttributes = nodeAttributes;

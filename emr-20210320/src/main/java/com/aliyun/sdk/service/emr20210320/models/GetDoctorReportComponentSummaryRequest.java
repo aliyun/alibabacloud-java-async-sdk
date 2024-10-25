@@ -100,7 +100,7 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         } 
 
         /**
-         * <p>集群ID。</p>
+         * <p>Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,15 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         }
 
         /**
-         * <p>component type</p>
+         * <p>Select component filter type. Values: </p>
+         * <ul>
+         * <li>compute </li>
+         * <li>hive</li>
+         * <li>hdfs</li>
+         * <li>yarn</li>
+         * <li>oss</li>
+         * <li>hbase</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +134,7 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         }
 
         /**
-         * <p>dateTime for specify report</p>
+         * <p>Report date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +147,7 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         }
 
         /**
-         * <p>区域ID。</p>
+         * <p>Region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
