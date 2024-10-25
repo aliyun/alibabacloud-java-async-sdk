@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AuthorizeSecurityGroupEgressRequest} extends {@link RequestModel}
  *
  * <p>AuthorizeSecurityGroupEgressRequest</p>
@@ -142,10 +143,12 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         } 
 
         /**
-         * The destination IP addresses. CIDR blocks and IPv4 addresses are supported.
-         * <p>
+         * <p>The destination IP addresses. CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>This parameter is empty by default.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX/8</p>
          */
         public Builder destCidrIp(String destCidrIp) {
             this.putQueryParameter("DestCidrIp", destCidrIp);
@@ -154,14 +157,18 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The transport layer protocol. The values of this parameter are case-sensitive. Valid values:
-         * <p>
+         * <p>The transport layer protocol. The value of this parameter is case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>tcp</li>
+         * <li>udp</li>
+         * <li>icmp</li>
+         * <li>gre</li>
+         * <li>all: All protocols are supported.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   tcp: TCP.
-         * *   udp: UDP.
-         * *   icmp: ICMP.
-         * *   gre: GRE.
-         * *   all: All protocols are supported.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -170,11 +177,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The action of security group rule N that determines whether to allow inbound access. Valid values:
-         * <p>
+         * <p>The action of the security group rule. Valid values:</p>
+         * <ul>
+         * <li>accept: allows access. This is the default value.</li>
+         * <li>drop: denies access and does not return responses.</li>
+         * </ul>
          * 
-         * *   accept: allows access. This is the default value.
-         * *   drop: denies access and returns no responses.
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -183,13 +193,17 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:
-         * <p>
+         * <p>The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:</p>
+         * <ul>
+         * <li>When the IpProtocol parameter is set to tcp or udp, the port number range is <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
+         * <li>When the IpProtocol parameter is set to icmp, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * <li>When the IpProtocol parameter is set to gre, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * <li>When the IpProtocol parameter is set to all, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   When the IpProtocol parameter is set to tcp or udp, the port number range is **1** to **65535**. The start port number and the end port number are separated by a forward slash (/). Correct example: **1/200**. Incorrect example: **200/1**.
-         * *   When the IpProtocol parameter is set to icmp, the port number range is **-1/-1**, which indicates all ports.
-         * *   When the IpProtocol parameter is set to gre, the port number range is **-1/-1**, which indicates all ports.
-         * *   When the IpProtocol parameter is set to all, the port number range is **-1/-1**, which indicates all ports.
+         * <strong>example:</strong>
+         * <p>22/22</p>
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -198,7 +212,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The priority of the security group rule. Valid values: **1 to 100**. Default value: **1**.
+         * <p>The priority of security group rule N. Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -207,7 +224,11 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -216,13 +237,16 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:
-         * <p>
+         * <p>The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:</p>
+         * <ul>
+         * <li>When the IpProtocol parameter is set to tcp or udp, the port number range is <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
+         * <li>When the IpProtocol parameter is set to icmp, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * <li>When the IpProtocol parameter is set to gre, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * <li>When the IpProtocol parameter is set to all, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * </ul>
          * 
-         * *   When the IpProtocol parameter is set to tcp or udp, the port number range is **1** to **65535**. The start port number and the end port number are separated by a forward slash (/). Correct example: **1/200**. Incorrect example: **200/1**.
-         * *   When the IpProtocol parameter is set to icmp, the port number range is **-1/-1**, which indicates all ports.
-         * *   When the IpProtocol parameter is set to gre, the port number range is **-1/-1**, which indicates all ports.
-         * *   When the IpProtocol parameter is set to all, the port number range is **-1/-1**, which indicates all ports.
+         * <strong>example:</strong>
+         * <p>22/22</p>
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);

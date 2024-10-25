@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RollbackApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>RollbackApplicationResponseBody</p>
@@ -37,7 +38,10 @@ public class RollbackApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

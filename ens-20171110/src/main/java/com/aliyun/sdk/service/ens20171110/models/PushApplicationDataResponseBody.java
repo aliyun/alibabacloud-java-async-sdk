@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushApplicationDataResponseBody} extends {@link TeaModel}
  *
  * <p>PushApplicationDataResponseBody</p>
@@ -49,7 +50,7 @@ public class PushApplicationDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The push results of data files.
+         * <p>The push results of data files.</p>
          */
         public Builder pushResults(PushResults pushResults) {
             this.pushResults = pushResults;
@@ -57,7 +58,10 @@ public class PushApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class PushApplicationDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PushApplicationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>PushApplicationDataResponseBody</p>
+     */
     public static class PushResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -133,7 +143,10 @@ public class PushApplicationDataResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the data file.
+             * <p>The name of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gcs-pre-websocket-eip-telecom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -141,13 +154,16 @@ public class PushApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * The push result. The value is of the enumeration type. Valid values:
-             * <p>
+             * <p>The push result. The value is of the enumeration type. Valid values:</p>
+             * <ul>
+             * <li>0: The push operation is successful.</li>
+             * <li>100: The push operation has been performed and the file is pushed.</li>
+             * <li>200: The push operation has been performed and the file is being pushed to specific file servers.</li>
+             * <li>300: The push operation failed. You must trigger the push operation again. The ResultDescrip parameter indicates the error description.</li>
+             * </ul>
              * 
-             * *   0: The push operation is successful.
-             * *   100: The push operation has been performed and the file is pushed.
-             * *   200: The push operation has been performed and the file is being pushed to specific file servers.
-             * *   300: The push operation failed. You must trigger the push operation again. The ResultDescrip parameter indicates the error description.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder resultCode(Integer resultCode) {
                 this.resultCode = resultCode;
@@ -155,7 +171,10 @@ public class PushApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the push status.
+             * <p>The description of the push status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder resultDescrip(String resultDescrip) {
                 this.resultDescrip = resultDescrip;
@@ -163,7 +182,10 @@ public class PushApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the data file.
+             * <p>The version number of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -177,6 +199,12 @@ public class PushApplicationDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PushApplicationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>PushApplicationDataResponseBody</p>
+     */
     public static class PushResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PushResult")
         private java.util.List < PushResult> pushResult;

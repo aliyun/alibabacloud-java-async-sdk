@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNetworkAttributeResponseBody</p>
@@ -169,7 +170,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         private VSwitchIds vSwitchIds; 
 
         /**
-         * The IPv4 CIDR block of the network.
+         * <p>The IPv4 CIDR block of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
@@ -177,7 +181,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The list of resources in the network.
+         * <p>The list of resources in the network.</p>
          */
         public Builder cloudResources(CloudResources cloudResources) {
             this.cloudResources = cloudResources;
@@ -185,7 +189,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the network was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+         * <p>The time when the network was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-01T00:00:00Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -193,7 +200,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the network.
+         * <p>The description of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -201,7 +211,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the edge node.
+         * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.ensRegionId = ensRegionId;
@@ -209,7 +222,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the network access control list (ACL).
+         * <p>The ID of the network access control list (ACL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-a2do9e413e0sp****</p>
          */
         public Builder networkAclId(String networkAclId) {
             this.networkAclId = networkAclId;
@@ -217,7 +233,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5***</p>
          */
         public Builder networkId(String networkId) {
             this.networkId = networkId;
@@ -225,7 +244,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the network.
+         * <p>The name of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder networkName(String networkName) {
             this.networkName = networkName;
@@ -233,7 +255,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -241,7 +266,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the route table.
+         * <p>The ID of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtb-5***</p>
          */
         public Builder routerTableId(String routerTableId) {
             this.routerTableId = routerTableId;
@@ -249,11 +277,14 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the network. Valid values:
-         * <p>
+         * <p>The status of the network. Valid values:</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Available</li>
+         * </ul>
          * 
-         * *   Pending
-         * *   Available
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -261,7 +292,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The list of vSwitches in the network.
+         * <p>The list of vSwitches in the network.</p>
          */
         public Builder vSwitchIds(VSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -274,6 +305,12 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
     public static class CloudResourceSetType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Integer resourceCount;
@@ -313,7 +350,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The number of resources in the network.
+             * <p>The number of resources in the network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder resourceCount(Integer resourceCount) {
                 this.resourceCount = resourceCount;
@@ -321,7 +361,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type. VSwitch.
+             * <p>The resource type. VSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VSwitch</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -335,6 +378,12 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
     public static class CloudResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudResourceSetType")
         private java.util.List < CloudResourceSetType> cloudResourceSetType;
@@ -376,6 +425,12 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;

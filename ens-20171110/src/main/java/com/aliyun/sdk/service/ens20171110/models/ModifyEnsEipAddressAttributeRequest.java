@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEnsEipAddressAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyEnsEipAddressAttributeRequest</p>
@@ -99,7 +100,11 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP.
+         * <p>The ID of the EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-5sw5dxzgi6umq4uexxkt8wpma</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -108,7 +113,10 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The peak bandwidth of the EIP. Default value: 5. Valid values: **5** to **10000**. Unit: Mbit/s.
+         * <p>The peak bandwidth of the EIP. Default value: 5. Valid values: <strong>5</strong> to <strong>10000</strong>. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -117,7 +125,10 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the EIP. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+         * <p>The new description of the EIP. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -126,7 +137,10 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the EIP. The name must be 2 to 128 characters in length and cannot start with http:// or https://.
+         * <p>The new name of the EIP. The name must be 2 to 128 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-api-modify</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEpnBandWidthDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEpnBandWidthDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitoring data of the instance.
+         * <p>The monitoring data of the instance.</p>
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -57,7 +58,10 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D289DAA-F6DA-5FC4-AE47-F5C8B6277BFC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEpnBandWidthDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnBandWidthDataResponseBody</p>
+     */
     public static class BandWidthMonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownBandWidth")
         private Long downBandWidth;
@@ -145,7 +155,10 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             private Long upBandWidth; 
 
             /**
-             * The outbound bandwidth. Unit: bit/s.
+             * <p>The outbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder downBandWidth(Long downBandWidth) {
                 this.downBandWidth = downBandWidth;
@@ -153,7 +166,10 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet traffic to the instance. Unit: bytes.
+             * <p>The Internet traffic to the instance. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder internetRX(Long internetRX) {
                 this.internetRX = internetRX;
@@ -161,7 +177,10 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet traffic from the instance. Unit: bytes.
+             * <p>The Internet traffic from the instance. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder internetTX(Long internetTX) {
                 this.internetTX = internetTX;
@@ -169,7 +188,10 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-12T05:45:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -177,7 +199,10 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound bandwidth. Unit: bit/s.
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder upBandWidth(Long upBandWidth) {
                 this.upBandWidth = upBandWidth;
@@ -191,6 +216,12 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEpnBandWidthDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnBandWidthDataResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandWidthMonitorData")
         private java.util.List < BandWidthMonitorData> bandWidthMonitorData;
@@ -242,7 +273,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             private Long maxUpBandWidth; 
 
             /**
-             * The bandwidth data.
+             * <p>The bandwidth data.</p>
              */
             public Builder bandWidthMonitorData(java.util.List < BandWidthMonitorData> bandWidthMonitorData) {
                 this.bandWidthMonitorData = bandWidthMonitorData;
@@ -250,7 +281,10 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum outbound bandwidth within the queried time range. Unit: bit/s.
+             * <p>The maximum outbound bandwidth within the queried time range. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16817468</p>
              */
             public Builder maxDownBandWidth(Long maxDownBandWidth) {
                 this.maxDownBandWidth = maxDownBandWidth;
@@ -258,7 +292,10 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum inbound bandwidth within the queried time range. Unit: bit/s.
+             * <p>The maximum inbound bandwidth within the queried time range. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231008</p>
              */
             public Builder maxUpBandWidth(Long maxUpBandWidth) {
                 this.maxUpBandWidth = maxUpBandWidth;

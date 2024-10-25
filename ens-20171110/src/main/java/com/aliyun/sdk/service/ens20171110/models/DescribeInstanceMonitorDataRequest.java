@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceMonitorDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceMonitorDataRequest</p>
@@ -95,10 +96,11 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+         * <strong>example:</strong>
+         * <p>2019-10-30T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -107,7 +109,10 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can specify only one instance ID.
+         * <p>The ID of the instance. You can specify only one instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourInstance ID</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +121,10 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * The precision of the monitoring data that you want to obtain. Valid values: 60, 300, 1200, 3600, and 14400. Default value: 60. Unit: seconds.
+         * <p>The precision of the monitoring data that you want to obtain. Valid values: 60, 300, 1200, 3600, and 14400. Default value: 60. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -125,10 +133,11 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+         * <strong>example:</strong>
+         * <p>2019-10-29T23:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

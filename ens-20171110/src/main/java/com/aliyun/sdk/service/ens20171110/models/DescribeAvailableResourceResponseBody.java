@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableResourceResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private SupportResources supportResources; 
 
         /**
-         * The returned service code. 0 indicates that the request was successful.
+         * <p>The returned service code. 0 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the images.
+         * <p>The details of the images.</p>
          */
         public Builder images(Images images) {
             this.images = images;
@@ -89,7 +93,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The specifications of resources that you can purchase.
+         * <p>The specifications of resources that you can purchase.</p>
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -110,6 +117,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class Image extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -149,7 +162,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String imageName; 
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_6_08_64_20G_alibase_20171208</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -157,7 +173,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_6_08_64_20G_alibase_****</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -171,6 +190,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;
@@ -212,6 +237,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private String dataDiskSize;
@@ -287,7 +318,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String systemDiskSize; 
 
             /**
-             * The size of the data disk. Unit: GB.
+             * <p>The size of the data disk. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -295,7 +329,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the edge node.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-cmcc</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -303,7 +340,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the resource plan.
+             * <p>The specifications of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens.sn1.stiny</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -311,7 +351,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resources that you can purchase.
+             * <p>The number of resources that you can purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder supportResourcesCount(String supportResourcesCount) {
                 this.supportResourcesCount = supportResourcesCount;
@@ -319,7 +362,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the system disk. Unit: GiB.
+             * <p>The size of the system disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder systemDiskSize(String systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -333,6 +379,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportResource")
         private java.util.List < SupportResource> supportResource;

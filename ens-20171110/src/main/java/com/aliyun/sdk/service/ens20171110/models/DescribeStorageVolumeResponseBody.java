@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStorageVolumeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStorageVolumeResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         }
 
         /**
-         * StorageVolumes.
+         * <p>The list of returned results.</p>
          */
         public Builder storageVolumes(java.util.List < StorageVolumes> storageVolumes) {
             this.storageVolumes = storageVolumes;
@@ -117,7 +127,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStorageVolumeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageVolumeResponseBody</p>
+     */
     public static class StorageVolumes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthProtocol")
         private String authProtocol;
@@ -289,7 +308,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             private String targetName; 
 
             /**
-             * AuthProtocol.
+             * <p>The authentication protocol. The value is set to <strong>CHAP</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHAP</p>
              */
             public Builder authProtocol(String authProtocol) {
                 this.authProtocol = authProtocol;
@@ -297,7 +319,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the volume was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-14T09:35:32Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -305,7 +330,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -313,7 +341,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen-3</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -321,7 +352,14 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * IsAuth.
+             * <p>Indicates whether authentication is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Authentication is enabled.</li>
+             * <li><strong>0</strong> (default): Authentication is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isAuth(Integer isAuth) {
                 this.isAuth = isAuth;
@@ -329,7 +367,14 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * IsEnable.
+             * <p>Indicates whether the volume is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong> (default): The volume is enabled.</li>
+             * <li><strong>0</strong>: The volume is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isEnable(Integer isEnable) {
                 this.isEnable = isEnable;
@@ -337,7 +382,16 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the volume. Valid values:</p>
+             * <ul>
+             * <li>creating</li>
+             * <li>available</li>
+             * <li>deleting</li>
+             * <li>deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -345,7 +399,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * StorageGatewayId.
+             * <p>The ID of the storage gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgw-***</p>
              */
             public Builder storageGatewayId(String storageGatewayId) {
                 this.storageGatewayId = storageGatewayId;
@@ -353,7 +410,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * StorageId.
+             * <p>The ID of the storage medium.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-***</p>
              */
             public Builder storageId(String storageId) {
                 this.storageId = storageId;
@@ -361,7 +421,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * StorageVolumeId.
+             * <p>The ID of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sv-***</p>
              */
             public Builder storageVolumeId(String storageVolumeId) {
                 this.storageVolumeId = storageVolumeId;
@@ -369,7 +432,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * StorageVolumeName.
+             * <p>The name of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testVolumeName</p>
              */
             public Builder storageVolumeName(String storageVolumeName) {
                 this.storageVolumeName = storageVolumeName;
@@ -377,7 +443,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * <p>The destination of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iqn.<em>.</em>.<em>:</em></p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;

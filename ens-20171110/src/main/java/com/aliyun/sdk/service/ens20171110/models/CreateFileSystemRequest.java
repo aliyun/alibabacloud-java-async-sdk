@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileSystemRequest} extends {@link RequestModel}
  *
  * <p>CreateFileSystemRequest</p>
@@ -54,7 +55,8 @@ public class CreateFileSystemRequest extends Request {
         } 
 
         /**
-         * The information about the orders.
+         * <p>The information about the orders.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder orderDetails(java.util.List < OrderDetails> orderDetails) {
             String orderDetailsShrink = shrink(orderDetails, "OrderDetails", "json");
@@ -70,6 +72,12 @@ public class CreateFileSystemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFileSystemRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFileSystemRequest</p>
+     */
     public static class OrderDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -189,11 +197,15 @@ public class CreateFileSystemRequest extends Request {
             private String storgeType; 
 
             /**
-             * The billing method of the NAS file system. Valid values:
-             * <p>
+             * <p>The billing method of the NAS file system. Valid values:</p>
+             * <ul>
+             * <li>PrePaid: subscription. This billing method is not supported.</li>
+             * <li>PostPaid: pay-as-you-go.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   PrePaid: subscription. This billing method is not supported.
-             * *   PostPaid: pay-as-you-go.
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -201,7 +213,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The ID of the edge node.
+             * <p>The ID of the edge node.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-suzhou-telecom</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -209,7 +225,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The name of the file system. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+             * <p>The name of the file system. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nasFile</p>
              */
             public Builder fileSystemName(String fileSystemName) {
                 this.fileSystemName = fileSystemName;
@@ -217,7 +237,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The name of the mount target. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+             * <p>The name of the mount target. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nasMount</p>
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -225,7 +249,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -233,7 +261,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The type of the order. Set the value to BUY.
+             * <p>The type of the order. Set the value to BUY.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -241,7 +273,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The storage protocol. Valid values: nsf and smb.
+             * <p>The storage protocol. Set the value to nfs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nfs</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -249,11 +285,15 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The storage type. Valid values:
-             * <p>
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li>Capacity.</li>
+             * <li>Performance.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   Capacity.
-             * *   Performance.
+             * <strong>example:</strong>
+             * <p>capacity</p>
              */
             public Builder storgeType(String storgeType) {
                 this.storgeType = storgeType;

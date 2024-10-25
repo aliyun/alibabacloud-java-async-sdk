@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkAclEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteNetworkAclEntryRequest</p>
@@ -53,7 +54,10 @@ public class DeleteNetworkAclEntryRequest extends Request {
         } 
 
         /**
-         * The ID of the network ACL for which you want to delete a rule.
+         * <p>The ID of the network ACL for which you want to delete a rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae-5****</p>
          */
         public Builder networkAclEntryId(String networkAclEntryId) {
             this.putQueryParameter("NetworkAclEntryId", networkAclEntryId);

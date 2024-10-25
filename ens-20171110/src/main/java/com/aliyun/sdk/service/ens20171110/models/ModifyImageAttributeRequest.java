@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyImageAttributeRequest</p>
@@ -69,7 +70,11 @@ public class ModifyImageAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5t4xwkfkbs0uxv0kymdb6uip7</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -78,7 +83,11 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The name of the image.
+         * <p>The name of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Image Name</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);

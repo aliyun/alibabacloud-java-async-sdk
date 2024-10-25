@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiskRequest} extends {@link RequestModel}
  *
  * <p>CreateDiskRequest</p>
@@ -46,6 +47,10 @@ public class CreateDiskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private CreateDiskRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
@@ -56,6 +61,7 @@ public class CreateDiskRequest extends Request {
         this.KMSKeyId = builder.KMSKeyId;
         this.size = builder.size;
         this.snapshotId = builder.snapshotId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -127,6 +133,13 @@ public class CreateDiskRequest extends Request {
         return this.snapshotId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateDiskRequest, Builder> {
         private String category; 
         private String diskName; 
@@ -136,6 +149,7 @@ public class CreateDiskRequest extends Request {
         private String KMSKeyId; 
         private String size; 
         private String snapshotId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -151,14 +165,19 @@ public class CreateDiskRequest extends Request {
             this.KMSKeyId = request.KMSKeyId;
             this.size = request.size;
             this.snapshotId = request.snapshotId;
+            this.tag = request.tag;
         } 
 
         /**
-         * The category of the disk. Valid values:
-         * <p>
+         * <p>The category of the disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: all-flash disk.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cloud_efficiency: ultra disk.
-         * *   cloud_ssd: all-flash disk.
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -167,7 +186,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The name of the disk.
+         * <p>The name of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourDiskName</p>
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -176,11 +198,14 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to encrypt the new system disk. Valid values:
-         * <p>
+         * <p>Specifies whether to encrypt the new system disk. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default): no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -189,7 +214,11 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the edge node.
+         * <p>The ID of the edge node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -198,7 +227,11 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Set the value to **PostPaid**.
+         * <p>The billing method of the instance. Set the value to <strong>PostPaid</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -207,10 +240,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the Key Management Service (KMS) key that is used by the cloud disk.
-         * <p>
+         * <p>The ID of the Key Management Service (KMS) key that is used by the cloud disk.</p>
+         * <blockquote>
+         * <p> If you set the <strong>Encrypted</strong> parameter to <strong>true</strong>, the default service key is used when the <strong>KMSKeyId</strong> parameter is empty.</p>
+         * </blockquote>
          * 
-         * >  If you set the **Encrypted** parameter to **true**, the default service key is used when the **KMSKeyId** parameter is empty.
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fxxxxx</p>
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -219,7 +255,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The size of the disk. Unit: GiB.
+         * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(String size) {
             this.putQueryParameter("Size", size);
@@ -228,17 +267,28 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot that you want to use to create the disk.
-         * <p>
+         * <p>The ID of the snapshot that you want to use to create the disk.</p>
+         * <p>The following limits apply to the <strong>SnapshotId</strong> and <strong>Size</strong> parameters:</p>
+         * <ul>
+         * <li>If the size of the snapshot specified by <strong>SnapshotId</strong> is greater than the specified <strong>Size</strong> value, the size of the created disk is equal to the specified snapshot size.</li>
+         * <li>If the size of the snapshot specified by <strong>SnapshotId</strong> is smaller than the specified <strong>Size</strong> value, the size of the created disk is equal to the specified <strong>Size</strong> value.</li>
+         * </ul>
          * 
-         * The following limits apply to the **SnapshotId** and **Size** parameters:
-         * 
-         * *   If the size of the snapshot specified by **SnapshotId** is greater than the specified **Size** value, the size of the created disk is equal to the specified snapshot size.
-         * *   If the size of the snapshot specified by **SnapshotId** is smaller than the specified **Size** value, the size of the created disk is equal to the specified **Size** value.
+         * <strong>example:</strong>
+         * <p>s-897654321****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -249,4 +299,71 @@ public class CreateDiskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDiskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDiskRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

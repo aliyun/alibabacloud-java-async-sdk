@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopEpnInstanceRequest} extends {@link RequestModel}
  *
  * <p>StopEpnInstanceRequest</p>
@@ -54,7 +55,11 @@ public class StopEpnInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the EPN instance.
+         * <p>The ID of the EPN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-20201014152822q2S9tQ</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);

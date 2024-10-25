@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesRequest</p>
@@ -305,7 +306,10 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-cmcc</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -314,7 +318,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the regions. The value is a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).
+         * <p>The IDs of the regions. The value is a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</p>
          */
         public Builder ensRegionIds(String ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -323,7 +330,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the edge service. You can use the ID to query information about the instances that are created in the edge service.
+         * <p>The ID of the edge service. You can use the ID to query information about the instances that are created in the edge service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens-20190730202316s****</p>
          */
         public Builder ensServiceId(String ensServiceId) {
             this.putQueryParameter("EnsServiceId", ensServiceId);
@@ -332,7 +342,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_alibase_****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -341,7 +354,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5iqczfxps7csjrxeca****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -350,7 +366,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate IDs with commas (,).
+         * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-5iqczfxps7csjrxeca07****&quot;, &quot;i-5iqczfxps7csjrxeca07****&quot;]]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -359,7 +378,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestName</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -368,13 +390,16 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The condition that you want to use to filter instances by category. Valid values:
-         * <p>
+         * <p>The condition that you want to use to filter instances by category. Valid values:</p>
+         * <ul>
+         * <li>EnsInstance: ENS instances that you purchase.</li>
+         * <li>EnsService: ENS instances that belong to edge services.</li>
+         * <li>BuildMachine: ENS instances that are configured with image builders.</li>
+         * <li>EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.</li>
+         * </ul>
          * 
-         * *   EnsInstance: ENS instances that you purchase.
-         * *   EnsService: ENS instances that belong to edge services.
-         * *   BuildMachine: ENS instances that are configured with image builders.
-         * *   EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.
+         * <strong>example:</strong>
+         * <p>EnsService</p>
          */
         public Builder instanceResourceType(String instanceResourceType) {
             this.putQueryParameter("InstanceResourceType", instanceResourceType);
@@ -383,7 +408,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The instance type.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.se1.tiny</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -392,7 +420,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The internal IP address of the instance.
+         * <p>The internal IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -401,7 +432,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-2zeuphj08tt7q3brd****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -410,10 +444,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The method that you want to use to sort instances. The value of this parameter is in the JSON format.
-         * <p>
+         * <p>The method that you want to use to sort instances. The value of this parameter is in the JSON format.</p>
+         * <p>You can sort instances by name, expiration time, node ID, or creation time. You can specify one or more methods.</p>
          * 
-         * You can sort instances by name, expiration time, node ID, or creation time. You can specify one or more methods.
+         * <strong>example:</strong>
+         * <p>{&quot;InstanceNameSort&quot;:&quot;asc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;desc&quot;}}</p>
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -422,10 +457,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**.
-         * <p>
+         * <p>The page number. Pages start from page <strong>1</strong>.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -434,10 +470,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. The maximum value is **100**.
-         * <p>
+         * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>.</p>
+         * <p>Default value: <strong>10</strong>.</p>
          * 
-         * Default value: **10**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -446,7 +483,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The keyword that you use to query the logs of the service. You can specify the values of parameters such as **ip**, **InstanceName**, and **InstanceId** as the keyword.
+         * <p>The keyword that you use to query the logs of the service. You can specify the values of parameters such as <strong>ip</strong>, <strong>InstanceName</strong>, and <strong>InstanceId</strong> as the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Joshua</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -455,7 +495,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-5kyicq2kfcapxrdds6tar7jqb</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -464,12 +507,15 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The status of the instance. Valid values:
-         * <p>
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Stopped</li>
+         * <li>Expired</li>
+         * </ul>
          * 
-         * *   Running
-         * *   Stopped
-         * *   Expired
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -478,7 +524,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.
+         * <p>The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -488,7 +534,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zeh0r1pabwtg6wcs****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -503,6 +552,12 @@ public class DescribeInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -542,7 +597,10 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that are to add to the instance. Valid values: 1 to 20.
+             * <p>The key of the tag that are to add to the instance. Valid values: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -550,7 +608,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The tag value of the instance. Valid values: 1 to 20.
+             * <p>The tag value of the instance. Valid values: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder value(String value) {
                 this.value = value;

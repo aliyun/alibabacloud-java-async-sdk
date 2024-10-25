@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBucketAclResponseBody} extends {@link TeaModel}
  *
  * <p>GetBucketAclResponseBody</p>
@@ -49,7 +50,10 @@ public class GetBucketAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ACL of the bucket.
+         * <p>The ACL of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder bucketAcl(String bucketAcl) {
             this.bucketAcl = bucketAcl;
@@ -57,7 +61,10 @@ public class GetBucketAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C881388-2D4B-46F4-A96B-D4E6BD0886A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

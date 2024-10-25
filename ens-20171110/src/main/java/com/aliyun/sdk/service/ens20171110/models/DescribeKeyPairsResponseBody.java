@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKeyPairsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the key pairs.
+         * <p>Details about the key pairs.</p>
          */
         public Builder keyPairs(KeyPairs keyPairs) {
             this.keyPairs = keyPairs;
@@ -93,7 +94,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37B52F33-6879-49D0-A39B-22966B01449E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of key pairs.
+         * <p>The total number of key pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyPairsResponseBody</p>
+     */
     public static class KeyPair extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -193,7 +212,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String keyPairName; 
 
             /**
-             * The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-26T15:38:27Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -201,7 +223,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the key pair.
+             * <p>The fingerprint of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fdaf8ff7a756ef843814fc****</p>
              */
             public Builder keyPairFingerPrint(String keyPairFingerPrint) {
                 this.keyPairFingerPrint = keyPairFingerPrint;
@@ -209,7 +234,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the key pair.
+             * <p>The ID of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh-50cynkq42sgj4ej1tn78t4***</p>
              */
             public Builder keyPairId(String keyPairId) {
                 this.keyPairId = keyPairId;
@@ -217,7 +245,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SSH key pair.
+             * <p>The name of the SSH key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKeyPairName</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -231,6 +262,12 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyPairsResponseBody</p>
+     */
     public static class KeyPairs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyPair")
         private java.util.List < KeyPair> keyPair;

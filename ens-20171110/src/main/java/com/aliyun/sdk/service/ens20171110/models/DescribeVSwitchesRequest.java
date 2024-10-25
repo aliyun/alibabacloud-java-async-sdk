@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVSwitchesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVSwitchesRequest</p>
@@ -138,7 +139,10 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * The ID of the edge node.
+         * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-xian-unicom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -147,7 +151,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the vSwitches belong.
+         * <p>The ID of the VPC to which the vSwitches belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-25cdvfeq58pl****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -156,10 +163,11 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the returned data. Example: {"EnsRegionId":"desc"}.
-         * <p>
+         * <p>The order in which you want to sort the returned data. Example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}.</p>
+         * <p>By default, the nodes are sorted by IDs in descending order.</p>
          * 
-         * By default, the nodes are sorted by IDs in descending order.
+         * <strong>example:</strong>
+         * <p>{&quot;EnsRegionId&quot;:&quot;desc&quot;}</p>
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -168,7 +176,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The page number of the returned page. Default value: **1**.
+         * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -177,7 +188,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -186,7 +200,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5m9xhlq8oh***</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -195,7 +212,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The name of the vSwitch.
+         * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testVSwitchName</p>
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);

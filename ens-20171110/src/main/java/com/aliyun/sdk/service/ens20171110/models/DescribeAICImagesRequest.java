@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAICImagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAICImagesRequest</p>
@@ -165,7 +166,10 @@ public class DescribeAICImagesRequest extends Request {
         } 
 
         /**
-         * The description of the image.
+         * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test operation of console</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -174,7 +178,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * The image ID of the AIC instance.
+         * <p>The image ID of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-ad0ddaddc2d54adeaa09b7c0f1e****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -183,11 +190,14 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * The type of the image. Valid values:
-         * <p>
+         * <p>The type of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>public</strong>: public image</li>
+         * <li><strong>private</strong>: custom image</li>
+         * </ul>
          * 
-         * *   **public**: public image
-         * *   **private**: custom image
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -196,7 +206,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * The URL of the AIC image repository.
+         * <p>The URL of the AIC image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****.alibaba-inc.com/aic/socimage:test</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -205,7 +218,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
+         * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02</p>
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -214,7 +230,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
+         * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-02</p>
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -223,7 +242,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -232,7 +254,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. The maximum value is **100**. Default value: **10**.
+         * <p>The number of entries per page. The maximum value is <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -241,12 +266,15 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * The status of the image. Valid values:
-         * <p>
+         * <p>The status of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>verifying</strong></li>
+         * <li><strong>disable</strong></li>
+         * <li><strong>available</strong></li>
+         * </ul>
          * 
-         * *   **verifying**
-         * *   **disable**
-         * *   **available**
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

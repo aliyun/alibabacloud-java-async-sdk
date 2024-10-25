@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopySnapshotRequest} extends {@link RequestModel}
  *
  * <p>CopySnapshotRequest</p>
@@ -97,7 +98,8 @@ public class CopySnapshotRequest extends Request {
         } 
 
         /**
-         * The IDs of destination nodes.
+         * <p>The IDs of destination nodes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
             String destinationRegionIdsShrink = shrink(destinationRegionIds, "DestinationRegionIds", "json");
@@ -107,7 +109,10 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder destinationSnapshotDescription(String destinationSnapshotDescription) {
             this.putQueryParameter("DestinationSnapshotDescription", destinationSnapshotDescription);
@@ -116,7 +121,10 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         public Builder destinationSnapshotName(String destinationSnapshotName) {
             this.putQueryParameter("DestinationSnapshotName", destinationSnapshotName);
@@ -125,7 +133,11 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the source snapshot.
+         * <p>The ID of the source snapshot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-bp1c0doj0taqyzzl****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

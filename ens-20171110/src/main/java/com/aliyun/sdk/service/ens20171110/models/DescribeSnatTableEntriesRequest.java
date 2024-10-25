@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnatTableEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnatTableEntriesRequest</p>
@@ -139,7 +140,11 @@ public class DescribeSnatTableEntriesRequest extends Request {
         } 
 
         /**
-         * The ID of the Network Address Translation (NAT) gateway.
+         * <p>The ID of the Network Address Translation (NAT) gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5tawjw5j7sgd2deujxuk0****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -148,10 +153,11 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**.
-         * <p>
+         * <p>The page number. Pages start from page <strong>1</strong>.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,10 +166,11 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. The maximum value is **100**.
-         * <p>
+         * <p>The number of entries per page. The maximum value is <strong>100</strong>.</p>
+         * <p>Default value: <strong>10</strong>.</p>
          * 
-         * Default value: **10**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -172,7 +179,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the SNAT entry.
+         * <p>The ID of the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-5tfjp36fsrb36zs36faj0****</p>
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -181,7 +191,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The name of the SNAT entry.
+         * <p>The name of the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder snatEntryName(String snatEntryName) {
             this.putQueryParameter("SnatEntryName", snatEntryName);
@@ -190,7 +203,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The elastic IP address (EIP) specified in the SNAT entry.
+         * <p>The elastic IP address (EIP) specified in the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58.XXXX.XXX.29</p>
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);
@@ -199,7 +215,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The source CIDR block specified in the SNAT entry.
+         * <p>The source CIDR block specified in the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.1.0.50/32</p>
          */
         public Builder sourceCIDR(String sourceCIDR) {
             this.putQueryParameter("SourceCIDR", sourceCIDR);

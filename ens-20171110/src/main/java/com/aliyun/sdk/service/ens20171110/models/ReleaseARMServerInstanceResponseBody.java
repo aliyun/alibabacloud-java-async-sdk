@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseARMServerInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ReleaseARMServerInstanceResponseBody</p>
@@ -37,7 +38,10 @@ public class ReleaseARMServerInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DCAE84DF-4187-5CC5-B819-37BCD2B83BD3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCreatePrePaidInstanceResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeCreatePrePaidInstanceResultRequest</p>
@@ -54,7 +55,11 @@ public class DescribeCreatePrePaidInstanceResultRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the CreateIntance operation to create an instance.
+         * <p>The ID of the instance. You can call the CreateIntance operation to create an instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-6ecpqvkicnchxccozrp****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

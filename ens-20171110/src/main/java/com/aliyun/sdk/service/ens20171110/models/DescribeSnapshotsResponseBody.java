@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9635ED2E-3103-1606-84D4-9F8E816B19F9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the snapshots.
+         * <p>The information about the snapshots.</p>
          */
         public Builder snapshots(java.util.List < Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -117,7 +127,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of snapshots.
+         * <p>The total number of snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -289,7 +308,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The creation time. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-08-20T14:52:28Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -297,7 +319,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the snapshot.
+             * <p>The description of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -305,7 +330,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the edge node.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-15</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -313,7 +341,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of the disk. Unit: MiB.
+             * <p>The capacity of the disk. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -321,7 +352,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * <p>The ID of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bp67acfmxazb4p****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -329,7 +363,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.
+             * <p>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testSnapshotName</p>
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -337,13 +374,16 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk. Valid value:
-             * <p>
+             * <p>The type of the disk. Valid value:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: all-flash disk</li>
+             * <li>local_hdd: local HDD</li>
+             * <li>local_ssd: local SSD</li>
+             * </ul>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: all-flash disk
-             * *   local_hdd: local HDD
-             * *   local_ssd: local SSD
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder sourceDiskCategory(String sourceDiskCategory) {
                 this.sourceDiskCategory = sourceDiskCategory;
@@ -351,7 +391,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.
+             * <p>The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp67acfmxazb4ph****</p>
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -359,11 +402,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk. Valid value:
-             * <p>
+             * <p>The type of the disk. Valid value:</p>
+             * <ul>
+             * <li>1: system disk</li>
+             * <li>2: data disk</li>
+             * </ul>
              * 
-             * *   1: system disk
-             * *   2: data disk
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -371,7 +417,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source edge node.
+             * <p>The ID of the source edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-27</p>
              */
             public Builder sourceEnsRegionId(String sourceEnsRegionId) {
                 this.sourceEnsRegionId = sourceEnsRegionId;
@@ -379,7 +428,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source snapshot.
+             * <p>The ID of the source snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bpdfer893jfkdqe****</p>
              */
             public Builder sourceSnapshotId(String sourceSnapshotId) {
                 this.sourceSnapshotId = sourceSnapshotId;
@@ -387,13 +439,16 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the snapshot. Valid value:
-             * <p>
+             * <p>The status of the snapshot. Valid value:</p>
+             * <ul>
+             * <li>creating: The snapshot is being created.</li>
+             * <li>Available: The snapshot is available.</li>
+             * <li>deleting: The snapshot is being deleted.</li>
+             * <li>error: An error occurred on the snapshot.</li>
+             * </ul>
              * 
-             * *   creating: The snapshot is being created.
-             * *   Available: The snapshot is available.
-             * *   deleting: The snapshot is being deleted.
-             * *   error: An error occurred on the snapshot.
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder status(String status) {
                 this.status = status;

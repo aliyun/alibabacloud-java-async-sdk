@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataPushResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataPushResultResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * The push results of data files.
+         * <p>The push results of data files.</p>
          */
         public Builder pushResults(PushResults pushResults) {
             this.pushResults = pushResults;
@@ -109,7 +116,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataPushResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataPushResultResponseBody</p>
+     */
     public static class RegionId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -193,7 +212,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the ENS node.
+             * <p>The ID of the ENS node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-wuxi-5</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -201,7 +223,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the push operation. The time is displayed in UTC.
+             * <p>The start time of the push operation. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-28T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -209,7 +234,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * <p>The description of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -217,7 +245,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the status was last updated. The time is displayed in UTC.
+             * <p>The time when the status was last updated. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-07T02:37:10Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -231,6 +262,12 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataPushResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataPushResultResponseBody</p>
+     */
     public static class RegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private java.util.List < RegionId> regionId;
@@ -258,7 +295,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private java.util.List < RegionId> regionId; 
 
             /**
-             * The ID of the ENS node.
+             * <p>The ID of the ENS node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-wuxi-5</p>
              */
             public Builder regionId(java.util.List < RegionId> regionId) {
                 this.regionId = regionId;
@@ -272,6 +312,12 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataPushResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataPushResultResponseBody</p>
+     */
     public static class StatusStat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionIdCount")
         private Integer regionIdCount;
@@ -323,7 +369,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The total number of ENS nodes.
+             * <p>The total number of ENS nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder regionIdCount(Integer regionIdCount) {
                 this.regionIdCount = regionIdCount;
@@ -331,7 +380,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * The push status of data files on the ENS node.
+             * <p>The push status of data files on the ENS node.</p>
              */
             public Builder regionIds(RegionIds regionIds) {
                 this.regionIds = regionIds;
@@ -339,7 +388,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * The push status. The value is of the enumeration type. Valid values: SUCCESS FAILED PUSHING
+             * <p>The push status. The value is of the enumeration type. Valid values: SUCCESS FAILED PUSHING</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAILED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -353,6 +405,12 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataPushResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataPushResultResponseBody</p>
+     */
     public static class StatusStatS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatusStat")
         private java.util.List < StatusStat> statusStat;
@@ -394,6 +452,12 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataPushResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataPushResultResponseBody</p>
+     */
     public static class PushResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -445,7 +509,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the data file.
+             * <p>The name of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gcs-pre-websocket-eip-telecom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -453,7 +520,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * The push status of data files.
+             * <p>The push status of data files.</p>
              */
             public Builder statusStatS(StatusStatS statusStatS) {
                 this.statusStatS = statusStatS;
@@ -461,7 +528,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the data file.
+             * <p>The version number of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -475,6 +545,12 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataPushResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataPushResultResponseBody</p>
+     */
     public static class PushResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PushResult")
         private java.util.List < PushResult> pushResult;

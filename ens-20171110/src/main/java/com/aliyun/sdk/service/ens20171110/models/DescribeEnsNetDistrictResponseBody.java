@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsNetDistrictResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsNetDistrictResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned service code. A value of 0 indicates that the operation was successful.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the regions.
+         * <p>The information about the regions.</p>
          */
         public Builder ensNetDistricts(EnsNetDistricts ensNetDistricts) {
             this.ensNetDistricts = ensNetDistricts;
@@ -77,7 +81,10 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsNetDistrictResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsNetDistrictResponseBody</p>
+     */
     public static class EnsNetDistrict extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionIdCount")
         private String ensRegionIdCount;
@@ -177,7 +190,10 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             private String netDistrictName; 
 
             /**
-             * The number of nodes in the region.
+             * <p>The number of nodes in the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder ensRegionIdCount(String ensRegionIdCount) {
                 this.ensRegionIdCount = ensRegionIdCount;
@@ -185,7 +201,10 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the region.
+             * <p>The code of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100106</p>
              */
             public Builder netDistrictCode(String netDistrictCode) {
                 this.netDistrictCode = netDistrictCode;
@@ -193,7 +212,10 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>southWest</p>
              */
             public Builder netDistrictEnName(String netDistrictEnName) {
                 this.netDistrictEnName = netDistrictEnName;
@@ -201,7 +223,10 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * The parent code of the region.
+             * <p>The parent code of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder netDistrictFatherCode(String netDistrictFatherCode) {
                 this.netDistrictFatherCode = netDistrictFatherCode;
@@ -209,12 +234,15 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the region.
-             * <p>
+             * <p>The level of the region.</p>
+             * <ul>
+             * <li><strong>Big</strong>: area</li>
+             * <li><strong>Middle</strong>: province</li>
+             * <li><strong>Small</strong>: city</li>
+             * </ul>
              * 
-             * *   **Big**: area
-             * *   **Middle**: province
-             * *   **Small**: city
+             * <strong>example:</strong>
+             * <p>Big</p>
              */
             public Builder netDistrictLevel(String netDistrictLevel) {
                 this.netDistrictLevel = netDistrictLevel;
@@ -222,7 +250,10 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>southwest China</p>
              */
             public Builder netDistrictName(String netDistrictName) {
                 this.netDistrictName = netDistrictName;
@@ -236,6 +267,12 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsNetDistrictResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsNetDistrictResponseBody</p>
+     */
     public static class EnsNetDistricts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsNetDistrict")
         private java.util.List < EnsNetDistrict> ensNetDistrict;

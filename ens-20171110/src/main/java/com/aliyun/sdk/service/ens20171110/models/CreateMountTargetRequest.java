@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMountTargetRequest} extends {@link RequestModel}
  *
  * <p>CreateMountTargetRequest</p>
@@ -99,7 +100,11 @@ public class CreateMountTargetRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-cmcc</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -108,7 +113,11 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c50f8*****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -117,7 +126,11 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * The name of the mount target.
+         * <p>The name of the mount target.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestMountPath</p>
          */
         public Builder mountTargetName(String mountTargetName) {
             this.putQueryParameter("MountTargetName", mountTargetName);
@@ -126,7 +139,11 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-*****</p>
          */
         public Builder netWorkId(String netWorkId) {
             this.putQueryParameter("NetWorkId", netWorkId);

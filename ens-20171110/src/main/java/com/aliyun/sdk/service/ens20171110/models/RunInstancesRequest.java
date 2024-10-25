@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunInstancesRequest} extends {@link RequestModel}
  *
  * <p>RunInstancesRequest</p>
@@ -562,7 +563,11 @@ public class RunInstancesRequest extends Request {
         } 
 
         /**
-         * The number of instances that you want to create. Valid values: 1 to 100.
+         * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Long amount) {
             this.putQueryParameter("Amount", amount);
@@ -571,11 +576,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The time when to automatically release the pay-as-you-go instance. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in Coordinated Universal Time (UTC).
-         * <p>
+         * <p>The time when to automatically release the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <ul>
+         * <li>If the value of <code>ss</code> is not <code>00</code>, the start time is automatically rounded down to the nearest minute based on the value of <code>mm</code>.</li>
+         * <li>The specified time must be at least one hour later than the current time.</li>
+         * </ul>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
-         * *   If the value of `ss` is not `00`, the start time is automatically rounded down to the nearest minute based on the value of `mm`.
-         * *   The specified time must be at least one hour later than the current time.
+         * <strong>example:</strong>
+         * <p>2023-06-28T14:38:52Z</p>
          */
         public Builder autoReleaseTime(String autoReleaseTime) {
             this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
@@ -584,13 +593,17 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>.</li>
+         * <li><strong>false</strong> (default).</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is not available when InstanceChargeType is set to PostPaid.</p>
+         * </blockquote>
          * 
-         * *   **true**.
-         * *   **false** (default).
-         * 
-         * >  This parameter is not available when InstanceChargeType is set to PostPaid.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -599,7 +612,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to use coupons. Default value: true.
+         * <p>Specifies whether to use coupons. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoUseCoupon(String autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -608,11 +624,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The billing cycle of computing resources of the instance. Only pay-as-you-go instances are supported. Valid values:
-         * <p>
+         * <p>The billing cycle of computing resources of the instance. Only pay-as-you-go instances are supported. Valid values:</p>
+         * <ul>
+         * <li><strong>Day</strong>.</li>
+         * <li><strong>Month</strong>.</li>
+         * </ul>
          * 
-         * *   **Day**.
-         * *   **Month**.
+         * <strong>example:</strong>
+         * <p>Day</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -621,10 +640,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The Internet service provider (ISP).
-         * <p>
+         * <p>The Internet service provider (ISP).</p>
+         * <blockquote>
+         * <p> This parameter is not available if ScheduleAreaLevel is set to Region and is required if ScheduleAreaLevel is set to other values.</p>
+         * </blockquote>
          * 
-         * >  This parameter is not available if ScheduleAreaLevel is set to Region and is required if ScheduleAreaLevel is set to other values.
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder carrier(String carrier) {
             this.putQueryParameter("Carrier", carrier);
@@ -633,7 +655,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The specifications of data disks.
+         * <p>The specifications of data disks.</p>
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
@@ -643,10 +665,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the node.
-         * <p>
+         * <p>The ID of the node.</p>
+         * <blockquote>
+         * <p> This parameter is required if ScheduleAreaLevel is set to Region and is not available if ScheduleAreaLevel is set to other values.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if ScheduleAreaLevel is set to Region and is not available if ScheduleAreaLevel is set to other values.
+         * <strong>example:</strong>
+         * <p>cn-foshan-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -655,7 +680,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the host.
+         * <p>The name of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-HostName</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -664,7 +692,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the image. For ARM PCB-based server instances, leave this parameter empty. For other instances, this parameter is required.
+         * <p>The ID of the image. For ARM PCB-based server instances, leave this parameter empty. For other instances, this parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5si16wo6simkt267p8b7hcmy3</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -673,11 +704,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The billing policy of the instance. Valid values:
-         * <p>
+         * <p>The billing policy of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>instance</strong>: Bills are generated based on instances.</li>
+         * <li>If you do not specify this parameter, bills are generated based on users.</li>
+         * </ul>
          * 
-         * *   **instance**: Bills are generated based on instances.
-         * *   If you do not specify this parameter, bills are generated based on users.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder instanceChargeStrategy(String instanceChargeStrategy) {
             this.putQueryParameter("InstanceChargeStrategy", instanceChargeStrategy);
@@ -686,11 +720,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PrePaid**: subscription.
-         * *   **PostPaid**: pay-as-you-go.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -699,10 +737,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
-         * <p>
+         * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The default value of this parameter is the value of the InstanceId parameter.</p>
          * 
-         * The default value of this parameter is the value of the InstanceId parameter.
+         * <strong>example:</strong>
+         * <p>TestName</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -711,7 +750,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The instance type.
+         * <p>The instance type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.small</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -720,13 +763,17 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The bandwidth billing method. Valid values:
-         * <p>
+         * <p>The bandwidth billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>BandwidthByDay</strong>: pay by daily peak bandwidth</li>
+         * <li><strong>95BandwidthByMonth</strong>: pay by monthly 95th percentile bandwidth</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if you purchase an ENS instance for the first time. The value that you specified is used as the default value for subsequent purchases.</p>
+         * </blockquote>
          * 
-         * *   **BandwidthByDay**: pay by daily peak bandwidth
-         * *   **95BandwidthByMonth**: pay by monthly 95th percentile bandwidth
-         * 
-         * >  This parameter is required if you purchase an ENS instance for the first time. The value that you specified is used as the default value for subsequent purchases.
+         * <strong>example:</strong>
+         * <p>BandwidthByDay</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -735,7 +782,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The maximum public bandwidth. If the value of this parameter is greater than 0, a public IP address is assigned to the instance.
+         * <p>The maximum public bandwidth. If the value of this parameter is greater than 0, a public IP address is assigned to the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder internetMaxBandwidthOut(Long internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -744,12 +795,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The type of the IP address. Valid values:
-         * <p>
+         * <p>The type of the IP address. Examples:</p>
+         * <ul>
+         * <li><strong>ipv4</strong> (default).</li>
+         * <li><strong>ipv6</strong>.</li>
+         * <li><strong>ipv4Andipv6</strong>.</li>
+         * </ul>
          * 
-         * *   **ipv4** (default).
-         * *   **ipv6**.
-         * *   **ipv4Andipv6**.
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -758,10 +812,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
-         * <p>
+         * <p>The name of the key pair.</p>
+         * <blockquote>
+         * <p> You need to specify at least one of <strong>Password</strong>, <strong>KeyPairName</strong>, and <strong>PasswordInherit</strong>.</p>
+         * </blockquote>
          * 
-         * >  You need to specify at least one of **Password**, **KeyPairName**, and **PasswordInherit**.
+         * <strong>example:</strong>
+         * <p>wx2-jumpserver</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -770,10 +827,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The code of the region.
-         * <p>
+         * <p>The code of the region.</p>
+         * <blockquote>
+         * <p> This parameter is not available if ScheduleAreaLevel is set to Region and is required if ScheduleAreaLevel is set to other values.</p>
+         * </blockquote>
          * 
-         * >  This parameter is not available if ScheduleAreaLevel is set to Region and is required if ScheduleAreaLevel is set to other values.
+         * <strong>example:</strong>
+         * <p>350000</p>
          */
         public Builder netDistrictCode(String netDistrictCode) {
             this.putQueryParameter("NetDistrictCode", netDistrictCode);
@@ -782,10 +842,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the network.
-         * <p>
+         * <p>The ID of the network.</p>
+         * <blockquote>
+         * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs.
+         * <strong>example:</strong>
+         * <p>net-id</p>
          */
         public Builder netWorkId(String netWorkId) {
             this.putQueryParameter("NetWorkId", netWorkId);
@@ -794,10 +857,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The password that is used to connect to the instance.
-         * <p>
+         * <p>The password that is used to connect to the instance.</p>
+         * <blockquote>
+         * <p> You need to specify at least one of <strong>Password</strong>, <strong>KeyPairName</strong>, and <strong>PasswordInherit</strong>.</p>
+         * </blockquote>
          * 
-         * >  You need to specify at least one of **Password**, **KeyPairName**, and **PasswordInherit**.
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -806,13 +872,17 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the preset password of the image. Valid values:
-         * <p>
+         * <p>Specifies whether to use the preset password of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You need to specify at least one of <strong>Password</strong>, <strong>KeyPairName</strong>, and <strong>PasswordInherit</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  You need to specify at least one of **Password**, **KeyPairName**, and **PasswordInherit**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder passwordInherit(Boolean passwordInherit) {
             this.putQueryParameter("PasswordInherit", passwordInherit);
@@ -821,11 +891,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the subscription period.
-         * <p>
+         * <p>The unit of the subscription period.</p>
+         * <ul>
+         * <li>If <strong>PeriodUnit</strong> is set to <strong>Day</strong>, <strong>Period</strong> can only be set to <strong>3</strong>.</li>
+         * <li>If <strong>PeriodUnit</strong> is <strong>Month</strong>, <strong>Period</strong> can be set to <strong>1 to 9</strong> or <strong>12</strong>.</li>
+         * </ul>
          * 
-         * *   If **PeriodUnit** is set to **Day**, **Period** can only be set to **3**.
-         * *   If **PeriodUnit** is **Month**, **Period** can be set to **1 to 9** or **12**.
+         * <strong>example:</strong>
+         * <p>1-9,12</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -834,11 +907,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the subscription period. Valid values:
-         * <p>
+         * <p>The unit of the subscription period. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong> (default).</li>
+         * <li><strong>Day</strong>.</li>
+         * </ul>
          * 
-         * *   **Month** (default).
-         * *   **Day**.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -847,10 +923,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The private IP address.
-         * <p>
+         * <p>The private IP address.</p>
+         * <blockquote>
+         * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs. If you specify a private IP address, the number of instances must be 1. The private IP address takes effect only when the private IP address and the vSwitch ID are not empty.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs. If you specify a private IP address, the number of instances must be 1. The private IP address takes effect only when the private IP address and the vSwitch ID are not empty.
+         * <strong>example:</strong>
+         * <p>10.0.0.120</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -859,7 +938,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable public IP address identification. Valid values: true and false. Default value: false.
+         * <p>Specifies whether to enable public IP address identification. Valid values: true and false. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publicIpIdentification(Boolean publicIpIdentification) {
             this.putQueryParameter("PublicIpIdentification", publicIpIdentification);
@@ -868,13 +950,17 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The scheduling level. This parameter specifies area-level scheduling or node-level scheduling. Valid values:
-         * <p>
+         * <p>The scheduling level. This parameter specifies area-level scheduling or node-level scheduling. Valid values:</p>
+         * <ul>
+         * <li><strong>Big</strong>: greater area</li>
+         * <li><strong>Middle</strong>: province</li>
+         * <li><strong>Small</strong>: city</li>
+         * <li><strong>Region</strong>: node</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Big**: greater area
-         * *   **Middle**: province
-         * *   **Small**: city
-         * *   **Region**: node
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         public Builder scheduleAreaLevel(String scheduleAreaLevel) {
             this.putQueryParameter("ScheduleAreaLevel", scheduleAreaLevel);
@@ -883,11 +969,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The scheduling price policy. Valid values:
-         * <p>
+         * <p>The scheduling price policy. Valid values:</p>
+         * <ul>
+         * <li><strong>PriceHighPriority</strong>: The high price prevails.</li>
+         * <li><strong>PriceLowPriority</strong>: The low price prevails.</li>
+         * </ul>
          * 
-         * *   **PriceHighPriority**: The high price prevails.
-         * *   **PriceLowPriority**: The low price prevails.
+         * <strong>example:</strong>
+         * <p>PriceHighPriority</p>
          */
         public Builder schedulingPriceStrategy(String schedulingPriceStrategy) {
             this.putQueryParameter("SchedulingPriceStrategy", schedulingPriceStrategy);
@@ -896,13 +985,17 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The scheduling policy of the taint. Valid values:
-         * <p>
+         * <p>The scheduling policy of the taint. Valid values:</p>
+         * <ul>
+         * <li><strong>Concentrate</strong></li>
+         * <li><strong>Disperse</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If ScheduleAreaLevel is set to Region, set this parameter to <strong>Concentrate</strong>. If ScheduleAreaLevel is set to other values, set this parameter to Concentrate or Disperse based on your business requirements.</p>
+         * </blockquote>
          * 
-         * *   **Concentrate**
-         * *   **Disperse**
-         * 
-         * >  If ScheduleAreaLevel is set to Region, set this parameter to **Concentrate**. If ScheduleAreaLevel is set to other values, set this parameter to Concentrate or Disperse based on your business requirements.
+         * <strong>example:</strong>
+         * <p>concentrate</p>
          */
         public Builder schedulingStrategy(String schedulingStrategy) {
             this.putQueryParameter("SchedulingStrategy", schedulingStrategy);
@@ -911,7 +1004,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of security group.
+         * <p>The ID of security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-test</p>
          */
         public Builder securityId(String securityId) {
             this.putQueryParameter("SecurityId", securityId);
@@ -929,13 +1025,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Valid values:
-         * <p>
+         * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instance is created as a regular pay-as-you-go instance.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>SpotAsPriceGo</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -944,7 +1042,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The specification of the system disk.
+         * <p>The specification of the system disk.</p>
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
@@ -954,7 +1052,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -963,7 +1061,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to append sequential suffixes to the hostname specified by the **HostName** parameter and to the instance name specified by the **InstanceName** parameter. The sequential suffixes range from 001 to 999.
+         * <p>Specifies whether to append sequential suffixes to the hostname specified by the <strong>HostName</strong> parameter and to the instance name specified by the <strong>InstanceName</strong> parameter. The sequential suffixes range from 001 to 999.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder uniqueSuffix(Boolean uniqueSuffix) {
             this.putQueryParameter("UniqueSuffix", uniqueSuffix);
@@ -972,7 +1073,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The custom data. The maximum data size is 16 KB. You can specify **UserData**. **UserData** must be Base64-encoded.
+         * <p>The custom data. The maximum data size is 16 KB. You can specify <strong>UserData</strong>. <strong>UserData</strong> must be Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZWtest</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -981,10 +1085,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
-         * <p>
+         * <p>The ID of the vSwitch.</p>
+         * <blockquote>
+         * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs.
+         * <strong>example:</strong>
+         * <p>vsw-5sagnw7m613oulalkd10nv0ob</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -999,6 +1106,12 @@ public class RunInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class DataDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -1062,13 +1175,16 @@ public class RunInstancesRequest extends Request {
             private Long size; 
 
             /**
-             * The category of the disk. Valid values:
-             * <p>
+             * <p>The category of the disk. Valid values:</p>
+             * <ul>
+             * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
+             * <li><strong>cloud_ssd</strong>: all-flash disk.</li>
+             * <li><strong>local_hdd</strong>: local HDD.</li>
+             * <li><strong>local_ssd</strong>: local SSD.</li>
+             * </ul>
              * 
-             * *   **cloud_efficiency**: ultra disk.
-             * *   **cloud_ssd**: all-flash disk.
-             * *   **local_hdd**: local HDD.
-             * *   **local_ssd**: local SSD.
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1076,11 +1192,14 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Indicates whether the cloud disk is encrypted. Valid values:
-             * <p>
+             * <p>Indicates whether the cloud disk is encrypted. Valid values:</p>
+             * <ul>
+             * <li>true.</li>
+             * <li>false (default).</li>
+             * </ul>
              * 
-             * *   true.
-             * *   false (default).
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -1088,13 +1207,17 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used for the disk. Valid values:
-             * <p>
+             * <p>The ID of the Key Management Service (KMS) key that is used for the disk. Valid values:</p>
+             * <ul>
+             * <li>true.</li>
+             * <li>false (default).</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you set the Encrypted parameter to true, the default service key is used when the KMSKeyId parameter is empty.</p>
+             * </blockquote>
              * 
-             * *   true.
-             * *   false (default).
-             * 
-             * >  If you set the Encrypted parameter to true, the default service key is used when the KMSKeyId parameter is empty.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -1102,7 +1225,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The size of a data disk. Unit: GiB.
+             * <p>The size of a data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1116,6 +1242,12 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class SystemDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -1155,7 +1287,10 @@ public class RunInstancesRequest extends Request {
             private Long size; 
 
             /**
-             * The category of the system disk.
+             * <p>The category of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1163,7 +1298,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The size of the system disk. Unit: GiB.
+             * <p>The size of the system disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1177,6 +1315,12 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1216,7 +1360,10 @@ public class RunInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1224,7 +1371,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

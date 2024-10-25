@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteObjectRequest} extends {@link RequestModel}
  *
  * <p>DeleteObjectRequest</p>
@@ -69,7 +70,11 @@ public class DeleteObjectRequest extends Request {
         } 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tets</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -78,7 +83,11 @@ public class DeleteObjectRequest extends Request {
         }
 
         /**
-         * The name of the file.
+         * <p>The name of the file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image5</p>
          */
         public Builder objectKey(String objectKey) {
             this.putQueryParameter("ObjectKey", objectKey);

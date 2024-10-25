@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerTCPListenerAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoadBalancerTCPListenerAttributeResponseBody</p>
@@ -265,7 +266,10 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         private Integer unhealthyThreshold; 
 
         /**
-         * The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.backendServerPort = backendServerPort;
@@ -273,7 +277,10 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: **5** to **10000**. Unit: Mbit/s.
+         * <p>The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: <strong>5</strong> to <strong>10000</strong>. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -281,7 +288,10 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The description of the listener.
+         * <p>The description of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -289,11 +299,14 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Indicates whether EIP pass-through is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether EIP pass-through is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong> (default)</li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off** (default)
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder eipTransmit(String eipTransmit) {
             this.eipTransmit = eipTransmit;
@@ -301,7 +314,10 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The timeout period of a connection. Valid values: **10** to **900**. Unit: seconds.
+         * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder establishedTimeout(Integer establishedTimeout) {
             this.establishedTimeout = establishedTimeout;
@@ -309,11 +325,14 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Indicates whether the health check feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
@@ -321,10 +340,13 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The port that is used for health checks. Valid values: **1** to **65535**. If an empty string is returned for this parameter, the port specified by BackendServerPort is used for health checks.
-         * <p>
+         * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If an empty string is returned for this parameter, the port specified by BackendServerPort is used for health checks.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if you set HealthCheck to on.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only if you set HealthCheck to on.
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -332,18 +354,23 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
-         * <p>
+         * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+         * <ul>
+         * <li>Default value: 5.</li>
+         * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
+         * <li>Unit: seconds.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is returned only if you set HealthCheck to on.</p>
+         * </li>
+         * <li><p>If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Default value: 5.
-         * *   Valid values: **1** to **300**.
-         * *   Unit: seconds.
-         * 
-         * > 
-         * 
-         * *   This parameter is returned only if you set HealthCheck to on.
-         * 
-         * *   If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -351,10 +378,13 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The domain name that is used for health checks.
-         * <p>
+         * <p>The domain name that is used for health checks.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if you set HealthCheck to on.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only if you set HealthCheck to on.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.healthCheckDomain = healthCheckDomain;
@@ -362,15 +392,19 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The HTTP status codes for a successful health check. Valid values:
-         * <p>
+         * <p>The HTTP status codes for a successful health check. Valid values:</p>
+         * <ul>
+         * <li><strong>http_2xx</strong> (default)</li>
+         * <li><strong>http_3xx</strong></li>
+         * <li><strong>http_4xx</strong></li>
+         * <li><strong>http_5xx</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only if you set HealthCheck to on.</p>
+         * </blockquote>
          * 
-         * *   **http\_2xx** (default)
-         * *   **http\_3xx**
-         * *   **http\_4xx**
-         * *   **http\_5xx**
-         * 
-         * >  This parameter is returned only if you set HealthCheck to on.
+         * <strong>example:</strong>
+         * <p>http_2xx</p>
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
@@ -378,7 +412,10 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The interval at which health checks are performed. Valid values: **1** to **50**. Unit: seconds.
+         * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -386,11 +423,14 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The type of health checks. Valid values:
-         * <p>
+         * <p>The type of health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong> (default)</li>
+         * <li><strong>http</strong></li>
+         * </ul>
          * 
-         * *   **tcp** (default)
-         * *   **http**
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder healthCheckType(String healthCheckType) {
             this.healthCheckType = healthCheckType;
@@ -398,14 +438,18 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The Uniform Resource Identifier (URI) that is used for health checks. The URI must be **1** to **80** characters in length.
-         * <p>
+         * <p>The Uniform Resource Identifier (URI) that is used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The URL must start with a forward slash (<code>/</code>) and contain characters other than forward slashes (<code>/</code>).</p>
+         * </li>
+         * <li><p>This parameter is returned only if you set HealthCheck to on.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
-         * 
-         * *   This parameter is returned only if you set HealthCheck to on.
+         * <strong>example:</strong>
+         * <p>/example/index.html</p>
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;
@@ -413,10 +457,13 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: **2** to **10**.
-         * <p>
+         * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if you set HealthCheck to on.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only if you set HealthCheck to on.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -424,7 +471,10 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The frontend port that is used by the ELB instance.
+         * <p>The frontend port that is used by the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -432,12 +482,15 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The timeout period of session persistence.
-         * <p>
+         * <p>The timeout period of session persistence.</p>
+         * <ul>
+         * <li>Default value: 0. If the default value is used, the system disables session persistence.</li>
+         * <li>Valid values: <strong>0</strong> to <strong>3600</strong>.</li>
+         * <li>Unit: seconds.</li>
+         * </ul>
          * 
-         * *   Default value: 0. If the default value is used, the system disables session persistence.
-         * *   Valid values: **0** to **3600**.
-         * *   Unit: seconds.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder persistenceTimeout(Integer persistenceTimeout) {
             this.persistenceTimeout = persistenceTimeout;
@@ -445,7 +498,10 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -453,15 +509,18 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The routing algorithm. Valid values:
-         * <p>
+         * <p>The routing algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</li>
+         * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
+         * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+         * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+         * <li><strong>qch</strong>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</li>
+         * <li><strong>iqch</strong>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</li>
+         * </ul>
          * 
-         * *   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.
-         * *   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.
-         * *   **rr**: Requests are distributed to backend servers in sequence.
-         * *   **sch**: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
-         * *   **qch**: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.
-         * *   **iqch**: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.
+         * <strong>example:</strong>
+         * <p>wrr</p>
          */
         public Builder scheduler(String scheduler) {
             this.scheduler = scheduler;
@@ -469,14 +528,17 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The status of the listener. Valid values:
-         * <p>
+         * <p>The status of the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Stopped</strong></li>
+         * <li><strong>Starting</strong></li>
+         * <li><strong>Configuring</strong></li>
+         * <li><strong>Stopping</strong></li>
+         * </ul>
          * 
-         * *   **Running**
-         * *   **Stopped**
-         * *   **Starting**
-         * *   **Configuring**
-         * *   **Stopping**
+         * <strong>example:</strong>
+         * <p>Stopped</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -484,10 +546,13 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: **2** to **10**.
-         * <p>
+         * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if you set HealthCheck to on.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only if you set HealthCheck to on.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;

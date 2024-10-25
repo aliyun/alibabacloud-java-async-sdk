@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStorageGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStorageGatewayResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,11 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +109,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6666C5A5-75ED-422E-A022-7121FA18C968</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +120,7 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * StorageGateways.
+         * <p>The list information.</p>
          */
         public Builder storageGateways(java.util.List < StorageGateways> storageGateways) {
             this.storageGateways = storageGateways;
@@ -117,7 +128,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +144,12 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStorageGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageGatewayResponseBody</p>
+     */
     public static class StorageGateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -265,7 +285,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * CidrBlock.
+             * <p>The internal CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.2.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -273,7 +296,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the storage gateway was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-14T03:07:47Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -281,7 +307,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the storage gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -289,7 +318,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-cmcc</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -297,7 +329,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceIp.
+             * <p>The IP address of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em>.</em>.<em>.</em></p>
              */
             public Builder serviceIp(String serviceIp) {
                 this.serviceIp = serviceIp;
@@ -305,7 +340,16 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the storage gateway. Valid values:</p>
+             * <ul>
+             * <li>creating</li>
+             * <li>available</li>
+             * <li>deleting</li>
+             * <li>deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -313,7 +357,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * StorageGatewayId.
+             * <p>The ID of the storage gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgw-***</p>
              */
             public Builder storageGatewayId(String storageGatewayId) {
                 this.storageGatewayId = storageGatewayId;
@@ -321,7 +368,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * StorageGatewayName.
+             * <p>The name of the storage gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGateway</p>
              */
             public Builder storageGatewayName(String storageGatewayName) {
                 this.storageGatewayName = storageGatewayName;
@@ -329,7 +379,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * StorageGatewayType.
+             * <p>The type of the storage gateway. Default value: 1, which indicates iSCSI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder storageGatewayType(Integer storageGatewayType) {
                 this.storageGatewayType = storageGatewayType;
@@ -337,7 +390,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-***</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

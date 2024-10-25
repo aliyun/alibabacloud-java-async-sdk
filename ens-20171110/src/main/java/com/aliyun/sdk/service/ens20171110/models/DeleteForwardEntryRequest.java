@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteForwardEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteForwardEntryRequest</p>
@@ -54,7 +55,11 @@ public class DeleteForwardEntryRequest extends Request {
         } 
 
         /**
-         * The ID of the DNAT entry that you want to delete.
+         * <p>The ID of the DNAT entry that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-5tfk8qgepr9ijjkqxt8do****</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);

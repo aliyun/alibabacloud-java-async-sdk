@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSnapshotRequest} extends {@link RequestModel}
  *
  * <p>CreateSnapshotRequest</p>
@@ -97,10 +98,11 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
-         * The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-         * <p>
+         * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>By default, this parameter is left empty.</p>
          * 
-         * By default, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -109,7 +111,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1s5fnvk4gn2tws0****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -118,7 +124,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the ENS node.
+         * <p>The ID of the ENS node. You can query the node ID by calling the <a href="~~DescribeEnsRegions~~">DescribeEnsRegions</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-3</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -127,7 +137,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);

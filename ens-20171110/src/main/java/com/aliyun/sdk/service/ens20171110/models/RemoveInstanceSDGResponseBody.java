@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveInstanceSDGResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveInstanceSDGResponseBody</p>
@@ -61,7 +62,10 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned service code. 0 indicates that the request was successful.
+         * <p>The returned service code. 0 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data object.
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -77,7 +81,10 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveInstanceSDGResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveInstanceSDGResponseBody</p>
+     */
     public static class FailedItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
@@ -129,7 +142,10 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The error message that is returned.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdg not found</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -137,7 +153,10 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic-xxxxx-0</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -151,6 +170,12 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RemoveInstanceSDGResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveInstanceSDGResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedCount")
         private Long failedCount;
@@ -202,7 +227,10 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             private Long successCount; 
 
             /**
-             * The number of failed tasks.
+             * <p>The number of failed tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -210,7 +238,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the failed tasks.
+             * <p>Details about the failed tasks.</p>
              */
             public Builder failedItems(java.util.List < FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -218,7 +246,10 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The number of successful tasks.
+             * <p>The number of successful tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -232,6 +263,12 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RemoveInstanceSDGResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveInstanceSDGResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -283,7 +320,10 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The response message. Success is returned for a successful request.
+             * <p>The response message. Success is returned for a successful request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -291,7 +331,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the synchronization request.
+             * <p>The execution result of the synchronization request.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -299,11 +339,14 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether all tasks are successful. Valid values:
-             * <p>
+             * <p>Indicates whether all tasks are successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: All tasks are successful.</li>
+             * <li><strong>false</strong>: Failed tasks exist.</li>
+             * </ul>
              * 
-             * *   **true**: All tasks are successful.
-             * *   **false**: Failed tasks exist.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

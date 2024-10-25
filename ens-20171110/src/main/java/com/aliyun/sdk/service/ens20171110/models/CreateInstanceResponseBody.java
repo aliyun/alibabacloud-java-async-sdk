@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceResponseBody</p>
@@ -61,10 +62,13 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The return code. A value of 0 indicates that the request is successful.
-         * <p>
+         * <p>The return code. A value of 0 indicates that the request is successful.</p>
+         * <blockquote>
+         * <p> If you call this operation by using SDKs, the return value is of the integer type. If you call this operation by using common methods or HTTP requests, the return value is of the string type.</p>
+         * </blockquote>
          * 
-         * >  If you call this operation by using SDKs, the return value is of the integer type. If you call this operation by using common methods or HTTP requests, the return value is of the string type.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -72,7 +76,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of instances.
+         * <p>The IDs of instances.</p>
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -80,7 +84,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A431388-2D4B-46F4-A96B-D4E6BD0688C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,6 +100,12 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceResponseBody</p>
+     */
     public static class InstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private java.util.List < String > instanceId;

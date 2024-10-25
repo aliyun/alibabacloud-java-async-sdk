@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsNetLevelResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsNetLevelResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned service code. A value of 0 indicates that the operation was successful.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The network levels.
+         * <p>The network levels.</p>
          */
         public Builder ensNetLevels(EnsNetLevels ensNetLevels) {
             this.ensNetLevels = ensNetLevels;
@@ -77,7 +81,10 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86A6D421-A0C7-4C01-8648-47377CA6A2CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsNetLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsNetLevelResponseBody</p>
+     */
     public static class EnsNetLevel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsNetLevelCode")
         private String ensNetLevelCode;
@@ -117,12 +130,15 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
             private String ensNetLevelCode; 
 
             /**
-             * The network level. Valid values:
-             * <p>
+             * <p>The network level. Valid values:</p>
+             * <ul>
+             * <li>Big: greater area.</li>
+             * <li>Middle: province.</li>
+             * <li>Small: city.</li>
+             * </ul>
              * 
-             * *   Big: greater area.
-             * *   Middle: province.
-             * *   Small: city.
+             * <strong>example:</strong>
+             * <p>Big</p>
              */
             public Builder ensNetLevelCode(String ensNetLevelCode) {
                 this.ensNetLevelCode = ensNetLevelCode;
@@ -136,6 +152,12 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsNetLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsNetLevelResponseBody</p>
+     */
     public static class EnsNetLevels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsNetLevel")
         private java.util.List < EnsNetLevel> ensNetLevel;

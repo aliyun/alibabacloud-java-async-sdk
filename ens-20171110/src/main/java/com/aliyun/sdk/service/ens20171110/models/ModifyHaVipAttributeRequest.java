@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHaVipAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyHaVipAttributeRequest</p>
@@ -69,7 +70,11 @@ public class ModifyHaVipAttributeRequest extends Request {
         } 
 
         /**
-         * HaVipId.
+         * <p>The ID of the HAVIP that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>havip-52y28****</p>
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -78,7 +83,10 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the HAVIP. The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

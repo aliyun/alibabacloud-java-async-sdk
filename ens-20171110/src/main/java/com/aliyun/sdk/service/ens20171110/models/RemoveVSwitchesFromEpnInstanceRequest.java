@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveVSwitchesFromEpnInstanceRequest} extends {@link RequestModel}
  *
  * <p>RemoveVSwitchesFromEpnInstanceRequest</p>
@@ -69,7 +70,11 @@ public class RemoveVSwitchesFromEpnInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of theEPN instance.
+         * <p>The ID of theEPN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-****</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -78,7 +83,11 @@ public class RemoveVSwitchesFromEpnInstanceRequest extends Request {
         }
 
         /**
-         * The internal networking information that you want to delete.
+         * <p>The internal networking information that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VSwitchesInfo=[{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;},{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;}]</p>
          */
         public Builder vSwitchesInfo(String vSwitchesInfo) {
             this.putQueryParameter("VSwitchesInfo", vSwitchesInfo);

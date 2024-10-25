@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageSharePermissionRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageSharePermissionRequest</p>
@@ -97,7 +98,10 @@ public class DescribeImageSharePermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>171710408091****</p>
          */
         public Builder aliyunId(Long aliyunId) {
             this.putQueryParameter("AliyunId", aliyunId);
@@ -106,7 +110,11 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5s7qotzavwbrnzaqh4unm****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -115,10 +123,11 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**.
-         * <p>
+         * <p>The page number. Pages start from page <strong>1</strong>.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -127,10 +136,11 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **100**.
-         * <p>
+         * <p>The number of entries per page. Maximum value: <strong>100</strong>.</p>
+         * <p>Default value: <strong>10</strong>.</p>
          * 
-         * Default value: **10**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

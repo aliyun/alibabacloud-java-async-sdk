@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeploySDGRequest} extends {@link RequestModel}
  *
  * <p>DeploySDGRequest</p>
@@ -83,11 +84,14 @@ public class DeploySDGRequest extends Request {
         } 
 
         /**
-         * The SDG deployment type. Valid values:
-         * <p>
+         * <p>The SDG deployment type. Valid values:</p>
+         * <ul>
+         * <li>common (default): read/write deployment. Data updates are written to disks.</li>
+         * <li>overlay: read/write splitting deployment. Content in SDGs is read-only. Data updates are written to the local storage of the instance.</li>
+         * </ul>
          * 
-         * *   common (default): read/write deployment. Data updates are written to disks.
-         * *   overlay: read/write splitting deployment. Content in SDGs is read-only. Data updates are written to the local storage of the instance.
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder deploymentType(String deploymentType) {
             this.putQueryParameter("DeploymentType", deploymentType);
@@ -96,7 +100,8 @@ public class DeploySDGRequest extends Request {
         }
 
         /**
-         * The IDs of instances on which you want to deploy SDGs. You can deploy SDGs on a maximum of 100 instances at a time.
+         * <p>The IDs of instances on which you want to deploy SDGs. You can deploy SDGs on a maximum of 100 instances at a time.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -106,7 +111,11 @@ public class DeploySDGRequest extends Request {
         }
 
         /**
-         * The SDG ID. This parameter is used to create a disk, which is attached to an instance.
+         * <p>The SDG ID. This parameter is used to create a disk, which is attached to an instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-xxxxx</p>
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about applications.
+         * <p>Details about applications.</p>
          */
         public Builder applications(Applications applications) {
             this.applications = applications;
@@ -93,7 +94,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50373E71-7710-4620-8AAB-133CCE49451C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class App extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -169,7 +188,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String appInfo; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e76f8985-7965-41fc-925b-9648bb6bf650</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -177,7 +199,92 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the application, such as the resource specification, parameter configuration, and resources.
+             * <p>The information about the application, such as the resource specification, parameter configuration, and resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;AppStatus&quot;:{
+             *         &quot;Phase&quot;:&quot;RUNNING&quot;,
+             *         &quot;StatusDescrip&quot;:&quot;{&quot;status&quot;:&quot;UPDATE_SUCCESS&quot;,&quot;step&quot;:&quot;DONE&quot;,&quot;descrip&quot;:&quot;update to version:1022 success&quot;,&quot;start_time&quot;:&quot;2022-03-01 16:18:22&quot;}&quot;,
+             *         &quot;UpdateTime&quot;:&quot;2022-03-01 16:18:22&quot;,
+             *         &quot;OrderStatus&quot;:null
+             *     },
+             *     &quot;ResourceAttribute&quot;:{
+             *         &quot;NetSecurityInfo&quot;:null,
+             *         &quot;InitConfig&quot;:null,
+             *         &quot;InventoryType&quot;:&quot;Ens&quot;,
+             *         &quot;InstanceSpec&quot;:&quot;ens.gi6s-c12g1.large&quot;,
+             *         &quot;SystemDiskSize&quot;:100,
+             *         &quot;DataDiskSize&quot;:0,
+             *         &quot;BandwithOut&quot;:5000,
+             *         &quot;SchedulingStrategy&quot;:&quot;Disperse&quot;,
+             *         &quot;ImageId&quot;:&quot;m-5or73kzkuxytv7hh6wxr6yc5q&quot;,
+             *         &quot;ResourceType&quot;:&quot;Linux&quot;,
+             *         &quot;AreaLevel&quot;:&quot;National&quot;,
+             *         &quot;IpType&quot;:&quot;PublicIP&quot;
+             *     },
+             *     &quot;WorkloadAttribute&quot;:[
+             *         {
+             *             &quot;Name&quot;:&quot;andorid&quot;,
+             *             &quot;Count&quot;:15,
+             *             &quot;ServiceConfig&quot;:{
+             *                 &quot;PortsBindConfig&quot;:{
+             *                     &quot;NetServiceContainer&quot;:&quot;uravi-service&quot;,
+             *                     &quot;Ports&quot;:[
+             *                         {
+             *                             &quot;Protocol&quot;:&quot;TCP&quot;,
+             *                             &quot;BindType&quot;:&quot;Mapping&quot;,
+             *                             &quot;StartNodePorts&quot;:&quot;31000-31009&quot;,
+             *                             &quot;ContainerPorts&quot;:&quot;4440-4449&quot;
+             *                         },
+             *                         {
+             *                             &quot;Protocol&quot;:&quot;TCP&quot;,
+             *                             &quot;BindType&quot;:&quot;PassThrough&quot;,
+             *                             &quot;StartNodePorts&quot;:&quot;59000-59000&quot;,
+             *                             &quot;ContainerPorts&quot;:&quot;59000-59000&quot;
+             *                         },
+             *                         {
+             *                             &quot;Protocol&quot;:&quot;UDP&quot;,
+             *                             &quot;BindType&quot;:&quot;PassThrough&quot;,
+             *                             &quot;StartNodePorts&quot;:&quot;40001-40010&quot;,
+             *                             &quot;ContainerPorts&quot;:&quot;40001-40010&quot;
+             *                         }
+             *                     ]
+             *                 },
+             *                 &quot;ServiceContainerName&quot;:&quot;android&quot;
+             *             }
+             *         },
+             *         {
+             *             &quot;Name&quot;:&quot;coturn&quot;,
+             *             &quot;Count&quot;:1,
+             *             &quot;ServiceConfig&quot;:{
+             *                 &quot;PortsBindConfig&quot;:{
+             *                     &quot;NetServiceContainer&quot;:&quot;coturn&quot;,
+             *                     &quot;Ports&quot;:[
+             *                         {
+             *                             &quot;Protocol&quot;:&quot;TCP&quot;,
+             *                             &quot;BindType&quot;:&quot;PassThrough&quot;,
+             *                             &quot;StartNodePorts&quot;:&quot;3478-3478&quot;,
+             *                             &quot;ContainerPorts&quot;:&quot;3478-3478&quot;
+             *                         },
+             *                         {
+             *                             &quot;Protocol&quot;:&quot;UDP&quot;,
+             *                             &quot;BindType&quot;:&quot;PassThrough&quot;,
+             *                             &quot;StartNodePorts&quot;:&quot;3478-3478&quot;,
+             *                             &quot;ContainerPorts&quot;:&quot;3478-3478&quot;
+             *                         }
+             *                     ]
+             *                 },
+             *                 &quot;ServiceContainerName&quot;:&quot;coturn&quot;
+             *             }
+             *         },
+             *         {
+             *             &quot;Name&quot;:&quot;aic-manager&quot;,
+             *             &quot;Count&quot;:1,
+             *             &quot;ServiceConfig&quot;:null
+             *         }
+             *     ]
+             * }</p>
              */
             public Builder appInfo(String appInfo) {
                 this.appInfo = appInfo;
@@ -191,6 +298,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class AppList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("App")
         private java.util.List < App> app;
@@ -232,6 +345,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class Application extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppList")
         private AppList appList;
@@ -271,7 +390,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String clusterName; 
 
             /**
-             * Details about the application.
+             * <p>Details about the application.</p>
              */
             public Builder appList(AppList appList) {
                 this.appList = appList;
@@ -279,7 +398,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ay-ads-hz-h</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -293,6 +415,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Application")
         private java.util.List < Application> application;

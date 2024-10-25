@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceTypesResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.
+         * <p>The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the instance types.
+         * <p>Details about the instance types.</p>
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -77,7 +81,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D452D190-BADF-5D09-910D-599B96D42AAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class InstanceType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
@@ -153,7 +166,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer memorySize; 
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -161,7 +177,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This parameter is not needed temporarily.</p>
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -169,7 +188,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance type.
+             * <p>The name of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens.xxx.small</p>
              */
             public Builder instanceTypeName(String instanceTypeName) {
                 this.instanceTypeName = instanceTypeName;
@@ -177,7 +199,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MB.
+             * <p>The memory size. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -191,6 +216,12 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class InstanceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private java.util.List < InstanceType> instanceType;

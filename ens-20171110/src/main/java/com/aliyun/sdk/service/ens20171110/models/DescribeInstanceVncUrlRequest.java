@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceVncUrlRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceVncUrlRequest</p>
@@ -54,7 +55,11 @@ public class DescribeInstanceVncUrlRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * <p>The ID of the instance</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5bp1hzoinajzkh91h****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

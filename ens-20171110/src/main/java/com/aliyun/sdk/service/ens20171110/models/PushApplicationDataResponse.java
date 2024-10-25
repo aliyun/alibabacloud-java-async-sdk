@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushApplicationDataResponse} extends {@link TeaModel}
  *
  * <p>PushApplicationDataResponse</p>

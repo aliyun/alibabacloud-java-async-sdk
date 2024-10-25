@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHaVipAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyHaVipAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyHaVipAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

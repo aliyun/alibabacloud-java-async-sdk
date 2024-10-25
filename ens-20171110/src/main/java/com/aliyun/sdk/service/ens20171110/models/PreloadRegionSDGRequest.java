@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreloadRegionSDGRequest} extends {@link RequestModel}
  *
  * <p>PreloadRegionSDGRequest</p>
@@ -98,7 +99,8 @@ public class PreloadRegionSDGRequest extends Request {
         } 
 
         /**
-         * The IDs of the destination nodes.
+         * <p>The IDs of the destination nodes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
             String destinationRegionIdsShrink = shrink(destinationRegionIds, "DestinationRegionIds", "json");
@@ -108,7 +110,7 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * The namespaces.
+         * <p>The namespaces.</p>
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");
@@ -118,7 +120,11 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * The number of redundant replicas to support rapid deployment.
+         * <p>The number of redundant replicas to support rapid deployment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder redundantNum(Integer redundantNum) {
             this.putQueryParameter("RedundantNum", redundantNum);
@@ -127,7 +133,11 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * The ID of the SDG for which data is preloaded.
+         * <p>The ID of the SDG for which data is preloaded.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-xxxx</p>
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

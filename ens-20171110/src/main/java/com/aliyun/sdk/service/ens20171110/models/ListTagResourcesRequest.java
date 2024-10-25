@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -96,7 +97,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token of the first page to query.
+         * <p>The token of the first page to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153ba0bbb2be03f84eb48b699f0a4123</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -105,7 +109,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of resources. Valid values of N: 1 to 50.
+         * <p>The IDs of resources. Valid values of N: 1 to 50.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -114,10 +118,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Set the value to instance.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   instance
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -126,7 +131,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -141,6 +146,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -180,12 +191,15 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the instance. Valid values of N: **1** to **20**.
-             * <p>
+             * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <ul>
+             * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+             * <li>The key must be up to 64 characters in length.</li>
+             * <li>The tag key cannot be an empty string.</li>
+             * </ul>
              * 
-             * *   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-             * *   The key must be up to 64 characters in length.
-             * *   The tag key cannot be an empty string.
+             * <strong>example:</strong>
+             * <p>team</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -193,12 +207,15 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Key** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.
-             * <p>
+             * <p>The value of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <strong>Key</strong> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
+             * <ul>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>The value of this parameter can be an empty string.</li>
+             * <li>The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+             * </ul>
              * 
-             * *   Valid values of N: 1 to 20.
-             * *   The value of this parameter can be an empty string.
-             * *   The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

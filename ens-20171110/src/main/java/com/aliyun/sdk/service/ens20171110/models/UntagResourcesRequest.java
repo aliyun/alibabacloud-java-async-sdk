@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -97,13 +98,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -112,7 +114,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can specify up to 50 resource IDs.
+         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -121,12 +124,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   instance
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -135,7 +137,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The keys of the tags. Valid values of N: 1 to 20.
+         * <p>The keys of the tags. Valid values of N: 1 to 20.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

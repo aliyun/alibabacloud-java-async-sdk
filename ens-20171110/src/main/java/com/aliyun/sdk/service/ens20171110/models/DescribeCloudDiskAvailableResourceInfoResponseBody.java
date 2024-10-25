@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudDiskAvailableResourceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudDiskAvailableResourceInfoResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         private SupportResources supportResources; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AE4F26E-7527-569F-A987-E3CF269A3C11</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         }
 
         /**
-         * The specifications of resources that you can purchase.
+         * <p>The specifications of resources that you can purchase.</p>
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -70,6 +74,12 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudDiskAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDiskAvailableResourceInfoResponseBody</p>
+     */
     public static class SupportResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanBuyCount")
         private Long canBuyCount;
@@ -169,7 +179,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             private String ensRegionName; 
 
             /**
-             * The number of disks that you can purchase.
+             * <p>The number of disks that you can purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder canBuyCount(Long canBuyCount) {
                 this.canBuyCount = canBuyCount;
@@ -177,13 +190,16 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * The type of the disk.
-             * <p>
+             * <p>The type of the disk.</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: all-flash disk.</li>
+             * <li>local_hdd: local HDD.</li>
+             * <li>local_ssd: local SSD.</li>
+             * </ul>
              * 
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: all-flash disk.
-             * *   local_hdd: local HDD.
-             * *   local_ssd: local SSD.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -191,7 +207,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * The default size of the disk. Unit: GiB.
+             * <p>The default size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder defaultDiskSize(Long defaultDiskSize) {
                 this.defaultDiskSize = defaultDiskSize;
@@ -199,7 +218,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * The maximum size of the disk. Unit: GiB.
+             * <p>The maximum size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder diskMaxSize(Long diskMaxSize) {
                 this.diskMaxSize = diskMaxSize;
@@ -207,7 +229,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * The minimum size of the disk size. Unit: GiB.
+             * <p>The minimum size of the disk size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder diskMinSize(Long diskMinSize) {
                 this.diskMinSize = diskMinSize;
@@ -215,7 +240,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the edge node.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-cmcc</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -223,7 +251,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * The name of the task node.
+             * <p>The name of the task node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing Mobile</p>
              */
             public Builder ensRegionName(String ensRegionName) {
                 this.ensRegionName = ensRegionName;
@@ -237,6 +268,12 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudDiskAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDiskAvailableResourceInfoResponseBody</p>
+     */
     public static class SupportResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportResource")
         private java.util.List < SupportResource> supportResource;

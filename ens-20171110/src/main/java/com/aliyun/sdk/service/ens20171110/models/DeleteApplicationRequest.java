@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteApplicationRequest} extends {@link RequestModel}
  *
  * <p>DeleteApplicationRequest</p>
@@ -68,7 +69,11 @@ public class DeleteApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application. To obtain the application ID, call the ListApplication operation.
+         * <p>The ID of the application. To obtain the application ID, call the ListApplication operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d0639abf-789a-4527-b420-031d2cd9ad9b</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -77,7 +82,10 @@ public class DeleteApplicationRequest extends Request {
         }
 
         /**
-         * The timeout period for the asynchronous release. Unit: seconds. Default value: 300.
+         * <p>The timeout period for the asynchronous release. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

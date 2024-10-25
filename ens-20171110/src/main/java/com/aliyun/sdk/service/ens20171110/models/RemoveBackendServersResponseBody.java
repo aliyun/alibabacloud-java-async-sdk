@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveBackendServersResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveBackendServersResponseBody</p>
@@ -49,7 +50,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of backend servers that you want to add to the SLB instance.
+         * <p>The list of backend servers that you want to add to the SLB instance.</p>
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -57,7 +58,10 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class RemoveBackendServersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveBackendServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveBackendServersResponseBody</p>
+     */
     public static class BackendServer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -145,7 +155,10 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The IP address of the backend server.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.1XX.X.X</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -153,7 +166,10 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The backend port that is used by the ELB instance.
+             * <p>The backend port that is used by the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -161,7 +177,10 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the backend server.
+             * <p>The instance ID of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5vb5h5njxiuhn48a****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -169,11 +188,14 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ens</strong>: an ENS instance.</li>
+             * <li><strong>eni</strong>: an ENI.</li>
+             * </ul>
              * 
-             * *   **ens**: an ENS instance.
-             * *   **eni**: an ENI.
+             * <strong>example:</strong>
+             * <p>ens</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -181,10 +203,13 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the backend server.
-             * <p>
+             * <p>The weight of the backend server.</p>
+             * <blockquote>
+             * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+             * </blockquote>
              * 
-             * >  The value 0 indicates that requests are not forwarded to the backend server.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -198,6 +223,12 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RemoveBackendServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveBackendServersResponseBody</p>
+     */
     public static class BackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackendServer")
         private java.util.List < BackendServer> backendServer;

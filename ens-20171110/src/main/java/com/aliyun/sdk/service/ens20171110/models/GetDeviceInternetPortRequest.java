@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceInternetPortRequest} extends {@link RequestModel}
  *
  * <p>GetDeviceInternetPortRequest</p>
@@ -83,7 +84,11 @@ public class GetDeviceInternetPortRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can specify the ID of the server or container. You can specify only one ID.
+         * <p>The ID of the instance. You can specify the ID of the server or container. You can specify only one ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5s6xbnx9srb3vm6tp9hg9o64e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,11 +97,15 @@ public class GetDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * The type of the NAT gateway. The value must be of the enumerated data type. Valid values:
-         * <p>
+         * <p>The type of the NAT gateway. The value must be of the enumerated data type. Valid values:</p>
+         * <ul>
+         * <li>SNAT</li>
+         * <li>DNAT</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   SNAT
-         * *   DNAT
+         * <strong>example:</strong>
+         * <p>DNAT</p>
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -105,7 +114,10 @@ public class GetDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * The ID of the rule. If you leave this parameter empty, all rules are queried.
+         * <p>The ID of the rule. If you leave this parameter empty, all rules are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-5ref5fc1l1xgqnpjzrtw1hw5a</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

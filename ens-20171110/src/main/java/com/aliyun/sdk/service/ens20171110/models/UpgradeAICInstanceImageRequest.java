@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeAICInstanceImageRequest} extends {@link RequestModel}
  *
  * <p>UpgradeAICInstanceImageRequest</p>
@@ -83,7 +84,11 @@ public class UpgradeAICInstanceImageRequest extends Request {
         } 
 
         /**
-         * The ID of the AIC image.
+         * <p>The ID of the AIC image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -92,7 +97,8 @@ public class UpgradeAICInstanceImageRequest extends Request {
         }
 
         /**
-         * The IDs of the servers.
+         * <p>The IDs of the servers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder serverIds(java.util.List < String > serverIds) {
             String serverIdsShrink = shrink(serverIds, "ServerIds", "json");
@@ -102,7 +108,10 @@ public class UpgradeAICInstanceImageRequest extends Request {
         }
 
         /**
-         * The timeout period of the update. Unit: seconds.
+         * <p>The timeout period of the update. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

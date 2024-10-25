@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataPushResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataPushResultRequest</p>
@@ -152,7 +153,11 @@ public class DescribeDataPushResultRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e76f8985-7965-41fc-925b-9648bb6bf650</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -161,7 +166,10 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.
+         * <p>The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>159828628258496/mirror_file/game-2553efe7-7bf8-40fb-a6e7-09c9c00a992a.tar</p>
          */
         public Builder dataNames(String dataNames) {
             this.putQueryParameter("DataNames", dataNames);
@@ -170,7 +178,10 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.
+         * <p>The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90396</p>
          */
         public Builder dataVersions(String dataVersions) {
             this.putQueryParameter("DataVersions", dataVersions);
@@ -179,7 +190,10 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
+         * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-20</p>
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -188,7 +202,10 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
+         * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-15</p>
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -197,7 +214,10 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. This parameter is optional if you want to return the push status of all data files.
+         * <p>The page number. Pages start from page 1. This parameter is optional if you want to return the push status of all data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -206,7 +226,10 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page. This parameter is optional if you want to return the push status of all data files.
+         * <p>The number of entries per page. This parameter is optional if you want to return the push status of all data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +238,10 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * The IDs of ENS nodes. Separate multiple IDs with commas (,). By default, all ENS nodes are queried.
+         * <p>The IDs of ENS nodes. Separate multiple IDs with commas (,). By default, all ENS nodes are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wuhan-telecom_unicom_cmcc-2,cn-jiaozuo-2</p>
          */
         public Builder regionIds(String regionIds) {
             this.putQueryParameter("RegionIds", regionIds);

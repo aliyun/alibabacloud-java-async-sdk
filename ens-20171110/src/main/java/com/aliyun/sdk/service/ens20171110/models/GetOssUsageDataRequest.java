@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOssUsageDataRequest} extends {@link RequestModel}
  *
  * <p>GetOssUsageDataRequest</p>
@@ -97,7 +98,10 @@ public class GetOssUsageDataRequest extends Request {
         } 
 
         /**
-         * The name of the logical Object Storage Service (OSS) bucket.
+         * <p>The name of the logical Object Storage Service (OSS) bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens-sink-bucketzyp1656903494</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -106,7 +110,11 @@ public class GetOssUsageDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.
+         * <p>The end of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-12T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -115,10 +123,11 @@ public class GetOssUsageDataRequest extends Request {
         }
 
         /**
-         * The aggregation granularity. Unit: minutes.
-         * <p>
+         * <p>The aggregation granularity. Unit: minutes.</p>
+         * <p>Default value: 5. Valid values: 5 to 1440.</p>
          * 
-         * Default value: 5. Valid values: 5 to 1440.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -127,7 +136,11 @@ public class GetOssUsageDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.
+         * <p>The beginning of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-11T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

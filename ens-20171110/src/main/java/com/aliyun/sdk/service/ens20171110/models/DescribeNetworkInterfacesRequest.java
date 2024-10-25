@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkInterfacesRequest} extends {@link RequestModel}
  *
  * <p>DescribeNetworkInterfacesRequest</p>
@@ -223,7 +224,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         } 
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-tianjin-cmcc</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -232,7 +236,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5t7z99n32gplriv</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -251,7 +258,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-2zeuphj08tt7q3brd****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -260,7 +270,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-58z57orgmt6d1****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -269,7 +282,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The name of the ENI.
+         * <p>The name of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-01</p>
          */
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
@@ -278,7 +294,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -287,7 +306,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -296,7 +318,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The primary IP address of the ENI.
+         * <p>The primary IP address of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder primaryIpAddress(String primaryIpAddress) {
             this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
@@ -305,7 +330,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the secondary ENI belongs. To query the details of secondary ENIs based on the ID of a security group, specify this parameter.
+         * <p>The ID of the security group to which the secondary ENI belongs. To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-5p1fg655nh68xyz9i***</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -314,16 +342,18 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The status of the ENI. Valid values:
-         * <p>
+         * <p>The status of the ENI. Valid values:</p>
+         * <ul>
+         * <li>Available: The ENI is available.</li>
+         * <li>Attaching: The ENI is being attached to an instance.</li>
+         * <li>InUse: The ENI is attached to an instance.</li>
+         * <li>Detaching: The ENI is being detached from an instance.</li>
+         * <li>Deleting: The ENI is being deleted.</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that ENIs in all states are queried.</p>
          * 
-         * *   Available: The ENI is available.
-         * *   Attaching: The ENI is being attached to an instance.
-         * *   InUse: The ENI is attached to an instance.
-         * *   Detaching: The ENI is being detached from an instance.
-         * *   Deleting: The ENI is being deleted.
-         * 
-         * This parameter is empty by default, which indicates that ENIs in all states are queried.
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -332,13 +362,15 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The type of the ENI. Valid values:
-         * <p>
+         * <p>The type of the ENI. Valid Values:</p>
+         * <ul>
+         * <li>Primary: primary ENI.</li>
+         * <li>Secondary: secondary ENI.</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
          * 
-         * *   Primary
-         * *   Secondary
-         * 
-         * This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.
+         * <strong>example:</strong>
+         * <p>Secondary</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -347,7 +379,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-12345</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

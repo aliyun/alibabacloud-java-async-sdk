@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDeviceInternetPortResponseBody} extends {@link TeaModel}
  *
  * <p>AddDeviceInternetPortResponseBody</p>
@@ -49,7 +50,10 @@ public class AddDeviceInternetPortResponseBody extends TeaModel {
         private java.util.List < String > ruleIds; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F9185F6-B6FA-514C-9E05-FFD5F0D7D156</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class AddDeviceInternetPortResponseBody extends TeaModel {
         }
 
         /**
-         * The list of rules.
+         * <p>The list of rules.</p>
          */
         public Builder ruleIds(java.util.List < String > ruleIds) {
             this.ruleIds = ruleIds;

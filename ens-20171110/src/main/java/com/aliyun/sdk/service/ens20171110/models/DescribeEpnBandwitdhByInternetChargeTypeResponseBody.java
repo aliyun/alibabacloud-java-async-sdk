@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEpnBandwitdhByInternetChargeTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEpnBandwitdhByInternetChargeTypeResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeEpnBandwitdhByInternetChargeTypeResponseBody extends TeaMod
         private String timeStamp; 
 
         /**
-         * The bandwidth. Unit: bit/s.
+         * <p>The bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder bandwidthValue(Long bandwidthValue) {
             this.bandwidthValue = bandwidthValue;
@@ -81,15 +85,17 @@ public class DescribeEpnBandwitdhByInternetChargeTypeResponseBody extends TeaMod
         }
 
         /**
-         * The metering method. Valid values:
-         * <p>
+         * <p>The metering method. Valid values:</p>
+         * <ul>
+         * <li>BandwidthByDay: Pay by daily peak bandwidth</li>
+         * <li>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</li>
+         * <li>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</li>
+         * <li>PayByBandwidth: Pay by fixed bandwidth</li>
+         * </ul>
+         * <p>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</p>
          * 
-         * *   BandwidthByDay: Pay by daily peak bandwidth
-         * *   95BandwidthByMonth: Pay by monthly 95th percentile bandwidth
-         * *   PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth
-         * *   PayByBandwidth: Pay by fixed bandwidth
-         * 
-         * You can specify only one metering method for network usage and cannot overwrite the existing metering method.
+         * <strong>example:</strong>
+         * <p>BandwidthByDay</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -97,7 +103,10 @@ public class DescribeEpnBandwitdhByInternetChargeTypeResponseBody extends TeaMod
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>216BCED0-E055-5DDB-8E06-4084A62A4A44</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +114,10 @@ public class DescribeEpnBandwitdhByInternetChargeTypeResponseBody extends TeaMod
         }
 
         /**
-         * The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-12T05:45:00Z</p>
          */
         public Builder timeStamp(String timeStamp) {
             this.timeStamp = timeStamp;

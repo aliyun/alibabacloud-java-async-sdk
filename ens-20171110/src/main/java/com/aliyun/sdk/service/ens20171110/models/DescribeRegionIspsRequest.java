@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionIspsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRegionIspsRequest</p>
@@ -53,7 +54,10 @@ public class DescribeRegionIspsRequest extends Request {
         } 
 
         /**
-         * The ID of the node. You can specify only one node ID in a call.
+         * <p>The ID of the node. You can specify only one node ID in a call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-dalian-unicom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

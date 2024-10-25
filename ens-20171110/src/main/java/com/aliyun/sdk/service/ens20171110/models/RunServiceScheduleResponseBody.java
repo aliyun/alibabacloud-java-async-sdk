@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunServiceScheduleResponseBody} extends {@link TeaModel}
  *
  * <p>RunServiceScheduleResponseBody</p>
@@ -121,7 +122,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         private Boolean tcpPorts; 
 
         /**
-         * The execution results of the commands.
+         * <p>The execution results of the commands.</p>
          */
         public Builder commandResults(CommandResults commandResults) {
             this.commandResults = commandResults;
@@ -129,7 +130,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The index number of the scheduled virtual device (pod).
+         * <p>The index number of the scheduled virtual device (pod).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -137,7 +141,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scheduled instance.
+         * <p>The ID of the scheduled instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5qvji3mom4ec013dyygmtxlkj</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -145,7 +152,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the scheduled instance.
+         * <p>The IP address of the scheduled instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.246.11</p>
          */
         public Builder instanceIp(String instanceIp) {
             this.instanceIp = instanceIp;
@@ -153,7 +163,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The start port of the scheduled instance.
+         * <p>The start port of the scheduled instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder instancePort(Integer instancePort) {
             this.instancePort = instancePort;
@@ -161,7 +174,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +185,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is repeated. This parameter is not returned if ServcieAction is set to Console.
+         * <p>Indicates whether the request is repeated. This parameter is not returned if ServcieAction is set to Console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder requestRepeated(String requestRepeated) {
             this.requestRepeated = requestRepeated;
@@ -177,7 +196,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.
+         * <p>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;80-88&quot;</p>
          */
         public Builder tcpPorts(Boolean tcpPorts) {
             this.tcpPorts = tcpPorts;
@@ -190,6 +212,12 @@ public class RunServiceScheduleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunServiceScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunServiceScheduleResponseBody</p>
+     */
     public static class CommandResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -241,7 +269,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             private String resultMsg; 
 
             /**
-             * The command.
+             * <p>The command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls -l /data</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -249,7 +280,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>android</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -257,7 +291,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the command.
+             * <p>The execution result of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder resultMsg(String resultMsg) {
                 this.resultMsg = resultMsg;
@@ -271,6 +308,12 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunServiceScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunServiceScheduleResponseBody</p>
+     */
     public static class CommandResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommandResult")
         private java.util.List < CommandResult> commandResult;

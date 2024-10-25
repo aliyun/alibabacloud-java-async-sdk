@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListObjectsRequest} extends {@link RequestModel}
  *
  * <p>ListObjectsRequest</p>
@@ -138,7 +139,11 @@ public class ListObjectsRequest extends Request {
         } 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -147,7 +152,10 @@ public class ListObjectsRequest extends Request {
         }
 
         /**
-         * The token used in this list operation. If the number of objects exceeds the value of MaxKeys, the NextContinuationToken is included in the response as the token for the next list operation.
+         * <p>The token used in this list operation. If the number of objects exceeds the value of MaxKeys, the NextContinuationToken is included in the response as the token for the next list operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1.txt</p>
          */
         public Builder continuationToken(String continuationToken) {
             this.putQueryParameter("ContinuationToken", continuationToken);
@@ -156,7 +164,10 @@ public class ListObjectsRequest extends Request {
         }
 
         /**
-         * The encoding type of the object names in the response. Only URL encoding is supported.
+         * <p>The encoding type of the object names in the response. Only URL encoding is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>url</p>
          */
         public Builder encodingType(String encodingType) {
             this.putQueryParameter("EncodingType", encodingType);
@@ -165,10 +176,11 @@ public class ListObjectsRequest extends Request {
         }
 
         /**
-         * The position from which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than value of Marker are returned. The Marker parameter is used to list the returned objects by page, and its value must be smaller than 1,024 bytes in length.
-         * <p>
+         * <p>The position from which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than value of Marker are returned. The Marker parameter is used to list the returned objects by page, and its value must be smaller than 1,024 bytes in length.</p>
+         * <p>Even if the value specified for Marker does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of Marker.</p>
          * 
-         * Even if the value specified for Marker does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of Marker.
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -177,7 +189,10 @@ public class ListObjectsRequest extends Request {
         }
 
         /**
-         * The maximum number of objects to return. Valid values: 0 to 1000. Default value: 100.
+         * <p>The maximum number of objects to return. Valid values: 0 to 1000. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxKeys(Long maxKeys) {
             this.putQueryParameter("MaxKeys", maxKeys);
@@ -186,10 +201,11 @@ public class ListObjectsRequest extends Request {
         }
 
         /**
-         * The prefix that must be included in the names of objects you want to list. If you specify a prefix to query objects, the returned object names contain the prefix.
-         * <p>
+         * <p>The prefix that must be included in the names of objects you want to list. If you specify a prefix to query objects, the returned object names contain the prefix.</p>
+         * <p>The value of the parameter must be less than 1,000 bytes in length.</p>
          * 
-         * The value of the parameter must be less than 1,000 bytes in length.
+         * <strong>example:</strong>
+         * <p>b</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("Prefix", prefix);
@@ -198,7 +214,10 @@ public class ListObjectsRequest extends Request {
         }
 
         /**
-         * The position from which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than the value of StartAfter are returned. The StartAfter parameter is used to list the returned objects by page, and its value must be less than 1,000 bytes in length. Even if the value specified for StartAfter does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of StartAfter.
+         * <p>The position from which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than the value of StartAfter are returned. The StartAfter parameter is used to list the returned objects by page, and its value must be less than 1,000 bytes in length. Even if the value specified for StartAfter does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of StartAfter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b</p>
          */
         public Builder startAfter(String startAfter) {
             this.putQueryParameter("StartAfter", startAfter);

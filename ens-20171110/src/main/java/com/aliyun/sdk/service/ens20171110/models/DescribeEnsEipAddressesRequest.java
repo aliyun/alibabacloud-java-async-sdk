@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsEipAddressesRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsEipAddressesRequest</p>
@@ -166,7 +167,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP that you want to query. You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).
+         * <p>The ID of the EIP that you want to query. You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-5q9uwkd9bznjpxz8hr6cirnjk</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -175,7 +179,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the instance with which you want to associate the EIP.
+         * <p>The ID of the instance with which you want to associate the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5t18quoohsrc3xkf86spmnu77</p>
          */
         public Builder associatedInstanceId(String associatedInstanceId) {
             this.putQueryParameter("AssociatedInstanceId", associatedInstanceId);
@@ -184,11 +191,14 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * The type of the instance with which you want to associate the EIP. Valid values:
-         * <p>
+         * <p>The type of the instance with which you want to associate the EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>EnsInstance</strong>: ENS instance in a VPC</li>
+         * <li><strong>SlbInstance</strong>: Edge Load Balancer (ELB) instance</li>
+         * </ul>
          * 
-         * *   **EnsInstance**: ENS instance in a VPC
-         * *   **SlbInstance**: Edge Load Balancer (ELB) instance
+         * <strong>example:</strong>
+         * <p>SlbInstance</p>
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -197,7 +207,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * The EIP that you want to query. You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).
+         * <p>The EIP that you want to query. You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         public Builder eipAddress(String eipAddress) {
             this.putQueryParameter("EipAddress", eipAddress);
@@ -206,7 +219,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * The name of the EIP.
+         * <p>The name of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder eipName(String eipName) {
             this.putQueryParameter("EipName", eipName);
@@ -215,7 +231,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the Edge Node Service (ENS) node.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -224,7 +243,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -233,7 +255,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,11 +267,14 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * Specifies whether the EIP is a secondary EIP. Valid values:
-         * <p>
+         * <p>Specifies whether the EIP is a secondary EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder standby(String standby) {
             this.putQueryParameter("Standby", standby);

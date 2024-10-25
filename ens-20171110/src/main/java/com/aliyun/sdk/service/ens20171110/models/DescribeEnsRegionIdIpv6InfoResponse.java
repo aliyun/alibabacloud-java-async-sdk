@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionIdIpv6InfoResponse} extends {@link TeaModel}
  *
  * <p>DescribeEnsRegionIdIpv6InfoResponse</p>

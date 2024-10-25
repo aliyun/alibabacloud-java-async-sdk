@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsSaleControlAvailableResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsSaleControlAvailableResourceRequest</p>
@@ -82,7 +83,7 @@ public class DescribeEnsSaleControlAvailableResourceRequest extends Request {
         } 
 
         /**
-         * CommodityCode.
+         * <p>This parameter is required.</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);

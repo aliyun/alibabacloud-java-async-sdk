@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReinitInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReinitInstanceRequest</p>
@@ -83,7 +84,11 @@ public class ReinitInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the image file that is used to reset the instance.
+         * <p>The ID of the image file that is used to reset the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5wn1dhz5syoo9b48f440ntvad</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -92,7 +97,11 @@ public class ReinitInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5vn4n3y4laeb2ii9zxxltlvzi</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -101,10 +110,11 @@ public class ReinitInstanceRequest extends Request {
         }
 
         /**
-         * The password of the instance.
-         * <p>
+         * <p>The password of the instance.</p>
+         * <p>It must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letters, lowercase letters, digits, and special characters. The following special character are supported: <code>()\&quot;~! @#$%^&amp;*-_+={}[]:;\&quot;&lt;&gt;,.?/</code></p>
          * 
-         * It must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letters, lowercase letters, digits, and special characters. The following special character are supported: `()\"~! @#$%^&*-_+={}[]:;\"<>,.?/`
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);

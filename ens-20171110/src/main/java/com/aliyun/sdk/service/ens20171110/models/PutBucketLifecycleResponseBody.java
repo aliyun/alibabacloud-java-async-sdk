@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutBucketLifecycleResponseBody} extends {@link TeaModel}
  *
  * <p>PutBucketLifecycleResponseBody</p>
@@ -49,7 +50,10 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
         private String ruleId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62373E71-5521-4620-8AAB-133CCE49357A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

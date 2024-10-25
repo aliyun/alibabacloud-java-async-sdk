@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEnsSaleConditionControlRequest} extends {@link RequestModel}
  *
  * <p>DeleteEnsSaleConditionControlRequest</p>
@@ -106,7 +107,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * <p>This parameter is required.</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -124,7 +125,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
         }
 
         /**
-         * SaleControls.
+         * <p>This parameter is required.</p>
          */
         public Builder saleControls(java.util.List < SaleControls> saleControls) {
             String saleControlsShrink = shrink(saleControls, "SaleControls", "json");
@@ -140,6 +141,12 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteEnsSaleConditionControlRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteEnsSaleConditionControlRequest</p>
+     */
     public static class ConditionControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionControlModuleCode")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -181,7 +188,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
             private String conditionControlModuleValue; 
 
             /**
-             * ConditionControlModuleCode.
+             * <p>This parameter is required.</p>
              */
             public Builder conditionControlModuleCode(String conditionControlModuleCode) {
                 this.conditionControlModuleCode = conditionControlModuleCode;
@@ -189,7 +196,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
             }
 
             /**
-             * ConditionControlModuleValue.
+             * <p>This parameter is required.</p>
              */
             public Builder conditionControlModuleValue(String conditionControlModuleValue) {
                 this.conditionControlModuleValue = conditionControlModuleValue;
@@ -203,6 +210,12 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteEnsSaleConditionControlRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteEnsSaleConditionControlRequest</p>
+     */
     public static class SaleControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionControls")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -257,7 +270,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
             private String orderType; 
 
             /**
-             * ConditionControls.
+             * <p>This parameter is required.</p>
              */
             public Builder conditionControls(java.util.List < ConditionControls> conditionControls) {
                 this.conditionControls = conditionControls;
@@ -265,7 +278,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
             }
 
             /**
-             * ModuleCode.
+             * <p>This parameter is required.</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -273,7 +286,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
             }
 
             /**
-             * OrderType.
+             * <p>This parameter is required.</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;

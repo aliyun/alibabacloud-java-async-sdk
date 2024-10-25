@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBandWithdChargeTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBandWithdChargeTypeResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the metering method.
+         * <p>The information about the metering method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;BandWidthName&quot;: &quot;Monthly peak bandwidth of 95&quot;, 			&quot;BandWidthType&quot;: &quot;95BandwidthByMonth&quot; 		}</p>
          */
         public Builder bandWithTypeInfo(String bandWithTypeInfo) {
             this.bandWithTypeInfo = bandWithTypeInfo;
@@ -93,11 +97,14 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The metering type.
-         * <p>
+         * <p>The metering type.</p>
+         * <ul>
+         * <li>ChargeByUnified: unified metering.</li>
+         * <li>ChargeByGrade: differential metering.</li>
+         * </ul>
          * 
-         * *   ChargeByUnified: unified metering.
-         * *   ChargeByGrade: differential metering.
+         * <strong>example:</strong>
+         * <p>ChargeByGrade</p>
          */
         public Builder chargeContractType(String chargeContractType) {
             this.chargeContractType = chargeContractType;
@@ -105,7 +112,10 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The metering cycle. Currently, this parameter is empty in the response.
+         * <p>The metering cycle. Currently, this parameter is empty in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{null}</p>
          */
         public Builder chargeCycleInfo(String chargeCycleInfo) {
             this.chargeCycleInfo = chargeCycleInfo;
@@ -113,7 +123,10 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned service code. A value of 0 indicates that the operation was successful.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -121,7 +134,10 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>791049FD-49CE-4667-BD6C-F23094DEDA7A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

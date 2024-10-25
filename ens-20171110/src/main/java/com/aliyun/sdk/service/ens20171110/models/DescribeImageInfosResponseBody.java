@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageInfosResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageInfosResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The information about images.
+         * <p>The information about images.</p>
          */
         public Builder images(Images images) {
             this.images = images;
@@ -77,7 +81,10 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5568A08C-10A9-47F3-902F-647298B463FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,12 +97,175 @@ public class DescribeImageInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageInfosResponseBody</p>
+     */
+    public static class DiskDeviceMapping extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private String size;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("imageId")
+        private String imageId;
+
+        private DiskDeviceMapping(Builder builder) {
+            this.format = builder.format;
+            this.size = builder.size;
+            this.type = builder.type;
+            this.imageId = builder.imageId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskDeviceMapping create() {
+            return builder().build();
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return size
+         */
+        public String getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public static final class Builder {
+            private String format; 
+            private String size; 
+            private String type; 
+            private String imageId; 
+
+            /**
+             * Format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(String size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * imageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            public DiskDeviceMapping build() {
+                return new DiskDeviceMapping(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImageInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageInfosResponseBody</p>
+     */
+    public static class DiskDeviceMappings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
+        private java.util.List < DiskDeviceMapping> diskDeviceMapping;
+
+        private DiskDeviceMappings(Builder builder) {
+            this.diskDeviceMapping = builder.diskDeviceMapping;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskDeviceMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskDeviceMapping
+         */
+        public java.util.List < DiskDeviceMapping> getDiskDeviceMapping() {
+            return this.diskDeviceMapping;
+        }
+
+        public static final class Builder {
+            private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
+
+            /**
+             * DiskDeviceMapping.
+             */
+            public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
+                this.diskDeviceMapping = diskDeviceMapping;
+                return this;
+            }
+
+            public DiskDeviceMappings build() {
+                return new DiskDeviceMappings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImageInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageInfosResponseBody</p>
+     */
     public static class Image extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComputeType")
         private String computeType;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMappings")
+        private DiskDeviceMappings diskDeviceMappings;
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -115,6 +285,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         private Image(Builder builder) {
             this.computeType = builder.computeType;
             this.description = builder.description;
+            this.diskDeviceMappings = builder.diskDeviceMappings;
             this.imageId = builder.imageId;
             this.imageSize = builder.imageSize;
             this.imageVersion = builder.imageVersion;
@@ -142,6 +313,13 @@ public class DescribeImageInfosResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return diskDeviceMappings
+         */
+        public DiskDeviceMappings getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
         }
 
         /**
@@ -182,6 +360,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         public static final class Builder {
             private String computeType; 
             private String description; 
+            private DiskDeviceMappings diskDeviceMappings; 
             private String imageId; 
             private String imageSize; 
             private String imageVersion; 
@@ -189,13 +368,16 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             private String OSType; 
 
             /**
-             * The computing type of the image. Valid values:
-             * <p>
+             * <p>The computing type of the image. Valid values:</p>
+             * <ul>
+             * <li>ens_vm: x86 computing.</li>
+             * <li>arm_vm: ARM computing.</li>
+             * <li>bare_metal: x86 bare machine.</li>
+             * <li>pcfarm: heterogeneous computing.</li>
+             * </ul>
              * 
-             * *   ens_vm: x86 computing.
-             * *   arm_vm: ARM computing.
-             * *   bare_metal: x86 bare machine.
-             * *   pcfarm: heterogeneous computing.
+             * <strong>example:</strong>
+             * <p>ens_vm</p>
              */
             public Builder computeType(String computeType) {
                 this.computeType = computeType;
@@ -203,7 +385,10 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image.
+             * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_6_08_64_20G_alibase_2017****</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -211,7 +396,18 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * DiskDeviceMappings.
+             */
+            public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
+                this.diskDeviceMappings = diskDeviceMappings;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_6_08_64_20G_alibase_2017****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -219,7 +415,10 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image. Unit: GiB.
+             * <p>The size of the image. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -227,7 +426,10 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image.
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.8</p>
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -235,7 +437,10 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image. Valid values: **centos**, **debian**, **ubuntu**, and **windows**.
+             * <p>The type of the image. Valid values: <strong>centos</strong>, <strong>debian</strong>, <strong>ubuntu</strong>, and <strong>windows</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos</p>
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -243,7 +448,10 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system.
+             * <p>The type of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -257,6 +465,12 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageInfosResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;

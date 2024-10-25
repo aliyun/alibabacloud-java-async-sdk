@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityGroupsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about security groups.
+         * <p>Details about security groups.</p>
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;
@@ -117,7 +127,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned pages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupsResponseBody</p>
+     */
     public static class SecurityGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -205,7 +224,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String securityGroupName; 
 
             /**
-             * The time when the security group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.
+             * <p>The time when the security group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-01T06:08:46Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -213,7 +235,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the security group.
+             * <p>The description of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -221,7 +246,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of associated instances.
+             * <p>The number of associated instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -229,7 +257,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp67acfmxazb4ph***</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -237,7 +268,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security group.
+             * <p>The name of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DocTest</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -251,6 +285,12 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupsResponseBody</p>
+     */
     public static class SecurityGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroup")
         private java.util.List < SecurityGroup> securityGroup;

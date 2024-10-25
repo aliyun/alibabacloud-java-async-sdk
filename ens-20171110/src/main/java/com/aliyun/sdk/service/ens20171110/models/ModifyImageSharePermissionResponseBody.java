@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageSharePermissionResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyImageSharePermissionResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyImageSharePermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>701B3BB9-9190-544D-90D1-328B0527380C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

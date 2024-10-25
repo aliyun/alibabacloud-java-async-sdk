@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecurityGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSecurityGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateSecurityGroupResponseBody extends TeaModel {
         private String securityGroupId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>760bad53276431c499e30dc36f6b26be</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1fg655nh68xyz9i***</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;

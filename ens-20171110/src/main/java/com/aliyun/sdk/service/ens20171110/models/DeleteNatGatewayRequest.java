@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNatGatewayRequest} extends {@link RequestModel}
  *
  * <p>DeleteNatGatewayRequest</p>
@@ -54,7 +55,11 @@ public class DeleteNatGatewayRequest extends Request {
         } 
 
         /**
-         * The ID of the NAT gateway that you want to delete.
+         * <p>The ID of the NAT gateway that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

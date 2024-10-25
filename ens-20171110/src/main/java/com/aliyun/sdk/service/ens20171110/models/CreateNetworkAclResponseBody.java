@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkAclResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNetworkAclResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the network ACL.
+         * <p>The ID of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-5p1fg655nh68xyz9i****</p>
          */
         public Builder networkAclId(String networkAclId) {
             this.networkAclId = networkAclId;
@@ -57,7 +61,10 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

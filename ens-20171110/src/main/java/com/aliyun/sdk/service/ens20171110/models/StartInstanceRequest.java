@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartInstanceRequest} extends {@link RequestModel}
  *
  * <p>StartInstanceRequest</p>
@@ -54,7 +55,11 @@ public class StartInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can start only one instance.
+         * <p>The ID of the instance. You can start only one instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-instance****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

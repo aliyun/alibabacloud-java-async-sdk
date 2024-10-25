@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStorageGatewayRequest} extends {@link RequestModel}
  *
  * <p>CreateStorageGatewayRequest</p>
@@ -54,7 +55,8 @@ public class CreateStorageGatewayRequest extends Request {
         } 
 
         /**
-         * The array of orders.
+         * <p>The array of orders.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder orderDetails(java.util.List < OrderDetails> orderDetails) {
             String orderDetailsShrink = shrink(orderDetails, "OrderDetails", "json");
@@ -70,6 +72,12 @@ public class CreateStorageGatewayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateStorageGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStorageGatewayRequest</p>
+     */
     public static class OrderDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -148,7 +156,10 @@ public class CreateStorageGatewayRequest extends Request {
             private String vpcId; 
 
             /**
-             * The description of the gateway. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+             * <p>The description of the gateway. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -156,7 +167,11 @@ public class CreateStorageGatewayRequest extends Request {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen-3</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -164,7 +179,10 @@ public class CreateStorageGatewayRequest extends Request {
             }
 
             /**
-             * The name of the gateway. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (.), underscores (\_), and hyphens (-).
+             * <p>The name of the gateway. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (.), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGatewayName</p>
              */
             public Builder gatewayName(String gatewayName) {
                 this.gatewayName = gatewayName;
@@ -172,7 +190,11 @@ public class CreateStorageGatewayRequest extends Request {
             }
 
             /**
-             * The type of the gateway. Set this parameter to **1**. **1** indicates iSCSI.
+             * <p>The type of the gateway. Set this parameter to <strong>1</strong>. <strong>1</strong> indicates iSCSI.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -180,7 +202,11 @@ public class CreateStorageGatewayRequest extends Request {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-123</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

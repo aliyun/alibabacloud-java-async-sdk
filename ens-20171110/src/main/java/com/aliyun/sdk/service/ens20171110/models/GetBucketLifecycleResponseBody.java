@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBucketLifecycleResponseBody} extends {@link TeaModel}
  *
  * <p>GetBucketLifecycleResponseBody</p>
@@ -49,7 +50,10 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
         private java.util.List < Rule> rule; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2583E8B-B930-4F59-ADC0-0E209A90C46E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information about the rule.
+         * <p>The detailed information about the rule.</p>
          */
         public Builder rule(java.util.List < Rule> rule) {
             this.rule = rule;
@@ -70,6 +74,12 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBucketLifecycleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBucketLifecycleResponseBody</p>
+     */
     public static class Expiration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedBeforeDate")
         private String createdBeforeDate;
@@ -109,7 +119,10 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             private String days; 
 
             /**
-             * The expiration date.
+             * <p>The expiration date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyy-MM-DDThh:mm:ssZ</p>
              */
             public Builder createdBeforeDate(String createdBeforeDate) {
                 this.createdBeforeDate = createdBeforeDate;
@@ -117,7 +130,10 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period, in days.
+             * <p>The validity period, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder days(String days) {
                 this.days = days;
@@ -131,6 +147,12 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBucketLifecycleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBucketLifecycleResponseBody</p>
+     */
     public static class Rule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expiration")
         private Expiration expiration;
@@ -194,7 +216,7 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The expiration time.
+             * <p>The expiration time.</p>
              */
             public Builder expiration(Expiration expiration) {
                 this.expiration = expiration;
@@ -202,7 +224,10 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the rule.
+             * <p>The unique ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -210,7 +235,10 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix that is applied to the rule.
+             * <p>The prefix that is applied to the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image</p>
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -218,11 +246,14 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: The rule is periodically executed.</li>
+             * <li><strong>Disabled</strong>: The rule is ignored.</li>
+             * </ul>
              * 
-             * *   **Enabled**: The rule is periodically executed.
-             * *   **Disabled**: The rule is ignored.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

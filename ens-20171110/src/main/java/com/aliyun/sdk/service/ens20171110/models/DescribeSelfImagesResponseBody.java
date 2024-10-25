@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSelfImagesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSelfImagesResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The image information.
+         * <p>The image information.</p>
          */
         public Builder images(Images images) {
             this.images = images;
@@ -77,7 +81,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8B8EB73-B4FD-4262-8EF6-680DF39C9BA0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,166 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSelfImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSelfImagesResponseBody</p>
+     */
+    public static class DiskDeviceMapping extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private String size;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("imageId")
+        private String imageId;
+
+        private DiskDeviceMapping(Builder builder) {
+            this.format = builder.format;
+            this.size = builder.size;
+            this.type = builder.type;
+            this.imageId = builder.imageId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskDeviceMapping create() {
+            return builder().build();
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return size
+         */
+        public String getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public static final class Builder {
+            private String format; 
+            private String size; 
+            private String type; 
+            private String imageId; 
+
+            /**
+             * Format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(String size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * imageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            public DiskDeviceMapping build() {
+                return new DiskDeviceMapping(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSelfImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSelfImagesResponseBody</p>
+     */
+    public static class DiskDeviceMappings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
+        private java.util.List < DiskDeviceMapping> diskDeviceMapping;
+
+        private DiskDeviceMappings(Builder builder) {
+            this.diskDeviceMapping = builder.diskDeviceMapping;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskDeviceMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskDeviceMapping
+         */
+        public java.util.List < DiskDeviceMapping> getDiskDeviceMapping() {
+            return this.diskDeviceMapping;
+        }
+
+        public static final class Builder {
+            private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
+
+            /**
+             * DiskDeviceMapping.
+             */
+            public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
+                this.diskDeviceMapping = diskDeviceMapping;
+                return this;
+            }
+
+            public DiskDeviceMappings build() {
+                return new DiskDeviceMappings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSelfImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSelfImagesResponseBody</p>
+     */
     public static class Image extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -99,6 +266,9 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
+
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMappings")
+        private DiskDeviceMappings diskDeviceMappings;
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -134,6 +304,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             this.architecture = builder.architecture;
             this.computeType = builder.computeType;
             this.creationTime = builder.creationTime;
+            this.diskDeviceMappings = builder.diskDeviceMappings;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.imageOwnerAlias = builder.imageOwnerAlias;
@@ -173,6 +344,13 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return diskDeviceMappings
+         */
+        public DiskDeviceMappings getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
         }
 
         /**
@@ -249,6 +427,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             private String architecture; 
             private String computeType; 
             private String creationTime; 
+            private DiskDeviceMappings diskDeviceMappings; 
             private String imageId; 
             private String imageName; 
             private String imageOwnerAlias; 
@@ -261,11 +440,14 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The image architecture. Valid values:
-             * <p>
+             * <p>The image architecture. Valid values:</p>
+             * <ul>
+             * <li>i386</li>
+             * <li>x86_64</li>
+             * </ul>
              * 
-             * *   i386
-             * *   x86\_64
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -273,7 +455,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Computing type. ens_vm/ens: x86 computing. bare_metal: x86 bare machine or x86 bare metal. arm_vm: ARM computing. arm_bare_metal: ARM bare machine or ARM bare metal. pcfarm: heterogeneous computing.
+             * <p>Computing type. ens_vm/ens: x86 computing. bare_metal: x86 bare machine or x86 bare metal. arm_vm: ARM computing. arm_bare_metal: ARM bare machine or ARM bare metal. pcfarm: heterogeneous computing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens_vm</p>
              */
             public Builder computeType(String computeType) {
                 this.computeType = computeType;
@@ -281,7 +466,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The image creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The image creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-08T12:10:03Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -289,7 +477,18 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * DiskDeviceMappings.
+             */
+            public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
+                this.diskDeviceMappings = diskDeviceMappings;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_6_08_64_20G_a****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -297,7 +496,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_6_08_64_20G_a****</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -305,11 +507,14 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the image. Valid values:
-             * <p>
+             * <p>The source of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>others</strong>: a custom image that is shared by other Alibaba Cloud accounts.</li>
+             * <li><strong>self</strong>: your own custom image.</li>
+             * </ul>
              * 
-             * *   **others**: a custom image that is shared by other Alibaba Cloud accounts.
-             * *   **self**: your own custom image.
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -317,7 +522,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image. Unit: GiB.
+             * <p>The size of the image. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -325,7 +533,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageStorageSize.
+             * <p>The size of the image storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder imageStorageSize(String imageStorageSize) {
                 this.imageStorageSize = imageStorageSize;
@@ -333,7 +544,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5iqczfxps7csjrxeca****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -341,7 +555,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system version.
+             * <p>The operating system version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.2</p>
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -349,15 +566,18 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The platform.
-             * <p>
+             * <p>The platform.</p>
+             * <ul>
+             * <li>centos</li>
+             * <li>ubuntu</li>
+             * <li>alios</li>
+             * <li>debian</li>
+             * <li>rhel</li>
+             * <li>windows</li>
+             * </ul>
              * 
-             * *   centos
-             * *   ubuntu
-             * *   alios
-             * *   debian
-             * *   rhel
-             * *   windows
+             * <strong>example:</strong>
+             * <p>centos</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -365,7 +585,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot ID.
+             * <p>The snapshot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-5yt3bdedxzdz6t6uuw****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -373,17 +596,20 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the image.
-             * <p>
+             * <p>The state of the image.</p>
+             * <ul>
+             * <li>Creating.</li>
+             * <li>Packing.</li>
+             * <li>Uploading.</li>
+             * <li>Pack_failed.</li>
+             * <li>Upload_failed.</li>
+             * <li>Available: Only images in the Available state can be used and operated.</li>
+             * <li>Unavailable.</li>
+             * <li>Copying.</li>
+             * </ul>
              * 
-             * *   Creating.
-             * *   Packing.
-             * *   Uploading.
-             * *   Pack_failed.
-             * *   Upload_failed.
-             * *   Available: Only images in the Available state can be used and operated.
-             * *   Unavailable.
-             * *   Copying.
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -397,6 +623,12 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSelfImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSelfImagesResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;

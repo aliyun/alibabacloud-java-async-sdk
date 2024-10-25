@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsResourceUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsResourceUsageResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The resource usage data.
+         * <p>The resource usage data.</p>
          */
         public Builder ensResourceUsage(java.util.List < EnsResourceUsage> ensResourceUsage) {
             this.ensResourceUsage = ensResourceUsage;
@@ -57,7 +58,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E	 Request ID.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsResourceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsResourceUsageResponseBody</p>
+     */
     public static class EnsResourceUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComputeResourceCount")
         private Integer computeResourceCount;
@@ -217,7 +227,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             private Long storageSum; 
 
             /**
-             * The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.
+             * <p>The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder computeResourceCount(Integer computeResourceCount) {
                 this.computeResourceCount = computeResourceCount;
@@ -225,7 +238,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU usage. Unit: cores.
+             * <p>The CPU usage. Unit: cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpuSum(Long cpuSum) {
                 this.cpuSum = cpuSum;
@@ -233,7 +249,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data disks.
+             * <p>The number of data disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder diskCount(Integer diskCount) {
                 this.diskCount = diskCount;
@@ -241,7 +260,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stopped VMs.
+             * <p>The number of stopped VMs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder downCount(Integer downCount) {
                 this.downCount = downCount;
@@ -249,7 +271,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of expired VM instances.
+             * <p>The number of expired VM instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder expiredCount(Integer expiredCount) {
                 this.expiredCount = expiredCount;
@@ -257,7 +282,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of VM instances that are about to expire.
+             * <p>The number of VM instances that are about to expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expiringCount(Integer expiringCount) {
                 this.expiringCount = expiringCount;
@@ -265,7 +293,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of GPUs.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder gpuSum(Long gpuSum) {
                 this.gpuSum = gpuSum;
@@ -273,7 +304,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -281,7 +315,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running instances.
+             * <p>The number of running instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder runningCount(Integer runningCount) {
                 this.runningCount = runningCount;
@@ -289,12 +326,15 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service. Valid values:
-             * <p>
+             * <p>The type of the service. Valid values:</p>
+             * <ul>
+             * <li>1: subscription instance.</li>
+             * <li>2: edge service instance.</li>
+             * <li>3: pay-as-you-go instance.</li>
+             * </ul>
              * 
-             * *   1: subscription instance.
-             * *   2: edge service instance.
-             * *   3: pay-as-you-go instance.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -302,7 +342,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The total disk size.
+             * <p>The total disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder storageSum(Long storageSum) {
                 this.storageSum = storageSum;

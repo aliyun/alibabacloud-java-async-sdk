@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociateHaVipRequest} extends {@link RequestModel}
  *
  * <p>UnassociateHaVipRequest</p>
@@ -69,7 +70,11 @@ public class UnassociateHaVipRequest extends Request {
         } 
 
         /**
-         * HaVipId.
+         * <p>The ID of the HAVIP that you want to disassociate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>havip-5p14t****</p>
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -78,7 +83,11 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the ENS instance or ENI that you want to disassociate from the HAVIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5ecpqvk****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

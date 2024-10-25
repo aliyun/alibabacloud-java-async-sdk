@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DistApplicationDataResponseBody} extends {@link TeaModel}
  *
  * <p>DistApplicationDataResponseBody</p>
@@ -73,7 +74,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of ENS instance IDs.
+         * <p>The list of ENS instance IDs.</p>
          */
         public Builder distInstanceIds(DistInstanceIds distInstanceIds) {
             this.distInstanceIds = distInstanceIds;
@@ -81,7 +82,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of ENS instance IDs.
+         * <p>The total number of ENS instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder distInstanceTotalCount(Integer distInstanceTotalCount) {
             this.distInstanceTotalCount = distInstanceTotalCount;
@@ -89,7 +93,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * The distribution result of the data file.
+         * <p>The distribution result of the data file.</p>
          */
         public Builder distResults(DistResults distResults) {
             this.distResults = distResults;
@@ -97,7 +101,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +117,12 @@ public class DistApplicationDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DistApplicationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DistApplicationDataResponseBody</p>
+     */
     public static class DistInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistInstanceId")
         private java.util.List < String > distInstanceId;
@@ -151,6 +164,12 @@ public class DistApplicationDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DistApplicationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DistApplicationDataResponseBody</p>
+     */
     public static class DistResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -214,7 +233,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the data file.
+             * <p>The name of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gcs-prod-websocket-eip-unicom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +244,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * The error code. The value is of the enumerated data type.
+             * <p>The error code. The value is of the enumerated data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder resultCode(Integer resultCode) {
                 this.resultCode = resultCode;
@@ -230,7 +255,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the distribution result.
+             * <p>The description of the distribution result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder resultDescrip(String resultDescrip) {
                 this.resultDescrip = resultDescrip;
@@ -238,7 +266,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the data file.
+             * <p>The version number of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -252,6 +283,12 @@ public class DistApplicationDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DistApplicationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DistApplicationDataResponseBody</p>
+     */
     public static class DistResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistResult")
         private java.util.List < DistResult> distResult;

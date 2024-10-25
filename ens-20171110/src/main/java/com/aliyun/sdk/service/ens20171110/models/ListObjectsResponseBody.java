@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListObjectsResponseBody} extends {@link TeaModel}
  *
  * <p>ListObjectsResponseBody</p>
@@ -193,7 +194,10 @@ public class ListObjectsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -201,7 +205,7 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * If the delimiter parameter is specified in the request, the response contains CommonPrefixes. Objects whose names contain the same string from the prefix to the next occurrence of the delimiter are grouped as a single result element in CommonPrefixes.
+         * <p>If the delimiter parameter is specified in the request, the response contains CommonPrefixes. Objects whose names contain the same string from the prefix to the next occurrence of the delimiter are grouped as a single result element in CommonPrefixes.</p>
          */
         public Builder commonPrefixes(java.util.List < String > commonPrefixes) {
             this.commonPrefixes = commonPrefixes;
@@ -209,7 +213,7 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of object metadata.
+         * <p>The list of object metadata.</p>
          */
         public Builder contents(java.util.List < Contents> contents) {
             this.contents = contents;
@@ -217,7 +221,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The token used in this list operation.
+         * <p>The token used in this list operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1.txt</p>
          */
         public Builder continuationToken(String continuationToken) {
             this.continuationToken = continuationToken;
@@ -225,7 +232,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The character used to group objects by name.
+         * <p>The character used to group objects by name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder delimiter(String delimiter) {
             this.delimiter = delimiter;
@@ -233,7 +243,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The encoding type of the object names in the response.
+         * <p>The encoding type of the object names in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder encodingType(String encodingType) {
             this.encodingType = encodingType;
@@ -241,11 +254,14 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the listed objects are truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the listed objects are truncated. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -253,7 +269,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of keys returned for this request.
+         * <p>The number of keys returned for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder keyCount(Long keyCount) {
             this.keyCount = keyCount;
@@ -261,7 +280,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The position from which the list operation starts.
+         * <p>The position from which the list operation starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceshi.txt1617853707991</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -269,7 +291,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of objects returned.
+         * <p>The maximum number of objects returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxKeys(Long maxKeys) {
             this.maxKeys = maxKeys;
@@ -277,7 +302,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The token used in the next list operation.
+         * <p>The token used in the next list operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CgJiYw--</p>
          */
         public Builder nextContinuationToken(String nextContinuationToken) {
             this.nextContinuationToken = nextContinuationToken;
@@ -285,7 +313,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The position from which the next list operation starts.
+         * <p>The position from which the next list operation starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceshi.txt1617853707991</p>
          */
         public Builder nextMarker(String nextMarker) {
             this.nextMarker = nextMarker;
@@ -293,7 +324,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The prefix contained in the names of returned objects.
+         * <p>The prefix contained in the names of returned objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b</p>
          */
         public Builder prefix(String prefix) {
             this.prefix = prefix;
@@ -301,7 +335,10 @@ public class ListObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4833C4AC-9396-458C-8F25-1D701334E560</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -314,6 +351,12 @@ public class ListObjectsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListObjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListObjectsResponseBody</p>
+     */
     public static class Contents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ETag")
         private String eTag;
@@ -377,12 +420,15 @@ public class ListObjectsResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * The entity tag (ETag). When an object is created, an ETag is created to identify the content of the object.
-             * <p>
+             * <p>The entity tag (ETag). When an object is created, an ETag is created to identify the content of the object.</p>
+             * <ul>
+             * <li>For an object that is created by calling the PutObject operation, the ETag value of the object is the MD5 hash of the object content.</li>
+             * <li>For an object that is not created by calling the PutObject operation, the ETag value of the object is the UUID of the object content.</li>
+             * <li>The ETag of an object can be used to check whether the object content is modified. However, we recommend that you use the MD5 hash of an object rather than the ETag value of the object to verify data integrity.</li>
+             * </ul>
              * 
-             * *   For an object that is created by calling the PutObject operation, the ETag value of the object is the MD5 hash of the object content.
-             * *   For an object that is not created by calling the PutObject operation, the ETag value of the object is the UUID of the object content.
-             * *   The ETag of an object can be used to check whether the object content is modified. However, we recommend that you use the MD5 hash of an object rather than the ETag value of the object to verify data integrity.
+             * <strong>example:</strong>
+             * <p>5B3C1A2E053D763E1B002CC607C5****</p>
              */
             public Builder eTag(String eTag) {
                 this.eTag = eTag;
@@ -390,7 +436,10 @@ public class ListObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object.
+             * <p>The name of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ceshi.txt1617853706546</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -398,7 +447,10 @@ public class ListObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the object was last modified.
+             * <p>The time when the object was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-08T03:48:47.488Z</p>
              */
             public Builder lastModified(String lastModified) {
                 this.lastModified = lastModified;
@@ -406,7 +458,10 @@ public class ListObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the returned object. Unit: bytes.
+             * <p>The size of the returned object. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder size(Long size) {
                 this.size = size;

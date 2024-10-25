@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDiskResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDiskResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned service code. 0 indicates that the request was successful.
+         * <p>The returned service code. 0 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -57,7 +61,10 @@ public class DeleteDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ABEEB76-1976-55AB-B884-3D65CA6A4743</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

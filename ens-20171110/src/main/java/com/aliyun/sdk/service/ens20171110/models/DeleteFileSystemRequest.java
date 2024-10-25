@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileSystemRequest} extends {@link RequestModel}
  *
  * <p>DeleteFileSystemRequest</p>
@@ -69,7 +70,11 @@ public class DeleteFileSystemRequest extends Request {
         } 
 
         /**
-         * The ID of the edge node.
+         * <p>The ID of the edge node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom-4</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -78,7 +83,11 @@ public class DeleteFileSystemRequest extends Request {
         }
 
         /**
-         * The ID of the file system that you want to delete.
+         * <p>The ID of the file system that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e42640****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerUDPListenerAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeLoadBalancerUDPListenerAttributeRequest</p>
@@ -69,7 +70,11 @@ public class DescribeLoadBalancerUDPListenerAttributeRequest extends Request {
         } 
 
         /**
-         * The listening port that you want to query. Valid values: **1** to **65535**.
+         * <p>The listening port that you want to query. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -78,7 +83,11 @@ public class DescribeLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the ELB instance.
+         * <p>The ID of the ELB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5pzipr2fszqtl2xf64uy5****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);

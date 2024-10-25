@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEpnInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeEpnInstanceAttributeRequest</p>
@@ -54,7 +55,11 @@ public class DescribeEpnInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the EPN instance.
+         * <p>The ID of the EPN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-xxxx</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);

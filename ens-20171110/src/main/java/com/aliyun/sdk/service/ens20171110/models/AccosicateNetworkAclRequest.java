@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AccosicateNetworkAclRequest} extends {@link RequestModel}
  *
  * <p>AccosicateNetworkAclRequest</p>
@@ -69,7 +70,11 @@ public class AccosicateNetworkAclRequest extends Request {
         } 
 
         /**
-         * The ID of the network ACL.
+         * <p>The ID of the network ACL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-a2do9e413e0sp****</p>
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -78,7 +83,8 @@ public class AccosicateNetworkAclRequest extends Request {
         }
 
         /**
-         * The information about the resources with which you want to associate the network ACL.
+         * <p>The type of resource with which you want to associate the network ACL.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resource(java.util.List < Resource> resource) {
             this.putQueryParameter("Resource", resource);
@@ -93,6 +99,12 @@ public class AccosicateNetworkAclRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AccosicateNetworkAclRequest} extends {@link TeaModel}
+     *
+     * <p>AccosicateNetworkAclRequest</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -134,7 +146,11 @@ public class AccosicateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * The ID of the resource with which you want to associate the network ACL.
+             * <p>The ID of the associated resource.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-5****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -142,10 +158,12 @@ public class AccosicateNetworkAclRequest extends Request {
             }
 
             /**
-             * The type of resource with which you want to associate the network ACL. Set the value to **Network**.
-             * <p>
+             * <p>The type of the associated resource. Set the value to <strong>Network</strong>.</p>
+             * <p>Valid values of <strong>N</strong>: 0 to 29. You can associate a network ACL with at most 30 resources.</p>
+             * <p>This parameter is required.</p>
              * 
-             * ****
+             * <strong>example:</strong>
+             * <p>Network</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

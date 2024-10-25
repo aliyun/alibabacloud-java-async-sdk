@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKeyPairRequest} extends {@link RequestModel}
  *
  * <p>CreateKeyPairRequest</p>
@@ -54,11 +55,15 @@ public class CreateKeyPairRequest extends Request {
         } 
 
         /**
-         * The name of the key pair. The name must conform to the following naming conventions:
-         * <p>
+         * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * <li>It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-         * *   It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>TestKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);

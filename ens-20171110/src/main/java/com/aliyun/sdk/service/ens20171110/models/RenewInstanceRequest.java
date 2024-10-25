@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewInstanceRequest</p>
@@ -69,7 +70,11 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-56789acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +83,11 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The renewal duration of the subscription instance.
+         * <p>The renewal duration of the subscription instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

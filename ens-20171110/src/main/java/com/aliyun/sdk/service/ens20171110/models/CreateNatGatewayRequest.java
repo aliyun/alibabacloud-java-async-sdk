@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatGatewayRequest} extends {@link RequestModel}
  *
  * <p>CreateNatGatewayRequest</p>
@@ -31,6 +32,10 @@ public class CreateNatGatewayRequest extends Request {
     private String networkId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -41,6 +46,7 @@ public class CreateNatGatewayRequest extends Request {
         this.instanceType = builder.instanceType;
         this.name = builder.name;
         this.networkId = builder.networkId;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
     }
 
@@ -86,6 +92,13 @@ public class CreateNatGatewayRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -97,6 +110,7 @@ public class CreateNatGatewayRequest extends Request {
         private String instanceType; 
         private String name; 
         private String networkId; 
+        private java.util.List < Tag> tag; 
         private String vSwitchId; 
 
         private Builder() {
@@ -109,11 +123,16 @@ public class CreateNatGatewayRequest extends Request {
             this.instanceType = request.instanceType;
             this.name = request.name;
             this.networkId = request.networkId;
+            this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
         } 
 
         /**
-         * The ID of the Edge Node Service (ENS) node.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-suzhou-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -122,7 +141,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The instance type of the NAT gateway. Set the value to **enat.default**.
+         * <p>The instance type of the NAT gateway. Set the value to <strong>enat.default</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enat.default</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -131,7 +153,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The name of the NAT gateway. The name must be 1 to 128 characters in length. The name cannot start with `http://` or `https://`.
+         * <p>The name of the NAT gateway. The name must be 1 to 128 characters in length. The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -140,7 +165,11 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5qj7ykuxmjn7k96l090sp****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -149,7 +178,20 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5savh5ngxh8sbj14bu7n****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -164,4 +206,71 @@ public class CreateNatGatewayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNatGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

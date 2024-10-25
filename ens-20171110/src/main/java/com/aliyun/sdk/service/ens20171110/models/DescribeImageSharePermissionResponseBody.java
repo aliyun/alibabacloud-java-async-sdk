@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageSharePermissionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageSharePermissionResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The account information.
+         * <p>The account information.</p>
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -105,7 +106,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5qkf6jv9a0tzd5ipwx5fi****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -113,7 +117,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +128,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A44EE357-6174-5E37-A801-48F5790F9ACE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of Alibaba Cloud accounts with which you share the image.
+         * <p>The total number of Alibaba Cloud accounts with which you share the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageSharePermissionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSharePermissionResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
         private java.util.List < String > account;

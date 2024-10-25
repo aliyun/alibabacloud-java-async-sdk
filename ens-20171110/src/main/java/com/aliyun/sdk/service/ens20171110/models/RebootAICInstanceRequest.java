@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootAICInstanceRequest} extends {@link RequestModel}
  *
  * <p>RebootAICInstanceRequest</p>
@@ -81,7 +82,10 @@ public class RebootAICInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the AIC instance.
+         * <p>The ID of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic-instance****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -90,7 +94,7 @@ public class RebootAICInstanceRequest extends Request {
         }
 
         /**
-         * The IDs of the AIC instance groups.
+         * <p>The IDs of the AIC instance groups.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -100,7 +104,10 @@ public class RebootAICInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the server.
+         * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-instance****</p>
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);

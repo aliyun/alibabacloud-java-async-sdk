@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBucketResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteBucketResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteBucketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2180AB96-57CF-1C68-9FEE-D60E547FD79C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

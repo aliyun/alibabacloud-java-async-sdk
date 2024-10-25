@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStorageVolumeRequest} extends {@link RequestModel}
  *
  * <p>DeleteStorageVolumeRequest</p>
@@ -54,7 +55,11 @@ public class DeleteStorageVolumeRequest extends Request {
         } 
 
         /**
-         * The ID of the volume.
+         * <p>The ID of the volume.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sv-***</p>
          */
         public Builder volumeId(String volumeId) {
             this.putQueryParameter("VolumeId", volumeId);

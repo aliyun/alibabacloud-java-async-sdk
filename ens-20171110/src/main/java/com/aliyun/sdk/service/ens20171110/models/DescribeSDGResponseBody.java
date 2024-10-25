@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSDGResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSDGResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSDGResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the SDGs.
+         * <p>The information about the SDGs.</p>
          */
         public Builder SDGs(java.util.List < SDGs> SDGs) {
             this.SDGs = SDGs;
@@ -117,7 +127,10 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSDGResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSDGResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSDGResponseBody</p>
+     */
     public static class AvaliableRegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -193,7 +212,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the SDG was created on the node.
+             * <p>The time when the SDG was created on the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-27 15:13:26</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -201,7 +223,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-26</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -209,7 +234,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * <p>The ID of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-517qu0tgznrg622he7nf4wd7n</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -217,14 +245,17 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SDG on the node. Valid values:
-             * <p>
+             * <p>The status of the SDG on the node. Valid values:</p>
+             * <ul>
+             * <li><strong>sdg_making</strong></li>
+             * <li><strong>sdg_saving</strong></li>
+             * <li><strong>sdg_copying</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>success</strong></li>
+             * </ul>
              * 
-             * *   **sdg_making**
-             * *   **sdg_saving**
-             * *   **sdg_copying**
-             * *   **failed**
-             * *   **success**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,6 +269,12 @@ public class DescribeSDGResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSDGResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSDGResponseBody</p>
+     */
     public static class PreloadInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -313,7 +350,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the SDG was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the SDG was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-16T06:18:40Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -321,7 +361,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-20000</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -329,7 +372,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The number of redundant replicas to quickly respond to shared mounts.
+             * <p>The number of redundant replicas to quickly respond to shared mounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder redundantNum(Integer redundantNum) {
                 this.redundantNum = redundantNum;
@@ -337,7 +383,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -345,7 +394,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the status was last updated.
+             * <p>The time when the status was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-22T08:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -359,6 +411,12 @@ public class DescribeSDGResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSDGResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSDGResponseBody</p>
+     */
     public static class SDGs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvaliableRegionIds")
         private java.util.List < AvaliableRegionIds> avaliableRegionIds;
@@ -506,7 +564,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * SDGs that have snapshots.
+             * <p>SDGs that have snapshots.</p>
              */
             public Builder avaliableRegionIds(java.util.List < AvaliableRegionIds> avaliableRegionIds) {
                 this.avaliableRegionIds = avaliableRegionIds;
@@ -514,7 +572,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance on which the SDG is created.
+             * <p>The ID of the instance on which the SDG is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic-5x20dyeos****</p>
              */
             public Builder creationInstanceId(String creationInstanceId) {
                 this.creationInstanceId = creationInstanceId;
@@ -522,7 +583,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node on which the SDG is created.
+             * <p>The ID of the node on which the SDG is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-26</p>
              */
             public Builder creationRegionId(String creationRegionId) {
                 this.creationRegionId = creationRegionId;
@@ -530,7 +594,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the first SDG in the node was created.
+             * <p>The time when the first SDG in the node was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-27 15:07:21</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -538,7 +605,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the SDG.
+             * <p>The description of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Testing SDGs</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -546,7 +616,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the **FromSDGId** parameter that you need to specify when you call the [CreateSDG](~~608128~~) operation.
+             * <p>The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the <strong>FromSDGId</strong> parameter that you need to specify when you call the <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdg-xxxxx</p>
              */
             public Builder parentSDGId(String parentSDGId) {
                 this.parentSDGId = parentSDGId;
@@ -554,7 +627,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The preload information.
+             * <p>The preload information.</p>
              */
             public Builder preloadInfos(java.util.List < PreloadInfos> preloadInfos) {
                 this.preloadInfos = preloadInfos;
@@ -562,7 +635,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SDG.
+             * <p>The ID of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdg-30e1fdba7196bc****</p>
              */
             public Builder SDGId(String SDGId) {
                 this.SDGId = SDGId;
@@ -570,7 +646,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the SDG. Unit: GB.
+             * <p>The size of the SDG. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -578,13 +657,16 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SDG creation. Valid values:
-             * <p>
+             * <p>The status of the SDG creation. Valid values:</p>
+             * <ul>
+             * <li><strong>sdg_making</strong></li>
+             * <li><strong>sdg_saving</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>success</strong></li>
+             * </ul>
              * 
-             * *   **sdg_making**
-             * *   **sdg_saving**
-             * *   **failed**
-             * *   **success**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -592,7 +674,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SDG was last updated.
+             * <p>The time when the SDG was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-27 16:04:39</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

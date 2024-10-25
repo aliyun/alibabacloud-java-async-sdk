@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExportImageInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeExportImageInfoRequest</p>
@@ -96,7 +97,10 @@ public class DescribeExportImageInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-xxxxx</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -105,7 +109,10 @@ public class DescribeExportImageInfoRequest extends Request {
         }
 
         /**
-         * The name of the image.
+         * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImageName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -114,7 +121,10 @@ public class DescribeExportImageInfoRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +133,10 @@ public class DescribeExportImageInfoRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JoinVSwitchesToEpnInstanceRequest} extends {@link RequestModel}
  *
  * <p>JoinVSwitchesToEpnInstanceRequest</p>
@@ -69,7 +70,11 @@ public class JoinVSwitchesToEpnInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the edge network instance.
+         * <p>The ID of the edge network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-xxxx</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -78,7 +83,11 @@ public class JoinVSwitchesToEpnInstanceRequest extends Request {
         }
 
         /**
-         * The information about the internal networking to which you want to add the edge network instance.
+         * <p>The information about the internal networking to which you want to add the edge network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;},{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;}]</p>
          */
         public Builder vSwitchesInfo(String vSwitchesInfo) {
             this.putQueryParameter("VSwitchesInfo", vSwitchesInfo);

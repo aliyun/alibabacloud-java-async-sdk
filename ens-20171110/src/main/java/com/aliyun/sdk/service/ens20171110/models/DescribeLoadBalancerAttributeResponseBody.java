@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoadBalancerAttributeResponseBody</p>
@@ -229,7 +230,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private String vSwitchId; 
 
         /**
-         * The IP address that the Edge Load Balancer (ELB) instance uses to provide services.
+         * <p>The IP address that the Edge Load Balancer (ELB) instance uses to provide services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168XX.XX</p>
          */
         public Builder address(String address) {
             this.address = address;
@@ -237,7 +241,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The IP version of the ELB instance. Valid values: ipv4 and ipv6.
+         * <p>The IP version of the ELB instance. Valid values: ipv4 and ipv6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
@@ -245,7 +252,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The list of backend servers.
+         * <p>The list of backend servers.</p>
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
             this.backendServers = backendServers;
@@ -253,7 +260,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The peak bandwidth of the ELB. The default value is -1, which indicates that the bandwidth is unlimited.
+         * <p>The peak bandwidth of the ELB. The default value is -1, which indicates that the bandwidth is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -261,7 +271,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the ELB instance was created. The time is displayed in UTC.
+         * <p>The time when the ELB instance was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-21T12:22:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -269,7 +282,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the ELB instance was disabled.
+         * <p>The time when the ELB instance was disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-21T12:22:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -277,7 +293,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ENS node.
+         * <p>The ID of the ENS node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.ensRegionId = ensRegionId;
@@ -285,7 +304,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The frontend ports that are used by the ELB instance.
+         * <p>The frontend ports that are used by the ELB instance.</p>
          */
         public Builder listenerPorts(java.util.List < String > listenerPorts) {
             this.listenerPorts = listenerPorts;
@@ -293,7 +312,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The frontend ports and protocols that are used by the ELB instance.
+         * <p>The frontend ports and protocols that are used by the ELB instance.</p>
          */
         public Builder listenerPortsAndProtocols(java.util.List < ListenerPortsAndProtocols> listenerPortsAndProtocols) {
             this.listenerPortsAndProtocols = listenerPortsAndProtocols;
@@ -301,7 +320,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ELB instance.
+         * <p>The ID of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5rcvo1n1t3hykfhhjwjgqp****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -309,7 +331,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the ELB instance.
+         * <p>The name of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
@@ -317,7 +342,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The specifications of the ELB instance.
+         * <p>The specifications of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elb.s2.medium</p>
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.loadBalancerSpec = loadBalancerSpec;
@@ -325,11 +353,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the ELB instance. Valid values:
-         * <p>
+         * <p>The status of the ELB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong> (default): The listener for the instance can forward the received traffic based on the rule.</li>
+         * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
+         * </ul>
          * 
-         * *   **Active** (default): The listener for the instance can forward the received traffic based on the rule.
-         * *   **InActive**: The listener for the instance does not forward the received traffic.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.loadBalancerStatus = loadBalancerStatus;
@@ -337,7 +368,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5rwbi3g9zvgxcsiufwhw8****</p>
          */
         public Builder networkId(String networkId) {
             this.networkId = networkId;
@@ -345,11 +379,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go. Only this billing method is supported.</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription.
-         * *   **PostPaid**: pay-as-you-go. Only this billing method is supported.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -357,7 +394,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -365,7 +405,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5s78m2pdr9osa0j64bn78****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -378,6 +421,12 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoadBalancerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerAttributeResponseBody</p>
+     */
     public static class BackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -453,7 +502,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The IP address of the backend server.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -461,7 +513,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used by the backend server.
+             * <p>The port that is used by the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -469,7 +524,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backend server.
+             * <p>The ID of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5vb5h5njxiuhn48a****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -477,7 +535,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of backend server.
+             * <p>The type of backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -485,7 +546,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the backend server.
+             * <p>The weight of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -499,6 +563,12 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerAttributeResponseBody</p>
+     */
     public static class ListenerPortsAndProtocols extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -574,7 +644,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             private String listenerProtocol; 
 
             /**
-             * The description of the listener.
+             * <p>The description of the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -582,7 +655,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The destination listening port to which requests are forwarded.
+             * <p>The destination listening port to which requests are forwarded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder forwardPort(Integer forwardPort) {
                 this.forwardPort = forwardPort;
@@ -590,7 +666,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the listener is enabled.
+             * <p>Indicates whether the listener is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder listenerForward(String listenerForward) {
                 this.listenerForward = listenerForward;
@@ -598,7 +677,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The listener port of the instance.
+             * <p>The listener port of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -606,7 +688,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The listener protocol of the instance.
+             * <p>The listener protocol of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;

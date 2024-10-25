@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSDGRequest} extends {@link RequestModel}
  *
  * <p>DeleteSDGRequest</p>
@@ -54,7 +55,8 @@ public class DeleteSDGRequest extends Request {
         } 
 
         /**
-         * The IDs of the SDGs that you want to delete.
+         * <p>The IDs of the SDGs that you want to delete.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder SDGId(java.util.List < String > SDGId) {
             String SDGIdShrink = shrink(SDGId, "SDGId", "json");

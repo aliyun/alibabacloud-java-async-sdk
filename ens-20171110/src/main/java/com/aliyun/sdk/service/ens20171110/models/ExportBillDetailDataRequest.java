@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportBillDetailDataRequest} extends {@link RequestModel}
  *
  * <p>ExportBillDetailDataRequest</p>
@@ -69,7 +70,11 @@ public class ExportBillDetailDataRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-30T00:00:00Z</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -78,7 +83,11 @@ public class ExportBillDetailDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-01T00:00:00Z</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

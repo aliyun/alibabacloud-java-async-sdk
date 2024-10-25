@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveBackendServersRequest} extends {@link RequestModel}
  *
  * <p>RemoveBackendServersRequest</p>
@@ -69,7 +70,8 @@ public class RemoveBackendServersRequest extends Request {
         } 
 
         /**
-         * The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.
+         * <p>The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
             String backendServersShrink = shrink(backendServers, "BackendServers", "json");
@@ -79,7 +81,11 @@ public class RemoveBackendServersRequest extends Request {
         }
 
         /**
-         * The ID of the Edge Load Balancer (ELB) instance.
+         * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5ovkn1piwqmoqrfjdyhq4****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -94,6 +100,12 @@ public class RemoveBackendServersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveBackendServersRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveBackendServersRequest</p>
+     */
     public static class BackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -172,7 +184,10 @@ public class RemoveBackendServersRequest extends Request {
             private Integer weight; 
 
             /**
-             * The IP address of the backend server.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.XXX.X.X</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -180,7 +195,10 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * The backend port that is used by the ELB instance.
+             * <p>The backend port that is used by the Edge Load Balancer (ELB) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -188,7 +206,11 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * The instance ID of the backend server.
+             * <p>The instance ID of the backend server.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5uf68ts0fqexe1a4n****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -196,11 +218,14 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ens</strong>: an Edge Node Service (ENS) instance.</li>
+             * <li><strong>eni</strong>: an Elastic Network Interface (ENI).</li>
+             * </ul>
              * 
-             * *   **ens**: an Edge Node Service (ENS) instance.
-             * *   **eni**: an elastic network interface (ENI).
+             * <strong>example:</strong>
+             * <p>ens</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -208,7 +233,10 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * The weight of the backend server.
+             * <p>The weight of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

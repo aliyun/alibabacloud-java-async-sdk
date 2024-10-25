@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMountTargetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMountTargetResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateMountTargetResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70EACC9C-D07A-4A34-ADA4-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,13 +61,16 @@ public class CreateMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the mount target. Valid values:
-         * <p>
+         * <p>The state of the mount target. Valid values:</p>
+         * <ul>
+         * <li>active</li>
+         * <li>inactive</li>
+         * <li>pending</li>
+         * <li>deleting</li>
+         * </ul>
          * 
-         * *   active
-         * *   inactive
-         * *   pending
-         * *   deleting
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.status = status;

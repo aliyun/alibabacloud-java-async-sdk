@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeviceServiceResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         private java.util.List < ResourceInfos> resourceInfos; 
 
         /**
-         * The basic properties of the application.
+         * <p>The basic properties of the application.</p>
          */
         public Builder appMetaData(AppMetaData appMetaData) {
             this.appMetaData = appMetaData;
@@ -93,7 +94,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The status information of the application.
+         * <p>The status information of the application.</p>
          */
         public Builder appStatus(AppStatus appStatus) {
             this.appStatus = appStatus;
@@ -101,7 +102,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A535110-3EE3-5EC5-B1ED-10B7067A1FC8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +113,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the devices.
+         * <p>The information about the devices.</p>
          */
         public Builder resourceDetailInfos(java.util.List < ResourceDetailInfos> resourceDetailInfos) {
             this.resourceDetailInfos = resourceDetailInfos;
@@ -117,7 +121,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the instances.
+         * <p>The information about the instances.</p>
          */
         public Builder resourceInfos(java.util.List < ResourceInfos> resourceInfos) {
             this.resourceInfos = resourceInfos;
@@ -130,6 +134,12 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeviceServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceServiceResponseBody</p>
+     */
     public static class AppMetaData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -229,7 +239,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>97a32f2a-aa2c-436a-b19c-05b20d258618</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -237,7 +250,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iotx-api-admin</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -245,7 +261,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The stable version number of the application.
+             * <p>The stable version number of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder appStableVersion(String appStableVersion) {
                 this.appStableVersion = appStableVersion;
@@ -253,11 +272,14 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application. The value is of the enumeration type. Valid values:
-             * <p>
+             * <p>The type of the application. The value is of the enumeration type. Valid values:</p>
+             * <ul>
+             * <li>Common</li>
+             * <li>Scheduler</li>
+             * </ul>
              * 
-             * *   Common
-             * *   Scheduler
+             * <strong>example:</strong>
+             * <p>Common</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -265,7 +287,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application cluster.
+             * <p>The name of the application cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poc</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -273,7 +298,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-03T03:42:11</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -281,7 +309,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -295,6 +326,12 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeviceServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceServiceResponseBody</p>
+     */
     public static class AppStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Phase")
         private String phase;
@@ -346,21 +383,23 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The status of the application. The value is of the enumeration type. Valid values:
-             * <p>
+             * <p>The status of the application. The value is of the enumeration type. Valid values:</p>
+             * <p>Three intermediate states:</p>
+             * <ul>
+             * <li>CREATING</li>
+             * <li>UPDATING</li>
+             * <li>DELETING</li>
+             * </ul>
+             * <p>Four final states:</p>
+             * <ul>
+             * <li>CREATE_FAILED</li>
+             * <li>UPDATE_FAILED</li>
+             * <li>DELETE_FAILED</li>
+             * <li>RUNNING</li>
+             * </ul>
              * 
-             * Three intermediate states:
-             * 
-             * *   CREATING
-             * *   UPDATING
-             * *   DELETING
-             * 
-             * Four final states:
-             * 
-             * *   CREATE_FAILED
-             * *   UPDATE_FAILED
-             * *   DELETE_FAILED
-             * *   RUNNING
+             * <strong>example:</strong>
+             * <p>CREATING</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -368,7 +407,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application status.
+             * <p>The description of the application status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creating in progress</p>
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -376,7 +418,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the status was last updated.
+             * <p>The time when the status was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-26T05:04Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -390,6 +435,12 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeviceServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceServiceResponseBody</p>
+     */
     public static class ResourceDetailInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
@@ -525,7 +576,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the device.
+             * <p>The name of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5JhF100NEgdBcpNren32</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -533,7 +587,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud device.
+             * <p>The ID of the cloud device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h-uf6009zoaexs5pefypbo</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -541,7 +598,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.27.219.219</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -549,7 +609,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP).
+             * <p>The Internet service provider (ISP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -557,7 +620,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-2ze40oyhjorpyw61k7be</p>
              */
             public Builder imageID(String imageID) {
                 this.imageID = imageID;
@@ -565,7 +631,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The media access control (MAC) address of the device.
+             * <p>The media access control (MAC) address of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AA:BB:77:88:99:03</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -573,7 +642,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENS node.
+             * <p>The ID of the ENS node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-jiaozuo-2</p>
              */
             public Builder regionID(String regionID) {
                 this.regionID = regionID;
@@ -581,7 +653,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The server name of the ENS node.
+             * <p>The server name of the ENS node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens-nc2</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -589,7 +664,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the device.
+             * <p>The status of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -597,7 +675,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the device.
+             * <p>The type of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens.ac6.large</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -611,6 +692,12 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeviceServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceServiceResponseBody</p>
+     */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerPorts")
         private String containerPorts;
@@ -674,7 +761,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * The port of the container.
+             * <p>The port of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000-10010</p>
              */
             public Builder containerPorts(String containerPorts) {
                 this.containerPorts = containerPorts;
@@ -682,7 +772,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.105.62.120</p>
              */
             public Builder externalIp(String externalIp) {
                 this.externalIp = externalIp;
@@ -690,7 +783,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The port range.
+             * <p>The port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80-8080</p>
              */
             public Builder hostPorts(String hostPorts) {
                 this.hostPorts = hostPorts;
@@ -698,11 +794,14 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol of the gateway. The value is of the enumeration type. Valid values:
-             * <p>
+             * <p>The protocol of the gateway. The value is of the enumeration type. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -716,6 +815,12 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeviceServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceServiceResponseBody</p>
+     */
     public static class DeviceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -767,7 +872,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the device.
+             * <p>The name of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-api</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -775,7 +883,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The network information.
+             * <p>The network information.</p>
              */
             public Builder network(java.util.List < Network> network) {
                 this.network = network;
@@ -783,7 +891,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -797,6 +908,12 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeviceServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceServiceResponseBody</p>
+     */
     public static class InternalIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -824,7 +941,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * The internal IP address.
+             * <p>The internal IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.2.3</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -838,6 +958,12 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeviceServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceServiceResponseBody</p>
+     */
     public static class PublicIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -865,7 +991,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122.13.173.137</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -879,6 +1008,12 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeviceServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceServiceResponseBody</p>
+     */
     public static class ResourceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
@@ -1038,7 +1173,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String regionName; 
 
             /**
-             * The version of the application.
+             * <p>The version of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -1046,7 +1184,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The area code.
+             * <p>The area code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>410800</p>
              */
             public Builder areaCode(String areaCode) {
                 this.areaCode = areaCode;
@@ -1054,7 +1195,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The region name.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jiaozuo City, Henan Province, Central China</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -1062,7 +1206,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-02T08:26Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1070,7 +1217,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the devices.
+             * <p>The information about the devices.</p>
              */
             public Builder deviceInfos(java.util.List < DeviceInfos> deviceInfos) {
                 this.deviceInfos = deviceInfos;
@@ -1078,7 +1225,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5s9boobrmh5000kv4jmi0oeai</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1086,7 +1236,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance.
+             * <p>The status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -1094,7 +1247,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP addresses.
+             * <p>The internal IP addresses.</p>
              */
             public Builder internalIps(java.util.List < InternalIps> internalIps) {
                 this.internalIps = internalIps;
@@ -1102,7 +1255,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP addresses.
+             * <p>The public IP addresses.</p>
              */
             public Builder publicIps(java.util.List < PublicIps> publicIps) {
                 this.publicIps = publicIps;
@@ -1110,7 +1263,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-jiaozuo-2</p>
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -1118,7 +1274,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENS node.
+             * <p>The ID of the ENS node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-jiaozuo-2</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1126,7 +1285,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Jiaozuo-2</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

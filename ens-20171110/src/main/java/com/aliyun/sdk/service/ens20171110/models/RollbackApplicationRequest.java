@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RollbackApplicationRequest} extends {@link RequestModel}
  *
  * <p>RollbackApplicationRequest</p>
@@ -97,7 +98,11 @@ public class RollbackApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>474bdef0-d149-4695-abfb-52912d91****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -106,7 +111,11 @@ public class RollbackApplicationRequest extends Request {
         }
 
         /**
-         * The current version number.
+         * <p>The current version number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2-1</p>
          */
         public Builder fromAppVersion(String fromAppVersion) {
             this.putQueryParameter("FromAppVersion", fromAppVersion);
@@ -115,7 +124,10 @@ public class RollbackApplicationRequest extends Request {
         }
 
         /**
-         * The timeout period of the asynchronous rollback operation. Unit: seconds. Default value: 300.
+         * <p>The timeout period of the asynchronous rollback operation. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -124,7 +136,10 @@ public class RollbackApplicationRequest extends Request {
         }
 
         /**
-         * The target version number. By default, the system automatically rolls back the container version to the previous version.
+         * <p>The target version number. By default, the system automatically rolls back the container version to the previous version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder toAppVersion(String toAppVersion) {
             this.putQueryParameter("ToAppVersion", toAppVersion);

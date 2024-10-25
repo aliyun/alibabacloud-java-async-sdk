@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileSystemResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFileSystemResponseBody</p>
@@ -73,7 +74,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         private java.util.List < String > unAllocationId; 
 
         /**
-         * The information about the file system that was created.
+         * <p>The information about the file system that was created.</p>
          */
         public Builder allocationId(java.util.List < String > allocationId) {
             this.allocationId = allocationId;
@@ -81,11 +82,14 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The status code for successful operations. Valid values:
-         * <p>
+         * <p>The status code for successful operations. Valid values:</p>
+         * <ul>
+         * <li>PartSuccess: The operation is partially successful.</li>
+         * <li>AllSuccess: The operation is successful.</li>
+         * </ul>
          * 
-         * *   PartSuccess: The operation is partially successful.
-         * *   AllSuccess: The operation is successful.
+         * <strong>example:</strong>
+         * <p>PartSuccess</p>
          */
         public Builder bizStatusCode(String bizStatusCode) {
             this.bizStatusCode = bizStatusCode;
@@ -93,7 +97,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the file system that failed to be created.
+         * <p>The information about the file system that failed to be created.</p>
          */
         public Builder unAllocationId(java.util.List < String > unAllocationId) {
             this.unAllocationId = unAllocationId;

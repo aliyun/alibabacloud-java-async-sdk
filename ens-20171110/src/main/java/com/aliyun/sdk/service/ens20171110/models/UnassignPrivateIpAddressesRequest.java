@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassignPrivateIpAddressesRequest} extends {@link RequestModel}
  *
  * <p>UnassignPrivateIpAddressesRequest</p>
@@ -69,7 +70,11 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         } 
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-f8z57orgmt6d144t****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -78,7 +83,8 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The secondary private IP addresses to unassign.
+         * <p>The secondary private IP addresses to unassign.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsRegionsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The service code. 0 is returned for a successful request. An error code is returned for a failed request.
+         * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the regions.
+         * <p>The information about the regions.</p>
          */
         public Builder ensRegions(EnsRegions ensRegions) {
             this.ensRegions = ensRegions;
@@ -77,7 +81,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRegionsResponseBody</p>
+     */
     public static class EnsRegionsEnsRegions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -165,7 +178,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             private String province; 
 
             /**
-             * The code of the region.
+             * <p>The code of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NorthEastChina</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -173,7 +189,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NorthChina</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -181,7 +200,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-dalian-unicom</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -189,7 +211,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dalian Unicom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -197,7 +222,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The province where the node is deployed.
+             * <p>The province where the node is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Liaoning Province</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -211,6 +239,12 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRegionsResponseBody</p>
+     */
     public static class EnsRegions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegions")
         private java.util.List < EnsRegionsEnsRegions> ensRegions;
@@ -238,7 +272,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             private java.util.List < EnsRegionsEnsRegions> ensRegions; 
 
             /**
-             * The information about the regions.
+             * <p>The information about the regions.</p>
              */
             public Builder ensRegions(java.util.List < EnsRegionsEnsRegions> ensRegions) {
                 this.ensRegions = ensRegions;

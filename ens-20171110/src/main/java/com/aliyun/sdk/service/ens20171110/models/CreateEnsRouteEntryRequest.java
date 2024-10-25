@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnsRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateEnsRouteEntryRequest</p>
@@ -128,7 +129,10 @@ public class CreateEnsRouteEntryRequest extends Request {
         } 
 
         /**
-         * The description of the custom route entry.
+         * <p>The description of the custom route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -137,12 +141,16 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the custom route entry. Make sure that the destination CIDR block meets the following requirements:
-         * <p>
+         * <p>The destination CIDR block of the custom route entry. Make sure that the destination CIDR block meets the following requirements:</p>
+         * <ul>
+         * <li>The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</li>
+         * <li>The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.</li>
+         * <li>0.0.0.0/0 indicates the default CIDR block.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.
-         * *   The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.
-         * *   0.0.0.0/0 indicates the default CIDR block.
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -151,7 +159,11 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the next hop of the custom route entry.
+         * <p>The ID of the next hop of the custom route entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5vb7leks9z4mxy1ay258</p>
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -160,10 +172,13 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * The type of next hop of the custom route entry. Valid values:
-         * <p>
+         * <p>The type of next hop of the custom route entry. Valid values:</p>
+         * <ul>
+         * <li>Instance (default): an ENS instance.</li>
+         * </ul>
          * 
-         * *   Instance (default): an ENS instance.
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -172,7 +187,10 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * The name of the custom route entry that you want to add. The name must be 1 to 128 characters in length. It cannot start with http:// or https://.
+         * <p>The name of the custom route entry that you want to add. The name must be 1 to 128 characters in length. It cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -181,7 +199,11 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the route table to which you want to add a custom route entry.
+         * <p>The ID of the route table to which you want to add a custom route entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1cifr72dioje82lse2j</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

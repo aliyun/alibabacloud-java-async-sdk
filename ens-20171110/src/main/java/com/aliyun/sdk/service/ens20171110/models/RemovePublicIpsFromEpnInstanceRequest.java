@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemovePublicIpsFromEpnInstanceRequest} extends {@link RequestModel}
  *
  * <p>RemovePublicIpsFromEpnInstanceRequest</p>
@@ -69,7 +70,11 @@ public class RemovePublicIpsFromEpnInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the EPN instance.
+         * <p>The ID of the EPN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-xxxx</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -78,7 +83,11 @@ public class RemovePublicIpsFromEpnInstanceRequest extends Request {
         }
 
         /**
-         * The information about the public IP addresses that you want to delete.
+         * <p>The information about the public IP addresses that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;PublicIpAddress&quot;:&quot;2.230.XX.XX&quot;},{&quot;PublicIpAddress&quot;:&quot;2.230.XX.XX&quot;}]</p>
          */
         public Builder instanceInfos(String instanceInfos) {
             this.putQueryParameter("InstanceInfos", instanceInfos);

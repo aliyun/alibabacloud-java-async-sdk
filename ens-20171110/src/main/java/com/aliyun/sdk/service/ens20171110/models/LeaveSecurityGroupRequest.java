@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LeaveSecurityGroupRequest} extends {@link RequestModel}
  *
  * <p>LeaveSecurityGroupRequest</p>
@@ -82,7 +83,10 @@ public class LeaveSecurityGroupRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -91,7 +95,10 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-58z57orgmt6d1****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -100,7 +107,11 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserBandWidthDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserBandWidthDataRequest</p>
@@ -126,11 +127,15 @@ public class DescribeUserBandWidthDataRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <ul>
+         * <li>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</li>
+         * <li>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+         * <strong>example:</strong>
+         * <p>2019-05-21T12:22:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -139,7 +144,10 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * The ID of the node. You can specify only one node ID. By default, all nodes are queried.
+         * <p>The ID of the node. You can specify only one node ID. By default, all nodes are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-taiyuan-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -148,7 +156,10 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which you want to query the data. You can specify only one instance ID. By default, all instances are queried.
+         * <p>The ID of the instance for which you want to query the data. You can specify only one instance ID. By default, all instances are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5inkeimcipxk26yqtzm4q****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -157,13 +168,16 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * The Internet service provider (ISP). Valid values:
-         * <p>
+         * <p>The Internet service provider (ISP). Valid values:</p>
+         * <ul>
+         * <li>cmcc: China Mobile</li>
+         * <li>telecom: China Telecom</li>
+         * <li>unicom: China Unicom</li>
+         * <li>multiCarrier: multi-line ISP</li>
+         * </ul>
          * 
-         * *   cmcc: China Mobile
-         * *   telecom: China Telecom
-         * *   unicom: China Unicom
-         * *   multiCarrier: multi-line ISP
+         * <strong>example:</strong>
+         * <p>cmcc</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -172,7 +186,11 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * The precision of the monitoring data that you want to obtain. Valid values: 300, 1200, 3600, and 14400. Default value: 300. Unit: seconds.
+         * <p>The precision of the monitoring data that you want to obtain. Valid values: 300, 1200, 3600, and 14400. Default value: 300. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -181,11 +199,15 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <ul>
+         * <li>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</li>
+         * <li>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+         * <strong>example:</strong>
+         * <p>2019-05-21T10:22:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

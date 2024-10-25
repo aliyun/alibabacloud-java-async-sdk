@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkAclEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkAclEntryRequest</p>
@@ -174,7 +175,11 @@ public class CreateNetworkAclEntryRequest extends Request {
         } 
 
         /**
-         * The source CIDR block.
+         * <p>The source CIDR block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -183,10 +188,11 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * The description of the network ACL.
-         * <p>
+         * <p>The description of the network ACL.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>This is my NetworkAcl.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -195,11 +201,15 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * Specifies whether the ACL rule controls inbound or outbound access requests. Valid values:
-         * <p>
+         * <p>Specifies whether the ACL rule controls inbound or outbound access requests. Valid values:</p>
+         * <ul>
+         * <li><strong>ingress</strong></li>
+         * <li><strong>egress</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ingress**
-         * *   **egress**
+         * <strong>example:</strong>
+         * <p>ingress</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -208,10 +218,11 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * The name of the rule.
-         * <p>
+         * <p>The name of the rule.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>acl-1</p>
          */
         public Builder networkAclEntryName(String networkAclEntryName) {
             this.putQueryParameter("NetworkAclEntryName", networkAclEntryName);
@@ -220,7 +231,11 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * The ID of the network ACL.
+         * <p>The ID of the network ACL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-bp1lhl0taikrbgnh****</p>
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -229,11 +244,15 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * The action that is performed on network traffic that matches the rule. Valid values:
-         * <p>
+         * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows network traffic.</li>
+         * <li><strong>drop</strong>: blocks network traffic.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **accept**: allows network traffic.
-         * *   **drop**: blocks network traffic.
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -242,11 +261,15 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * The port range.
-         * <p>
+         * <p>The port range.</p>
+         * <ul>
+         * <li>If you set <strong>Protocol</strong> to <strong>all</strong> or <strong>icmp</strong>, set this parameter to -1/-1, which specifies all ports.</li>
+         * <li>If you set <strong>Protocol</strong> to <strong>tcp</strong> or <strong>udp</strong>, the port can be <strong>1 to 65535</strong>. You can set this parameter to <strong>1/200</strong> or <strong>80/80</strong>, which specifies ports 1 to 200 or port 80.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set **Protocol** to **all** or **icmp**, set this parameter to -1/-1, which specifies all ports.
-         * *   If you set **Protocol** to **tcp** or **udp**, the port can be **1 to 65535**. You can set this parameter to **1/200** or **80/80**, which specifies ports 1 to 200 or port 80.
+         * <strong>example:</strong>
+         * <p>-1/-1</p>
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -255,7 +278,11 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * The priority of the rule. Valid values: **1 to 100**. Default value: **1**.
+         * <p>The priority of the rule. Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -264,13 +291,17 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * The protocol. Valid values:
-         * <p>
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>icmp</strong>: ICMP</li>
+         * <li><strong>tcp</strong>: TCP</li>
+         * <li><strong>udp</strong>: UDP</li>
+         * <li><strong>all</strong>: all protocols</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **icmp**: ICMP
-         * *   **tcp**: TCP
-         * *   **udp**: UDP
-         * *   **all**: all protocols
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);

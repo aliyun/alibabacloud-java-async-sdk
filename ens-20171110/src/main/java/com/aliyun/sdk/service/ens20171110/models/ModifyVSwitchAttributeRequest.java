@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVSwitchAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyVSwitchAttributeRequest</p>
@@ -84,11 +85,14 @@ public class ModifyVSwitchAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the vSwitch.
-         * <p>
+         * <p>The description of the vSwitch.</p>
+         * <ul>
+         * <li>The description must be 2 to 256 characters in length.</li>
+         * <li>The description cannot start with http:// or https://.</li>
+         * </ul>
          * 
-         * *   The description must be 2 to 256 characters in length.
-         * *   The description cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>this is my first network</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -97,7 +101,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -106,11 +114,14 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The name of the vSwitch.
-         * <p>
+         * <p>The name of the vSwitch.</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name must start with a letter and cannot start with http:// or https://.</li>
+         * </ul>
          * 
-         * *   The name must be 2 to 128 characters in length.
-         * *   The name must start with a letter and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>Test-switch</p>
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);

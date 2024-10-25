@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutBucketLifecycleRequest} extends {@link RequestModel}
  *
  * <p>PutBucketLifecycleRequest</p>
@@ -139,11 +140,14 @@ public class PutBucketLifecycleRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow overlapped prefixes. Valid values:
-         * <p>
+         * <p>Specifies whether to allow overlapped prefixes. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder allowSameActionOverlap(String allowSameActionOverlap) {
             this.putQueryParameter("AllowSameActionOverlap", allowSameActionOverlap);
@@ -152,7 +156,11 @@ public class PutBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -161,12 +169,14 @@ public class PutBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The expiration time. EOS executes a lifecycle rule for objects that were last updated before the expiration time.
-         * <p>
+         * <p>The expiration time. EOS executes a lifecycle rule for objects that were last updated before the expiration time.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> ExpirationDays and CreateBeforeDate are mutually exclusive.</p>
+         * </blockquote>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * >  ExpirationDays and CreateBeforeDate are mutually exclusive.
+         * <strong>example:</strong>
+         * <p>2023-10-12T05:45:00Z</p>
          */
         public Builder createdBeforeDate(String createdBeforeDate) {
             this.putQueryParameter("CreatedBeforeDate", createdBeforeDate);
@@ -175,10 +185,13 @@ public class PutBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The number of days from when the objects were last modified to when the lifecycle rule takes effect. The value must be a positive integer that is greater than 0.
-         * <p>
+         * <p>The number of days from when the objects were last modified to when the lifecycle rule takes effect. The value must be a positive integer that is greater than 0.</p>
+         * <blockquote>
+         * <p> ExpirationDays and CreateBeforeDate are mutually exclusive.</p>
+         * </blockquote>
          * 
-         * >  ExpirationDays and CreateBeforeDate are mutually exclusive.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder expirationDays(Long expirationDays) {
             this.putQueryParameter("ExpirationDays", expirationDays);
@@ -187,11 +200,14 @@ public class PutBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The prefix of a object name. The prefix must be unique.
-         * <p>
+         * <p>The prefix of a object name. The prefix must be unique.</p>
+         * <ul>
+         * <li>If you specify a prefix, the rule applies only to objects in the bucket that match the prefix.</li>
+         * <li>If you do not specify a prefix, the rule applies to all objects in the bucket.</li>
+         * </ul>
          * 
-         * *   If you specify a prefix, the rule applies only to objects in the bucket that match the prefix.
-         * *   If you do not specify a prefix, the rule applies to all objects in the bucket.
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("Prefix", prefix);
@@ -200,11 +216,14 @@ public class PutBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The unique ID of the rule. The ID of a lifecycle rule can be up to 255 bytes in length.
-         * <p>
+         * <p>The unique ID of the rule. The ID of a lifecycle rule can be up to 255 bytes in length.</p>
+         * <ul>
+         * <li>You do not need to configure this parameter when you create a rule. The system automatically generates a unique ID.</li>
+         * <li>When you update a rule, you need to specify this parameter. Make sure that the rule specified by RuleId exists. Otherwise, an error occurs.</li>
+         * </ul>
          * 
-         * *   You do not need to configure this parameter when you create a rule. The system automatically generates a unique ID.
-         * *   When you update a rule, you need to specify this parameter. Make sure that the rule specified by RuleId exists. Otherwise, an error occurs.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -213,11 +232,15 @@ public class PutBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The status of the rule. Valid values:
-         * <p>
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Enabled**
-         * *   **Disabled**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

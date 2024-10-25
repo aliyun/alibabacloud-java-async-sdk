@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSDGRequest} extends {@link RequestModel}
  *
  * <p>SaveSDGRequest</p>
@@ -53,7 +54,10 @@ public class SaveSDGRequest extends Request {
         } 
 
         /**
-         * The ID of the SDG to be saved.
+         * <p>The ID of the SDG to be saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-xxxx</p>
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

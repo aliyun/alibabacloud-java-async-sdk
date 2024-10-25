@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBandwitdhByInternetChargeTypeRequest} extends {@link RequestModel}
  *
  * <p>DescribeBandwitdhByInternetChargeTypeRequest</p>
@@ -97,11 +98,15 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <ul>
+         * <li>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</li>
+         * <li>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+         * <strong>example:</strong>
+         * <p>2022-01-18T09:39:54Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -110,7 +115,10 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-cbn-2</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -119,13 +127,16 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * The Internet service provider (ISP). Valid values:
-         * <p>
+         * <p>The Internet service provider (ISP). Valid values:</p>
+         * <ul>
+         * <li>cmcc: China Mobile</li>
+         * <li>telecom: China Telecom</li>
+         * <li>unicom: China Unicom</li>
+         * <li>multiCarrier: multi-line ISP</li>
+         * </ul>
          * 
-         * *   cmcc: China Mobile
-         * *   telecom: China Telecom
-         * *   unicom: China Unicom
-         * *   multiCarrier: multi-line ISP
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -134,11 +145,15 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <ul>
+         * <li>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</li>
+         * <li>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+         * <strong>example:</strong>
+         * <p>2021-11-15T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

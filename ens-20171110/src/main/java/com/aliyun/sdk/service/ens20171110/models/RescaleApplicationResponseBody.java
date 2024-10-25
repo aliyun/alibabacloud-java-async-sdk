@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RescaleApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>RescaleApplicationResponseBody</p>
@@ -37,7 +38,10 @@ public class RescaleApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

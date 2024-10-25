@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCreatePrePaidInstanceResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCreatePrePaidInstanceResultResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Returned results of creating an instance.
+         * <p>Returned results of creating an instance.</p>
          */
         public Builder instanceCreateResult(InstanceCreateResult instanceCreateResult) {
             this.instanceCreateResult = instanceCreateResult;
@@ -57,7 +58,10 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCreatePrePaidInstanceResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCreatePrePaidInstanceResultResponseBody</p>
+     */
     public static class InstanceCreateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceCreateStatus")
         private String instanceCreateStatus;
@@ -109,13 +119,16 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The status of the instance creation.
-             * <p>
+             * <p>The status of the instance creation.</p>
+             * <ul>
+             * <li>Accepted</li>
+             * <li>Creating</li>
+             * <li>Failed</li>
+             * <li>Successed</li>
+             * </ul>
              * 
-             * *   Accepted
-             * *   Creating
-             * *   Failed
-             * *   Successed
+             * <strong>example:</strong>
+             * <p>Successed</p>
              */
             public Builder instanceCreateStatus(String instanceCreateStatus) {
                 this.instanceCreateStatus = instanceCreateStatus;
@@ -123,7 +136,10 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-6ecpqvkicnchxccozrpxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

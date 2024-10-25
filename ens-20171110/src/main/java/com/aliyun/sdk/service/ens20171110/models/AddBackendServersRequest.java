@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBackendServersRequest} extends {@link RequestModel}
  *
  * <p>AddBackendServersRequest</p>
@@ -69,10 +70,11 @@ public class AddBackendServersRequest extends Request {
         } 
 
         /**
-         * The list of backend servers that you want to add. You can add at most 20 backend servers.
-         * <p>
-         * 
-         * >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
+         * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
+         * <blockquote>
+         * <p> Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
             String backendServersShrink = shrink(backendServers, "BackendServers", "json");
@@ -82,7 +84,11 @@ public class AddBackendServersRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.
+         * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5qzdmxefgrpxd7oz2mefonvtx</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -97,6 +103,12 @@ public class AddBackendServersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddBackendServersRequest} extends {@link TeaModel}
+     *
+     * <p>AddBackendServersRequest</p>
+     */
     public static class BackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -175,7 +187,10 @@ public class AddBackendServersRequest extends Request {
             private Integer weight; 
 
             /**
-             * The IP address of the backend server.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -183,7 +198,10 @@ public class AddBackendServersRequest extends Request {
             }
 
             /**
-             * The backend port that is used by the ELB instance.
+             * <p>The backend port that is used by the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3309</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -191,7 +209,11 @@ public class AddBackendServersRequest extends Request {
             }
 
             /**
-             * The ID of the ENS instance.
+             * <p>The ID of the ENS instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5uf6dwyzch3wly790****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -199,11 +221,14 @@ public class AddBackendServersRequest extends Request {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ens</strong>: ENS instance.</li>
+             * <li><strong>eni</strong>: ENI.</li>
+             * </ul>
              * 
-             * *   **ens**: ENS instance.
-             * *   **eni**: ENI.
+             * <strong>example:</strong>
+             * <p>ens</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -211,10 +236,13 @@ public class AddBackendServersRequest extends Request {
             }
 
             /**
-             * The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
-             * <p>
+             * <p>The weight of the backend server. Default value: 100. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * <blockquote>
+             * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+             * </blockquote>
              * 
-             * >  The value 0 indicates that requests are not forwarded to the backend server.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

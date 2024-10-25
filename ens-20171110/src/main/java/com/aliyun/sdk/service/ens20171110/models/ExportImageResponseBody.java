@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportImageResponseBody} extends {@link TeaModel}
  *
  * <p>ExportImageResponseBody</p>
@@ -49,7 +50,10 @@ public class ExportImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The URL that points to the exported image.
+         * <p>The URL that points to the exported image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss.url">http://oss.url</a></p>
          */
         public Builder exportedImageURL(String exportedImageURL) {
             this.exportedImageURL = exportedImageURL;
@@ -57,7 +61,10 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43A426AD-3F2E-5DD9-9C08-D4DBDCA48D85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

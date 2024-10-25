@@ -6,11 +6,17 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSnatEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateSnatEntryRequest</p>
  */
 public class CreateSnatEntryRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 1)
+    private Integer idleTimeout;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -43,6 +49,7 @@ public class CreateSnatEntryRequest extends Request {
 
     private CreateSnatEntryRequest(Builder builder) {
         super(builder);
+        this.idleTimeout = builder.idleTimeout;
         this.natGatewayId = builder.natGatewayId;
         this.snatEntryName = builder.snatEntryName;
         this.snatIp = builder.snatIp;
@@ -63,6 +70,13 @@ public class CreateSnatEntryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return idleTimeout
+     */
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     /**
@@ -115,6 +129,7 @@ public class CreateSnatEntryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSnatEntryRequest, Builder> {
+        private Integer idleTimeout; 
         private String natGatewayId; 
         private String snatEntryName; 
         private String snatIp; 
@@ -129,6 +144,7 @@ public class CreateSnatEntryRequest extends Request {
 
         private Builder(CreateSnatEntryRequest request) {
             super(request);
+            this.idleTimeout = request.idleTimeout;
             this.natGatewayId = request.natGatewayId;
             this.snatEntryName = request.snatEntryName;
             this.snatIp = request.snatIp;
@@ -139,7 +155,20 @@ public class CreateSnatEntryRequest extends Request {
         } 
 
         /**
-         * The ID of the Network Address Translation (NAT) gateway.
+         * IdleTimeout.
+         */
+        public Builder idleTimeout(Integer idleTimeout) {
+            this.putQueryParameter("IdleTimeout", idleTimeout);
+            this.idleTimeout = idleTimeout;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Network Address Translation (NAT) gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5tawjw5j7sgd2deujxuk0****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -148,7 +177,10 @@ public class CreateSnatEntryRequest extends Request {
         }
 
         /**
-         * The name of the SNAT entry. The name must be 1 to 128 characters in length. The name cannot start with `http://` or `https://`.
+         * <p>The name of the SNAT entry. The name must be 1 to 128 characters in length. The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder snatEntryName(String snatEntryName) {
             this.putQueryParameter("SnatEntryName", snatEntryName);
@@ -157,7 +189,11 @@ public class CreateSnatEntryRequest extends Request {
         }
 
         /**
-         * The elastic IP address (EIP) in the SNAT entry. Separate multiple EIPs with commas (,).
+         * <p>The elastic IP address (EIP) in the SNAT entry. Separate multiple EIPs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.XXX.XXX.71</p>
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);
@@ -166,10 +202,13 @@ public class CreateSnatEntryRequest extends Request {
         }
 
         /**
-         * The CIDR block. You can specify the CIDR block of a network, a vSwitch, or an instance. You can also specify a custom CIDR block. All instances within the CIDR block can access the Internet or external networks by using SNAT.
-         * <p>
+         * <p>The CIDR block. You can specify the CIDR block of a network, a vSwitch, or an instance. You can also specify a custom CIDR block. All instances within the CIDR block can access the Internet or external networks by using SNAT.</p>
+         * <blockquote>
+         * <p> If you specify <strong>SourceVSwitchId</strong> and <strong>SourceCIDR</strong>, <strong>SourceVSwitchId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence.</p>
+         * </blockquote>
          * 
-         * >  If you specify **SourceVSwitchId** and **SourceCIDR**, **SourceVSwitchId** does not take effect. The value that you specified for **SourceCIDR** takes precedence.
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder sourceCIDR(String sourceCIDR) {
             this.putQueryParameter("SourceCIDR", sourceCIDR);
@@ -178,10 +217,13 @@ public class CreateSnatEntryRequest extends Request {
         }
 
         /**
-         * The ID of the network. This parameter specifies that all ENS instances in the network can use the SNAT entry to access the Internet.
-         * <p>
+         * <p>The ID of the network. This parameter specifies that all ENS instances in the network can use the SNAT entry to access the Internet.</p>
+         * <blockquote>
+         * <p> If you specify <strong>SourceNetworkId</strong> and <strong>SourceVSwitchId</strong> or <strong>SourceCIDR</strong>, <strong>SourceNetworkId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence. Priority: <strong>SourceCIDR</strong> &gt; <strong>SourceVSwitchId</strong> &gt; <strong>SourceNetworkId</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you specify **SourceNetworkId** and **SourceVSwitchId** or **SourceCIDR**, **SourceNetworkId** does not take effect. The value that you specified for **SourceCIDR** takes precedence. Priority: **SourceCIDR** > **SourceVSwitchId** > **SourceNetworkId**.
+         * <strong>example:</strong>
+         * <p>n-2zeuphj08tt7q3brd****</p>
          */
         public Builder sourceNetworkId(String sourceNetworkId) {
             this.putQueryParameter("SourceNetworkId", sourceNetworkId);
@@ -190,10 +232,13 @@ public class CreateSnatEntryRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch that you need to access over the Internet. This parameter specifies that Edge Node Service (ENS) instances in the vSwitch can use the SNAT entry to access the Internet.
-         * <p>
+         * <p>The ID of the vSwitch that you need to access over the Internet. This parameter specifies that Edge Node Service (ENS) instances in the vSwitch can use the SNAT entry to access the Internet.</p>
+         * <blockquote>
+         * <p> If you specify <strong>SourceVSwitchId</strong> and <strong>SourceCIDR</strong>, <strong>SourceVSwitchId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence.</p>
+         * </blockquote>
          * 
-         * >  If you specify **SourceVSwitchId** and **SourceCIDR**, **SourceVSwitchId** does not take effect. The value that you specified for **SourceCIDR** takes precedence.
+         * <strong>example:</strong>
+         * <p>vsw-bp1hwx7gi495q260p****</p>
          */
         public Builder sourceVSwitchId(String sourceVSwitchId) {
             this.putQueryParameter("SourceVSwitchId", sourceVSwitchId);
@@ -202,7 +247,10 @@ public class CreateSnatEntryRequest extends Request {
         }
 
         /**
-         * The secondary EIP in the SNAT entry. Separate multiple secondary EIPs with commas (,).
+         * <p>The secondary EIP in the SNAT entry. Separate multiple secondary EIPs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.XXX.XXX.7</p>
          */
         public Builder standbySnatIp(String standbySnatIp) {
             this.putQueryParameter("StandbySnatIp", standbySnatIp);

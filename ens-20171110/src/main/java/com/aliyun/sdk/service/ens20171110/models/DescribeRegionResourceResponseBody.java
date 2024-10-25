@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionResourceResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class ArmCard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -391,6 +398,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Bandwidth extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -652,6 +665,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class BlockStorage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -913,6 +932,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Cpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -1174,6 +1199,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Gpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -1435,6 +1466,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Hdd extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -1696,6 +1733,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Ipv4s extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private String display;
@@ -1997,6 +2040,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Ipv6s extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private String display;
@@ -2298,6 +2347,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Memory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -2559,6 +2614,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Nvme extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -2820,6 +2881,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class OssStorage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -3081,6 +3148,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Pangu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -3342,6 +3415,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class PcfarmNum extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -3603,6 +3682,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Ssd extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -3864,6 +3949,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AreaCode")
         private String areaCode;
@@ -4485,6 +4576,12 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionResourceResponseBody</p>
+     */
     public static class Pager extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;

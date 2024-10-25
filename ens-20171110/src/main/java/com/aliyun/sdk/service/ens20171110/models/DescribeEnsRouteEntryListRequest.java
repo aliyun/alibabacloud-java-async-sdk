@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRouteEntryListRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsRouteEntryListRequest</p>
@@ -167,7 +168,10 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         } 
 
         /**
-         * The destination Classless Inter-Domain Routing (CIDR) block of the route entry.
+         * <p>The destination Classless Inter-Domain Routing (CIDR) block of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.0.0.0/16</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -176,7 +180,10 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * The ID of the next hop.
+         * <p>The ID of the next hop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zecshuv3axtr2gc4noa</p>
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -185,10 +192,13 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * The type of next hop of the custom route entry. Valid values:
-         * <p>
+         * <p>The type of next hop of the custom route entry. Valid values:</p>
+         * <ul>
+         * <li>Instance: an ENS instance.</li>
+         * </ul>
          * 
-         * *   Instance: an ENS instance.
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -197,7 +207,10 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.
+         * <p>The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -206,7 +219,10 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Valid values: 10 to 100.
+         * <p>The number of entries per page. Default value: 10. Valid values: 10 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +231,10 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * The ID of the route that you want to query.
+         * <p>The ID of the route that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-8vbdw66evgv44u2u7v3hx</p>
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);
@@ -224,7 +243,10 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * The name of the route.
+         * <p>The name of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -233,11 +255,14 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * The route type. Valid values:
-         * <p>
+         * <p>The route type. Valid values:</p>
+         * <ul>
+         * <li>Custom: custom route</li>
+         * <li>System: system route</li>
+         * </ul>
          * 
-         * *   Custom: custom route
-         * *   System: system route
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -246,7 +271,11 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * The ID of the route table that you want to query.
+         * <p>The ID of the route table that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-hp3wdhynneo7fsclox8hs</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionIdIpv6InfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsRegionIdIpv6InfoResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         private SupportIpv6Info supportIpv6Info; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3703C4AC-9396-458C-8F25-1D701334D309</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         }
 
         /**
-         * IPv6 support information.
+         * <p>IPv6 support information.</p>
          */
         public Builder supportIpv6Info(SupportIpv6Info supportIpv6Info) {
             this.supportIpv6Info = supportIpv6Info;
@@ -70,6 +74,12 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsRegionIdIpv6InfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRegionIdIpv6InfoResponseBody</p>
+     */
     public static class SupportIpv6Info extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
@@ -109,7 +119,10 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
             private Boolean supportIpv6; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-xxxx-4</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -117,11 +130,14 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether IPv6 is supported. Valid values:
-             * <p>
+             * <p>Specifies whether IPv6 is supported. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportIpv6(Boolean supportIpv6) {
                 this.supportIpv6 = supportIpv6;

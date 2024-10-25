@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRouteEntryListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsRouteEntryListResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the route.
+         * <p>The information about the route.</p>
          */
         public Builder routeEntrys(java.util.List < RouteEntrys> routeEntrys) {
             this.routeEntrys = routeEntrys;
@@ -117,7 +127,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned entries.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsRouteEntryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRouteEntryListResponseBody</p>
+     */
     public static class NextHops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
@@ -169,7 +188,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             private String nextHopType; 
 
             /**
-             * The ID of the next hop.
+             * <p>The ID of the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1111yup9991890woxq</p>
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -177,7 +199,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the next hop. Valid values:
+             * <p>The type of the next hop. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -191,6 +216,12 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsRouteEntryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRouteEntryListResponseBody</p>
+     */
     public static class RouteEntrys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -302,7 +333,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Enter a description for the route.
+             * <p>Enter a description for the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -310,7 +344,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block of the route.
+             * <p>The destination CIDR block of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101.0.45.0/24</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -318,7 +355,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the next hop.
+             * <p>The information about the next hop.</p>
              */
             public Builder nextHops(java.util.List < NextHops> nextHops) {
                 this.nextHops = nextHops;
@@ -326,7 +363,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route.
+             * <p>The ID of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rte-2zeksx7h436f5unk349m1</p>
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;
@@ -334,7 +374,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test0</p>
              */
             public Builder routeEntryName(String routeEntryName) {
                 this.routeEntryName = routeEntryName;
@@ -342,7 +385,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-uf62p9o5cn35fi8xgurnm</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -350,7 +396,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route entry. Valid values:
+             * <p>The status of the route entry. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -358,7 +407,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route entry.
+             * <p>The type of the route entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder type(String type) {
                 this.type = type;

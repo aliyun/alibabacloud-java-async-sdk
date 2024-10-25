@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsSaleControlAvailableResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsSaleControlAvailableResourceResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsSaleControlAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlAvailableResourceResponseBody</p>
+     */
     public static class AvailableDiskType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
@@ -131,6 +138,12 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlAvailableResourceResponseBody</p>
+     */
     public static class AvailableRegion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -292,6 +305,12 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlAvailableResourceResponseBody</p>
+     */
     public static class AvailableSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cores")
         private String cores;
@@ -393,6 +412,12 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlAvailableResourceResponseBody</p>
+     */
     public static class AvailableDefaultStorageType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageName")
         private String storageName;
@@ -454,6 +479,12 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlAvailableResourceResponseBody</p>
+     */
     public static class AvailableSpecialStorageType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
@@ -535,6 +566,12 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlAvailableResourceResponseBody</p>
+     */
     public static class AvailableStorageType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableDefaultStorageType")
         private java.util.List < AvailableDefaultStorageType> availableDefaultStorageType;
@@ -596,6 +633,12 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlAvailableResourceResponseBody</p>
+     */
     public static class SaleControlAvailableResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableDiskType")
         private java.util.List < AvailableDiskType> availableDiskType;

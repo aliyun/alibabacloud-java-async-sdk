@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecurityGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecurityGroupRequest</p>
@@ -54,7 +55,11 @@ public class DeleteSecurityGroupRequest extends Request {
         } 
 
         /**
-         * The security group ID of the instance.
+         * <p>The security group ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4ph***</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

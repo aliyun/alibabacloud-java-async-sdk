@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDiskResponseBody</p>
@@ -61,7 +62,7 @@ public class CreateDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the instances.
+         * <p>The IDs of the instances.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.instanceIds = instanceIds;
@@ -69,10 +70,13 @@ public class CreateDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order. Multiple IDs are separated by commas (,).
-         * <p>
+         * <p>The ID of the order. Multiple IDs are separated by commas (,).</p>
+         * <blockquote>
+         * <p> This parameter is not returned for the pay-as-you-go billing method.</p>
+         * </blockquote>
          * 
-         * >  This parameter is not returned for the pay-as-you-go billing method.
+         * <strong>example:</strong>
+         * <p>21127020370****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -80,7 +84,10 @@ public class CreateDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7030AB96-57CF-1C68-9FEE-D60E547FD79C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

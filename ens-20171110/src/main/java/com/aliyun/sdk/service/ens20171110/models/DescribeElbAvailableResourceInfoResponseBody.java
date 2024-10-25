@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElbAvailableResourceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElbAvailableResourceInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about resources.
+         * <p>The information about resources.</p>
          */
         public Builder elbAvailableResourceInfo(java.util.List < ElbAvailableResourceInfo> elbAvailableResourceInfo) {
             this.elbAvailableResourceInfo = elbAvailableResourceInfo;
@@ -57,7 +58,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25AAD194-4A37-51CF-B1CA-1E86FDAC23A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElbAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElbAvailableResourceInfoResponseBody</p>
+     */
     public static class ElbAvailableResourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -169,7 +179,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             private String province; 
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SouthEast</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -177,7 +190,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resources that you can purchase.
+             * <p>The number of resources that you can purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder canBuyCount(String canBuyCount) {
                 this.canBuyCount = canBuyCount;
@@ -185,7 +201,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-guangdong-10</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -193,7 +212,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Edge Node Service (ENS) node.
+             * <p>The ID of the Edge Node Service (ENS) node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-guangdong-10</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -201,7 +223,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the ELB instances.
+             * <p>The specifications of the ELB instances.</p>
              */
             public Builder loadBalancerSpec(java.util.List < String > loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;
@@ -209,7 +231,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the node.
+             * <p>The Chinese name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -217,7 +242,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The province where the node is deployed.
+             * <p>The province where the node is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shanghai</p>
              */
             public Builder province(String province) {
                 this.province = province;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSnatIpForSnatEntryRequest} extends {@link RequestModel}
  *
  * <p>AddSnatIpForSnatEntryRequest</p>
@@ -69,7 +70,11 @@ public class AddSnatIpForSnatEntryRequest extends Request {
         } 
 
         /**
-         * The ID of the SNAT entry.
+         * <p>The ID of the SNAT entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-5xkzf89dndkzh8yg9stzqz9m4</p>
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -78,7 +83,11 @@ public class AddSnatIpForSnatEntryRequest extends Request {
         }
 
         /**
-         * The EIP specified in the SNAT entry.
+         * <p>The EIP specified in the SNAT entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219.152.82.144</p>
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);

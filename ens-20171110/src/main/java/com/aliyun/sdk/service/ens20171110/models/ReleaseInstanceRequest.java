@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReleaseInstanceRequest</p>
@@ -54,7 +55,11 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP.
+         * <p>The ID of the EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

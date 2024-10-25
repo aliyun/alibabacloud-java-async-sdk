@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeNetworkAttributeRequest</p>
@@ -54,7 +55,11 @@ public class DescribeNetworkAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);

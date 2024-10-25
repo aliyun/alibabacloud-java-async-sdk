@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkAclRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkAclRequest</p>
@@ -67,10 +68,11 @@ public class CreateNetworkAclRequest extends Request {
         } 
 
         /**
-         * The description of the network ACL.
-         * <p>
+         * <p>The description of the network ACL.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>This is my NetworkAcl.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -79,10 +81,11 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * Enter a name for the network ACL.
-         * <p>
+         * <p>Enter a name for the network ACL.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>acl-1</p>
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnloadRegionSDGResponseBody} extends {@link TeaModel}
  *
  * <p>UnloadRegionSDGResponseBody</p>
@@ -49,7 +50,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data object.
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UnloadRegionSDGResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnloadRegionSDGResponseBody</p>
+     */
     public static class FailedItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
         private String destinationRegionId;
@@ -109,7 +119,10 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * The ID of the destination node.
+             * <p>The ID of the destination node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-xxx</p>
              */
             public Builder destinationRegionId(String destinationRegionId) {
                 this.destinationRegionId = destinationRegionId;
@@ -117,7 +130,10 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region not found</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -131,6 +147,12 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UnloadRegionSDGResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnloadRegionSDGResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedCount")
         private Long failedCount;
@@ -182,7 +204,10 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             private Long successCount; 
 
             /**
-             * The number of failed tasks.
+             * <p>The number of failed tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -190,7 +215,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Details about failed tasks.
+             * <p>Details about failed tasks.</p>
              */
             public Builder failedItems(java.util.List < FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -198,7 +223,10 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The number of successful tasks.
+             * <p>The number of successful tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -212,6 +240,12 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UnloadRegionSDGResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnloadRegionSDGResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -263,7 +297,10 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The response message. Success is returned for a successful request.
+             * <p>The response message. Success is returned for a successful request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -271,7 +308,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the synchronization request.
+             * <p>The execution result of the synchronization request.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -279,11 +316,14 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether all tasks are successful. Valid values:
-             * <p>
+             * <p>Indicates whether all tasks are successful. Valid values:</p>
+             * <ul>
+             * <li>true: All tasks are successful.</li>
+             * <li>false: Failed tasks exist.</li>
+             * </ul>
              * 
-             * *   true: All tasks are successful.
-             * *   false: Failed tasks exist.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

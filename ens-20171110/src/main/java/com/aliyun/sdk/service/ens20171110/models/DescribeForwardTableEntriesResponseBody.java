@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeForwardTableEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeForwardTableEntriesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Details of DNAT entries.
+         * <p>Details of DNAT entries.</p>
          */
         public Builder forwardTableEntries(java.util.List < ForwardTableEntries> forwardTableEntries) {
             this.forwardTableEntries = forwardTableEntries;
@@ -93,7 +94,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeForwardTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeForwardTableEntriesResponseBody</p>
+     */
     public static class ForwardTableEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private String externalIp;
@@ -289,7 +308,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The EIP in the DNAT entry. The public IP address is used to access the Internet.
+             * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.XXX.XXX.70</p>
              */
             public Builder externalIp(String externalIp) {
                 this.externalIp = externalIp;
@@ -297,7 +319,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The external port or port range that is used in port forwarding.
+             * <p>The external port or port range that is used in port forwarding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -305,7 +330,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DNAT entry.
+             * <p>The ID of the DNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fwd-5tf66679oi2uoxcvlg0g2****</p>
              */
             public Builder forwardEntryId(String forwardEntryId) {
                 this.forwardEntryId = forwardEntryId;
@@ -313,7 +341,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the DNAT entry.
+             * <p>The name of the DNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test0</p>
              */
             public Builder forwardEntryName(String forwardEntryName) {
                 this.forwardEntryName = forwardEntryName;
@@ -321,7 +352,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The probe port of DNAT.
+             * <p>The probe port of DNAT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder healthCheckPort(String healthCheckPort) {
                 this.healthCheckPort = healthCheckPort;
@@ -329,7 +363,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the instance that uses the DNAT entry for Internet communication.
+             * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.XXX.XXX.3</p>
              */
             public Builder internalIp(String internalIp) {
                 this.internalIp = internalIp;
@@ -337,7 +374,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal port or port range that is used for port forwarding.
+             * <p>The internal port or port range that is used for port forwarding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -345,12 +385,15 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol. Valid values:
-             * <p>
+             * <p>The protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>TCP</strong>: forwards TCP packets.</li>
+             * <li><strong>UDP</strong>: forwards UDP packets.</li>
+             * <li><strong>Any</strong>: forwards all packets.</li>
+             * </ul>
              * 
-             * *   **TCP**: forwards TCP packets.
-             * *   **UDP**: forwards UDP packets.
-             * *   **Any**: forwards all packets.
+             * <strong>example:</strong>
+             * <p>Any</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -358,7 +401,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the NAT gateway.
+             * <p>The ID of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nat-5tawjw5j7sgd2deujxuk0****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -366,7 +412,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary EIP that is used to access the Internet.
+             * <p>The secondary EIP that is used to access the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101.XXX.XXX.7</p>
              */
             public Builder standbyExternalIp(String standbyExternalIp) {
                 this.standbyExternalIp = standbyExternalIp;
@@ -374,13 +423,16 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the secondary EIP. Valid values:
-             * <p>
+             * <p>The status of the secondary EIP. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * <li>Stopped</li>
+             * <li>Starting</li>
+             * </ul>
              * 
-             * *   Running
-             * *   Stopping
-             * *   Stopped
-             * *   Starting
+             * <strong>example:</strong>
+             * <p>Stopped</p>
              */
             public Builder standbyStatus(String standbyStatus) {
                 this.standbyStatus = standbyStatus;
@@ -388,12 +440,15 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DNAT entry. Valid values:
-             * <p>
+             * <p>The status of the DNAT entry. Valid values:</p>
+             * <ul>
+             * <li>Pending: The DNAT entry is being created or modified.</li>
+             * <li>Available: The DNAT entry is available.</li>
+             * <li>Deleting: The DNAT entry is being deleted.</li>
+             * </ul>
              * 
-             * *   Pending: The DNAT entry is being created or modified.
-             * *   Available: The DNAT entry is available.
-             * *   Deleting: The DNAT entry is being deleted.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

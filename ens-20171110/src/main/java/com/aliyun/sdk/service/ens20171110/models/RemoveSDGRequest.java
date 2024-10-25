@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveSDGRequest} extends {@link RequestModel}
  *
  * <p>RemoveSDGRequest</p>
@@ -54,7 +55,8 @@ public class RemoveSDGRequest extends Request {
         } 
 
         /**
-         * IDs of Android in Container (AIC) instances.
+         * <p>IDs of Android in Container (AIC) instances.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

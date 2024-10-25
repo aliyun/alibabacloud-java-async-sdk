@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteImageResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteImageResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned service code. A value of 0 indicates that the operation was successful.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -57,7 +61,10 @@ public class DeleteImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D94920B-0349-5097-A57F-31876405F2E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

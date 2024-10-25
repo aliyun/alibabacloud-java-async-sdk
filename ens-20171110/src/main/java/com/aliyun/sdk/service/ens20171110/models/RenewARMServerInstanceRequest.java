@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewARMServerInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewARMServerInstanceRequest</p>
@@ -98,11 +99,14 @@ public class RenewARMServerInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-renewal for the subscription. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>.</li>
+         * <li><strong>false</strong> (default).</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -111,7 +115,11 @@ public class RenewARMServerInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance that you want to renew.
+         * <p>The ID of the instance that you want to renew.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourInstance ID</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,7 +128,11 @@ public class RenewARMServerInstanceRequest extends Request {
         }
 
         /**
-         * The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.
+         * <p>The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -129,11 +141,15 @@ public class RenewARMServerInstanceRequest extends Request {
         }
 
         /**
-         * The unit of the renewal period. Valid values:
-         * <p>
+         * <p>The unit of the renewal period. Valid values:</p>
+         * <ul>
+         * <li>Month (default)</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Month (default)
-         * *   Year
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAutoRenewAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceAutoRenewAttributeRequest</p>
@@ -68,7 +69,11 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of an instance. Separate multiple IDs with semicolons (;).
+         * <p>The ID of an instance. Separate multiple IDs with semicolons (;).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5ci7l7k1m9m2zmhp4iw3o****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

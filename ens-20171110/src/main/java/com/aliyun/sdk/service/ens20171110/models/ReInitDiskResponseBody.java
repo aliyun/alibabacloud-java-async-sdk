@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReInitDiskResponseBody} extends {@link TeaModel}
  *
  * <p>ReInitDiskResponseBody</p>
@@ -49,7 +50,10 @@ public class ReInitDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned service code. A value of 0 indicates that the operation was successful.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -57,7 +61,10 @@ public class ReInitDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DD66F05-3116-4BAA-B588-52EB2E7F431D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

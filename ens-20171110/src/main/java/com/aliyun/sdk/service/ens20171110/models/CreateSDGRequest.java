@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSDGRequest} extends {@link RequestModel}
  *
  * <p>CreateSDGRequest</p>
@@ -96,10 +97,13 @@ public class CreateSDGRequest extends Request {
         } 
 
         /**
-         * The description of the SDG.
-         * <p>
+         * <p>The description of the SDG.</p>
+         * <blockquote>
+         * <p> We recommend that you specify this parameter in details for subsequent queries.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you specify this parameter in details for subsequent queries.
+         * <strong>example:</strong>
+         * <p>Testing SDGs</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -108,16 +112,20 @@ public class CreateSDGRequest extends Request {
         }
 
         /**
-         * The ID of the SDG from which you want to create an SDG.
-         * <p>
+         * <p>The ID of the SDG from which you want to create an SDG.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The first time you create an SDG, the <strong>FromSDGId</strong> parameter is empty.</p>
+         * </li>
+         * <li><p>If the value of the <strong>FromSDGId</strong> parameter is invalid or does not correspond to an original disk, an error is reported.</p>
+         * </li>
+         * <li><p>If the value of the <strong>FromSDGId</strong> parameter is not empty, you have created an SDG, and the operation is performed on the existing SDG.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   The first time you create an SDG, the **FromSDGId** parameter is empty.
-         * 
-         * *   If the value of the **FromSDGId** parameter is invalid or does not correspond to an original disk, an error is reported.
-         * 
-         * *   If the value of the **FromSDGId** parameter is not empty, you have created an SDG, and the operation is performed on the existing SDG.
+         * <strong>example:</strong>
+         * <p>sdg-xxxxx</p>
          */
         public Builder fromSDGId(String fromSDGId) {
             this.putQueryParameter("FromSDGId", fromSDGId);
@@ -126,7 +134,11 @@ public class CreateSDGRequest extends Request {
         }
 
         /**
-         * The ID of the AIC instance. You can call the [DescribeARMServerInstances](~~DescribeARMServerInstances~~) operation to query the ID.
+         * <p>The ID of the AIC instance. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic-xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -135,16 +147,20 @@ public class CreateSDGRequest extends Request {
         }
 
         /**
-         * The maximum capacity of the SDG. Unit: GB.
-         * <p>
+         * <p>The maximum capacity of the SDG. Unit: GB.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>To save costs, we recommend that you specify this parameter based on your business requirements.</p>
+         * </li>
+         * <li><p>The first time that you create an SDG, the <strong>Size</strong> parameter is required.</p>
+         * </li>
+         * <li><p>When the amount of data increases, you can pass a new <strong>Size</strong> parameter for resizing. If the value of the new <strong>Size</strong> parameter is greater than the value of the old <strong>Size</strong> parameter, the disk size of the SDG is increased to the size that is specified by the new <strong>Size</strong> parameter. If the value of the new <strong>Size</strong> parameter is empty or smaller than that of the old <strong>Size</strong> parameter, no operation is performed.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   To save costs, we recommend that you specify this parameter based on your business requirements.
-         * 
-         * *   The first time that you create an SDG, the **Size** parameter is required.
-         * 
-         * *   When the amount of data increases, you can pass a new **Size** parameter for resizing. If the value of the new **Size** parameter is greater than the value of the old **Size** parameter, the disk size of the SDG is increased to the size that is specified by the new **Size** parameter. If the value of the new **Size** parameter is empty or smaller than that of the old **Size** parameter, no operation is performed.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(String size) {
             this.putQueryParameter("Size", size);

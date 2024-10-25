@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsSaleControlStockResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class ModuleValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleMaxValue")
         private String moduleMaxValue;
@@ -131,6 +138,12 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class BasicSaleControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleValue")
         private ModuleValue moduleValue;
@@ -192,6 +205,12 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class ConditionControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionControlModuleCode")
         private String conditionControlModuleCode;
@@ -253,6 +272,12 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class ConditionSaleControlModuleValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleMaxValue")
         private String moduleMaxValue;
@@ -314,6 +339,12 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class ConditionSaleControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionControl")
         private ConditionControl conditionControl;
@@ -395,6 +426,12 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class SaleControlItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BasicSaleControl")
         private BasicSaleControl basicSaleControl;
@@ -456,6 +493,12 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class SaleControlItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
@@ -517,6 +560,12 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class SaleControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;

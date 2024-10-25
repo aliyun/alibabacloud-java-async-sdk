@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachDiskRequest} extends {@link RequestModel}
  *
  * <p>DetachDiskRequest</p>
@@ -69,7 +70,11 @@ public class DetachDiskRequest extends Request {
         } 
 
         /**
-         * The ID of the disk.
+         * <p>The ID of the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-5r7v69e0bejrnzger09w7****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -78,7 +83,11 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5inkeimcipxk26yqtzm4q****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachEnsInstancesRequest} extends {@link RequestModel}
  *
  * <p>AttachEnsInstancesRequest</p>
@@ -69,7 +70,11 @@ public class AttachEnsInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can specify only one instance ID.
+         * <p>The ID of the instance. You can specify only one instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testInstacneId</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +83,11 @@ public class AttachEnsInstancesRequest extends Request {
         }
 
         /**
-         * The command that you want to execute on the instance. The command must be encoded in Base64 or UTF-8.
+         * <p>The command that you want to execute on the instance. The command must be encoded in Base64 or UTF-8.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wget d2dldCBodHRwOi8vYWxpYWNzLWs4cy1jbxxxx</p>
          */
         public Builder scripts(String scripts) {
             this.putQueryParameter("Scripts", scripts);

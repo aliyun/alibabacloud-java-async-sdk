@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopSnatIpForSnatEntryResponseBody} extends {@link TeaModel}
  *
  * <p>StopSnatIpForSnatEntryResponseBody</p>
@@ -37,7 +38,10 @@ public class StopSnatIpForSnatEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A415CB9-7591-566F-924B-32709578756B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

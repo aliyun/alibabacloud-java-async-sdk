@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PrepareUploadRequest} extends {@link RequestModel}
  *
  * <p>PrepareUploadRequest</p>
@@ -68,7 +69,11 @@ public class PrepareUploadRequest extends Request {
         } 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -77,7 +82,10 @@ public class PrepareUploadRequest extends Request {
         }
 
         /**
-         * The specified IP address. This parameter is applicable to scenarios where the user IP address is inconsistent with the operation calling IP address, such as the scenario where the server obtains authorization and sends the authorization to the client.
+         * <p>The specified IP address. This parameter is applicable to scenarios where the user IP address is inconsistent with the operation calling IP address, such as the scenario where the server obtains authorization and sends the authorization to the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180.166.XX.XXX</p>
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);

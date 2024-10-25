@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEnsSaleControlRequest} extends {@link RequestModel}
  *
  * <p>DeleteEnsSaleControlRequest</p>
@@ -106,7 +107,7 @@ public class DeleteEnsSaleControlRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * <p>This parameter is required.</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -124,7 +125,7 @@ public class DeleteEnsSaleControlRequest extends Request {
         }
 
         /**
-         * SaleControls.
+         * <p>This parameter is required.</p>
          */
         public Builder saleControls(java.util.List < SaleControls> saleControls) {
             String saleControlsShrink = shrink(saleControls, "SaleControls", "json");
@@ -140,6 +141,12 @@ public class DeleteEnsSaleControlRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteEnsSaleControlRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteEnsSaleControlRequest</p>
+     */
     public static class SaleControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleCode")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -181,7 +188,7 @@ public class DeleteEnsSaleControlRequest extends Request {
             private String orderType; 
 
             /**
-             * ModuleCode.
+             * <p>This parameter is required.</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -189,7 +196,7 @@ public class DeleteEnsSaleControlRequest extends Request {
             }
 
             /**
-             * OrderType.
+             * <p>This parameter is required.</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;

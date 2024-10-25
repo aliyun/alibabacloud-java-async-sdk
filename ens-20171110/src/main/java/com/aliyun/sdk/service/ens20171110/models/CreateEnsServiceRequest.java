@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnsServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateEnsServiceRequest</p>
@@ -69,7 +70,11 @@ public class CreateEnsServiceRequest extends Request {
         } 
 
         /**
-         * The ID of the resource that you want to obtain. You can specify only one ID in a request.
+         * <p>The ID of the resource that you want to obtain. You can specify only one ID in a request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens-20190806****</p>
          */
         public Builder ensServiceId(String ensServiceId) {
             this.putQueryParameter("EnsServiceId", ensServiceId);
@@ -78,11 +83,15 @@ public class CreateEnsServiceRequest extends Request {
         }
 
         /**
-         * The operation to perform after you preview the created edge service. Valid values:
-         * <p>
+         * <p>The operation to perform after you preview the created edge service. Valid values:</p>
+         * <ul>
+         * <li><strong>Buy</strong>: create</li>
+         * <li><strong>Upgrade</strong>: change</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Buy**: create
-         * *   **Upgrade**: change
+         * <strong>example:</strong>
+         * <p>Buy</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);

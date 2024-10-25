@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopLoadBalancerListenerRequest} extends {@link RequestModel}
  *
  * <p>StopLoadBalancerListenerRequest</p>
@@ -83,7 +84,11 @@ public class StopLoadBalancerListenerRequest extends Request {
         } 
 
         /**
-         * The listener port that you want to disable. Valid values: **1** to **65535**.
+         * <p>The listener port that you want to disable. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -92,10 +97,13 @@ public class StopLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * The frontend protocol that is used by the ELB instance.
-         * <p>
+         * <p>The frontend protocol that is used by the ELB instance.</p>
+         * <blockquote>
+         * <p> This parameter is required if the same port is used by listeners that use different protocols.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if the same port is used by listeners that use different protocols.
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -104,7 +112,11 @@ public class StopLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * The ID of the ELB instance.
+         * <p>The ID of the ELB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5sc1s9zrui8lpb8u7cl4f****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);

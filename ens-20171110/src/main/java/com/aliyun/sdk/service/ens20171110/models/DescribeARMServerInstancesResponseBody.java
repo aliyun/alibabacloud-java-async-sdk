@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeARMServerInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeARMServerInstancesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the servers and the AIC instances.
+         * <p>The information about the servers and the AIC instances.</p>
          */
         public Builder servers(java.util.List < Servers> servers) {
             this.servers = servers;
@@ -117,7 +127,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeARMServerInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeARMServerInstancesResponseBody</p>
+     */
     public static class NetworkAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
@@ -181,7 +200,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The IP address of the AIC instance.
+             * <p>The IP address of the AIC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -189,7 +211,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The network ID of the AIC instance.
+             * <p>The network ID of the AIC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-*****</p>
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -197,7 +222,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the AIC instance.
+             * <p>The vSwitch ID of the AIC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -211,6 +239,12 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeARMServerInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeARMServerInstancesResponseBody</p>
+     */
     public static class SdgDeployInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SDGId")
         private String SDGId;
@@ -250,7 +284,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the SDG.
+             * <p>The ID of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdg-xxxxx</p>
              */
             public Builder SDGId(String SDGId) {
                 this.SDGId = SDGId;
@@ -258,12 +295,15 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment status of the SDG. Valid values:
-             * <p>
+             * <p>The deployment status of the SDG. Valid values:</p>
+             * <ul>
+             * <li><strong>sdg_deploying</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>success</strong></li>
+             * </ul>
              * 
-             * *   **sdg_deploying**
-             * *   **failed**
-             * *   **success**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -277,6 +317,12 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeARMServerInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeARMServerInstancesResponseBody</p>
+     */
     public static class AICInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Frequency")
         private Long frequency;
@@ -424,7 +470,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The refresh rate of the AIC instance. Unit: Hz.
+             * <p>The refresh rate of the AIC instance. Unit: Hz.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder frequency(Long frequency) {
                 this.frequency = frequency;
@@ -432,7 +481,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AIC image.
+             * <p>The ID of the AIC image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -440,7 +492,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AIC instance.
+             * <p>The ID of the AIC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic-instance****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -448,7 +503,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that was most recently performed.
+             * <p>The operation that was most recently performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServerCreate</p>
              */
             public Builder latestAction(String latestAction) {
                 this.latestAction = latestAction;
@@ -456,7 +514,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AIC-Name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -464,7 +525,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The network attributes of the AIC instance.
+             * <p>The network attributes of the AIC instance.</p>
              */
             public Builder networkAttributes(NetworkAttributes networkAttributes) {
                 this.networkAttributes = networkAttributes;
@@ -472,7 +533,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The resolution of the AIC instance.
+             * <p>The resolution of the AIC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920*1080</p>
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;
@@ -480,7 +544,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the shared data group (SDG) that is deployed on the AIC instance.
+             * <p>The information about the shared data group (SDG) that is deployed on the AIC instance.</p>
              */
             public Builder sdgDeployInfo(SdgDeployInfo sdgDeployInfo) {
                 this.sdgDeployInfo = sdgDeployInfo;
@@ -488,7 +552,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the AIC instance.
+             * <p>The specification of the AIC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic.cf53r.c2.np</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -496,15 +563,18 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The operation status of the AIC instance. Valid values:
-             * <p>
+             * <p>The operation status of the AIC instance. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>creating</strong></li>
+             * <li><strong>releasing</strong></li>
+             * <li><strong>rebooting</strong></li>
+             * <li><strong>reseting</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **failed**
-             * *   **creating**
-             * *   **releasing**
-             * *   **rebooting**
-             * *   **reseting**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -512,12 +582,15 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the AIC instance. Valid values:
-             * <p>
+             * <p>The running status of the AIC instance. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong></li>
+             * <li><strong>pending</strong></li>
+             * <li><strong>terminating</strong></li>
+             * </ul>
              * 
-             * *   **running**
-             * *   **pending**
-             * *   **terminating**
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -531,6 +604,12 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeARMServerInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeARMServerInstancesResponseBody</p>
+     */
     public static class Servers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AICInstances")
         private java.util.List < AICInstances> AICInstances;
@@ -690,7 +769,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The information about the AIC instances.
+             * <p>The information about the AIC instances.</p>
              */
             public Builder AICInstances(java.util.List < AICInstances> AICInstances) {
                 this.AICInstances = AICInstances;
@@ -698,7 +777,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-07 11:59:09</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -706,7 +788,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENS node.
+             * <p>The ID of the ENS node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hanghzou-27</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -714,7 +799,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2027-05-07 11:59:09</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -722,7 +810,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that was most recently performed.
+             * <p>The operation that was most recently performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServerCreate</p>
              */
             public Builder latestAction(String latestAction) {
                 this.latestAction = latestAction;
@@ -730,7 +821,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Server-Name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -738,7 +832,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the cluster to which the server belongs.
+             * <p>The namespace of the cluster to which the server belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -746,7 +843,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prepay</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -754,7 +854,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cas-******</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -762,7 +865,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The server specification.
+             * <p>The server specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cas.cf53r</p>
              */
             public Builder specName(String specName) {
                 this.specName = specName;
@@ -770,15 +876,18 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The operation status of the server. Valid values:
-             * <p>
+             * <p>The operation status of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>creating</strong></li>
+             * <li><strong>releasing</strong></li>
+             * <li><strong>rebooting</strong></li>
+             * <li><strong>upgrading</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **failed**
-             * *   **creating**
-             * *   **releasing**
-             * *   **rebooting**
-             * *   **upgrading**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -786,13 +895,16 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the server. Valid values:
-             * <p>
+             * <p>The running status of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong></li>
+             * <li><strong>stopping</strong></li>
+             * <li><strong>down</strong></li>
+             * <li><strong>starting</strong></li>
+             * </ul>
              * 
-             * *   **running**
-             * *   **stopping**
-             * *   **down**
-             * *   **starting**
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;

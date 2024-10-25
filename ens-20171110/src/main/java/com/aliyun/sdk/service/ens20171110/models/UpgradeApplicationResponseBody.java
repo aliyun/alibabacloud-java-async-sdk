@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeApplicationResponseBody</p>
@@ -49,7 +50,10 @@ public class UpgradeApplicationResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class UpgradeApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID. You can use the task ID to query the upgrade progress or status.
+         * <p>The task ID. You can use the task ID to query the upgrade progress or status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6f24a774-6bd5-4026-bb7d-deffb1dad875</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

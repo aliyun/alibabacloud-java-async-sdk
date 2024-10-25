@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddNetworkInterfaceToInstanceRequest} extends {@link RequestModel}
  *
  * <p>AddNetworkInterfaceToInstanceRequest</p>
@@ -83,7 +84,10 @@ public class AddNetworkInterfaceToInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to specify the instance.
+         * <p>Specifies whether to specify the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoStart(Boolean autoStart) {
             this.putQueryParameter("AutoStart", autoStart);
@@ -92,7 +96,11 @@ public class AddNetworkInterfaceToInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourInstance ID</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +109,11 @@ public class AddNetworkInterfaceToInstanceRequest extends Request {
         }
 
         /**
-         * The network. The value is a JSON string. Only IPv6 is supported. Sample code of an IPv6 network: \[{ "ipType": "public", "ipAddressType": "ipv6" }]
+         * <p>The network. The value is a JSON string. Only IPv6 is supported. Sample code of an IPv6 network: [{ &quot;ipType&quot;: &quot;public&quot;, &quot;ipAddressType&quot;: &quot;ipv6&quot; }]</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ipType&quot;: &quot;public&quot;, &quot;ipAddressType&quot;: &quot;ipv6&quot; }]</p>
          */
         public Builder networks(String networks) {
             this.putQueryParameter("Networks", networks);

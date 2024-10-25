@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDeviceInternetPortRequest} extends {@link RequestModel}
  *
  * <p>DeleteDeviceInternetPortRequest</p>
@@ -84,7 +85,11 @@ public class DeleteDeviceInternetPortRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can specify the ID of the server or container.
+         * <p>The ID of the instance. You can specify the ID of the server or container.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5scdmgpdegymqyugf85q66l1a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,11 +98,15 @@ public class DeleteDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * The type of the NAT gateway. The value must be of the enumerated data type. Valid values:
-         * <p>
+         * <p>The type of the NAT gateway. The value must be of the enumerated data type. Valid values:</p>
+         * <ul>
+         * <li>SNAT</li>
+         * <li>DNAT</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   SNAT
-         * *   DNAT
+         * <strong>example:</strong>
+         * <p>DNAT</p>
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -106,7 +115,11 @@ public class DeleteDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-5rfzxah5gzfo869fl6epvon3y</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

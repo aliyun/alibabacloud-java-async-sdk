@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageInfosRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageInfosRequest</p>
@@ -53,11 +54,14 @@ public class DescribeImageInfosRequest extends Request {
         } 
 
         /**
-         * The operating system (OS). You can specify only one OS in a request. If you do not specify a value for this parameter, images for all supported OSs are queried. Valid values:
-         * <p>
+         * <p>The operating system (OS). You can specify only one OS in a request. If you do not specify a value for this parameter, images for all supported OSs are queried. Valid values:</p>
+         * <ul>
+         * <li>linux</li>
+         * <li>windows</li>
+         * </ul>
          * 
-         * *   linux
-         * *   windows
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApplicationResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the application. This is the unique identifier of the edge application.
+         * <p>The ID of the application. This is the unique identifier of the edge application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d0639abf-789a-4527-b420-031d2cd9ad9b</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -57,7 +61,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

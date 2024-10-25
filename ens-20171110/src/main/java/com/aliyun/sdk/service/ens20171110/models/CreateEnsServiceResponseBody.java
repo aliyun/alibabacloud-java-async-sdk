@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnsServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEnsServiceResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateEnsServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The service code. 0 is returned for a successful request. An error code is returned for a failed request.
+         * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -57,7 +61,10 @@ public class CreateEnsServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AF02B43-2D08-49D3-8AAF-65B9C792ED14</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

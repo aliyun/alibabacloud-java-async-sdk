@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PrepareUploadResponseBody} extends {@link TeaModel}
  *
  * <p>PrepareUploadResponseBody</p>
@@ -61,7 +62,10 @@ public class PrepareUploadResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the bucket. This parameter is available only when the OSS SDK is used.
+         * <p>The name of the bucket. This parameter is available only when the OSS SDK is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-xxxxxx</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -69,7 +73,10 @@ public class PrepareUploadResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint. This parameter is available only when the OSS SDK is used.
+         * <p>The endpoint. This parameter is available only when the OSS SDK is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eos.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -77,7 +84,10 @@ public class PrepareUploadResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6666C5A5-75ED-422E-A022-7121FA18C968</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

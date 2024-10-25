@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServcieScheduleRequest} extends {@link RequestModel}
  *
  * <p>DescribeServcieScheduleRequest</p>
@@ -83,7 +84,11 @@ public class DescribeServcieScheduleRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>474bdef0-d149-4695-abfb-52912d91****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -92,7 +97,10 @@ public class DescribeServcieScheduleRequest extends Request {
         }
 
         /**
-         * This parameter does not take effect.
+         * <p>This parameter does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
          */
         public Builder podConfigName(String podConfigName) {
             this.putQueryParameter("PodConfigName", podConfigName);
@@ -101,7 +109,11 @@ public class DescribeServcieScheduleRequest extends Request {
         }
 
         /**
-         * The unique ID of the device.
+         * <p>The unique ID of the device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdm_f022bf160dc69e2d8eb421e508eb****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

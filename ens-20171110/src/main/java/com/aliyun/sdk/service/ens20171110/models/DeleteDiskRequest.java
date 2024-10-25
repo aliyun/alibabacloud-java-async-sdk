@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDiskRequest} extends {@link RequestModel}
  *
  * <p>DeleteDiskRequest</p>
@@ -54,7 +55,11 @@ public class DeleteDiskRequest extends Request {
         } 
 
         /**
-         * The ID of the disk.
+         * <p>The ID of the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-5va95bg6i5f44kgkeuazyfcxm</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);

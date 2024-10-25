@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetDiskRequest} extends {@link RequestModel}
  *
  * <p>ResetDiskRequest</p>
@@ -69,7 +70,11 @@ public class ResetDiskRequest extends Request {
         } 
 
         /**
-         * The ID of the disk that you want to roll back.
+         * <p>The ID of the disk that you want to roll back.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp199lyny9b3****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -78,7 +83,11 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot that you want to use to roll back the disk.
+         * <p>The ID of the snapshot that you want to use to roll back the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-bp199lyny9b3****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

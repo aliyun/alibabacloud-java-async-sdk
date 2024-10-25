@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteKeyPairsRequest} extends {@link RequestModel}
  *
  * <p>DeleteKeyPairsRequest</p>
@@ -67,7 +68,10 @@ public class DeleteKeyPairsRequest extends Request {
         } 
 
         /**
-         * The ID of the SSH key pair.
+         * <p>The ID of the SSH key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh-5lywanlkih1zo9yl8eg****</p>
          */
         public Builder keyPairId(String keyPairId) {
             this.putQueryParameter("KeyPairId", keyPairId);
@@ -76,14 +80,16 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * The name of the key pair. The name must conform to the following naming conventions:
-         * <p>
+         * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
+         * <p>Before you delete a key pair, you can call the DescribeKeyPairs operation to query existing key pairs.</p>
          * 
-         * *   The name must be 2 to 128 characters in length.
-         * *   The name must start with a letter and cannot start with `http://` or `https://`.
-         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-         * 
-         * Before you delete a key pair, you can call the DescribeKeyPairs operation to query existing key pairs.
+         * <strong>example:</strong>
+         * <p>TestKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);

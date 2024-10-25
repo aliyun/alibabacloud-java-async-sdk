@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageRequest} extends {@link RequestModel}
  *
  * <p>CreateImageRequest</p>
@@ -96,12 +97,15 @@ public class CreateImageRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically release the instance after the image is packaged and uploaded. Only image builders are supported. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically release the instance after the image is packaged and uploaded. Only image builders are supported. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true: The image is released when the instance is released.</li>
+         * <li>false: The image is retained when the instance is released.</li>
+         * <li>If you leave this parameter empty, the default value is used.</li>
+         * </ul>
          * 
-         * *   true: The image is released when the instance is released.
-         * *   false: The image is retained when the instance is released.
-         * *   If you leave this parameter empty, the default value is used.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteAfterImageUpload(String deleteAfterImageUpload) {
             this.putQueryParameter("DeleteAfterImageUpload", deleteAfterImageUpload);
@@ -110,7 +114,11 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The name of the image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (<em>), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (</em>), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -119,7 +127,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5rr1bnyrc4tswr8cq3w6y****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,7 +139,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp67acfmxazb4p****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

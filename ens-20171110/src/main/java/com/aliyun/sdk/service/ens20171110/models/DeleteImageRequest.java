@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteImageRequest} extends {@link RequestModel}
  *
  * <p>DeleteImageRequest</p>
@@ -54,10 +55,12 @@ public class DeleteImageRequest extends Request {
         } 
 
         /**
-         * The ID of the image. You can specify only one image ID.
-         * <p>
+         * <p>The ID of the image. You can specify only one image ID.</p>
+         * <p>You can delete only custom images that you created.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can delete only custom images that you created.
+         * <strong>example:</strong>
+         * <p>m-5taesrgwpo9zqj9cjqu792****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);

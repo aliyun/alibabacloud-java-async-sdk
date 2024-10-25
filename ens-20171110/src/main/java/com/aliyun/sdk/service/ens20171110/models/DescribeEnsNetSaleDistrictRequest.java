@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsNetSaleDistrictRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsNetSaleDistrictRequest</p>
@@ -68,11 +69,14 @@ public class DescribeEnsNetSaleDistrictRequest extends Request {
         } 
 
         /**
-         * The region code.
-         * <p>
+         * <p>The region code.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, only nodes under the area level that is specified by NetLevelCode are queried.</li>
+         * <li>If you specify this parameter, only child nodes in the area that is specified by NetDistrictCode are queried.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, only nodes under the area level that is specified by NetLevelCode are queried.
-         * *   If you specify this parameter, only child nodes in the area that is specified by NetDistrictCode are queried.
+         * <strong>example:</strong>
+         * <p>100105</p>
          */
         public Builder netDistrictCode(String netDistrictCode) {
             this.putQueryParameter("NetDistrictCode", netDistrictCode);
@@ -81,12 +85,16 @@ public class DescribeEnsNetSaleDistrictRequest extends Request {
         }
 
         /**
-         * The network level. Valid values:
-         * <p>
+         * <p>The network level. Valid values:</p>
+         * <ul>
+         * <li><strong>Big</strong>: area</li>
+         * <li><strong>Middle</strong>: province</li>
+         * <li><strong>Small</strong>: city</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Big**: area
-         * *   **Middle**: province
-         * *   **Small**: city
+         * <strong>example:</strong>
+         * <p>Big</p>
          */
         public Builder netLevelCode(String netLevelCode) {
             this.putQueryParameter("NetLevelCode", netLevelCode);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerSpecResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoadBalancerSpecResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The specifications. Valid values:
+         * <p>The specifications. Valid values:</p>
          */
         public Builder loadBalancerSpecs(java.util.List < LoadBalancerSpecs> loadBalancerSpecs) {
             this.loadBalancerSpecs = loadBalancerSpecs;
@@ -93,7 +94,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoadBalancerSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerSpecResponseBody</p>
+     */
     public static class LoadBalancerSpecs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -169,7 +188,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
             private String loadBalancerSpec; 
 
             /**
-             * The display name of the instance type.
+             * <p>The display name of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elb.s1.small</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -177,7 +199,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the ELB instance.
+             * <p>The specifications of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elb.s1.small</p>
              */
             public Builder loadBalancerSpec(String loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;

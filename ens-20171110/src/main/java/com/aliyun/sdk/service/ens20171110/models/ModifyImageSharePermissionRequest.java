@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageSharePermissionRequest} extends {@link RequestModel}
  *
  * <p>ModifyImageSharePermissionRequest</p>
@@ -82,7 +83,10 @@ public class ModifyImageSharePermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account with which you want to share the image. You can specify multiple Alibaba Cloud IDs. Separate multiple IDs with commas (,).
+         * <p>The ID of the Alibaba Cloud account with which you want to share the image. You can specify multiple Alibaba Cloud IDs. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1122334455**</p>
          */
         public Builder addAccounts(String addAccounts) {
             this.putQueryParameter("AddAccounts", addAccounts);
@@ -91,7 +95,11 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the image. You can specify only one image ID. Custom images and public images are supported.
+         * <p>The ID of the image. You can specify only one image ID. Custom images and public images are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5s7qotzavwbrnzaqh4unm****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -100,7 +108,10 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account from which you want to unshare the image. You can specify only one Alibaba Cloud account ID.
+         * <p>The ID of the Alibaba Cloud account from which you want to unshare the image. You can specify only one Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113355**</p>
          */
         public Builder removeAccounts(String removeAccounts) {
             this.putQueryParameter("RemoveAccounts", removeAccounts);

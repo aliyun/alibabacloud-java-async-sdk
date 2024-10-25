@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeDiskRequest} extends {@link RequestModel}
  *
  * <p>ResizeDiskRequest</p>
@@ -69,7 +70,11 @@ public class ResizeDiskRequest extends Request {
         } 
 
         /**
-         * The ID of the disk that you want to resize.
+         * <p>The ID of the disk that you want to resize.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-5tzm9wnhzlhjzcbtxo465****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -78,7 +83,11 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * The size of the disk that you want to resize. Unit: GiB.
+         * <p>The size of the disk that you want to resize. Unit: GiB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder newSize(String newSize) {
             this.putQueryParameter("NewSize", newSize);

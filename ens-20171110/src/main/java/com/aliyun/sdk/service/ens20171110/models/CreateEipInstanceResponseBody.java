@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEipInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEipInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateEipInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the EIP.
+         * <p>The ID of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-25877c70gddh****</p>
          */
         public Builder allocationId(String allocationId) {
             this.allocationId = allocationId;
@@ -57,7 +61,10 @@ public class CreateEipInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DB6123F-470D-510A-A9EB-EBA799340452</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

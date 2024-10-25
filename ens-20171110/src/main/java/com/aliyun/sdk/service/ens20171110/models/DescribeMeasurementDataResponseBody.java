@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeasurementDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMeasurementDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The metering data returned.
+         * <p>The metering data returned.</p>
          */
         public Builder measurementDatas(MeasurementDatas measurementDatas) {
             this.measurementDatas = measurementDatas;
@@ -57,7 +58,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeasurementDataResponseBody</p>
+     */
     public static class BandWidthFeeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CostCode")
         private String costCode;
@@ -121,7 +131,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private Integer costVal; 
 
             /**
-             * The code of the bandwidth plan.
+             * <p>The code of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-cmcc-1</p>
              */
             public Builder costCode(String costCode) {
                 this.costCode = costCode;
@@ -129,7 +142,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the bandwidth plan.
+             * <p>The name of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing, Shanghai, and Guangzhou Mobile</p>
              */
             public Builder costName(String costName) {
                 this.costName = costName;
@@ -137,7 +153,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth consumption. Unit: bit/second.
+             * <p>The bandwidth consumption. Unit: bit/second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16486</p>
              */
             public Builder costVal(Integer costVal) {
                 this.costVal = costVal;
@@ -151,6 +170,12 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeasurementDataResponseBody</p>
+     */
     public static class BandWidthFeeDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandWidthFeeData")
         private java.util.List < BandWidthFeeData> bandWidthFeeData;
@@ -192,6 +217,12 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeasurementDataResponseBody</p>
+     */
     public static class ResourceFeeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
@@ -243,7 +274,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private Integer vcpu; 
 
             /**
-             * The memory size. Unit: GB.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -251,7 +285,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity. Unit: GB.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -259,7 +296,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder vcpu(Integer vcpu) {
                 this.vcpu = vcpu;
@@ -273,6 +313,12 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeasurementDataResponseBody</p>
+     */
     public static class ResourceFeeDataDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CostCode")
         private String costCode;
@@ -336,7 +382,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The code of the resource.
+             * <p>The code of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vCPU</p>
              */
             public Builder costCode(String costCode) {
                 this.costCode = costCode;
@@ -344,7 +393,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vCPU</p>
              */
             public Builder costName(String costName) {
                 this.costName = costName;
@@ -352,12 +404,15 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption of the resource.
-             * <p>
+             * <p>The consumption of the resource.</p>
+             * <ul>
+             * <li>Memory unit: GB.</li>
+             * <li>CPU unit: vCPU.</li>
+             * <li>Storage unit: GB.</li>
+             * </ul>
              * 
-             * *   Memory unit: GB.
-             * *   CPU unit: vCPU.
-             * *   Storage unit: GB.
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder costVal(Integer costVal) {
                 this.costVal = costVal;
@@ -365,7 +420,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vCPU</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -379,6 +437,12 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeasurementDataResponseBody</p>
+     */
     public static class ResourceFeeDataDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceFeeDataDetail")
         private java.util.List < ResourceFeeDataDetail> resourceFeeDataDetail;
@@ -420,6 +484,12 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeasurementDataResponseBody</p>
+     */
     public static class MeasurementData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandWidthFeeDatas")
         private BandWidthFeeDatas bandWidthFeeDatas;
@@ -519,7 +589,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private ResourceFeeDataDetails resourceFeeDataDetails; 
 
             /**
-             * The bandwidth data returned.
+             * <p>The bandwidth data returned.</p>
              */
             public Builder bandWidthFeeDatas(BandWidthFeeDatas bandWidthFeeDatas) {
                 this.bandWidthFeeDatas = bandWidthFeeDatas;
@@ -527,11 +597,14 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method. Valid values:
-             * <p>
+             * <p>The metering method. Valid values:</p>
+             * <ul>
+             * <li>ChargeByUnified: unified metering.</li>
+             * <li>ChargeByGrade: differential metering.</li>
+             * </ul>
              * 
-             * *   ChargeByUnified: unified metering.
-             * *   ChargeByGrade: differential metering.
+             * <strong>example:</strong>
+             * <p>ChargeByGrade</p>
              */
             public Builder chargeModel(String chargeModel) {
                 this.chargeModel = chargeModel;
@@ -539,7 +612,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The metering cycle.
+             * <p>The metering cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-07-30</p>
              */
             public Builder costCycle(String costCycle) {
                 this.costCycle = costCycle;
@@ -547,7 +623,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the metering cycle.
+             * <p>The end time of the metering cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-07-30T16:00:00Z</p>
              */
             public Builder costEndTime(String costEndTime) {
                 this.costEndTime = costEndTime;
@@ -555,7 +634,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the metering cycle.
+             * <p>The start time of the metering cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-07-29T16:00:00Z</p>
              */
             public Builder costStartTime(String costStartTime) {
                 this.costStartTime = costStartTime;
@@ -563,7 +645,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * The information about computing resources.
+             * <p>The information about computing resources.</p>
              */
             public Builder resourceFeeData(ResourceFeeData resourceFeeData) {
                 this.resourceFeeData = resourceFeeData;
@@ -571,7 +653,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the computing resources.
+             * <p>Details of the computing resources.</p>
              */
             public Builder resourceFeeDataDetails(ResourceFeeDataDetails resourceFeeDataDetails) {
                 this.resourceFeeDataDetails = resourceFeeDataDetails;
@@ -585,6 +667,12 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeasurementDataResponseBody</p>
+     */
     public static class MeasurementDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MeasurementData")
         private java.util.List < MeasurementData> measurementData;

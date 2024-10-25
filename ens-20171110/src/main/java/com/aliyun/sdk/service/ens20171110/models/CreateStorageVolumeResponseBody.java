@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStorageVolumeResponseBody} extends {@link TeaModel}
  *
  * <p>CreateStorageVolumeResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateStorageVolumeResponseBody extends TeaModel {
         private java.util.List < String > volumeId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7030AB96-57CF-1C68-9FEE-D60E547FD79C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class CreateStorageVolumeResponseBody extends TeaModel {
         }
 
         /**
-         * An array of volume IDs.
+         * <p>An array of volume IDs.</p>
          */
         public Builder volumeId(java.util.List < String > volumeId) {
             this.volumeId = volumeId;

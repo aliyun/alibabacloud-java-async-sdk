@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnatEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteSnatEntryRequest</p>
@@ -54,7 +55,11 @@ public class DeleteSnatEntryRequest extends Request {
         } 
 
         /**
-         * The ID of the SNAT entry that you want to delete.
+         * <p>The ID of the SNAT entry that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-5tfi6f8gds82mjmlofeym****</p>
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);

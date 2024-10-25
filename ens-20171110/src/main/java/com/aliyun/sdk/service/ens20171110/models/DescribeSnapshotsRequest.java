@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnapshotsRequest</p>
@@ -123,7 +124,10 @@ public class DescribeSnapshotsRequest extends Request {
         } 
 
         /**
-         * The ID of the disk.
+         * <p>The ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -132,7 +136,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -141,7 +148,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -150,7 +160,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -159,7 +172,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,7 +184,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).
+         * <p>The ID of the snapshot. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-bp67acfmxazb4p****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

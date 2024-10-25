@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudDiskTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudDiskTypesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
         private SupportResources supportResources; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77990CEE-B714-5702-BDE6-943F702277DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The specifications of resources that you can purchase.
+         * <p>The specifications of resources that you can purchase.</p>
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -70,6 +74,12 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudDiskTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDiskTypesResponseBody</p>
+     */
     public static class SupportResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -109,13 +119,16 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
             private String ensRegionId; 
 
             /**
-             * The category of the disk.
-             * <p>
+             * <p>The category of the disk.</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: all-flash disk.</li>
+             * <li>local_hdd: local HDD.</li>
+             * <li>local_ssd: local SSD.</li>
+             * </ul>
              * 
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: all-flash disk.
-             * *   local_hdd: local HDD.
-             * *   local_ssd: local SSD.
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -123,7 +136,10 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the edge node.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-guangzhou-10</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -137,6 +153,12 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudDiskTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDiskTypesResponseBody</p>
+     */
     public static class SupportResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportResource")
         private java.util.List < SupportResource> supportResource;

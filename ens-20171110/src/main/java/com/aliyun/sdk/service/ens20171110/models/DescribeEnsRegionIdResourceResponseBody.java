@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionIdResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsRegionIdResourceResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned data. For more information, see EnsRegionIdResources in sample JSON responses.
+         * <p>The returned data. For more information, see EnsRegionIdResources in sample JSON responses.</p>
          */
         public Builder ensRegionIdResources(EnsRegionIdResources ensRegionIdResources) {
             this.ensRegionIdResources = ensRegionIdResources;
@@ -93,7 +94,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>476600B1-C9E2-4245-A26F-DC7EA8071425</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of queried nodes.
+         * <p>The total number of queried nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsRegionIdResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRegionIdResourceResponseBody</p>
+     */
     public static class EnsRegionIdResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -253,7 +272,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             private Integer vCpu; 
 
             /**
-             * The region. Set the value to West.
+             * <p>The region. Set the value to West.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>West</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -261,7 +283,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the region.
+             * <p>The code of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300100</p>
              */
             public Builder areaCode(String areaCode) {
                 this.areaCode = areaCode;
@@ -269,7 +294,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The date when the transaction was processed.
+             * <p>The date when the transaction was processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-30</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -277,7 +305,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-telecom</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -285,7 +316,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nanjing Mobile</p>
              */
             public Builder ensRegionIdName(String ensRegionIdName) {
                 this.ensRegionIdName = ensRegionIdName;
@@ -293,7 +327,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -301,7 +338,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The public bandwidth of the instance. Unit: Bits/s.
+             * <p>The public bandwidth of the instance. Unit: Bits/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder internetBandwidth(Long internetBandwidth) {
                 this.internetBandwidth = internetBandwidth;
@@ -309,13 +349,16 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ISP. Valid values:
-             * <p>
+             * <p>The ISP. Valid values:</p>
+             * <ul>
+             * <li>cmcc: China Mobile</li>
+             * <li>unicom: China Unicom</li>
+             * <li>telecom: China Telecom</li>
+             * <li>multiCarrier: multi-line ISP</li>
+             * </ul>
              * 
-             * *   cmcc: China Mobile
-             * *   unicom: China Unicom
-             * *   telecom: China Telecom
-             * *   multiCarrier: multi-line ISP
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -323,7 +366,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder vCpu(Integer vCpu) {
                 this.vCpu = vCpu;
@@ -337,6 +383,12 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsRegionIdResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRegionIdResourceResponseBody</p>
+     */
     public static class EnsRegionIdResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionIdResource")
         private java.util.List < EnsRegionIdResource> ensRegionIdResource;

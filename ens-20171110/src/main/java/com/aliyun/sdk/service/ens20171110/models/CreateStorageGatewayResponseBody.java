@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStorageGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateStorageGatewayResponseBody</p>
@@ -73,7 +74,7 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
         private java.util.List < UnAllocationId> unAllocationId; 
 
         /**
-         * The list of created nodes.
+         * <p>The list of created nodes.</p>
          */
         public Builder allocationId(java.util.List < AllocationId> allocationId) {
             this.allocationId = allocationId;
@@ -81,11 +82,14 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The success status code.
-         * <p>
+         * <p>The success status code.</p>
+         * <ul>
+         * <li><strong>PartSuccess</strong>: partially succeeded.</li>
+         * <li><strong>AllSuccess</strong>: all succeeded.</li>
+         * </ul>
          * 
-         * *   **PartSuccess**: partially succeeded.
-         * *   **AllSuccess**: all succeeded.
+         * <strong>example:</strong>
+         * <p>AllSuccess</p>
          */
         public Builder bizStatusCode(String bizStatusCode) {
             this.bizStatusCode = bizStatusCode;
@@ -93,7 +97,10 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA3758E0-8899-17D3-9526-5F62CF33A586</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,7 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The list of nodes that are not created.
+         * <p>The list of nodes that are not created.</p>
          */
         public Builder unAllocationId(java.util.List < UnAllocationId> unAllocationId) {
             this.unAllocationId = unAllocationId;
@@ -114,6 +121,12 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateStorageGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateStorageGatewayResponseBody</p>
+     */
     public static class AllocationId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
@@ -153,7 +166,10 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-telecom-4</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -161,7 +177,10 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e426409223</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -175,6 +194,12 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateStorageGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateStorageGatewayResponseBody</p>
+     */
     public static class UnAllocationId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
@@ -214,7 +239,10 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-26</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -222,7 +250,10 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e426409258</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

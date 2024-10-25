@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnatAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnatAttributeRequest</p>
@@ -54,7 +55,11 @@ public class DescribeSnatAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the SNAT entry.
+         * <p>The ID of the SNAT entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-5tc08qfj5ecblfdn2rqr9****</p>
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);

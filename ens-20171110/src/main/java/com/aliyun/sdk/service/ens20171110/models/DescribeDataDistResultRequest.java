@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataDistResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataDistResultRequest</p>
@@ -166,7 +167,11 @@ public class DescribeDataDistResultRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e76f8985-7965-41fc-925b-9648bb6bf650</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -175,7 +180,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.
+         * <p>The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudgame-shanghai/deploy_app/20220215/1644895216305ACG_M21B-ota-1.1.2-D-0215.0628_V1_0002-pre-weiduan.zip</p>
          */
         public Builder dataNames(String dataNames) {
             this.putQueryParameter("DataNames", dataNames);
@@ -184,7 +192,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.
+         * <p>The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4885</p>
          */
         public Builder dataVersions(String dataVersions) {
             this.putQueryParameter("DataVersions", dataVersions);
@@ -193,7 +204,7 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * The IDs of the ENS nodes.
+         * <p>The IDs of the ENS nodes.</p>
          */
         public Builder ensRegionIds(java.util.List < String > ensRegionIds) {
             String ensRegionIdsShrink = shrink(ensRegionIds, "EnsRegionIds", "json");
@@ -203,7 +214,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * The IDs of ENS instances. Separate multiple IDs with commas (,). By default, all instances are queried.
+         * <p>The IDs of ENS instances. Separate multiple IDs with commas (,). By default, all instances are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-7ecpqvkicnchxccozrp,i-6ecpqvkicnchxccozrp</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -212,7 +226,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
+         * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-01</p>
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -221,7 +238,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
+         * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-02</p>
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -230,7 +250,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. This parameter is optional if you want to return the distribution status of all data files.
+         * <p>The page number. Pages start from page 1. This parameter is optional if you want to return the distribution status of all data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -239,7 +262,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page. This parameter is optional if you want to return the distribution status of all data files.
+         * <p>The number of entries per page. This parameter is optional if you want to return the distribution status of all data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

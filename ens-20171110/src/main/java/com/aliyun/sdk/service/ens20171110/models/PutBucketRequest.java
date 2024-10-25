@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutBucketRequest} extends {@link RequestModel}
  *
  * <p>PutBucketRequest</p>
@@ -124,12 +125,15 @@ public class PutBucketRequest extends Request {
         } 
 
         /**
-         * The access control list (ACL) of the bucket. Valid values:
-         * <p>
+         * <p>The access control list (ACL) of the bucket. Valid values:</p>
+         * <ul>
+         * <li><strong>private</strong> (default)</li>
+         * <li><strong>public-read-write</strong></li>
+         * <li><strong>public-read</strong></li>
+         * </ul>
          * 
-         * *   **private** (default)
-         * *   **public-read-write**
-         * *   **public-read**
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder bucketAcl(String bucketAcl) {
             this.putBodyParameter("BucketAcl", bucketAcl);
@@ -138,7 +142,11 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * The name of the bucket. This parameter can contain 3 to 50 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).
+         * <p>The name of the bucket. This parameter can contain 3 to 50 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder bucketName(String bucketName) {
             this.putBodyParameter("BucketName", bucketName);
@@ -147,7 +155,10 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * The remarks. The remarks are 0 to 128 characters in length.
+         * <p>The remarks. The remarks are 0 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>numb</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -156,11 +167,14 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * The scheduling scope. This parameter takes effect only when the value of the LogicalBucketType parameter is standard. Valid values:
-         * <p>
+         * <p>The scheduling scope. This parameter takes effect only when the value of the LogicalBucketType parameter is standard. Valid values:</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland.</li>
+         * <li><strong>oversea</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **domestic**: Chinese mainland.
-         * *   **oversea**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder dispatchScope(String dispatchScope) {
             this.putBodyParameter("DispatchScope", dispatchScope);
@@ -169,7 +183,10 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * The region ID of the node. This parameter is required if the value of the LogicalBucketType parameter is sink.
+         * <p>The region ID of the node. This parameter is required if the value of the LogicalBucketType parameter is sink.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-15</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putBodyParameter("EnsRegionId", ensRegionId);
@@ -178,11 +195,14 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * The type of the bucket. Valid values:
-         * <p>
+         * <p>The type of the bucket. Valid values:</p>
+         * <ul>
+         * <li><strong>sink</strong>: single-node bucket.</li>
+         * <li><strong>standard</strong>: bucket for global scheduling.</li>
+         * </ul>
          * 
-         * *   **sink**: single-node bucket.
-         * *   **standard**: bucket for global scheduling.
+         * <strong>example:</strong>
+         * <p>sink</p>
          */
         public Builder logicalBucketType(String logicalBucketType) {
             this.putBodyParameter("LogicalBucketType", logicalBucketType);

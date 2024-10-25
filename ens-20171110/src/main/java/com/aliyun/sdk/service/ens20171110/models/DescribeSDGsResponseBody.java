@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSDGsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSDGsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
         private java.util.List < SDGs> SDGs; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3703C4AC-9396-458C-8F25-1D701334D309</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the SDGs.
+         * <p>The information about the SDGs.</p>
          */
         public Builder SDGs(java.util.List < SDGs> SDGs) {
             this.SDGs = SDGs;
@@ -70,6 +74,12 @@ public class DescribeSDGsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSDGsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSDGsResponseBody</p>
+     */
     public static class AvaliableRegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -133,7 +143,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the SDG was created on the node.
+             * <p>The time when the SDG was created on the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-27 15:13:26</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -141,7 +154,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the edge node.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-26</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -149,7 +165,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * <p>The ID of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mock-clone_snapshot_id</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -157,14 +176,17 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SDG on the node. Valid values:
-             * <p>
+             * <p>The status of the SDG on the node. Valid values:</p>
+             * <ul>
+             * <li><strong>sdg_making</strong></li>
+             * <li><strong>sdg_saving</strong></li>
+             * <li><strong>sdg_copying</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>success</strong></li>
+             * </ul>
              * 
-             * *   **sdg_making**
-             * *   **sdg_saving**
-             * *   **sdg_copying**
-             * *   **failed**
-             * *   **success**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,6 +200,12 @@ public class DescribeSDGsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSDGsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSDGsResponseBody</p>
+     */
     public static class DeployedInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -241,7 +269,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the SDG was deployed on the instance.
+             * <p>The time when the SDG was deployed on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-27 16:48:43</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -249,11 +280,14 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the SDG. Valid values:
-             * <p>
+             * <p>The deployment type of the SDG. Valid values:</p>
+             * <ul>
+             * <li>common: common deployment.</li>
+             * <li>overlay: read/write splitting deployment.</li>
+             * </ul>
              * 
-             * *   common: common deployment.
-             * *   overlay: read/write splitting deployment.
+             * <strong>example:</strong>
+             * <p>overlay</p>
              */
             public Builder deploymentType(String deploymentType) {
                 this.deploymentType = deploymentType;
@@ -261,7 +295,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic-5x20dyeos****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -269,12 +306,15 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment status. Valid values:
-             * <p>
+             * <p>The deployment status. Valid values:</p>
+             * <ul>
+             * <li><strong>sdg_deploying</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>success</strong></li>
+             * </ul>
              * 
-             * *   **sdg_deploying**
-             * *   **failed**
-             * *   **success**
+             * <strong>example:</strong>
+             * <p>sdg_deploying</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -288,6 +328,12 @@ public class DescribeSDGsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSDGsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSDGsResponseBody</p>
+     */
     public static class SDGs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvaliableRegionIds")
         private java.util.List < AvaliableRegionIds> avaliableRegionIds;
@@ -435,7 +481,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The IDs of available edge nodes.
+             * <p>The IDs of available edge nodes.</p>
              */
             public Builder avaliableRegionIds(java.util.List < AvaliableRegionIds> avaliableRegionIds) {
                 this.avaliableRegionIds = avaliableRegionIds;
@@ -443,7 +489,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance on which the SDG is created.
+             * <p>The ID of the instance on which the SDG is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic-5x20dyeos****</p>
              */
             public Builder creationInstanceId(String creationInstanceId) {
                 this.creationInstanceId = creationInstanceId;
@@ -451,7 +500,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node on which the SDG is created.
+             * <p>The ID of the node on which the SDG is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-26</p>
              */
             public Builder creationRegionId(String creationRegionId) {
                 this.creationRegionId = creationRegionId;
@@ -459,7 +511,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SDG was first created.
+             * <p>The time when the SDG was first created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-27 15:07:21</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -467,7 +522,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment information.
+             * <p>The deployment information.</p>
              */
             public Builder deployedInstanceIds(java.util.List < DeployedInstanceIds> deployedInstanceIds) {
                 this.deployedInstanceIds = deployedInstanceIds;
@@ -475,7 +530,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the SDG.
+             * <p>The description of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Testing SDGs</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -483,7 +541,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the **FromSDGId** parameter that you need to specify when you call the [CreateSDG](~~608128~~) operation.
+             * <p>The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the <strong>FromSDGId</strong> parameter that you need to specify when you call the <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdg-xxxxx</p>
              */
             public Builder parentSDGId(String parentSDGId) {
                 this.parentSDGId = parentSDGId;
@@ -491,7 +552,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SDG.
+             * <p>The ID of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdg-30e1fdba7196bc****</p>
              */
             public Builder SDGId(String SDGId) {
                 this.SDGId = SDGId;
@@ -499,7 +563,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the SDG. Unit: GB.
+             * <p>The size of the SDG. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -507,13 +574,16 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SDG creation. Valid values:
-             * <p>
+             * <p>The status of the SDG creation. Valid values:</p>
+             * <ul>
+             * <li><strong>sdg_making</strong></li>
+             * <li><strong>sdg_saving</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>success</strong></li>
+             * </ul>
              * 
-             * *   **sdg_making**
-             * *   **sdg_saving**
-             * *   **failed**
-             * *   **success**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -521,7 +591,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SDG was last updated.
+             * <p>The time when the SDG was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-27 16:04:39</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

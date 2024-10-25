@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetDeviceInstanceRequest} extends {@link RequestModel}
  *
  * <p>ResetDeviceInstanceRequest</p>
@@ -84,7 +85,11 @@ public class ResetDeviceInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the application. To obtain the application ID, call the ListApplications operation. For more information, see the API documentation of ListApplications.
+         * <p>The ID of the application. To obtain the application ID, call the ListApplications operation. For more information, see the API documentation of ListApplications.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d0639abf-789a-4527-b420-031d2cd9ad9b</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +98,11 @@ public class ResetDeviceInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5si16wo6simkt267p8b7hcmy3</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -102,7 +111,11 @@ public class ResetDeviceInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5sfdblzjqf3zvjnr7oh0bhhj2</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

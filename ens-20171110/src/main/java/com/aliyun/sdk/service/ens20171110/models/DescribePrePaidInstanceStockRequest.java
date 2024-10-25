@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrePaidInstanceStockRequest} extends {@link RequestModel}
  *
  * <p>DescribePrePaidInstanceStockRequest</p>
@@ -99,7 +100,11 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         } 
 
         /**
-         * The size of the data disk. Unit: GB.
+         * <p>The size of the data disk. Unit: GB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder dataDiskSize(Integer dataDiskSize) {
             this.putQueryParameter("DataDiskSize", dataDiskSize);
@@ -108,7 +113,11 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * The ID of the edge node.
+         * <p>The ID of the edge node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-suzhou-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -117,7 +126,11 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * The specification of the instance.
+         * <p>The specification of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.stiny</p>
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -126,7 +139,11 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * The size of the system disk. Unit: GB.
+         * <p>The size of the system disk. Unit: GB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);

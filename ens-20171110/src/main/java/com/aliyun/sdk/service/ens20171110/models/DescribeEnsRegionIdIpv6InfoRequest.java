@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionIdIpv6InfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsRegionIdIpv6InfoRequest</p>
@@ -54,7 +55,11 @@ public class DescribeEnsRegionIdIpv6InfoRequest extends Request {
         } 
 
         /**
-         * The ID of the node. You can specify only one node ID in a call.
+         * <p>The ID of the node. You can specify only one node ID in a call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-xxxx-4</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

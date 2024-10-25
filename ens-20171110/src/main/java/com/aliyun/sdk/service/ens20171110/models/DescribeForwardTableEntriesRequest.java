@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeForwardTableEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeForwardTableEntriesRequest</p>
@@ -152,7 +153,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         } 
 
         /**
-         * The EIP in the DNAT entry. The public IP address is used to access the Internet.
+         * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36.XXX.XXX.72</p>
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -161,7 +165,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the DNAT entry.
+         * <p>The ID of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-5tfi6f0rutmd00xrhkag7****</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -170,7 +177,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The name of the DNAT entry.
+         * <p>The name of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -179,7 +189,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The private IP address of the instance that uses the DNAT entry for Internet communication.
+         * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.XXX.XXX.50</p>
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -188,12 +201,15 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The protocol. Valid values:
-         * <p>
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong>: forwards TCP packets.</li>
+         * <li><strong>UDP</strong>: forwards UDP packets.</li>
+         * <li><strong>Any</strong>: forwards all packets.</li>
+         * </ul>
          * 
-         * *   **TCP**: forwards TCP packets.
-         * *   **UDP**: forwards UDP packets.
-         * *   **Any**: forwards all packets.
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -202,7 +218,11 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -211,10 +231,11 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**.
-         * <p>
+         * <p>The page number. Pages start from page <strong>1</strong>.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -223,10 +244,11 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **100**.
-         * <p>
+         * <p>The number of entries per page. Maximum value: <strong>100</strong>.</p>
+         * <p>Default value: <strong>10</strong>.</p>
          * 
-         * Default value: **10**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

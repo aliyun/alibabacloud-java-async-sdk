@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkRequest} extends {@link RequestModel}
  *
  * <p>DeleteNetworkRequest</p>
@@ -54,7 +55,11 @@ public class DeleteNetworkRequest extends Request {
         } 
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5***</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);

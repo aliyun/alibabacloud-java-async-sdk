@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BucketInfo} extends {@link TeaModel}
  *
  * <p>BucketInfo</p>
@@ -166,7 +167,10 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * BucketName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket001</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;

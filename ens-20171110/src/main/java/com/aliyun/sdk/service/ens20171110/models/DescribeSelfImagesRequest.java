@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSelfImagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSelfImagesRequest</p>
@@ -109,7 +110,10 @@ public class DescribeSelfImagesRequest extends Request {
         } 
 
         /**
-         * The ID of the image. Fuzzy search is supported.
+         * <p>The ID of the image. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_a****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -118,7 +122,10 @@ public class DescribeSelfImagesRequest extends Request {
         }
 
         /**
-         * The name of the image. Fuzzy search is supported.
+         * <p>The name of the image. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_a****</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -127,7 +134,10 @@ public class DescribeSelfImagesRequest extends Request {
         }
 
         /**
-         * The page number to return. Pages start from page **1**. Default value: **1**.
+         * <p>The page number to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -136,10 +146,11 @@ public class DescribeSelfImagesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +159,10 @@ public class DescribeSelfImagesRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-5xg63dmojc1oaa3pk****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

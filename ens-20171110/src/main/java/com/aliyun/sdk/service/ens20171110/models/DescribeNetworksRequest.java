@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworksRequest} extends {@link RequestModel}
  *
  * <p>DescribeNetworksRequest</p>
@@ -109,7 +110,10 @@ public class DescribeNetworksRequest extends Request {
         } 
 
         /**
-         * The ID of the edge node.
+         * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -118,7 +122,10 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5***</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -127,7 +134,10 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * The name of the network.
+         * <p>The name of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder networkName(String networkName) {
             this.putQueryParameter("NetworkName", networkName);
@@ -136,7 +146,10 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * The page number of the returned page. Default value: **1**.
+         * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -145,7 +158,10 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

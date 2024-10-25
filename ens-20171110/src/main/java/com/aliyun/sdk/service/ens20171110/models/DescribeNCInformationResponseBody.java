@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNCInformationResponseBody</p>
@@ -170,6 +171,12 @@ public class DescribeNCInformationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNCInformationResponseBody</p>
+     */
     public static class Cpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -431,6 +438,12 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNCInformationResponseBody</p>
+     */
     public static class Gpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -692,6 +705,12 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNCInformationResponseBody</p>
+     */
     public static class Hdd extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -953,6 +972,12 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNCInformationResponseBody</p>
+     */
     public static class Info extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -1054,6 +1079,12 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNCInformationResponseBody</p>
+     */
     public static class Memory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -1315,6 +1346,12 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNCInformationResponseBody</p>
+     */
     public static class Nvme extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -1576,6 +1613,12 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNCInformationResponseBody</p>
+     */
     public static class Ssd extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
@@ -1837,6 +1880,12 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNCInformationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Cpu cpu;
@@ -2058,6 +2107,12 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNCInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNCInformationResponseBody</p>
+     */
     public static class Pager extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSDGRequest} extends {@link RequestModel}
  *
  * <p>DescribeSDGRequest</p>
@@ -82,7 +83,10 @@ public class DescribeSDGRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -91,10 +95,11 @@ public class DescribeSDGRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10</p>
          * 
-         * Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -103,7 +108,7 @@ public class DescribeSDGRequest extends Request {
         }
 
         /**
-         * The IDs of SDGs that you want to query. By default, all SDGs are queried.
+         * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
          */
         public Builder SDGIds(java.util.List < String > SDGIds) {
             String SDGIdsShrink = shrink(SDGIds, "SDGIds", "json");

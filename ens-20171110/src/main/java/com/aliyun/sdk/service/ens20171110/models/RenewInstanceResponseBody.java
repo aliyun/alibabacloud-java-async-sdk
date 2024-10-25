@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RenewInstanceResponseBody</p>
@@ -37,7 +38,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86A6D421-A0C7-4C01-8648-47377CA6A2CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

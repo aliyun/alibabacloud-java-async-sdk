@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeployInstanceSDGRequest} extends {@link RequestModel}
  *
  * <p>DeployInstanceSDGRequest</p>
@@ -83,10 +84,10 @@ public class DeployInstanceSDGRequest extends Request {
         } 
 
         /**
-         * The deployment type of the SDG. Valid values:
-         * <p>
+         * <p>The deployment type of the SDG. shared: shared read/write splitting deployment. The content of the SDG is read-only, and data updates are written to the local storage of the instance.</p>
          * 
-         * *   shared: shared read/write splitting deployment. The content of the SDG is read-only, and data updates are written to the local storage of the instance.
+         * <strong>example:</strong>
+         * <p>shared</p>
          */
         public Builder deploymentType(String deploymentType) {
             this.putQueryParameter("DeploymentType", deploymentType);
@@ -95,7 +96,8 @@ public class DeployInstanceSDGRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.
+         * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -105,7 +107,11 @@ public class DeployInstanceSDGRequest extends Request {
         }
 
         /**
-         * The ID of the SDG.
+         * <p>The ID of the SDG.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-xxxx</p>
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

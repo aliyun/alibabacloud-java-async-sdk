@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateEnsEipAddressRequest} extends {@link RequestModel}
  *
  * <p>AssociateEnsEipAddressRequest</p>
@@ -97,7 +98,11 @@ public class AssociateEnsEipAddressRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP.
+         * <p>The ID of the EIP that you want to associate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-5sc1sgcrsrwgwdvx44hru3p63</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -106,10 +111,14 @@ public class AssociateEnsEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the cloud service with which you want to associate the EIP.
-         * <p>
+         * <p>The ID of the cloud service with which the EIP is associated.</p>
+         * <blockquote>
+         * <p> You can specify the ID of an Edge Load Balancer (ELB) instance ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  IDs of Edge Load Balancer (ELB) are supported.
+         * <strong>example:</strong>
+         * <p>lb-5saivuir6b1mupxjfbhmk1xkb</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,14 +127,17 @@ public class AssociateEnsEipAddressRequest extends Request {
         }
 
         /**
-         * The type of instance with which you want to associate the EIP. Valid values:
-         * <p>
+         * <p>The type of instance with which you want to associate the EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>Nat</strong>: a NAT gateway.</li>
+         * <li><strong>SlbInstance</strong>: an ELB instance.</li>
+         * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI).</li>
+         * <li><strong>NatSlbInstance</strong>: If you want to associate multiple EIPs to an ELB instance, you need to set the parameter to this value.</li>
+         * <li><strong>EnsInstance</strong> (default): an ENS instance.</li>
+         * </ul>
          * 
-         * *   **Nat**: a NAT gateway.
-         * *   **SlbInstance**: an ELB instance.
-         * *   **NetworkInterface**: a secondary ENI.
-         * *   **NatSlbInstance**: If you want to associate multiple EIPs to an ELB instance, you need to set the parameter to this value.
-         * *   **EnsInstance** (default): an ENS instance.
+         * <strong>example:</strong>
+         * <p>SlbInstance</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -134,11 +146,14 @@ public class AssociateEnsEipAddressRequest extends Request {
         }
 
         /**
-         * Specifies whether the EIP is a secondary EIP. Valid values:
-         * <p>
+         * <p>Specifies whether the EIP is a secondary EIP. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder standby(Boolean standby) {
             this.putQueryParameter("Standby", standby);

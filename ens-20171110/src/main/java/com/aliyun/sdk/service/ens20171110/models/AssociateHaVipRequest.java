@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateHaVipRequest} extends {@link RequestModel}
  *
  * <p>AssociateHaVipRequest</p>
@@ -83,7 +84,10 @@ public class AssociateHaVipRequest extends Request {
         } 
 
         /**
-         * HaVipId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>havip-5p14t****</p>
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -92,7 +96,10 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-50c4****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

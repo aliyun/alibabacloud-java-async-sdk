@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableResourceInfoResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         private SupportResources supportResources; 
 
         /**
-         * The information about the image.
+         * <p>The information about the image.</p>
          */
         public Builder images(Images images) {
             this.images = images;
@@ -69,7 +70,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8629F679-B51D-4194-A1CC-5D8F504C362B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The specifications of resources that you can purchase.
+         * <p>The specifications of resources that you can purchase.</p>
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -90,6 +94,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class Image extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -141,7 +151,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private Integer imageSize; 
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_6_08_64_20G_a****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -149,7 +162,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_6_08_64_20G_a****</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -157,7 +173,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image. Unit: GB.
+             * <p>The size of the image. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder imageSize(Integer imageSize) {
                 this.imageSize = imageSize;
@@ -171,6 +190,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;
@@ -212,6 +237,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class BandwidthTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthType")
         private java.util.List < String > bandwidthType;
@@ -253,6 +284,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class EnsRegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private java.util.List < String > ensRegionId;
@@ -294,6 +331,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class EnsRegionId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -381,7 +424,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private String province; 
 
             /**
-             * The region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EastChina</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -389,7 +435,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name. This parameter is empty by default.
+             * <p>The name. This parameter is empty by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EnName</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -397,7 +446,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the edge node.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-telecom-4</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -405,7 +457,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Internet service provider (ISP).
+             * <p>The information about the Internet service provider (ISP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicom</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -413,7 +468,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the edge node.
+             * <p>The name of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Taizhou Telecom, China Unicom, and China Mobile</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -421,7 +479,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The province.
+             * <p>The province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang Province</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -435,6 +496,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class EnsRegionIdsExtends extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private java.util.List < EnsRegionId> ensRegionId;
@@ -462,7 +529,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private java.util.List < EnsRegionId> ensRegionId; 
 
             /**
-             * The ID of the edge node.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-telecom-4</p>
              */
             public Builder ensRegionId(java.util.List < EnsRegionId> ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -476,6 +546,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class InstanceSpeces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private java.util.List < String > instanceSpec;
@@ -517,6 +593,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class Isp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Isp")
         private java.util.List < String > isp;
@@ -544,7 +626,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private java.util.List < String > isp; 
 
             /**
-             * The information about the Internet service provider (ISP).
+             * <p>The information about the Internet service provider (ISP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicom</p>
              */
             public Builder isp(java.util.List < String > isp) {
                 this.isp = isp;
@@ -558,6 +643,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class SupportResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthTypes")
         private BandwidthTypes bandwidthTypes;
@@ -681,7 +772,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private Integer systemDiskMinSize; 
 
             /**
-             * Bandwidth billing method.
+             * <p>Bandwidth billing method.</p>
              */
             public Builder bandwidthTypes(BandwidthTypes bandwidthTypes) {
                 this.bandwidthTypes = bandwidthTypes;
@@ -689,7 +780,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum capacity of a data disk. Unit: GB.
+             * <p>The maximum capacity of a data disk. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder dataDiskMaxSize(Integer dataDiskMaxSize) {
                 this.dataDiskMaxSize = dataDiskMaxSize;
@@ -697,7 +791,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum data disk size. Unit: GiB.
+             * <p>The minimum data disk size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder dataDiskMinSize(Integer dataDiskMinSize) {
                 this.dataDiskMinSize = dataDiskMinSize;
@@ -705,7 +802,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * node ID
+             * <p>node ID</p>
              */
             public Builder ensRegionIds(EnsRegionIds ensRegionIds) {
                 this.ensRegionIds = ensRegionIds;
@@ -713,7 +810,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The supplementary information about the edge nodes.
+             * <p>The supplementary information about the edge nodes.</p>
              */
             public Builder ensRegionIdsExtends(EnsRegionIdsExtends ensRegionIdsExtends) {
                 this.ensRegionIdsExtends = ensRegionIdsExtends;
@@ -729,7 +826,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Operator
+             * <p>Operator</p>
              */
             public Builder isp(Isp isp) {
                 this.isp = isp;
@@ -737,7 +834,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the system disk. Unit: GiB.
+             * <p>The maximum size of the system disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder systemDiskMaxSize(Integer systemDiskMaxSize) {
                 this.systemDiskMaxSize = systemDiskMaxSize;
@@ -745,7 +845,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum capacity of a system disk. Unit: GB.
+             * <p>The minimum capacity of a system disk. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder systemDiskMinSize(Integer systemDiskMinSize) {
                 this.systemDiskMinSize = systemDiskMinSize;
@@ -759,6 +862,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceInfoResponseBody</p>
+     */
     public static class SupportResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportResource")
         private java.util.List < SupportResource> supportResource;

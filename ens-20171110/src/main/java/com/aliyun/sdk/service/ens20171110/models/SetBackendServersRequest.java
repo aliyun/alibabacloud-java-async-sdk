@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetBackendServersRequest} extends {@link RequestModel}
  *
  * <p>SetBackendServersRequest</p>
@@ -69,7 +70,8 @@ public class SetBackendServersRequest extends Request {
         } 
 
         /**
-         * The list of backend servers that you want to add. You can modify at most 20 backend servers.
+         * <p>The list of backend servers that you want to add. You can modify at most 20 backend servers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
             String backendServersShrink = shrink(backendServers, "BackendServers", "json");
@@ -79,7 +81,11 @@ public class SetBackendServersRequest extends Request {
         }
 
         /**
-         * The ID of the Edge Load Balancer (ELB) instance.
+         * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5s7crik3yo3bp03gqrbp5****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -94,6 +100,12 @@ public class SetBackendServersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetBackendServersRequest} extends {@link TeaModel}
+     *
+     * <p>SetBackendServersRequest</p>
+     */
     public static class BackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServerId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -147,7 +159,11 @@ public class SetBackendServersRequest extends Request {
             private Integer weight; 
 
             /**
-             * The ID of the instance that you want to use as the backend server.
+             * <p>The ID of the instance that you want to use as the backend server.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5ze0o05xccvbljtn****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -155,11 +171,14 @@ public class SetBackendServersRequest extends Request {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ens</strong>: ENS instance.</li>
+             * <li><strong>eni</strong>: Elastic Network Interface (ENI) instance.</li>
+             * </ul>
              * 
-             * *   **ens**: ENS instance.
-             * *   **eni**: Elastic Network Interface (ENI) instance.
+             * <strong>example:</strong>
+             * <p>ens</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -167,10 +186,14 @@ public class SetBackendServersRequest extends Request {
             }
 
             /**
-             * The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
-             * <p>
+             * <p>The weight of the backend server. Default value: 100. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * <blockquote>
+             * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  The value 0 indicates that requests are not forwarded to the backend server.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

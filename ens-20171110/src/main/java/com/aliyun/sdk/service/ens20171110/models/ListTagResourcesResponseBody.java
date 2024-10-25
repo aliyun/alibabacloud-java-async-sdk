@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -61,7 +62,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * The token of the first page to query.
+         * <p>The token of the first page to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcfeg368547ccdef</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C78D9B61-69D8-5655-A312-A15DA5EA5D5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The tags that are added to specified one or more resources.
+         * <p>The tags that are added to specified one or more resources.</p>
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -90,6 +97,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -153,7 +166,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the associated resources.
+             * <p>The ID of the associated resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5zy93g7z1hnkdmav84joxyzgn</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -161,7 +177,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -169,7 +188,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the instance.
+             * <p>The tag key of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tag_key-2</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -177,7 +199,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLUSTER</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

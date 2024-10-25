@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceTimelineResponseBody</p>
@@ -170,6 +171,12 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceTimelineResponseBody</p>
+     */
     public static class AvailableEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -271,6 +278,12 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceTimelineResponseBody</p>
+     */
     public static class BizEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -372,6 +385,12 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceTimelineResponseBody</p>
+     */
     public static class InventoryEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -473,6 +492,12 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceTimelineResponseBody</p>
+     */
     public static class ReserveEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;

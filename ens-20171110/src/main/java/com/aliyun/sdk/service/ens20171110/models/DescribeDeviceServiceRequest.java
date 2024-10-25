@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceServiceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeviceServiceRequest</p>
@@ -123,7 +124,10 @@ public class DescribeDeviceServiceRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2bac6f4-75dc-455e-8389-2dc8e47526d3</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -132,7 +136,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * This parameter does not take effect.
+         * <p>This parameter does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chongqing-10</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -141,7 +148,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5sg1owx0g4ojy66ab2tez77r2</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -150,7 +160,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2661b1dd-3453-418d-8182-bb34f79e8d3c</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -159,7 +172,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * The ID of the Edge Node Service (ENS) node.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chongqing-11</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -168,7 +184,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * Service ID
+         * <p>Service ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-cxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

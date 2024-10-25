@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityGroupsRequest</p>
@@ -96,11 +97,14 @@ public class DescribeSecurityGroupsRequest extends Request {
         } 
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
-         * *   Pages start from page 1.
-         * *   Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -109,11 +113,14 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 50.</li>
+         * <li>Default value: 10</li>
+         * </ul>
          * 
-         * *   Maximum value: 50.
-         * *   Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -122,7 +129,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4ph***</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -131,7 +141,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The name of the security group.
+         * <p>The name of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DocTest</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

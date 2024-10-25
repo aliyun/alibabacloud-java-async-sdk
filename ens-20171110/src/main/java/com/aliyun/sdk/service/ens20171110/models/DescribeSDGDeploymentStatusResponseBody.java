@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSDGDeploymentStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSDGDeploymentStatusResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The deployment information of the SDG.
+         * <p>The deployment information of the SDG.</p>
          */
         public Builder deploymentStatus(java.util.List < DeploymentStatus> deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
@@ -93,7 +94,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1
+         * <p>The page number. Pages start from page 1. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68B85217-03B8-5141-9216-EA4D7C496B9A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of queried deployment records.
+         * <p>The total number of queried deployment records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSDGDeploymentStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSDGDeploymentStatusResponseBody</p>
+     */
     public static class DeploymentStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -205,7 +224,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the AIC instance.
+             * <p>The ID of the AIC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic-xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -213,13 +235,15 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type.
-             * <p>
+             * <p>The deployment type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>overlay: read/write splitting.</li>
+             * <li>common: common deployment.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   overlay: read/write splitting.
-             * *   common: common deployment.
+             * <strong>example:</strong>
+             * <p>overlay</p>
              */
             public Builder mountType(String mountType) {
                 this.mountType = mountType;
@@ -227,7 +251,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the edge node.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -235,14 +262,16 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * the deployment status of the shared data group SDG.
-             * <p>
+             * <p>the deployment status of the shared data group SDG.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>sdg_deploying</li>
+             * <li>success</li>
+             * <li>failed</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   sdg_deploying
-             * *   success
-             * *   failed
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +279,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the status was last updated.
+             * <p>The time when the status was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-17T02:44:31Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

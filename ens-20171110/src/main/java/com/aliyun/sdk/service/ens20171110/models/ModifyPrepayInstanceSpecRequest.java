@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPrepayInstanceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyPrepayInstanceSpecRequest</p>
@@ -67,7 +68,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         } 
 
         /**
-         * The ID of the instance that you want to upgrade or downgrade.
+         * <p>The ID of the instance that you want to upgrade or downgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -76,7 +80,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The updated configuration.
+         * <p>The updated configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.tiny</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportKeyPairRequest} extends {@link RequestModel}
  *
  * <p>ImportKeyPairRequest</p>
@@ -69,14 +70,17 @@ public class ImportKeyPairRequest extends Request {
         } 
 
         /**
-         * The name of the key pair. The name must conform to the following naming conventions:
-         * <p>
+         * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
+         * <p>You can specify the name of only one key pair.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name must be 2 to 128 characters in length.
-         * *   The name must start with a letter but cannot start with `http://` or `https://`.
-         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-         * 
-         * You can specify the name of only one key pair.
+         * <strong>example:</strong>
+         * <p>TestKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -85,7 +89,11 @@ public class ImportKeyPairRequest extends Request {
         }
 
         /**
-         * The public key of the key pair. You can specify only one public key.
+         * <p>The public key of the key pair. You can specify only one public key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh-rsa AAAAB****</p>
          */
         public Builder publicKeyBody(String publicKeyBody) {
             this.putQueryParameter("PublicKeyBody", publicKeyBody);

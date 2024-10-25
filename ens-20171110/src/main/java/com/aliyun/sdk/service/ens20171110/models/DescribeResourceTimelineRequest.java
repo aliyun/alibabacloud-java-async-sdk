@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceTimelineRequest} extends {@link RequestModel}
  *
  * <p>DescribeResourceTimelineRequest</p>

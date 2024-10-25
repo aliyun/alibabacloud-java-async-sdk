@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagsInParams} extends {@link TeaModel}
  *
  * <p>TagsInParams</p>
@@ -50,6 +51,12 @@ public class TagsInParams extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TagsInParams} extends {@link TeaModel}
+     *
+     * <p>TagsInParams</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -90,7 +97,10 @@ public class TagsInParams extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;

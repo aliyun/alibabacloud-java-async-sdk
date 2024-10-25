@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JoinPublicIpsToEpnInstanceRequest} extends {@link RequestModel}
  *
  * <p>JoinPublicIpsToEpnInstanceRequest</p>
@@ -69,7 +70,11 @@ public class JoinPublicIpsToEpnInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the EPN instance.
+         * <p>The ID of the EPN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-xxxx</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -78,7 +83,11 @@ public class JoinPublicIpsToEpnInstanceRequest extends Request {
         }
 
         /**
-         * The information about the public IP address that you want to add to the EPN instance.
+         * <p>The information about the public IP address that you want to add to the EPN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceInfos=[{&quot;PublicIpAddress&quot;:&quot;2.230.XX.XX&quot;},{&quot;PublicIpAddress&quot;:&quot;2.230.XX.XX&quot;}]</p>
          */
         public Builder instanceInfos(String instanceInfos) {
             this.putQueryParameter("InstanceInfos", instanceInfos);

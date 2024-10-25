@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBucketLifecycleRequest} extends {@link RequestModel}
  *
  * <p>DeleteBucketLifecycleRequest</p>
@@ -68,7 +69,11 @@ public class DeleteBucketLifecycleRequest extends Request {
         } 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -77,7 +82,10 @@ public class DeleteBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The ID of the rule. If this parameter is not specified, all rules are removed.
+         * <p>The ID of the rule. If this parameter is not specified, all rules are removed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

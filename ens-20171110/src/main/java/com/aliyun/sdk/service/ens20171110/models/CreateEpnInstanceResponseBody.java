@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEpnInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEpnInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateEpnInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the EPN instance.
+         * <p>The ID of the EPN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-xxxxx</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.EPNInstanceId = EPNInstanceId;
@@ -57,7 +61,10 @@ public class CreateEpnInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

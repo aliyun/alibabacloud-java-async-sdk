@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceChargeTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceChargeTypeRequest</p>
@@ -139,12 +140,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-payment when you change the billing method from pay-as-you-go to subscription. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-payment when you change the billing method from pay-as-you-go to subscription. Valid values:</p>
+         * <p>true: enables auto-payment. Make sure that your account has sufficient balance.</p>
+         * <p>false (default): does not enable auto-payment. The order is generated but not paid.</p>
          * 
-         * true: enables auto-payment. Make sure that your account has sufficient balance.
-         * 
-         * false (default): does not enable auto-payment. The order is generated but not paid.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -153,12 +154,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal when you change the billing method from pay-as-you-go to subscription. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal when you change the billing method from pay-as-you-go to subscription. Valid values:</p>
+         * <p>true: enables auto-renewal for the instance.</p>
+         * <p>false</p>
          * 
-         * true: enables auto-renewal for the instance.
-         * 
-         * false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -167,12 +168,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to change the billing method of all data disks that are created with the instance to subscription when you change the billing method of the instance from pay-as-you-go to subscription. Valid values:
-         * <p>
+         * <p>Specifies whether to change the billing method of all data disks that are created with the instance to subscription when you change the billing method of the instance from pay-as-you-go to subscription. Valid values:</p>
+         * <p>true</p>
+         * <p>false (default)</p>
          * 
-         * true
-         * 
-         * false (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeDataDisks(Boolean includeDataDisks) {
             this.putQueryParameter("IncludeDataDisks", includeDataDisks);
@@ -181,12 +182,13 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The new billing method. Valid values:
-         * <p>
+         * <p>The new billing method. Valid values:</p>
+         * <p>PrePaid</p>
+         * <p>PostPaid (default)</p>
+         * <p>This parameter is required.</p>
          * 
-         * PrePaid
-         * 
-         * PostPaid (default)
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -195,7 +197,8 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The IDs of the instances.
+         * <p>The IDs of the instances.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -205,12 +208,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:
-         * <p>
+         * <p>The subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:</p>
+         * <p>If the PeriodUnit parameter is set to Day, Period can only be set to 3.</p>
+         * <p>If PeriodUnit is Month, Period can be set to 1 to 9 or 12.</p>
          * 
-         * If the PeriodUnit parameter is set to Day, Period can only be set to 3.
-         * 
-         * If PeriodUnit is Month, Period can be set to 1 to 9 or 12.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -219,12 +222,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:</p>
+         * <p>Month</p>
+         * <p>Day</p>
          * 
-         * Month
-         * 
-         * Day
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);

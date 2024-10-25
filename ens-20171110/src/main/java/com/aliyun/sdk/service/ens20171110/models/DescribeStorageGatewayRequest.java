@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStorageGatewayRequest} extends {@link RequestModel}
  *
  * <p>DescribeStorageGatewayRequest</p>
@@ -123,7 +124,10 @@ public class DescribeStorageGatewayRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-cmcc</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -132,7 +136,10 @@ public class DescribeStorageGatewayRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgw-****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -141,7 +148,10 @@ public class DescribeStorageGatewayRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * <p>The type of the gateway. Set this parameter to <strong>1</strong>. <strong>1</strong> indicates iSCSI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("GatewayType", gatewayType);
@@ -150,7 +160,10 @@ public class DescribeStorageGatewayRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -159,7 +172,10 @@ public class DescribeStorageGatewayRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,7 +184,10 @@ public class DescribeStorageGatewayRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-***</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

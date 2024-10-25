@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExportImageStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeExportImageStatusRequest</p>
@@ -54,7 +55,11 @@ public class DescribeExportImageStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_alibase_****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);

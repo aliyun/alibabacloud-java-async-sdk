@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSDGDeploymentStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeSDGDeploymentStatusRequest</p>
@@ -158,7 +159,10 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +171,10 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -186,7 +193,11 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * The ID of the SDG.
+         * <p>The ID of the SDG.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-xxxx</p>
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBucketsRequest} extends {@link RequestModel}
  *
  * <p>ListBucketsRequest</p>
@@ -81,7 +82,10 @@ public class ListBucketsRequest extends Request {
         } 
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -90,7 +94,10 @@ public class ListBucketsRequest extends Request {
         }
 
         /**
-         * The maximum number of returned buckets. You can leave this parameter empty. The default value is 10. The value cannot be greater than 100.
+         * <p>The maximum number of returned buckets. You can leave this parameter empty. The default value is 10. The value cannot be greater than 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -99,7 +106,10 @@ public class ListBucketsRequest extends Request {
         }
 
         /**
-         * The prefix that returned bucket names must contain. If this parameter is not specified, prefix information will not be used as a filter.
+         * <p>The prefix that returned bucket names must contain. If this parameter is not specified, prefix information will not be used as a filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("Prefix", prefix);

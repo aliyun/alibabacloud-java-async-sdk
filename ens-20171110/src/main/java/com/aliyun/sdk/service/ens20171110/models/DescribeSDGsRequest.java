@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSDGsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSDGsRequest</p>
@@ -67,7 +68,7 @@ public class DescribeSDGsRequest extends Request {
         } 
 
         /**
-         * The AIC instance ID to be queried.
+         * <p>The AIC instance ID to be queried.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -77,7 +78,7 @@ public class DescribeSDGsRequest extends Request {
         }
 
         /**
-         * The IDs of SDGs that you want to query. By default, all SDGs are queried.
+         * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
          */
         public Builder SDGIds(java.util.List < String > SDGIds) {
             String SDGIdsShrink = shrink(SDGIds, "SDGIds", "json");

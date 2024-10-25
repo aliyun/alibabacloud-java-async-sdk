@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootInstanceRequest} extends {@link RequestModel}
  *
  * <p>RebootInstanceRequest</p>
@@ -68,11 +69,14 @@ public class RebootInstanceRequest extends Request {
         } 
 
         /**
-         * Indicates whether to stop the instance forcibly before you reboot it. Default value: false. Valid values:
-         * <p>
+         * <p>Indicates whether to stop the instance forcibly before you reboot it. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceStop(String forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -81,7 +85,11 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance that you want to reboot. You can specify only one instance ID.
+         * <p>The ID of the instance that you want to reboot. You can specify only one instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-instanceid****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

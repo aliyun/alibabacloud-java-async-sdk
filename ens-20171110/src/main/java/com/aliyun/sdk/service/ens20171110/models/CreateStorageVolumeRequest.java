@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStorageVolumeRequest} extends {@link RequestModel}
  *
  * <p>CreateStorageVolumeRequest</p>
@@ -182,7 +183,10 @@ public class CreateStorageVolumeRequest extends Request {
         } 
 
         /**
-         * The password of the CHAP protocol.
+         * <p>The password of the CHAP protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Password</p>
          */
         public Builder authPassword(String authPassword) {
             this.putQueryParameter("AuthPassword", authPassword);
@@ -191,7 +195,10 @@ public class CreateStorageVolumeRequest extends Request {
         }
 
         /**
-         * The authentication protocol. Set the value to **CHAP**.
+         * <p>The authentication protocol. Set the value to <strong>CHAP</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHAP</p>
          */
         public Builder authProtocol(String authProtocol) {
             this.putQueryParameter("AuthProtocol", authProtocol);
@@ -200,7 +207,10 @@ public class CreateStorageVolumeRequest extends Request {
         }
 
         /**
-         * The username of the CHAP protocol.
+         * <p>The username of the CHAP protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder authUser(String authUser) {
             this.putQueryParameter("AuthUser", authUser);
@@ -209,7 +219,10 @@ public class CreateStorageVolumeRequest extends Request {
         }
 
         /**
-         * The description of the volume. The description must be 2 to 128 characters in length. The description cannot start with `http://` or `https://`.
+         * <p>The description of the volume. The description must be 2 to 128 characters in length. The description cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -218,7 +231,11 @@ public class CreateStorageVolumeRequest extends Request {
         }
 
         /**
-         * The ID of the node.
+         * <p>The ID of the node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-3</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -227,7 +244,11 @@ public class CreateStorageVolumeRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgw-****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -236,11 +257,14 @@ public class CreateStorageVolumeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable authentication. Valid values:
-         * <p>
+         * <p>Specifies whether to enable authentication. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enable authentication.</li>
+         * <li><strong>0</strong> (default): disable authentication.</li>
+         * </ul>
          * 
-         * *   **1**: enable authentication.
-         * *   **0** (default): disable authentication.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isAuth(String isAuth) {
             this.putQueryParameter("IsAuth", isAuth);
@@ -249,11 +273,14 @@ public class CreateStorageVolumeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the volume. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the volume. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong> (default): enable the volume.</li>
+         * <li><strong>0</strong>: disable the volume.</li>
+         * </ul>
          * 
-         * *   **1** (default): enable the volume.
-         * *   **0**: disable the volume.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isEnable(String isEnable) {
             this.putQueryParameter("IsEnable", isEnable);
@@ -262,7 +289,11 @@ public class CreateStorageVolumeRequest extends Request {
         }
 
         /**
-         * The ID of the storage medium.
+         * <p>The ID of the storage medium.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-****</p>
          */
         public Builder storageId(String storageId) {
             this.putQueryParameter("StorageId", storageId);
@@ -271,7 +302,10 @@ public class CreateStorageVolumeRequest extends Request {
         }
 
         /**
-         * The name of the volume. The name must be 2 to 128 characters in length. The name cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the volume. The name must be 2 to 128 characters in length. The name cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testVolumeName</p>
          */
         public Builder volumeName(String volumeName) {
             this.putQueryParameter("VolumeName", volumeName);

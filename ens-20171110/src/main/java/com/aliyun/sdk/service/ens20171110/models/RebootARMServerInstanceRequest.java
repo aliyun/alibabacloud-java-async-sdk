@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootARMServerInstanceRequest} extends {@link RequestModel}
  *
  * <p>RebootARMServerInstanceRequest</p>
@@ -53,7 +54,10 @@ public class RebootARMServerInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the server.
+         * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourInstance ID</p>
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);

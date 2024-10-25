@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStorageGatewayRequest} extends {@link RequestModel}
  *
  * <p>DeleteStorageGatewayRequest</p>
@@ -54,7 +55,11 @@ public class DeleteStorageGatewayRequest extends Request {
         } 
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgw-****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);

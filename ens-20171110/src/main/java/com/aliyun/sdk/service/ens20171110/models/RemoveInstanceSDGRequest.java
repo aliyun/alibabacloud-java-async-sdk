@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveInstanceSDGRequest} extends {@link RequestModel}
  *
  * <p>RemoveInstanceSDGRequest</p>
@@ -54,7 +55,8 @@ public class RemoveInstanceSDGRequest extends Request {
         } 
 
         /**
-         * The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.
+         * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

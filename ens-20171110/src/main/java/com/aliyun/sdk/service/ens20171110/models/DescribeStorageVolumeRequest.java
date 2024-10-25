@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStorageVolumeRequest} extends {@link RequestModel}
  *
  * <p>DescribeStorageVolumeRequest</p>
@@ -137,7 +138,10 @@ public class DescribeStorageVolumeRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-3</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -146,7 +150,10 @@ public class DescribeStorageVolumeRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgw-****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -155,7 +162,14 @@ public class DescribeStorageVolumeRequest extends Request {
         }
 
         /**
-         * IsEnable.
+         * <p>Specifies whether to enable the volume. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong> (default): enables the volume.</li>
+         * <li><strong>0</strong>: disables the volume.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isEnable(Integer isEnable) {
             this.putQueryParameter("IsEnable", isEnable);
@@ -164,7 +178,10 @@ public class DescribeStorageVolumeRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -173,7 +190,10 @@ public class DescribeStorageVolumeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -182,7 +202,10 @@ public class DescribeStorageVolumeRequest extends Request {
         }
 
         /**
-         * StorageId.
+         * <p>The ID of the storage medium.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-***</p>
          */
         public Builder storageId(String storageId) {
             this.putQueryParameter("StorageId", storageId);
@@ -191,7 +214,10 @@ public class DescribeStorageVolumeRequest extends Request {
         }
 
         /**
-         * VolumeId.
+         * <p>The ID of the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sv-***</p>
          */
         public Builder volumeId(String volumeId) {
             this.putQueryParameter("VolumeId", volumeId);

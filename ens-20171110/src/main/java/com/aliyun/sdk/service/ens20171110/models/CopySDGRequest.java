@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopySDGRequest} extends {@link RequestModel}
  *
  * <p>CopySDGRequest</p>
@@ -69,7 +70,8 @@ public class CopySDGRequest extends Request {
         } 
 
         /**
-         * The destination nodes.
+         * <p>The destination nodes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
             String destinationRegionIdsShrink = shrink(destinationRegionIds, "DestinationRegionIds", "json");
@@ -79,7 +81,11 @@ public class CopySDGRequest extends Request {
         }
 
         /**
-         * The ID of the SDG that you want to copy.
+         * <p>The ID of the SDG that you want to copy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-xxx</p>
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

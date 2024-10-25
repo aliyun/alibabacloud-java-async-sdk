@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateForwardEntryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateForwardEntryResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateForwardEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the DNAT entry.
+         * <p>The ID of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-5tc07cw14metghn3siv4ak8do</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.forwardEntryId = forwardEntryId;
@@ -57,7 +61,10 @@ public class CreateForwardEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF6D6FA4-DACA-5822-A981-81006271D263</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

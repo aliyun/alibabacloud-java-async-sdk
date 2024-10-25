@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClassicNetworkRequest} extends {@link RequestModel}
  *
  * <p>CreateClassicNetworkRequest</p>
@@ -97,12 +98,16 @@ public class CreateClassicNetworkRequest extends Request {
         } 
 
         /**
-         * The CIDR block of the network. You can use one of the following CIDR blocks or their subnets as the CIDR block of the network:
-         * <p>
+         * <p>The CIDR block of the network. You can use one of the following CIDR blocks or their subnets as the CIDR block of the network:</p>
+         * <ul>
+         * <li>10.0.0.0/8 (default)</li>
+         * <li>172.16.0.0/12</li>
+         * <li>192.168.0.0/16</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   10.0.0.0/8 (default)
-         * *   172.16.0.0/12
-         * *   192.168.0.0/16
+         * <strong>example:</strong>
+         * <p>10.0.0.0/16</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -111,7 +116,10 @@ public class CreateClassicNetworkRequest extends Request {
         }
 
         /**
-         * The description of the network. The name must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.
+         * <p>The description of the network. The name must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my vswitch.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -120,7 +128,11 @@ public class CreateClassicNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the edge node.
+         * <p>The ID of the edge node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-xxxx-4</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -129,12 +141,15 @@ public class CreateClassicNetworkRequest extends Request {
         }
 
         /**
-         * The name of the network. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the network. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name must start with a letter but cannot start with http:// or https://.</li>
+         * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
          * 
-         * *   The name must be 2 to 128 characters in length.
-         * *   The name must start with a letter but cannot start with http:// or https://.
-         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder networkName(String networkName) {
             this.putQueryParameter("NetworkName", networkName);

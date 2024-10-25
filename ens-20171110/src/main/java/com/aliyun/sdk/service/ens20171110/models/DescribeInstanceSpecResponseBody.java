@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSpecResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSpecResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         private Integer systemDiskMaxSize; 
 
         /**
-         * The bandwidth limit for a single instance. Unit: Mbit/s.
+         * <p>The bandwidth limit for a single instance. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder bandwidthLimit(Integer bandwidthLimit) {
             this.bandwidthLimit = bandwidthLimit;
@@ -117,7 +121,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The returned service code. A value of 0 indicates that the operation was successful.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -125,7 +132,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum capacity of a data disk. Unit: GB.
+         * <p>The maximum capacity of a data disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20015</p>
          */
         public Builder dataDiskMaxSize(Integer dataDiskMaxSize) {
             this.dataDiskMaxSize = dataDiskMaxSize;
@@ -133,7 +143,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum capacity of a data disk. Unit: GB.
+         * <p>The minimum capacity of a data disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dataDiskMinSize(Integer dataDiskMinSize) {
             this.dataDiskMinSize = dataDiskMinSize;
@@ -141,7 +154,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The information about instance specifications.
+         * <p>The information about instance specifications.</p>
          */
         public Builder instanceSpecs(InstanceSpecs instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -149,7 +162,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ECC937A-AE0E-4626-BE51-DED1D6D1C888</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +173,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum capacity of the system disk. Unit: GiB.
+         * <p>The maximum capacity of the system disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder systemDiskMaxSize(Integer systemDiskMaxSize) {
             this.systemDiskMaxSize = systemDiskMaxSize;
@@ -170,6 +189,12 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSpecResponseBody</p>
+     */
     public static class InstanceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Core")
         private String core;
@@ -233,7 +258,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             private String memory; 
 
             /**
-             * The number of CPU cores.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder core(String core) {
                 this.core = core;
@@ -241,7 +269,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the instance type.
+             * <p>The display name of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Computational 1C2G</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -249,7 +280,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens.sn1.stiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -257,7 +291,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MB.
+             * <p>The memory size. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -271,6 +308,12 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSpecResponseBody</p>
+     */
     public static class InstanceSpecs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private java.util.List < InstanceSpec> instanceSpec;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerSpecRequest} extends {@link RequestModel}
  *
  * <p>DescribeLoadBalancerSpecRequest</p>
@@ -53,7 +54,10 @@ public class DescribeLoadBalancerSpecRequest extends Request {
         } 
 
         /**
-         * The specifications of the ELB instance.
+         * <p>The specifications of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elb.s2.small</p>
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataDownloadURLRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataDownloadURLRequest</p>
@@ -112,7 +113,11 @@ public class DescribeDataDownloadURLRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>474bdef0-d149-4695-abfb-52912d9143f0</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -121,7 +126,11 @@ public class DescribeDataDownloadURLRequest extends Request {
         }
 
         /**
-         * The name of the data file.
+         * <p>The name of the data file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mirror_file/pk-1642597182026-878199448832413.tar</p>
          */
         public Builder dataName(String dataName) {
             this.putQueryParameter("DataName", dataName);
@@ -130,7 +139,11 @@ public class DescribeDataDownloadURLRequest extends Request {
         }
 
         /**
-         * The version number of the data file.
+         * <p>The version number of the data file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7895</p>
          */
         public Builder dataVersion(String dataVersion) {
             this.putQueryParameter("DataVersion", dataVersion);
@@ -139,7 +152,10 @@ public class DescribeDataDownloadURLRequest extends Request {
         }
 
         /**
-         * This parameter is reserved.
+         * <p>This parameter is reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder expireTimeout(Long expireTimeout) {
             this.putQueryParameter("ExpireTimeout", expireTimeout);
@@ -148,7 +164,10 @@ public class DescribeDataDownloadURLRequest extends Request {
         }
 
         /**
-         * The condition that you want to use to filter file servers. You can specify multiple canary release policies. By default, all resources are queried.
+         * <p>The condition that you want to use to filter file servers. You can specify multiple canary release policies. By default, all resources are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;: &quot;ScheduleToRegionId&quot;,&quot;parameters&quot;:{&quot;operator&quot;: &quot;In&quot;,&quot;values&quot;: [&quot;cn-shijiazhuang-telecom_unicom_cmcc&quot;]}}</p>
          */
         public Builder serverFilterStrategy(String serverFilterStrategy) {
             this.putQueryParameter("ServerFilterStrategy", serverFilterStrategy);

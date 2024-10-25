@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopySnapshotResponseBody} extends {@link TeaModel}
  *
  * <p>CopySnapshotResponseBody</p>
@@ -73,7 +74,7 @@ public class CopySnapshotResponseBody extends TeaModel {
         private java.util.List < UnAllocationId> unAllocationId; 
 
         /**
-         * The list of created snapshots.
+         * <p>The list of created snapshots.</p>
          */
         public Builder allocationId(java.util.List < AllocationId> allocationId) {
             this.allocationId = allocationId;
@@ -81,11 +82,14 @@ public class CopySnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * The success status code.
-         * <p>
+         * <p>The success status code.</p>
+         * <ul>
+         * <li><strong>PartSuccess</strong>: partially succeeded.</li>
+         * <li><strong>AllSuccess</strong>: all succeeded.</li>
+         * </ul>
          * 
-         * *   **PartSuccess**: partially succeeded.
-         * *   **AllSuccess**: all succeeded.
+         * <strong>example:</strong>
+         * <p>AllSuccess</p>
          */
         public Builder bizStatusCode(String bizStatusCode) {
             this.bizStatusCode = bizStatusCode;
@@ -93,7 +97,10 @@ public class CopySnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA3758E0-8899-17D3-9526-5F62CF33A586</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,7 @@ public class CopySnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * The list of nodes that are not created.
+         * <p>The list of nodes that are not created.</p>
          */
         public Builder unAllocationId(java.util.List < UnAllocationId> unAllocationId) {
             this.unAllocationId = unAllocationId;
@@ -114,6 +121,12 @@ public class CopySnapshotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CopySnapshotResponseBody} extends {@link TeaModel}
+     *
+     * <p>CopySnapshotResponseBody</p>
+     */
     public static class AllocationId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
@@ -153,7 +166,10 @@ public class CopySnapshotResponseBody extends TeaModel {
             private java.util.List < String > instanceId; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-telecom-4</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -161,7 +177,7 @@ public class CopySnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the instances.
+             * <p>The IDs of the instances.</p>
              */
             public Builder instanceId(java.util.List < String > instanceId) {
                 this.instanceId = instanceId;
@@ -175,6 +191,12 @@ public class CopySnapshotResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CopySnapshotResponseBody} extends {@link TeaModel}
+     *
+     * <p>CopySnapshotResponseBody</p>
+     */
     public static class UnAllocationId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
@@ -202,7 +224,10 @@ public class CopySnapshotResponseBody extends TeaModel {
             private String ensRegionId; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-26</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;

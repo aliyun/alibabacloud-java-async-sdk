@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFileSystemsRequest} extends {@link RequestModel}
  *
  * <p>DescribeFileSystemsRequest</p>
@@ -111,7 +112,10 @@ public class DescribeFileSystemsRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-cmcc</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -120,7 +124,10 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c50f8*****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -129,7 +136,10 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The name of the file system.
+         * <p>The name of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FileSystem1</p>
          */
         public Builder fileSystemName(String fileSystemName) {
             this.putQueryParameter("FileSystemName", fileSystemName);
@@ -138,7 +148,10 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -147,7 +160,10 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **100**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

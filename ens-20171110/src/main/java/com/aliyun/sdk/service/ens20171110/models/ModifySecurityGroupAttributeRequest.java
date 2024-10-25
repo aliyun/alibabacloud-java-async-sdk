@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityGroupAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifySecurityGroupAttributeRequest</p>
@@ -84,7 +85,10 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the security group.
+         * <p>The description of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -93,7 +97,11 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -102,12 +110,15 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The name of the security group. The name of a bucket must meet the following requirements:
-         * <p>
+         * <p>The name of the security group. The name of a bucket must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name must start with a letter but cannot start with http:// or https://.</li>
+         * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
          * 
-         * *   The name must be 2 to 128 characters in length.
-         * *   The name must start with a letter but cannot start with http:// or https://.
-         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

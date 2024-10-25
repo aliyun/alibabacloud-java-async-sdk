@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancersRequest} extends {@link RequestModel}
  *
  * <p>DescribeLoadBalancersRequest</p>
@@ -181,7 +182,10 @@ public class DescribeLoadBalancersRequest extends Request {
         } 
 
         /**
-         * The IP address that the ELB instance uses to provide services.
+         * <p>The IP address that the ELB instance uses to provide services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -190,7 +194,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the Edge Node Service (ENS) node.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou-10</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -199,7 +206,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the ELB instance.
+         * <p>The ID of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5q73cv04zeyh43lh74lp4****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -208,7 +218,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The name of the ELB instance.
+         * <p>The name of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -217,11 +230,14 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The status of the listener for the ELB instance. Valid values:
-         * <p>
+         * <p>The status of the listener for the ELB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong>: The listener for the instance can forward the received traffic based on forwarding rules.</li>
+         * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
+         * </ul>
          * 
-         * *   **Active**: The listener for the instance can forward the received traffic based on forwarding rules.
-         * *   **InActive**: The listener for the instance does not forward the received traffic.
+         * <strong>example:</strong>
+         * <p>InActive</p>
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
@@ -230,7 +246,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5s9ayrxsd9hszrlt5fgv2****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -239,7 +258,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -248,7 +270,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Valid values: **10** to **100**.
+         * <p>The number of entries per page. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -257,7 +282,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the backend server.
+         * <p>The ID of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5f67ffjc004wwz0t****</p>
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
@@ -266,7 +294,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5sy773iy25rulsmgskmba****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

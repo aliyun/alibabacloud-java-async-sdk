@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionIspsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionIspsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of ISPs.
+         * <p>The list of ISPs.</p>
          */
         public Builder isps(java.util.List < Isps> isps) {
             this.isps = isps;
@@ -57,7 +58,10 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC90CC7E-23B6-5A90-9097-A17CE4A161C4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionIspsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionIspsResponseBody</p>
+     */
     public static class Isps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -109,7 +119,10 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the ISP.
+             * <p>The code of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -117,7 +130,10 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ISP.
+             * <p>The name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>move</p>
              */
             public Builder name(String name) {
                 this.name = name;

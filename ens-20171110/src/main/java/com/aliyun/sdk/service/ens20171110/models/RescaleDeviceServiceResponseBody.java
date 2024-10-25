@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RescaleDeviceServiceResponseBody} extends {@link TeaModel}
  *
  * <p>RescaleDeviceServiceResponseBody</p>
@@ -73,7 +74,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         private java.util.List < ResourceDetailInfos> resourceDetailInfos; 
 
         /**
-         * The IDs of the devices.
+         * <p>The IDs of the devices.</p>
          */
         public Builder deviceIds(java.util.List < String > deviceIds) {
             this.deviceIds = deviceIds;
@@ -81,7 +82,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b3b5bb9a-4e0b-4cac-8ebf-e5e015726723</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -89,7 +93,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F3F3570-E721-53F6-853F-37B7725AC6CB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The key properties of the device.
+         * <p>The key properties of the device.</p>
          */
         public Builder resourceDetailInfos(java.util.List < ResourceDetailInfos> resourceDetailInfos) {
             this.resourceDetailInfos = resourceDetailInfos;
@@ -110,6 +117,12 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RescaleDeviceServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RescaleDeviceServiceResponseBody</p>
+     */
     public static class ResourceDetailInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ID")
         private String id;
@@ -221,7 +234,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the device.
+             * <p>The ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h-uf6009zoa6hdbjyqxcn1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -229,7 +245,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the device.
+             * <p>The IP address of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.152.196.36</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -237,7 +256,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP) to which the device belongs.
+             * <p>The Internet service provider (ISP) to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecom</p>
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -245,7 +267,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The media access control (MAC) address of the device.
+             * <p>The media access control (MAC) address of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24:0B:88:04:71:E0</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -253,7 +278,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the edge node to which the device belongs.
+             * <p>The ID of the edge node to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chongqing-1</p>
              */
             public Builder regionID(String regionID) {
                 this.regionID = regionID;
@@ -261,7 +289,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server on which the device is deployed.
+             * <p>The name of the server on which the device is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens-nc2</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -269,7 +300,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the device.
+             * <p>The status of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -277,7 +311,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens.ac6.large</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleasePostPaidInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReleasePostPaidInstanceRequest</p>
@@ -54,7 +55,11 @@ public class ReleasePostPaidInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance to be deleted. You can specify only one instance ID.
+         * <p>The ID of the instance to be deleted. You can specify only one instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-instance****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

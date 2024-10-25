@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoadBalancerRequest} extends {@link RequestModel}
  *
  * <p>CreateLoadBalancerRequest</p>
@@ -128,7 +129,11 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * The ID of the Edge Node Service (ENS) node.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -137,10 +142,13 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The name of the ELB instance. The name must be 1 to 80 characters in length. If you leave this parameter empty, the system randomly allocates a name as the value of this parameter.
-         * <p>
+         * <p>The name of the ELB instance. The name must be 1 to 80 characters in length. If you leave this parameter empty, the system randomly allocates a name as the value of this parameter.</p>
+         * <blockquote>
+         * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
          * 
-         * >  The value cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>gcs-pre-websocket-eslb-telecom</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -149,7 +157,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The specification of the ELB instance.
+         * <p>The specification of the ELB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elb.s2.medium</p>
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);
@@ -158,7 +170,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The network ID of the created ELB instance.
+         * <p>The network ID of the created ELB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5sax03dh2eyagujgsn7z9****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -167,7 +183,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.
+         * <p>The billing method of the cluster. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -176,7 +196,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the internal-facing ELB instance belongs.
+         * <p>The ID of the vSwitch to which the internal-facing ELB instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5s78haoys9oylle6ln71m****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

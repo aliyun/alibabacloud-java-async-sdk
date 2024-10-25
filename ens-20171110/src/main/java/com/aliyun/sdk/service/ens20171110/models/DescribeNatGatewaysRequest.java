@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatGatewaysRequest} extends {@link RequestModel}
  *
  * <p>DescribeNatGatewaysRequest</p>
@@ -137,7 +138,10 @@ public class DescribeNatGatewaysRequest extends Request {
         } 
 
         /**
-         * The ID of the Edge Node Service (ENS) node.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wuxi-9</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -146,7 +150,10 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * The name of the NAT gateway.
+         * <p>The name of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -155,7 +162,10 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -164,7 +174,10 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * The ID of the network.
+         * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-2zeuphj08tt7q3brd****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -173,10 +186,11 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**.
-         * <p>
+         * <p>The page number. Pages start from page <strong>1</strong>.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -185,10 +199,11 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * The number of entries per page. The maximum value is **100**.
-         * <p>
+         * <p>The number of entries per page. The maximum value is <strong>100</strong>.</p>
+         * <p>Default value: <strong>10</strong>.</p>
          * 
-         * Default value: **10**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +212,10 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5rllcjb3ol6duzjdnbm1o****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

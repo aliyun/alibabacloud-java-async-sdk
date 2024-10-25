@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOssStorageAndAccByBucketsRequest} extends {@link RequestModel}
  *
  * <p>GetOssStorageAndAccByBucketsRequest</p>
@@ -53,7 +54,10 @@ public class GetOssStorageAndAccByBucketsRequest extends Request {
         } 
 
         /**
-         * The information about the bucket.
+         * <p>The information about the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-bucket</p>
          */
         public Builder bucketList(String bucketList) {
             this.putQueryParameter("BucketList", bucketList);

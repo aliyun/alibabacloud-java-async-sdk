@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReInitDiskRequest} extends {@link RequestModel}
  *
  * <p>ReInitDiskRequest</p>
@@ -69,7 +70,11 @@ public class ReInitDiskRequest extends Request {
         } 
 
         /**
-         * The ID of the disk to be initialized. You can initialize only one disk at a time.
+         * <p>The ID of the disk to be initialized. You can initialize only one disk at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-5r7v69e0bejrnzger09w71yjv</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -78,7 +83,11 @@ public class ReInitDiskRequest extends Request {
         }
 
         /**
-         * The ID of the image to use to create the instance.
+         * <p>The ID of the image to use to create the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5rz3i231o531s4p4ozanxmgx7</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyFileSystemRequest} extends {@link RequestModel}
  *
  * <p>ModifyFileSystemRequest</p>
@@ -84,7 +85,11 @@ public class ModifyFileSystemRequest extends Request {
         } 
 
         /**
-         * The description of the file system.
+         * <p>The description of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileSystemTest</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -93,7 +98,11 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * The ID of the edge node.
+         * <p>The ID of the edge node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-cmcc</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -102,7 +111,11 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c50f8*****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

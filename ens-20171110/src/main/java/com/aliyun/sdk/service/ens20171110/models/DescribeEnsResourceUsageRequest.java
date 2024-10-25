@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsResourceUsageRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsResourceUsageRequest</p>
@@ -67,7 +68,10 @@ public class DescribeEnsResourceUsageRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.
+         * <p>The end of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-15T09:07:23Z</p>
          */
         public Builder expiredEndTime(String expiredEndTime) {
             this.putQueryParameter("ExpiredEndTime", expiredEndTime);
@@ -76,7 +80,10 @@ public class DescribeEnsResourceUsageRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.
+         * <p>The beginning of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-15T09:07:23Z</p>
          */
         public Builder expiredStartTime(String expiredStartTime) {
             this.putQueryParameter("ExpiredStartTime", expiredStartTime);

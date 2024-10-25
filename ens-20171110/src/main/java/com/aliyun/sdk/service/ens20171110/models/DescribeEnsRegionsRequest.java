@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsRegionsRequest</p>
@@ -53,10 +54,11 @@ public class DescribeEnsRegionsRequest extends Request {
         } 
 
         /**
-         * The ID of the node.
-         * <p>
+         * <p>The ID of the node.</p>
+         * <p>By default, all available node IDs are returned.</p>
          * 
-         * By default, all available node IDs are returned.
+         * <strong>example:</strong>
+         * <p>cn-dalian-unicom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

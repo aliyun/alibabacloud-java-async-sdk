@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstanceRequest} extends {@link RequestModel}
  *
  * <p>StopInstanceRequest</p>
@@ -68,11 +69,14 @@ public class StopInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to forcibly stop the servers.
-         * <p>
+         * <p>Specifies whether to forcibly stop the servers.</p>
+         * <ul>
+         * <li><strong>true</strong>: forcibly stops the instance.</li>
+         * <li><strong>false</strong>: normally stops the servers. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: forcibly stops the instance.
-         * *   **false**: normally stops the servers. This is the default value.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceStop(String forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -81,7 +85,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance that you want to stop. You can specify only one instance ID.
+         * <p>The ID of the instance that you want to stop. You can specify only one instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-instanceid****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

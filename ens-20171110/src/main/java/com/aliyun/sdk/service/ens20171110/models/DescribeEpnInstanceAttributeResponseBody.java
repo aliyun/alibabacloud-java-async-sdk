@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEpnInstanceAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEpnInstanceAttributeResponseBody</p>
@@ -109,7 +110,7 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         private java.util.List < VSwitches> vSwitches; 
 
         /**
-         * The information about the EPN configurations.
+         * <p>The information about the EPN configurations.</p>
          */
         public Builder confVersions(java.util.List < ConfVersions> confVersions) {
             this.confVersions = confVersions;
@@ -117,7 +118,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the EPN instance.
+         * <p>The ID of the EPN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-xxxx</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.EPNInstanceId = EPNInstanceId;
@@ -125,7 +129,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the EPN instance.
+         * <p>The name of the EPN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-test</p>
          */
         public Builder EPNInstanceName(String EPNInstanceName) {
             this.EPNInstanceName = EPNInstanceName;
@@ -133,7 +140,7 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the instance.
+         * <p>The information about the instance.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -141,12 +148,15 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The networking mode. Valid values:
-         * <p>
+         * <p>The networking mode. Valid values:</p>
+         * <ul>
+         * <li>SpeedUp: intelligent acceleration network (Internet)</li>
+         * <li>Connection: internal network</li>
+         * <li>SpeedUpAndConnection: intelligent acceleration network and internal network</li>
+         * </ul>
          * 
-         * *   SpeedUp: intelligent acceleration network (Internet)
-         * *   Connection: internal network
-         * *   SpeedUpAndConnection: intelligent acceleration network and internal network
+         * <strong>example:</strong>
+         * <p>SpeedUp</p>
          */
         public Builder networkingModel(String networkingModel) {
             this.networkingModel = networkingModel;
@@ -154,7 +164,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +175,7 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the vSwitch.
+         * <p>Details of the vSwitch.</p>
          */
         public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
             this.vSwitches = vSwitches;
@@ -175,6 +188,12 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEpnInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnInstanceAttributeResponseBody</p>
+     */
     public static class ConfVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfVersion")
         private String confVersion;
@@ -214,7 +233,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             private String ensRegionId; 
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-10-11</p>
              */
             public Builder confVersion(String confVersion) {
                 this.confVersion = confVersion;
@@ -222,7 +244,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-telecom</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -236,6 +261,12 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEpnInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnInstanceAttributeResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
@@ -335,7 +366,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-telecom-4</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -343,7 +377,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epn-xxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -351,7 +388,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epn-test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -359,12 +399,15 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ISP. Valid values:
-             * <p>
+             * <p>The ISP. Valid values:</p>
+             * <ul>
+             * <li>cmcc: China Mobile</li>
+             * <li>unicom: China Unicom</li>
+             * <li>telecom: China Telecom</li>
+             * </ul>
              * 
-             * *   cmcc: China Mobile
-             * *   unicom: China Unicom
-             * *   telecom: China Telecom
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -372,7 +415,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.12</p>
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -380,7 +426,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.3.XX.XX</p>
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -388,12 +437,15 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Stopped</li>
+             * <li>Expired</li>
+             * </ul>
              * 
-             * *   Running
-             * *   Stopped
-             * *   Expired
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -407,6 +459,12 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEpnInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnInstanceAttributeResponseBody</p>
+     */
     public static class VSwitches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -470,7 +528,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             private String vSwitchName; 
 
             /**
-             * The CIDR block.
+             * <p>The CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.1/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -478,7 +539,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-telecom-4</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -486,7 +550,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vs-xxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -494,7 +561,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vSwitch.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vs-test</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;

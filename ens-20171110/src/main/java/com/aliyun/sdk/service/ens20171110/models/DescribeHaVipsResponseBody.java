@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHaVipsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class AssociatedEipAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
@@ -191,6 +198,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class AssociatedInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -312,6 +325,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class HaVips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedEipAddresses")
         private java.util.List < AssociatedEipAddresses> associatedEipAddresses;

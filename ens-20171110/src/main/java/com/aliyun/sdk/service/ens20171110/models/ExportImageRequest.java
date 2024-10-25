@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportImageRequest} extends {@link RequestModel}
  *
  * <p>ExportImageRequest</p>
@@ -112,7 +113,11 @@ public class ExportImageRequest extends Request {
         } 
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5ragaz3s74b7go8ks7jp9****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -121,7 +126,11 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The OSS bucket to which you want to export the image.
+         * <p>The OSS bucket to which you want to export the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>whxyl****</p>
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -130,7 +139,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The prefix of the object as which you want to store the image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.
+         * <p>The prefix of the object as which you want to store the image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
          */
         public Builder OSSPrefix(String OSSPrefix) {
             this.putQueryParameter("OSSPrefix", OSSPrefix);
@@ -139,12 +148,15 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
+         * <p>The ID of the region.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cn-beijing</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   cn-beijing
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder OSSRegionId(String OSSRegionId) {
             this.putQueryParameter("OSSRegionId", OSSRegionId);
@@ -153,7 +165,10 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The name of the Resource Access Management (RAM) role.
+         * <p>The name of the Resource Access Management (RAM) role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunMNSLoggingRole</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

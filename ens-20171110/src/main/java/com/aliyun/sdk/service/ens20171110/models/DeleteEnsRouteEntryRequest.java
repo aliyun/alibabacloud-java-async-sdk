@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEnsRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteEnsRouteEntryRequest</p>
@@ -54,7 +55,11 @@ public class DeleteEnsRouteEntryRequest extends Request {
         } 
 
         /**
-         * The ID of the route that you want to delete.
+         * <p>The ID of the route that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-8vbmb2890wiret5maqq25</p>
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);

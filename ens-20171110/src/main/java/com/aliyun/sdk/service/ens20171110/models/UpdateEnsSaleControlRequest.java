@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEnsSaleControlRequest} extends {@link RequestModel}
  *
  * <p>UpdateEnsSaleControlRequest</p>
@@ -106,7 +107,7 @@ public class UpdateEnsSaleControlRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * <p>This parameter is required.</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -124,7 +125,7 @@ public class UpdateEnsSaleControlRequest extends Request {
         }
 
         /**
-         * SaleControls.
+         * <p>This parameter is required.</p>
          */
         public Builder saleControls(java.util.List < SaleControls> saleControls) {
             String saleControlsShrink = shrink(saleControls, "SaleControls", "json");
@@ -140,6 +141,12 @@ public class UpdateEnsSaleControlRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateEnsSaleControlRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEnsSaleControlRequest</p>
+     */
     public static class ConditionControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionControlModuleCode")
         private String conditionControlModuleCode;
@@ -201,6 +208,12 @@ public class UpdateEnsSaleControlRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateEnsSaleControlRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEnsSaleControlRequest</p>
+     */
     public static class ModuleValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleMaxValue")
         private String moduleMaxValue;
@@ -282,6 +295,12 @@ public class UpdateEnsSaleControlRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateEnsSaleControlRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEnsSaleControlRequest</p>
+     */
     public static class SaleControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionControls")
         private java.util.List < ConditionControls> conditionControls;
@@ -389,7 +408,7 @@ public class UpdateEnsSaleControlRequest extends Request {
             }
 
             /**
-             * ModuleCode.
+             * <p>This parameter is required.</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -397,7 +416,7 @@ public class UpdateEnsSaleControlRequest extends Request {
             }
 
             /**
-             * ModuleValue.
+             * <p>This parameter is required.</p>
              */
             public Builder moduleValue(ModuleValue moduleValue) {
                 this.moduleValue = moduleValue;
@@ -405,7 +424,7 @@ public class UpdateEnsSaleControlRequest extends Request {
             }
 
             /**
-             * Operator.
+             * <p>This parameter is required.</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -413,7 +432,7 @@ public class UpdateEnsSaleControlRequest extends Request {
             }
 
             /**
-             * OrderType.
+             * <p>This parameter is required.</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;

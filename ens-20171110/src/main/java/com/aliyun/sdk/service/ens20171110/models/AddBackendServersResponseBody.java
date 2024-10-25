@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBackendServersResponseBody} extends {@link TeaModel}
  *
  * <p>AddBackendServersResponseBody</p>
@@ -49,10 +50,10 @@ public class AddBackendServersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of backend servers that you want to add. You can add at most 20 backend servers.
-         * <p>
-         * 
-         * >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
+         * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
+         * <blockquote>
+         * <p> Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+         * </blockquote>
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -60,7 +61,10 @@ public class AddBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -73,6 +77,12 @@ public class AddBackendServersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddBackendServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBackendServersResponseBody</p>
+     */
     public static class BackendServer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -148,7 +158,10 @@ public class AddBackendServersResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The IP address of the backend server.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -156,7 +169,10 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The backend port that is used by the ELB instance.
+             * <p>The backend port that is used by the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -164,7 +180,10 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that is used as the backend server.
+             * <p>The ID of the instance that is used as the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5uf6hj58zvml4ali8****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -172,11 +191,14 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ens</strong>: ENS instance.</li>
+             * <li><strong>eni</strong>: ENI.</li>
+             * </ul>
              * 
-             * *   **ens**: ENS instance.
-             * *   **eni**: ENI.
+             * <strong>example:</strong>
+             * <p>ens</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -184,10 +206,13 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
-             * <p>
+             * <p>The weight of the backend server. Default value: 100. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * <blockquote>
+             * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+             * </blockquote>
              * 
-             * >  The value 0 indicates that requests are not forwarded to the backend server.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -201,6 +226,12 @@ public class AddBackendServersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddBackendServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBackendServersResponseBody</p>
+     */
     public static class BackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackendServer")
         private java.util.List < BackendServer> backendServer;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExportImageStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExportImageStatusResponseBody</p>
@@ -49,13 +50,16 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The export status of the image. Valid values:
-         * <p>
+         * <p>The export status of the image. Valid values:</p>
+         * <ul>
+         * <li>Exporting</li>
+         * <li>Exported</li>
+         * <li>ExportError</li>
+         * <li>Unexported</li>
+         * </ul>
          * 
-         * *   Exporting
-         * *   Exported
-         * *   ExportError
-         * *   Unexported
+         * <strong>example:</strong>
+         * <p>Exporting</p>
          */
         public Builder imageExportStatus(String imageExportStatus) {
             this.imageExportStatus = imageExportStatus;
@@ -63,7 +67,10 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14BBB3A0-3DBE-54F5-AEC8-01D3F6B1EBE2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

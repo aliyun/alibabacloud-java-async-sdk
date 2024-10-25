@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMountTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMountTargetsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about mount targets.
+         * <p>The information about mount targets.</p>
          */
         public Builder mountTargets(java.util.List < MountTargets> mountTargets) {
             this.mountTargets = mountTargets;
@@ -93,7 +94,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>762DD527-358B-1E48-8005-CCE3ED4EB9E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of mount targets.
+         * <p>The total number of mount targets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMountTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountTargetsResponseBody</p>
+     */
     public static class MountTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
@@ -217,7 +236,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-cmcc</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -225,7 +247,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file system.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c50f8*****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -233,7 +258,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the mount target.
+             * <p>The path of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LB:/fileSystemName/mountTargetName</p>
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -241,7 +269,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the mount target.
+             * <p>The name of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestMountPath</p>
              */
             public Builder mountTargetName(String mountTargetName) {
                 this.mountTargetName = mountTargetName;
@@ -249,7 +280,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network.
+             * <p>The ID of the network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-***</p>
              */
             public Builder netWorkId(String netWorkId) {
                 this.netWorkId = netWorkId;
@@ -257,13 +291,16 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the mount target. Valid values:
-             * <p>
+             * <p>The state of the mount target. Valid values:</p>
+             * <ul>
+             * <li>active: The mount target is available.</li>
+             * <li>inactive: The mount target is unavailable.</li>
+             * <li>pending: A task is being queued for the mount target.</li>
+             * <li>deleting: The mount target is being deleted.</li>
+             * </ul>
              * 
-             * *   active: The mount target is available.
-             * *   inactive: The mount target is unavailable.
-             * *   pending: A task is being queued for the mount target.
-             * *   deleting: The mount target is being deleted.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

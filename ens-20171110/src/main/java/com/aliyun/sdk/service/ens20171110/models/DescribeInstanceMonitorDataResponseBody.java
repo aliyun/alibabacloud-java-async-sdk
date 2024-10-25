@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceMonitorDataResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned service code. A value of 0 indicates that the operation was successful.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The set of InstanceMonitorDataType data.
+         * <p>The set of InstanceMonitorDataType data.</p>
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -77,7 +81,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8B26B44-0189-443E-9816-D951F59623A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMonitorDataResponseBody</p>
+     */
     public static class InstanceMonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
@@ -141,7 +154,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             private String memory; 
 
             /**
-             * The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.
+             * <p>The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -149,7 +165,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourInstance ID</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -157,7 +176,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is not yet supported.
+             * <p>This parameter is not yet supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not currently supported</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -171,6 +193,12 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMonitorDataResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceMonitorData")
         private java.util.List < InstanceMonitorData> instanceMonitorData;

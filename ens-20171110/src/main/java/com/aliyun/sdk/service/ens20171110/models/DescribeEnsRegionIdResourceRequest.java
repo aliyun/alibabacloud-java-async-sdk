@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionIdResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsRegionIdResourceRequest</p>
@@ -126,7 +127,11 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         } 
 
         /**
-         * The end time of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end time of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-16T06:33:15</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -135,13 +140,16 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * The Internet service provider (ISP). Valid values:
-         * <p>
+         * <p>The Internet service provider (ISP). Valid values:</p>
+         * <ul>
+         * <li>cmcc: China Mobile</li>
+         * <li>telecom: China Telecom</li>
+         * <li>unicom: China Unicom</li>
+         * <li>multiCarrier: multi-line ISP</li>
+         * </ul>
          * 
-         * *   cmcc: China Mobile
-         * *   telecom: China Telecom
-         * *   unicom: China Unicom
-         * *   multiCarrier: multi-line ISP
+         * <strong>example:</strong>
+         * <p>cmcc</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -150,12 +158,15 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * The order in which the resources to return are sorted. Valid values:
-         * <p>
+         * <p>The order in which the resources to return are sorted. Valid values:</p>
+         * <ul>
+         * <li>InstanceCount: desc</li>
+         * <li>Area: asc</li>
+         * <li>InternetBandwidth: asc</li>
+         * </ul>
          * 
-         * *   InstanceCount: desc
-         * *   Area: asc
-         * *   InternetBandwidth: asc
+         * <strong>example:</strong>
+         * <p>InstanceCount: desc</p>
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -164,7 +175,10 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -173,7 +187,10 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **100**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -182,7 +199,11 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-16T06:33:15Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

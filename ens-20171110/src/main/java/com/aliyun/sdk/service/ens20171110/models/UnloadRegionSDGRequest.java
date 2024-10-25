@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnloadRegionSDGRequest} extends {@link RequestModel}
  *
  * <p>UnloadRegionSDGRequest</p>
@@ -83,7 +84,8 @@ public class UnloadRegionSDGRequest extends Request {
         } 
 
         /**
-         * The destination nodes.
+         * <p>The destination nodes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
             String destinationRegionIdsShrink = shrink(destinationRegionIds, "DestinationRegionIds", "json");
@@ -93,7 +95,7 @@ public class UnloadRegionSDGRequest extends Request {
         }
 
         /**
-         * The namespaces.
+         * <p>The namespaces.</p>
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");
@@ -103,7 +105,11 @@ public class UnloadRegionSDGRequest extends Request {
         }
 
         /**
-         * Deletes the shared data group (SDG) ID of the preloaded data.
+         * <p>Deletes the shared data group (SDG) ID of the preloaded data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-xxxx</p>
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

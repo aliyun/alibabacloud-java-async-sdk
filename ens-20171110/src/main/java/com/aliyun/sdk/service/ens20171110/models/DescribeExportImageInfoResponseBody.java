@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExportImageInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExportImageInfoResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned result. For more information, see the Images parameter described in the JSON-formatted sample success response.
+         * <p>The returned result. For more information, see the Images parameter described in the JSON-formatted sample success response.</p>
          */
         public Builder images(Images images) {
             this.images = images;
@@ -93,7 +94,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExportImageInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExportImageInfoResponseBody</p>
+     */
     public static class Image extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -241,7 +260,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             private String platform; 
 
             /**
-             * The architecture of the image. Example: **x86\_64**.
+             * <p>The architecture of the image. Example: <strong>x86_64</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -249,7 +271,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was created.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-08T12:10:03Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -257,7 +282,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the exported image.
+             * <p>The URL of the exported image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://user_defined_bucket.oss-cn-beijing.aliyuncs.com/m-xxxxxxxxx1.qcow2">https://user_defined_bucket.oss-cn-beijing.aliyuncs.com/m-xxxxxxxxx1.qcow2</a></p>
              */
             public Builder exportedImageURL(String exportedImageURL) {
                 this.exportedImageURL = exportedImageURL;
@@ -265,13 +293,16 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The export status of the image. Valid values:
-             * <p>
+             * <p>The export status of the image. Valid values:</p>
+             * <ul>
+             * <li>Exporting</li>
+             * <li>Exported</li>
+             * <li>ExportError</li>
+             * <li>Unexported</li>
+             * </ul>
              * 
-             * *   Exporting
-             * *   Exported
-             * *   ExportError
-             * *   Unexported
+             * <strong>example:</strong>
+             * <p>Exported</p>
              */
             public Builder imageExportStatus(String imageExportStatus) {
                 this.imageExportStatus = imageExportStatus;
@@ -279,7 +310,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-xxxxxxxxx1</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -287,7 +321,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-xxxxxxxxx1</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -295,11 +332,14 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the image. Valid values:
-             * <p>
+             * <p>The source of the image. Valid values:</p>
+             * <ul>
+             * <li>system: public image</li>
+             * <li>self: custom image</li>
+             * </ul>
              * 
-             * *   system: public image
-             * *   self: custom image
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -307,7 +347,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The OS.
+             * <p>The OS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -321,6 +364,12 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExportImageInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExportImageInfoResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;

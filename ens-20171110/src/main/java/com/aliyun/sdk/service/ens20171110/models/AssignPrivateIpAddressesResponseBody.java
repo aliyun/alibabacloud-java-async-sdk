@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
  *
  * <p>AssignPrivateIpAddressesResponseBody</p>
@@ -49,7 +50,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the ENI and the secondary private IP addresses that are assigned to the ENI.
+         * <p>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</p>
          */
         public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
             this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
@@ -57,7 +58,10 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignPrivateIpAddressesResponseBody</p>
+     */
     public static class AssignedPrivateIpAddressesSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
@@ -109,7 +119,10 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             private java.util.List < String > privateIpSet; 
 
             /**
-             * The ID of the ENI.
+             * <p>The ID of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-uf620pb4d19ljnu4a64m</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -117,7 +130,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary private IP addresses that are assigned to the ENI.
+             * <p>The assigned private IP addresses.</p>
              */
             public Builder privateIpSet(java.util.List < String > privateIpSet) {
                 this.privateIpSet = privateIpSet;

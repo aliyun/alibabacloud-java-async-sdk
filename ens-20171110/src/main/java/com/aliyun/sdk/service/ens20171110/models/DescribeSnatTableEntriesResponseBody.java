@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnatTableEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnatTableEntriesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of SNAT entries.
+         * <p>The details of the SNAT entries.</p>
          */
         public Builder snatTableEntries(java.util.List < SnatTableEntries> snatTableEntries) {
             this.snatTableEntries = snatTableEntries;
@@ -117,7 +127,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of SNAT entries that are returned.
+         * <p>The number of SNAT entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,7 +143,16 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnatTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnatTableEntriesResponseBody</p>
+     */
     public static class SnatTableEntries extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+        private Integer idleTimeout;
+
         @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
@@ -156,6 +178,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private String status;
 
         private SnatTableEntries(Builder builder) {
+            this.idleTimeout = builder.idleTimeout;
             this.natGatewayId = builder.natGatewayId;
             this.snatEntryId = builder.snatEntryId;
             this.snatEntryName = builder.snatEntryName;
@@ -172,6 +195,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
         public static SnatTableEntries create() {
             return builder().build();
+        }
+
+        /**
+         * @return idleTimeout
+         */
+        public Integer getIdleTimeout() {
+            return this.idleTimeout;
         }
 
         /**
@@ -231,6 +261,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer idleTimeout; 
             private String natGatewayId; 
             private String snatEntryId; 
             private String snatEntryName; 
@@ -241,7 +272,18 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the NAT gateway.
+             * IdleTimeout.
+             */
+            public Builder idleTimeout(Integer idleTimeout) {
+                this.idleTimeout = idleTimeout;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -249,7 +291,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SNAT entry.
+             * <p>The ID of the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snat-5tfjp3537mi6iokl59g5c****</p>
              */
             public Builder snatEntryId(String snatEntryId) {
                 this.snatEntryId = snatEntryId;
@@ -257,7 +302,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SNAT entry.
+             * <p>The name of the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test0</p>
              */
             public Builder snatEntryName(String snatEntryName) {
                 this.snatEntryName = snatEntryName;
@@ -265,7 +313,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The EIP specified in the SNAT entry.
+             * <p>The EIP specified in the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.XXX.XXX.71</p>
              */
             public Builder snatIp(String snatIp) {
                 this.snatIp = snatIp;
@@ -273,7 +324,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The source CIDR block specified in the SNAT entry.
+             * <p>The source CIDR block specified in the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.13/32</p>
              */
             public Builder sourceCIDR(String sourceCIDR) {
                 this.sourceCIDR = sourceCIDR;
@@ -281,7 +335,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary EIP. Multiple EIPs are separated by commas (,).
+             * <p>The secondary EIP. Multiple EIPs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101.XXX.XXX.7</p>
              */
             public Builder standbySnatIp(String standbySnatIp) {
                 this.standbySnatIp = standbySnatIp;
@@ -289,13 +346,16 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the secondary EIP. Valid values:
-             * <p>
+             * <p>The status of the secondary EIP. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * <li>Stopped</li>
+             * <li>Starting</li>
+             * </ul>
              * 
-             * *   Running
-             * *   Stopping
-             * *   Stopped
-             * *   Starting
+             * <strong>example:</strong>
+             * <p>Stopped</p>
              */
             public Builder standbyStatus(String standbyStatus) {
                 this.standbyStatus = standbyStatus;
@@ -303,12 +363,15 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SNAT entry. Valid values:
-             * <p>
+             * <p>The status of the SNAT entry. Valid values:</p>
+             * <ul>
+             * <li>Pending: The SNAT entry is being created or modified.</li>
+             * <li>Available: The SNAT entry is available.</li>
+             * <li>Deleting: The SNAT entry is being deleted.</li>
+             * </ul>
              * 
-             * *   Pending: The SNAT entry is being created or modified.
-             * *   Available: The SNAT entry is available.
-             * *   Deleting: The SNAT entry is being deleted.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

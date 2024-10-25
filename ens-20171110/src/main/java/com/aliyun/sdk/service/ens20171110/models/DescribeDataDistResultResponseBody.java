@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataDistResultResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The distribution status of data files on edge instances.
+         * <p>The distribution status of data files on edge instances.</p>
          */
         public Builder distResults(DistResults distResults) {
             this.distResults = distResults;
@@ -93,7 +94,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50373E71-7710-4620-8AAB-133CCE49451C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -193,7 +212,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the instance
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5qzje8f5un1wmi341m2yetaxv</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -201,7 +223,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the distribution. The time is displayed in UTC.
+             * <p>The start time of the distribution. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-19T07:24:52Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -209,7 +234,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the distribution status.
+             * <p>The description of the distribution status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -217,7 +245,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the distribution status was last updated. The time is displayed in UTC.
+             * <p>The time when the distribution status was last updated. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-11T02:38:19Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -231,6 +262,12 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
@@ -272,6 +309,12 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class StatusStat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private String instanceCount;
@@ -323,7 +366,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of associated edge instances.
+             * <p>The number of associated edge instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -331,7 +377,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * The distribution status of the edge instance.
+             * <p>The distribution status of the edge instance.</p>
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -339,14 +385,17 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * The distribution status. The value is of the enumeration type. Valid values:
-             * <p>
+             * <p>The distribution status. The value is of the enumeration type. Valid values:</p>
+             * <ul>
+             * <li>SUCCESS: The distribution is successful.</li>
+             * <li>FAILED: The distribution failed.</li>
+             * <li>DISTING: The data is being distributed.</li>
+             * <li>POD_RESTARTING: The idle pod is being restarted.</li>
+             * <li>DELETED: The data is cleared or removed.</li>
+             * </ul>
              * 
-             * *   SUCCESS: The distribution is successful.
-             * *   FAILED: The distribution failed.
-             * *   DISTING: The data is being distributed.
-             * *   POD_RESTARTING: The idle pod is being restarted.
-             * *   DELETED: The data is cleared or removed.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -360,6 +409,12 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class StatusStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatusStat")
         private java.util.List < StatusStat> statusStat;
@@ -401,6 +456,12 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class DistResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -452,7 +513,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the data file.
+             * <p>The name of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gcs-prod-websocket-eip-unicom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -460,7 +524,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * The distribution status statistics.
+             * <p>The distribution status statistics.</p>
              */
             public Builder statusStats(StatusStats statusStats) {
                 this.statusStats = statusStats;
@@ -468,7 +532,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the data file.
+             * <p>The version number of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -482,6 +549,12 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class DistResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistResult")
         private java.util.List < DistResult> distResult;

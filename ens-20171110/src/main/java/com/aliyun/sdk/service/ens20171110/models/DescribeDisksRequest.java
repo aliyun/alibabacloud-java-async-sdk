@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDisksRequest} extends {@link RequestModel}
  *
  * <p>DescribeDisksRequest</p>
@@ -249,13 +250,16 @@ public class DescribeDisksRequest extends Request {
         } 
 
         /**
-         * The category of the disk.
-         * <p>
+         * <p>The category of the disk.</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: all-flash disk.</li>
+         * <li>local_hdd: local HDD.</li>
+         * <li>local_ssd: local SSD.</li>
+         * </ul>
          * 
-         * *   cloud_efficiency: ultra disk.
-         * *   cloud_ssd: all-flash disk.
-         * *   local_hdd: local HDD.
-         * *   local_ssd: local SSD.
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -264,11 +268,14 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The billing method.
-         * <p>
+         * <p>The billing method.</p>
+         * <ul>
+         * <li>prePay: subscription.</li>
+         * <li>postpay: pay-as-you-go.</li>
+         * </ul>
          * 
-         * *   prePay: subscription.
-         * *   postpay: pay-as-you-go.
+         * <strong>example:</strong>
+         * <p>prepay</p>
          */
         public Builder diskChargeType(String diskChargeType) {
             this.putQueryParameter("DiskChargeType", diskChargeType);
@@ -277,7 +284,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the disk.
+         * <p>The ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-5soak1gqa507lyfzvz0xo****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -286,7 +296,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the disk.
+         * <p>The ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d-wz99njena32z90ki****&quot;]</p>
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -295,7 +308,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The name of the disk.
+         * <p>The name of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DiskName</p>
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -304,12 +320,15 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The purchase method of the disk. Valid values:
-         * <p>
+         * <p>The purchase method of the disk. Valid values:</p>
+         * <ul>
+         * <li>ServiceDisk: The disk is purchased when ENS is activated.</li>
+         * <li>ResoureDisk: The disk is purchased when the instance is created.</li>
+         * <li>PostPayDisk: The disk is separately purchased.</li>
+         * </ul>
          * 
-         * *   ServiceDisk: The disk is purchased when ENS is activated.
-         * *   ResoureDisk: The disk is purchased when the instance is created.
-         * *   PostPayDisk: The disk is separately purchased.
+         * <strong>example:</strong>
+         * <p>PostPayDisk</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -318,7 +337,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the edge node.
+         * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-kunming-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -327,7 +349,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The node information.
+         * <p>The node information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</p>
          */
         public Builder ensRegionIds(String ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -336,7 +361,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the disk is attached.
+         * <p>The ID of the instance to which the disk is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5t77rb0yoz79m28ku60sx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -345,7 +373,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the returned data. Example: {"EnsRegionId":"desc"}. By default, the nodes are sorted by IDs in descending order.
+         * <p>The order in which you want to sort the returned data. Example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}. By default, the nodes are sorted by IDs in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;DiskNameSort&quot;:&quot;desc&quot;,&quot;EnsRegionIdSort&quot;:&quot;asc&quot; }</p>
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -354,10 +385,11 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**.
-         * <p>
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -366,10 +398,11 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**.
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>.</p>
+         * <p>Default value: <strong>10</strong>.</p>
          * 
-         * Default value: **10**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -378,7 +411,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-897654321****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -387,18 +423,21 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The status of the disk. Valid values:
-         * <p>
+         * <p>The status of the disk. Valid values:</p>
+         * <ul>
+         * <li>In-use: The disk is in use.</li>
+         * <li>Available: The disk can be attached.</li>
+         * <li>Attaching: The disk is being attached.</li>
+         * <li>Detaching: The disk is being detached.</li>
+         * <li>Creating: The disk is being created.</li>
+         * <li>ReIniting: The disk is being reset.</li>
+         * <li>Deleting: The disk is being released.</li>
+         * <li>Deleted: The disk is released.</li>
+         * <li>Expiring: The disk is about to expire.</li>
+         * </ul>
          * 
-         * *   In-use: The disk is in use.
-         * *   Available: The disk can be attached.
-         * *   Attaching: The disk is being attached.
-         * *   Detaching: The disk is being detached.
-         * *   Creating: The disk is being created.
-         * *   ReIniting: The disk is being reset.
-         * *   Deleting: The disk is being released.
-         * *   Deleted: The disk is released.
-         * *   Expiring: The disk is about to expire.
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -407,11 +446,14 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The type of the disk. Valid values:
-         * <p>
+         * <p>The type of the disk. Valid values:</p>
+         * <ul>
+         * <li>system: system disk.</li>
+         * <li>data: data disk.</li>
+         * </ul>
          * 
-         * *   system: system disk.
-         * *   data: data disk.
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

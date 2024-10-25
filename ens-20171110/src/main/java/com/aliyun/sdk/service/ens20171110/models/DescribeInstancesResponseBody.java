@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancesResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned service code. 0 indicates that the request was successful.
+         * <p>The returned service code. 0 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned instance information. It is an array that consists of InstanceAttributesType data.
+         * <p>The returned instance information. It is an array that consists of InstanceAttributesType data.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -113,7 +117,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +128,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class DataDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -309,12 +331,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The category of the cloud disk or local disk. Valid values:
-             * <p>
+             * <p>The category of the cloud disk or local disk. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: local disk.</li>
+             * <li><strong>pangu</strong>: ultra disk.</li>
+             * <li><strong>local_hdd</strong>: local HDD.</li>
+             * </ul>
              * 
-             * *   **file**: local disk.
-             * *   **pangu**: ultra disk.
-             * *   **local_hdd**: local HDD.
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -322,7 +347,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disk.
+             * <p>The ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-5ip4c2dhmas0vjd5u1r****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -330,7 +358,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the disk.
+             * <p>The name of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DiskName</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -338,7 +369,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: GiB.
+             * <p>The size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -362,7 +396,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: MiB.
+             * <p>The size of the disk. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51200</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -370,12 +407,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field of the disk category. Valid values:
-             * <p>
+             * <p>The extended field of the disk category. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: local disk.</li>
+             * <li><strong>pangu</strong>: ultra disk.</li>
+             * <li><strong>local_hdd</strong>: local HDD.</li>
+             * </ul>
              * 
-             * *   **file**: local disk.
-             * *   **pangu**: ultra disk.
-             * *   **local_hdd**: local HDD.
+             * <strong>example:</strong>
+             * <p>pangu</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -383,10 +423,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud disk or local disk. Valid values:
-             * <p>
+             * <p>The type of the cloud disk or local disk. Valid values:</p>
+             * <p><strong>system</strong>: system disk. <strong>data</strong>: data disk.</p>
              * 
-             * **system**: system disk. **data**: data disk.
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -394,7 +435,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the disk.
+             * <p>The name of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -402,7 +446,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: MiB.
+             * <p>The size of the disk. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20480</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -410,7 +457,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the disk.
+             * <p>The UUID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-5itef1wtxj961mbff8xe9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -424,6 +474,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class InstanceDataDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDisk")
         private java.util.List < DataDisk> dataDisk;
@@ -465,6 +521,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class InnerIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
@@ -506,6 +568,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class PrivateIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
@@ -547,6 +615,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class NetworkAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
@@ -598,7 +672,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The ID of the network.
+             * <p>The ID of the network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-2zeuphj08tt7q3brd****</p>
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -606,7 +683,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the private IP addresses.
+             * <p>Details of the private IP addresses.</p>
              */
             public Builder privateIpAddress(PrivateIpAddress privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -614,7 +691,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zeh0r1pabwtg6wcs****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -628,6 +708,414 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class Ipv6Set extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
+        private String ipv6Address;
+
+        private Ipv6Set(Builder builder) {
+            this.ipv6Address = builder.ipv6Address;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6Set create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Address
+         */
+        public String getIpv6Address() {
+            return this.ipv6Address;
+        }
+
+        public static final class Builder {
+            private String ipv6Address; 
+
+            /**
+             * Ipv6Address.
+             */
+            public Builder ipv6Address(String ipv6Address) {
+                this.ipv6Address = ipv6Address;
+                return this;
+            }
+
+            public Ipv6Set build() {
+                return new Ipv6Set(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class Ipv6Sets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6Set")
+        private java.util.List < Ipv6Set> ipv6Set;
+
+        private Ipv6Sets(Builder builder) {
+            this.ipv6Set = builder.ipv6Set;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6Sets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Set
+         */
+        public java.util.List < Ipv6Set> getIpv6Set() {
+            return this.ipv6Set;
+        }
+
+        public static final class Builder {
+            private java.util.List < Ipv6Set> ipv6Set; 
+
+            /**
+             * Ipv6Set.
+             */
+            public Builder ipv6Set(java.util.List < Ipv6Set> ipv6Set) {
+                this.ipv6Set = ipv6Set;
+                return this;
+            }
+
+            public Ipv6Sets build() {
+                return new Ipv6Sets(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class PrivateIpSet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Primary")
+        private Boolean primary;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+        private String privateIpAddress;
+
+        private PrivateIpSet(Builder builder) {
+            this.primary = builder.primary;
+            this.privateIpAddress = builder.privateIpAddress;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateIpSet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return primary
+         */
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        /**
+         * @return privateIpAddress
+         */
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public static final class Builder {
+            private Boolean primary; 
+            private String privateIpAddress; 
+
+            /**
+             * Primary.
+             */
+            public Builder primary(Boolean primary) {
+                this.primary = primary;
+                return this;
+            }
+
+            /**
+             * <p>Details of the private IP addresses.</p>
+             */
+            public Builder privateIpAddress(String privateIpAddress) {
+                this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            public PrivateIpSet build() {
+                return new PrivateIpSet(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class PrivateIpSets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
+        private java.util.List < PrivateIpSet> privateIpSet;
+
+        private PrivateIpSets(Builder builder) {
+            this.privateIpSet = builder.privateIpSet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateIpSets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privateIpSet
+         */
+        public java.util.List < PrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
+        }
+
+        public static final class Builder {
+            private java.util.List < PrivateIpSet> privateIpSet; 
+
+            /**
+             * PrivateIpSet.
+             */
+            public Builder privateIpSet(java.util.List < PrivateIpSet> privateIpSet) {
+                this.privateIpSet = privateIpSet;
+                return this;
+            }
+
+            public PrivateIpSets build() {
+                return new PrivateIpSets(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class NetworkInterfaces extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6Sets")
+        private Ipv6Sets ipv6Sets;
+
+        @com.aliyun.core.annotation.NameInMap("MacAddress")
+        private String macAddress;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+        private String networkInterfaceId;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryIpAddress")
+        private String primaryIpAddress;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSets")
+        private PrivateIpSets privateIpSets;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private NetworkInterfaces(Builder builder) {
+            this.ipv6Sets = builder.ipv6Sets;
+            this.macAddress = builder.macAddress;
+            this.networkInterfaceId = builder.networkInterfaceId;
+            this.primaryIpAddress = builder.primaryIpAddress;
+            this.privateIpSets = builder.privateIpSets;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaces create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Sets
+         */
+        public Ipv6Sets getIpv6Sets() {
+            return this.ipv6Sets;
+        }
+
+        /**
+         * @return macAddress
+         */
+        public String getMacAddress() {
+            return this.macAddress;
+        }
+
+        /**
+         * @return networkInterfaceId
+         */
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+        /**
+         * @return primaryIpAddress
+         */
+        public String getPrimaryIpAddress() {
+            return this.primaryIpAddress;
+        }
+
+        /**
+         * @return privateIpSets
+         */
+        public PrivateIpSets getPrivateIpSets() {
+            return this.privateIpSets;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Ipv6Sets ipv6Sets; 
+            private String macAddress; 
+            private String networkInterfaceId; 
+            private String primaryIpAddress; 
+            private PrivateIpSets privateIpSets; 
+            private String type; 
+
+            /**
+             * Ipv6Sets.
+             */
+            public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
+                this.ipv6Sets = ipv6Sets;
+                return this;
+            }
+
+            /**
+             * MacAddress.
+             */
+            public Builder macAddress(String macAddress) {
+                this.macAddress = macAddress;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceId.
+             */
+            public Builder networkInterfaceId(String networkInterfaceId) {
+                this.networkInterfaceId = networkInterfaceId;
+                return this;
+            }
+
+            /**
+             * PrimaryIpAddress.
+             */
+            public Builder primaryIpAddress(String primaryIpAddress) {
+                this.primaryIpAddress = primaryIpAddress;
+                return this;
+            }
+
+            /**
+             * PrivateIpSets.
+             */
+            public Builder privateIpSets(PrivateIpSets privateIpSets) {
+                this.privateIpSets = privateIpSets;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public NetworkInterfaces build() {
+                return new NetworkInterfaces(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class InstanceNetworkInterfaces extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaces")
+        private java.util.List < NetworkInterfaces> networkInterfaces;
+
+        private InstanceNetworkInterfaces(Builder builder) {
+            this.networkInterfaces = builder.networkInterfaces;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceNetworkInterfaces create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkInterfaces
+         */
+        public java.util.List < NetworkInterfaces> getNetworkInterfaces() {
+            return this.networkInterfaces;
+        }
+
+        public static final class Builder {
+            private java.util.List < NetworkInterfaces> networkInterfaces; 
+
+            /**
+             * NetworkInterfaces.
+             */
+            public Builder networkInterfaces(java.util.List < NetworkInterfaces> networkInterfaces) {
+                this.networkInterfaces = networkInterfaces;
+                return this;
+            }
+
+            public InstanceNetworkInterfaces build() {
+                return new InstanceNetworkInterfaces(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class PrivateIpAddressesPrivateIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GateWay")
         private String gateWay;
@@ -679,7 +1167,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String isp; 
 
             /**
-             * The gateway.
+             * <p>The gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119.147.xx.xx</p>
              */
             public Builder gateWay(String gateWay) {
                 this.gateWay = gateWay;
@@ -687,7 +1178,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119.147.xx.xx</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -695,7 +1189,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ISP.
+             * <p>The ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -709,6 +1206,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class PrivateIpAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private java.util.List < PrivateIpAddressesPrivateIpAddress> privateIpAddress;
@@ -736,7 +1239,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List < PrivateIpAddressesPrivateIpAddress> privateIpAddress; 
 
             /**
-             * Details of the private IP addresses.
+             * <p>Details of the private IP addresses.</p>
              */
             public Builder privateIpAddress(java.util.List < PrivateIpAddressesPrivateIpAddress> privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -750,6 +1253,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class PublicIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
@@ -791,6 +1300,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class PublicIpAddressesPublicIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GateWay")
         private String gateWay;
@@ -842,7 +1357,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String isp; 
 
             /**
-             * The gateway.
+             * <p>The gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119.147.xx.xx</p>
              */
             public Builder gateWay(String gateWay) {
                 this.gateWay = gateWay;
@@ -850,7 +1368,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119.147.xx.xx</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -858,7 +1379,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP).
+             * <p>The Internet service provider (ISP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicom</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -872,6 +1396,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class PublicIpAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private java.util.List < PublicIpAddressesPublicIpAddress> publicIpAddress;
@@ -913,6 +1443,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class SecurityGroupIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private java.util.List < String > securityGroupId;
@@ -954,6 +1490,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class SystemDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -1077,12 +1619,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The category of the cloud disk or local disk. Valid values:
-             * <p>
+             * <p>The category of the cloud disk or local disk. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: local disk.</li>
+             * <li><strong>pangu</strong>: ultra disk.</li>
+             * <li><strong>local_hdd</strong>: local HDD.</li>
+             * </ul>
              * 
-             * *   **file**: local disk.
-             * *   **pangu**: ultra disk.
-             * *   **local_hdd**: local HDD.
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1090,7 +1635,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disk.
+             * <p>The ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-5ip4c2dhmas0rn7rt0p9****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -1098,7 +1646,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the disk.
+             * <p>The name of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DiskName</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -1106,7 +1657,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: MiB.
+             * <p>The size of the disk. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51200</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1114,12 +1668,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field of the disk category. Valid values:
-             * <p>
+             * <p>The extended field of the disk category. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: local disk.</li>
+             * <li><strong>pangu</strong>: ultra disk.</li>
+             * <li><strong>local_hdd</strong>: local HDD.</li>
+             * </ul>
              * 
-             * *   **file**: local disk.
-             * *   **pangu**: ultra disk.
-             * *   **local_hdd**: local HDD.
+             * <strong>example:</strong>
+             * <p>pangu</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -1127,11 +1684,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud disk or local disk. Valid values:
-             * <p>
+             * <p>The type of the cloud disk or local disk. Valid values:</p>
+             * <ul>
+             * <li><strong>system</strong>: system disk.</li>
+             * <li><strong>data</strong>: data disk.</li>
+             * </ul>
              * 
-             * *   **system**: system disk.
-             * *   **data**: data disk.
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1139,7 +1699,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the disk.
+             * <p>The name of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DiskName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1147,7 +1710,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: MiB.
+             * <p>The size of the disk. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20480</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -1155,7 +1721,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the disk.
+             * <p>The UUID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-5ip4c2dhmas0rn7rt0p96****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1169,6 +1738,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1208,7 +1783,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1216,7 +1794,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1230,6 +1811,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class InstanceTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
@@ -1271,6 +1858,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
@@ -1329,6 +1922,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkAttributes")
         private NetworkAttributes networkAttributes;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaces")
+        private InstanceNetworkInterfaces networkInterfaces;
+
         @com.aliyun.core.annotation.NameInMap("OSName")
         private String OSName;
 
@@ -1379,6 +1975,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.keyPairName = builder.keyPairName;
             this.memory = builder.memory;
             this.networkAttributes = builder.networkAttributes;
+            this.networkInterfaces = builder.networkInterfaces;
             this.OSName = builder.OSName;
             this.privateIpAddresses = builder.privateIpAddresses;
             this.publicIpAddress = builder.publicIpAddress;
@@ -1533,6 +2130,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkInterfaces
+         */
+        public InstanceNetworkInterfaces getNetworkInterfaces() {
+            return this.networkInterfaces;
+        }
+
+        /**
          * @return OSName
          */
         public String getOSName() {
@@ -1622,6 +2226,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String keyPairName; 
             private Integer memory; 
             private NetworkAttributes networkAttributes; 
+            private InstanceNetworkInterfaces networkInterfaces; 
             private String OSName; 
             private PrivateIpAddresses privateIpAddresses; 
             private PublicIpAddress publicIpAddress; 
@@ -1634,7 +2239,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private InstanceTags tags; 
 
             /**
-             * The automatic release time of the instance.
+             * <p>The automatic release time of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-28T14:38:52Z</p>
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -1642,7 +2250,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -1650,7 +2261,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-07-26T06:40:43Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1658,7 +2272,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the data disk.
+             * <p>Details of the data disk.</p>
              */
             public Builder dataDisk(InstanceDataDisk dataDisk) {
                 this.dataDisk = dataDisk;
@@ -1666,7 +2280,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of the disk. Unit: MiB.
+             * <p>The total size of the disk. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71680</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -1674,7 +2291,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-telecom</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -1682,7 +2302,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2119-07-13T02:38:57Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1690,12 +2313,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname of the instance.
-             * <p>
+             * <p>The hostname of the instance.</p>
+             * <ul>
+             * <li>The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</li>
+             * <li>For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.</li>
+             * <li>For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</li>
+             * </ul>
              * 
-             * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
-             * *   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.
-             * *   For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
+             * <strong>example:</strong>
+             * <p>testHostName</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1703,7 +2329,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1711,7 +2340,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP addresses of the instances.
+             * <p>The private IP addresses of the instances.</p>
              */
             public Builder innerIpAddress(InnerIpAddress innerIpAddress) {
                 this.innerIpAddress = innerIpAddress;
@@ -1719,7 +2348,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-instanc****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1727,7 +2359,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5itef0f28t17bcdw9deu6meub</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1735,13 +2370,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the instance. Valid values:
-             * <p>
+             * <p>The category of the instance. Valid values:</p>
+             * <ul>
+             * <li>EnsInstance: ENS instances that you purchase.</li>
+             * <li>EnsService: ENS instances that belong to edge services.</li>
+             * <li>BuildMachine: ENS instances that are configured with image builders.</li>
+             * <li>EnsPostPaidInstance: pay-as-you-go ENS instances that you purchase.</li>
+             * </ul>
              * 
-             * *   EnsInstance: ENS instances that you purchase.
-             * *   EnsService: ENS instances that belong to edge services.
-             * *   BuildMachine: ENS instances that are configured with image builders.
-             * *   EnsPostPaidInstance: pay-as-you-go ENS instances that you purchase.
+             * <strong>example:</strong>
+             * <p>EnsService</p>
              */
             public Builder instanceResourceType(String instanceResourceType) {
                 this.instanceResourceType = instanceResourceType;
@@ -1749,16 +2387,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family. Valid values:
-             * <p>
+             * <p>The instance family. Valid values:</p>
+             * <ul>
+             * <li>x86_vm: x86-based computing instance.</li>
+             * <li>x86_pm: x86-based physical machine.</li>
+             * <li>x86_bmi: x86-based bare metal instance.</li>
+             * <li>x86_bm: bare metal instance with the SmartNIC.</li>
+             * <li>pc_bmi: heterogeneous bare metal instance.</li>
+             * <li>pc_vm: heterogeneous virtual machine.</li>
+             * <li>arm_bmi: Arm-based computing instance.</li>
+             * </ul>
              * 
-             * *   x86\_vm: x86-based computing instance.
-             * *   x86\_pm: x86-based physical machine.
-             * *   x86\_bmi: x86-based bare metal instance.
-             * *   x86\_bm: bare metal instance with the SmartNIC.
-             * *   pc_bmi: heterogeneous bare metal instance.
-             * *   pc_vm: heterogeneous virtual machine.
-             * *   arm_bmi: Arm-based computing instance.
+             * <strong>example:</strong>
+             * <p>x86_vm</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -1766,7 +2407,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum outbound bandwidth. Unit: Mbit/s.
+             * <p>The maximum outbound bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
                 this.internetMaxBandwidthIn = internetMaxBandwidthIn;
@@ -1774,7 +2418,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum inbound bandwidth. Unit: Mbit/s.
+             * <p>The minimum inbound bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -1790,7 +2437,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MB.
+             * <p>The memory size. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -1798,7 +2448,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the network.
+             * <p>Details of the network.</p>
              */
             public Builder networkAttributes(NetworkAttributes networkAttributes) {
                 this.networkAttributes = networkAttributes;
@@ -1806,7 +2456,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * NetworkInterfaces.
+             */
+            public Builder networkInterfaces(InstanceNetworkInterfaces networkInterfaces) {
+                this.networkInterfaces = networkInterfaces;
+                return this;
+            }
+
+            /**
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos 6.8 x86_64</p>
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -1814,7 +2475,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the private IP addresses.
+             * <p>Details of the private IP addresses.</p>
              */
             public Builder privateIpAddresses(PrivateIpAddresses privateIpAddresses) {
                 this.privateIpAddresses = privateIpAddresses;
@@ -1822,7 +2483,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP addresses of the instances.
+             * <p>The public IP addresses of the instances.</p>
              */
             public Builder publicIpAddress(PublicIpAddress publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -1830,7 +2491,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the public IP addresses.
+             * <p>Details of the public IP addresses.</p>
              */
             public Builder publicIpAddresses(PublicIpAddresses publicIpAddresses) {
                 this.publicIpAddresses = publicIpAddresses;
@@ -1838,7 +2499,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the security groups.
+             * <p>The IDs of the security groups.</p>
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1846,7 +2507,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens.sn1.stiny</p>
              */
             public Builder specName(String specName) {
                 this.specName = specName;
@@ -1854,7 +2518,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The bidding policy of the preemptible instance.
+             * <p>The bidding policy of the preemptible instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1862,12 +2529,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Expired</li>
+             * <li>Stopped</li>
+             * </ul>
              * 
-             * *   Running
-             * *   Expired
-             * *   Stopped
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1875,7 +2545,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the system disk.
+             * <p>Details of the system disk.</p>
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -1883,7 +2553,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the instance.
+             * <p>The tags of the instance.</p>
+             * <blockquote>
+             * <p> This operation does not return tag information. You can call this operation in combination with the tag-related operations.</p>
+             * </blockquote>
              */
             public Builder tags(InstanceTags tags) {
                 this.tags = tags;
@@ -1897,6 +2570,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;

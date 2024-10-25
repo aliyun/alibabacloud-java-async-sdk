@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassignPrivateIpAddressesResponseBody} extends {@link TeaModel}
  *
  * <p>UnassignPrivateIpAddressesResponseBody</p>
@@ -37,7 +38,10 @@ public class UnassignPrivateIpAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ECC937A-AE0E-4626-BE51-DED1D6D1C888</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

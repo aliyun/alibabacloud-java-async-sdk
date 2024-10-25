@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoadBalancerUDPListenerRequest} extends {@link RequestModel}
  *
  * <p>CreateLoadBalancerUDPListenerRequest</p>
@@ -247,7 +248,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         } 
 
         /**
-         * The port used by the backend ELB server of the ELB instance. Valid values: **1** to **65535**.
+         * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.putQueryParameter("BackendServerPort", backendServerPort);
@@ -256,10 +260,13 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The name of the listener. The value must be **1** to **80** characters in length.
-         * <p>
+         * <p>The name of the listener. The value must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+         * <blockquote>
+         * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
          * 
-         * >  The value cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -268,11 +275,14 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Elastic IP address (EIP) pass-through. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Elastic IP address (EIP) pass-through. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong> (default)</li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off** (default)
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder eipTransmit(String eipTransmit) {
             this.putQueryParameter("EipTransmit", eipTransmit);
@@ -290,7 +300,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The port that is used for health checks. Valid values: **1** to **65535**. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.
+         * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.putQueryParameter("HealthCheckConnectPort", healthCheckConnectPort);
@@ -299,14 +312,18 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
-         * <p>
+         * <p>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
+         * <ul>
+         * <li>Default value: 5.</li>
+         * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
+         * <li>Unit: seconds.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+         * </blockquote>
          * 
-         * *   Default value: 5.
-         * *   Valid values: **1** to **300**.
-         * *   Unit: seconds.
-         * 
-         * >  If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.putQueryParameter("HealthCheckConnectTimeout", healthCheckConnectTimeout);
@@ -315,7 +332,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.
+         * <p>The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder healthCheckExp(String healthCheckExp) {
             this.putQueryParameter("HealthCheckExp", healthCheckExp);
@@ -324,7 +344,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The interval at which health checks are performed. Valid values: **1** to **50**. Default value: **2**. Unit: seconds.
+         * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>2</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -333,7 +356,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.
+         * <p>The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder healthCheckReq(String healthCheckReq) {
             this.putQueryParameter("HealthCheckReq", healthCheckReq);
@@ -342,7 +368,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: **2** to **10**. Default value: **3**.
+         * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -351,10 +380,14 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: **1** to **65535**.
-         * <p>
+         * <p>The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <blockquote>
+         * <p> You cannot specify ports 250, 4789, or 4790 for UDP listeners. They are system reserved ports.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You cannot specify ports 250, 4789, or 4790 for UDP listeners. They are system reserved ports.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -363,7 +396,11 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The ID of the Edge Load Balancer (ELB) instance.
+         * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5q73cv04zeyh43lh74lp4****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -372,15 +409,18 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The scheduling algorithm. Valid values:
-         * <p>
+         * <p>The scheduling algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than backend servers with lower weights. This is the default value.</li>
+         * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
+         * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+         * <li><strong>sch</strong>: Consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+         * <li><strong>qch</strong>: Consistent hashing based on Quick UDP Internet Connection (QUIC) IDs. Requests that contain the same QUIC ID are scheduled to the same backend server.</li>
+         * <li><strong>iqch</strong>: Consistent hashing based on three specific bytes of iQUIC CID. Requests with the same second, third, and forth bytes are scheduled to the same backend server.</li>
+         * </ul>
          * 
-         * *   **wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights. This is the default value.
-         * *   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.
-         * *   **rr**: Requests are distributed to backend servers in sequence.
-         * *   **sch**: Consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
-         * *   **qch**: Consistent hashing based on Quick UDP Internet Connection (QUIC) IDs. Requests that contain the same QUIC ID are scheduled to the same backend server.
-         * *   **iqch**: Consistent hashing based on three specific bytes of iQUIC CID. Requests with the same second, third, and forth bytes are scheduled to the same backend server.
+         * <strong>example:</strong>
+         * <p>wrr</p>
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -389,7 +429,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: **2** to **10**. Default value: **3**.
+         * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);

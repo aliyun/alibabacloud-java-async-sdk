@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBucketRequest} extends {@link RequestModel}
  *
  * <p>DeleteBucketRequest</p>
@@ -54,7 +55,11 @@ public class DeleteBucketRequest extends Request {
         } 
 
         /**
-         * The name of the bucket that you want to delete. You can delete only one bucket at a time.
+         * <p>The name of the bucket that you want to delete. You can delete only one bucket at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);

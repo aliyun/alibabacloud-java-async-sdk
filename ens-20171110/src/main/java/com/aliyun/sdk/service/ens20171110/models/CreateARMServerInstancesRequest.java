@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateARMServerInstancesRequest} extends {@link RequestModel}
  *
  * <p>CreateARMServerInstancesRequest</p>
@@ -259,7 +260,11 @@ public class CreateARMServerInstancesRequest extends Request {
         } 
 
         /**
-         * The number of instances to create. Valid values: **1** to **100**.
+         * <p>The number of instances to create. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -268,11 +273,14 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the subscription. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the subscription. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -281,11 +289,14 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to use coupons. Valid values:
-         * <p>
+         * <p>Specifies whether to use coupons. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -294,7 +305,11 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the Edge Node Service (ENS) node.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guiyang-12</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -303,7 +318,10 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The refresh rate. Unit: Hz. Valid values: 30 and 60.
+         * <p>The refresh rate. Unit: Hz. Valid values: 30 and 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder frequency(Integer frequency) {
             this.putQueryParameter("Frequency", frequency);
@@ -312,7 +330,11 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourImage ID</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -321,30 +343,34 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The specification of the Android in Container (AIC) instance. Examples:
-         * <p>
+         * <p>The specification of the Android in Container (AIC) instance. Examples:</p>
+         * <ul>
+         * <li>aic.cf52r.c1.np</li>
+         * <li>aic.cf52r.c2.np</li>
+         * <li>aic.cf53r.c2.np</li>
+         * <li>aic.cf52r.c4.np</li>
+         * <li>aic.cf53r.c3.np</li>
+         * <li>aic.cf52r.c3.np</li>
+         * <li>aic.cf53r.c1.np</li>
+         * <li>aic.cf53r.c5.np</li>
+         * <li>aic.cf53r.c6</li>
+         * <li>aic.cf53r.c4.np</li>
+         * <li>aic.cf53r.c6.np</li>
+         * <li>aic.cf53r.c7.np</li>
+         * <li>aic.cf52m1r.c5.np</li>
+         * <li>aic.cf53r.c8.np</li>
+         * <li>aic.cf53r.c7</li>
+         * <li>aic.cf52m1r.c2.np</li>
+         * <li>aic.cf52m1r.c1.np</li>
+         * <li>aic.cf52m1r.c3.np</li>
+         * <li>aic.cf52m1r.c4.np</li>
+         * <li>aic.cf52m1r.c6</li>
+         * <li>ens.a6c2</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   aic.cf52r.c1.np
-         * *   aic.cf52r.c2.np
-         * *   aic.cf53r.c2.np
-         * *   aic.cf52r.c4.np
-         * *   aic.cf53r.c3.np
-         * *   aic.cf52r.c3.np
-         * *   aic.cf53r.c1.np
-         * *   aic.cf53r.c5.np
-         * *   aic.cf53r.c6
-         * *   aic.cf53r.c4.np
-         * *   aic.cf53r.c6.np
-         * *   aic.cf53r.c7.np
-         * *   aic.cf52m1r.c5.np
-         * *   aic.cf53r.c8.np
-         * *   aic.cf53r.c7
-         * *   aic.cf52m1r.c2.np
-         * *   aic.cf52m1r.c1.np
-         * *   aic.cf52m1r.c3.np
-         * *   aic.cf52m1r.c4.np
-         * *   aic.cf52m1r.c6
-         * *   ens.a6c2
+         * <strong>example:</strong>
+         * <p>aic.cf53r.c6.np</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -353,7 +379,10 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -362,7 +391,10 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pre</p>
          */
         public Builder nameSpace(String nameSpace) {
             this.putQueryParameter("NameSpace", nameSpace);
@@ -371,10 +403,14 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The billing method. Set the value to **PrePaid**. PrePaid specifies the subscription billing method.
-         * <p>
+         * <p>The billing method. Set the value to <strong>PrePaid</strong>. PrePaid specifies the subscription billing method.</p>
+         * <blockquote>
+         * <p> Only PrePaid is supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Only PrePaid is supported.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -383,12 +419,16 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance.
-         * <p>
+         * <p>The subscription duration of the instance.</p>
+         * <ul>
+         * <li>If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</li>
+         * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
+         * <li>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.
-         * *   If you set PeriodUnit to Day, you can set Period only to 3.
-         * *   If you set PeriodUnit to Month, you can set Period to a value within the range of \[1,9], or set the value to 12.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -397,12 +437,16 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration.
-         * <p>
+         * <p>The unit of the subscription duration.</p>
+         * <ul>
+         * <li>If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</li>
+         * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
+         * <li>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.
-         * *   If you set PeriodUnit to Day, you can set Period only to 3.
-         * *   If you set PeriodUnit to Month, you can set Period to a value within the range of \[1,9], or set the value to 12.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -411,17 +455,21 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The resolution. Examples:
-         * <p>
+         * <p>The resolution. Examples:</p>
+         * <ul>
+         * <li>1920*864</li>
+         * <li>1080*1920</li>
+         * <li>1920*1080</li>
+         * <li>720*1280</li>
+         * <li>2400*1080</li>
+         * <li>1080*2400</li>
+         * <li>1280*720</li>
+         * <li>864*1920</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1920\*864
-         * *   1080\*1920
-         * *   1920\*1080
-         * *   720\*1280
-         * *   2400\*1080
-         * *   1080\*2400
-         * *   1280\*720
-         * *   864\*1920
+         * <strong>example:</strong>
+         * <p>720*1280</p>
          */
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);
@@ -430,7 +478,10 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AIC-Server</p>
          */
         public Builder serverName(String serverName) {
             this.putQueryParameter("ServerName", serverName);
@@ -439,14 +490,18 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * The specification of the ARM server. Examples:
-         * <p>
+         * <p>The specification of the ARM server. Examples:</p>
+         * <ul>
+         * <li>cas.cf53r</li>
+         * <li>cas.cf52r</li>
+         * <li>cas.cf52m1r</li>
+         * <li>cas.tg52g2</li>
+         * <li>ens.afq-c2m3i.medium</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cas.cf53r
-         * *   cas.cf52r
-         * *   cas.cf52m1r
-         * *   cas.tg52g2
-         * *   ens.afq-c2m3i.medium
+         * <strong>example:</strong>
+         * <p>cas.cf53r</p>
          */
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);

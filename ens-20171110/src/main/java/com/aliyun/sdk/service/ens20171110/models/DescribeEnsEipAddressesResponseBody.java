@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsEipAddressesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsEipAddressesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the EIP.
+         * <p>Details about the EIP.</p>
          */
         public Builder eipAddresses(EipAddresses eipAddresses) {
             this.eipAddresses = eipAddresses;
@@ -93,7 +94,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Valid values: an integer that is greater than 0. Default value: 1.
+         * <p>The page number. Valid values: an integer that is greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Valid values: **10** to **100**.
+         * <p>The number of entries per page. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8629F679-B51D-4194-A1CC-5D8F504C362B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsEipAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsEipAddressesResponseBody</p>
+     */
     public static class EipAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
@@ -325,7 +344,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the EIP.
+             * <p>The ID of the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-5sainglpw7qfem3icir4s****</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -333,7 +355,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the EIP was created.
+             * <p>The time when the EIP was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624885274000</p>
              */
             public Builder allocationTime(String allocationTime) {
                 this.allocationTime = allocationTime;
@@ -341,7 +366,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The peak bandwidth of the EIP. Default value: 5. Valid values: **5** to **10000**. Unit: Mbit/s.
+             * <p>The peak bandwidth of the EIP. Default value: 5. Valid values: <strong>5</strong> to <strong>10000</strong>. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -349,11 +377,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the EIP. Valid values:
-             * <p>
+             * <p>The billing method of the EIP. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription.</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   **PrePaid**: subscription.
-             * *   **PostPaid**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -361,7 +392,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the EIP.
+             * <p>The description of the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -369,7 +403,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENS node.
+             * <p>The ID of the ENS node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-xian-telecom</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -377,7 +414,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that is associated with the EIP.
+             * <p>The ID of the instance that is associated with the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-5sc3kum2e0sz34wbqrws9****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -385,11 +425,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance that is associated with the EIP. Valid values:
-             * <p>
+             * <p>The type of the instance that is associated with the EIP. Valid values:</p>
+             * <ul>
+             * <li><strong>EnsInstance</strong>: ENS instance in a VPC</li>
+             * <li><strong>SlbInstance</strong>: SLB instance</li>
+             * </ul>
              * 
-             * *   **EnsInstance**: ENS instance in a VPC
-             * *   **SlbInstance**: SLB instance
+             * <strong>example:</strong>
+             * <p>SlbInstance</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -397,11 +440,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of the EIP.
-             * <p>
+             * <p>The metering method of the EIP.</p>
+             * <ul>
+             * <li><strong>95BandwidthByMonth</strong>: Pay by monthly 95th percentile bandwidth</li>
+             * <li><strong>PayByBandwidth</strong>: Pay by bandwidth</li>
+             * </ul>
              * 
-             * *   **95BandwidthByMonth**: Pay by monthly 95th percentile bandwidth
-             * *   **PayByBandwidth**: Pay by bandwidth
+             * <strong>example:</strong>
+             * <p>95BandwidthByMonth</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -409,7 +455,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The EIP.
+             * <p>The EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.10</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -417,13 +466,16 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the EIP. This parameter is returned if the EIP is a secondary EIP. Valid values:
-             * <p>
+             * <p>The running status of the EIP. This parameter is returned if the EIP is a secondary EIP. Valid values:</p>
+             * <ul>
+             * <li><strong>Stopped</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Starting</strong></li>
+             * <li><strong>Stopping</strong></li>
+             * </ul>
              * 
-             * *   **Stopped**
-             * *   **Running**
-             * *   **Starting**
-             * *   **Stopping**
+             * <strong>example:</strong>
+             * <p>Stopped</p>
              */
             public Builder ipStatus(String ipStatus) {
                 this.ipStatus = ipStatus;
@@ -431,12 +483,15 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP). Valid values:
-             * <p>
+             * <p>The Internet service provider (ISP). Valid values:</p>
+             * <ul>
+             * <li><strong>cmcc</strong>: China Mobile</li>
+             * <li><strong>unicom</strong>: China Unicom</li>
+             * <li><strong>telecom</strong>: China Telecom</li>
+             * </ul>
              * 
-             * *   **cmcc**: China Mobile
-             * *   **unicom**: China Unicom
-             * *   **telecom**: China Telecom
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -444,7 +499,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the EIP.
+             * <p>The name of the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -452,7 +510,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the EIP is a secondary EIP.
+             * <p>Indicates whether the EIP is a secondary EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder standby(Boolean standby) {
                 this.standby = standby;
@@ -460,13 +521,16 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the EIP. Valid values:
-             * <p>
+             * <p>The status of the EIP. Valid values:</p>
+             * <ul>
+             * <li><strong>Associating</strong></li>
+             * <li><strong>Unassociating</strong></li>
+             * <li><strong>InUse</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
              * 
-             * *   **Associating**
-             * *   **Unassociating**
-             * *   **InUse**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,6 +544,12 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsEipAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsEipAddressesResponseBody</p>
+     */
     public static class EipAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipAddress")
         private java.util.List < EipAddress> eipAddress;

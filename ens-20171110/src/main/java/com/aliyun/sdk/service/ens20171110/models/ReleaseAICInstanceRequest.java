@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseAICInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReleaseAICInstanceRequest</p>
@@ -54,7 +55,11 @@ public class ReleaseAICInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the server.
+         * <p>The ID of the server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-instance****</p>
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
