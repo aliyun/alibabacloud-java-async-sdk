@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterAvailableResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterAvailableResourcesRequest</p>
@@ -180,7 +181,10 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         } 
 
         /**
-         * The specifications of the node. For more information, see [Specifications of compute nodes](~~102542~~).
+         * <p>The specifications of the node. For more information, see <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.large</p>
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -189,12 +193,15 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * The type of the database engine. Valid values:
-         * <p>
+         * <p>The type of the database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **PostgreSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -203,21 +210,24 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * The version of the database engine. Valid values for the MySQL database engine:
-         * <p>
+         * <p>The version of the database engine. Valid values for the MySQL database engine:</p>
+         * <ul>
+         * <li><strong>5.6</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>8.0</strong></li>
+         * </ul>
+         * <p>Valid values for the PostgreSQL database engine:</p>
+         * <ul>
+         * <li><strong>11</strong></li>
+         * <li><strong>14</strong></li>
+         * </ul>
+         * <p>Valid value for the Oracle database engine: <strong>11</strong></p>
+         * <blockquote>
+         * <p>This parameter is required when you specify the <strong>DBType</strong> parameter.</p>
+         * </blockquote>
          * 
-         * *   **5.6**
-         * *   **5.7**
-         * *   **8.0**
-         * 
-         * Valid values for the PostgreSQL database engine:
-         * 
-         * *   **11**
-         * *   **14**
-         * 
-         * Valid value for the Oracle database engine: **11**
-         * 
-         * > This parameter is required when you specify the **DBType** parameter.
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -244,11 +254,15 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * The billing method of the cluster. Valid values:
-         * <p>
+         * <p>The billing method of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -257,10 +271,13 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster. Default value: **cn-hangzhou**.
-         * <p>
+         * <p>The region ID of the cluster. Default value: <strong>cn-hangzhou</strong>.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -287,10 +304,13 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * The zone ID of the cluster.
-         * <p>
+         * <p>The zone ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available zones.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query the available zones.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

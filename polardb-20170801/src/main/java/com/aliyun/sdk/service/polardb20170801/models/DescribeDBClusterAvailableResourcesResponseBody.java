@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterAvailableResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterAvailableResourcesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The available zones of the cluster.
+         * <p>The available zones of the cluster.</p>
          */
         public Builder availableZones(java.util.List < AvailableZones> availableZones) {
             this.availableZones = availableZones;
@@ -57,7 +58,10 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2B19F698-8FFC-4918-B9E2-58D878******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterAvailableResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAvailableResourcesResponseBody</p>
+     */
     public static class AvailableResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -109,17 +119,23 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             private String DBNodeClass; 
 
             /**
-             * The edition of the cluster. Valid values:
-             * <p>
+             * <p>The edition of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: Cluster Edition.</li>
+             * <li><strong>Basic</strong>: Single Node Edition.</li>
+             * <li><strong>ArchiveNormal</strong>: X-Engine.</li>
+             * <li><strong>NormalMultimaster</strong>: Multi-master Cluster (Database/Table) Edition.</li>
+             * <li><strong>SENormal</strong>: Standard Edition.</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>Only PolarDB for MySQL supports Single Node Edition.</li>
+             * <li>Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * *   **Normal**: Cluster Edition.
-             * *   **Basic**: Single Node Edition.
-             * *   **ArchiveNormal**: X-Engine.
-             * *   **NormalMultimaster**: Multi-master Cluster (Database/Table) Edition.
-             * *   **SENormal**: Standard Edition.
-             * 
-             * >- Only PolarDB for MySQL supports Single Node Edition.
-             * >- Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -127,7 +143,10 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the node.
+             * <p>The specifications of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.mysql.x4.large</p>
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -141,6 +160,12 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterAvailableResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAvailableResourcesResponseBody</p>
+     */
     public static class SupportedEngines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResources")
         private java.util.List < AvailableResources> availableResources;
@@ -180,7 +205,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             private String engine; 
 
             /**
-             * The available resources.
+             * <p>The available resources.</p>
              */
             public Builder availableResources(java.util.List < AvailableResources> availableResources) {
                 this.availableResources = availableResources;
@@ -188,7 +213,10 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * <p>The version of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql57</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -202,6 +230,12 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterAvailableResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAvailableResourcesResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -253,7 +287,10 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The region ID of the cluster.
+             * <p>The region ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -261,7 +298,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engines that the available resources support.
+             * <p>The database engines that the available resources support.</p>
              */
             public Builder supportedEngines(java.util.List < SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -269,7 +306,10 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the cluster.
+             * <p>The zone ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountDescriptionRequest</p>
@@ -140,11 +141,15 @@ public class ModifyAccountDescriptionRequest extends Request {
         } 
 
         /**
-         * The description of the account. The description must meet the following requirements:
-         * <p>
+         * <p>The description of the account. The description must meet the following requirements:</p>
+         * <ul>
+         * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description must be 2 to 256 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The description cannot start with `http://` or `https://`.
-         * *   The description must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -153,7 +158,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the account.
+         * <p>The name of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -162,7 +171,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

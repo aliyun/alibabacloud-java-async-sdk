@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetaListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetaListResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1s826a1up******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -117,7 +121,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The details of databases and tables that can be restored.
+         * <p>The details of databases and tables that can be restored.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -125,7 +129,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -133,7 +140,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +151,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA815DE7-B576-4B22-B33C-3FB31A******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +162,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned pages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPageCount(String totalPageCount) {
             this.totalPageCount = totalPageCount;
@@ -157,7 +173,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -170,6 +189,12 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetaListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
@@ -209,7 +234,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
             private java.util.List < String > tables; 
 
             /**
-             * The name of the database that can be restored.
+             * <p>The name of the database that can be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -217,7 +245,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that can be restored.
+             * <p>The name of the table that can be restored.</p>
              */
             public Builder tables(java.util.List < String > tables) {
                 this.tables = tables;

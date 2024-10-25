@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBLinksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBLinksResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-a*************</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -69,7 +73,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the database links.
+         * <p>Details about the database links.</p>
          */
         public Builder DBLinkInfos(java.util.List < DBLinkInfos> DBLinkInfos) {
             this.DBLinkInfos = DBLinkInfos;
@@ -77,7 +81,10 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45D24263-7E3A-4140-9472-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeDBLinksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBLinksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBLinksResponseBody</p>
+     */
     public static class DBLinkInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
@@ -177,7 +190,10 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             private String targetDBName; 
 
             /**
-             * The ID of the source cluster that the database link connects.
+             * <p>The ID of the source cluster that the database link connects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-a*************</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -185,7 +201,10 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database link.
+             * <p>The name of the database link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dblink_test</p>
              */
             public Builder DBLinkName(String DBLinkName) {
                 this.DBLinkName = DBLinkName;
@@ -193,7 +212,10 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source database of the database link.
+             * <p>The name of the source database of the database link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb1</p>
              */
             public Builder sourceDBName(String sourceDBName) {
                 this.sourceDBName = sourceDBName;
@@ -201,7 +223,10 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The account of the destination database of the database link.
+             * <p>The account of the destination database of the database link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testacc</p>
              */
             public Builder targetAccount(String targetAccount) {
                 this.targetAccount = targetAccount;
@@ -209,10 +234,13 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination cluster that the database link connects.
-             * <p>
+             * <p>The ID of the destination cluster that the database link connects.</p>
+             * <blockquote>
+             * <p>If the destination cluster is not a PolarDB for Oracle cluster, the returned value is empty.</p>
+             * </blockquote>
              * 
-             * > If the destination cluster is not a PolarDB for Oracle cluster, the returned value is empty.
+             * <strong>example:</strong>
+             * <p>pc-b************</p>
              */
             public Builder targetDBInstanceName(String targetDBInstanceName) {
                 this.targetDBInstanceName = targetDBInstanceName;
@@ -220,7 +248,10 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination database of the database link.
+             * <p>The name of the destination database of the database link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb2</p>
              */
             public Builder targetDBName(String targetDBName) {
                 this.targetDBName = targetDBName;

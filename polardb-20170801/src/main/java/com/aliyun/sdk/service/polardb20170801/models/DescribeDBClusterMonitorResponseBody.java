@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterMonitorResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDBClusterMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The interval at which monitoring data is collected. Unit: seconds.
+         * <p>The interval at which monitoring data is collected. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.period = period;
@@ -57,7 +61,10 @@ public class DescribeDBClusterMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593AE1C5-B70C-463F-9207-074639******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

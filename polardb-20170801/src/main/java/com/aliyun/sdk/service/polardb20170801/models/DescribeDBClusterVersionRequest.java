@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterVersionRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterVersionRequest</p>
@@ -124,7 +125,11 @@ public class DescribeDBClusterVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -133,11 +138,14 @@ public class DescribeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the information about the latest versions or the versions to which the cluster can be updated. Valid values:
-         * <p>
+         * <p>Specifies whether to query the information about the latest versions or the versions to which the cluster can be updated. Valid values:</p>
+         * <ul>
+         * <li>LATEST_VERSION: the information about the latest versions.</li>
+         * <li>AVAILABLE_VERSION: the information about the versions to which the cluster can be updated.</li>
+         * </ul>
          * 
-         * *   LATEST_VERSION: the information about the latest versions.
-         * *   AVAILABLE_VERSION: the information about the versions to which the cluster can be updated.
+         * <strong>example:</strong>
+         * <p>LATEST_VERSION</p>
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);

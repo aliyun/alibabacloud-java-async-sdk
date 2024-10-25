@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountPasswordRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountPasswordRequest</p>
@@ -154,7 +155,11 @@ public class ModifyAccountPasswordRequest extends Request {
         } 
 
         /**
-         * The username of the account.
+         * <p>The username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -163,7 +168,11 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -172,12 +181,16 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The new password of the account. The new password must meet the following requirements:
-         * <p>
+         * <p>The new password of the account. The new password must meet the following requirements:</p>
+         * <ul>
+         * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>It must be 8 to 32 characters in length.</li>
+         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   It must be 8 to 32 characters in length.
-         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * <strong>example:</strong>
+         * <p>Pw123456</p>
          */
         public Builder newAccountPassword(String newAccountPassword) {
             this.putQueryParameter("NewAccountPassword", newAccountPassword);
@@ -204,7 +217,10 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The password type.
+         * <p>The password type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tair</p>
          */
         public Builder passwordType(String passwordType) {
             this.putQueryParameter("PasswordType", passwordType);

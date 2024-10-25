@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterStorageSpaceRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterStorageSpaceRequest</p>
@@ -181,7 +182,10 @@ public class ModifyDBClusterStorageSpaceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -190,7 +194,11 @@ public class ModifyDBClusterStorageSpaceRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -217,10 +225,16 @@ public class ModifyDBClusterStorageSpaceRequest extends Request {
         }
 
         /**
-         * The latest time to upgrade the specifications within the scheduled time period. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
-         * >- The value of this parameter must be at least 30 minutes later than PlannedStartTime.
-         * >- By default, if you specify `PlannedStartTime` but do not specify PlannedEndTime, the latest start time of the task is set to `PlannedEndTime + 30 minutes`. For example, if you set `PlannedStartTime` to `2021-01-14T09:00:00Z` and you do not specify PlannedEndTime, the latest start time of the task is `2021-01-14T09:30:00Z`.
+         * <p>The latest time to upgrade the specifications within the scheduled time period. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The value of this parameter must be at least 30 minutes later than PlannedStartTime.</li>
+         * <li>By default, if you specify <code>PlannedStartTime</code> but do not specify PlannedEndTime, the latest start time of the task is set to <code>PlannedEndTime + 30 minutes</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and you do not specify PlannedEndTime, the latest start time of the task is <code>2021-01-14T09:30:00Z</code>.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:30:00Z</p>
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -229,11 +243,17 @@ public class ModifyDBClusterStorageSpaceRequest extends Request {
         }
 
         /**
-         * The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
-         * >- This parameter takes effect only when `ModifyType` is set to `Upgrade`.
-         * >- The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in the time that ranges from `2021-01-14T09:00:00Z` to `2021-01-15T09:00:00Z`.
-         * >- If this parameter is left empty, the upgrade task is immediately performed.
+         * <p>The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter takes effect only when <code>ModifyType</code> is set to <code>Upgrade</code>.</li>
+         * <li>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in the time that ranges from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+         * <li>If this parameter is left empty, the upgrade task is immediately performed.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:00:00Z</p>
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -260,10 +280,14 @@ public class ModifyDBClusterStorageSpaceRequest extends Request {
         }
 
         /**
-         * The storage capacity that you can select when you change the cluster. Unit: GB.
-         * <p>
+         * <p>The storage capacity that you can select when you change the cluster. Unit: GB.</p>
+         * <blockquote>
+         * <p> You can set this parameter for PolarDB for MySQL clusters of Standard Edition to a value that ranges from 20 to 32000.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can set this parameter for PolarDB for MySQL clusters of Standard Edition to a value that ranges from 20 to 32000.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder storageSpace(Long storageSpace) {
             this.putQueryParameter("StorageSpace", storageSpace);
@@ -272,11 +296,14 @@ public class ModifyDBClusterStorageSpaceRequest extends Request {
         }
 
         /**
-         * The category of the cluster. Default value: ON. Valid values:
-         * <p>
+         * <p>The category of the cluster. Default value: ON. Valid values:</p>
+         * <ul>
+         * <li><strong>normal_exclusive</strong>: dedicated</li>
+         * <li><strong>normal_general</strong>: general-purpose</li>
+         * </ul>
          * 
-         * *   **normal_exclusive**: dedicated
-         * *   **normal_general**: general-purpose
+         * <strong>example:</strong>
+         * <p>normal_general</p>
          */
         public Builder subCategory(String subCategory) {
             this.putQueryParameter("SubCategory", subCategory);

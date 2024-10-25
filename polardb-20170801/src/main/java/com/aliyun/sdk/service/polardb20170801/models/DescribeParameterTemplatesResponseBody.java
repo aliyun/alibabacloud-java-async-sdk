@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParameterTemplatesResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -105,7 +109,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the database engine.
+         * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -113,7 +120,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine of the cluster.
+         * <p>The database engine of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -121,7 +131,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of parameters.
+         * <p>The number of parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183</p>
          */
         public Builder parameterCount(String parameterCount) {
             this.parameterCount = parameterCount;
@@ -129,7 +142,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the parameters.
+         * <p>The details of the parameters.</p>
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -137,7 +150,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D963934D-8605-4473-8EAC-54C719******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,6 +166,12 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParameterTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterTemplatesResponseBody</p>
+     */
     public static class TemplateRecord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
@@ -261,7 +283,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The valid values of the parameter.
+             * <p>The valid values of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[ROW|STATEMENT|MIXED]</p>
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -269,11 +294,14 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter setting can be modified. Valid values:
-             * <p>
+             * <p>Indicates whether the parameter setting can be modified. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder forceModify(String forceModify) {
                 this.forceModify = forceModify;
@@ -281,11 +309,14 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a cluster restart is required to make the parameter modification take effect. Valid values:
-             * <p>
+             * <p>Indicates whether a cluster restart is required to make the parameter modification take effect. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -293,11 +324,14 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is a global parameter. Valid values:
-             * <p>
+             * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: yes. The modified parameter value is synchronized to other nodes by default.</li>
+             * <li><strong>1</strong>: no. You can customize the nodes to which the modified parameter value can be synchronized.</li>
+             * </ul>
              * 
-             * *   **0**: yes. The modified parameter value is synchronized to other nodes by default.
-             * *   **1**: no. You can customize the nodes to which the modified parameter value can be synchronized.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isNodeAvailable(String isNodeAvailable) {
                 this.isNodeAvailable = isNodeAvailable;
@@ -305,7 +339,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter dependencies.
+             * <p>The parameter dependencies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder paramRelyRule(String paramRelyRule) {
                 this.paramRelyRule = paramRelyRule;
@@ -313,7 +350,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>What form of binary logging the master will use.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -321,7 +361,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>binlog_format</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -329,7 +372,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the parameter.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ROW</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -343,6 +389,12 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterTemplatesResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateRecord")
         private java.util.List < TemplateRecord> templateRecord;

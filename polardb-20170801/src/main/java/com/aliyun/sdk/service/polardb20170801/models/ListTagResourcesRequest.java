@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -167,7 +168,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token required to obtain more results. This parameter is not required in the first query. If the first query does not return all results, you can use the token that is returned from the first query in the next query to obtain more results.
+         * <p>The token required to obtain more results. This parameter is not required in the first query. If the first query does not return all results, you can use the token that is returned from the first query in the next query to obtain more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -194,7 +198,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~98041~~) operation to query available region IDs.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,14 +211,18 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The cluster ID. To query the tags of multiple clusters, click **Add** to add cluster IDs.
-         * <p>
+         * <p>The IDs of the clusters. To query the tags of multiple clusters, click <strong>Add</strong> to add cluster IDs.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You must specify at least one of the <code>ResourceId.N</code> and <code>Tag.N.Key</code> parameters.</p>
+         * </li>
+         * <li><p>If you specify the <code>ResourceId.N</code> parameter, you can add a maximum of 50 cluster IDs at a time.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   You must specify at least one of the `ResourceId.N` and `Tag.N.Key` parameters.
-         * 
-         * *   If you specify the `ResourceId.N` parameter, you can add a maximum of 50 cluster IDs at a time.
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -237,7 +249,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **cluster**.
+         * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -246,7 +262,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -261,6 +277,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -300,14 +322,18 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. To query the details of clusters to which multiple tags are bound, click **Add** to add tags.
-             * <p>
+             * <p>The tag key. To query the details of clusters to which multiple tags are added, click <strong>Add</strong> to add tags.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>You must specify at least one of the <code>ResourceId.N</code> and <code>Tag.N.Key</code> parameters.</p>
+             * </li>
+             * <li><p>If you specify the <code>Tag.N.Key</code> parameter, you can create up to 20 tags at a time.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   You must specify at least one of the `ResourceId.N` and `Tag.N.Key` parameters.
-             * 
-             * *   If you specify the `Tag.N.Key` parameter, you can create up to 20 tags at a time.
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -315,7 +341,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The tag value that is paired with the tag key. This parameter can be set to an empty string.
+             * <p>The tag value that is paired with the tag key. This parameter can be set to an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

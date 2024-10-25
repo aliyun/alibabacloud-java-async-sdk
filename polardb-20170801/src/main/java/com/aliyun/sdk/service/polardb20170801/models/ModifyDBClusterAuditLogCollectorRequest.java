@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterAuditLogCollectorRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterAuditLogCollectorRequest</p>
@@ -125,11 +126,15 @@ public class ModifyDBClusterAuditLogCollectorRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable or disable SQL collector. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable SQL collector. Valid values:</p>
+         * <ul>
+         * <li>Enable</li>
+         * <li>Disable</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Enable
-         * *   Disable
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder collectorStatus(String collectorStatus) {
             this.putQueryParameter("CollectorStatus", collectorStatus);
@@ -138,7 +143,11 @@ public class ModifyDBClusterAuditLogCollectorRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

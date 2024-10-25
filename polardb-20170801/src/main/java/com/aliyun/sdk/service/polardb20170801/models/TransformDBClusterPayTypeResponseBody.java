@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformDBClusterPayTypeResponseBody} extends {@link TeaModel}
  *
  * <p>TransformDBClusterPayTypeResponseBody</p>
@@ -85,11 +86,14 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The billing method of the cluster. Valid values:
-         * <p>
+         * <p>The billing method of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
          * 
-         * *   **Postpaid**: pay-as-you-go.
-         * *   **Prepaid**: subscription.
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -97,7 +101,10 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp10gr51qasnl****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -105,10 +112,13 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the cluster expires.
-         * <p>
+         * <p>The time when the cluster expires.</p>
+         * <blockquote>
+         * <p> This parameter is returned if you set the <strong>PayType</strong> parameter to <strong>Prepaid</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned if you set the **PayType** parameter to **Prepaid**.
+         * <strong>example:</strong>
+         * <p>2020-04-20T10:00:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -116,7 +126,10 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20515760028****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -124,7 +137,10 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E71541A-6007-4DCC-A38A-F872C31FEB45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

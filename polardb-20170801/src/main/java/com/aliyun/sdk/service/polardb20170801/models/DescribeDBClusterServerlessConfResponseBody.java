@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterServerlessConfResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterServerlessConfResponseBody</p>
@@ -225,11 +226,14 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:
-         * <p>
+         * <p>Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowShutDown(String allowShutDown) {
             this.allowShutDown = allowShutDown;
@@ -237,7 +241,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the serverless cluster.
+         * <p>The ID of the serverless cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp10gr51qasnl****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -245,7 +252,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E71541A-6007-4DCC-A38A-F872C31FEB45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +279,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.
+         * <p>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder scaleMax(String scaleMax) {
             this.scaleMax = scaleMax;
@@ -277,7 +290,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.
+         * <p>The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleMin(String scaleMin) {
             this.scaleMin = scaleMin;
@@ -285,7 +301,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of read-only nodes for scaling. Valid values: 0 to 15.
+         * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder scaleRoNumMax(String scaleRoNumMax) {
             this.scaleRoNumMax = scaleRoNumMax;
@@ -293,7 +312,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum number of read-only nodes for scaling. Valid values: 0 to 15.
+         * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scaleRoNumMin(String scaleRoNumMin) {
             this.scaleRoNumMin = scaleRoNumMin;
@@ -301,7 +323,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * The detection period for no-activity suspension. Valid values: 300 to 86400. Unit: seconds. The value must be a multiple of 300.
+         * <p>The detection period for no-activity suspension. Valid values: 300 to 86400. Unit: seconds. The value must be a multiple of 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder secondsUntilAutoPause(String secondsUntilAutoPause) {
             this.secondsUntilAutoPause = secondsUntilAutoPause;

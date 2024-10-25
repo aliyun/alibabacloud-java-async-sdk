@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FailoverDBClusterRequest} extends {@link RequestModel}
  *
  * <p>FailoverDBClusterRequest</p>
@@ -166,7 +167,10 @@ public class FailoverDBClusterRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -175,7 +179,11 @@ public class FailoverDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -220,11 +228,14 @@ public class FailoverDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to fail back to the original primary zone after a failover. Valid values:
-         * <p>
+         * <p>Specifies whether to switch back services to the original primary zone when the original primary zone recovers.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder rollBackForDisaster(Boolean rollBackForDisaster) {
             this.putQueryParameter("RollBackForDisaster", rollBackForDisaster);
@@ -233,11 +244,16 @@ public class FailoverDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the read-only node that you want to promote to the primary node. You can call the [DescribeDBClusters](~~98094~~) operation to query node information, such as node IDs.
-         * <p>
+         * <p>The ID of the read-only node that you want to promote to the primary node. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query node information, such as node IDs.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you leave this parameter empty, the system selects one or more available read-only nodes that have the highest failover priority as candidate primary nodes. If the failover to the first read-only node fails due to network issues, abnormal replication status, or other reasons, the system attempts to fail over your applications to the next read-only node until the failover is successful.</li>
+         * <li>This parameter is required for PolarDB for Oracle and PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   If you leave this parameter empty, the system selects one or more available read-only nodes that have the highest failover priority as candidate primary nodes. If the failover to the first read-only node fails due to network issues, abnormal replication status, or other reasons, the system attempts to fail over your applications to the next read-only node until the failover is successful.
-         * >*  This parameter is required for PolarDB for Oracle and PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.
+         * <strong>example:</strong>
+         * <p>pi-***********</p>
          */
         public Builder targetDBNodeId(String targetDBNodeId) {
             this.putQueryParameter("TargetDBNodeId", targetDBNodeId);
@@ -246,7 +262,12 @@ public class FailoverDBClusterRequest extends Request {
         }
 
         /**
-         * TargetZoneType.
+         * <p>Whether it is a primary-standby switch within the primary availability zone, with the following values:</p>
+         * <p>Primary: Primary-standby switch within the primary availability zone.
+         * Standby: Switch to the storage hot backup cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         public Builder targetZoneType(String targetZoneType) {
             this.putQueryParameter("TargetZoneType", targetZoneType);

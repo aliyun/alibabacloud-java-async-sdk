@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackupRequest} extends {@link RequestModel}
  *
  * <p>DeleteBackupRequest</p>
@@ -125,10 +126,14 @@ public class DeleteBackupRequest extends Request {
         } 
 
         /**
-         * The backup ID. If you need to specify multiple backup IDs, separate the backup IDs with commas (,).
-         * <p>
+         * <p>The backup ID. If you need to specify multiple backup IDs, separate the backup IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the backup IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeBackups](~~98102~~) operation to query the backup IDs.
+         * <strong>example:</strong>
+         * <p>11111111</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -137,7 +142,11 @@ public class DeleteBackupRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

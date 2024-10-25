@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateColdStorageInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateColdStorageInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateColdStorageInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ColdStorageInstanceId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcs_2zeth2gf4i83e578t</p>
          */
         public Builder coldStorageInstanceId(String coldStorageInstanceId) {
             this.coldStorageInstanceId = coldStorageInstanceId;
@@ -57,7 +61,10 @@ public class CreateColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6EBB4ED-D12F-5F49-824C-9DD9C0EC4CF2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

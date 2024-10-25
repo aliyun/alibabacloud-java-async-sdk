@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBNodesParametersRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBNodesParametersRequest</p>
@@ -125,7 +126,11 @@ public class DescribeDBNodesParametersRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -134,7 +139,11 @@ public class DescribeDBNodesParametersRequest extends Request {
         }
 
         /**
-         * The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
+         * <p>The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-<strong><strong><strong><strong><strong><strong><strong><strong>,pi-</strong></strong></strong></strong></strong></strong></strong></strong></p>
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);

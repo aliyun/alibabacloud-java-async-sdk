@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateDBClusterRequest</p>
@@ -802,13 +803,19 @@ public class CreateDBClusterRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the no-activity suspension feature. Default value: false. Valid values:
-         * <p>
+         * <p>Whether to enable idle pause. Values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enabled</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disabled (default)</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Only supported by Serverless clusters.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * > This parameter is valid only for serverless clusters.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowShutDown(String allowShutDown) {
             this.putQueryParameter("AllowShutDown", allowShutDown);
@@ -817,11 +824,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The CPU architecture. Valid values:
-         * <p>
+         * <p>CPU architecture. Available values include:</p>
+         * <ul>
+         * <li>X86</li>
+         * <li>ARM</li>
+         * </ul>
          * 
-         * *   X86
-         * *   ARM
+         * <strong>example:</strong>
+         * <p>X86</p>
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -830,15 +840,18 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic renewal. Valid values:
-         * <p>
+         * <p>Whether to enable auto-renewal, with available values as follows:</p>
+         * <ul>
+         * <li><strong>true</strong>: Auto-renew.</li>
+         * <li><strong>false</strong>: Do not auto-renew.</li>
+         * </ul>
+         * <p>The default is <strong>false</strong>.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * Default value: **false**.
-         * 
-         * > This parameter is valid only when the **PayType** parameter is set to **Prepaid**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -847,20 +860,20 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The retention policy for the backup sets when you delete the cluster. Valid values:
-         * <p>
+         * <p>Backup retention policy upon cluster deletion, with valid values as follows:</p>
+         * <ul>
+         * <li><strong>ALL</strong>: Permanently retain all backups.</li>
+         * <li><strong>LATEST</strong>: Permanently retain the latest backup (automatically backed up before deletion).</li>
+         * <li><strong>NONE</strong>: Do not retain backup sets upon cluster deletion.</li>
+         * </ul>
+         * <p>By default, the value is set to <strong>NONE</strong>, indicating no backup sets are retained upon cluster deletion.</p>
+         * <blockquote>
+         * <p>This parameter applies only when <strong>DBType</strong> is <strong>MySQL</strong>.
+         * Serverless clusters do not support this parameter.</p>
+         * </blockquote>
          * 
-         * *   **ALL**: permanently retains all backups.
-         * *   **LATEST**: permanently retains the last backup. A backup is automatically created before you delete the cluster.
-         * *   **NONE**: No backup sets are retained after the cluster is deleted.
-         * 
-         * The default value is **NONE** after you create a cluster.
-         * 
-         * > 
-         * 
-         * *   This parameter is valid only when the **DBType** parameter is set to **MySQL**.
-         * 
-         * *   This parameter is invalid for serverless clusters.
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder backupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
             this.putQueryParameter("BackupRetentionPolicyOnClusterDeletion", backupRetentionPolicyOnClusterDeletion);
@@ -869,7 +882,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
+         * <p>Used to ensure idempotency of the request. Generated by the client, ensuring uniqueness across different requests, case-sensitive, and not exceeding 64 ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f5********************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -878,16 +894,19 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The point in time when you want to clone data. Valid values:
-         * <p>
+         * <p>The point in time to clone data, with the following options:</p>
+         * <ul>
+         * <li><strong>LATEST</strong>: Data from the latest time point.</li>
+         * <li><strong>BackupID</strong>: Historical backup set ID, please enter the specific backup set ID.</li>
+         * <li><strong>Timestamp</strong>: Historical time point, please enter the specific time in the format <code>YYYY-MM-DDThh:mm:ssZ</code> (UTC time).</li>
+         * </ul>
+         * <p>The default value is <strong>LATEST</strong>.</p>
+         * <blockquote>
+         * <p>If <strong>CreationOption</strong> is <strong>CloneFromRDS</strong>, this parameter can only be set to <strong>LATEST</strong>.</p>
+         * </blockquote>
          * 
-         * *   **LATEST**: The data of the latest point in time is cloned.
-         * *   **BackupID**: You can specify the ID of a backup set. In this case, data is cloned based on the specified backup set.
-         * *   **Timestamp**: You can specify a point in time in the past in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * 
-         * Default value: **LATEST**.
-         * 
-         * > If the **CreationOption** parameter is set to **CloneFromRDS**, the value of this parameter must be **LATEST**.
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder cloneDataPoint(String cloneDataPoint) {
             this.putQueryParameter("CloneDataPoint", cloneDataPoint);
@@ -896,7 +915,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The network type of the cluster. Only virtual private clouds (VPCs) are supported. Set the value to **VPC**.
+         * <p>Cluster network type, currently only VPC is supported, with a fixed value of <strong>VPC</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.putQueryParameter("ClusterNetworkType", clusterNetworkType);
@@ -905,21 +927,25 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The edition of the cluster. Default value: Normal. Valid values:
-         * <p>
+         * <p>Product series, with valid values as follows:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: Cluster Edition (default)</li>
+         * <li><strong>Basic</strong>: Single-node</li>
+         * <li><strong>ArchiveNormal</strong>: High Compression Engine (X-Engine)</li>
+         * <li><strong>NormalMultimaster</strong>: Multi-master Cluster Edition</li>
+         * <li><strong>SENormal</strong>: Standard Edition</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li><strong>MySQL</strong> <strong>5.6</strong>, <strong>5.7</strong>, <strong>8.0</strong>, <strong>PostgreSQL</strong> <strong>14</strong>, and <strong>Oracle Syntax Compatible 2.0</strong> support <strong>Basic</strong>.</li>
+         * <li><strong>MySQL</strong> <strong>8.0</strong> supports <strong>ArchiveNormal</strong> and <strong>NormalMultimaster</strong>.</li>
+         * <li><strong>MySQL</strong> <strong>5.6</strong>, <strong>5.7</strong>, <strong>8.0</strong>, and <strong>PostgreSQL</strong> <strong>14</strong> support <strong>SENormal</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information about product series, see <a href="https://help.aliyun.com/document_detail/183258.html">Product Series</a>.</p>
          * 
-         * *   **Normal**: Cluster Edition
-         * *   **Basic**: Single Node Edition
-         * *   **ArchiveNormal**: X-Engine Edition
-         * *   **NormalMultimaster**: Multi-master Cluster Edition
-         * 
-         * > 
-         * 
-         * *   Only when the **DBType** parameter is set to **MySQL** and **the DBVersion** parameter is set to **5.6**, **5.7**, or **8.0**, you can set this parameter to **Basic**.
-         * 
-         * *   Only when the **DBType** parameter is set to **MySQL** and the **DBVersion** parameter is set to **8.0**, you can set this parameter to **ArchiveNormal** or **NormalMultimaster**.
-         * 
-         * For more information, see [Product editions](~~183258~~).
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder creationCategory(String creationCategory) {
             this.putQueryParameter("CreationCategory", creationCategory);
@@ -928,34 +954,45 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The method that is used to create a cluster. Valid values:
-         * <p>
+         * <p>Creation method, with the following values supported:</p>
+         * <ul>
+         * <li><p><strong>Normal</strong>: Creates a brand new PolarDB cluster. For console operations, refer to the following documents:</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/58769.html">Create a PolarDB MySQL Edition Database Cluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/118063.html">Create a PolarDB PostgreSQL Edition Database Cluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/118182.html">Create a PolarDB PostgreSQL Edition (Oracle Compatible) Database Cluster</a></li>
+         * </ul>
+         * </li>
+         * <li><p><strong>CloneFromPolarDB</strong>: Clones data from an existing PolarDB cluster to a new PolarDB cluster. For console operations, refer to the following documents:</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/87966.html">Clone a PolarDB MySQL Edition Cluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/118108.html">Clone a PolarDB PostgreSQL Edition Cluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/118221.html">Clone a PolarDB PostgreSQL Edition (Oracle Compatible) Cluster</a></li>
+         * </ul>
+         * </li>
+         * <li><p><strong>RecoverFromRecyclebin</strong>: Recovers data from a released PolarDB cluster to a new PolarDB cluster. For console operations, refer to the following documents:</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/164880.html">Restore a Released PolarDB MySQL Edition Cluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/432844.html">Restore a Released PolarDB PostgreSQL Edition Cluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/424632.html">Restore a Released PolarDB PostgreSQL Edition (Oracle Compatible) Cluster</a></li>
+         * </ul>
+         * </li>
+         * <li><p><strong>CloneFromRDS</strong>: Clones data from an existing RDS instance to a new PolarDB cluster. Console operation guide is available at <a href="https://help.aliyun.com/document_detail/121812.html">One-click Clone from RDS MySQL to PolarDB MySQL Edition</a>.</p>
+         * </li>
+         * <li><p><strong>MigrationFromRDS</strong>: Migrates data from an existing RDS instance to a new PolarDB cluster. The created PolarDB cluster operates in read-only mode with Binlog enabled by default. Console operation guide is at <a href="https://help.aliyun.com/document_detail/121582.html">One-click Upgrade from RDS MySQL to PolarDB MySQL Edition</a>.</p>
+         * </li>
+         * <li><p><strong>CreateGdnStandby</strong>: Creates a standby cluster. Console operation guide can be found at <a href="https://help.aliyun.com/document_detail/160381.html">Add Standby Cluster</a>.</p>
+         * </li>
+         * <li><p><strong>UpgradeFromPolarDB</strong>: Upgrades and migrates from PolarDB. Console operation guide is detailed in <a href="https://help.aliyun.com/document_detail/459712.html">Major Version Upgrade</a>.</p>
+         * </li>
+         * </ul>
+         * <p>The default value is <strong>Normal</strong>.</p>
+         * <blockquote>
+         * <p>When <strong>DBType</strong> is <strong>MySQL</strong> and <strong>DBVersion</strong> is <strong>8.0</strong>, this parameter can also take the value <strong>CreateGdnStandby</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Normal**: creates a PolarDB cluster. For more information about how to perform this operation in the console, see the following topics:
-         * 
-         *     *   [Create a PolarDB for MySQL cluster](~~58769~~)
-         *     *   [Create a PolarDB for PostgreSQL cluster](~~118063~~)
-         *     *   [Create a PolarDB for Oracle cluster](~~118182~~)
-         * 
-         * *   **CloneFromPolarDB**: clones data from an existing PolarDB cluster to a new PolarDB cluster. For more information about how to perform this operation in the console, see the following topics:
-         * 
-         *     *   [Clone a PolarDB for MySQL cluster](~~87966~~)
-         *     *   [Clone a PolarDB for PostgreSQL cluster](~~118108~~)
-         *     *   [Clone a PolarDB for Oracle cluster](~~118221~~)
-         * 
-         * *   **CloneFromRDS**: clones data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster by cloning an ApsaraDB RDS for MySQL instance](~~121812~~).
-         * 
-         * *   **MigrationFromRDS**: migrates data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. By default, the created PolarDB cluster is in read-only mode, and the binary logging feature is enabled. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster from an ApsaraDB RDS for MySQL instance](~~121582~~).
-         * 
-         * *   **CreateGdnStandby**: creates a secondary cluster. For more information about how to perform this operation in the console, see [Add a secondary cluster](~~160381~~).
-         * 
-         * Default value: **Normal**.
-         * 
-         * > 
-         * 
-         * *   If the **DBType** parameter is set to **MySQL** and the **DBVersion** parameter is set to **5.6** or **5.7**, this parameter can be set to **CloneFromRDS** or **MigrationFromRDS**.
-         * 
-         * *   If the **DBType** parameter is set to **MySQL** and the **DBVersion** parameter is set to **8.0**, this parameter can be set to **CreateGdnStandby**.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder creationOption(String creationOption) {
             this.putQueryParameter("CreationOption", creationOption);
@@ -964,11 +1001,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The name of the cluster. The name must meet the following requirements:
-         * <p>
+         * <p>Cluster name, which must meet the following requirements:</p>
+         * <ul>
+         * <li>Cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>Length should be between 2 and 256 characters.</li>
+         * </ul>
          * 
-         * *   It cannot start with `http://` or `https://`.
-         * *   It must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -977,13 +1017,17 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The minor version of the database engine. Valid values:
-         * <p>
+         * <p>Database engine minor version number. Valid values include:</p>
+         * <ul>
+         * <li><strong>8.0.2</strong></li>
+         * <li><strong>8.0.1</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>DBType</strong> is <strong>MySQL</strong> and <strong>DBVersion</strong> is <strong>8.0</strong>.</p>
+         * </blockquote>
          * 
-         * *   **8.0.2**
-         * *   **8.0.1**
-         * 
-         * > This parameter is valid only when the **DBType** parameter is set to **MySQL** and the **DBVersion** parameter is set to **8.0**.
+         * <strong>example:</strong>
+         * <p>8.0.1</p>
          */
         public Builder DBMinorVersion(String DBMinorVersion) {
             this.putQueryParameter("DBMinorVersion", DBMinorVersion);
@@ -992,12 +1036,22 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The specifications of the node.
-         * <p>
+         * <p>Node specifications. For details, refer to the following documents:</p>
+         * <ul>
+         * <li>PolarDB MySQL Edition: <a href="https://help.aliyun.com/document_detail/102542.html">Compute Node Specifications</a>.</li>
+         * <li>PolarDB PostgreSQL Edition (Oracle Compatible): <a href="https://help.aliyun.com/document_detail/207921.html">Compute Node Specifications</a>.</li>
+         * <li>PolarDB PostgreSQL Edition: <a href="https://help.aliyun.com/document_detail/209380.html">Compute Node Specifications</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>For a Serverless cluster in PolarDB MySQL, enter <strong>polar.mysql.sl.small</strong>.
+         * &lt;props=&quot;china&quot;&gt;&gt; - For a Serverless cluster in both PolarDB PostgreSQL (Oracle Compatible) and PolarDB PostgreSQL, enter <strong>polar.pg.sl.small.c</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   For more information about specifications supported by PolarDB for MySQL, see [Specifications of compute nodes](~~102542~~).
-         * *   For information about node specifications supported by the Oracle database engine, see [Specifications of compute nodes](~~207921~~).
-         * *   For information about node specifications supported by the PostgreSQL database engine, see [Specifications of compute nodes](~~209380~~).
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.medium</p>
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -1006,7 +1060,20 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeNum.
+         * <p>Number of standard edition nodes. Values are as follows:</p>
+         * <ul>
+         * <li><strong>1</strong> (default): Indicates there is only one read-write node.</li>
+         * <li><strong>2</strong>: Indicates there is one read-only node and one read-write node.<blockquote>
+         * <ul>
+         * <li>Enterprise edition defaults to 2 nodes, while the standard edition defaults to 1 node.</li>
+         * <li>Only supported by PolarDB MySQL edition.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder DBNodeNum(Integer DBNodeNum) {
             this.putQueryParameter("DBNodeNum", DBNodeNum);
@@ -1015,12 +1082,16 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The type of the database engine. Valid values:
-         * <p>
+         * <p>Database engine type, with available values as follows:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **PostgreSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -1029,21 +1100,40 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The version of the database engine.
-         * <p>
+         * <p>Database engine version number.</p>
+         * <ul>
+         * <li><p>For MySQL, the version numbers are as follows:</p>
+         * <ul>
+         * <li><strong>5.6</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>8.0</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>For PostgreSQL, the version numbers are as follows:</p>
+         * <ul>
+         * <li><p><strong>11</strong></p>
+         * </li>
+         * <li><p><strong>14</strong></p>
+         * </li>
+         * <li><p><strong>15</strong>
+         *   &lt;props=&quot;china&quot;&gt;</p>
+         * <blockquote>
+         * <p>When creating a Serverless cluster in PolarDB PostgreSQL, only version <strong>14</strong> is supported.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>For Oracle, the version numbers are as follows:</p>
+         * <ul>
+         * <li><strong>11</strong></li>
+         * <li><strong>14</strong></li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values for the MySQL database engine:
-         * 
-         *     *   **5.6**
-         *     *   **5.7**
-         *     *   **8.0**
-         * 
-         * *   Valid values for the PostgreSQL database engine:
-         * 
-         *     *   **11**
-         *     *   **14**
-         * 
-         * *   Valid value for the Oracle database engine: **11**
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -1052,10 +1142,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The time zone of the cluster. The time must be in UTC. You can set the parameter to a value that is on the hour from **-12:00 to +13:00**. Example: 00:00. Default value: **SYSTEM**, which means that the value is the same as the time zone of the region.
-         * <p>
+         * <p>Cluster timezone (UTC), with selectable values ranging from <strong>-12:00</strong> to <strong>+13:00</strong> at whole-hour intervals, e.g., <strong>00:00</strong>. The default value is <strong>SYSTEM</strong>, which matches the Region&quot;s timezone.</p>
+         * <blockquote>
+         * <p>This parameter applies only when <strong>DBType</strong> is <strong>MySQL</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only when the **DBType** parameter is set to **MySQL**.
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder defaultTimeZone(String defaultTimeZone) {
             this.putQueryParameter("DefaultTimeZone", defaultTimeZone);
@@ -1064,10 +1157,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the Global Database Network (GDN).
-         * <p>
+         * <p>Global Database Network (GDN) ID.</p>
+         * <blockquote>
+         * <p>This parameter is required when <strong>CreationOption</strong> is <strong>CreateGdnStandby</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only when the **CreationOption** parameter is set to **CreateGdnStandby**.
+         * <strong>example:</strong>
+         * <p>gdn-***********</p>
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);
@@ -1076,7 +1172,18 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * HotStandbyCluster.
+         * <p>Whether to enable the hot standby cluster. Values are as follows:</p>
+         * <ul>
+         * <li><strong>ON</strong> (default): Enables the hot standby cluster.</li>
+         * <li><strong>OFF</strong>: Disables the hot standby cluster.</li>
+         * <li><strong>STANDBY</strong>: Enables the hot standby cluster for the standard edition.<blockquote>
+         * <p>The default value for standard edition clusters is <strong>STANDBY</strong>.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder hotStandbyCluster(String hotStandbyCluster) {
             this.putQueryParameter("HotStandbyCluster", hotStandbyCluster);
@@ -1085,7 +1192,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * LoosePolarLogBin.
+         * <p>Enable Binlog feature, valid values are as follows:</p>
+         * <ul>
+         * <li><strong>ON</strong>: Cluster enables the Binlog feature. - <strong>OFF</strong>: Cluster disables the Binlog feature. &gt; This parameter takes effect only when the <strong>DBType</strong> parameter is set to <strong>MySQL</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder loosePolarLogBin(String loosePolarLogBin) {
             this.putQueryParameter("LoosePolarLogBin", loosePolarLogBin);
@@ -1094,13 +1207,17 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable X-Engine. Valid values:
-         * <p>
+         * <p>Enable the X-Engine storage engine feature, with valid values as follows:</p>
+         * <ul>
+         * <li><strong>ON</strong>: The cluster enables the X-Engine engine.</li>
+         * <li><strong>OFF</strong>: The cluster disables the X-Engine engine.<blockquote>
+         * <p>This parameter is effective only when <strong>CreationOption</strong> is not <strong>CreateGdnStandby</strong>, <strong>DBType</strong> is <strong>MySQL</strong>, and <strong>DBVersion</strong> is <strong>8.0</strong>. The memory specification of nodes that enable the X-Engine engine must be at least 8 GB.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
-         * *   **ON**
-         * *   **OFF**
-         * 
-         * >  This parameter takes effect only if you do not set **CreationOption** to **CreateGdnStandby** and you set **DBType** to **MySQL** and **DBVersion** to **8.0**. To enable X-Engine on a node, make sure that the memory of the node is greater than or equal to 8 GB in size.
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder looseXEngine(String looseXEngine) {
             this.putQueryParameter("LooseXEngine", looseXEngine);
@@ -1109,7 +1226,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * LooseXEngineUseMemoryPct.
+         * <p>Set the ratio for enabling the X-Engine storage engine, with a range of integers from 10 to 90.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>LooseXEngine</strong> is <strong>ON</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder looseXEngineUseMemoryPct(String looseXEngineUseMemoryPct) {
             this.putQueryParameter("LooseXEngineUseMemoryPct", looseXEngineUseMemoryPct);
@@ -1118,15 +1241,18 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether the table names are case-sensitive. Valid values:
-         * <p>
+         * <p>Whether table names are case-sensitive, with valid values as follows:</p>
+         * <ul>
+         * <li><strong>1</strong>: Case-insensitive</li>
+         * <li><strong>0</strong>: Case-sensitive</li>
+         * </ul>
+         * <p>The default value is <strong>1</strong>.</p>
+         * <blockquote>
+         * <p>This parameter applies only when <strong>DBType</strong> is <strong>MySQL</strong>.</p>
+         * </blockquote>
          * 
-         * *   **1**: The table names are case-insensitive.
-         * *   **0**: The table names are case-sensitive.
-         * 
-         * Default value: **1**.
-         * 
-         * > This parameter is valid only when the **DBType** parameter is set to **MySQL**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder lowerCaseTableNames(String lowerCaseTableNames) {
             this.putQueryParameter("LowerCaseTableNames", lowerCaseTableNames);
@@ -1153,10 +1279,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the parameter template.
-         * <p>
+         * <p>Parameter template ID.</p>
+         * <blockquote>
+         * <p>You can view the list of parameter templates in the target region, including the parameter template ID, by calling the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> interface.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeParameterGroups](~~207178~~) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.
+         * <strong>example:</strong>
+         * <p>pcpg-**************</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -1165,11 +1294,15 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>Payment type, with available values as follows:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: Subscription (monthly or yearly).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -1178,11 +1311,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The subscription type of the subscription cluster. This parameter is required only when the PayType parameter is set to **Prepaid**. Valid values:
-         * <p>
+         * <p>If the payment type is <strong>Prepaid</strong>, this parameter is required. It specifies whether the prepaid cluster is on a monthly or yearly basis.</p>
+         * <ul>
+         * <li><strong>Year</strong>: Yearly subscription.</li>
+         * <li><strong>Month</strong>: Monthly subscription.</li>
+         * </ul>
          * 
-         * *   **Year**: annual subscription. Unit: years.
-         * *   **Month**: monthly subscription. Unit: months.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -1191,12 +1327,12 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
-         * <p>
+         * <p id="p_wyg_t4a_glm">The provisioned read and write IOPS for ESSD AutoPL cloud disks. Possible values: 0 to min{50,000, 1000*capacity-Baseline Performance}.</p>
+         * <p id="p_6de_jxy_k2g">Baseline Performance = min{1,800+50*capacity, 50000}.</p>
+         * <note id="note_7kj_j0o_rgs">This parameter is supported only when StorageType is ESSDAUTOPL.</note>
          * 
-         * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
-         * 
-         * >  This parameter is available only if the StorageType parameter is set to ESSDAUTOPL.
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -1205,7 +1341,19 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ProxyClass.
+         * <p>Standard edition database proxy specifications. Values are as follows:</p>
+         * <ul>
+         * <li><strong>polar.maxscale.g2.medium.c</strong>: 2 cores.</li>
+         * <li><strong>polar.maxscale.g2.large.c</strong>: 4 cores.</li>
+         * <li><strong>polar.maxscale.g2.xlarge.c</strong>: 8 cores.</li>
+         * <li><strong>polar.maxscale.g2.2xlarge.c</strong>: 16 cores.</li>
+         * <li><strong>polar.maxscale.g2.3xlarge.c</strong>: 24 cores.</li>
+         * <li><strong>polar.maxscale.g2.4xlarge.c</strong>: 32 cores.</li>
+         * <li><strong>polar.maxscale.g2.8xlarge.c</strong>: 64 cores.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.maxscale.g2.medium.c</p>
          */
         public Builder proxyClass(String proxyClass) {
             this.putQueryParameter("ProxyClass", proxyClass);
@@ -1214,7 +1362,21 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ProxyType.
+         * <p>Database proxy type, with values including:</p>
+         * <ul>
+         * <li><strong>EXCLUSIVE</strong>: Enterprise Exclusive Edition</li>
+         * <li><strong>GENERAL</strong>: Enterprise General Purpose Edition<blockquote>
+         * <p>The proxy type must match the type of the cluster&quot;s node specifications, i.e.,</p>
+         * <ul>
+         * <li>If the node specification is general, the proxy type should be Enterprise General Purpose Edition;</li>
+         * <li>If the node specification is dedicated, the proxy type should be Enterprise Exclusive Edition.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Exclusive</p>
          */
         public Builder proxyType(String proxyType) {
             this.putQueryParameter("ProxyType", proxyType);
@@ -1223,10 +1385,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>Region ID.</p>
+         * <blockquote>
+         * <p>You can view available regions through the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> interface.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query available regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -1235,7 +1401,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1262,10 +1431,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.
-         * <p>
+         * <p>Maximum scaling limit for a single node. The value range is: 1 PCU~32 PCU.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless clusters.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only for serverless clusters.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder scaleMax(String scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -1274,10 +1446,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.
-         * <p>
+         * <p>Minimum scaling limit for a single node. The value range is: 1 PCU~31 PCU.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless clusters.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only for serverless clusters.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleMin(String scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -1286,10 +1461,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The maximum number of read-only nodes for scaling. Valid values: 0 to 15.
-         * <p>
+         * <p>Maximum scaling limit for the number of read-only nodes. The value range is: 0~15.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless clusters.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only for serverless clusters.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder scaleRoNumMax(String scaleRoNumMax) {
             this.putQueryParameter("ScaleRoNumMax", scaleRoNumMax);
@@ -1298,10 +1476,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The minimum number of read-only nodes for scaling. Valid values: 0 to 15.
-         * <p>
+         * <p>Minimum scaling limit for the number of read-only nodes. The value range is: 0~15.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless clusters.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only for serverless clusters.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scaleRoNumMin(String scaleRoNumMin) {
             this.putQueryParameter("ScaleRoNumMin", scaleRoNumMin);
@@ -1310,10 +1491,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The IP whitelist of the cluster.
-         * <p>
+         * <p>PolarDB cluster whitelist IP address.</p>
+         * <blockquote>
+         * <p>Supports configuring multiple whitelist IP addresses, with English commas separating multiple IP addresses.</p>
+         * </blockquote>
          * 
-         * > The whitelist can contain multiple IP addresses. Separate multiple IP addresses with commas (,).
+         * <strong>example:</strong>
+         * <p>10.<em><strong>.</strong></em>.***</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -1322,10 +1506,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The type of the serverless cluster. Set the value to **AgileServerless**.
-         * <p>
+         * <p>Serverless type. The current value is fixed to <strong>AgileServerless</strong> (sensitive mode).</p>
+         * <blockquote>
+         * <p>This parameter is only supported by Serverless clusters.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only for serverless clusters.
+         * <strong>example:</strong>
+         * <p>AgileServerless</p>
          */
         public Builder serverlessType(String serverlessType) {
             this.putQueryParameter("ServerlessType", serverlessType);
@@ -1334,11 +1521,18 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the source ApsaraDB RDS instance or PolarDB cluster. This parameter is required only when the **CreationOption** parameter is set to **MigrationFromRDS**, **CloneFromRDS**, or **CloneFromPolarDB**.
-         * <p>
+         * <p>Source RDS instance ID or source PolarDB cluster ID. This parameter is mandatory only when <strong>CreationOption</strong> is set to <strong>MigrationFromRDS</strong>, <strong>CloneFromRDS</strong>, <strong>CloneFromPolarDB</strong>, or <strong>RecoverFromRecyclebin</strong>.</p>
+         * <ul>
+         * <li><p>If <strong>CreationOption</strong> is <strong>MigrationFromRDS</strong> or <strong>CloneFromRDS</strong>, you need to input the source RDS instance ID. The source RDS instance version must be RDS MySQL 5.6, 5.7, or 8.0 High Availability edition.</p>
+         * </li>
+         * <li><p>If <strong>CreationOption</strong> is <strong>CloneFromPolarDB</strong>, you need to input the source PolarDB cluster ID. The DBType of the cloned cluster will default to match the source cluster. For example, if the source cluster is MySQL 8.0, the cloned cluster must also have <strong>DBType</strong> set to <strong>MySQL</strong> and <strong>DBVersion</strong> to <strong>8.0</strong>.</p>
+         * </li>
+         * <li><p>If <strong>CreationOption</strong> is <strong>RecoverFromRecyclebin</strong>, you need to input the released source PolarDB cluster ID. The DBType of the cluster being recovered from the recycle bin must match the source cluster. For example, if the source cluster was MySQL 8.0, the recovered cluster must also have <strong>DBType</strong> set to <strong>MySQL</strong> and <strong>DBVersion</strong> to <strong>8.0</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * *   If the **CreationOption** parameter is set to **MigrationFromRDS** or **CloneFromRDS**, you must set this parameter to the ID of the source ApsaraDB RDS instance. The source ApsaraDB RDS instance must use ApsaraDB RDS for MySQL 5.6, 5.7, or 8.0 High-availability Edition.
-         * *   If the **CreationOption** parameter is set to **CloneFromPolarDB**, you must set this parameter to the ID of the source PolarDB cluster. By default, the value of DBType of the destination cluster must be the same as that of the source cluster. For example, if a MySQL 8.0 cluster is used as the source cluster, you must set the **DBType** parameter to **MySQL** and the **DBVersion** parameter to **8.0** for the destination cluster.
+         * <strong>example:</strong>
+         * <p>rm-*************</p>
          */
         public Builder sourceResourceId(String sourceResourceId) {
             this.putQueryParameter("SourceResourceId", sourceResourceId);
@@ -1347,7 +1541,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * StandbyAZ.
+         * <p>The availability zone where the hot standby cluster is stored. Applicable to the standard edition 3AZ scenario.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when multi-zone data strong consistency is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder standbyAZ(String standbyAZ) {
             this.putQueryParameter("StandbyAZ", standbyAZ);
@@ -1356,7 +1556,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * StorageAutoScale.
+         * <p>Whether to enable automatic storage expansion for standard edition clusters, with valid values as follows:</p>
+         * <ul>
+         * <li>Enable: Enables automatic storage expansion.</li>
+         * <li>Disable: Disables automatic storage expansion.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder storageAutoScale(String storageAutoScale) {
             this.putQueryParameter("StorageAutoScale", storageAutoScale);
@@ -1365,7 +1572,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * StoragePayType.
+         * <p>The storage billing type, with valid values as follows:</p>
+         * <ul>
+         * <li>Postpaid: Pay-as-you-go (hourly).</li>
+         * <li>Prepaid: Pay-per-use based on space (subscription).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder storagePayType(String storagePayType) {
             this.putQueryParameter("StoragePayType", storagePayType);
@@ -1374,7 +1588,16 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The storage space that uses the subscription billing method. Unit: GB.
+         * <p>Storage space for pay-by-space (subscription) billing. Unit: GB.</p>
+         * <blockquote>
+         * <ul>
+         * <li>For PolarDB MySQL Standard Edition, the storage space range is 20 to 32000.</li>
+         * <li>When the Standard Edition storage type is ESSDAUTOPL, the storage space range is 40 to 64000, with a minimum step size of 10, meaning you can only enter values like 40, 50, 60, and so on.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder storageSpace(Long storageSpace) {
             this.putQueryParameter("StorageSpace", storageSpace);
@@ -1383,20 +1606,22 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The storage type. Valid values for Enterprise Edition:
-         * <p>
+         * <p>Enterprise edition storage types include:</p>
+         * <ul>
+         * <li><strong>PSL5</strong></li>
+         * <li><strong>PSL4</strong></li>
+         * </ul>
+         * <p>Standard edition storage types include:</p>
+         * <ul>
+         * <li><strong>ESSDPL0</strong></li>
+         * <li><strong>ESSDPL1</strong></li>
+         * <li><strong>ESSDPL2</strong></li>
+         * <li><strong>ESSDPL3</strong></li>
+         * <li><strong>ESSDAUTOPL</strong></li>
+         * </ul>
          * 
-         * *   **PSL5**
-         * *   **PSL4**
-         * 
-         * Valid values for Standard Edition:
-         * *   **ESSDPL0**
-         * *   **ESSDPL1**
-         * *   **ESSDPL2**
-         * *   **ESSDPL3**
-         * *   **ESSDAUTOPL**
-         * 
-         * > This parameter is invalid for serverless clusters.
+         * <strong>example:</strong>
+         * <p>PSL4</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -1405,7 +1630,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * StorageUpperBound.
+         * <p>Set the upper limit for automatic storage expansion of standard edition clusters, in GB.</p>
+         * <blockquote>
+         * <p>The maximum value is 32000.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder storageUpperBound(Long storageUpperBound) {
             this.putQueryParameter("StorageUpperBound", storageUpperBound);
@@ -1414,11 +1645,16 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable multi-zone data consistency. Valid values:
-         * <p>
+         * <p>Whether the cluster has enabled strong data consistency across multiple zones. Values are as follows:</p>
+         * <ul>
+         * <li><p><strong>ON</strong>: Indicates strong data consistency across multiple zones is enabled, applicable to the standard edition 3AZ scenario.</p>
+         * </li>
+         * <li><p><strong>OFF</strong>: Indicates strong data consistency across multiple zones is not enabled.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **ON**: enables multi-zone data consistency. Set this parameter to ON for Standard Edition clusters of Multi-zone Edition.
-         * *   **OFF**: disables multi-zone data consistency.
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder strictConsistency(String strictConsistency) {
             this.putQueryParameter("StrictConsistency", strictConsistency);
@@ -1427,18 +1663,21 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable transparent data encryption (TDE). Default value: false. Valid values:
-         * <p>
+         * <p>Enables TDE encryption. Valid values are as follows:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled (default).</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter takes effect only when <strong>DBType</strong> is <strong>PostgreSQL</strong> or <strong>Oracle</strong>.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/167982.html">ModifyDBClusterTDE</a> interface to enable TDE encryption for a PolarDB MySQL cluster.</li>
+         * <li>Once the TDE feature is enabled, it cannot be disabled.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * > 
-         * 
-         * *   This parameter is valid only when the **DBType** parameter is set to **PostgreSQL** or **Oracle**.
-         * 
-         * *   You can call the [ModifyDBClusterTDE](~~167982~~) operation to enable TDE for a PolarDB for MySQL cluster.
-         * *   TDE cannot be disabled after it is enabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder TDEStatus(Boolean TDEStatus) {
             this.putQueryParameter("TDEStatus", TDEStatus);
@@ -1447,7 +1686,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>List of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1456,9 +1695,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * *   If the **Period** parameter is set to **Month**, the **UsedTime** parameter can be set to `1, 2, 3, 4, 5, 6, 7, 8, or 9`.
-         * <p>
-         * *   If the **Period** parameter is set to **Year**, the **UsedTime** parameter can be set to `1, 2, or 3`.
+         * <p>If the payment type is <strong>Prepaid</strong>, this parameter is required.</p>
+         * <ul>
+         * <li>When <strong>Period</strong> is <strong>Month</strong>, <strong>UsedTime</strong> should be an integer within <code>[1-9]</code>.</li>
+         * <li>When <strong>Period</strong> is <strong>Year</strong>, <strong>UsedTime</strong> should be an integer within <code>[1-3]</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -1467,7 +1711,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) ID of the cluster.
+         * <p>VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-**********</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -1476,10 +1723,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the cluster.
-         * <p>
+         * <p>Virtual switch ID.</p>
+         * <blockquote>
+         * <p>If VPCId has been selected, VSwitchId is mandatory.</p>
+         * </blockquote>
          * 
-         * > If the VPCId parameter is specified, the VSwitchId parameter is required.
+         * <strong>example:</strong>
+         * <p>vsw-**********</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1488,10 +1738,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The zone ID of the cluster.
-         * <p>
+         * <p>Availability Zone ID.</p>
+         * <blockquote>
+         * <p>You can view the available zones through the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> interface.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query available zones.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1506,6 +1759,12 @@ public class CreateDBClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBClusterRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1545,10 +1804,13 @@ public class CreateDBClusterRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click the **+** icon.
-             * <p>
+             * <p>Tag key. If you need to add multiple tags to the target cluster at once, click <strong>Add</strong> to add a tag key.</p>
+             * <blockquote>
+             * <p>Up to 20 pairs of tags can be added each time, where <code>Tag.N.Key</code> corresponds to <code>Tag.N.Value</code>.</p>
+             * </blockquote>
              * 
-             * > You can create up to 20 key-value pairs of tags at a time. Each value of the `Tag.N.Key` parameter is paired with a value of the `Tag.N.Value` parameter.
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1556,10 +1818,13 @@ public class CreateDBClusterRequest extends Request {
             }
 
             /**
-             * The value of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click the **+** icon.
-             * <p>
+             * <p>Tag value. If you need to add multiple tags to the target cluster at once, click <strong>Add</strong> to add tag values.</p>
+             * <blockquote>
+             * <p>Up to 20 pairs of tags can be added each time, where <code>Tag.N.Value</code> corresponds to <code>Tag.N.Key</code>.</p>
+             * </blockquote>
              * 
-             * > You can create up to 20 key-value pairs of tags at a time. Each value of the `Tag.N.Value` parameter is paired with a value of the `Tag.N.Key` parameter.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

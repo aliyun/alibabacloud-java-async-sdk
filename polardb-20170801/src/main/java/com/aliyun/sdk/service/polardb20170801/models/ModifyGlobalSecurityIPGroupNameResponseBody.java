@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalSecurityIPGroupNameResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyGlobalSecurityIPGroupNameResponseBody</p>
@@ -49,7 +50,7 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the global IP whitelist template.
+         * <p>The details of the global IP whitelist template.</p>
          */
         public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -57,7 +58,10 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyGlobalSecurityIPGroupNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyGlobalSecurityIPGroupNameResponseBody</p>
+     */
     public static class GlobalSecurityIPGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GIpList")
         private String gIpList;
@@ -133,10 +143,13 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The IP address in the whitelist template.
-             * <p>
+             * <p>The IP address in the whitelist template.</p>
+             * <blockquote>
+             * <p> Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP whitelists.</p>
+             * </blockquote>
              * 
-             * >  Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP whitelists.
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -144,12 +157,15 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist template. The name must meet the following requirements:
-             * <p>
+             * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+             * <ul>
+             * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+             * <li>The name must start with a letter and end with a letter or a digit.</li>
+             * <li>The name must be 2 to 120 characters in length.</li>
+             * </ul>
              * 
-             * *   The name can contain lowercase letters, digits, and underscores (\_).
-             * *   The name must start with a letter and end with a letter or a digit.
-             * *   The name must be 2 to 120 characters in length.
+             * <strong>example:</strong>
+             * <p>test_123</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -157,7 +173,10 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP whitelist template.
+             * <p>The ID of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-zsldxfiwjmti0kcm****</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -165,7 +184,10 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

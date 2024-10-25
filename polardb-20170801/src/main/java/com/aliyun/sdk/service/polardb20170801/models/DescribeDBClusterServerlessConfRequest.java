@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterServerlessConfRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterServerlessConfRequest</p>
@@ -110,7 +111,11 @@ public class DescribeDBClusterServerlessConfRequest extends Request {
         } 
 
         /**
-         * The ID of the serverless cluster.
+         * <p>The ID of the serverless cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp10gr51qasnl****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

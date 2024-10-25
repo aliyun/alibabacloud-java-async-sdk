@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartDBLinkResponseBody} extends {@link TeaModel}
  *
  * <p>RestartDBLinkResponseBody</p>
@@ -61,7 +62,10 @@ public class RestartDBLinkResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -69,7 +73,10 @@ public class RestartDBLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E56531A4-E552-40BA-9C58-137B80******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class RestartDBLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ec8c4723-eac5-4f12-becb-01ac08******</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

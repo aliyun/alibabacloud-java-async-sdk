@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserEncryptionKeyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserEncryptionKeyListResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -69,7 +73,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * Cluster key list.
+         * <p>Cluster key list.</p>
          */
         public Builder keyList(java.util.List < String > keyList) {
             this.keyList = keyList;
@@ -77,7 +81,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

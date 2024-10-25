@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolarSQLCollectorPolicyResponse} extends {@link TeaModel}
  *
  * <p>DescribePolarSQLCollectorPolicyResponse</p>

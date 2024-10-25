@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -173,7 +174,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +187,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*****************</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -209,7 +218,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **cluster**.
+         * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -218,7 +231,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -233,6 +247,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -272,10 +292,13 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. To create multiple tags for a cluster at a time, click **Add** to add tag keys.
-             * <p>
+             * <p>The key of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag keys.</p>
+             * <blockquote>
+             * <p> You can create up to 20 tags for a cluster at a time. The value of <code>Tag.N.Key</code> is paired with the value of <code>Tag.N.Value</code>.</p>
+             * </blockquote>
              * 
-             * >  You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -283,10 +306,13 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag. To create multiple tags for a cluster at a time, click **Add** to add tag values.
-             * <p>
+             * <p>The value of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag values.</p>
+             * <blockquote>
+             * <p> You can create up to 20 tags for a cluster at a time. The value of <code>Tag.N.Key</code> is paired with the value of <code>Tag.N.Value</code>.</p>
+             * </blockquote>
              * 
-             * >  You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of `Tag.N.Value` is paired with a value of `Tag.N.Key`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

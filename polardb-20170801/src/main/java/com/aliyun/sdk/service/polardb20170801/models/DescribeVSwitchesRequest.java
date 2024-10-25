@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVSwitchesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVSwitchesRequest</p>
@@ -207,10 +208,13 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * The dedicated cluster ID.
-         * <p>
+         * <p>The dedicated cluster ID.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>VpcId</strong> and <strong>DedicatedHostGroupId</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.
+         * <strong>example:</strong>
+         * <p>dhg-4n****</p>
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -237,7 +241,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Default value: 1.
+         * <p>The page number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -246,7 +253,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Maximum value: 50. Default value: 50.
+         * <p>The number of entries to return per page. Maximum value: 50. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -255,7 +265,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the vSwitch belongs.
+         * <p>The ID of the region where the vSwitch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +277,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the vSwitch belongs.
+         * <p>The ID of the resource group to which the vSwitch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -300,10 +316,13 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private type (VPC) to which the vSwitch belongs.
-         * <p>
+         * <p>The ID of the virtual private type (VPC) to which the vSwitch belongs.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>VpcId</strong> and <strong>DedicatedHostGroupId</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.
+         * <strong>example:</strong>
+         * <p>vpc-25cdvfeq58pl****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -312,7 +331,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the vSwitch belongs.
+         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

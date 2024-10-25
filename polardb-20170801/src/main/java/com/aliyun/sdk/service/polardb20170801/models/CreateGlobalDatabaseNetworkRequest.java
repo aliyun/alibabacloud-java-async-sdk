@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalDatabaseNetworkRequest} extends {@link RequestModel}
  *
  * <p>CreateGlobalDatabaseNetworkRequest</p>
@@ -189,7 +190,11 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the primary cluster.
+         * <p>The ID of the primary cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1q76364ird*****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -207,13 +212,16 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The description of the GDN. The description must meet the following requirements:
-         * <p>
+         * <p>The description of the GDN. The description must meet the following requirements:</p>
+         * <ul>
+         * <li>It cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+         * <li>It must start with a letter.</li>
+         * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>It must be 2 to 126 characters in length.</li>
+         * </ul>
          * 
-         * *   It cannot start with [http:// or https://.](http://https://。)
-         * *   It must start with a letter.
-         * *   It can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   It must be 2 to 126 characters in length.
+         * <strong>example:</strong>
+         * <p>GDN-fortest</p>
          */
         public Builder GDNDescription(String GDNDescription) {
             this.putQueryParameter("GDNDescription", GDNDescription);
@@ -240,7 +248,10 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

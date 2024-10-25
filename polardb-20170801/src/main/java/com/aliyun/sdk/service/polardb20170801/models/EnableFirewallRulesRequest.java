@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableFirewallRulesRequest} extends {@link RequestModel}
  *
  * <p>EnableFirewallRulesRequest</p>
@@ -139,7 +140,11 @@ public class EnableFirewallRulesRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -148,7 +153,17 @@ public class EnableFirewallRulesRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable or disable the specified firewall rules. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the specified firewall rules.</li>
+         * <li><strong>false</strong>: disables the specified firewall rules.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is valid only when you specify the <strong>RuleNameList</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -193,7 +208,14 @@ public class EnableFirewallRulesRequest extends Request {
         }
 
         /**
-         * RuleNameList.
+         * <p>The name of the firewall rule that you want to enable for the cluster. You can specify multiple firewall rules at a time. Separate multiple rules with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeFirewallRules</strong> operation to query the details of all firewall rules that are applicable to a cluster, such as rule names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test111</p>
          */
         public Builder ruleNameList(String ruleNameList) {
             this.putQueryParameter("RuleNameList", ruleNameList);

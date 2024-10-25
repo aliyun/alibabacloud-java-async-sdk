@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchOverGlobalDatabaseNetworkRequest} extends {@link RequestModel}
  *
  * <p>SwitchOverGlobalDatabaseNetworkRequest</p>
@@ -180,10 +181,11 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that will become the primary cluster in the GDN.
-         * <p>
+         * <p>The ID of the cluster that will become the primary cluster in the GDN.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to query the ID of the cluster in the GDN.</p>
          * 
-         * You can call the [DescribeGlobalDatabaseNetwork](~~264580~~) operation to query the ID of the cluster in the GDN.
+         * <strong>example:</strong>
+         * <p>pc-wz9fb5nn44u1d****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -192,11 +194,14 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly switch over the primary and secondary clusters in the GDN. Valid values:
-         * <p>
+         * <p>Specifies whether to forcibly switch over the primary and secondary clusters in the GDN. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forced(Boolean forced) {
             this.putQueryParameter("Forced", forced);
@@ -205,7 +210,11 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the GDN.
+         * <p>The ID of the GDN.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn-bp1fttxsrmv*****</p>
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);
@@ -232,7 +241,10 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +253,10 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

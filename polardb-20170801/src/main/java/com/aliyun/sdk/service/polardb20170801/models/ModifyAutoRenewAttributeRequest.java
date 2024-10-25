@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAutoRenewAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyAutoRenewAttributeRequest</p>
@@ -181,7 +182,11 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).
+         * <p>The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -190,13 +195,15 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The automatic renewal period.
-         * <p>
+         * <p>The automatic renewal period.</p>
+         * <ul>
+         * <li>Valid values when you set the <strong>PeriodUnit</strong> parameter to <strong>Month</strong>: <code>1, 2, 3, 6, and 12</code>.</li>
+         * <li>Valid values when you set the <strong>PeriodUnit</strong> parameter to <strong>Year</strong>: <code>1, 2, and 3</code>.</li>
+         * </ul>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * *   Valid values when you set the **PeriodUnit** parameter to **Month**: `1, 2, 3, 6, and 12`.
-         * *   Valid values when you set the **PeriodUnit** parameter to **Year**: `1, 2, and 3`.
-         * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -223,13 +230,15 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The unit of the renewal period. Valid values:
-         * <p>
+         * <p>The unit of the renewal period. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * <p>Default value: <strong>Month</strong>.</p>
          * 
-         * *   **Year**
-         * *   **Month**
-         * 
-         * Default value: **Month**.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -238,11 +247,15 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region. The region ID can be up to 50 characters in length.
-         * <p>
-         * cn-hangzhou
-         *  
-         * >  You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
+         * <p>The ID of the region. The region ID can be up to 50 characters in length.
+         * cn-hangzhou</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -251,16 +264,19 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal status of the cluster. Valid values:
-         * <p>
+         * <p>The auto-renewal status of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>AutoRenewal:</strong> The cluster is automatically renewed.</li>
+         * <li><strong>Normal</strong>: The cluster is manually renewed.</li>
+         * <li><strong>NotRenewal:</strong> The cluster is not renewed after expiration.</li>
+         * </ul>
+         * <p>Default value: <strong>AutoRenewal</strong>.</p>
+         * <blockquote>
+         * <p> If you set this parameter to <strong>NotRenewal</strong>, the system sends a notification that indicates the cluster is not renewed three days before the cluster expires. After the cluster expires, the system no longer sends a notification.</p>
+         * </blockquote>
          * 
-         * *   **AutoRenewal:** The cluster is automatically renewed.
-         * *   **Normal**: The cluster is manually renewed.
-         * *   **NotRenewal:** The cluster is not renewed after expiration.
-         * 
-         * Default value: **AutoRenewal**.
-         * 
-         * >  If you set this parameter to **NotRenewal**, the system sends a notification that indicates the cluster is not renewed three days before the cluster expires. After the cluster expires, the system no longer sends a notification.
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);
@@ -269,7 +285,10 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

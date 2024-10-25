@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveDBClusterFromGDNResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveDBClusterFromGDNResponseBody</p>
@@ -37,7 +38,10 @@ public class RemoveDBClusterFromGDNResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67F2E75F-AE67-4FB2-821F-A81237EACD15</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

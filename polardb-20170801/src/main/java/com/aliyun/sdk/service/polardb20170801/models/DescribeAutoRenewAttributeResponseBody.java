@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoRenewAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoRenewAttributeResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The renewal information about the clusters.
+         * <p>The renewal information about the clusters.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the page returned.
+         * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65D7ACE6-4A61-4B6E-B357-8CB24A******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoRenewAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoRenewAttributeResponseBody</p>
+     */
     public static class AutoRenewAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoRenewEnabled")
         private Boolean autoRenewEnabled;
@@ -217,11 +236,14 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             private String renewalStatus; 
 
             /**
-             * Indicates whether the auto-renewal feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the auto-renewal feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: enabled</li>
+             * <li>false: disabled</li>
+             * </ul>
              * 
-             * *   true: enabled
-             * *   false: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
                 this.autoRenewEnabled = autoRenewEnabled;
@@ -229,7 +251,10 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*****************</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -237,7 +262,10 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal duration.
+             * <p>The renewal duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -245,11 +273,14 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the duration. Valid values:
-             * <p>
+             * <p>The unit of the duration. Valid values:</p>
+             * <ul>
+             * <li>Year</li>
+             * <li>Month</li>
+             * </ul>
              * 
-             * *   Year
-             * *   Month
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -257,7 +288,10 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -265,12 +299,15 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal status. Valid values:
-             * <p>
+             * <p>The renewal status. Valid values:</p>
+             * <ul>
+             * <li>AutoRenewal: The cluster is automatically renewed.</li>
+             * <li>Normal: The cluster is manually renewed. The system sends a text message to remind you before the cluster expires.</li>
+             * <li>NotRenewal: The cluster is not renewed. The system does not send a reminder for expiration but only sends a text message three days before the cluster expires to remind you that the cluster is not renewed.</li>
+             * </ul>
              * 
-             * *   AutoRenewal: The cluster is automatically renewed.
-             * *   Normal: The cluster is manually renewed. The system sends a text message to remind you before the cluster expires.
-             * *   NotRenewal: The cluster is not renewed. The system does not send a reminder for expiration but only sends a text message three days before the cluster expires to remind you that the cluster is not renewed.
+             * <strong>example:</strong>
+             * <p>AutoRenewal</p>
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;
@@ -284,6 +321,12 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoRenewAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoRenewAttributeResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoRenewAttribute")
         private java.util.List < AutoRenewAttribute> autoRenewAttribute;

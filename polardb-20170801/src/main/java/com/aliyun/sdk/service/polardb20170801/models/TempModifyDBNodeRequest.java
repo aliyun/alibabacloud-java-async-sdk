@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TempModifyDBNodeRequest} extends {@link RequestModel}
  *
  * <p>TempModifyDBNodeRequest</p>
@@ -184,7 +185,10 @@ public class TempModifyDBNodeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f5********************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -193,7 +197,11 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -202,7 +210,8 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The information of the added node.
+         * <p>The information of the added node.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             this.putQueryParameter("DBNode", DBNode);
@@ -211,7 +220,11 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The type of configuration change. Set the value to **TempUpgrade**.
+         * <p>The type of configuration change. Set the value to <strong>TempUpgrade</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TempUpgrade</p>
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -220,10 +233,14 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The type of operation performed on the cluster. Valid values:
-         * <p>
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li><strong>Modify</strong>: temporarily upgrades the configuration of the cluster.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Modify**: temporarily upgrade the configuration of the cluster.
+         * <strong>example:</strong>
+         * <p>Modify</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -268,10 +285,14 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The rollback time of the configuration for the temporary upgrade. Specify the time in the ISO 8601 standard in the YYYY-MM-DD hh:mm:ss format.
-         * <p>
+         * <p>The rollback time of the configuration for the temporary upgrade. Specify the time in the ISO 8601 standard in the YYYY-MM-DD hh:mm:ss format.</p>
+         * <blockquote>
+         * <p> The rollback time cannot be 1 hour earlier than the current time and cannot be later than one day before the time when the cluster expires.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The rollback time cannot be 1 hour earlier than the current time and cannot be later than one day before the time when the cluster expires.
+         * <strong>example:</strong>
+         * <p>2021-09-23 18:16:00</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -286,6 +307,12 @@ public class TempModifyDBNodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TempModifyDBNodeRequest} extends {@link TeaModel}
+     *
+     * <p>TempModifyDBNodeRequest</p>
+     */
     public static class DBNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetClass")
         private String targetClass;
@@ -325,10 +352,13 @@ public class TempModifyDBNodeRequest extends Request {
             private String zoneId; 
 
             /**
-             * The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.
-             * <p>
+             * <p>The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the instance types of original nodes.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeDBClusters](~~98094~~) operation to view the instance types of original nodes.
+             * <strong>example:</strong>
+             * <p>polar.mysql.x4.medium</p>
              */
             public Builder targetClass(String targetClass) {
                 this.targetClass = targetClass;
@@ -336,7 +366,10 @@ public class TempModifyDBNodeRequest extends Request {
             }
 
             /**
-             * The ID of the zone in which the added node is deployed. The instance type of the added node must be the same as the instance type of the original node.
+             * <p>The ID of the zone in which the added node is deployed. The instance type of the added node must be the same as the instance type of the original node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

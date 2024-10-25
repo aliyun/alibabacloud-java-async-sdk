@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterMaintainTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterMaintainTimeRequest</p>
@@ -125,7 +126,11 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -134,10 +139,14 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         }
 
         /**
-         * The maintenance window of the cluster. Specify the maintenance window in the `HH:mmZ-HH:mmZ` format. For example, the value `16:00Z-17:00Z` indicates that the cluster can be maintained from 00:00 to 01:00 (UTC+8).
-         * <p>
-         *  
-         * >  The maintenance window must start on the hour and last for an hour.
+         * <p>The maintenance window of the cluster. Specify the maintenance window in the <code>HH:mmZ-HH:mmZ</code> format. For example, the value <code>16:00Z-17:00Z</code> indicates that the cluster can be maintained from 00:00 to 01:00 (UTC+8).</p>
+         * <blockquote>
+         * <p> The maintenance window must start on the hour and last for an hour.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00Z-03:00Z</p>
          */
         public Builder maintainTime(String maintainTime) {
             this.putQueryParameter("MaintainTime", maintainTime);

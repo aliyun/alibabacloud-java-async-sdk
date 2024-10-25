@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalDatabaseNetworkRequest} extends {@link RequestModel}
  *
  * <p>DescribeGlobalDatabaseNetworkRequest</p>
@@ -161,7 +162,11 @@ public class DescribeGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the GDN.
+         * <p>The ID of the GDN.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn-bp1fttxsrmv*****</p>
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);
@@ -188,7 +193,10 @@ public class DescribeGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterAuditLogCollectorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterAuditLogCollectorResponseBody</p>
@@ -49,11 +50,14 @@ public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of SQL collector. Valid values:
-         * <p>
+         * <p>The status of SQL collector. Valid values:</p>
+         * <ul>
+         * <li>Enable</li>
+         * <li>Disabled</li>
+         * </ul>
          * 
-         * *   Enable
-         * *   Disabled
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder collectorStatus(String collectorStatus) {
             this.collectorStatus = collectorStatus;
@@ -61,7 +65,10 @@ public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59011D2B-2A38-4207-A86C-72BC1F882D19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

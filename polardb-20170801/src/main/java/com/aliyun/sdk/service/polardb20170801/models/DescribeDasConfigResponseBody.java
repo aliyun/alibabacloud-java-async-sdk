@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDasConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDasConfigResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         private Long storageUpperBound; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593AE1C5-B70C-463F-9207-074639******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the automatic storage expansion feature is enabled for the standard cluster.
+         * <p>Indicates whether the automatic storage expansion feature is enabled for the standard cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder storageAutoScale(String storageAutoScale) {
             this.storageAutoScale = storageAutoScale;
@@ -77,10 +84,13 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum storage capacity of the standard cluster that is scaled up. Unit: GB.
-         * <p>
+         * <p>The maximum storage capacity of the standard cluster that is scaled up. Unit: GB.</p>
+         * <blockquote>
+         * <p> This parameter is returned when the StorageAutoScale parameter is set to Enable.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned when the StorageAutoScale parameter is set to Enable.
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder storageUpperBound(Long storageUpperBound) {
             this.storageUpperBound = storageUpperBound;

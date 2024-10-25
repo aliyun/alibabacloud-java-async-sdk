@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalDatabaseNetworksRequest} extends {@link RequestModel}
  *
  * <p>DescribeGlobalDatabaseNetworksRequest</p>
@@ -230,10 +231,13 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -242,7 +246,10 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * Specify the region in which you want to query GDNs. You can create secondary clusters for the GDNs.
+         * <p>Specify the region in which you want to query GDNs. You can create secondary clusters for the GDNs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder filterRegion(String filterRegion) {
             this.putQueryParameter("FilterRegion", filterRegion);
@@ -251,13 +258,16 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * The description of the GDN. The description must meet the following requirements:
-         * <p>
+         * <p>The description of the GDN. The description must meet the following requirements:</p>
+         * <ul>
+         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It must start with a letter.</li>
+         * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>It must be 2 to 126 characters in length.</li>
+         * </ul>
          * 
-         * *   It cannot start with `http://` or `https://`.
-         * *   It must start with a letter.
-         * *   It can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   It must be 2 to 126 characters in length.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder GDNDescription(String GDNDescription) {
             this.putQueryParameter("GDNDescription", GDNDescription);
@@ -266,7 +276,10 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * The ID of the GDN.
+         * <p>The ID of the GDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn-****************</p>
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);
@@ -293,7 +306,10 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1. The value must be an integer that is greater than 0.
+         * <p>The page number. Default value: 1. The value must be an integer that is greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -302,12 +318,15 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
          * 
-         * *   30
-         * *   50
-         * *   100
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -316,7 +335,10 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterConnectivityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterConnectivityResponseBody</p>
@@ -85,11 +86,14 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The error code for connection diagnosis. Valid values:
-         * <p>
+         * <p>The error code for connection diagnosis. Valid values:</p>
+         * <ul>
+         * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist.</li>
+         * <li><strong>CONNECTION_ABNORMAL</strong>: The connection to the cluster is normal.</li>
+         * </ul>
          * 
-         * *   **SRC_IP_NOT_IN_USER_WHITELIST**: The source IP address is not added to the whitelist.
-         * *   **CONNECTION_ABNORMAL**: The connection to the cluster is normal.
+         * <strong>example:</strong>
+         * <p>SRC_IP_NOT_IN_USER_WHITELIST</p>
          */
         public Builder connCheckErrorCode(String connCheckErrorCode) {
             this.connCheckErrorCode = connCheckErrorCode;
@@ -97,7 +101,10 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * The error message for connection diagnosis.
+         * <p>The error message for connection diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Src ip:192.<em><strong>.</strong></em>.1 not in user whitelist</p>
          */
         public Builder connCheckErrorMessage(String connCheckErrorMessage) {
             this.connCheckErrorMessage = connCheckErrorMessage;
@@ -105,11 +112,14 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * The connection diagnosis result. Valid values:
-         * <p>
+         * <p>The connection diagnosis result. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
          * 
-         * *   **Success**
-         * *   **Failed**
+         * <strong>example:</strong>
+         * <p>Failed</p>
          */
         public Builder connCheckResult(String connCheckResult) {
             this.connCheckResult = connCheckResult;
@@ -117,7 +127,10 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxxxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -125,7 +138,10 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73A85BAF-1039-4CDE-A83F-1A140F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

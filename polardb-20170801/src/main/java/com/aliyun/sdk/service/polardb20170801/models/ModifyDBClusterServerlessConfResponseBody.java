@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterServerlessConfResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBClusterServerlessConfResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyDBClusterServerlessConfResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the serverless cluster.
+         * <p>The ID of the serverless cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp10gr51qasnl****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -57,7 +61,10 @@ public class ModifyDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E71541A-6007-4DCC-A38A-F872C31FEB45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

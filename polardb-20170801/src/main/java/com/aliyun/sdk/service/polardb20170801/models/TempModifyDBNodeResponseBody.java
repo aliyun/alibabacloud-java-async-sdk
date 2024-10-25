@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TempModifyDBNodeResponseBody} extends {@link TeaModel}
  *
  * <p>TempModifyDBNodeResponseBody</p>
@@ -73,7 +74,10 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxxxxxxxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -81,7 +85,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the nodes.
+         * <p>The details of the nodes.</p>
          */
         public Builder DBNodeIds(java.util.List < String > DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
@@ -89,7 +93,10 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2035638*******</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -97,7 +104,10 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackupPolicyRequest</p>
@@ -278,17 +279,23 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The backup frequency. Default value: Normal. Valid values:
-         * <p>
+         * <p>The backup frequency. Default value: Normal. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: standard backup. The system backs up data once a day.</li>
+         * <li><strong>2/24H</strong>: enhanced backup. The system backs up data every 2 hours.</li>
+         * <li><strong>3/24H</strong>: enhanced backup. The system backs up data every 3 hours.</li>
+         * <li><strong>4/24H</strong>: enhanced backup. The system backs up data every 4 hours.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you enable enhanced backup, all backups are retained for 24 hours. For backup files that are created earlier than the previous 24 hours, the system permanently retains only the first backup that is created after 00:00 every day and deletes the rest.</li>
+         * <li>If you enable enhanced backup, <strong>PreferredBackupPeriod</strong> is automatically set to all days in a week (from Monday to Sunday).</li>
+         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **Normal**: standard backup. The system backs up data once a day.
-         * *   **2/24H**: enhanced backup. The system backs up data every 2 hours.
-         * *   **3/24H**: enhanced backup. The system backs up data every 3 hours.
-         * *   **4/24H**: enhanced backup. The system backs up data every 4 hours.
-         * 
-         * >- If you enable enhanced backup, all backups are retained for 24 hours. For backup files that are created earlier than the previous 24 hours, the system permanently retains only the first backup that is created after 00:00 every day and deletes the rest.
-         * >- If you enable enhanced backup, **PreferredBackupPeriod** is automatically set to all days in a week (from Monday to Sunday).
-         * >- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder backupFrequency(String backupFrequency) {
             this.putQueryParameter("BackupFrequency", backupFrequency);
@@ -297,14 +304,18 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain backups when you delete a cluster. Valid values:
-         * <p>
+         * <p>Specifies whether to retain backups when a cluster is deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL</strong>: permanently retains all backups.</li>
+         * <li><strong>LATEST</strong>: permanently retains the most recent backup.</li>
+         * <li><strong>NONE</strong>: does not retain backups.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value of the parameter is NONE.</p>
+         * </blockquote>
          * 
-         * *   **ALL**: permanently retains all backups.
-         * *   **LATEST**: permanently retains only the last backup.
-         * *   **NONE**: does not retain backups.
-         * 
-         * > The default value is NONE.
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder backupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
             this.putQueryParameter("BackupRetentionPolicyOnClusterDeletion", backupRetentionPolicyOnClusterDeletion);
@@ -313,10 +324,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
+         * <strong>example:</strong>
+         * <p>pc-bp13wz9586voc****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -325,16 +340,22 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The frequency of level-1 backups. Default value: Normal. Valid values:
-         * <p>
+         * <p>The frequency of level-1 backups. Default value: Normal. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: standard backup. The system backs up data once a day.</li>
+         * <li><strong>2/24H</strong>: enhanced backup. The system backs up data every 2 hours.</li>
+         * <li><strong>3/24H</strong>: enhanced backup. The system backs up data every 3 hours.</li>
+         * <li><strong>4/24H</strong>: enhanced backup. The system backs up data every 4 hours.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</li>
+         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **Normal**: standard backup. The system backs up data once a day.
-         * *   **2/24H**: enhanced backup. The system backs up data every 2 hours.
-         * *   **3/24H**: enhanced backup. The system backs up data every 3 hours.
-         * *   **4/24H**: enhanced backup. The system backs up data every 4 hours.
-         * 
-         * >- This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.
-         * >- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder dataLevel1BackupFrequency(String dataLevel1BackupFrequency) {
             this.putQueryParameter("DataLevel1BackupFrequency", dataLevel1BackupFrequency);
@@ -343,20 +364,26 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The backup cycle of level-1 backups. Valid values:
-         * <p>
+         * <p>The backup cycle of level-1 backups. Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You need to specify at least two values. Separate multiple values with commas (,).</li>
+         * <li>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</li>
+         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
-         * 
-         * >- You need to specify at least two values. Separate multiple values with commas (,).
-         * >- This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.
-         * >- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).
+         * <strong>example:</strong>
+         * <p>Monday,Tuesday</p>
          */
         public Builder dataLevel1BackupPeriod(String dataLevel1BackupPeriod) {
             this.putQueryParameter("DataLevel1BackupPeriod", dataLevel1BackupPeriod);
@@ -365,7 +392,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of level-1 backups. Valid values: 3 to 14. Unit: days.
+         * <p>The retention period of level-1 backups. Valid values: 3 to 14. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder dataLevel1BackupRetentionPeriod(String dataLevel1BackupRetentionPeriod) {
             this.putQueryParameter("DataLevel1BackupRetentionPeriod", dataLevel1BackupRetentionPeriod);
@@ -374,10 +404,16 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The time period during which automatic backup for level-1 backup is performed. The time period is in the `hh:mmZ-hh:mmZ` format and is displayed in UTC. The start time and end time are on the hour and have an interval of 1 hour. Example: `14:00Z-15:00Z`.
-         * <p>
-         * >- This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.
-         * >- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).
+         * <p>The time period during which automatic backup for level-1 backup is performed. The time period is in the <code>hh:mmZ-hh:mmZ</code> format and is displayed in UTC. The start time and end time are on the hour and have an interval of 1 hour. Example: <code>14:00Z-15:00Z</code>.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</li>
+         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>15:00Z-16:00Z</p>
          */
         public Builder dataLevel1BackupTime(String dataLevel1BackupTime) {
             this.putQueryParameter("DataLevel1BackupTime", dataLevel1BackupTime);
@@ -386,7 +422,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The region where the cross-region level-2 backup is stored. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+         * <p>The region where the cross-region level-2 backup is stored. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dataLevel2BackupAnotherRegionRegion(String dataLevel2BackupAnotherRegionRegion) {
             this.putQueryParameter("DataLevel2BackupAnotherRegionRegion", dataLevel2BackupAnotherRegionRegion);
@@ -395,14 +434,18 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of cross-region level-2 backups. Valid values:
-         * <p>
+         * <p>The retention period of cross-region level-2 backups. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The cross-region level-2 backup feature is disabled.</li>
+         * <li><strong>30 to 7300</strong>: Cross-region level-2 backups are retained for 30 to 7,300 days.</li>
+         * <li><strong>1</strong>: Cross-region level-2 backups are permanently retained.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value of the parameter is <strong>0</strong>.</p>
+         * </blockquote>
          * 
-         * *   **0**: The cross-region level-2 backup feature is disabled.
-         * *   **30 to 7300**: Cross-region level-2 backups are retained for 30 to 7,300 days.
-         * *   **1**: Cross-region level-2 backups are permanently retained.
-         * 
-         * > The default value is **0**. By default, the cross-region level-2 backup feature is disabled when you create a cluster.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder dataLevel2BackupAnotherRegionRetentionPeriod(String dataLevel2BackupAnotherRegionRetentionPeriod) {
             this.putQueryParameter("DataLevel2BackupAnotherRegionRetentionPeriod", dataLevel2BackupAnotherRegionRetentionPeriod);
@@ -411,20 +454,26 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The backup cycle of level-2 backups. Valid values:
-         * <p>
+         * <p>The backup cycle of level-2 backups. Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You need to specify at least two values. Separate multiple values with commas (,).</li>
+         * <li>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</li>
+         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
-         * 
-         * >- You need to specify at least two values. Separate multiple values with commas (,).
-         * >- This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.
-         * >- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).
+         * <strong>example:</strong>
+         * <p>Monday,Tuesday</p>
          */
         public Builder dataLevel2BackupPeriod(String dataLevel2BackupPeriod) {
             this.putQueryParameter("DataLevel2BackupPeriod", dataLevel2BackupPeriod);
@@ -433,14 +482,18 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of level-2 backups. Valid values:
-         * <p>
+         * <p>The retention period of level-2 backups. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The level-2 backup feature is disabled.</li>
+         * <li><strong>30 to 7300</strong>: Level-2 backups are retained for 30 to 7,300 days.</li>
+         * <li><strong>1</strong>: Level-2 backups are permanently retained.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value of this parameter is <strong>0</strong>.</p>
+         * </blockquote>
          * 
-         * *   **0**: The level-2 backup feature is disabled.
-         * *   **30 to 7300**: Cross-region level-2 backups are retained for 30 to 7,300 days.
-         * *   **1**: Cross-region level-2 backups are permanently retained.
-         * 
-         * > The default value is **0**. By default, the level-2 backup feature is disabled when you create a cluster.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dataLevel2BackupRetentionPeriod(String dataLevel2BackupRetentionPeriod) {
             this.putQueryParameter("DataLevel2BackupRetentionPeriod", dataLevel2BackupRetentionPeriod);
@@ -467,19 +520,25 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The backup cycle. Valid values:
-         * <p>
+         * <p>The backup cycle. Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You need to specify at least two values. Separate multiple values with commas (,).</li>
+         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
-         * 
-         * >- You need to specify at least two values. Separate multiple values with commas (,).
-         * >- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).
+         * <strong>example:</strong>
+         * <p>Monday,Tuesday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -488,7 +547,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The time period during which automatic backup for level-1 backup is performed. The format is `hh:mmZ-hh:mmZ` format. The time is displayed in UTC. The start time and end time are on the hour and with an interval of one hour. Example: `14:00Z-15:00Z`.
+         * <p>The time period during which automatic backup for level-1 backup is performed. The format is <code>hh:mmZ-hh:mmZ</code> format. The time is displayed in UTC. The start time and end time are on the hour and with an interval of one hour. Example: <code>14:00Z-15:00Z</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15:00Z-16:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

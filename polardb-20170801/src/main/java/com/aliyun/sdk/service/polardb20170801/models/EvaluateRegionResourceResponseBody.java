@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EvaluateRegionResourceResponseBody} extends {@link TeaModel}
  *
  * <p>EvaluateRegionResourceResponseBody</p>
@@ -73,11 +74,14 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether sufficient resources are available. Valid values:
-         * <p>
+         * <p>Indicates whether sufficient resources are available. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder DBInstanceAvailable(String DBInstanceAvailable) {
             this.DBInstanceAvailable = DBInstanceAvailable;
@@ -85,12 +89,15 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database engine. Valid values:
-         * <p>
+         * <p>The type of the database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **PostgreSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -98,21 +105,27 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the database engine
-         * <p>
+         * <p>The version of the database engine</p>
+         * <ul>
+         * <li><p>Valid values for the MySQL database engine:</p>
+         * <ul>
+         * <li><strong>5.6</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>8.0</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values for the PostgreSQL database engine:</p>
+         * <ul>
+         * <li><strong>11</strong></li>
+         * <li><strong>14</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid value for the Oracle database engine: <strong>11</strong></p>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values for the MySQL database engine:
-         * 
-         *     *   **5.6**
-         *     *   **5.7**
-         *     *   **8.0**
-         * 
-         * *   Valid values for the PostgreSQL database engine:
-         * 
-         *     *   **11**
-         *     *   **14**
-         * 
-         * *   Valid value for the Oracle database engine: **11**
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -120,7 +133,10 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

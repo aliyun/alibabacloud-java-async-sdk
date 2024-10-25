@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterMonitorRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterMonitorRequest</p>
@@ -125,7 +126,11 @@ public class ModifyDBClusterMonitorRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -152,7 +157,11 @@ public class ModifyDBClusterMonitorRequest extends Request {
         }
 
         /**
-         * The interval at which monitoring data is collected. Valid values: **5** and **60**. Unit: seconds.
+         * <p>The interval at which monitoring data is collected. Valid values: <strong>5</strong> and <strong>60</strong>. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);

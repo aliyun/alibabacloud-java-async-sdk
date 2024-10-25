@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBClusterVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBClusterVersionRequest</p>
@@ -222,7 +223,11 @@ public class UpgradeDBClusterVersionRequest extends Request {
         } 
 
         /**
-         * The ID of cluster.
+         * <p>The ID of cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -231,13 +236,17 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to immediately run the kernel upgrade task. Valid values:
-         * <p>
+         * <p>Specifies whether to immediately run the kernel upgrade task. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is not required when you call the operation.</p>
+         * </blockquote>
          * 
-         * *   **false** (default)
-         * *   **true**
-         * 
-         * >  This parameter is not required when you call the operation.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -264,11 +273,16 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * The latest start time to run the task that updates the kernel version of the cluster. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * <p>The latest start time to run the task that updates the kernel version of the cluster. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</li>
+         * <li>If you specify <code>PlannedStartTime</code> but do not specify PlannedEndTime, the latest start time of the task is <code>PlannedEndTime + 30 minutes</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and do not specify PlannedEndTime, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
-         * >*   If you specify `PlannedStartTime` but do not specify PlannedEndTime, the latest start time of the task is `PlannedEndTime + 30 minutes`. For example, if you set `PlannedStartTime` to `2021-01-14T09:00:00Z` and do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:30:00Z</p>
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -277,11 +291,16 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * The earliest start time to run the task that updates the kernel version of the cluster. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * <p>The earliest start time to run the task that updates the kernel version of the cluster. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in time between <code>2021-01-14T09:00:00Z</code> and <code>2021-01-15T09:00:00Z</code>.</li>
+         * <li>If you do not specify this parameter, the kernel update task runs immediately after you submit the request.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.
-         * >*   If you do not specify this parameter, the kernel update task runs immediately after you submit the request.
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:00:00Z</p>
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -308,7 +327,10 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * The code of the db version to which you want to upgrade the cluster. You can call the [DescribeDBClusterVersion](~~2319145~~) operation to query the version code.
+         * <p>The code of the db version to which you want to upgrade the cluster. You can call the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation to query the version code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230707</p>
          */
         public Builder targetDBRevisionVersionCode(String targetDBRevisionVersionCode) {
             this.putQueryParameter("TargetDBRevisionVersionCode", targetDBRevisionVersionCode);
@@ -317,7 +339,10 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * The code of the proxy version to which you want to upgrade the cluster. You can call the [DescribeDBClusterVersion](~~2319145~~) operation to query the version code.
+         * <p>The code of the proxy version to which you want to upgrade the cluster. You can call the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation to query the version code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20240702</p>
          */
         public Builder targetProxyRevisionVersionCode(String targetProxyRevisionVersionCode) {
             this.putQueryParameter("TargetProxyRevisionVersionCode", targetProxyRevisionVersionCode);
@@ -326,11 +351,16 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * The upgrade tag. The value is fixed as **INNOVATE**.
-         * <p>
+         * <p>The upgrade tag. The value is fixed as <strong>INNOVATE</strong>.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is applicable only when you upgrade PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.</li>
+         * <li>If you specify this parameter, you must set <code>UpgradePolicy</code> to <strong>COLD</strong>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   This parameter is applicable only when you upgrade PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.
-         * >*   If you specify this parameter, you must set `UpgradePolicy` to **COLD**.
+         * <strong>example:</strong>
+         * <p>INNOVATE</p>
          */
         public Builder upgradeLabel(String upgradeLabel) {
             this.putQueryParameter("UpgradeLabel", upgradeLabel);
@@ -339,11 +369,14 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * The engine version upgrade policy. Valid values:
-         * <p>
+         * <p>The engine version upgrade policy. Valid values:</p>
+         * <ul>
+         * <li><strong>HOT</strong>: hot upgrade.</li>
+         * <li><strong>COLD</strong>: cold upgrade. Only PolarDB for MySQL 8.0 Cluster Edition supports this upgrade method.</li>
+         * </ul>
          * 
-         * *   **HOT**: hot upgrade.
-         * *   **COLD**: cold upgrade. Only PolarDB for MySQL 8.0 Cluster Edition supports this upgrade method.
+         * <strong>example:</strong>
+         * <p>HOT</p>
          */
         public Builder upgradePolicy(String upgradePolicy) {
             this.putQueryParameter("UpgradePolicy", upgradePolicy);
@@ -352,12 +385,15 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * The update type. Valid values:
-         * <p>
+         * <p>The update type. Valid values:</p>
+         * <ul>
+         * <li><strong>PROXY</strong>: specifies to upgrade PloarProxy.</li>
+         * <li><strong>DB</strong>: specifies to upgrade the kernel version.</li>
+         * <li><strong>ALL</strong>: specifies to upgrade both PloarProxy and kernel version.</li>
+         * </ul>
          * 
-         * *   **PROXY**: specifies to upgrade PloarProxy.
-         * *   **DB**: specifies to upgrade the kernel version.
-         * *   **ALL**: specifies to upgrade both PloarProxy and kernel version.
+         * <strong>example:</strong>
+         * <p>PROXY</p>
          */
         public Builder upgradeType(String upgradeType) {
             this.putQueryParameter("UpgradeType", upgradeType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBNodesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDBNodesResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -81,7 +85,7 @@ public class CreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the nodes.
+         * <p>Details about the nodes.</p>
          */
         public Builder DBNodeIds(DBNodeIds DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
@@ -89,7 +93,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2148126708*****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -97,7 +104,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E053E730-5755-4AA9-AA9D-A47867******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class CreateDBNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDBNodesResponseBody</p>
+     */
     public static class DBNodeIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private java.util.List < String > DBNodeId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetGlobalDatabaseNetworkRequest} extends {@link RequestModel}
  *
  * <p>ResetGlobalDatabaseNetworkRequest</p>
@@ -153,10 +154,14 @@ public class ResetGlobalDatabaseNetworkRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster in the GDN.
-         * <p>
+         * <p>The ID of the cluster in the GDN.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to view the ID of the cluster in the GDN.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeGlobalDatabaseNetwork](~~264580~~) operation to view the ID of the cluster in the GDN.
+         * <strong>example:</strong>
+         * <p>pc-wz9fb5nn44u1d****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -165,7 +170,11 @@ public class ResetGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the GDN.
+         * <p>The ID of the GDN.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn-bp1fttxsrmv*****</p>
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);
@@ -192,7 +201,10 @@ public class ResetGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

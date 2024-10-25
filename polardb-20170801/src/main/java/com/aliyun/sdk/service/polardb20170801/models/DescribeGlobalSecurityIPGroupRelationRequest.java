@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalSecurityIPGroupRelationRequest} extends {@link RequestModel}
  *
  * <p>DescribeGlobalSecurityIPGroupRelationRequest</p>
@@ -153,7 +154,11 @@ public class DescribeGlobalSecurityIPGroupRelationRequest extends Request {
         } 
 
         /**
-         * The ID of cluster.
+         * <p>The ID of cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -180,7 +185,11 @@ public class DescribeGlobalSecurityIPGroupRelationRequest extends Request {
         }
 
         /**
-         * The region ID of the IP whitelist template.
+         * <p>The region ID of the IP whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -189,7 +198,10 @@ public class DescribeGlobalSecurityIPGroupRelationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-**********</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

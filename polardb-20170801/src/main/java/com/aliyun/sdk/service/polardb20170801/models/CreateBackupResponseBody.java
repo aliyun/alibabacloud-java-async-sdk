@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBackupResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the backup set.
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111</p>
          */
         public Builder backupJobId(String backupJobId) {
             this.backupJobId = backupJobId;
@@ -57,7 +61,10 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3322AFE-083E-4D77-A074-421301******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

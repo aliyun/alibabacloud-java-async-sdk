@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupLogsRequest</p>
@@ -184,7 +185,10 @@ public class DescribeBackupLogsRequest extends Request {
         } 
 
         /**
-         * The region for the backup data.
+         * <p>The region for the backup data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder backupRegion(String backupRegion) {
             this.putQueryParameter("BackupRegion", backupRegion);
@@ -193,7 +197,11 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -202,7 +210,11 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-12T15:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -229,7 +241,10 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. The value must be an integer that is larger than 0. Default value: **1**.
+         * <p>The page number of the page to return. The value must be an integer that is larger than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -238,14 +253,16 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,7 +289,11 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-01T15:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

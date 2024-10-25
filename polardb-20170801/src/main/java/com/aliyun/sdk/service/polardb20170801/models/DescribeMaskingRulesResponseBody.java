@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMaskingRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMaskingRulesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1s826a1up******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -93,7 +97,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The result data that is returned.
+         * <p>The result data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned for the request.
-         * <p>
+         * <p>The message that is returned for the request.</p>
+         * <blockquote>
+         * <p>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * > If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F83D131-1C18-4599-889D-729A9D******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid value:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMaskingRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMaskingRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < String > ruleList;
@@ -176,7 +195,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             private String ruleVersion; 
 
             /**
-             * Details about the masking rules.
+             * <p>Details about the masking rules.</p>
              */
             public Builder ruleList(java.util.List < String > ruleList) {
                 this.ruleList = ruleList;
@@ -184,7 +203,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the masking rule. Valid values: v1 and v2. Default value: v1
+             * <p>The version of the masking rule. Valid values: v1 and v2. Default value: v1</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder ruleVersion(String ruleVersion) {
                 this.ruleVersion = ruleVersion;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetaListRequest} extends {@link RequestModel}
  *
  * <p>DescribeMetaListRequest</p>
@@ -232,11 +233,16 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The ID of the data backup file.
-         * <p>
+         * <p>The ID of the data backup file.</p>
+         * <blockquote>
+         * <ul>
+         * <li>When you run a query, you must specify the <code>BackId</code> or <code>RestoreTime</code> parameter.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the ID of the backup set.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * >*   When you run a query, you must specify the `BackId` or `RestoreTime` parameter.
-         * >*   You can call the [DescribeBackups](~~98102~~) operation to query the ID of the backup set.
+         * <strong>example:</strong>
+         * <p>111111</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -245,10 +251,14 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all clusters under your account.
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -257,11 +267,16 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * Specify the specific database name (such as `test_db`) to query the names of all data tables that can be restored in the desired database.
-         * <p>
+         * <p>Specify the specific database name (such as <code>test_db</code>) to query the names of all data tables that can be restored in the desired database.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can specify only one database name each time.</li>
+         * <li>If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * >*   You can specify only one database name each time.
-         * >*   If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder getDbName(String getDbName) {
             this.putQueryParameter("GetDbName", getDbName);
@@ -288,7 +303,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -297,16 +315,19 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * <p>Default value: <strong>30</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **30**
-         * 
-         * *   **50**
-         * 
-         * *   **100**
-         * 
-         *     Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -315,7 +336,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides. You can call the [DescribeDBClusterAttribute](~~2319132~~) operation to query the region ID of the instance.
+         * <p>The ID of the region in which the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/2319132.html">DescribeDBClusterAttribute</a> operation to query the region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
@@ -342,10 +366,13 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The point in time for the restoration. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.
-         * <p>
+         * <p>The point in time for the restoration. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> When you run a query, you must specify the <code>BackId</code> or <code>RestoreTime</code> parameter. You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the point in time for the restoration.</p>
+         * </blockquote>
          * 
-         * >  When you run a query, you must specify the `BackId` or `RestoreTime` parameter. You can call the [DescribeBackups](~~98102~~) operation to query the point in time for the restoration.
+         * <strong>example:</strong>
+         * <p>2020-10-04T01:40:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);

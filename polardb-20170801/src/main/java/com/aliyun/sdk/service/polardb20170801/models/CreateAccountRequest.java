@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountRequest</p>
@@ -226,11 +227,14 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * The description of the account. The description must meet the following requirements:
-         * <p>
+         * <p>The description of the account. The description must meet the following requirements:</p>
+         * <ul>
+         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It must be 2 to 256 characters in length.</li>
+         * </ul>
          * 
-         * *   It cannot start with `http://` or `https://`.
-         * *   It must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>testdes</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -239,13 +243,17 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the account. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the account. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>It must start with a lowercase letter and end with a letter or a digit.</li>
+         * <li>It can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>It must be 2 to 16 characters in length.</li>
+         * <li>It cannot be root, admin, or another username that is reserved by the system.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   It must start with a lowercase letter and end with a letter or a digit.
-         * *   It can contain lowercase letters, digits, and underscores (\_).
-         * *   It must be 2 to 16 characters in length.
-         * *   It cannot be root, admin, or another username that is reserved by the system.
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -254,12 +262,16 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The password of the account. The password must meet the following requirements:
-         * <p>
+         * <p>The password of the account. The password must meet the following requirements:</p>
+         * <ul>
+         * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>It must be 8 to 32 characters in length.</li>
+         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   It must be 8 to 32 characters in length.
-         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * <strong>example:</strong>
+         * <p>Test1111</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -268,21 +280,27 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The permissions that are granted to the account. Valid values:
-         * <p>
+         * <p>The permissions that are granted to the account. Valid values:</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong>: read and write permissions.</li>
+         * <li><strong>ReadOnly</strong>: read-only permissions.</li>
+         * <li><strong>DMLOnly</strong>: the permissions to execute only DML statements.</li>
+         * <li><strong>DDLOnly</strong>: the permissions to execute only DDL statements.</li>
+         * <li><strong>ReadIndex</strong>: the read-only and index permissions.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p><code>AccountPrivilege</code> is valid only after you specify <code>DBName</code>.</p>
+         * </li>
+         * <li><p>If multiple database names are specified by the <code>DBName</code> parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,), and make sure that the length of the value of <code>AccountPrivilege</code> does not exceed 900. For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set <code>DBName</code> to <code>DB1,DB2</code> and set <code>AccountPrivilege</code> to <code>ReadWrite,ReadOnly</code>.</p>
+         * </li>
+         * <li><p>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **ReadWrite**: read and write permissions
-         * *   **ReadOnly**: read-only permissions
-         * *   **DMLOnly**: the permissions to execute only DML statements
-         * *   **DDLOnly**: the permissions to execute only DDL statements
-         * *   **ReadIndex**: the read and index permissions
-         * 
-         * > 
-         * 
-         * *   The `AccountPrivilege` parameter is valid only after you specify the `DBName` parameter.
-         * 
-         * *   If multiple database names are specified by the `DBName` parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,). For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set `DBName` to `DB1,DB2`, and set `AccountPrivilege` to `ReadWrite,ReadOnly`.
-         * *   This parameter is valid only for standard accounts of PolarDB for MySQL clusters.
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -291,18 +309,24 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The type of the account. Valid values:
-         * <p>
+         * <p>The type of the account. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: standard account</li>
+         * <li><strong>Super</strong>: privileged account</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you leave this parameter empty, the default value <strong>Super</strong> is used.</p>
+         * </li>
+         * <li><p>You can create multiple privileged accounts for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
+         * </li>
+         * <li><p>You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **Normal**: standard account
-         * *   **Super**: privileged account
-         * 
-         * > 
-         * 
-         * *   If you leave this parameter empty, the default value **Super** is used.
-         * 
-         * *   You can create multiple privileged accounts for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see [Create a database account](~~68508~~).
-         * *   You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see [Create a database account](~~68508~~).
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -311,7 +335,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -320,7 +347,11 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The ID of cluster.
+         * <p>The ID of cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -329,10 +360,13 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the database that can be accessed by the account. To enter multiple database names, separate the names with commas (,).
-         * <p>
+         * <p>The name of the database that can be accessed by the account. To enter multiple database names, separate the names with commas (,).</p>
+         * <blockquote>
+         * <p> This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only for standard accounts of PolarDB for MySQL clusters.
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -359,7 +393,14 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * PrivForAllDB.
+         * <p>Specifies whether to grant the specified account required permissions on all existing databases in the current cluster and databases that will be further created for the current cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>0 or unspecified</strong>: does not grant required permissions.</li>
+         * <li><strong>1</strong>: grants required permissions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder privForAllDB(String privForAllDB) {
             this.putQueryParameter("PrivForAllDB", privForAllDB);

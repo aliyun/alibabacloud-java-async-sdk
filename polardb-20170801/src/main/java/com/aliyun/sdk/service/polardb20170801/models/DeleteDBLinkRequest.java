@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBLinkRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBLinkRequest</p>
@@ -125,10 +126,14 @@ public class DeleteDBLinkRequest extends Request {
         } 
 
         /**
-         * The ID of the source cluster where a database link is to be deleted.
-         * <p>
+         * <p>The ID of the source cluster where a database link is to be deleted.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query PolarDB clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -137,7 +142,11 @@ public class DeleteDBLinkRequest extends Request {
         }
 
         /**
-         * The name of the database link to be deleted.
+         * <p>The name of the database link to be deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dblink_test</p>
          */
         public Builder DBLinkName(String DBLinkName) {
             this.putQueryParameter("DBLinkName", DBLinkName);

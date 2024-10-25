@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInitializeVariableResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInitializeVariableResponseBody</p>
@@ -73,12 +74,15 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         private Variables variables; 
 
         /**
-         * The database type. Valid values:
-         * <p>
+         * <p>The database type. Valid values:</p>
+         * <ul>
+         * <li>Oracle</li>
+         * <li>PostgreSQL</li>
+         * <li>MySQL</li>
+         * </ul>
          * 
-         * *   Oracle
-         * *   PostgreSQL
-         * *   MySQL
+         * <strong>example:</strong>
+         * <p>PostgreSQL</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -86,7 +90,10 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the database engine.
+         * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -94,7 +101,10 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>475F58B7-F394-4394-AA6E-4F1CBA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +112,7 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         }
 
         /**
-         * The attributes that are returned.
+         * <p>The attributes that are returned.</p>
          */
         public Builder variables(Variables variables) {
             this.variables = variables;
@@ -115,6 +125,12 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInitializeVariableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInitializeVariableResponseBody</p>
+     */
     public static class Variable extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
@@ -166,7 +182,10 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
             private String ctype; 
 
             /**
-             * The character set that is supported.
+             * <p>The character set that is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EUC_CN</p>
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -174,14 +193,18 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
             }
 
             /**
-             * The language that indicates the collation of the databases that are created.
-             * <p>
+             * <p>The language that indicates the collation of the databases that are created.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</li>
+             * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</li>
+             * <li>This parameter is optional for PolarDB for MySQL clusters.</li>
+             * </ul>
+             * </blockquote>
+             * <p>To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Then, click <strong>Create Database</strong>.</p>
              * 
-             * >- The language must be compatible with the character set that is specified by **CharacterSetName**.
-             * >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.
-             * >- This parameter is optional for PolarDB for MySQL clusters.
-             * 
-             * To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.
+             * <strong>example:</strong>
+             * <p>C</p>
              */
             public Builder collate(String collate) {
                 this.collate = collate;
@@ -189,18 +212,21 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
             }
 
             /**
-             * The language that indicates the character type of the database.
-             * <p>
+             * <p>The language that indicates the character type of the database.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</p>
+             * </li>
+             * <li><p>The specified parameter value must be the same as the value of <strong>Collate</strong>.</p>
+             * </li>
+             * <li><p>If the PolarDB cluster runs PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL, this parameter is required. If the cluster runs PolarDB for MySQL, this parameter is not supported.</p>
+             * </li>
+             * </ul>
+             * <p>To view the valid values of this parameter, perform the following steps: First, log on to the PolarDB console and click the ID of a cluster. Then, in the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Finally, click <strong>Create Database</strong>.</p>
              * 
-             * > 
-             * 
-             * *   The language must be compatible with the character set that is specified by **CharacterSetName**.
-             * 
-             * *   The specified parameter value must be the same as the value of **Collate**.
-             * 
-             * *   If the PolarDB cluster runs PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL, this parameter is required. If the cluster runs PolarDB for MySQL, this parameter is not supported.
-             * 
-             * To view the valid values of this parameter, perform the following steps: First, log on to the PolarDB console and click the ID of a cluster. Then, in the left-side navigation pane, choose **Settings and Management** > **Databases**. Finally, click **Create Database**.
+             * <strong>example:</strong>
+             * <p>C</p>
              */
             public Builder ctype(String ctype) {
                 this.ctype = ctype;
@@ -214,6 +240,12 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInitializeVariableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInitializeVariableResponseBody</p>
+     */
     public static class Variables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Variable")
         private java.util.List < Variable> variable;

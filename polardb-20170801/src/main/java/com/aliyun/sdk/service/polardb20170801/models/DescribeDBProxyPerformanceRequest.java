@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBProxyPerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBProxyPerformanceRequest</p>
@@ -155,7 +156,11 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         } 
 
         /**
-         * The ID of cluster.
+         * <p>The ID of cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +169,10 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint.
+         * <p>The ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pe-****************</p>
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
@@ -173,7 +181,13 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * DBNodeId.
+         * <p>Database instance node ID.</p>
+         * <blockquote>
+         * <p>It is used to query the metrics of Proxy on different DB nodes, supporting metrics such as PolarProxy_DBConns, PolarProxy_DBQps, and PolarProxy_DBActionOps.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-******************</p>
          */
         public Builder DBNodeId(String DBNodeId) {
             this.putQueryParameter("DBNodeId", DBNodeId);
@@ -182,7 +196,11 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-24T02:08Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -191,7 +209,10 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400, in seconds.
+         * <p>The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -200,7 +221,11 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The performance metrics that you want to query. Separate multiple indicators with commas (,). For more information, see [Performance parameters](~~141787~~).
+         * <p>The performance metrics that you want to query. Separate multiple indicators with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/141787.html">Performance parameters</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PolarProxy_CpuUsage</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -209,7 +234,11 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:01Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -218,7 +247,10 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * Special metric. Set the value to tair, which indicates the PolarTair architecture.
+         * <p>Special metric. Set the value to tair, which indicates the PolarTair architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tair</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

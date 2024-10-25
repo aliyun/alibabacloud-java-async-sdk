@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePendingMaintenanceActionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePendingMaintenanceActionsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         private java.util.List < TypeList> typeList; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>314127C2-B6C1-4F58-B1F6-E6B645******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of pending events.
+         * <p>The details of pending events.</p>
          */
         public Builder typeList(java.util.List < TypeList> typeList) {
             this.typeList = typeList;
@@ -70,6 +74,12 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePendingMaintenanceActionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePendingMaintenanceActionsResponseBody</p>
+     */
     public static class TypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -109,7 +119,10 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The number of pending events.
+             * <p>The number of pending events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,13 +130,16 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The task type of pending events. Valid values:
-             * <p>
+             * <p>The task type of pending events. Valid values:</p>
+             * <ul>
+             * <li><strong>DatabaseSoftwareUpgrading</strong>: database software upgrades</li>
+             * <li><strong>DatabaseHardwareMaintenance</strong>: hardware maintenance and upgrades</li>
+             * <li><strong>DatabaseStorageUpgrading</strong>: database storage upgrades</li>
+             * <li><strong>DatabaseProxyUpgrading</strong>: minor version upgrades of the proxy</li>
+             * </ul>
              * 
-             * *   **DatabaseSoftwareUpgrading**: database software upgrades
-             * *   **DatabaseHardwareMaintenance**: hardware maintenance and upgrades
-             * *   **DatabaseStorageUpgrading**: database storage upgrades
-             * *   **DatabaseProxyUpgrading**: minor version upgrades of the proxy
+             * <strong>example:</strong>
+             * <p>DatabaseSoftwareUpgrading</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

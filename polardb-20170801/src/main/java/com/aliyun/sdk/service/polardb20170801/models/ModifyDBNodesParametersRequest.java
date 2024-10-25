@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBNodesParametersRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBNodesParametersRequest</p>
@@ -195,7 +196,11 @@ public class ModifyDBNodesParametersRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -204,7 +209,11 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
+         * <p>The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-<strong><strong><strong><strong><strong><strong><strong><strong>， pi-</strong></strong></strong></strong></strong></strong></strong></strong></p>
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);
@@ -213,7 +222,10 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * Specifies whether to immediately run the task to modify parameters and restart the cluster. Valid values: false: runs the task on schedule. true: runs the task immediately. Default value: false.
+         * <p>Specifies whether to immediately run the task to modify parameters and restart the cluster. Valid values: false: runs the task on schedule. true: runs the task immediately. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -240,7 +252,10 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * The ID of the parameter template that is used for the cluster.
+         * <p>The ID of the parameter template that is used for the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcpg-**************</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -249,7 +264,10 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * The JSON string that specifies the parameter and its value.
+         * <p>The JSON string that specifies the parameter and its value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -258,7 +276,10 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * The latest start time to run the task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * <p>The latest start time to run the task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-28T14:30:00Z</p>
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -267,7 +288,10 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * The earliest start time to run the task to upgrade the kernel version of the cluster. The task runs within a specified period of time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * <p>The earliest start time to run the task to upgrade the kernel version of the cluster. The task runs within a specified period of time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-28T14:00:00Z</p>
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMaskingRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMaskingRulesResponseBody</p>
@@ -61,10 +62,13 @@ public class DeleteMaskingRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The message that is returned for the request.
-         * <p>
+         * <p>The message that is returned for the request.</p>
+         * <blockquote>
+         * <p>If the request is successful, <code>Successful</code> is returned. If the request fails, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * > If the request is successful, `Successful` is returned. If the request fails, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -72,7 +76,10 @@ public class DeleteMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BCEE25B-797C-426B-BA7B-D28CCF******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,11 +87,14 @@ public class DeleteMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid value:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

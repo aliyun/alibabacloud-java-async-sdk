@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeAccountPrivilegeRequest} extends {@link RequestModel}
  *
  * <p>RevokeAccountPrivilegeRequest</p>
@@ -140,10 +141,14 @@ public class RevokeAccountPrivilegeRequest extends Request {
         } 
 
         /**
-         * The name of the account.
-         * <p>
+         * <p>The name of the account.</p>
+         * <blockquote>
+         * <p> You can specify only a standard account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can specify only a standard account.
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -152,7 +157,11 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB cluster.
+         * <p>The ID of the PolarDB cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -161,7 +170,11 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The names of the databases. If you need to specify multiple database names, separate the names with commas (,).
+         * <p>The names of the databases. If you need to specify multiple database names, separate the names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

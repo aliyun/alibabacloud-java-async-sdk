@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshDBClusterStorageUsageRequest} extends {@link RequestModel}
  *
  * <p>RefreshDBClusterStorageUsageRequest</p>
@@ -145,11 +146,14 @@ public class RefreshDBClusterStorageUsageRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable real-time synchronization. Valid values:
-         * <p>
+         * <p>Specifies whether to enable real-time synchronization. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: T + 1</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**: T + 1
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder syncRealTime(Boolean syncRealTime) {
             this.putQueryParameter("SyncRealTime", syncRealTime);

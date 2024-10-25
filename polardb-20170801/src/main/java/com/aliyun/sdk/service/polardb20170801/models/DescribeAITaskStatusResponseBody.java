@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAITaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAITaskStatusResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         private String statusName; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -81,7 +85,10 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,11 +96,14 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the PolarDB for AI feature. Valid values:
-         * <p>
+         * <p>The state of the PolarDB for AI feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The feature is enabled.</li>
+         * <li><strong>2</strong>: The feature is disabled.</li>
+         * </ul>
          * 
-         * *   **1**: The feature is enabled.
-         * *   **2**: The feature is disabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -101,7 +111,10 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The state description of the PolarDB for AI feature.
+         * <p>The state description of the PolarDB for AI feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Closed State</p>
          */
         public Builder statusName(String statusName) {
             this.statusName = statusName;

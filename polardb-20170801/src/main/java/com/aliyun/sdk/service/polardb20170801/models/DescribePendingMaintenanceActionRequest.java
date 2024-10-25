@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePendingMaintenanceActionRequest} extends {@link RequestModel}
  *
  * <p>DescribePendingMaintenanceActionRequest</p>
@@ -220,13 +221,15 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the historical tasks. Valid values:
-         * <p>
+         * <p>Specifies whether to return the historical tasks. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: returns the current task.</li>
+         * <li><strong>1</strong>: returns the historical tasks.</li>
+         * </ul>
+         * <p>Default value: <strong>0</strong>.</p>
          * 
-         * *   **0**: returns the current task.
-         * *   **1**: returns the historical tasks.
-         * 
-         * Default value: **0**.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -253,7 +256,10 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The page number. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
+         * <p>The page number. The value of this parameter must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -262,10 +268,11 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **30**, **50**, or **100**.
-         * <p>
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, or <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,10 +281,17 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The region ID of the pending event. You can call the [DescribeRegions](~~98041~~) operation to query the regions and zones that are supported by PolarDB.
-         * <p>
-         * >- You can set this parameter to **all** to view all pending events within your account.
-         * >- If you set `Region` to **all**, you must set `TaskType` to **all**.
+         * <p>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions and zones that are supported by PolarDB.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can set this parameter to <strong>all</strong> to view all pending events within your account.</li>
+         * <li>If you set <code>Region</code> to <strong>all</strong>, you must set <code>TaskType</code> to <strong>all</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -286,7 +300,10 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -322,16 +339,21 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The task type of pending events. Valid values:
-         * <p>
+         * <p>The task type of pending events. Valid values:</p>
+         * <ul>
+         * <li><strong>DatabaseSoftwareUpgrading</strong>: database software upgrades</li>
+         * <li><strong>DatabaseHardwareMaintenance</strong>: hardware maintenance and upgrades</li>
+         * <li><strong>DatabaseStorageUpgrading</strong>: database storage upgrades</li>
+         * <li><strong>DatabaseProxyUpgrading</strong>: minor version upgrades of the proxy</li>
+         * <li><strong>all</strong>: queries the details of the pending events of all preceding types.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If the <code>Region</code> parameter is set to <strong>all</strong>, the <code>TaskType</code> parameter must be set to <strong>all</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **DatabaseSoftwareUpgrading**: database software upgrades
-         * *   **DatabaseHardwareMaintenance**: hardware maintenance and upgrades
-         * *   **DatabaseStorageUpgrading**: database storage upgrades
-         * *   **DatabaseProxyUpgrading**: minor version upgrades of the proxy
-         * *   **all**: queries the details of the pending events of all preceding types.
-         * 
-         * > If the `Region` parameter is set to **all**, the `TaskType` parameter must be set to **all**.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

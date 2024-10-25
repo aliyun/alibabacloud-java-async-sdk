@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupTasksRequest</p>
@@ -138,7 +139,10 @@ public class DescribeBackupTasksRequest extends Request {
         } 
 
         /**
-         * The ID of the backup task.
+         * <p>The ID of the backup task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111</p>
          */
         public Builder backupJobId(String backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -147,11 +151,14 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The backup mode. Valid values:
-         * <p>
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong></li>
+         * <li><strong>Manual</strong></li>
+         * </ul>
          * 
-         * *   **Automated**
-         * *   **Manual**
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -160,7 +167,11 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

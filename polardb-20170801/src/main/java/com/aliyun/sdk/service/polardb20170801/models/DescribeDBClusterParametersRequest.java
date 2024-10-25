@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterParametersRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterParametersRequest</p>
@@ -124,7 +125,11 @@ public class DescribeDBClusterParametersRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**********</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -133,11 +138,14 @@ public class DescribeDBClusterParametersRequest extends Request {
         }
 
         /**
-         * The type of the parameter information to query. Valid values:
-         * <p>
+         * <p>The type of the parameter information to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: the information about the cluster parameters</li>
+         * <li><strong>MigrationFromRDS</strong>: a comparison of parameters between the source RDS instance and the destination PolarDB cluster</li>
+         * </ul>
          * 
-         * *   **Normal**: the information about the cluster parameters
-         * *   **MigrationFromRDS**: a comparison of parameters between the source RDS instance and the destination PolarDB cluster
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);

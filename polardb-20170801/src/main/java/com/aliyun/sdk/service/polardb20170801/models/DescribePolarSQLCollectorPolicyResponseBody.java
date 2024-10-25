@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolarSQLCollectorPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePolarSQLCollectorPolicyResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         private String SQLCollectorStatus; 
 
         /**
-         * The IDs of the clusters.
+         * <p>The IDs of the clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1s826a1up******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -69,7 +73,10 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3655211B-4D74-4E13-91E6-FF2AFE******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +84,14 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the SQL Explorer feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the SQL Explorer feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
          * 
-         * *   **Enable**
-         * *   **Disabled**
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder SQLCollectorStatus(String SQLCollectorStatus) {
             this.SQLCollectorStatus = SQLCollectorStatus;

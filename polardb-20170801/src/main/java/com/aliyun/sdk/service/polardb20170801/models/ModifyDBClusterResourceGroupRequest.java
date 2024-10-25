@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterResourceGroupRequest</p>
@@ -139,7 +140,11 @@ public class ModifyDBClusterResourceGroupRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -148,7 +153,11 @@ public class ModifyDBClusterResourceGroupRequest extends Request {
         }
 
         /**
-         * NewResourceGroupId.
+         * <p>The ID of the new resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-**********</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -175,7 +184,10 @@ public class ModifyDBClusterResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the original resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-**********</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

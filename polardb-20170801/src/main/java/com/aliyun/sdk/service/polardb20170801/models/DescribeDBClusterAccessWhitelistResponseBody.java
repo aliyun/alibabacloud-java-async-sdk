@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterAccessWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterAccessWhitelistResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Elastic Compute Service (ECS) security groups that are associated with the cluster.
+         * <p>The Elastic Compute Service (ECS) security groups that are associated with the cluster.</p>
          */
         public Builder DBClusterSecurityGroups(DBClusterSecurityGroups DBClusterSecurityGroups) {
             this.DBClusterSecurityGroups = DBClusterSecurityGroups;
@@ -69,7 +70,7 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the cluster.
+         * <p>The details about the cluster.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -77,7 +78,10 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>559E91A2-CDA3-4E9F-808B-29D738******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhitelistResponseBody</p>
+     */
     public static class DBClusterSecurityGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -129,7 +139,10 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             private String securityGroupName; 
 
             /**
-             * The ID of the ECS security group.
+             * <p>The ID of the ECS security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp**************</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -137,7 +150,10 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS security group.
+             * <p>The name of the ECS security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-********************</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -151,6 +167,12 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhitelistResponseBody</p>
+     */
     public static class DBClusterSecurityGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterSecurityGroup")
         private java.util.List < DBClusterSecurityGroup> DBClusterSecurityGroup;
@@ -192,6 +214,12 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhitelistResponseBody</p>
+     */
     public static class DBClusterIPArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayAttribute")
         private String DBClusterIPArrayAttribute;
@@ -243,11 +271,16 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             private String securityIps; 
 
             /**
-             * The attributes of the IP whitelist group. Set this parameter to **hidden** to hide the IP whitelist group in the console.
-             * <p>
+             * <p>The attributes of the IP whitelist group. Set this parameter to <strong>hidden</strong> to hide the IP whitelist group in the console.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The IP whitelist group that has appeared in the console cannot be hidden.</li>
+             * <li>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > *   The IP whitelist group that has appeared in the console cannot be hidden.
-             * > *   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -255,15 +288,21 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.
-             * <p>
+             * <p>The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.</p>
+             * <ul>
+             * <li>If the specified whitelist group name does not exist, the whitelist group is created.</li>
+             * <li>If the specified whitelist group name exists, the whitelist group is modified.</li>
+             * <li>If you do not specify this parameter, the default group is modified.</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>You can create a maximum of 50 IP whitelist groups for a cluster.</li>
+             * <li>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * *   If the specified whitelist group name does not exist, the whitelist group is created.
-             * *   If the specified whitelist group name exists, the whitelist group is modified.
-             * *   If you do not specify this parameter, the default group is modified.
-             * 
-             * > *   You can create a maximum of 50 IP whitelist groups for a cluster.
-             * >*   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -271,13 +310,17 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:
-             * <p>
+             * <p>The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:</p>
+             * <ul>
+             * <li>IP addresses. Example: 10.23.12.24.</li>
+             * <li>CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
+             * </blockquote>
              * 
-             * *   IP addresses. Example: 10.23.12.24.
-             * *   CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.
-             * 
-             * >  This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
+             * <strong>example:</strong>
+             * <p>11.<em><strong>.</strong></em>.<em><strong>,11.</strong></em>.<em><strong>.</strong></em></p>
              */
             public Builder securityIps(String securityIps) {
                 this.securityIps = securityIps;
@@ -291,6 +334,12 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhitelistResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterIPArray")
         private java.util.List < DBClusterIPArray> DBClusterIPArray;

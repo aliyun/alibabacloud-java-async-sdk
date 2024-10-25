@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterRequest</p>
@@ -35,6 +36,10 @@ public class ModifyDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FaultSimulateMode")
     private String faultSimulateMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImciAutoIndex")
+    private String imciAutoIndex;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -73,6 +78,7 @@ public class ModifyDBClusterRequest extends Request {
         this.dataSyncMode = builder.dataSyncMode;
         this.faultInjectionType = builder.faultInjectionType;
         this.faultSimulateMode = builder.faultSimulateMode;
+        this.imciAutoIndex = builder.imciAutoIndex;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -138,6 +144,13 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
+     * @return imciAutoIndex
+     */
+    public String getImciAutoIndex() {
+        return this.imciAutoIndex;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -193,6 +206,7 @@ public class ModifyDBClusterRequest extends Request {
         private String dataSyncMode; 
         private String faultInjectionType; 
         private String faultSimulateMode; 
+        private String imciAutoIndex; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -213,6 +227,7 @@ public class ModifyDBClusterRequest extends Request {
             this.dataSyncMode = request.dataSyncMode;
             this.faultInjectionType = request.faultInjectionType;
             this.faultSimulateMode = request.faultSimulateMode;
+            this.imciAutoIndex = request.imciAutoIndex;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -223,7 +238,10 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * Enable storage compression function. The value of this parameter is ON.
+         * <p>Specifies whether to enable storage compression. Set the value to <strong>ON</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder compressStorage(String compressStorage) {
             this.putQueryParameter("CompressStorage", compressStorage);
@@ -232,10 +250,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the DescribeDBClusters operation to query information about all PolarDB clusters that are deployed in a specified region, such as cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the DescribeDBClusters operation to query information about all PolarDB clusters that are deployed in a specified region, such as cluster IDs.
+         * <strong>example:</strong>
+         * <p>pc-*************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -244,7 +266,13 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeCrashList.
+         * <p>The list of nodes for the drill.</p>
+         * <blockquote>
+         * <p> You can specify only one node for a node-level disaster recovery drill. For a primary zone-level disaster recovery drill, you can either choose not to specify this parameter or specify all nodes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-rwxxx</p>
          */
         public Builder DBNodeCrashList(String DBNodeCrashList) {
             this.putQueryParameter("DBNodeCrashList", DBNodeCrashList);
@@ -253,11 +281,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The method used to replicate data across zones. Valid values:
-         * <p>
+         * <p>The method used to replicate data across zones. Valid values:</p>
+         * <ul>
+         * <li><strong>AsyncSync</strong>: the asynchronous mode.</li>
+         * <li><strong>SemiSync</strong>: the semi-synchronous mode.</li>
+         * </ul>
          * 
-         * *   **AsyncSync**: the asynchronous mode.
-         * *   **SemiSync**: the semi-synchronous mode.
+         * <strong>example:</strong>
+         * <p>AsynSync</p>
          */
         public Builder dataSyncMode(String dataSyncMode) {
             this.putQueryParameter("DataSyncMode", dataSyncMode);
@@ -266,7 +297,13 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * FaultInjectionType.
+         * <p>The fault injection method. Valid values:</p>
+         * <ul>
+         * <li>CrashSQLInjection: <code>Crash SQL</code>-based fault injection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder faultInjectionType(String faultInjectionType) {
             this.putQueryParameter("FaultInjectionType", faultInjectionType);
@@ -275,20 +312,35 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The fault scenario that you want to simulate for the cluster.
-         * <p>
+         * <p>The level of the disaster recovery drill. Valid values:</p>
+         * <ul>
+         * <li><code>0</code> or <code>FaultInjection</code>: The primary zone level.</li>
+         * <li><code>1</code>: The node level.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>In <strong>primary zone-level disaster recovery drill</strong> scenarios, all compute nodes in the primary zone are unavailable. Data loss occurs during failovers in the scenarios.</p>
+         * </li>
+         * <li><p>In <strong>node-level disaster recovery drill</strong> scenarios, you can specify only one compute node for the disaster recovery drill. You can use the <code>DBNodeCrashList</code> parameter to specify the name of the compute node that you want to use for the drill.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Set the value to **0**. The value 0 indicates the scenario in which the primary zone of the cluster fails.
-         * 
-         * > 
-         * 
-         * *   This parameter takes effect only when you set the `StandbyHAMode` parameter to 0.
-         * 
-         * *   If you set this parameter to 0, all compute nodes deployed in the primary zone are unavailable. In this case, the switchover degrades the cluster performance.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder faultSimulateMode(String faultSimulateMode) {
             this.putQueryParameter("FaultSimulateMode", faultSimulateMode);
             this.faultSimulateMode = faultSimulateMode;
+            return this;
+        }
+
+        /**
+         * ImciAutoIndex.
+         */
+        public Builder imciAutoIndex(String imciAutoIndex) {
+            this.putQueryParameter("ImciAutoIndex", imciAutoIndex);
+            this.imciAutoIndex = imciAutoIndex;
             return this;
         }
 
@@ -329,12 +381,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the cross-zone automatic switchover mode. Valid values:
-         * <p>
+         * <p>Specifies whether to enable cross-zone automatic switchover. Valid values:</p>
+         * <ul>
+         * <li><strong>ON</strong>: enables cross-zone automatic switchover.</li>
+         * <li><strong>OFF</strong>: disables cross-zone automatic switchover.</li>
+         * </ul>
          * 
-         * *   **ON**: Enable the cross-zone automatic switchover mode.
-         * *   **OFF**: Disable the cross-zone automatic switchover mode.
-         * *   **0**: Enable the customer drill mode.
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder standbyHAMode(String standbyHAMode) {
             this.putQueryParameter("StandbyHAMode", standbyHAMode);
@@ -343,11 +397,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic storage scaling for the cluster of Standard Edition. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic storage scaling. This parameter is available only for Standard Edition clusters. Valid values:</p>
+         * <ul>
+         * <li>Enable</li>
+         * <li>Disable</li>
+         * </ul>
          * 
-         * *   Enable
-         * *   Disable
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder storageAutoScale(String storageAutoScale) {
             this.putQueryParameter("StorageAutoScale", storageAutoScale);
@@ -356,10 +413,13 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The maximum storage capacity of the cluster of Standard Edition in automatic scaling. Unit: GB.
-         * <p>
+         * <p>The maximum storage capacity of the cluster of Standard Edition in automatic scaling. Unit: GB.</p>
+         * <blockquote>
+         * <p> The maximum value of this parameter is 32000.</p>
+         * </blockquote>
          * 
-         * >  The maximum value of this parameter is 32000.
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder storageUpperBound(Long storageUpperBound) {
             this.putQueryParameter("StorageUpperBound", storageUpperBound);

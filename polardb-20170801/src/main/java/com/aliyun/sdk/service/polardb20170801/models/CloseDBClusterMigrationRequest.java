@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloseDBClusterMigrationRequest} extends {@link RequestModel}
  *
  * <p>CloseDBClusterMigrationRequest</p>
@@ -147,15 +148,18 @@ public class CloseDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * Specifies whether to continue to enable binary logging. Valid values:
-         * <p>
+         * <p>Specifies whether to continue to enable binary logging. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: continues to enable binary logging.</li>
+         * <li><strong>false</strong>: disables binary logging.</li>
+         * </ul>
+         * <p>Default value: <strong>true</strong>.</p>
+         * <blockquote>
+         * <p>If binary logging is disabled, your PolarDB cluster is restarted.</p>
+         * </blockquote>
          * 
-         * *   **true**: continues to enable binary logging.
-         * *   **false**: disables binary logging.
-         * 
-         * Default value: **true**.
-         * 
-         * > If binary logging is disabled, your PolarDB cluster is restarted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder continueEnableBinlog(Boolean continueEnableBinlog) {
             this.putQueryParameter("ContinueEnableBinlog", continueEnableBinlog);
@@ -164,7 +168,11 @@ public class CloseDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

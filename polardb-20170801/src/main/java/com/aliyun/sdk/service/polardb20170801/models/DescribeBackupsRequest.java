@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupsRequest</p>
@@ -226,7 +227,10 @@ public class DescribeBackupsRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set.
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -235,11 +239,14 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The backup mode. Valid values:
-         * <p>
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong></li>
+         * <li><strong>Manual</strong></li>
+         * </ul>
          * 
-         * *   **Automated**
-         * *   **Manual**
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -248,10 +255,13 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The region where the cross-region data backup file of the instance is stored.
-         * <p>
+         * <p>The region where the cross-region data backup file of the instance is stored.</p>
+         * <blockquote>
+         * <p>This parameter is valid only for PolarDB for MySQL clusters.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only for PolarDB for MySQL clusters.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder backupRegion(String backupRegion) {
             this.putQueryParameter("BackupRegion", backupRegion);
@@ -260,11 +270,14 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The status of the backup set. Valid values:
-         * <p>
+         * <p>The status of the backup set. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
          * 
-         * *   **Success**
-         * *   **Failed**
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder backupStatus(String backupStatus) {
             this.putQueryParameter("BackupStatus", backupStatus);
@@ -273,7 +286,11 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -282,7 +299,11 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the `YYYY-MM-DDThh:mmZ` format. The time must be in UTC. The end time must be later than the start time.
+         * <p>The end of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-16T00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -309,7 +330,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -318,14 +342,16 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -352,7 +378,11 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-14T00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

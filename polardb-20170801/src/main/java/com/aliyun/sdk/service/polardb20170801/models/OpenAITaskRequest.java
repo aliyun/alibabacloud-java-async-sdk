@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenAITaskRequest} extends {@link RequestModel}
  *
  * <p>OpenAITaskRequest</p>
@@ -181,7 +182,11 @@ public class OpenAITaskRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -190,7 +195,14 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li><strong>DLNode</strong>: This node is an AI node.</li>
+         * <li><strong>SearchNode</strong>: This node is a node for which the PolarDB for AI feature is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DLNode</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -217,7 +229,10 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * The password used to access the database for which you want to enable the PolarDB for AI feature.
+         * <p>The password used to access the database for which you want to enable the PolarDB for AI feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -226,7 +241,11 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,7 +254,10 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -262,7 +284,10 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * The username used to access the database for which you want to enable the PolarDB for AI feature.
+         * <p>The username used to access the database for which you want to enable the PolarDB for AI feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAccountName</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

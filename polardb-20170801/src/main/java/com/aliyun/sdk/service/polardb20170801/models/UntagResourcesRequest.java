@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -168,10 +169,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to unbinds all tags from the cluster. Valid values: **true** and **false**. Default value: **false**.
-         * <p>
+         * <p>Specifies whether to detach all tags from the cluster. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: <strong>false</strong>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if <code>TagKey.n</code> is empty.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only when the value of the `TagKey.n` parameter is empty.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -198,10 +202,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
+         * <p>The ID of the region.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +218,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the clusters.
+         * <p>The IDs of the clusters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -237,7 +249,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **cluster**.
+         * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -246,7 +262,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The keys of the tags.
+         * <p>The keys of the tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

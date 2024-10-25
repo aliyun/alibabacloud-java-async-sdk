@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBClusterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDBClusterResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The ID of cluster.
+         * <p>Cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1s826a1up******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -81,7 +85,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>Order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>211454967******</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -89,7 +96,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E56531A4-E552-40BA-9C58-137B80******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-***************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

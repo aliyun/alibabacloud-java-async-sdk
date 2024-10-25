@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupTasksResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the backup task.
+         * <p>The details of the backup task.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA8C1EF1-E3D4-44D7-B809-823187******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupTasksResponseBody</p>
+     */
     public static class BackupJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupJobId")
         private String backupJobId;
@@ -157,7 +167,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String taskAction; 
 
             /**
-             * The ID of the backup task.
+             * <p>The ID of the backup task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111111</p>
              */
             public Builder backupJobId(String backupJobId) {
                 this.backupJobId = backupJobId;
@@ -165,15 +178,18 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the backup task. Valid values:
-             * <p>
+             * <p>The state of the backup task. Valid values:</p>
+             * <ul>
+             * <li><strong>NoStart</strong></li>
+             * <li><strong>Preparing</strong></li>
+             * <li><strong>Waiting</strong></li>
+             * <li><strong>Uploading</strong></li>
+             * <li><strong>Checking</strong></li>
+             * <li><strong>Finished</strong></li>
+             * </ul>
              * 
-             * *   **NoStart**
-             * *   **Preparing**
-             * *   **Waiting**
-             * *   **Uploading**
-             * *   **Checking**
-             * *   **Finished**
+             * <strong>example:</strong>
+             * <p>NoStart</p>
              */
             public Builder backupProgressStatus(String backupProgressStatus) {
                 this.backupProgressStatus = backupProgressStatus;
@@ -181,11 +197,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The backup mode. Valid values:
-             * <p>
+             * <p>The backup mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Automated</strong></li>
+             * <li><strong>Manual</strong></li>
+             * </ul>
              * 
-             * *   **Automated**
-             * *   **Manual**
+             * <strong>example:</strong>
+             * <p>Automated</p>
              */
             public Builder jobMode(String jobMode) {
                 this.jobMode = jobMode;
@@ -193,7 +212,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the backup task in percentage.
+             * <p>The progress of the backup task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -201,7 +223,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup task started. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the backup task started. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-08-08T07:24:01Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -209,11 +234,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backup task. Valid values:
-             * <p>
+             * <p>The type of the backup task. Valid values:</p>
+             * <ul>
+             * <li><strong>TempBackupTask</strong>: The backup task is an adhoc backup task.</li>
+             * <li><strong>NormalBackupTask</strong>: The backup task is a common backup task.</li>
+             * </ul>
              * 
-             * *   **TempBackupTask**: The backup task is an adhoc backup task.
-             * *   **NormalBackupTask**: The backup task is a common backup task.
+             * <strong>example:</strong>
+             * <p>NormalBackupTask</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -227,6 +255,12 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupJob")
         private java.util.List < BackupJob> backupJob;

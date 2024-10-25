@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBClusterEndpointRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBClusterEndpointRequest</p>
@@ -125,7 +126,11 @@ public class DeleteDBClusterEndpointRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-******************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -134,7 +139,11 @@ public class DeleteDBClusterEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the custom cluster endpoint.
+         * <p>The ID of the custom cluster endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pe-******************</p>
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);

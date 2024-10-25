@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatabaseRequest} extends {@link RequestModel}
  *
  * <p>CreateDatabaseRequest</p>
@@ -210,10 +211,16 @@ public class CreateDatabaseRequest extends Request {
         } 
 
         /**
-         * The name of the account that is authorized to access the database. You can call the [DescribeAccounts](~~98107~~) operation to query account information.
-         * <p>
-         * >- You can specify only a standard account. By default, privileged accounts have all permissions on all databases. You do not need to grant privileged accounts the permissions to access the database.
-         * >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.
+         * <p>The name of the account that is authorized to access the database. You can call the <a href="https://help.aliyun.com/document_detail/98107.html">DescribeAccounts</a> operation to query account information.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can specify only a standard account. By default, privileged accounts have all permissions on all databases. You do not need to grant privileged accounts the permissions to access the database.</li>
+         * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -222,20 +229,25 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The permissions that are granted to the account. Valid values:
-         * <p>
+         * <p>The permissions that are granted to the account. Valid values:</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong>: read and write permissions.</li>
+         * <li><strong>ReadOnly</strong>: read-only permissions.</li>
+         * <li><strong>DMLOnly</strong>: the permissions to execute only DML statements.</li>
+         * <li><strong>DDLOnly</strong>: the permissions to execute only DDL statements.</li>
+         * <li><strong>ReadIndex</strong>: the read-only and index permissions.</li>
+         * </ul>
+         * <p>If you leave this parameter empty, the default value <strong>ReadWrite</strong> is used.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is valid only if you specify <strong>AccountName</strong>.</li>
+         * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</li>
+         * <li>This parameter is optional for PolarDB for MySQL clusters.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **ReadWrite**: read and write permissions.
-         * *   **ReadOnly**: read-only permissions.
-         * *   **DMLOnly**: the permissions to execute only DML statements.
-         * *   **DDLOnly**: the permissions to execute only DDL statements.
-         * *   **ReadIndex**: the read-only and index permissions.
-         * 
-         * If you leave this parameter empty, the default value **ReadWrite** is used.
-         * 
-         * >- This parameter is valid only if you specify **AccountName**.
-         * >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.
-         * >- This parameter is optional for PolarDB for MySQL clusters.
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -244,7 +256,11 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The character set that is used by the cluster. For more information, see [Character set tables](~~99716~~).
+         * <p>The character set that is used by the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/99716.html">Character set tables</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         public Builder characterSetName(String characterSetName) {
             this.putQueryParameter("CharacterSetName", characterSetName);
@@ -253,14 +269,18 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The language that defines the collation rules in the database.
-         * <p>
+         * <p>The language that defines the collation rules in the database.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</p>
+         * </li>
+         * <li><p>This parameter is required for a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster. To view the valid values of this parameter, perform the following steps: Log on to the PolarDB console and click the ID of the cluster. In the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Then, click <strong>Create Database</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   The language must be compatible with the character set that is specified by **CharacterSetName**.
-         * 
-         * *   This parameter is required for a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster. To view the valid values of this parameter, perform the following steps: Log on to the PolarDB console and click the ID of the cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.
+         * <strong>example:</strong>
+         * <p>C</p>
          */
         public Builder collate(String collate) {
             this.putQueryParameter("Collate", collate);
@@ -269,14 +289,18 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The language that indicates the character type of the database.
-         * <p>
+         * <p>The language that indicates the character type of the database.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</li>
+         * <li>The value that you specify must be the same as the value of <strong>Collate</strong>.</li>
+         * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</li>
+         * </ul>
+         * </blockquote>
+         * <p>To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Then, click <strong>Create Database</strong>.</p>
          * 
-         * >- The language must be compatible with the character set that is specified by **CharacterSetName**.
-         * >- The value that you specify must be the same as the value of **Collate**.
-         * >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.
-         * 
-         * To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.
+         * <strong>example:</strong>
+         * <p>C</p>
          */
         public Builder ctype(String ctype) {
             this.putQueryParameter("Ctype", ctype);
@@ -285,7 +309,11 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of cluster.
+         * <p>The ID of cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -294,13 +322,17 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The description of the database. The description must meet the following requirements:
-         * <p>
+         * <p>The description of the database. The description must meet the following requirements:</p>
+         * <ul>
+         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It must be 2 to 256 characters in length.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * *   It cannot start with `http://` or `https://`.
-         * *   It must be 2 to 256 characters in length.
-         * 
-         * > This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         public Builder DBDescription(String DBDescription) {
             this.putQueryParameter("DBDescription", DBDescription);
@@ -309,13 +341,18 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the database. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the database. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name can contain lowercase letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit. The name must be 1 to 64 characters in length.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Do not use reserved words as database names, such as <code>test</code> or <code>mysql</code>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain lowercase letters, digits, hyphens (-), and underscores (\_).
-         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit. The name must be 1 to 64 characters in length.
-         * 
-         * > Do not use reserved words as database names, such as `test` or `mysql`.
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

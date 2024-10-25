@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePendingMaintenanceActionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePendingMaintenanceActionResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Details about tasks.
+         * <p>Details about tasks.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F029645-FED9-4FE8-A6D3-488954******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePendingMaintenanceActionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePendingMaintenanceActionResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -313,7 +332,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the task was created. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the task was created. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-09T22:00:42Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -321,7 +343,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-************</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -329,12 +354,15 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine. Valid values:
-             * <p>
+             * <p>The type of the database engine. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>PostgreSQL</strong></li>
+             * <li><strong>Oracle</strong></li>
+             * </ul>
              * 
-             * *   **MySQL**
-             * *   **PostgreSQL**
-             * *   **Oracle**
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -342,21 +370,27 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
-             * <p>
+             * <p>The version of the database engine.</p>
+             * <ul>
+             * <li><p>Valid values for the MySQL database engine:</p>
+             * <ul>
+             * <li><strong>5.6</strong></li>
+             * <li><strong>5.7</strong></li>
+             * <li><strong>8.0</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values for the PostgreSQL database engine:</p>
+             * <ul>
+             * <li><strong>11</strong></li>
+             * <li><strong>14</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>Valid value for the Oracle database engine: <strong>11</strong></p>
+             * </li>
+             * </ul>
              * 
-             * *   Valid values for the MySQL database engine:
-             * 
-             *     *   **5.6**
-             *     *   **5.7**
-             *     *   **8.0**
-             * 
-             * *   Valid values for the PostgreSQL database engine:
-             * 
-             *     *   **11**
-             *     *   **14**
-             * 
-             * *   Valid value for the Oracle database engine: **11**
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -364,7 +398,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The deadline before which the task can be executed. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The deadline before which the task can be executed. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-11T15:59:59Z</p>
              */
             public Builder deadline(String deadline) {
                 this.deadline = deadline;
@@ -372,7 +409,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -380,7 +420,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the parameter was modified. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the parameter was modified. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-09T22:00:42Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -388,7 +431,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The preparation time that is required before the pending event is switched. The time follows the `HH:mm:ss` format.
+             * <p>The preparation time that is required before the pending event is switched. The time follows the <code>HH:mm:ss</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04:00:00</p>
              */
             public Builder prepareInterval(String prepareInterval) {
                 this.prepareInterval = prepareInterval;
@@ -396,7 +442,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the pending event.
+             * <p>The region ID of the pending event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -404,13 +453,17 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the task. Valid values:
-             * <p>
+             * <p>The execution result of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>manualCancel</strong>: The task is manually canceled.</li>
+             * <li><strong>paramCheckNotPass</strong>: The task fails to pass the parameter check.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only when the value of the <code>Status</code> parameter is <strong>6</strong> or <strong>7</strong>. The value 6 indicates that the task is completed but fails to be executed. The value 7 indicates that the task is canceled.</p>
+             * </blockquote>
              * 
-             * *   **manualCancel**: The task is manually canceled.
-             * *   **paramCheckNotPass**: The task fails to pass the parameter check.
-             * 
-             * > This parameter is returned only when the value of the `Status` parameter is **6** or **7**. The value 6 indicates that the task is completed but fails to be executed. The value 7 indicates that the task is canceled.
+             * <strong>example:</strong>
+             * <p>manualCancel</p>
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -418,7 +471,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was executed in the background. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the task was executed in the background. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-09T18:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -426,20 +482,26 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the pending task.
-             * <p>
+             * <p>The status of the pending task.</p>
+             * <ul>
+             * <li><p>If you set the <code>IsHistory</code> parameter to <strong>0</strong>, the status of the pending task is returned. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: The start time of the task is to be specified.</li>
+             * <li><strong>3</strong>: The task is pending.</li>
+             * <li><strong>4</strong>: The task is running. In this case, you cannot modify the execution time.</li>
+             * </ul>
+             * </li>
+             * <li><p>If you set the <code>IsHistory</code> parameter to <strong>1</strong>, the details of the historical tasks are returned. Valid values:</p>
+             * <ul>
+             * <li><strong>5</strong>: The task is completed and executed.</li>
+             * <li><strong>6</strong>: The task is completed but fails to be executed.</li>
+             * <li><strong>7</strong>: The task is canceled.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   If you set the `IsHistory` parameter to **0**, the status of the pending task is returned. Valid values:
-             * 
-             *     *   **2**: The start time of the task is to be specified.
-             *     *   **3**: The task is pending.
-             *     *   **4**: The task is running. In this case, you cannot modify the execution time.
-             * 
-             * *   If you set the `IsHistory` parameter to **1**, the details of the historical tasks are returned. Valid values:
-             * 
-             *     *   **5**: The task is completed and executed.
-             *     *   **6**: The task is completed but fails to be executed.
-             *     *   **7**: The task is canceled.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -447,7 +509,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the pending event was switched. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the pending event was switched. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-09T22:00:00Z</p>
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -455,7 +520,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the pending event.
+             * <p>The type of the pending event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DatabaseSoftwareUpgrading</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

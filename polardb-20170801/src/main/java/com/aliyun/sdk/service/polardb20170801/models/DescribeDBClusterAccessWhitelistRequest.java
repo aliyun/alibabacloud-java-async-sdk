@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterAccessWhitelistRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterAccessWhitelistRequest</p>
@@ -110,7 +111,11 @@ public class DescribeDBClusterAccessWhitelistRequest extends Request {
         } 
 
         /**
-         * The ID of the PolarDB cluster.
+         * <p>The ID of the PolarDB cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

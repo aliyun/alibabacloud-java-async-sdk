@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClustersRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClustersRequest</p>
@@ -334,7 +335,10 @@ public class DescribeDBClustersRequest extends Request {
         } 
 
         /**
-         * The endpoint of the cluster.
+         * <p>The endpoint of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -343,7 +347,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The description of the cluster. Fuzzy match is supported.
+         * <p>The description of the cluster. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -352,7 +359,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. Separate multiple cluster IDs with commas (,).
+         * <p>The ID of the cluster. Separate multiple cluster IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -361,7 +371,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The state of the cluster that you want to query. For information about valid values, see [Cluster states](~~99286~~).
+         * <p>The state of the cluster that you want to query. For information about valid values, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster states</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
@@ -370,7 +383,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
+         * <p>The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-***************</p>
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);
@@ -379,12 +395,15 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The database engine that the cluster runs. Valid values:
-         * <p>
+         * <p>The database engine that the cluster runs. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **PostgreSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -393,7 +412,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The database engine version of the cluster.
+         * <p>The database engine version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -402,10 +424,13 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The query mode of the list. The value Simple indicates that the simple mode is used. In this mode, only the basic metadata information of the cluster is returned.
-         * <p>
+         * <p>The query mode of the list. The value Simple indicates that the simple mode is used. In this mode, only the basic metadata information of the cluster is returned.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the detailed mode is used by default. Detailed information about the cluster is returned.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, the detailed mode is used by default. Detailed information about the cluster is returned.
+         * <strong>example:</strong>
+         * <p>Simple</p>
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);
@@ -414,11 +439,14 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * Specifies whether the cluster has expired. Valid values:
-         * <p>
+         * <p>Specifies whether the cluster has expired. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder expired(Boolean expired) {
             this.putQueryParameter("Expired", expired);
@@ -445,7 +473,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
+         * <p>The page number. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -454,10 +485,11 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **30**, **50**, or **100**.
-         * <p>
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -466,11 +498,14 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -479,7 +514,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * Filters clusters created in the last N days. Valid values: 0 to 15.
+         * <p>Filters clusters created in the last N days. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder recentCreationInterval(Integer recentCreationInterval) {
             this.putQueryParameter("RecentCreationInterval", recentCreationInterval);
@@ -488,7 +526,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * Filters clusters that expire after N days. Valid values: 0 to 15.
+         * <p>Filters clusters that expire after N days. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder recentExpirationInterval(Integer recentExpirationInterval) {
             this.putQueryParameter("RecentExpirationInterval", recentExpirationInterval);
@@ -497,10 +538,14 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -509,7 +554,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-**********</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -536,7 +584,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The tags of the cluster.
+         * <p>The tags of the cluster.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -551,6 +599,12 @@ public class DescribeDBClustersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClustersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClustersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -590,10 +644,13 @@ public class DescribeDBClustersRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can use tags to filter clusters. You can specify up to 20 tags. N specifies the serial number of each tag. The values that you specify for N must be unique and consecutive integers that start from 1. The value of Tag.N.Key is Tag.N.Value.
-             * <p>
+             * <p>The key of the tag. You can use tags to filter clusters. You can specify up to 20 tags. N specifies the serial number of each tag. The values that you specify for N must be unique and consecutive integers that start from 1. The value of Tag.N.Key is Tag.N.Value.</p>
+             * <blockquote>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+             * </blockquote>
              * 
-             * > The tag key can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -601,10 +658,13 @@ public class DescribeDBClustersRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <blockquote>
+             * <p>The tag value can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+             * </blockquote>
              * 
-             * > The tag value can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * <strong>example:</strong>
+             * <p>5.6</p>
              */
             public Builder value(String value) {
                 this.value = value;

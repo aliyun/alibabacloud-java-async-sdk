@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBDescriptionRequest</p>
@@ -140,7 +141,11 @@ public class ModifyDBDescriptionRequest extends Request {
         } 
 
         /**
-         * The ID of cluster.
+         * <p>The ID of cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -149,11 +154,15 @@ public class ModifyDBDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the database. The description must meet the following requirements:
-         * <p>
+         * <p>The description of the database. The description must meet the following requirements:</p>
+         * <ul>
+         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It must be 2 to 256 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   It cannot start with `http://` or `https://`.
-         * *   It must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>DBDesc</p>
          */
         public Builder DBDescription(String DBDescription) {
             this.putQueryParameter("DBDescription", DBDescription);
@@ -162,7 +171,11 @@ public class ModifyDBDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

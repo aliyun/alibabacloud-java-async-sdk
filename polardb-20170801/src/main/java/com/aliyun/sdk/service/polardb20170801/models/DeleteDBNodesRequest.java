@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBNodesRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBNodesRequest</p>
@@ -153,7 +154,10 @@ public class DeleteDBNodesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a42***********</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +166,11 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -171,10 +179,14 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The IDs of the nodes.
-         * <p>
+         * <p>The IDs of the nodes.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~185342~~) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.
+         * <strong>example:</strong>
+         * <p>pi-************</p>
          */
         public Builder DBNodeId(java.util.List < String > DBNodeId) {
             this.putQueryParameter("DBNodeId", DBNodeId);
@@ -183,11 +195,14 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The type of the node. Valid values:
-         * <p>
+         * <p>The type of the node. Valid values:</p>
+         * <ul>
+         * <li>RO</li>
+         * <li>STANDBY</li>
+         * </ul>
          * 
-         * *   RO
-         * *   STANDBY
+         * <strong>example:</strong>
+         * <p>RO</p>
          */
         public Builder DBNodeType(String DBNodeType) {
             this.putQueryParameter("DBNodeType", DBNodeType);

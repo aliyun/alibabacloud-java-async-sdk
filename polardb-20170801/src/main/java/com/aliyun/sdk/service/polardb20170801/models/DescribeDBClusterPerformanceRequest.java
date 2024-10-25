@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterPerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterPerformanceRequest</p>
@@ -127,7 +128,11 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -136,7 +141,11 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -145,7 +154,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400, in seconds.
+         * <p>The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -154,10 +166,14 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * The performance metrics that you want to query. Separate multiple metrics with commas (,). For more information, see [Performance parameters](~~141787~~).
-         * <p>
+         * <p>The performance metrics that you want to query. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/141787.html">Performance parameters</a>.</p>
+         * <blockquote>
+         * <p> You can specify a maximum of five performance metrics.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can specify a maximum of five performance metrics.
+         * <strong>example:</strong>
+         * <p>PolarDBDiskUsage</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -166,7 +182,11 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:01Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -175,7 +195,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The Query Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orca</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

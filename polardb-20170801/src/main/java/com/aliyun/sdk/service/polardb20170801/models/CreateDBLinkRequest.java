@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBLinkRequest} extends {@link RequestModel}
  *
  * <p>CreateDBLinkRequest</p>
@@ -283,7 +284,10 @@ public class CreateDBLinkRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -292,10 +296,14 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The ID of the source cluster that the database link connects.
-         * <p>
+         * <p>The ID of the source cluster that the database link connects.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query PolarDB clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
+         * <strong>example:</strong>
+         * <p>pc-a************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -304,12 +312,16 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The name of the database link.
-         * <p>
+         * <p>The name of the database link.</p>
+         * <ul>
+         * <li>The name must contain lowercase letters and can also contain digits and underscores (_).</li>
+         * <li>The name must start with a letter and end with a letter or digit.</li>
+         * <li>The name must be 1 to 64 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name must contain lowercase letters and can also contain digits and underscores (\_).
-         * *   The name must start with a letter and end with a letter or digit.
-         * *   The name must be 1 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>dblink_test</p>
          */
         public Builder DBLinkName(String DBLinkName) {
             this.putQueryParameter("DBLinkName", DBLinkName);
@@ -336,10 +348,13 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
+         * <p>The ID of the region.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about regions.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~98041~~) operation to query information about regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -348,7 +363,10 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -375,10 +393,14 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The name of the source database.
-         * <p>
+         * <p>The name of the source database.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query information about databases in a PolarDB cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.
+         * <strong>example:</strong>
+         * <p>testdb1</p>
          */
         public Builder sourceDBName(String sourceDBName) {
             this.putQueryParameter("SourceDBName", sourceDBName);
@@ -387,10 +409,14 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The account of the destination database.
-         * <p>
+         * <p>The account of the destination database.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/173549.html">DescribeAccounts</a> operation to query the account of a PolarDB cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeAccounts](~~173549~~) operation to query the account of a PolarDB cluster.
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         public Builder targetDBAccount(String targetDBAccount) {
             this.putQueryParameter("TargetDBAccount", targetDBAccount);
@@ -399,11 +425,16 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The ID of the destination cluster that the database link connects.
-         * <p>
+         * <p>The ID of the destination cluster that the database link connects.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the destination cluster is a user-created Oracle database on an ECS instance, set the value to <code>null</code>.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query PolarDB clusters.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   If the destination cluster is a user-created Oracle database on an ECS instance, set the value to `null`.
-         * > *   You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
+         * <strong>example:</strong>
+         * <p>pc-b************</p>
          */
         public Builder targetDBInstanceName(String targetDBInstanceName) {
             this.putQueryParameter("TargetDBInstanceName", targetDBInstanceName);
@@ -412,10 +443,14 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The name of the destination database.
-         * <p>
+         * <p>The name of the destination database.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query information about databases in a PolarDB cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.
+         * <strong>example:</strong>
+         * <p>testdb2</p>
          */
         public Builder targetDBName(String targetDBName) {
             this.putQueryParameter("TargetDBName", targetDBName);
@@ -424,7 +459,11 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The account password of the destination database.
+         * <p>The account password of the destination database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test1111</p>
          */
         public Builder targetDBPasswd(String targetDBPasswd) {
             this.putQueryParameter("TargetDBPasswd", targetDBPasswd);
@@ -433,7 +472,10 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The IP address of the user-created Oracle database on an ECS instance.
+         * <p>The IP address of the user-created Oracle database on an ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.<strong>.</strong>.46</p>
          */
         public Builder targetIp(String targetIp) {
             this.putQueryParameter("TargetIp", targetIp);
@@ -442,7 +484,10 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The port number of the user-created Oracle database on an ECS instance.
+         * <p>The port number of the user-created Oracle database on an ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1521</p>
          */
         public Builder targetPort(String targetPort) {
             this.putQueryParameter("TargetPort", targetPort);
@@ -451,10 +496,13 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query information about VPCs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeVpcs](~~35739~~) operation to query information about VPCs.
+         * <strong>example:</strong>
+         * <p>vpc-bp1qpo0kug3a20qqe****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterServerlessConfRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterServerlessConfRequest</p>
@@ -14,6 +15,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AllowShutDown")
     private String allowShutDown;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrontabJobId")
+    private String crontabJobId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
@@ -88,9 +93,14 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ServerlessRuleMode")
     private String serverlessRuleMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
     private ModifyDBClusterServerlessConfRequest(Builder builder) {
         super(builder);
         this.allowShutDown = builder.allowShutDown;
+        this.crontabJobId = builder.crontabJobId;
         this.DBClusterId = builder.DBClusterId;
         this.fromTimeService = builder.fromTimeService;
         this.ownerAccount = builder.ownerAccount;
@@ -109,6 +119,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         this.serverlessRuleCpuEnlargeThreshold = builder.serverlessRuleCpuEnlargeThreshold;
         this.serverlessRuleCpuShrinkThreshold = builder.serverlessRuleCpuShrinkThreshold;
         this.serverlessRuleMode = builder.serverlessRuleMode;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -129,6 +140,13 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
      */
     public String getAllowShutDown() {
         return this.allowShutDown;
+    }
+
+    /**
+     * @return crontabJobId
+     */
+    public String getCrontabJobId() {
+        return this.crontabJobId;
     }
 
     /**
@@ -257,8 +275,16 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         return this.serverlessRuleMode;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBClusterServerlessConfRequest, Builder> {
         private String allowShutDown; 
+        private String crontabJobId; 
         private String DBClusterId; 
         private Boolean fromTimeService; 
         private String ownerAccount; 
@@ -277,6 +303,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         private String serverlessRuleCpuEnlargeThreshold; 
         private String serverlessRuleCpuShrinkThreshold; 
         private String serverlessRuleMode; 
+        private String taskId; 
 
         private Builder() {
             super();
@@ -285,6 +312,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         private Builder(ModifyDBClusterServerlessConfRequest request) {
             super(request);
             this.allowShutDown = request.allowShutDown;
+            this.crontabJobId = request.crontabJobId;
             this.DBClusterId = request.DBClusterId;
             this.fromTimeService = request.fromTimeService;
             this.ownerAccount = request.ownerAccount;
@@ -303,14 +331,18 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
             this.serverlessRuleCpuEnlargeThreshold = request.serverlessRuleCpuEnlargeThreshold;
             this.serverlessRuleCpuShrinkThreshold = request.serverlessRuleCpuShrinkThreshold;
             this.serverlessRuleMode = request.serverlessRuleMode;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * Specifies whether to enable No-activity Suspension. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable No-activity Suspension. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowShutDown(String allowShutDown) {
             this.putQueryParameter("AllowShutDown", allowShutDown);
@@ -319,7 +351,23 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The ID of the serverless cluster.
+         * <p>Cycle policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>143f8e9f-2566-4dff-be47-bed79f28fc78</p>
+         */
+        public Builder crontabJobId(String crontabJobId) {
+            this.putQueryParameter("CrontabJobId", crontabJobId);
+            this.crontabJobId = crontabJobId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the serverless cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp10gr51qasnl****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -328,11 +376,14 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:
-         * <p>
+         * <p>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:</p>
+         * <ul>
+         * <li>false: scheduled task</li>
+         * <li>true: immediate task</li>
+         * </ul>
          * 
-         * *   false: scheduled task
-         * *   true: immediate task
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -359,10 +410,16 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
-         * <p>
-         * > * The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
-         * >*   If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: `PlannedEndTime value + 30 minutes`. For example, if you set PlannedStartTime to `2021-01-14T09:00:00Z` and you do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
+         * <p>The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</li>
+         * <li>If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: <code>PlannedEndTime value + 30 minutes</code>. For example, if you set PlannedStartTime to <code>2021-01-14T09:00:00Z</code> and you do not specify PlannedEndTime, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:30:00Z</p>
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -371,11 +428,16 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in time between <code>2021-01-14T09:00:00Z</code> and <code>2021-01-15T09:00:00Z</code>.</li>
+         * <li>If you leave this parameter empty, the task for adding the read-only node is immediately run by default.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.
-         * >*   If you leave this parameter empty, the task for adding the read-only node is immediately run by default.
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:00:00Z</p>
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -402,7 +464,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The maximum number of stable AP read-only nodes. Valid values: 0 to 7.
+         * <p>The maximum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleApRoNumMax(String scaleApRoNumMax) {
             this.putQueryParameter("ScaleApRoNumMax", scaleApRoNumMax);
@@ -411,7 +476,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The minimum number of stable AP read-only nodes. Valid values: 0 to 7.
+         * <p>The minimum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleApRoNumMin(String scaleApRoNumMin) {
             this.putQueryParameter("ScaleApRoNumMin", scaleApRoNumMin);
@@ -420,7 +488,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.
+         * <p>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder scaleMax(String scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -429,7 +500,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.
+         * <p>The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleMin(String scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -438,7 +512,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The maximum number of read-only nodes for scaling. Valid values: 0 to 15.
+         * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scaleRoNumMax(String scaleRoNumMax) {
             this.putQueryParameter("ScaleRoNumMax", scaleRoNumMax);
@@ -447,7 +524,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The minimum number of read-only nodes for scaling. Valid values: 0 to 15.
+         * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleRoNumMin(String scaleRoNumMin) {
             this.putQueryParameter("ScaleRoNumMin", scaleRoNumMin);
@@ -456,7 +536,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * The detection period for No-activity Suspension. Valid values: 5 to 1440. Unit: minutes. The detection duration must be a multiple of 5 minutes.
+         * <p>The detection period for No-activity Suspension. Valid values: 5 to 1440. Unit: minutes. The detection duration must be a multiple of 5 minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder secondsUntilAutoPause(String secondsUntilAutoPause) {
             this.putQueryParameter("SecondsUntilAutoPause", secondsUntilAutoPause);
@@ -465,7 +548,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * ServerlessRuleCpuEnlargeThreshold.
+         * <p>CPU burst threshold</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder serverlessRuleCpuEnlargeThreshold(String serverlessRuleCpuEnlargeThreshold) {
             this.putQueryParameter("ServerlessRuleCpuEnlargeThreshold", serverlessRuleCpuEnlargeThreshold);
@@ -474,7 +560,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * ServerlessRuleCpuShrinkThreshold.
+         * <p>CPU downscale threshold</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder serverlessRuleCpuShrinkThreshold(String serverlessRuleCpuShrinkThreshold) {
             this.putQueryParameter("ServerlessRuleCpuShrinkThreshold", serverlessRuleCpuShrinkThreshold);
@@ -483,11 +572,27 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * ServerlessRuleMode.
+         * <p>Elastic sensitivity. Values: - normal: standard - flexible: sensitive</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal
+         * flexible</p>
          */
         public Builder serverlessRuleMode(String serverlessRuleMode) {
             this.putQueryParameter("ServerlessRuleMode", serverlessRuleMode);
             this.serverlessRuleMode = serverlessRuleMode;
+            return this;
+        }
+
+        /**
+         * <p>Asynchronous task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>143f8e9f-2566-4dff-be47-bed79f28fc78</p>
+         */
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 
